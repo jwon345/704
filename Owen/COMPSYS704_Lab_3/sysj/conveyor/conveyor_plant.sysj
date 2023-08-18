@@ -1,0 +1,12 @@
+import run.GUI;
+
+ConveyorPlant(
+		input signal bottleStart;
+		input signal bottleLeft;
+		output signal motConveyorOnOff;
+		)
+->
+
+{
+	new Thread(new GUI()).start();
+}
