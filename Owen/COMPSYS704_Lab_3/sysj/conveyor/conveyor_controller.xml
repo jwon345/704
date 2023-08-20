@@ -2,6 +2,8 @@
 	<SubSystem Name="SS3" Local="true">
 		<ClockDomain Name="ConveyorControllerCD" Class="ConveyorController">
 		
+		<iSignal Name="bottle"         Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+		
 		</ClockDomain>
 	</SubSystem>
 </System>

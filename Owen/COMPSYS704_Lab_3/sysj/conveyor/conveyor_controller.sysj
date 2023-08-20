@@ -1,0 +1,12 @@
+ConveyorController(
+		input signal bottle;
+		)
+->
+{
+	while(true)
+	{
+		System.out.println("WaitingForBottle");
+		await(bottle);
+		System.out.println("Arrived");
+	}
+}
