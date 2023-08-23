@@ -13,6 +13,7 @@ public class States2 {
     // State to check the status of the conveyor motor
     public static volatile boolean MOT_CONVEYOR_ON_OFF = false;
 
+    public static volatile int bottlePos = 0;
   
 
 }
