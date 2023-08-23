@@ -18,8 +18,8 @@
 		<oSignal Name="atPos0" To="UI.atPos0" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
 		<oSignal Name="atPos1" To="UI.atPos1" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
 		<oSignal Name="atPos2" To="UI.atPos2" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
-		<oSignal Name="atPos4" To="UI.atPos1" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
-		<oSignal Name="atPos5" To="UI.atPos2" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+		<oSignal Name="atPos4" To="UI.atPos4" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+		<oSignal Name="atPos5" To="UI.atPos5" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
 		<oSignal Name="conveyorRunning" To="UI.conveyorRunning" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
 		
 		</ClockDomain>
