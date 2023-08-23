@@ -7,77 +7,67 @@ import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.BorderFactory;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
-
-import org.compsys704.LoaderVizWorker;
-import org.compsys704.Ports;
+import org.conveyor.Ports;
 import org.compsys704.SignalClient;
 import org.compsys704.SignalServer;
 
 public class Conveyor extends JFrame {
-	private JPanel panel;
-    private JPanel panel2;
-    private JPanel panel3;
+    private JPanel panel;
 
     public Conveyor() {
         setSize(1000, 600);
-
         setTitle("Conveyor System1");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
-        
-        
+
         // Panel representing the conveyor
         panel = new Canvas();
-    	panel.setPreferredSize(new Dimension(500, 300));
+        panel.setPreferredSize(new Dimension(500, 300));
         panel.setBorder(BorderFactory.createTitledBorder("Conveyor Belt"));
         panel.setBackground(Color.LIGHT_GRAY);
         c.fill = GridBagConstraints.HORIZONTAL;
         c.gridx = 0;
         c.gridy = 0;
         c.weightx = 1;
-        this.add(panel,c);
-        
-        panel2 = new Canvas();
-    	panel2.setPreferredSize(new Dimension(500, 300));
-        panel2.setBorder(BorderFactory.createTitledBorder("Conveyor 2"));
-        panel2.setBackground(Color.GREEN);
-        c.fill = GridBagConstraints.HORIZONTAL;
-        c.gridx = 1;
-        c.gridy = 0;
-        c.weightx = 1.0;
-        this.add(panel2,c);
-        
+        this.add(panel, c);
+
+        // Deploy Bottle Panel
         JPanel deployPanel = new JPanel();
-        JButton deployButton = new JButton("Deploy Bottle");
-//        deployButton.addActionListener(new SignalClient2(10000, "ConveyorControllerCD.bottle"));
-        deployButton.addActionListener(new ActionListener() {
+        JButton deployStartButton = new JButton("Deploy Bottle at Start");
+        deployStartButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // TODO: Add action for deploy button here
-            	new SignalClient2(10000, "ConveyorControllerCD.bottle").actionPerformed(e);;
-            	System.out.print("buttonPres2s");
+                new SignalClient2(10000, "ConveyorControllerCD.bottle").actionPerformed(e);
             }
         });
 
+        JButton deployPos5Button = new JButton("Deploy Bottle at Pos 5");
+        deployPos5Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // TODO: Add action for deploying bottle at pos 5 here
+                // E.g., new SignalClient2(PORT, "ConveyorControllerCD.bottlePos5").actionPerformed(e);
+            }
+        });
 
-        deployPanel.add(deployButton);
-        
+        deployPanel.add(deployStartButton);
+        deployPanel.add(deployPos5Button);
         c.gridwidth = 2;
         c.gridx = 0;
         c.gridy = 1;
         c.fill = GridBagConstraints.HORIZONTAL;
         c.weightx = 1.0;
         this.add(deployPanel, c);
-        
-        // Radio buttons for mode selection
+
+        // Mode Selection and Manual Control
         JRadioButton mmode = new JRadioButton("Manual");
         JRadioButton amode = new JRadioButton("Auto", true);
         ButtonGroup bg = new ButtonGroup();
@@ -115,7 +105,6 @@ public class Conveyor extends JFrame {
         JPanel combinedPanel = new JPanel(new GridLayout(0, 2));
         combinedPanel.add(modeSelectPanel);
         combinedPanel.add(manualControlPanel);
-        
         c.gridwidth = 2;
         c.gridx = 0;
         c.gridy = 2;
@@ -128,8 +117,6 @@ public class Conveyor extends JFrame {
         Conveyor conv = new Conveyor();
         conv.setVisible(true);
 
-//        SignalServer<LoaderVizWorker> server = new SignalServer<LoaderVizWorker>(Ports.PORT_LOADER_VIZ, LoaderVizWorker.class);
-//        new Thread(server).start();
         while (true) {
             try {
                 conv.repaint();
