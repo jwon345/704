@@ -5,49 +5,41 @@ Controller(
 		input signal pusherExtendM,vacOnM,armSourceM,armDestM;
 		)
 ->{
-	/* TODO: Write control-logic */
+		{
+			while (true)
+			{
+				await(request);
+				abort(pusherExtended)
+				{
+					sustain pusherExtend;
+				}
+				System.out.println("pushed");
+				await(pusherRetracted);
+				System.out.println("retracted");
+				
+				abort(armAtSource)
+				{
+					System.out.println("move2Dest");
+					sustain armSource;
+				}
+				System.out.println("asdf");
 
-	while (true) {
-		await(mode);
-		if (#mode == 0) {
-			await(request);
-			abort (armAtDest) {
-				sustain armDest;
+				abort(WPgripped)
+				{
+					sustain vacOn;
+				}
+
+				abort(armAtDest)
+				{
+					while(true)
+					{
+						emit vacOn;
+						emit armDest;
+						pause;
+					}
+				}
+				
 			}
-
-			await(!empty);
-
-			abort (pusherExtended) {
-				sustain pusherExtend;
-			}
-
-			await(pusherRetracted);
-
-			abort (armAtSource) {
-				sustain armSource;
-			}
-
-			abort (WPgripped) {
-				sustain vacOn;
-			}
-
-			abort (armAtDest) {
-				{ sustain vacOn; }
-				||
-				{ sustain armDest; };
-			}
-
-			await(!WPgripped);
-
-			abort (armAtSource) {
-				sustain armSource;
-			}
-		} else {
-			{ present (pusherExtendM) { emit pusherExtend; } } ||
-			{ present (armDestM) { emit armDest; } } ||
-			{ present (armSourceM) { emit armSource; } } ||
-			{ present (vacOnM) { emit vacOn; } }
-			pause;
 		}
-	}
+
 }

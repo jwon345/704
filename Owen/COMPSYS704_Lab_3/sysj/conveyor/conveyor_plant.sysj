@@ -1,9 +1,8 @@
 import run.GUI;
 
 ConveyorPlant(
-		input signal bottleStart;
-		input signal bottleLeft;
-		output signal motConveyorOnOff;
+		input signal bottleDeployed,BOTTLE_FINISHED_AT_POS5,MOT_CONVEYOR_ON_OFF;
+		output signal BOTTLE_LEFT_POS5,BOTTLE_AT_POS1;
 		)
 ->
 

@@ -7,7 +7,7 @@ public class ConveyorVizWorker extends Worker {
 
     @Override
     public void setSignal(boolean status) {
-        switch(signame){
+        switch(signame) {
             case Ports.BOTTLE_AT_POS1:
                 States.BOTTLE_AT_START = status;
                 break;
@@ -18,10 +18,10 @@ public class ConveyorVizWorker extends Worker {
                 States.MOTOR_ON = status;
                 break;
             case Ports.BOTTLE_DEPLOYED:
-                // Handle logic
+                States.BOTTLE_DEPLOYED = status;
                 break;
             case Ports.BOTTLE_FINISHED_AT_POS5:
-                // Handle logic
+                // Handle logic if needed
                 break;
             default: 
                 System.err.println("Wrong sig name : "+signame);

@@ -15,6 +15,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import org.conveyor.Ports;
+import org.compsys704.LoaderVizWorker;
 import org.compsys704.SignalClient;
 import org.compsys704.SignalServer;
 
@@ -38,23 +39,25 @@ public class Conveyor extends JFrame {
         c.gridy = 0;
         c.weightx = 1;
         this.add(panel, c);
+        
 
         // Deploy Bottle Panel
         JPanel deployPanel = new JPanel();
         JButton deployStartButton = new JButton("Deploy Bottle at Start");
-        deployStartButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                new SignalClient2(10000, "ConveyorControllerCD.bottle").actionPerformed(e);
-            }
-        });
+	        deployStartButton.addActionListener(new ActionListener() {
+	            @Override
+	            public void actionPerformed(ActionEvent e) {
+	                System.out.println("Deploy Bottle at Start pressed!");
+	                new SignalClient(Ports.PORT_CONVEYOR_PLANT, Ports.BOTTLE_DEPLOYED).actionPerformed(e);
+	            }
+	        });
 
         JButton deployPos5Button = new JButton("Deploy Bottle at Pos 5");
         deployPos5Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // TODO: Add action for deploying bottle at pos 5 here
-                // E.g., new SignalClient2(PORT, "ConveyorControllerCD.bottlePos5").actionPerformed(e);
+                System.out.println("Deploy Bottle at Pos 5 pressed!");
+                new SignalClient(Ports.PORT_CONVEYOR_PLANT, "ConveyorControllerCD.bottlePos5").actionPerformed(e);
             }
         });
 
@@ -116,14 +119,17 @@ public class Conveyor extends JFrame {
     public static void main(String[] args) {
         Conveyor conv = new Conveyor();
         conv.setVisible(true);
-
-        while (true) {
-            try {
-                conv.repaint();
-                Thread.sleep(5);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-    }
+        conv.setVisible(true);
+		
+		SignalServer<LoaderVizWorker> server = new SignalServer<LoaderVizWorker>(20000, LoaderVizWorker.class);
+		new Thread(server).start();
+		while(true){
+			try {
+				conv.repaint();
+				Thread.sleep(5);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+	}
 }

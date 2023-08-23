@@ -1,7 +1,14 @@
 <System xmlns="http://systemjtechnology.com">
 	<SubSystem Name="SS4" Local="true">
 		<ClockDomain Name="ConveyorPlantCD" Class="ConveyorPlant">
-		
+			
+			
+		<iSignal Name="bottleDeployed" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000"/>
+		<iSignal Name="BOTTLE_FINISHED_AT_POS5" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+		<iSignal Name="MOT_CONVEYOR_ON_OFF" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+
+		<oSignal Name="BOTTLE_LEFT_POS5"  To="ConveyorControllerCD.armAtDest"  Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10001" />
+		<oSignal Name="BOTTLE_AT_POS1"  To="ConveyorControllerCD.armAtDest"  Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10001" />
 		</ClockDomain>
 	</SubSystem>
 </System>

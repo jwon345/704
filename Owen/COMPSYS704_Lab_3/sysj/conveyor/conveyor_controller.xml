@@ -2,7 +2,11 @@
 	<SubSystem Name="SS3" Local="true">
 		<ClockDomain Name="ConveyorControllerCD" Class="ConveyorController">
 		
-		<iSignal Name="bottle"         Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+		<oSignal Name="MOT_CONVEYOR_ON_OFF" To="ConveyorPlantCD.MOT_CONVEYOR_ON_OFF" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+		
+		<iSignal Name="BOTTLE_FINISHED_AT_POS5" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+		<iSignal Name="BOTTLE_LEFT_POS5"  Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10001" />
+		<iSignal Name="BOTTLE_AT_POS1"  Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10001" />
 		
 		</ClockDomain>
 	</SubSystem>

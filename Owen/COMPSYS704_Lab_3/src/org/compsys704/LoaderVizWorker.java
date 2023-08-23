@@ -21,7 +21,7 @@ public class LoaderVizWorker extends Worker{
 			if(States.GRIPPED && States.ARM_AT_SOURCE){
 				if(!status)
 					States.CAP_READY = true;
-			}
+				}
 			States.GRIPPED = status;
 			if(States.GRIPPED && States.ARM_AT_SOURCE){
 				States.CAP_READY = false;

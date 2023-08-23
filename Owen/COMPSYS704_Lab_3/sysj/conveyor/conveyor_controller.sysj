@@ -1,12 +1,8 @@
 ConveyorController(
-		input signal bottle;
+		input signal BOTTLE_LEFT_POS5,BOTTLE_AT_POS1;
+		output signal MOT_CONVEYOR_ON_OFF;
 		)
 ->
 {
-	while(true)
-	{
-		System.out.println("WaitingForBottle");
-		await(bottle);
-		System.out.println("Arrived");
-	}
+
 }

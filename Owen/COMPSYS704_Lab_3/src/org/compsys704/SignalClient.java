@@ -31,26 +31,38 @@ public class SignalClient implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		try {
-			if(s.isClosed()){
-				s = new Socket();
-				s.connect(new InetSocketAddress(ip, port), 10);
-				oos = new ObjectOutputStream(s.getOutputStream());
-				oos.writeObject(dest);
-				int resp = s.getInputStream().read();
-				if(resp < 0)
-					throw new ConnectException("Not thru");
-			}
-			oos.writeObject(new Object[]{true});
-			Thread.sleep(50);
-			oos.writeObject(new Object[]{false});
-		}
-		catch (IOException | InterruptedException ee) {
-			try {s.close();} catch (IOException e1) {
-				e1.printStackTrace();
-				System.exit(1);
-			}
-		}
-		
+	    try {
+	        if (s.isClosed()) {
+	            System.out.println("Attempting to connect to the server...");
+	            
+	            s = new Socket();
+	            s.connect(new InetSocketAddress(ip, port), 10);
+	            
+	            System.out.println("Successfully connected to the server.");
+	            
+	            oos = new ObjectOutputStream(s.getOutputStream());
+	            oos.writeObject(dest);
+	            
+	            int resp = s.getInputStream().read();
+	            if (resp < 0) {
+	                throw new ConnectException("Not thru");
+	            }
+	          
+	           
+	            
+	            Thread.sleep(50);
+
+	        }
+	    } catch (IOException | InterruptedException ee) {
+	        System.out.println("Error occurred: " + ee.getMessage());
+	        try {
+	            s.close();
+	            System.out.println("Connection closed due to error.");
+	        } catch (IOException e1) {
+	            e1.printStackTrace();
+	            System.out.println("Error while closing connection: " + e1.getMessage());
+	            System.exit(1);
+	        }
+	    }
 	}
 }
