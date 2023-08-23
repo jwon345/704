@@ -61,12 +61,12 @@ public class Canvas extends JPanel {
 		case 2:
 		  g.drawImage(bottle, 160 , 130, null);
 		  break;
-		case 3:
-		  g.drawImage(bottle, 360 , 110, null);
+		case 4:
+		  g.drawImage(bottle, 500 , 110, null);
 		  break;
 //		  System.out.println("draw2");
-		case 4:
-		  g.drawImage(bottle, 460 , 110, null);
+		case 5:
+		  g.drawImage(bottle, 600 , 110, null);
 		  break;
 		}
 

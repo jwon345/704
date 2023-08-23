@@ -40,11 +40,11 @@ ConveyorPlant(
 	  {
 //		{await(step);}||{await(placedNewBottle);};
 		
-		  await(placedNewBottle);
+		  await(placedNewBottleRight);
 		  await(step);
 		System.out.println("NewBottleArrived");
-		emit bottlePos(1);
-			System.out.println("bottleAtPos1");
+		emit bottlePos(4);
+			System.out.println("bottleAtPos4");
 		emit newBottle;
 
 //		emit motorOn(true);
@@ -71,11 +71,11 @@ ConveyorPlant(
 	  {
 //		{await(step);}||{await(placedNewBottle);};
 		
-		  await(placedNewBottleRight);
+		  await(placedNewBottle);
 		  await(step);
 		System.out.println("NewBottleArrivedRight");
-		emit bottlePos(4);
-			System.out.println("bottleAtPos5");
+		emit bottlePos(1);
+			System.out.println("bottleAtPos1");
 		emit newBottle;
 
 //		emit motorOn(true);
@@ -168,26 +168,26 @@ ConveyorPlant(
 		else if (#bottlePos == 1)
 		{
 			//vis bottle at start of conveyor
-//			System.out.println("pos1`");
+			System.out.println("asdf pos1`");
 			emit atPos1;
-			emit conveyorRunning;
+//			emit conveyorRunning;
 		}
 		else if (#bottlePos == 2)
 		{
 			//vis bottle at mouth of rotatory
-			emit conveyorRunning;
+//			emit conveyorRunning;
 			emit atPos2;
 //			System.out.println("pos2`");
 		}
 		else if (#bottlePos == 4)
 		{
-			emit conveyorRunning;
+//			emit conveyorRunning;
 			emit atPos4;
 //			System.out.println("pos2`");
 		}
 		else if (#bottlePos == 5)
 		{
-			emit conveyorRunning;
+//			emit conveyorRunning;
 			emit atPos5;
 //			System.out.println("pos2`");
 		}
@@ -198,4 +198,28 @@ ConveyorPlant(
 		pause;
 	  }
 	}
+
+	||
+	{ //visualisation
+	  while(true)	
+	  {
+		pause;
+		if (#bottlePos == 0)
+		{
+			emit conveyorRunning;
+		}
+		else if (#bottlePos == 1)
+		{
+			emit conveyorRunning;
+		}
+		else if (#bottlePos == 4)
+		{
+			emit conveyorRunning;
+		}
+		else if (#bottlePos == 5)
+		{
+			emit conveyorRunning;
+		}
+	  }
+	 }
 }
