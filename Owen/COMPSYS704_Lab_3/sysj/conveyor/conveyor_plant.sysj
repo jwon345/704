@@ -5,26 +5,36 @@ ConveyorPlant(
 		input signal bottleStart;
 		input signal bottleLeft;
 		input signal placedNewBottle;
+		input signal placedNewBottleRight;
 		input signal motorOn; 
+		
+		input signal removeBottle;
 
 		output signal motConveyorOnOff;
 		output signal bottleAtPos5;
 		output signal newBottle;
 
+		output signal atPos0;
 		output signal atPos1;
 		output signal atPos2;
+		output signal atPos4;
+		output signal atPos5;
+		output signal conveyorRunning;
 		)
 ->
 {
 
 	new Thread(new GUI()).start();
 	System.out.println("preplant starting");
+	signal stage1done;
+	signal stage2done;
 	int signal theMotorIsOn; 
 	int signal bottlePos; //bottlePos 0=non exits 1=Start 2=Mouth of rotatory 3=OtherSide 
 	emit theMotorIsOn(0);
 	emit bottlePos(0);
 	{ //listener
 		System.out.println("started the plant");
+		emit bottlePos(0);
 //		motorOn = false;
 	  while(true)
 	  {
@@ -52,12 +62,47 @@ ConveyorPlant(
 		//then do a big ass state machine
 		//
 		pause;
+		emit stage2done;
+	  }
+	}
+	||
+	{ //listener
+	  while(true)
+	  {
+//		{await(step);}||{await(placedNewBottle);};
+		
+		  await(placedNewBottleRight);
+		  await(step);
+		System.out.println("NewBottleArrivedRight");
+		emit bottlePos(4);
+			System.out.println("bottleAtPos5");
+		emit newBottle;
+
+//		emit motorOn(true);
+		if (#theMotorIsOn == 0)
+		{
+			emit theMotorIsOn(1);
+			System.out.println("theMotorIsOn");
+		}
+		else
+		{
+			emit theMotorIsOn(0);
+			System.out.println("theMotorIsOn");
+		}
+
+		//then do a big ass state machine
+		//
+		pause;
+		emit stage1done;
 	  }
 	}
 	||
 	{ //visualisation
 	  while(true)	
 	  {
+		await(stage1done);
+		pause;
+		pause;
 		if (#bottlePos == 1)
 		{
 			//dunno but 2 pauses needed to miss the single click double trigger
@@ -69,6 +114,8 @@ ConveyorPlant(
 				pause; // to give visual que?
 				emit bottlePos(2);
 				System.out.println("bottleAtPos2");
+				emit theMotorIsOn(1);
+				System.out.println("theMotorIsOff");
 			}
 		}
 		pause;
@@ -78,10 +125,35 @@ ConveyorPlant(
 	{ //visualisation
 	  while(true)	
 	  {
-		
-//		System.out.println("waiting Step");
-//		await(step);
-//		System.out.println("Step recieved");
+		await(stage2done);
+		pause;
+		pause;
+		if (#bottlePos == 4)
+		{
+			//dunno but 2 pauses needed to miss the single click double trigger
+			pause;
+			pause;
+			await(step);
+//			present(motorOn);
+			{
+				pause; // to give visual que?
+				emit bottlePos(5);
+				System.out.println("bottleAtPos5");
+				emit theMotorIsOn(1);
+				System.out.println("theMotorIsOff");
+			}
+		}
+		pause;
+	  }
+	}
+	||
+	{ //Remove Bottle
+	  while(true)	
+	  {
+		await(removeBottle); 
+		await(step);
+		emit bottlePos(0);
+		System.out.println("bottleGone");
 		pause;
 	  }
 	}
@@ -89,26 +161,40 @@ ConveyorPlant(
 	{ //visualisation
 	  while(true)	
 	  {
-		if (#bottlePos == 1)
+		if (#bottlePos == 0)
+		{
+			emit atPos0;
+		}
+		else if (#bottlePos == 1)
 		{
 			//vis bottle at start of conveyor
 //			System.out.println("pos1`");
 			emit atPos1;
+			emit conveyorRunning;
 		}
 		else if (#bottlePos == 2)
 		{
-			//vis bottle at mouth of conveyor
+			//vis bottle at mouth of rotatory
+			emit conveyorRunning;
 			emit atPos2;
 //			System.out.println("pos2`");
 		}
-
+		else if (#bottlePos == 4)
+		{
+			emit conveyorRunning;
+			emit atPos4;
+//			System.out.println("pos2`");
+		}
+		else if (#bottlePos == 5)
+		{
+			emit conveyorRunning;
+			emit atPos5;
+//			System.out.println("pos2`");
+		}
 		present(motorOn)
 		{
 			//Make it green;
 		}
-//		System.out.println("waiting newBottle");
-//		await(placedNewBottle);
-//		System.out.println("placedNewBottle recieved");
 		pause;
 	  }
 	}

@@ -11,12 +11,18 @@ import javax.swing.JPanel;
 
 public class Canvas extends JPanel {
 	
-	BufferedImage conveyor;
+	BufferedImage conveyor, conveyorRun;
 	BufferedImage bottle;
 	
 	public Canvas() {
 		try {
 			conveyor = ImageIO.read(new File("res/conveyor.png"));
+		} catch (IOException e) {
+			e.printStackTrace();
+			System.exit(1);
+		}
+		try {
+			conveyorRun = ImageIO.read(new File("res/motorRunning.png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 			System.exit(1);
@@ -32,8 +38,17 @@ public class Canvas extends JPanel {
 	@Override
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
-		g.drawImage(conveyor, 0 , 50, null);
+		
+		if (States2.drawConveyorRunning)
+		{
+			g.drawImage(conveyorRun, 0 , 50, null);
+		}
+		else
+		{
+			g.drawImage(conveyor, 0 , 50, null);
+		}
 	
+		//magic numbers BBY
 		switch (States2.bottlePos) {
 		case 0:
 		  g.drawImage(bottle, 1000 , 130, null);
@@ -46,7 +61,13 @@ public class Canvas extends JPanel {
 		case 2:
 		  g.drawImage(bottle, 160 , 130, null);
 		  break;
-//		  System.out.println("draw3");
+		case 3:
+		  g.drawImage(bottle, 360 , 110, null);
+		  break;
+//		  System.out.println("draw2");
+		case 4:
+		  g.drawImage(bottle, 460 , 110, null);
+		  break;
 		}
 
     

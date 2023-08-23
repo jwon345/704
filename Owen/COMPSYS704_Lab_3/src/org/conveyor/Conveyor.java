@@ -58,20 +58,25 @@ public class Conveyor extends JFrame {
 //        this.add(panel2,c);
         
         JPanel deployPanel = new JPanel();
-        JButton deployButton = new JButton("Deploy Bottle");
+        JButton deployButton = new JButton("Deploy Bottle LeftSide");
 //        deployButton.addActionListener(new SignalClient2(10000, "ConveyorControllerCD.bottle"));
         deployButton.addActionListener(new ActionListener() {
+            private boolean isRunning = false; // Flag to track if the action is already running
+
             @Override
             public void actionPerformed(ActionEvent e) {
-                // TODO: Add action for deploy button here
-            	new SignalClient2(10001, "ConveyorPlantCD.placedNewBottle").actionPerformed(e);;
-            	try {
-					Thread.sleep(deBounceTime);
-				} catch (InterruptedException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-//            	System.out.println("buttonPressed");
+                if (!isRunning) {
+                    isRunning = true; // Set the flag to indicate that the action is running
+                    new SignalClient2(10001, "ConveyorPlantCD.placedNewBottle").actionPerformed(e);
+
+                    try {
+                        Thread.sleep(deBounceTime);
+                    } catch (InterruptedException e1) {
+                        e1.printStackTrace();
+                    }
+
+                    isRunning = false; // Reset the flag after the action is complete
+                }
             }
         });
 
@@ -86,21 +91,58 @@ public class Conveyor extends JFrame {
         this.add(deployPanel, c);
 
 
+        JButton deployRight = new JButton("Deploy Bottle RightSide");
+//        deployButton.addActionListener(new SignalClient2(10000, "ConveyorControllerCD.bottle"));
+        deployRight.addActionListener(new ActionListener() {
+            private boolean isRunning = false; // Flag to track if the action is already running
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (!isRunning) {
+                    isRunning = true; // Set the flag to indicate that the action is running
+                    new SignalClient2(10001, "ConveyorPlantCD.placedNewBottleRight").actionPerformed(e);
+
+                    try {
+                        Thread.sleep(deBounceTime);
+                    } catch (InterruptedException e1) {
+                        e1.printStackTrace();
+                    }
+
+                    isRunning = false; // Reset the flag after the action is complete
+                }
+            }
+        });
+
+
+        deployPanel.add(deployRight);
+        
+        c.gridwidth = 1;
+        c.gridx = 0;
+        c.gridy = 1;
+        c.fill = GridBagConstraints.HORIZONTAL;
+        c.weightx = 1.0;
+        this.add(deployPanel, c);
+
         //button to step through the machine logic --> to the plant?
         JButton stepButton = new JButton("step");
         //signal to the plant to step
         stepButton.addActionListener(new ActionListener() {
+            private boolean isRunning = false; // Flag to track if the action is already running
+
             @Override
             public void actionPerformed(ActionEvent e) {
-                // TODO: Add action for deploy button here
-				new SignalClient2(10001, "ConveyorPlantCD.step").actionPerformed(e);
-            	try {
-					Thread.sleep(deBounceTime);
-				} catch (InterruptedException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-//            	System.out.println("buttonPressed");
+                if (!isRunning) {
+                    isRunning = true; // Set the flag to indicate that the action is running
+                    new SignalClient2(10001, "ConveyorPlantCD.step").actionPerformed(e);
+
+                    try {
+                        Thread.sleep(deBounceTime);
+                    } catch (InterruptedException e1) {
+                        e1.printStackTrace();
+                    }
+
+                    isRunning = false; // Reset the flag after the action is complete
+                }
             }
         });
         deployPanel.add(stepButton);
@@ -118,7 +160,7 @@ public class Conveyor extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // TODO: Add action for deploy button here
-				new SignalClient2(10001, "ConveyorPlantCD.step").actionPerformed(e);
+				new SignalClient2(10001, "ConveyorPlantCD.removeBottle").actionPerformed(e);
             	try {
 					Thread.sleep(deBounceTime);
 				} catch (InterruptedException e1) {
