@@ -20,6 +20,10 @@ public class LoaderVizWorker2 extends Worker2{
 			System.out.println("testSignalHere");
 //			States.PUSHER_RETRACTED = status;
 			break;
+		case "motorOn":
+			System.out.println("motorOn");
+//			States.PUSHER_RETRACTED = status;
+			break;
 		default: 
 			System.err.println("Wrong sig name : "+signame);
 			System.exit(1);

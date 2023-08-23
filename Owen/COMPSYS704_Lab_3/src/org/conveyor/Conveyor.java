@@ -62,8 +62,8 @@ public class Conveyor extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // TODO: Add action for deploy button here
-            	new SignalClient2(10000, "ConveyorControllerCD.bottle").actionPerformed(e);;
-            	System.out.print("buttonPres2s");
+            	new SignalClient2(10001, "ConveyorControllerCD.newBottle").actionPerformed(e);;
+            	System.out.println("buttonPressed");
             }
         });
 
@@ -72,6 +72,19 @@ public class Conveyor extends JFrame {
         
         c.gridwidth = 2;
         c.gridx = 0;
+        c.gridy = 1;
+        c.fill = GridBagConstraints.HORIZONTAL;
+        c.weightx = 1.0;
+        this.add(deployPanel, c);
+
+
+        //button to step through the machine logic --> to the plant?
+        JButton stepButton = new JButton("step");
+        //signal to the plant to step
+//        deployButton.addActionListener(new SignalClient2(10000, "ConveyorControllerCD.bottle"));
+        deployPanel.add(stepButton);
+        
+        c.gridx = 1;
         c.gridy = 1;
         c.fill = GridBagConstraints.HORIZONTAL;
         c.weightx = 1.0;
@@ -128,7 +141,7 @@ public class Conveyor extends JFrame {
         Conveyor conv = new Conveyor();
         conv.setVisible(true);
 
-        System.out.println("try create SErver");
+        System.out.println("try create Server");
         SignalServer2<LoaderVizWorker2> server = new SignalServer2<LoaderVizWorker2>(Ports.PORT_LOADER_VIZ, LoaderVizWorker2.class);
         new Thread(server).start();
         while (true) {

@@ -2,7 +2,7 @@
 
 package org.conveyor;
 
-public class States {
+public class States2 {
     
     // State to check if a bottle is at position 1
     public static volatile boolean BOTTLE_AT_POS1 = false;
@@ -12,5 +12,7 @@ public class States {
     
     // State to check the status of the conveyor motor
     public static volatile boolean MOT_CONVEYOR_ON_OFF = false;
+
+  
 
 }

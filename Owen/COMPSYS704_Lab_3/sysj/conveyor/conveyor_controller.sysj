@@ -1,14 +1,18 @@
 ConveyorController(
-		input signal bottle;
-		output signal testSignal;
+		input signal newBottle, BottleAtPos5;
+		output signal motorOn;
 		)
 ->
 {
 	while(true)
 	{
-		System.out.println("WaitingForBottle");
-		await(bottle);
-		System.out.println("Arrived");
-		emit testSignal;
+    present(newBottle) 
+    {
+      emit motorOn;
+    }
+    present(BottleAtPos5) 
+    {
+      emit motorOn;
+    }
 	}
 }

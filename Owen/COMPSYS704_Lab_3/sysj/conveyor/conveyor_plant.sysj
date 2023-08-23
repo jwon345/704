@@ -1,12 +1,37 @@
 import run.GUI;
 
 ConveyorPlant(
+		input signal step;
 		input signal bottleStart;
 		input signal bottleLeft;
+		input signal placedNewBottle;
 		output signal motConveyorOnOff;
+		output signal newBottle;
 		)
 ->
-
 {
 	new Thread(new GUI()).start();
+
+  signal boolean motorOn;
+
+  while(true)
+  {
+    (await step)||(await placedNewBottle);
+    System.out.println("NewBottleArrived");
+
+    //then do a big ass state machine
+    //
+    pause;
+  }
+}
+||
+{ //visualisation
+  while(true)
+  {
+    if ((boolean)#motorOn)
+    {
+      emit motConveyorOnoff;
+    }
+    pause;
+  }
 }

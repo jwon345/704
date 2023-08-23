@@ -25,6 +25,16 @@ public class Canvas extends JPanel {
 	@Override
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
-		g.drawImage(conveyor, 0 , 50, null);
+    if (States2.MOT_CONVEYOR_ON_OFF)
+    {
+      g.drawImage(conveyor, 0 , 50, null);
+    }
+    else
+    {
+      g.drawImage(conveyor, 120 , 50, null);
+    }
+
+    
+
 	}
 }
