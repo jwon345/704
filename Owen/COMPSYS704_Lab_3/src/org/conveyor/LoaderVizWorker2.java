@@ -20,9 +20,18 @@ public class LoaderVizWorker2 extends Worker2{
 			System.out.println("testSignalHere");
 //			States.PUSHER_RETRACTED = status;
 			break;
-		case "motorOn":
-			System.out.println("motorOn");
+		case "motorSwitch":
+			System.out.println("motor Turn On");
+			States2.MOT_CONVEYOR_ON_OFF = !States2.MOT_CONVEYOR_ON_OFF;
 //			States.PUSHER_RETRACTED = status;
+			break;
+		case "atPos1":
+			System.out.println("atPos1");
+			States2.bottlePos = 1;
+			break;
+		case "atPos2":
+			System.out.println("atPos2");
+			States2.bottlePos = 2;
 			break;
 		default: 
 			System.err.println("Wrong sig name : "+signame);
@@ -30,8 +39,8 @@ public class LoaderVizWorker2 extends Worker2{
 		}
 	}
 	
-	
-	static final List<String> signames = Arrays.asList("pusherRetractedE","pusherExtendedE","WPgrippedE","armAtSourceE","armAtDestE","emptyE", "testSignal");
+	//this might not be necessary....
+	static final List<String> signames = Arrays.asList("atPos1", "atPos2");
 	
 	@Override
 	public boolean hasSignal(String sn) {

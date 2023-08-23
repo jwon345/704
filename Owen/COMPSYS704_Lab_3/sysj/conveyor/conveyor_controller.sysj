@@ -14,5 +14,6 @@ ConveyorController(
     {
       emit motorOn;
     }
+    pause;
 	}
 }

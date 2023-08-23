@@ -12,10 +12,17 @@ import javax.swing.JPanel;
 public class Canvas extends JPanel {
 	
 	BufferedImage conveyor;
+	BufferedImage bottle;
 	
 	public Canvas() {
 		try {
 			conveyor = ImageIO.read(new File("res/conveyor.png"));
+		} catch (IOException e) {
+			e.printStackTrace();
+			System.exit(1);
+		}
+		try {
+			bottle = ImageIO.read(new File("res/bottle.png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 			System.exit(1);
@@ -25,14 +32,22 @@ public class Canvas extends JPanel {
 	@Override
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
-    if (States2.MOT_CONVEYOR_ON_OFF)
-    {
-      g.drawImage(conveyor, 0 , 50, null);
-    }
-    else
-    {
-      g.drawImage(conveyor, 120 , 50, null);
-    }
+		g.drawImage(conveyor, 0 , 50, null);
+	
+		switch (States2.bottlePos) {
+		case 0:
+		  g.drawImage(bottle, 1000 , 130, null);
+//		  System.out.println("draw1");
+		  break;
+		case 1:
+		  g.drawImage(bottle, 0 , 130, null);
+		  break;
+//		  System.out.println("draw2");
+		case 2:
+		  g.drawImage(bottle, 160 , 130, null);
+		  break;
+//		  System.out.println("draw3");
+		}
 
     
 

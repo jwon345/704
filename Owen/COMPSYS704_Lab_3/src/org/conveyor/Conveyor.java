@@ -24,6 +24,8 @@ public class Conveyor extends JFrame {
 	private JPanel panel;
     private JPanel panel2;
     private JPanel panel3;
+    private final int deBounceTime = 200;
+
 
     public Conveyor() {
         setSize(1000, 600);
@@ -45,15 +47,15 @@ public class Conveyor extends JFrame {
         c.weightx = 1;
         this.add(panel,c);
         
-        panel2 = new Canvas();
-    	panel2.setPreferredSize(new Dimension(500, 300));
-        panel2.setBorder(BorderFactory.createTitledBorder("Conveyor 2"));
-        panel2.setBackground(Color.GREEN);
-        c.fill = GridBagConstraints.HORIZONTAL;
-        c.gridx = 1;
-        c.gridy = 0;
-        c.weightx = 1.0;
-        this.add(panel2,c);
+//        panel2 = new Canvas();
+//    	panel2.setPreferredSize(new Dimension(500, 300));
+//        panel2.setBorder(BorderFactory.createTitledBorder("Conveyor 2"));
+//        panel2.setBackground(Color.GREEN);
+//        c.fill = GridBagConstraints.HORIZONTAL;
+//        c.gridx = 1;
+//        c.gridy = 0;
+//        c.weightx = 1.0;
+//        this.add(panel2,c);
         
         JPanel deployPanel = new JPanel();
         JButton deployButton = new JButton("Deploy Bottle");
@@ -62,15 +64,21 @@ public class Conveyor extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // TODO: Add action for deploy button here
-            	new SignalClient2(10001, "ConveyorControllerCD.newBottle").actionPerformed(e);;
-            	System.out.println("buttonPressed");
+            	new SignalClient2(10001, "ConveyorPlantCD.placedNewBottle").actionPerformed(e);;
+            	try {
+					Thread.sleep(deBounceTime);
+				} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+//            	System.out.println("buttonPressed");
             }
         });
 
 
         deployPanel.add(deployButton);
         
-        c.gridwidth = 2;
+        c.gridwidth = 1;
         c.gridx = 0;
         c.gridy = 1;
         c.fill = GridBagConstraints.HORIZONTAL;
@@ -81,15 +89,53 @@ public class Conveyor extends JFrame {
         //button to step through the machine logic --> to the plant?
         JButton stepButton = new JButton("step");
         //signal to the plant to step
-//        deployButton.addActionListener(new SignalClient2(10000, "ConveyorControllerCD.bottle"));
+        stepButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // TODO: Add action for deploy button here
+				new SignalClient2(10001, "ConveyorPlantCD.step").actionPerformed(e);
+            	try {
+					Thread.sleep(deBounceTime);
+				} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+//            	System.out.println("buttonPressed");
+            }
+        });
         deployPanel.add(stepButton);
         
-        c.gridx = 1;
+        c.gridx = 0;
         c.gridy = 1;
         c.fill = GridBagConstraints.HORIZONTAL;
         c.weightx = 1.0;
         this.add(deployPanel, c);
         
+
+        JButton removeBottle = new JButton("Remove Bottle");
+        //signal to the plant to step
+        removeBottle.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // TODO: Add action for deploy button here
+				new SignalClient2(10001, "ConveyorPlantCD.step").actionPerformed(e);
+            	try {
+					Thread.sleep(deBounceTime);
+				} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+//            	System.out.println("buttonPressed");
+            }
+        });
+        deployPanel.add(removeBottle);
+        
+        c.gridx = 0;
+        c.gridy = 1;
+        c.fill = GridBagConstraints.HORIZONTAL;
+        c.weightx = 1.0;
+        this.add(deployPanel, c);
+
         // Radio buttons for mode selection
         JRadioButton mmode = new JRadioButton("Manual");
         JRadioButton amode = new JRadioButton("Auto", true);
@@ -129,7 +175,7 @@ public class Conveyor extends JFrame {
         combinedPanel.add(modeSelectPanel);
         combinedPanel.add(manualControlPanel);
         
-        c.gridwidth = 2;
+        c.gridwidth = 1;
         c.gridx = 0;
         c.gridy = 2;
         c.fill = GridBagConstraints.HORIZONTAL;
@@ -142,12 +188,12 @@ public class Conveyor extends JFrame {
         conv.setVisible(true);
 
         System.out.println("try create Server");
-        SignalServer2<LoaderVizWorker2> server = new SignalServer2<LoaderVizWorker2>(Ports.PORT_LOADER_VIZ, LoaderVizWorker2.class);
+        SignalServer2<LoaderVizWorker2> server = new SignalServer2<LoaderVizWorker2>(20000, LoaderVizWorker2.class);
         new Thread(server).start();
         while (true) {
             try {
                 conv.repaint();
-                Thread.sleep(5);
+                Thread.sleep(1);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

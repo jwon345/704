@@ -31,14 +31,15 @@ public class SignalClient2 implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		System.out.println("socket");
+//		System.out.println("socket");
 		try {
 			if(s.isClosed()){
 				s = new Socket();
 				s.connect(new InetSocketAddress(ip, port), 10);
 				oos = new ObjectOutputStream(s.getOutputStream());
 				oos.writeObject(dest);
-				System.out.println(dest);
+//				what the message send
+//				System.out.println(dest);
 				int resp = s.getInputStream().read();
 				if(resp < 0)
 					throw new ConnectException("Not thru");

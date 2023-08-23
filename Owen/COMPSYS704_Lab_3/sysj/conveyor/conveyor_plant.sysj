@@ -5,33 +5,111 @@ ConveyorPlant(
 		input signal bottleStart;
 		input signal bottleLeft;
 		input signal placedNewBottle;
+		input signal motorOn; 
+
 		output signal motConveyorOnOff;
+		output signal bottleAtPos5;
 		output signal newBottle;
+
+		output signal atPos1;
+		output signal atPos2;
 		)
 ->
 {
+
 	new Thread(new GUI()).start();
+	System.out.println("preplant starting");
+	int signal theMotorIsOn; 
+	int signal bottlePos; //bottlePos 0=non exits 1=Start 2=Mouth of rotatory 3=OtherSide 
+	emit theMotorIsOn(0);
+	emit bottlePos(0);
+	{ //listener
+		System.out.println("started the plant");
+//		motorOn = false;
+	  while(true)
+	  {
+//		{await(step);}||{await(placedNewBottle);};
+		
+		  await(placedNewBottle);
+		  await(step);
+		System.out.println("NewBottleArrived");
+		emit bottlePos(1);
+			System.out.println("bottleAtPos1");
+		emit newBottle;
 
-  signal boolean motorOn;
+//		emit motorOn(true);
+		if (#theMotorIsOn == 0)
+		{
+			emit theMotorIsOn(1);
+			System.out.println("theMotorIsOn");
+		}
+		else
+		{
+			emit theMotorIsOn(0);
+			System.out.println("theMotorIsOn");
+		}
 
-  while(true)
-  {
-    (await step)||(await placedNewBottle);
-    System.out.println("NewBottleArrived");
+		//then do a big ass state machine
+		//
+		pause;
+	  }
+	}
+	||
+	{ //visualisation
+	  while(true)	
+	  {
+		if (#bottlePos == 1)
+		{
+			//dunno but 2 pauses needed to miss the single click double trigger
+			pause;
+			pause;
+			await(step);
+//			present(motorOn);
+			{
+				pause; // to give visual que?
+				emit bottlePos(2);
+				System.out.println("bottleAtPos2");
+			}
+		}
+		pause;
+	  }
+	}
+	||
+	{ //visualisation
+	  while(true)	
+	  {
+		
+//		System.out.println("waiting Step");
+//		await(step);
+//		System.out.println("Step recieved");
+		pause;
+	  }
+	}
+	||
+	{ //visualisation
+	  while(true)	
+	  {
+		if (#bottlePos == 1)
+		{
+			//vis bottle at start of conveyor
+//			System.out.println("pos1`");
+			emit atPos1;
+		}
+		else if (#bottlePos == 2)
+		{
+			//vis bottle at mouth of conveyor
+			emit atPos2;
+//			System.out.println("pos2`");
+		}
 
-    //then do a big ass state machine
-    //
-    pause;
-  }
-}
-||
-{ //visualisation
-  while(true)
-  {
-    if ((boolean)#motorOn)
-    {
-      emit motConveyorOnoff;
-    }
-    pause;
-  }
+		present(motorOn)
+		{
+			//Make it green;
+		}
+//		System.out.println("waiting newBottle");
+//		await(placedNewBottle);
+//		System.out.println("placedNewBottle recieved");
+		pause;
+	  }
+	}
 }
