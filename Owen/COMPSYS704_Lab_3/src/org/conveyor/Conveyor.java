@@ -124,7 +124,7 @@ public class Conveyor extends JFrame {
         this.add(deployPanel, c);
 
         //button to step through the machine logic --> to the plant?
-        JButton stepButton = new JButton("step");
+        JButton stepButton = new JButton("Enable");
         //signal to the plant to step
         stepButton.addActionListener(new ActionListener() {
             private boolean isRunning = false; // Flag to track if the action is already running

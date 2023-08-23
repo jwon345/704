@@ -41,7 +41,7 @@ public class Canvas extends JPanel {
 		
 		if (States2.drawConveyorRunning)
 		{
-			g.drawImage(conveyorRun, 0 , 50, null);
+			g.drawImage(conveyorRun, 0 , 70, null);
 		}
 		else
 		{
