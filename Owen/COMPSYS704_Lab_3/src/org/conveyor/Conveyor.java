@@ -128,8 +128,9 @@ public class Conveyor extends JFrame {
         Conveyor conv = new Conveyor();
         conv.setVisible(true);
 
-//        SignalServer<LoaderVizWorker> server = new SignalServer<LoaderVizWorker>(Ports.PORT_LOADER_VIZ, LoaderVizWorker.class);
-//        new Thread(server).start();
+        System.out.println("try create SErver");
+        SignalServer2<LoaderVizWorker2> server = new SignalServer2<LoaderVizWorker2>(Ports.PORT_LOADER_VIZ, LoaderVizWorker2.class);
+        new Thread(server).start();
         while (true) {
             try {
                 conv.repaint();

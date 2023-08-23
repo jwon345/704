@@ -1,5 +1,6 @@
 ConveyorController(
 		input signal bottle;
+		output signal testSignal;
 		)
 ->
 {
@@ -8,5 +9,6 @@ ConveyorController(
 		System.out.println("WaitingForBottle");
 		await(bottle);
 		System.out.println("Arrived");
+		emit testSignal;
 	}
 }
