@@ -1,0 +1,19 @@
+ConveyorController(
+		input signal newBottle, BottleAtPos5;
+		output signal motorOn;
+		)
+->
+{
+	while(true)
+	{
+    present(newBottle) 
+    {
+      emit motorOn;
+    }
+    present(BottleAtPos5) 
+    {
+      emit motorOn;
+    }
+    pause;
+	}
+}
