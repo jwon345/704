@@ -1,0 +1,9 @@
+<System xmlns="http://systemjtechnology.com">
+    <SubSystem Name="SS5" Local="true">
+        <ClockDomain Name="ConveyorCD" Class="ConveyorController">
+
+           <iChannel Name="rotated"  from="RotaryCD.rotated" />	
+        </ClockDomain>
+    </SubSystem>
+</System>
+

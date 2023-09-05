@@ -6,9 +6,9 @@
  			<iSignal Name="rotaryTableTrigger" 		 Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10003" />
 
             <!-- Output Signals -->
-            <oSignal Name="tableAlignedWithSensor" 	To="RotaryCon.tableAlignedWithSensor" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />
-            <oSignal Name="bottleAtPos5" 			To="RotaryCon.bottleAtPos5" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />
-            <oSignal Name="capOnBottleAtPos1" 		To="RotaryCon.capOnBottleAtPos1" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />
+            <oSignal Name="tableAlignedWithSensor" 	To="RotaryCD.tableAlignedWithSensor" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />
+            <oSignal Name="bottleAtPos5" 			To="RotaryCD.bottleAtPos5" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />
+            <oSignal Name="capOnBottleAtPos1" 		To="RotaryCD.capOnBottleAtPos1" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />
             
             <!-- Visualization Signals -->
             <oSignal Name="tableAlignedWithSensorE" To="UI.tableAlignedWithSensorE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />

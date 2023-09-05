@@ -1,36 +1,41 @@
-RotaryController(
-		input signal tableAlignedWithSensor, bottleAtPos5;
-		output signal rotaryTableTrigger;
-		input Boolean channel fillerReady, capperReady, convReady, baxterReady;
-		output Boolean channel rotated;
-		)->{
-			
-		signal fR, cR, cvR, bR;
+reaction checkReady(: input Boolean channel ReadyIn, output signal ReadyOut)
+{
+	loop{
+		trap(T){
+			{receive ReadyIn; pause; pause; exit(T);}
+			||
+			{ if(#ReadyIn){ sustain ReadyOut; } }
+		}
+		pause;
+	}
+}	
 
-		{
-			loop{
-				{await(fR);}||{await(cR);}||{await(cvR);}||{await(bR);}
-					present(bottleAtPos5) {
-					await(!bottleAtPos5);
-				}
-				
-				trap(T){
-					{sustain rotaryTableTrigger;}||{waitl(100 ms); exit(T);}
-				}
-				
-				await(tableAlignedWithSensor);
-				send rotated(SBoolean.TRUE);
-				waitl(500 ms);
-				}
-		}
-		||
-		{
-			checkReady(:fillerReady, fR)
-			||
-			checkReady(:capperReady, cR)
-			||
-			checkReady(:convReady, cvR)
-			||
-			checkReady(:baxterReady, bR)
-		}
-}
+RotaryController(
+	    input signal tableAlignedWithSensor, bottleAtPos5, capOnBottleAtPos1;
+	    output signal rotaryTableTrigger;
+	    input signal fillerReady, capperReady, convReady, baxterReady;
+	    )->{
+
+	    while(true){
+	        await(fillerReady && capperReady && convReady && baxterReady);
+
+	        System.out.println("*All controllers are ready*");
+
+	        trap(T){
+	            {
+	                System.out.println("*Rotating*");
+	                sustain rotaryTableTrigger;
+	            }
+	            ||
+	            {
+	                waitl(100 ms); 
+	                exit(T);
+	            }
+	        }
+	        
+	        System.out.println("*Waiting for Alignment*");
+	        await(tableAlignedWithSensor);
+	        System.out.println("*Aligned*");
+	        waitl(500 ms);
+	    }
+	}

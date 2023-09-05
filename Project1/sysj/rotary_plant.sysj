@@ -1,9 +1,8 @@
 import run.GUI;
 
 RotaryPlant(
-    input signal tableAlignedWithSensor, bottleAtPos5, capOnBottleAtPos1;
-    output signal rotaryTableTrigger;
-    input signal enable;
+    input signal rotaryTableTrigger;
+    output signal tableAlignedWithSensor, bottleAtPos5, capOnBottleAtPos1;
     output signal tableAlignedWithSensorE, bottleAtPos5E, capOnBottleAtPos1E, rotaryTableTriggerE;
 )
 ->
@@ -11,15 +10,10 @@ RotaryPlant(
     new Thread(new GUI()).start();
 
     {// Rotary Table Movement
-        while(true){
-            present(capOnBottleAtPos1){
-                await(!capOnBottleAtPos1); // Wait until the bottle is manually removed from the table.
-            }
-            await(enable);
-            sustain rotaryTableTrigger; // Rotate the table
-            waitl(500 ms); // Sustain the rotaryTableTrigger for about 0.5 second
-            await(tableAlignedWithSensor); // Ensure the table positions are aligned with the sensors
-        }
+    	loop{
+			await(rotaryTableTrigger);
+			emit tableAlignedWithSensor;
+		}
     }
     ||
     {// To viz
