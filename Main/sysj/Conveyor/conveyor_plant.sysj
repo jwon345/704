@@ -28,8 +28,7 @@ ConveyorPlant(
 {
 
 	new Thread(new GUI()).start();
-	System.out.println("preplant starting");
-	int signal bottlePos; //bottlePos 0=non exits 1=Start 2=Mouth of rotatory 3=OtherSide 
+	int signal bottlePos; //bottlePos 0=non exits 1=Start 2=Mouth of rotatory 4=Start of Exit  5 = end of exit
 	emit bottlePos(0);
 
 	System.out.println("started the plant");
@@ -44,6 +43,34 @@ ConveyorPlant(
 		emit bottlePos(4);
 		System.out.println("bottleAtPos4");
 		await(!step);
+
+		trap(T)
+		{
+			{
+				while (true)
+				{
+					present(controllerMotorOn)
+					{
+						// waitl(1000 ms);
+						await(step); // replace with waitl
+						System.out.println("steppedAtRight");
+						emit bottlePos(5);
+					}
+					pause;
+				}
+			}
+			||
+			{
+				while(true)
+				{
+					if (#bottlePos != 4)
+					{
+						exit(T);
+					}
+					pause;
+				}
+			}
+		}
 
 		pause;
 	  }
@@ -60,40 +87,31 @@ ConveyorPlant(
 		System.out.println("bottleAtPos1");
 		await(!step);
 
-		pause;
-	  }
-	}
-	||
-	// Waits for a step after Bottle has been placed on the left side
-	{ 
-	  while(true)	
-	  {
-		await(!step);
-		present(controllerMotorOn)
+		trap(T)
 		{
-			if (#bottlePos == 1)
 			{
-				await(step);
-				System.out.println("steppedAtLeft");
-				emit bottlePos(2);
+				while (true)
+				{
+					present(controllerMotorOn)
+					{
+						// waitl(1000 ms);
+						await(step); //replace with waitl
+						System.out.println("steppedAtRight");
+						emit bottlePos(2);
+					}
+					pause;
+				}
 			}
-		}
-		pause;
-	  }
-	}
-	||
-	// Waits for a step after Bottle has been placed on the Right side
-	{ 
-	  while(true)	
-	  {
-		await(!step);
-		present(controllerMotorOn)
-		{
-			if (#bottlePos == 4)
+			||
 			{
-				await(step);
-				System.out.println("steppedAtRight");
-				emit bottlePos(5);
+				while(true)
+				{
+					if (#bottlePos != 1)
+					{
+						exit(T);
+					}
+					pause;
+				}
 			}
 		}
 		pause;
