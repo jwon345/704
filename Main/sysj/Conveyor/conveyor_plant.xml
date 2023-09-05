@@ -19,13 +19,8 @@
 		<oSignal Name="conveyorRunning" To="UI.conveyorRunning" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
 		<oSignal Name="conveyorNotRunning" To="UI.conveyorNotRunning" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
 
-		<!-- TBD -->
-		<oSignal Name="newBottle" To="ConveyorControllerCD.newBottle" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10000" />
-		<oSignal Name="bottleAtPos5" To="ConveyorControllerCD.newBottle" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10000" />
-
 		<!-- output signal to the controller -->
 		<oSignal Name="toControllerBottleAtRotaryStart" To="ConveyorControllerCD.toControllerBottleAtRotaryStart" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10000" />
-		<oSignal Name="toControllerBottleLeftRotaryStart" To="ConveyorControllerCD.toControllerBottleLeftRotaryStart" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10000" />
 		<!-- input signal From the controller -->
 		<iSignal Name="controllerMotorOn" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10001" />
 

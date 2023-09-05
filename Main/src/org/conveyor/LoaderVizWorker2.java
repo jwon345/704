@@ -74,7 +74,7 @@ public class LoaderVizWorker2 extends Worker2{
 	}
 	
 	//this IS necessary....
-	static final List<String> signames = Arrays.asList("atPos0","atPos1", "atPos2",  "atPos4", "atPos5", "conveyorRunning","conveyorRunning","conveyorNotRunning" );
+	static final List<String> signames = Arrays.asList("atPos0","atPos1", "atPos2",  "atPos4", "atPos5", "conveyorRunning", "conveyorNotRunning" );
 	
 	@Override
 	public boolean hasSignal(String sn) {

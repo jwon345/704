@@ -11,7 +11,6 @@ ConveyorPlant(
 
 		//out signals to the Controller
 		output signal toControllerBottleAtRotaryStart;
-		output signal toControllerBottleLeftRotaryStart;
 
 		//input signals from the controller
 		input signal controllerMotorOn;
@@ -30,17 +29,13 @@ ConveyorPlant(
 
 	new Thread(new GUI()).start();
 	System.out.println("preplant starting");
-	signal stage1done;
-	signal stage2done;
-	int signal theMotorIsOn; 
 	int signal bottlePos; //bottlePos 0=non exits 1=Start 2=Mouth of rotatory 3=OtherSide 
-	emit theMotorIsOn(0);
 	emit bottlePos(0);
+
+	System.out.println("started the plant");
 
 	// awaiting for bottle to arrive --> Right side
 	{ 
-		System.out.println("started the plant");
-		emit bottlePos(0);
 	  while(true)
 	  {
 		await(placedNewBottleRight);
@@ -48,11 +43,9 @@ ConveyorPlant(
 		System.out.println("NewBottleArrived");
 		emit bottlePos(4);
 		System.out.println("bottleAtPos4");
-		emit newBottle;
 		await(!step);
 
 		pause;
-		emit stage2done;
 	  }
 	}
 	||
@@ -65,10 +58,9 @@ ConveyorPlant(
 		System.out.println("NewBottleArrivedRight");
 		emit bottlePos(1);
 		System.out.println("bottleAtPos1");
-		emit newBottle;
 		await(!step);
 
-		emit stage1done;
+		pause;
 	  }
 	}
 	||
@@ -76,13 +68,15 @@ ConveyorPlant(
 	{ 
 	  while(true)	
 	  {
-		await(stage1done);
 		await(!step);
-		System.out.println("steppedAtLeft");
-		if (#bottlePos == 1)
+		present(controllerMotorOn)
 		{
-			await(step);
-			emit bottlePos(2);
+			if (#bottlePos == 1)
+			{
+				await(step);
+				System.out.println("steppedAtLeft");
+				emit bottlePos(2);
+			}
 		}
 		pause;
 	  }
@@ -92,13 +86,15 @@ ConveyorPlant(
 	{ 
 	  while(true)	
 	  {
-		await(stage2done);
 		await(!step);
-		System.out.println("steppedAtRight");
-		if (#bottlePos == 4)
+		present(controllerMotorOn)
 		{
-			await(step);
-			emit bottlePos(5);
+			if (#bottlePos == 4)
+			{
+				await(step);
+				System.out.println("steppedAtRight");
+				emit bottlePos(5);
+			}
 		}
 		pause;
 	  }
@@ -173,17 +169,4 @@ ConveyorPlant(
 		pause;
 	  }
 	 }
-	//  ||
-	//  //test 
-	//  {
-	// 	while (true)
-	// 	{
-	// 		await(step);
-	// 		present(step)
-	// 		{
-	// 			System.out.println("Step Triggered");
-	// 		}
-	// 		await(!step);
-	// 	}
-	//  }
 }
