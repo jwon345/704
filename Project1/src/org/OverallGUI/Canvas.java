@@ -1,4 +1,4 @@
-package org.lidloader;
+package org.OverallGUI;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -12,15 +12,18 @@ import javax.swing.JPanel;
 import org.compsys704.States;
 
 public class Canvas extends JPanel {
+	// LIDLOADER IMAGES
 	BufferedImage arm1;
 	BufferedImage arm2;
 	BufferedImage p1;
 	BufferedImage p2;
 	BufferedImage loader;
 	BufferedImage cap;
+
 	
 	public Canvas(){
 		try {
+			// LIDLOADER IMAGES
 			BufferedImage bi = ImageIO.read(new File("res/arm.png"));
 			arm1 = bi.getSubimage(0, 0, 64, 256);
 			arm2 = bi.getSubimage(71, 0, 48, 256);
@@ -29,6 +32,8 @@ public class Canvas extends JPanel {
 			p1 = bi.getSubimage(0, 0, 238, 68);
 			p2 = bi.getSubimage(238, 0, 172, 68);
 			cap = ImageIO.read(new File("res/cap.png"));
+			
+	
 		} catch (IOException e) {
 			e.printStackTrace();
 			System.exit(1);;
@@ -38,6 +43,8 @@ public class Canvas extends JPanel {
 	@Override
 	protected void paintComponent(Graphics g){
 		super.paintComponent(g);
+
+		//LID LOADER SECTION
 		g.drawImage(loader, 0, 100, null);
 		
 		if(States.ARM_AT_DEST)
@@ -82,5 +89,8 @@ public class Canvas extends JPanel {
 		if(!States.MAG_EMPTY){
 			g.drawImage(cap, 152, 155, null);
 		}
+		
+		
+		
 	}
 }

@@ -1,6 +1,11 @@
 package org.compsys704;
 
 public class Ports {
+	//ROTARY TABLE
+	public static final int PORT_TABLE_PLANT = 10003;
+	public static final int PORT_TABLE_CONTROLLER = 10002;
+	
+	//LIDLOADER
 	public static final String REQUEST_SIGNAL = "ControllerCD.request";
 	public static final String REFILL_SIGNAL = "PlantCD.refill";
 	public static final String ENABLE_SIGNAL = "PlantCD.enable";

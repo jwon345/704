@@ -9,6 +9,13 @@ public class LoaderVizWorker extends Worker{
 	public void setSignal(boolean status) {
 //		System.out.println(signame+"  "+status);
 		switch(signame){
+		//ROTARY TABLE
+		case "rotaryTableTriggerE":
+			States.ROTARY_TABLE_TRIGGERED = status;
+			break;
+		
+		
+		//LID LOADER
 		case "pusherRetractedE":
 			States.PUSHER_RETRACTED = status;
 			break;
@@ -43,7 +50,8 @@ public class LoaderVizWorker extends Worker{
 	}
 	
 	
-	static final List<String> signames = Arrays.asList("pusherRetractedE","pusherExtendedE","WPgrippedE","armAtSourceE","armAtDestE","emptyE");
+	static final List<String> signames = Arrays.asList("pusherRetractedE","pusherExtendedE","WPgrippedE","armAtSourceE","armAtDestE","emptyE",
+			"rotaryTableTriggerE");
 	
 	@Override
 	public boolean hasSignal(String sn) {

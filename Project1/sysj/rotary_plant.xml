@@ -1,5 +1,5 @@
 <System xmlns="http://systemjtechnology.com">
-    <SubSystem Name="SS_RotaryTable" Local="true">
+    <SubSystem Name="SS4" Local="true">
         <ClockDomain Name="RotaryPlant" Class="RotaryPlant">
 			
             <!-- Input Signals -->

@@ -3,12 +3,21 @@
         <ClockDomain Name="RotaryCD" Class="RotaryController">
 
             <!-- Input Signals -->
-            
+            <iSignal Name="tableAlignedWithSensor" 	Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />
+            <iSignal Name="bottleAtPos5" 			Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />
+            <iSignal Name="capOnBottleAtPos1"  		Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />
             
             <!-- Output Signals -->
             <oSignal Name="rotaryTableTrigger" 		To="RotaryPlant.rotaryTableTrigger"	Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10003" />
             
+            <!-- Input Channels -->
+            <iChannel Name="convReady"     	From="ConveyorCD.convReady" />
+			<iChannel Name="capperReady"     		From="CapperCD.capperReady" />
+			<iChannel Name="fillerReady"     		From="FillerCD.fillerReady" />
+			<iChannel Name="baxterReady"     		From="BaxterCD.baxterReady" />
 			
+            <!-- Output Channels -->
+           <oChannel Name="rotated"  To="ConveyorCD.rotated" />				
 
         </ClockDomain>
     </SubSystem>

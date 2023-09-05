@@ -1,6 +1,7 @@
-package org.lidloader;
+package org.OverallGUI;
 
 import java.awt.Color;
+import java.awt.Insets;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
@@ -24,11 +25,13 @@ import org.compsys704.SignalClient;
 import org.compsys704.SignalRadioClient;
 import org.compsys704.SignalServer;
 
-public class CapLoader extends JFrame {
+public class OverallGUI extends JFrame {
 	private JPanel panel;
+	private JPanel rotaryPanel;
+	private JPanel conveyorPanel;
 	
-	public CapLoader() {
-//		this.setPreferredSize(new Dimension(200, 300));
+	public OverallGUI() {
+		// LIDLOADER SECTION //
 		panel = new Canvas();
 		panel.setPreferredSize(new Dimension(360, 350));
 		panel.setBackground(Color.WHITE);
@@ -75,9 +78,6 @@ public class CapLoader extends JFrame {
 		JCheckBox pe = new JCheckBox("pusherExtend");
 		pe.setEnabled(false);
 		pe.addItemListener(new SignalCheckBoxClient(Ports.PORT_LOADER_CONTROLLER, Ports.SIGNAL_PUSHER_EXTEND));
-//		JCheckBox pr = new JCheckBox("vacOff");
-//		pr.setEnabled(false);
-//		pr.addItemListener(new SignalCheckBoxClient(Ports.PORT_LOADER_CONTROLLER, Ports.SIGNAL_VACOFF));
 		JCheckBox vo = new JCheckBox("vacOn");
 		vo.setEnabled(false);
 		vo.addItemListener(new SignalCheckBoxClient(Ports.PORT_LOADER_CONTROLLER, Ports.SIGNAL_VACON));
@@ -90,7 +90,6 @@ public class CapLoader extends JFrame {
 
 		JPanel pan2 = new JPanel(new GridLayout(2, 2));
 		pan2.add(pe);
-//		pan2.add(pr);
 		pan2.add(vo);
 		pan2.add(as);
 		pan2.add(ad);
@@ -104,14 +103,36 @@ public class CapLoader extends JFrame {
 		c.gridy = 2;
 		this.add(pan3,c);
 		
-		this.setTitle("Cap Loader");
+		rotaryPanel = new RotaryCanvas();
+	    rotaryPanel.setPreferredSize(new Dimension(360, 350));
+	    rotaryPanel.setBackground(Color.WHITE); // Set to any color you want
+
+
+	    c.gridx = 1; // New panel's x position (next to the existing one)
+	    c.gridy = 0; // New panel's y position (same row as the existing one)
+	    c.insets = new Insets(0, 0, 0, 30); 
+	    this.add(rotaryPanel, c);
+	    
+	    conveyorPanel = new JPanel();
+	    conveyorPanel.setPreferredSize(new Dimension(360, 350));
+	    conveyorPanel.setBackground(Color.WHITE); // Set to any color you want
+
+
+	    c.gridx = 2; // New panel's x position (next to the existing one)
+	    c.gridy = 0; // New panel's y position (same row as the existing one)
+	    c.insets = new Insets(0, 0, 0, 30); 
+	    this.add(conveyorPanel, c);
+	    
+
+		
+		this.setTitle("ABS SYSTEM");
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setLocationRelativeTo(null);
 		this.setResizable(false);
 	}
 
 	public static void main(String[] args) {
-		CapLoader cl = new CapLoader();
+		OverallGUI cl = new OverallGUI();
 		cl.pack();
 		cl.setVisible(true);
 		
