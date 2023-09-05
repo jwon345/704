@@ -1,0 +1,11 @@
+reaction checkReady(: input Boolean channel ReadyIn, output signal ReadyOut)
+{
+	loop{
+		trap(T){
+			{receive ReadyIn; pause; pause; exit(T);}
+			||
+			{ if(#ReadyIn){ sustain ReadyOut; } }
+		}
+		pause;
+	}
+}	

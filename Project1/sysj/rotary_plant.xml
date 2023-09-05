@@ -1,0 +1,20 @@
+<System xmlns="http://systemjtechnology.com">
+    <SubSystem Name="SS_RotaryTable" Local="true">
+        <ClockDomain Name="RotaryPlant" Class="RotaryPlant">
+			
+            <!-- Input Signals -->
+ 			<iSignal Name="rotaryTableTrigger" 		 Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10003" />
+
+            <!-- Output Signals -->
+            <oSignal Name="tableAlignedWithSensor" 	To="RotaryCon.tableAlignedWithSensor" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />
+            <oSignal Name="bottleAtPos5" 			To="RotaryCon.bottleAtPos5" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />
+            <oSignal Name="capOnBottleAtPos1" 		To="RotaryCon.capOnBottleAtPos1" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />
+            
+            <!-- Visualization Signals -->
+            <oSignal Name="tableAlignedWithSensorE" To="UI.tableAlignedWithSensorE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+            <oSignal Name="bottleAtPos5E" 			To="UI.bottleAtPos5E" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+            <oSignal Name="capOnBottleAtPos1E" 		To="UI.capOnBottleAtPos1E" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+            <oSignal Name="rotaryTableTriggerE" 	To="UI.rotaryTableTriggerE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+        </ClockDomain>
+    </SubSystem>
+</System>

@@ -1,4 +1,4 @@
-package org.compsys704;
+package org.lidloader;
 
 import java.awt.Color;
 import java.awt.Component;
@@ -16,6 +16,13 @@ import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
+
+import org.compsys704.LoaderVizWorker;
+import org.compsys704.Ports;
+import org.compsys704.SignalCheckBoxClient;
+import org.compsys704.SignalClient;
+import org.compsys704.SignalRadioClient;
+import org.compsys704.SignalServer;
 
 public class CapLoader extends JFrame {
 	private JPanel panel;

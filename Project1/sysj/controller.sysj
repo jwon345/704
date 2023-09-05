@@ -1,3 +1,40 @@
+RotaryController(
+		input signal tableAlignedWithSensor, bottleAtPos5;
+		output signal rotaryTableTrigger;
+		input Boolean channel fillerReady, capperReady, convReady, baxterReady;
+		output Boolean channel rotated;
+		)->{
+			
+		signal fR, cR, cvR, bR;
+
+		{
+			loop{
+				{await(fR);}||{await(cR);}||{await(cvR);}||{await(bR);}
+					present(bottleAtPos5) {
+					await(!bottleAtPos5);
+				}
+				
+				trap(T){
+					{sustain rotaryTableTrigger;}||{waitl(100 ms); exit(T);}
+				}
+				
+				await(tableAlignedWithSensor);
+				send rotated(SBoolean.TRUE);
+				waitl(500 ms);
+				}
+		}
+		||
+		{
+			checkReady(:fillerReady, fR)
+			||
+			checkReady(:capperReady, cR)
+			||
+			checkReady(:convReady, cvR)
+			||
+			checkReady(:baxterReady, bR)
+		}
+}
+
 Controller(
 		input signal pusherRetracted,pusherExtended,WPgripped,armAtSource,armAtDest,empty,request;
 		output signal pusherExtend,vacOn,armSource,armDest;

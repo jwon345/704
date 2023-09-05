@@ -1,4 +1,4 @@
-package org.compsys704;
+package org.lidloader;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -8,6 +8,8 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
+
+import org.compsys704.States;
 
 public class Canvas extends JPanel {
 	BufferedImage arm1;
