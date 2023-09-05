@@ -1,0 +1,35 @@
+<System xmlns="http://systemjtechnology.com">
+	<SubSystem Name="SS4" Local="true">
+		<ClockDomain Name="ConveyorPlantCD" Class="ConveyorPlant">
+
+		<!-- input Signals from the UI -->
+		<iSignal Name="step" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10001" />
+		<iSignal Name="placedNewBottle" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10001" />
+		<iSignal Name="placedNewBottleRight" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10001" />
+		<iSignal Name="bottleStart" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10001" />
+		<iSignal Name="bottleLeft" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10001" />
+		<iSignal Name="removeBottle" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10001" />
+
+		<!-- output signals to the UI -->
+		<oSignal Name="atPos0" To="UI.atPos0" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+		<oSignal Name="atPos1" To="UI.atPos1" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+		<oSignal Name="atPos2" To="UI.atPos2" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+		<oSignal Name="atPos4" To="UI.atPos4" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+		<oSignal Name="atPos5" To="UI.atPos5" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+		<oSignal Name="conveyorRunning" To="UI.conveyorRunning" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+		<oSignal Name="conveyorNotRunning" To="UI.conveyorNotRunning" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+
+		<!-- TBD -->
+		<oSignal Name="newBottle" To="ConveyorControllerCD.newBottle" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10000" />
+		<oSignal Name="bottleAtPos5" To="ConveyorControllerCD.newBottle" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10000" />
+
+		<!-- output signal to the controller -->
+		<oSignal Name="toControllerBottleAtRotaryStart" To="ConveyorControllerCD.toControllerBottleAtRotaryStart" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10000" />
+		<oSignal Name="toControllerBottleLeftRotaryStart" To="ConveyorControllerCD.toControllerBottleLeftRotaryStart" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10000" />
+		<!-- input signal From the controller -->
+		<iSignal Name="controllerMotorOn" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10001" />
+
+		
+		</ClockDomain>
+	</SubSystem>
+</System>

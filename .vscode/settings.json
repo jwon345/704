@@ -1,0 +1,10 @@
+{
+    "files.exclude": {
+        ".metadata": true,
+        "**/settings": true,
+        "Main/.classpath": true,
+        "Main/.project": true,
+        "Main/.settings": true,
+        "Main/lib": true
+    }
+}

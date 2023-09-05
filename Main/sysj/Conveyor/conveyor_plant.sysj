@@ -1,0 +1,189 @@
+import run.GUI;
+
+ConveyorPlant(
+		// input signals from the ui
+		input signal step;
+		input signal bottleStart;
+		input signal bottleLeft;
+		input signal placedNewBottle;
+		input signal placedNewBottleRight;
+		input signal removeBottle;
+
+		//out signals to the Controller
+		output signal toControllerBottleAtRotaryStart;
+		output signal toControllerBottleLeftRotaryStart;
+
+		//input signals from the controller
+		input signal controllerMotorOn;
+
+		//output signals to the visualiser 
+		output signal atPos0;
+		output signal atPos1;
+		output signal atPos2;
+		output signal atPos4;
+		output signal atPos5;
+		output signal conveyorRunning; //i think 2 needed. or at least easier
+		output signal conveyorNotRunning;
+		)
+->
+{
+
+	new Thread(new GUI()).start();
+	System.out.println("preplant starting");
+	signal stage1done;
+	signal stage2done;
+	int signal theMotorIsOn; 
+	int signal bottlePos; //bottlePos 0=non exits 1=Start 2=Mouth of rotatory 3=OtherSide 
+	emit theMotorIsOn(0);
+	emit bottlePos(0);
+
+	// awaiting for bottle to arrive --> Right side
+	{ 
+		System.out.println("started the plant");
+		emit bottlePos(0);
+	  while(true)
+	  {
+		await(placedNewBottleRight);
+		await(step);
+		System.out.println("NewBottleArrived");
+		emit bottlePos(4);
+		System.out.println("bottleAtPos4");
+		emit newBottle;
+		await(!step);
+
+		pause;
+		emit stage2done;
+	  }
+	}
+	||
+	// awaiting for bottle to arrive --> Left side
+	{ 
+	  while(true)
+	  {
+		await(placedNewBottle);
+		await(step);
+		System.out.println("NewBottleArrivedRight");
+		emit bottlePos(1);
+		System.out.println("bottleAtPos1");
+		emit newBottle;
+		await(!step);
+
+		emit stage1done;
+	  }
+	}
+	||
+	// Waits for a step after Bottle has been placed on the left side
+	{ 
+	  while(true)	
+	  {
+		await(stage1done);
+		await(!step);
+		System.out.println("steppedAtLeft");
+		if (#bottlePos == 1)
+		{
+			await(step);
+			emit bottlePos(2);
+		}
+		pause;
+	  }
+	}
+	||
+	// Waits for a step after Bottle has been placed on the Right side
+	{ 
+	  while(true)	
+	  {
+		await(stage2done);
+		await(!step);
+		System.out.println("steppedAtRight");
+		if (#bottlePos == 4)
+		{
+			await(step);
+			emit bottlePos(5);
+		}
+		pause;
+	  }
+	}
+	||
+	//remove the bottle handler
+	{ 
+	  while(true)	
+	  {
+		await(removeBottle); 
+		await(step);
+		emit bottlePos(0);
+		System.out.println("bottleGone");
+		pause;
+	  }
+	}
+	||
+	//hander to send signal to the controller
+	{ 
+		while(true)
+		{
+			if (#bottlePos == 2)
+			{
+				emit toControllerBottleAtRotaryStart;
+			}
+			pause;
+		}
+	}
+	||
+	{ //visualisation of bottle positions
+	  while(true)	
+	  {
+		if (#bottlePos == 0)
+		{
+			emit atPos0;
+		}
+		else if (#bottlePos == 1)
+		{
+			emit atPos1;
+		}
+		else if (#bottlePos == 2)
+		{
+			emit atPos2;
+		}
+		else if (#bottlePos == 4)
+		{
+			emit atPos4;
+		}
+		else if (#bottlePos == 5)
+		{
+			emit atPos5;
+		}
+		pause;
+	  }
+	}
+
+	||
+	//Visualisation of the conveyor running
+	{ 
+	  while(true)	
+	  {
+		present (controllerMotorOn)
+		{
+			emit conveyorRunning;
+			// System.out.println("motor running");
+		}
+		else
+		{
+			emit conveyorNotRunning;
+			// System.out.println("motor not running");
+		}
+		pause;
+	  }
+	 }
+	//  ||
+	//  //test 
+	//  {
+	// 	while (true)
+	// 	{
+	// 		await(step);
+	// 		present(step)
+	// 		{
+	// 			System.out.println("Step Triggered");
+	// 		}
+	// 		await(!step);
+	// 	}
+	//  }
+}

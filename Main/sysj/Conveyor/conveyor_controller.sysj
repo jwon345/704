@@ -1,0 +1,25 @@
+ConveyorController(
+    input signal toControllerBottleAtRotaryStart;
+		output signal controllerMotorOn;
+		)
+->
+{
+	while(true)
+	{
+    //couldn't get aborts to work
+    trap(P){
+      {
+        System.out.println("Conveyor is on");
+        sustain controllerMotorOn;
+      }
+      ||
+      {
+        await(toControllerBottleAtRotaryStart); 
+        exit(P);
+      }
+    }
+    System.out.println("off and Waiting bottle to leave rotatory mouth");
+    await(!toControllerBottleAtRotaryStart);
+    pause;
+	}
+}
