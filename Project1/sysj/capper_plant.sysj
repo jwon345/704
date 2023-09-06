@@ -1,0 +1,53 @@
+CapperPlant(
+		input signal cylPos5ZaxisExtend,gripperTurnRetract,gripperTurnExtend,
+		capGripperPos5Extend,cylClampBottleExtend;
+		
+		output signal bottleAtPos4, gripperZAxisLowered,gripperZAxisLifted,
+		gripperTurnHomePos,gripperTurnFinalPos;
+		
+		output signal cylPos5ZaxisExtendE, gripperTurnRetractE, gripperTurnExtendE,
+	    capGripperPos5ExtendE, cylClampBottleExtendE, bottleAtPos4E, gripperZAxisLoweredE,
+	    gripperZAxisLiftedE, gripperTurnHomePosE, gripperTurnFinalPosE;
+		)
+->
+		{
+			{
+				loop{
+					abort(gripperTurnRetract){sustain gripperZAxisLifted;}
+					emit gripperTurnHomePos;
+					pause;
+					emit gripperZAxisLowered;
+					pause;
+					emit gripperTurnFinalPos;
+					pause;
+					emit gripperZAxisLifted;
+				}
+			}
+			||
+			{
+				//emit bottleatPos4
+			}
+			
+			||
+		    {// To viz
+		        {while(true){present(cylPos5ZaxisExtend){emit cylPos5ZaxisExtendE;} pause;}}
+		        ||
+		        {while(true){present(gripperTurnRetract){emit gripperTurnRetractE;} pause;}}
+		        ||
+		        {while(true){present(gripperTurnExtend){emit gripperTurnExtendE;} pause;}}
+		        ||
+		        {while(true){present(capGripperPos5Extend){emit capGripperPos5ExtendE;} pause;}}
+		        ||
+		        {while(true){present(cylClampBottleExtend){emit cylClampBottleExtendE;} pause;}}
+		        ||
+		        {while(true){present(bottleAtPos4){emit bottleAtPos4E;} pause;}}
+		        ||
+		        {while(true){present(gripperZAxisLowered){emit gripperZAxisLoweredE;} pause;}}
+		        ||
+		        {while(true){present(gripperZAxisLifted){emit gripperZAxisLiftedE;} pause;}}
+		        ||
+		        {while(true){present(gripperTurnHomePos){emit gripperTurnHomePosE;} pause;}}
+		        ||
+		        {while(true){present(gripperTurnFinalPos){emit gripperTurnFinalPosE;} pause;}}
+		    }
+		}

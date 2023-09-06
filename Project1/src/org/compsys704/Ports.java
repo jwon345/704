@@ -2,6 +2,14 @@ package org.compsys704;
 
 public class Ports {
 	
+	//Capper TABLE
+	public static final int PORT_Capper_PLANT = 10009;
+	public static final int PORT_Capper_CONTROLLER= 10008;
+	
+	//Filler TABLE
+	public static final int PORT_FILLER_PLANT = 10007;
+	public static final int PORT_FILLER_CONTROLLER= 10006;
+	
 	//CONVEYOR TABLE
 	public static final int PORT_CONVEYOR_PLANT = 10005;
 	public static final int PORT_CONVEYOR_CONTROLLER = 10004;

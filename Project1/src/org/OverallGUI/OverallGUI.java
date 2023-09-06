@@ -29,11 +29,13 @@ public class OverallGUI extends JFrame {
 	private JPanel panel;
 	private JPanel rotaryPanel;
 	private JPanel conveyorPanel;
+	private JPanel fillerPanel;
+	private JPanel capperPanel;
 	
 	public OverallGUI() {
 		// LIDLOADER SECTION //
 		panel = new Canvas();
-		panel.setPreferredSize(new Dimension(360, 350));
+		panel.setPreferredSize(new Dimension(360, 320));
 		panel.setBackground(Color.WHITE);
 		JButton enable = new JButton("enable");
 		enable.addActionListener(new SignalClient(Ports.PORT_LOADER_PLANT, Ports.ENABLE_SIGNAL));
@@ -49,6 +51,7 @@ public class OverallGUI extends JFrame {
 		GridBagConstraints c = new GridBagConstraints();
 		c.gridx = 0;
 		c.gridy = 0;
+		c.insets = new Insets(20, 0, 0, 0); 
 		this.add(panel,c);
 		c.gridx = 0;
 		c.gridy = 1;
@@ -104,17 +107,17 @@ public class OverallGUI extends JFrame {
 		this.add(pan3,c);
 		
 		rotaryPanel = new RotaryCanvas();
-	    rotaryPanel.setPreferredSize(new Dimension(360, 350));
+	    rotaryPanel.setPreferredSize(new Dimension(360, 320));
 	    rotaryPanel.setBackground(Color.WHITE); // Set to any color you want
 
 
-	    c.gridx = 1; // New panel's x position (next to the existing one)
+	    c.gridx = 2; // New panel's x position (next to the existing one)
 	    c.gridy = 0; // New panel's y position (same row as the existing one)
-	    c.insets = new Insets(0, 0, 0, 30); 
+	    c.insets = new Insets(20, 0, 0, 30); 
 	    this.add(rotaryPanel, c);
 	    
 	    conveyorPanel = new ConveyorCanvas();
-	    conveyorPanel.setPreferredSize(new Dimension(400, 350));	
+	    conveyorPanel.setPreferredSize(new Dimension(400, 320));	
 	    conveyorPanel.setBackground(Color.WHITE); // Set to any color you want
 
 	    JButton deploy = new JButton("Deploy");
@@ -122,16 +125,34 @@ public class OverallGUI extends JFrame {
 		JPanel conveyorbax = new JPanel();
 		conveyorbax.add(deploy);
 		
-	    c.gridx = 2; // New panel's x position (next to the existing one)
+	    c.gridx = 1; // New panel's x position (next to the existing one)
 	    c.gridy = 0; // New panel's y position (same row as the existing one)
-	    c.insets = new Insets(0, 0, 0, 30); 
+	    c.insets = new Insets(20, 0, 0, 30); 
 	    this.add(conveyorPanel, c);
 	    
-	    c.gridx = 2; // New panel's x position (next to the existing one)
+	    c.gridx = 1; // New panel's x position (next to the existing one)
 	    c.gridy = 1; // New panel's y position (same row as the existing one)
 	    this.add(conveyorbax, c);
-
-		
+	    
+	    
+	    fillerPanel = new FillerCanvas();
+	    fillerPanel.setPreferredSize(new Dimension(400, 320));	
+	    fillerPanel.setBackground(Color.WHITE); // Set to any color you want
+	    
+	    c.gridx = 1; // New panel's x position (next to the existing one)
+	    c.gridy = 3; // New panel's y position (same row as the existing one)
+	    c.insets = new Insets(20, 0, 20, 30); 
+	    this.add(fillerPanel, c);
+	    
+	    capperPanel = new CapperCanvas();
+	    capperPanel.setPreferredSize(new Dimension(360, 320));	
+	    capperPanel.setBackground(Color.WHITE); // Set to any color you want
+	    
+	    c.gridx = 2; // New panel's x position (next to the existing one)
+	    c.gridy = 3; // New panel's y position (same row as the existing one)
+	    c.insets = new Insets(20, 0, 20, 30); 
+	    this.add(capperPanel, c);
+	    
 		this.setTitle("ABS SYSTEM");
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setLocationRelativeTo(null);

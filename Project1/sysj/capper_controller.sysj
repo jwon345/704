@@ -1,0 +1,37 @@
+CapperController(
+		input signal bottleAtPos4, gripperZAxisLowered,gripperZAxisLifted,
+		gripperTurnHomePos,gripperTurnFinalPos;
+		
+		output signal cylPos5ZaxisExtend,gripperTurnRetract,gripperTurnExtend,
+		capGripperPos5Extend,cylClampBottleExtend;
+
+		)
+	-> 		
+		{
+			
+			{
+				loop{
+					await(bottleAtPos4);
+	
+					abort(gripperZAxisLifted){halt;}
+					abort(gripperTurnHomePos){sustain gripperTurnRetract;}
+					trap(T){
+						{sustain cylPos5ZaxisExtend;}
+						||
+						{
+							await(gripperZAxisLowered);
+							{sustain capGripperPos5Extend;}
+							||
+							{sustain gripperTurnExtend;}
+							||
+							{
+								await(gripperTurnFinalPos);
+								exit(T);
+							}
+						}
+					}
+					await(gripperZAxisLifted);
+					await(!bottleAtPos4);
+				}
+			}
+		}

@@ -20,17 +20,17 @@ public class RotaryController extends ClockDomain{
   public Signal rotaryTableTrigger = new Signal("rotaryTableTrigger", Signal.OUTPUT);
   private long __start_thread_3;//sysj\rotary_controller.sysj line: 30, column: 14
   private long __start_thread_1;//sysj\rotary_controller.sysj line: 19, column: 6
-  private int S4115 = 1;
-  private int S3695 = 1;
-  private int S3703 = 1;
-  private int S3719 = 1;
-  private int S3705 = 1;
+  private int S5029 = 1;
+  private int S4609 = 1;
+  private int S4617 = 1;
+  private int S4633 = 1;
+  private int S4619 = 1;
   
   private int[] ends = new int[4];
   private int[] tdone = new int[4];
   
-  public void thread4121(int [] tdone, int [] ends){
-        switch(S3719){
+  public void thread5035(int [] tdone, int [] ends){
+        switch(S4633){
       case 0 : 
         active[3]=0;
         ends[3]=0;
@@ -38,9 +38,9 @@ public class RotaryController extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S3705){
+        switch(S4619){
           case 0 : 
-            S3705=0;
+            S4619=0;
             if(com.systemj.Timer.getMs() - __start_thread_3 >= 100){//sysj\rotary_controller.sysj line: 30, column: 14
               ends[3]=3;
               ;//sysj\rotary_controller.sysj line: 30, column: 14
@@ -48,7 +48,7 @@ public class RotaryController extends ClockDomain{
               tdone[3]=1;
             }
             else {
-              S3705=1;
+              S4619=1;
               active[3]=1;
               ends[3]=1;
               tdone[3]=1;
@@ -56,8 +56,8 @@ public class RotaryController extends ClockDomain{
             break;
           
           case 1 : 
-            S3705=1;
-            S3705=0;
+            S4619=1;
+            S4619=0;
             if(com.systemj.Timer.getMs() - __start_thread_3 >= 100){//sysj\rotary_controller.sysj line: 30, column: 14
               ends[3]=3;
               ;//sysj\rotary_controller.sysj line: 30, column: 14
@@ -65,7 +65,7 @@ public class RotaryController extends ClockDomain{
               tdone[3]=1;
             }
             else {
-              S3705=1;
+              S4619=1;
               active[3]=1;
               ends[3]=1;
               tdone[3]=1;
@@ -78,8 +78,8 @@ public class RotaryController extends ClockDomain{
     }
   }
 
-  public void thread4120(int [] tdone, int [] ends){
-        switch(S3703){
+  public void thread5034(int [] tdone, int [] ends){
+        switch(S4617){
       case 0 : 
         active[2]=0;
         ends[2]=0;
@@ -97,10 +97,10 @@ public class RotaryController extends ClockDomain{
     }
   }
 
-  public void thread4118(int [] tdone, int [] ends){
-        S3719=1;
+  public void thread5032(int [] tdone, int [] ends){
+        S4633=1;
     __start_thread_3 = com.systemj.Timer.getMs();//sysj\rotary_controller.sysj line: 30, column: 14
-    S3705=0;
+    S4619=0;
     if(com.systemj.Timer.getMs() - __start_thread_3 >= 100){//sysj\rotary_controller.sysj line: 30, column: 14
       ends[3]=3;
       ;//sysj\rotary_controller.sysj line: 30, column: 14
@@ -108,15 +108,15 @@ public class RotaryController extends ClockDomain{
       tdone[3]=1;
     }
     else {
-      S3705=1;
+      S4619=1;
       active[3]=1;
       ends[3]=1;
       tdone[3]=1;
     }
   }
 
-  public void thread4117(int [] tdone, int [] ends){
-        S3703=1;
+  public void thread5031(int [] tdone, int [] ends){
+        S4617=1;
     System.out.println("*Rotating*");//sysj\rotary_controller.sysj line: 26, column: 18
     rotaryTableTrigger.setPresent();//sysj\rotary_controller.sysj line: 27, column: 18
     currsigs.addElement(rotaryTableTrigger);
@@ -132,44 +132,44 @@ public class RotaryController extends ClockDomain{
     }
     
     RUN: while(true){
-      switch(S4115){
+      switch(S5029){
         case 0 : 
-          S4115=0;
+          S5029=0;
           break RUN;
         
         case 1 : 
-          S4115=2;
-          S4115=2;
-          S3695=0;
+          S5029=2;
+          S5029=2;
+          S4609=0;
           active[1]=1;
           ends[1]=1;
           break RUN;
         
         case 2 : 
-          switch(S3695){
+          switch(S4609){
             case 0 : 
               if(fillerReady.getprestatus() && capperReady.getprestatus() && convReady.getprestatus()){//sysj\rotary_controller.sysj line: 20, column: 16
                 System.out.println("*All controllers are ready*");//sysj\rotary_controller.sysj line: 22, column: 10
-                S3695=1;
-                thread4117(tdone,ends);
-                thread4118(tdone,ends);
-                int biggest4119 = 0;
-                if(ends[2]>=biggest4119){
-                  biggest4119=ends[2];
+                S4609=1;
+                thread5031(tdone,ends);
+                thread5032(tdone,ends);
+                int biggest5033 = 0;
+                if(ends[2]>=biggest5033){
+                  biggest5033=ends[2];
                 }
-                if(ends[3]>=biggest4119){
-                  biggest4119=ends[3];
+                if(ends[3]>=biggest5033){
+                  biggest5033=ends[3];
                 }
-                if(biggest4119 == 1){
+                if(biggest5033 == 1){
                   active[1]=1;
                   ends[1]=1;
                   break RUN;
                 }
-                if(biggest4119 == 2){
+                if(biggest5033 == 2){
                   ends[1]=2;
                   ;//sysj\rotary_controller.sysj line: 24, column: 10
                   System.out.println("*Waiting for Alignment*");//sysj\rotary_controller.sysj line: 36, column: 10
-                  S3695=2;
+                  S4609=2;
                   active[1]=1;
                   ends[1]=1;
                   break RUN;
@@ -182,33 +182,33 @@ public class RotaryController extends ClockDomain{
               }
             
             case 1 : 
-              thread4120(tdone,ends);
-              thread4121(tdone,ends);
-              int biggest4122 = 0;
-              if(ends[2]>=biggest4122){
-                biggest4122=ends[2];
+              thread5034(tdone,ends);
+              thread5035(tdone,ends);
+              int biggest5036 = 0;
+              if(ends[2]>=biggest5036){
+                biggest5036=ends[2];
               }
-              if(ends[3]>=biggest4122){
-                biggest4122=ends[3];
+              if(ends[3]>=biggest5036){
+                biggest5036=ends[3];
               }
-              if(biggest4122 == 1){
+              if(biggest5036 == 1){
                 active[1]=1;
                 ends[1]=1;
                 break RUN;
               }
-              if(biggest4122 == 2){
+              if(biggest5036 == 2){
                 ends[1]=2;
                 ;//sysj\rotary_controller.sysj line: 24, column: 10
                 System.out.println("*Waiting for Alignment*");//sysj\rotary_controller.sysj line: 36, column: 10
-                S3695=2;
+                S4609=2;
                 active[1]=1;
                 ends[1]=1;
                 break RUN;
               }
               //FINXME code
-              if(biggest4122 == 0){
+              if(biggest5036 == 0){
                 System.out.println("*Waiting for Alignment*");//sysj\rotary_controller.sysj line: 36, column: 10
-                S3695=2;
+                S4609=2;
                 active[1]=1;
                 ends[1]=1;
                 break RUN;
@@ -217,12 +217,12 @@ public class RotaryController extends ClockDomain{
             case 2 : 
               if(tableAlignedWithSensor.getprestatus()){//sysj\rotary_controller.sysj line: 37, column: 16
                 System.out.println("*Aligned*");//sysj\rotary_controller.sysj line: 38, column: 10
-                S3695=3;
+                S4609=3;
                 __start_thread_1 = com.systemj.Timer.getMs();//sysj\rotary_controller.sysj line: 19, column: 6
                 if(com.systemj.Timer.getMs() - __start_thread_1 >= 500){//sysj\rotary_controller.sysj line: 19, column: 6
                   ends[1]=2;
                   ;//sysj\rotary_controller.sysj line: 19, column: 6
-                  S3695=0;
+                  S4609=0;
                   active[1]=1;
                   ends[1]=1;
                   break RUN;
@@ -243,7 +243,7 @@ public class RotaryController extends ClockDomain{
               if(com.systemj.Timer.getMs() - __start_thread_1 >= 500){//sysj\rotary_controller.sysj line: 19, column: 6
                 ends[1]=2;
                 ;//sysj\rotary_controller.sysj line: 19, column: 6
-                S3695=0;
+                S4609=0;
                 active[1]=1;
                 ends[1]=1;
                 break RUN;

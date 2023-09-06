@@ -1,0 +1,28 @@
+<System xmlns="http://systemjtechnology.com">
+    <SubSystem Name="SS8" Local="true">
+        <ClockDomain Name="FillerPlant" Class="FillerPlant">
+
+           	<!-- Input Signals -->
+           	<iSignal Name="valveInjectorOnOff"   Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10007" />
+     		<iSignal Name="valveInletOnOff"		Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10007" />
+   			<iSignal Name="dosUnitValveRetract" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10007" />
+      		<iSignal Name="dosUnitValveExtend" 	Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10007" />
+
+
+            <!-- Output Signals -->
+            <oSignal Name="bottleAtPos2"  To="FillerCD.bottleAtPos2" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10006" />
+			<oSignal Name="dosUnitEvac"  To="FillerCD.dosUnitEvac" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10006" />
+			<oSignal Name="dosUnitFilled"  	To="FillerCD.dosUnitFilled" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10006" />
+			
+			  <!-- Visualization Signals -->
+            <oSignal Name="valveInjectorOnOffE" 	To="UI.valveInjectorOnOffE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+            <oSignal Name="valveInletOnOffE" 		To="UI.valveInletOnOffE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+            <oSignal Name="dosUnitValveRetractE" 	To="UI.dosUnitValveRetractE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+            <oSignal Name="dosUnitValveExtendE" 	To="UI.dosUnitValveExtendE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+            <oSignal Name="bottleAtPos2E" 			To="UI.bottleAtPos2E" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+            <oSignal Name="dosUnitEvacE" 			To="UI.dosUnitEvacE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+            <oSignal Name="dosUnitFilledE" 			To="UI.dosUnitFilledE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+           
+        </ClockDomain>
+    </SubSystem>
+</System>

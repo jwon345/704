@@ -32,7 +32,7 @@ ConveyorPlant(
 	                        }
 	                        ||
 	                        {
-	                        	waitl(1000 ms);  
+	                        	waitl(800 ms);  
 	                            exit(T);
 	                        }
 	                    }
