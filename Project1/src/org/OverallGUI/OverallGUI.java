@@ -113,16 +113,23 @@ public class OverallGUI extends JFrame {
 	    c.insets = new Insets(0, 0, 0, 30); 
 	    this.add(rotaryPanel, c);
 	    
-	    conveyorPanel = new JPanel();
-	    conveyorPanel.setPreferredSize(new Dimension(360, 350));
+	    conveyorPanel = new ConveyorCanvas();
+	    conveyorPanel.setPreferredSize(new Dimension(400, 350));	
 	    conveyorPanel.setBackground(Color.WHITE); // Set to any color you want
 
-
+	    JButton deploy = new JButton("Deploy");
+	    deploy.addActionListener(new SignalClient(Ports.PORT_CONVEYOR_CONTROLLER, Ports.DEPLOY_SIGNAL));
+		JPanel conveyorbax = new JPanel();
+		conveyorbax.add(deploy);
+		
 	    c.gridx = 2; // New panel's x position (next to the existing one)
 	    c.gridy = 0; // New panel's y position (same row as the existing one)
 	    c.insets = new Insets(0, 0, 0, 30); 
 	    this.add(conveyorPanel, c);
 	    
+	    c.gridx = 2; // New panel's x position (next to the existing one)
+	    c.gridy = 1; // New panel's y position (same row as the existing one)
+	    this.add(conveyorbax, c);
 
 		
 		this.setTitle("ABS SYSTEM");

@@ -1,0 +1,70 @@
+ConveyorController(
+    input signal bottleAtPos1, bottleLeftPos5, bottleDeployed;
+    output signal motConveyorOnOff;
+    output Boolean channel convReady;
+    output signal bottleDeployedE;
+)
+->
+{
+    {
+        loop{
+        	System.out.println("Waiting for bottle to be delopyed and conveyor to be cleared...");
+            await(bottleDeployed); // Wait for the bottleDeployed signal
+
+            trap(T){
+                {
+                    await(bottleAtPos1); // Wait for a bottle to arrive at position 1
+                    pause;
+                    exit(T);
+                }
+                ||
+                {
+                    pause;
+                    send convReady(false);
+                }
+            }
+            pause;
+            System.out.println("Conveyor Ready");
+            pause;
+        }
+    }
+    ||
+    {
+        loop{
+            await(bottleDeployed); // Wait for the bottleDeployed signal
+            trap(M){
+                {
+                	System.out.println("Conveyer On");
+                    sustain motConveyorOnOff; // Keep the conveyor motor running
+                }
+                ||
+                {
+                    await(bottleAtPos1 || bottleLeftPos5); // Stop the motor if a bottle is at position 1 or has left position 5
+                    System.out.println("Bottle Reached Pos1");
+                    exit(M);
+                }
+            }
+        }
+    }
+    
+    ||
+    
+    {// To viz
+        {while(true)
+        	{
+	        	present(bottleDeployed)
+	        	trap(T) {
+	                {
+	                    sustain bottleDeployedE;
+	                }
+	                ||
+	                {
+	                    await(bottleAtPos1);
+	                    exit(T);
+	                }
+	            }
+	            pause;
+        	}
+        }
+    }
+}

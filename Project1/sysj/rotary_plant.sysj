@@ -12,7 +12,9 @@ RotaryPlant(
     {// Rotary Table Movement
     	loop{
 			await(rotaryTableTrigger);
+			pause;
 			emit tableAlignedWithSensor;
+            System.out.println("*Recieved*");
 		}
     }
     ||
@@ -23,6 +25,6 @@ RotaryPlant(
         ||
         {while(true){present(capOnBottleAtPos1){emit capOnBottleAtPos1E;} pause;}}
         ||
-        {while(true){present(rotaryTableTrigger){emit rotaryTableTriggerE;} pause;}}
+        {while(true){present(rotaryTableTrigger){;emit rotaryTableTriggerE;} pause;}}
     }
 }

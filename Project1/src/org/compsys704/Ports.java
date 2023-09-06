@@ -1,6 +1,12 @@
 package org.compsys704;
 
 public class Ports {
+	
+	//CONVEYOR TABLE
+	public static final int PORT_CONVEYOR_PLANT = 10005;
+	public static final int PORT_CONVEYOR_CONTROLLER = 10004;
+	public static final String DEPLOY_SIGNAL = "ConveyorCD.bottleDeployed";
+	
 	//ROTARY TABLE
 	public static final int PORT_TABLE_PLANT = 10003;
 	public static final int PORT_TABLE_CONTROLLER = 10002;

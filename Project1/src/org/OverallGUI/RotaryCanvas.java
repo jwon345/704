@@ -42,6 +42,9 @@ public class RotaryCanvas extends JPanel {
 	protected void paintComponent(Graphics g){
 		super.paintComponent(g);
 		g.drawImage(table, -90, 50, null);	
-		g.drawImage(arrow_1, 50, 40, null);	
+		g.drawImage(arrow_1, 120, 175, null);	
+		
+		if(States.ROTARY_TABLE_TRIGGERED)
+			g.drawImage(arrow_1, 100, 100, null);
 	}
 }

@@ -2,7 +2,12 @@ package org.compsys704;
 
 public class States {
 	
-	//
+	// CONVEYOR
+	public static volatile boolean MOTOR_ONOFF = false; 
+	public static volatile boolean BOTTLE_AT_POS1 = false; 
+	public static volatile boolean DEPLOY = false; 
+		
+	//TABLE
     public static volatile boolean ROTARY_TABLE_TRIGGERED = false;
 	
 	
