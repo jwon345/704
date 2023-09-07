@@ -13,17 +13,21 @@ import org.compsys704.States;
 
 public class CapperCanvas extends JPanel {
 
-	BufferedImage conveyor_off;
-	BufferedImage conveyor_on;
+	BufferedImage gripper_home;
+	BufferedImage gripper_on;
+	BufferedImage clamper;
+	BufferedImage clamped;
 	BufferedImage bottle;
 
 	
 	public CapperCanvas(){
 		try {
 		
-			conveyor_off = ImageIO.read(new File("res/conveyor.png"));
-			conveyor_on = ImageIO.read(new File("res/motorRunning.png"));
-			bottle = ImageIO.read(new File("res/bottle.png"));
+			gripper_home = ImageIO.read(new File("res/gripper.png"));
+			gripper_on = ImageIO.read(new File("res/gripped.png"));
+			clamper = ImageIO.read(new File("res/clamp.png"));
+			clamped = ImageIO.read(new File("res/clamped.png"));
+			bottle = ImageIO.read(new File("res/nocap_bottle.png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 			System.exit(1);;
@@ -33,21 +37,12 @@ public class CapperCanvas extends JPanel {
 	@Override
 	protected void paintComponent(Graphics g){
 		super.paintComponent(g);
-		if (States.MOTOR_ONOFF) {
-	        g.drawImage(conveyor_on, 10, 129, null);
-	    } else {
-	        g.drawImage(conveyor_off, 10, 120, null);
-	    }
-
-	    // Draw the bottle at deploy position if DEPLOY state is true
-	    if (States.DEPLOY) {
-	        g.drawImage(bottle, 20, 165, null);
-	    }
-
-	    // Draw the bottle at position 1 if BOTTLE_AT_POS1 state is true
-	    if (States.BOTTLE_AT_POS1) {
-	        g.drawImage(bottle, 108, 165, null);
-	    }
-
-	}
+        g.drawImage(gripper_home, 60, -20, null);
+        g.drawImage(clamper, 100, 200, null);
+        g.drawImage(clamped, 70, 200, null);
+        g.drawImage(bottle, 150, 215, null);
+        g.setColor(Color.gray);
+        g.fillRect(0, 300, 400, 30);
+}
+	
 }
