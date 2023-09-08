@@ -250,7 +250,7 @@ FillerController(
 	    				loop{
 	    				    System.out.println("*Filler - Waiting For BottleAtPos2*");
 	    					await(bottleAtPos2);
-	    					waitl(5 s);  // Delay before filling
+	    					waitl(2 s);  // Delay before filling
 	    					send fillerReady(Boolean.FALSE);
 	    					System.out.println("*Filler - Bottle Arrived at Pos 2*");
 	    					
@@ -292,15 +292,24 @@ FillerController(
 	    					}
 	    			}
 	    			
-	    			|| {
+	    			|| 
+	    			{
 	    				{while(true)
-	    				{present(bottleAtPos2)
-	    					{
-	    						;
-	    						emit bottleAtPos2E;
-	    					} 
-	    					pause;
-	    					}
+		    				{
+		    		        	present(bottleAtPos2)
+		    		        	trap(T) {
+		    		                {
+		    		                    sustain bottleAtPos2E;
+		    		                }
+		    		                ||
+		    		                {
+		    		                    await(dosUnitFilled);
+		    		                    exit(T);
+		    		                }
+		    		            }
+		    		            pause;
+		    	        	}
+	    				
 	    				}
 	    			}
 }
