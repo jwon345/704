@@ -1,28 +1,47 @@
+import run.GUI;
+
+
 CapperPlant(
 		input signal cylPos5ZaxisExtend,gripperTurnRetract,gripperTurnExtend,
 		capGripperPos5Extend,cylClampBottleExtend;
 		
-		output signal bottleAtPos4, gripperZAxisLowered,gripperZAxisLifted,
+		output signal gripperZAxisLowered,gripperZAxisLifted,
 		gripperTurnHomePos,gripperTurnFinalPos;
 		
 		output signal cylPos5ZaxisExtendE, gripperTurnRetractE, gripperTurnExtendE,
-	    capGripperPos5ExtendE, cylClampBottleExtendE, bottleAtPos4E, gripperZAxisLoweredE,
+	    capGripperPos5ExtendE, cylClampBottleExtendE, gripperZAxisLoweredE,
 	    gripperZAxisLiftedE, gripperTurnHomePosE, gripperTurnFinalPosE;
 		)
 ->
 		{
+			new Thread(new GUI()).start();
 			{
 				loop{
-					abort(gripperTurnRetract){sustain gripperZAxisLifted;}
+
+					abort(gripperTurnRetract)
+					{
+						sustain gripperZAxisLifted;
+					}
+
+					await (gripperTurnRetract);
 					emit gripperTurnHomePos;
 					pause;
+					
+					await (cylPos5ZaxisExtend);
 					emit gripperZAxisLowered;
 					pause;
+					{ 
+						{await(capGripperPos5Extend);}
+						||
+						{await(gripperTurnExtend);}
+					}
+					
 					emit gripperTurnFinalPos;
 					pause;
+
 					emit gripperZAxisLifted;
+					}
 				}
-			}
 			||
 			{
 				//emit bottleatPos4
@@ -39,8 +58,6 @@ CapperPlant(
 		        {while(true){present(capGripperPos5Extend){emit capGripperPos5ExtendE;} pause;}}
 		        ||
 		        {while(true){present(cylClampBottleExtend){emit cylClampBottleExtendE;} pause;}}
-		        ||
-		        {while(true){present(bottleAtPos4){emit bottleAtPos4E;} pause;}}
 		        ||
 		        {while(true){present(gripperZAxisLowered){emit gripperZAxisLoweredE;} pause;}}
 		        ||

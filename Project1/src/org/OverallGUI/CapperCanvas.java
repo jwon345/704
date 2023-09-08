@@ -13,9 +13,9 @@ import org.compsys704.States;
 
 public class CapperCanvas extends JPanel {
 
-	BufferedImage gripper_home;
+	BufferedImage gripper_off;
 	BufferedImage gripper_on;
-	BufferedImage clamper;
+	BufferedImage unclamper;
 	BufferedImage clamped;
 	BufferedImage bottle;
 
@@ -23,9 +23,9 @@ public class CapperCanvas extends JPanel {
 	public CapperCanvas(){
 		try {
 		
-			gripper_home = ImageIO.read(new File("res/gripper.png"));
+			gripper_off = ImageIO.read(new File("res/gripper.png"));
 			gripper_on = ImageIO.read(new File("res/gripped.png"));
-			clamper = ImageIO.read(new File("res/clamp.png"));
+			unclamper = ImageIO.read(new File("res/clamp.png"));
 			clamped = ImageIO.read(new File("res/clamped.png"));
 			bottle = ImageIO.read(new File("res/nocap_bottle.png"));
 		} catch (IOException e) {
@@ -37,10 +37,45 @@ public class CapperCanvas extends JPanel {
 	@Override
 	protected void paintComponent(Graphics g){
 		super.paintComponent(g);
-        g.drawImage(gripper_home, 60, -20, null);
-        g.drawImage(clamper, 100, 200, null);
-        g.drawImage(clamped, 70, 200, null);
-        g.drawImage(bottle, 150, 215, null);
+		
+		if (States.BOTTLE_AT_POS4) {
+		    g.drawImage(bottle, 150, 215, null);
+		}
+		
+		if (States.CYL_CLAMP_BOTTLE_EXTENDED) {
+		     g.drawImage(clamped, 70, 200, null);
+		     
+		}
+		else {
+		    g.drawImage(unclamper, 130, 200, null);
+		}
+
+		if (States.GRIPPER_ZAXIS_LIFTED) {
+		    g.drawImage(gripper_off, 60, -20, null);
+		}  else if (States.GRIPPER_TURN_RETRACTED) {
+		    g.drawImage(gripper_on, 60, -20, null);
+		} 
+		
+		else if (States.CYL_POS5_ZAXIS_EXTENDED) {
+		    g.drawImage(gripper_on, 60, 55, null);
+		}  else if (States.CAP_GRIPPER_POS5_EXTENDED) {
+		    g.drawImage(gripper_on, 60, 55, null);
+		}
+		
+		else {
+			  g.drawImage(gripper_off, 60, -30, null);
+		}
+
+		
+	
+		
+		
+
+
+			 
+		
+
+		
         g.setColor(Color.gray);
         g.fillRect(0, 300, 400, 30);
 }

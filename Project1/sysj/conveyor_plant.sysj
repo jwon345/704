@@ -99,17 +99,20 @@ FillerPlant(
 			)->{
 				{
 					loop{
-						await(valveInjectorOnOff);
+						await(valveInjectorOnOff);	
+						waitl(1 s);  // Delay before filling
 						emit dosUnitFilled;
 						System.out.println("*Filler - Bottle Filled (Pressure Can At Top) *");
 						await(valveInletOnOff);
+						waitl(1 s);  // Delay before filling
 						emit dosUnitEvac;
 						System.out.println("*Filler - Inlet Open (Pressure Can At Bottem) *");
 					}
 				}
-				//add sim at to emit pos2
 				
 				||
+				
+				
 				
 				{// To viz
 				        {while(true){present(valveInjectorOnOff){emit valveInjectorOnOffE;} pause;}}
@@ -119,8 +122,6 @@ FillerPlant(
 				        {while(true){present(dosUnitValveRetract){emit dosUnitValveRetractE;} pause;}}
 				        ||
 				        {while(true){present(dosUnitValveExtend){;emit dosUnitValveExtendE;} pause;}}
-				        ||
-				        {while(true){present(bottleAtPos2){;emit bottleAtPos2E;} pause;}}
 				        ||
 				        {while(true){present(dosUnitEvac){;emit dosUnitEvacE;} pause;}}
 				        ||

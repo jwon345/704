@@ -4,34 +4,105 @@ CapperController(
 		
 		output signal cylPos5ZaxisExtend,gripperTurnRetract,gripperTurnExtend,
 		capGripperPos5Extend,cylClampBottleExtend;
-
+		output signal bottleAtPos4E;
 		)
 	-> 		
 		{
 			
 			{
 				loop{
+					System.out.println("*Capper: Waiting for bottle at position 4...*");
 					await(bottleAtPos4);
-	
-					abort(gripperZAxisLifted){halt;}
-					abort(gripperTurnHomePos){sustain gripperTurnRetract;}
+					System.out.println("*Capper: Bottle Arivied at Position 4.*");
+					
+					System.out.println("Capper: Checking if gripper is fully lifted...");
+					abort(gripperZAxisLifted){
+		             
+		                halt;
+		            }
+					System.out.println("Capper: Gripper is lifted.");
+					
+					pause;
+					
+					abort(gripperTurnHomePos)
+					{
+						System.out.println("Capper: Untwisting the gripper...");
+						sustain gripperTurnRetract;
+					}
+					System.out.println("Capper: Gripper at home position...");
+				
+					
 					trap(T){
-						{sustain cylPos5ZaxisExtend;}
+						{sustain cylPos5ZaxisExtend;
+						}
 						||
 						{
 							await(gripperZAxisLowered);
-							{sustain capGripperPos5Extend;}
+							System.out.println("Capper: Gripper fully lowered. Gripping the cap...");
+							{
+								sustain capGripperPos5Extend;}
 							||
-							{sustain gripperTurnExtend;}
+							
+								{
+								System.out.println("Capper: Twisting the gripper...");
+								sustain gripperTurnExtend;
+								}
 							||
 							{
 								await(gripperTurnFinalPos);
+								System.out.println("Capper: Gripper fully turned.");
 								exit(T);
 							}
 						}
 					}
+					
 					await(gripperZAxisLifted);
+					System.out.println("CapperController: Gripper raised...");
+					System.out.println("CapperController: Bottle capped. Waiting for bottle to move to next position...");
 					await(!bottleAtPos4);
+					
+					
 				}
 			}
+			
+			||
+			{// To viz
+		        {while(true)
+		        	{
+			        	present(bottleAtPos4)
+			        	trap(T) {
+			                {
+			                    sustain cylClampBottleExtend;
+			                }
+			                ||
+			                {
+			                    await(gripperTurnFinalPos);
+			                    exit(T);
+			                }
+			            }
+			            pause;
+		        	}
+		        }
+		    }
+			
+			||
+			
+			{while(true)
+	        	{
+		        	present(bottleAtPos4)
+		        	trap(T) {
+		                {
+		                    sustain bottleAtPos4E;
+		                }
+		                ||
+		                {
+		                    await(gripperTurnFinalPos);
+		                    exit(T);
+		                }
+		            }
+		            pause;
+	        	}
+			}
+			
+
 		}
