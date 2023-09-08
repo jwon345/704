@@ -31,8 +31,37 @@ public class FillerCanvas extends JPanel {
 	@Override
 	protected void paintComponent(Graphics g){
 		super.paintComponent(g);
-	        g.drawImage(filler, 80, -30, null);
-	        g.drawImage(nocap, 175, 215, null);
+	        
+		 	if (States.BOTTLE_AT_POS2) {
+	            g.drawImage(nocap, 175, 215, null);
+	        }
+		 	
+		
+	        
+	        if (States.DOS_UNIT_VALVE_RETRACT) {
+	        	 g.drawImage(filler, 80, -30, null);
+	        	 g.drawImage(nocap, 175, 215, null);
+	        }
+	        
+	        if (States.VALVE_INJECTOR_ONOFF) {
+	        	g.setColor(Color.CYAN);
+		        g.fillRect(157, 0, 8, 90);
+		 	}
+	        
+	        
+	        else if (States.DOS_UNIT_VALVE_EXTEND) {
+		        	 g.drawImage(filler, 80, 50, null);
+		        	 g.drawImage(nocap, 175, 215, null);
+		        	 g.setColor(Color.CYAN);
+				     g.fillRect(195, 205, 7, 28);
+				     
+				     g.fillRect(183, 280, 30, 20);
+	        }
+	        
+	        else {
+	        	 g.drawImage(filler, 80, 50, null);
+	        }
+
 	        g.setColor(Color.gray);
 	        g.fillRect(0, 300, 400, 30);
 

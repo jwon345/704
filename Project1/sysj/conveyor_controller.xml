@@ -12,6 +12,48 @@
 		
 			 <!-- Visualization Signals -->
             <oSignal Name="bottleDeployedE" To="UI.bottleDeployedE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+            
+            
+	
+            <oChannel Name="convReady"     To="RotaryCD.convReady" />
+        </ClockDomain>
+        
+        
+        
+        
+        
+        <ClockDomain Name="RotaryCD" Class="RotaryController">
+
+            <!-- Input Signals -->
+            <iSignal Name="tableAlignedWithSensor" 	Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />
+            <iSignal Name="bottleAtPos5" 			Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />
+            <iSignal Name="capOnBottleAtPos1"  		Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />
+            
+            <!-- Output Signals -->
+            <oSignal Name="rotaryTableTrigger" 		To="RotaryPlant.rotaryTableTrigger"	Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10003" />
+            
+            <!-- Input Channels -->
+            <iChannel Name="convReady"     			From="ConveyorCD.convReady" />
+			<iChannel Name="fillerReady"     From="FillerCD.fillerReady" />
+			
+
+        </ClockDomain>
+        
+        
+        <ClockDomain Name="FillerCD" Class="FillerController">
+
+          	<!-- Input Signals -->
+ 			<iSignal Name="bottleAtPos2"  Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10006" />
+			<iSignal Name="dosUnitEvac"  Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10006" />
+			<iSignal Name="dosUnitFilled"  	Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10006" />
+
+            <!-- Output Signals -->
+     		<oSignal Name="valveInjectorOnOff"  To="FillerPlant.valveInjectorOnOff" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10007" />
+     		<oSignal Name="valveInletOnOff"		To="FillerPlant.valveInletOnOff" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10007" />
+   			<oSignal Name="dosUnitValveRetract" To="FillerPlant.dosUnitValveRetract" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10007" />
+      		<oSignal Name="dosUnitValveExtend" 	To="FillerPlant.dosUnitValveExtend" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10007" />
+      		
+      		<oChannel Name="fillerReady"     To="RotaryCD.fillerReady" />
         </ClockDomain>
     </SubSystem>
 </System>

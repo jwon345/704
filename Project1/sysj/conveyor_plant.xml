@@ -6,10 +6,62 @@
  			<iSignal Name="motConveyorOnOff" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10005" />
 
             <!-- Output Signals -->
-            <oSignal Name="bottleAtPos1" To="ConveyorCD.bottleAtPos1" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10004" />
-            <oSignal Name="bottleLeftPos5" To="ConveyorCD.bottleLeftPos5" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10004" />
+            <oSignal Name="bottleAtPos1" 		To="ConveyorCD.bottleAtPos1" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10004" />
+            <oSignal Name="bottleLeftPos5" 		To="ConveyorCD.bottleLeftPos5" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10004" />
            
+          	<oSignal Name="motConveyorOnOffE" 	To="UI.motConveyorOnOffE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+			<oSignal Name="bottleAtPos1E"  		To="UI.bottleAtPos1E"  Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+			<oSignal Name="bottleLeftPos5E"  	To="UI.bottleLeftPos5E"  Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
 			
+        </ClockDomain>
+        
+        
+        
+        
+       <ClockDomain Name="RotaryPlant" Class="RotaryPlant">
+			
+            <!-- Input Signals -->
+ 			<iSignal Name="rotaryTableTrigger" 		Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10003" />
+
+            <!-- Output Signals -->
+            <oSignal Name="tableAlignedWithSensor" 	To="RotaryCD.tableAlignedWithSensor" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10002" />
+            <oSignal Name="bottleAtPos5" 			To="RotaryCD.bottleAtPos5" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10002" />
+            <oSignal Name="capOnBottleAtPos1" 		To="RotaryCD.capOnBottleAtPos1" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10002" />
+            
+            <!-- Visualization Signals -->
+            <oSignal Name="tableAlignedWithSensorE" To="UI.tableAlignedWithSensorE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+            <oSignal Name="bottleAtPos5E" 			To="UI.bottleAtPos5E" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+            <oSignal Name="capOnBottleAtPos1E" 		To="UI.capOnBottleAtPos1E" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+            <oSignal Name="rotaryTableTriggerE" 	To="UI.rotaryTableTriggerE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+        </ClockDomain>
+        
+        
+        
+        
+        
+        <ClockDomain Name="FillerPlant" Class="FillerPlant">
+
+           	<!-- Input Signals -->
+           	<iSignal Name="valveInjectorOnOff"   	Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10007" />
+     		<iSignal Name="valveInletOnOff"			Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10007" />
+   			<iSignal Name="dosUnitValveRetract" 	Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10007" />
+      		<iSignal Name="dosUnitValveExtend" 		Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10007" />
+
+
+            <!-- Output Signals -->
+            <oSignal Name="bottleAtPos2"  			To="FillerCD.bottleAtPos2" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10006" />
+			<oSignal Name="dosUnitEvac"  			To="FillerCD.dosUnitEvac" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10006" />
+			<oSignal Name="dosUnitFilled"  			To="FillerCD.dosUnitFilled" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10006" />
+			
+			  <!-- Visualization Signals -->
+            <oSignal Name="valveInjectorOnOffE" 	To="UI.valveInjectorOnOffE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+            <oSignal Name="valveInletOnOffE" 		To="UI.valveInletOnOffE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+            <oSignal Name="dosUnitValveRetractE" 	To="UI.dosUnitValveRetractE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+            <oSignal Name="dosUnitValveExtendE" 	To="UI.dosUnitValveExtendE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+            <oSignal Name="bottleAtPos2E" 			To="UI.bottleAtPos2E" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+            <oSignal Name="dosUnitEvacE" 			To="UI.dosUnitEvacE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+            <oSignal Name="dosUnitFilledE" 			To="UI.dosUnitFilledE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+           
         </ClockDomain>
     </SubSystem>
 </System>

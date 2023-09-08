@@ -3,7 +3,7 @@ import com.systemj.ClockDomain;
 import com.systemj.Signal;
 import com.systemj.input_Channel;
 import com.systemj.output_Channel;
-import run.GUI;//sysj\filler_plant.sysj line: 1, column: 1
+import run.GUI;//sysj\conveyor_plant.sysj line: 1, column: 1
 
 public class FillerPlant extends ClockDomain{
   public FillerPlant(String name){super(name);}
@@ -26,331 +26,303 @@ public class FillerPlant extends ClockDomain{
   public Signal bottleAtPos2E = new Signal("bottleAtPos2E", Signal.OUTPUT);
   public Signal dosUnitEvacE = new Signal("dosUnitEvacE", Signal.OUTPUT);
   public Signal dosUnitFilledE = new Signal("dosUnitFilledE", Signal.OUTPUT);
-  private int S3227 = 1;
-  private int S3071 = 1;
-  private int S3059 = 1;
-  private int S3141 = 1;
-  private int S3079 = 1;
-  private int S3073 = 1;
-  private int S3087 = 1;
-  private int S3095 = 1;
-  private int S3106 = 1;
-  private int S3117 = 1;
-  private int S3128 = 1;
-  private int S3139 = 1;
+  private int S16742 = 1;
+  private int S16670 = 1;
+  private int S16658 = 1;
+  private int S16740 = 1;
+  private int S16678 = 1;
+  private int S16686 = 1;
+  private int S16694 = 1;
+  private int S16705 = 1;
+  private int S16716 = 1;
+  private int S16727 = 1;
+  private int S16738 = 1;
   
-  private int[] ends = new int[11];
-  private int[] tdone = new int[11];
+  private int[] ends = new int[28];
+  private int[] tdone = new int[28];
   
-  public void thread3248(int [] tdone, int [] ends){
-        switch(S3139){
+  public void thread16814(int [] tdone, int [] ends){
+        switch(S16738){
       case 0 : 
-        active[10]=0;
-        ends[10]=0;
-        tdone[10]=1;
+        active[27]=0;
+        ends[27]=0;
+        tdone[27]=1;
         break;
       
       case 1 : 
-        if(dosUnitFilled.getprestatus()){//sysj\filler_plant.sysj line: 37, column: 33
-          ;//sysj\filler_plant.sysj line: 37, column: 48
-          dosUnitFilledE.setPresent();//sysj\filler_plant.sysj line: 37, column: 49
+        if(dosUnitFilled.getprestatus()){//sysj\conveyor_plant.sysj line: 127, column: 34
+          ;//sysj\conveyor_plant.sysj line: 127, column: 49
+          dosUnitFilledE.setPresent();//sysj\conveyor_plant.sysj line: 127, column: 50
           currsigs.addElement(dosUnitFilledE);
-          active[10]=1;
-          ends[10]=1;
-          tdone[10]=1;
+          active[27]=1;
+          ends[27]=1;
+          tdone[27]=1;
         }
         else {
-          active[10]=1;
-          ends[10]=1;
-          tdone[10]=1;
+          active[27]=1;
+          ends[27]=1;
+          tdone[27]=1;
         }
         break;
       
     }
   }
 
-  public void thread3247(int [] tdone, int [] ends){
-        switch(S3128){
+  public void thread16813(int [] tdone, int [] ends){
+        switch(S16727){
       case 0 : 
-        active[9]=0;
-        ends[9]=0;
-        tdone[9]=1;
+        active[26]=0;
+        ends[26]=0;
+        tdone[26]=1;
         break;
       
       case 1 : 
-        if(dosUnitEvac.getprestatus()){//sysj\filler_plant.sysj line: 35, column: 33
-          ;//sysj\filler_plant.sysj line: 35, column: 46
-          dosUnitEvacE.setPresent();//sysj\filler_plant.sysj line: 35, column: 47
+        if(dosUnitEvac.getprestatus()){//sysj\conveyor_plant.sysj line: 125, column: 34
+          ;//sysj\conveyor_plant.sysj line: 125, column: 47
+          dosUnitEvacE.setPresent();//sysj\conveyor_plant.sysj line: 125, column: 48
           currsigs.addElement(dosUnitEvacE);
-          active[9]=1;
-          ends[9]=1;
-          tdone[9]=1;
+          active[26]=1;
+          ends[26]=1;
+          tdone[26]=1;
         }
         else {
-          active[9]=1;
-          ends[9]=1;
-          tdone[9]=1;
+          active[26]=1;
+          ends[26]=1;
+          tdone[26]=1;
         }
         break;
       
     }
   }
 
-  public void thread3246(int [] tdone, int [] ends){
-        switch(S3117){
+  public void thread16812(int [] tdone, int [] ends){
+        switch(S16716){
       case 0 : 
-        active[8]=0;
-        ends[8]=0;
-        tdone[8]=1;
+        active[25]=0;
+        ends[25]=0;
+        tdone[25]=1;
         break;
       
       case 1 : 
-        if(bottleAtPos2.getprestatus()){//sysj\filler_plant.sysj line: 33, column: 33
-          ;//sysj\filler_plant.sysj line: 33, column: 47
-          bottleAtPos2E.setPresent();//sysj\filler_plant.sysj line: 33, column: 48
+        if(bottleAtPos2.getprestatus()){//sysj\conveyor_plant.sysj line: 123, column: 34
+          ;//sysj\conveyor_plant.sysj line: 123, column: 48
+          bottleAtPos2E.setPresent();//sysj\conveyor_plant.sysj line: 123, column: 49
           currsigs.addElement(bottleAtPos2E);
-          active[8]=1;
-          ends[8]=1;
-          tdone[8]=1;
+          active[25]=1;
+          ends[25]=1;
+          tdone[25]=1;
         }
         else {
-          active[8]=1;
-          ends[8]=1;
-          tdone[8]=1;
+          active[25]=1;
+          ends[25]=1;
+          tdone[25]=1;
         }
         break;
       
     }
   }
 
-  public void thread3245(int [] tdone, int [] ends){
-        switch(S3106){
+  public void thread16811(int [] tdone, int [] ends){
+        switch(S16705){
       case 0 : 
-        active[7]=0;
-        ends[7]=0;
-        tdone[7]=1;
+        active[24]=0;
+        ends[24]=0;
+        tdone[24]=1;
         break;
       
       case 1 : 
-        if(dosUnitValveExtend.getprestatus()){//sysj\filler_plant.sysj line: 31, column: 33
-          ;//sysj\filler_plant.sysj line: 31, column: 53
-          dosUnitValveExtendE.setPresent();//sysj\filler_plant.sysj line: 31, column: 54
+        if(dosUnitValveExtend.getprestatus()){//sysj\conveyor_plant.sysj line: 121, column: 34
+          ;//sysj\conveyor_plant.sysj line: 121, column: 54
+          dosUnitValveExtendE.setPresent();//sysj\conveyor_plant.sysj line: 121, column: 55
           currsigs.addElement(dosUnitValveExtendE);
-          active[7]=1;
-          ends[7]=1;
-          tdone[7]=1;
+          active[24]=1;
+          ends[24]=1;
+          tdone[24]=1;
         }
         else {
-          active[7]=1;
-          ends[7]=1;
-          tdone[7]=1;
+          active[24]=1;
+          ends[24]=1;
+          tdone[24]=1;
         }
         break;
       
     }
   }
 
-  public void thread3244(int [] tdone, int [] ends){
-        switch(S3095){
+  public void thread16810(int [] tdone, int [] ends){
+        switch(S16694){
       case 0 : 
-        active[6]=0;
-        ends[6]=0;
-        tdone[6]=1;
+        active[23]=0;
+        ends[23]=0;
+        tdone[23]=1;
         break;
       
       case 1 : 
-        if(dosUnitValveRetract.getprestatus()){//sysj\filler_plant.sysj line: 29, column: 33
-          dosUnitValveRetractE.setPresent();//sysj\filler_plant.sysj line: 29, column: 54
+        if(dosUnitValveRetract.getprestatus()){//sysj\conveyor_plant.sysj line: 119, column: 34
+          dosUnitValveRetractE.setPresent();//sysj\conveyor_plant.sysj line: 119, column: 55
           currsigs.addElement(dosUnitValveRetractE);
-          active[6]=1;
-          ends[6]=1;
-          tdone[6]=1;
+          active[23]=1;
+          ends[23]=1;
+          tdone[23]=1;
         }
         else {
-          active[6]=1;
-          ends[6]=1;
-          tdone[6]=1;
+          active[23]=1;
+          ends[23]=1;
+          tdone[23]=1;
         }
         break;
       
     }
   }
 
-  public void thread3243(int [] tdone, int [] ends){
-        switch(S3087){
+  public void thread16809(int [] tdone, int [] ends){
+        switch(S16686){
       case 0 : 
-        active[5]=0;
-        ends[5]=0;
-        tdone[5]=1;
+        active[22]=0;
+        ends[22]=0;
+        tdone[22]=1;
         break;
       
       case 1 : 
-        if(valveInletOnOff.getprestatus()){//sysj\filler_plant.sysj line: 27, column: 33
-          valveInletOnOffE.setPresent();//sysj\filler_plant.sysj line: 27, column: 50
+        if(valveInletOnOff.getprestatus()){//sysj\conveyor_plant.sysj line: 117, column: 34
+          valveInletOnOffE.setPresent();//sysj\conveyor_plant.sysj line: 117, column: 51
           currsigs.addElement(valveInletOnOffE);
-          active[5]=1;
-          ends[5]=1;
-          tdone[5]=1;
+          active[22]=1;
+          ends[22]=1;
+          tdone[22]=1;
         }
         else {
-          active[5]=1;
-          ends[5]=1;
-          tdone[5]=1;
+          active[22]=1;
+          ends[22]=1;
+          tdone[22]=1;
         }
         break;
       
     }
   }
 
-  public void thread3242(int [] tdone, int [] ends){
-        switch(S3079){
+  public void thread16808(int [] tdone, int [] ends){
+        switch(S16678){
       case 0 : 
-        active[4]=0;
-        ends[4]=0;
-        tdone[4]=1;
+        active[21]=0;
+        ends[21]=0;
+        tdone[21]=1;
         break;
       
       case 1 : 
-        switch(S3073){
-          case 0 : 
-            S3073=0;
-            if(valveInjectorOnOff.getprestatus()){//sysj\filler_plant.sysj line: 25, column: 33
-              valveInjectorOnOffE.setPresent();//sysj\filler_plant.sysj line: 25, column: 53
-              currsigs.addElement(valveInjectorOnOffE);
-              S3073=1;
-              active[4]=1;
-              ends[4]=1;
-              tdone[4]=1;
-            }
-            else {
-              S3073=1;
-              active[4]=1;
-              ends[4]=1;
-              tdone[4]=1;
-            }
-            break;
-          
-          case 1 : 
-            S3073=1;
-            S3073=0;
-            if(valveInjectorOnOff.getprestatus()){//sysj\filler_plant.sysj line: 25, column: 33
-              valveInjectorOnOffE.setPresent();//sysj\filler_plant.sysj line: 25, column: 53
-              currsigs.addElement(valveInjectorOnOffE);
-              S3073=1;
-              active[4]=1;
-              ends[4]=1;
-              tdone[4]=1;
-            }
-            else {
-              S3073=1;
-              active[4]=1;
-              ends[4]=1;
-              tdone[4]=1;
-            }
-            break;
-          
+        if(valveInjectorOnOff.getprestatus()){//sysj\conveyor_plant.sysj line: 115, column: 34
+          valveInjectorOnOffE.setPresent();//sysj\conveyor_plant.sysj line: 115, column: 54
+          currsigs.addElement(valveInjectorOnOffE);
+          active[21]=1;
+          ends[21]=1;
+          tdone[21]=1;
+        }
+        else {
+          active[21]=1;
+          ends[21]=1;
+          tdone[21]=1;
         }
         break;
       
     }
   }
 
-  public void thread3241(int [] tdone, int [] ends){
-        switch(S3141){
+  public void thread16807(int [] tdone, int [] ends){
+        switch(S16740){
       case 0 : 
-        active[3]=0;
-        ends[3]=0;
-        tdone[3]=1;
+        active[20]=0;
+        ends[20]=0;
+        tdone[20]=1;
         break;
       
       case 1 : 
-        thread3242(tdone,ends);
-        thread3243(tdone,ends);
-        thread3244(tdone,ends);
-        thread3245(tdone,ends);
-        thread3246(tdone,ends);
-        thread3247(tdone,ends);
-        thread3248(tdone,ends);
-        int biggest3249 = 0;
-        if(ends[4]>=biggest3249){
-          biggest3249=ends[4];
+        thread16808(tdone,ends);
+        thread16809(tdone,ends);
+        thread16810(tdone,ends);
+        thread16811(tdone,ends);
+        thread16812(tdone,ends);
+        thread16813(tdone,ends);
+        thread16814(tdone,ends);
+        int biggest16815 = 0;
+        if(ends[21]>=biggest16815){
+          biggest16815=ends[21];
         }
-        if(ends[5]>=biggest3249){
-          biggest3249=ends[5];
+        if(ends[22]>=biggest16815){
+          biggest16815=ends[22];
         }
-        if(ends[6]>=biggest3249){
-          biggest3249=ends[6];
+        if(ends[23]>=biggest16815){
+          biggest16815=ends[23];
         }
-        if(ends[7]>=biggest3249){
-          biggest3249=ends[7];
+        if(ends[24]>=biggest16815){
+          biggest16815=ends[24];
         }
-        if(ends[8]>=biggest3249){
-          biggest3249=ends[8];
+        if(ends[25]>=biggest16815){
+          biggest16815=ends[25];
         }
-        if(ends[9]>=biggest3249){
-          biggest3249=ends[9];
+        if(ends[26]>=biggest16815){
+          biggest16815=ends[26];
         }
-        if(ends[10]>=biggest3249){
-          biggest3249=ends[10];
+        if(ends[27]>=biggest16815){
+          biggest16815=ends[27];
         }
-        if(biggest3249 == 1){
-          active[3]=1;
-          ends[3]=1;
-          tdone[3]=1;
+        if(biggest16815 == 1){
+          active[20]=1;
+          ends[20]=1;
+          tdone[20]=1;
         }
         //FINXME code
-        if(biggest3249 == 0){
-          S3141=0;
-          active[3]=0;
-          ends[3]=0;
-          tdone[3]=1;
+        if(biggest16815 == 0){
+          S16740=0;
+          active[20]=0;
+          ends[20]=0;
+          tdone[20]=1;
         }
         break;
       
     }
   }
 
-  public void thread3240(int [] tdone, int [] ends){
-        switch(S3071){
+  public void thread16806(int [] tdone, int [] ends){
+        switch(S16670){
       case 0 : 
-        active[2]=0;
-        ends[2]=0;
-        tdone[2]=1;
+        active[19]=0;
+        ends[19]=0;
+        tdone[19]=1;
         break;
       
       case 1 : 
-        switch(S3059){
+        switch(S16658){
           case 0 : 
-            if(valveInjectorOnOff.getprestatus()){//sysj\filler_plant.sysj line: 12, column: 12
-              dosUnitFilled.setPresent();//sysj\filler_plant.sysj line: 13, column: 6
+            if(valveInjectorOnOff.getprestatus()){//sysj\conveyor_plant.sysj line: 102, column: 13
+              dosUnitFilled.setPresent();//sysj\conveyor_plant.sysj line: 103, column: 7
               currsigs.addElement(dosUnitFilled);
-              System.out.println("*Filler - Bottle Filled (Pressure Can At Top) *");//sysj\filler_plant.sysj line: 14, column: 6
-              S3059=1;
-              active[2]=1;
-              ends[2]=1;
-              tdone[2]=1;
+              System.out.println("*Filler - Bottle Filled (Pressure Can At Top) *");//sysj\conveyor_plant.sysj line: 104, column: 7
+              S16658=1;
+              active[19]=1;
+              ends[19]=1;
+              tdone[19]=1;
             }
             else {
-              active[2]=1;
-              ends[2]=1;
-              tdone[2]=1;
+              active[19]=1;
+              ends[19]=1;
+              tdone[19]=1;
             }
             break;
           
           case 1 : 
-            if(valveInletOnOff.getprestatus()){//sysj\filler_plant.sysj line: 15, column: 12
-              dosUnitEvac.setPresent();//sysj\filler_plant.sysj line: 16, column: 6
+            if(valveInletOnOff.getprestatus()){//sysj\conveyor_plant.sysj line: 105, column: 13
+              dosUnitEvac.setPresent();//sysj\conveyor_plant.sysj line: 106, column: 7
               currsigs.addElement(dosUnitEvac);
-              System.out.println("*Filler - Inlet Open Pressure Can At Bottem*");//sysj\filler_plant.sysj line: 17, column: 6
-              S3059=0;
-              active[2]=1;
-              ends[2]=1;
-              tdone[2]=1;
+              System.out.println("*Filler - Inlet Open (Pressure Can At Bottem) *");//sysj\conveyor_plant.sysj line: 107, column: 7
+              S16658=0;
+              active[19]=1;
+              ends[19]=1;
+              tdone[19]=1;
             }
             else {
-              active[2]=1;
-              ends[2]=1;
-              tdone[2]=1;
+              active[19]=1;
+              ends[19]=1;
+              tdone[19]=1;
             }
             break;
           
@@ -360,169 +332,166 @@ public class FillerPlant extends ClockDomain{
     }
   }
 
-  public void thread3237(int [] tdone, int [] ends){
-        S3139=1;
-    if(dosUnitFilled.getprestatus()){//sysj\filler_plant.sysj line: 37, column: 33
-      ;//sysj\filler_plant.sysj line: 37, column: 48
-      dosUnitFilledE.setPresent();//sysj\filler_plant.sysj line: 37, column: 49
+  public void thread16803(int [] tdone, int [] ends){
+        S16738=1;
+    if(dosUnitFilled.getprestatus()){//sysj\conveyor_plant.sysj line: 127, column: 34
+      ;//sysj\conveyor_plant.sysj line: 127, column: 49
+      dosUnitFilledE.setPresent();//sysj\conveyor_plant.sysj line: 127, column: 50
       currsigs.addElement(dosUnitFilledE);
-      active[10]=1;
-      ends[10]=1;
-      tdone[10]=1;
+      active[27]=1;
+      ends[27]=1;
+      tdone[27]=1;
     }
     else {
-      active[10]=1;
-      ends[10]=1;
-      tdone[10]=1;
+      active[27]=1;
+      ends[27]=1;
+      tdone[27]=1;
     }
   }
 
-  public void thread3236(int [] tdone, int [] ends){
-        S3128=1;
-    if(dosUnitEvac.getprestatus()){//sysj\filler_plant.sysj line: 35, column: 33
-      ;//sysj\filler_plant.sysj line: 35, column: 46
-      dosUnitEvacE.setPresent();//sysj\filler_plant.sysj line: 35, column: 47
+  public void thread16802(int [] tdone, int [] ends){
+        S16727=1;
+    if(dosUnitEvac.getprestatus()){//sysj\conveyor_plant.sysj line: 125, column: 34
+      ;//sysj\conveyor_plant.sysj line: 125, column: 47
+      dosUnitEvacE.setPresent();//sysj\conveyor_plant.sysj line: 125, column: 48
       currsigs.addElement(dosUnitEvacE);
-      active[9]=1;
-      ends[9]=1;
-      tdone[9]=1;
+      active[26]=1;
+      ends[26]=1;
+      tdone[26]=1;
     }
     else {
-      active[9]=1;
-      ends[9]=1;
-      tdone[9]=1;
+      active[26]=1;
+      ends[26]=1;
+      tdone[26]=1;
     }
   }
 
-  public void thread3235(int [] tdone, int [] ends){
-        S3117=1;
-    if(bottleAtPos2.getprestatus()){//sysj\filler_plant.sysj line: 33, column: 33
-      ;//sysj\filler_plant.sysj line: 33, column: 47
-      bottleAtPos2E.setPresent();//sysj\filler_plant.sysj line: 33, column: 48
+  public void thread16801(int [] tdone, int [] ends){
+        S16716=1;
+    if(bottleAtPos2.getprestatus()){//sysj\conveyor_plant.sysj line: 123, column: 34
+      ;//sysj\conveyor_plant.sysj line: 123, column: 48
+      bottleAtPos2E.setPresent();//sysj\conveyor_plant.sysj line: 123, column: 49
       currsigs.addElement(bottleAtPos2E);
-      active[8]=1;
-      ends[8]=1;
-      tdone[8]=1;
+      active[25]=1;
+      ends[25]=1;
+      tdone[25]=1;
     }
     else {
-      active[8]=1;
-      ends[8]=1;
-      tdone[8]=1;
+      active[25]=1;
+      ends[25]=1;
+      tdone[25]=1;
     }
   }
 
-  public void thread3234(int [] tdone, int [] ends){
-        S3106=1;
-    if(dosUnitValveExtend.getprestatus()){//sysj\filler_plant.sysj line: 31, column: 33
-      ;//sysj\filler_plant.sysj line: 31, column: 53
-      dosUnitValveExtendE.setPresent();//sysj\filler_plant.sysj line: 31, column: 54
+  public void thread16800(int [] tdone, int [] ends){
+        S16705=1;
+    if(dosUnitValveExtend.getprestatus()){//sysj\conveyor_plant.sysj line: 121, column: 34
+      ;//sysj\conveyor_plant.sysj line: 121, column: 54
+      dosUnitValveExtendE.setPresent();//sysj\conveyor_plant.sysj line: 121, column: 55
       currsigs.addElement(dosUnitValveExtendE);
-      active[7]=1;
-      ends[7]=1;
-      tdone[7]=1;
+      active[24]=1;
+      ends[24]=1;
+      tdone[24]=1;
     }
     else {
-      active[7]=1;
-      ends[7]=1;
-      tdone[7]=1;
+      active[24]=1;
+      ends[24]=1;
+      tdone[24]=1;
     }
   }
 
-  public void thread3233(int [] tdone, int [] ends){
-        S3095=1;
-    if(dosUnitValveRetract.getprestatus()){//sysj\filler_plant.sysj line: 29, column: 33
-      dosUnitValveRetractE.setPresent();//sysj\filler_plant.sysj line: 29, column: 54
+  public void thread16799(int [] tdone, int [] ends){
+        S16694=1;
+    if(dosUnitValveRetract.getprestatus()){//sysj\conveyor_plant.sysj line: 119, column: 34
+      dosUnitValveRetractE.setPresent();//sysj\conveyor_plant.sysj line: 119, column: 55
       currsigs.addElement(dosUnitValveRetractE);
-      active[6]=1;
-      ends[6]=1;
-      tdone[6]=1;
+      active[23]=1;
+      ends[23]=1;
+      tdone[23]=1;
     }
     else {
-      active[6]=1;
-      ends[6]=1;
-      tdone[6]=1;
+      active[23]=1;
+      ends[23]=1;
+      tdone[23]=1;
     }
   }
 
-  public void thread3232(int [] tdone, int [] ends){
-        S3087=1;
-    if(valveInletOnOff.getprestatus()){//sysj\filler_plant.sysj line: 27, column: 33
-      valveInletOnOffE.setPresent();//sysj\filler_plant.sysj line: 27, column: 50
+  public void thread16798(int [] tdone, int [] ends){
+        S16686=1;
+    if(valveInletOnOff.getprestatus()){//sysj\conveyor_plant.sysj line: 117, column: 34
+      valveInletOnOffE.setPresent();//sysj\conveyor_plant.sysj line: 117, column: 51
       currsigs.addElement(valveInletOnOffE);
-      active[5]=1;
-      ends[5]=1;
-      tdone[5]=1;
+      active[22]=1;
+      ends[22]=1;
+      tdone[22]=1;
     }
     else {
-      active[5]=1;
-      ends[5]=1;
-      tdone[5]=1;
+      active[22]=1;
+      ends[22]=1;
+      tdone[22]=1;
     }
   }
 
-  public void thread3231(int [] tdone, int [] ends){
-        S3079=1;
-    S3073=0;
-    if(valveInjectorOnOff.getprestatus()){//sysj\filler_plant.sysj line: 25, column: 33
-      valveInjectorOnOffE.setPresent();//sysj\filler_plant.sysj line: 25, column: 53
+  public void thread16797(int [] tdone, int [] ends){
+        S16678=1;
+    if(valveInjectorOnOff.getprestatus()){//sysj\conveyor_plant.sysj line: 115, column: 34
+      valveInjectorOnOffE.setPresent();//sysj\conveyor_plant.sysj line: 115, column: 54
       currsigs.addElement(valveInjectorOnOffE);
-      S3073=1;
-      active[4]=1;
-      ends[4]=1;
-      tdone[4]=1;
+      active[21]=1;
+      ends[21]=1;
+      tdone[21]=1;
     }
     else {
-      S3073=1;
-      active[4]=1;
-      ends[4]=1;
-      tdone[4]=1;
+      active[21]=1;
+      ends[21]=1;
+      tdone[21]=1;
     }
   }
 
-  public void thread3230(int [] tdone, int [] ends){
-        S3141=1;
-    thread3231(tdone,ends);
-    thread3232(tdone,ends);
-    thread3233(tdone,ends);
-    thread3234(tdone,ends);
-    thread3235(tdone,ends);
-    thread3236(tdone,ends);
-    thread3237(tdone,ends);
-    int biggest3238 = 0;
-    if(ends[4]>=biggest3238){
-      biggest3238=ends[4];
+  public void thread16796(int [] tdone, int [] ends){
+        S16740=1;
+    thread16797(tdone,ends);
+    thread16798(tdone,ends);
+    thread16799(tdone,ends);
+    thread16800(tdone,ends);
+    thread16801(tdone,ends);
+    thread16802(tdone,ends);
+    thread16803(tdone,ends);
+    int biggest16804 = 0;
+    if(ends[21]>=biggest16804){
+      biggest16804=ends[21];
     }
-    if(ends[5]>=biggest3238){
-      biggest3238=ends[5];
+    if(ends[22]>=biggest16804){
+      biggest16804=ends[22];
     }
-    if(ends[6]>=biggest3238){
-      biggest3238=ends[6];
+    if(ends[23]>=biggest16804){
+      biggest16804=ends[23];
     }
-    if(ends[7]>=biggest3238){
-      biggest3238=ends[7];
+    if(ends[24]>=biggest16804){
+      biggest16804=ends[24];
     }
-    if(ends[8]>=biggest3238){
-      biggest3238=ends[8];
+    if(ends[25]>=biggest16804){
+      biggest16804=ends[25];
     }
-    if(ends[9]>=biggest3238){
-      biggest3238=ends[9];
+    if(ends[26]>=biggest16804){
+      biggest16804=ends[26];
     }
-    if(ends[10]>=biggest3238){
-      biggest3238=ends[10];
+    if(ends[27]>=biggest16804){
+      biggest16804=ends[27];
     }
-    if(biggest3238 == 1){
-      active[3]=1;
-      ends[3]=1;
-      tdone[3]=1;
+    if(biggest16804 == 1){
+      active[20]=1;
+      ends[20]=1;
+      tdone[20]=1;
     }
   }
 
-  public void thread3229(int [] tdone, int [] ends){
-        S3071=1;
-    S3059=0;
-    active[2]=1;
-    ends[2]=1;
-    tdone[2]=1;
+  public void thread16795(int [] tdone, int [] ends){
+        S16670=1;
+    S16658=0;
+    active[19]=1;
+    ends[19]=1;
+    tdone[19]=1;
   }
 
   public void runClockDomain(){
@@ -532,51 +501,50 @@ public class FillerPlant extends ClockDomain{
     }
     
     RUN: while(true){
-      switch(S3227){
+      switch(S16742){
         case 0 : 
-          S3227=0;
+          S16742=0;
           break RUN;
         
         case 1 : 
-          S3227=2;
-          S3227=2;
-          new Thread(new GUI()).start();//sysj\filler_plant.sysj line: 9, column: 4
-          thread3229(tdone,ends);
-          thread3230(tdone,ends);
-          int biggest3239 = 0;
-          if(ends[2]>=biggest3239){
-            biggest3239=ends[2];
+          S16742=2;
+          S16742=2;
+          thread16795(tdone,ends);
+          thread16796(tdone,ends);
+          int biggest16805 = 0;
+          if(ends[19]>=biggest16805){
+            biggest16805=ends[19];
           }
-          if(ends[3]>=biggest3239){
-            biggest3239=ends[3];
+          if(ends[20]>=biggest16805){
+            biggest16805=ends[20];
           }
-          if(biggest3239 == 1){
-            active[1]=1;
-            ends[1]=1;
+          if(biggest16805 == 1){
+            active[18]=1;
+            ends[18]=1;
             break RUN;
           }
         
         case 2 : 
-          thread3240(tdone,ends);
-          thread3241(tdone,ends);
-          int biggest3250 = 0;
-          if(ends[2]>=biggest3250){
-            biggest3250=ends[2];
+          thread16806(tdone,ends);
+          thread16807(tdone,ends);
+          int biggest16816 = 0;
+          if(ends[19]>=biggest16816){
+            biggest16816=ends[19];
           }
-          if(ends[3]>=biggest3250){
-            biggest3250=ends[3];
+          if(ends[20]>=biggest16816){
+            biggest16816=ends[20];
           }
-          if(biggest3250 == 1){
-            active[1]=1;
-            ends[1]=1;
+          if(biggest16816 == 1){
+            active[18]=1;
+            ends[18]=1;
             break RUN;
           }
           //FINXME code
-          if(biggest3250 == 0){
-            S3227=0;
-            active[1]=0;
-            ends[1]=0;
-            S3227=0;
+          if(biggest16816 == 0){
+            S16742=0;
+            active[18]=0;
+            ends[18]=0;
+            S16742=0;
             break RUN;
           }
         
@@ -585,9 +553,9 @@ public class FillerPlant extends ClockDomain{
   }
 
   public void init(){
-    char [] active1 = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
-    char [] paused1 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    char [] suspended1 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    char [] active1 = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+    char [] paused1 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    char [] suspended1 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     paused = paused1;
     active = active1;
     suspended = suspended1;
@@ -596,14 +564,14 @@ public class FillerPlant extends ClockDomain{
   }
   
   public void run(){
-    while(active[1] != 0){
-      int index = 1;
+    while(active[18] != 0){
+      int index = 18;
       if(paused[index]==1 || suspended[index]==1 || active[index] == 0){
         for(int h=1;h<paused.length;++h){
           paused[h]=0;
         }
       }
-      if(paused[1]!=0 || suspended[1]!=0 || active[1]!=1);
+      if(paused[18]!=0 || suspended[18]!=0 || active[18]!=1);
       else{
         if(!df){
           valveInjectorOnOff.gethook();
@@ -666,7 +634,7 @@ public class FillerPlant extends ClockDomain{
       dosUnitEvacE.setClear();
       dosUnitFilledE.sethook();
       dosUnitFilledE.setClear();
-      if(paused[1]!=0 || suspended[1]!=0 || active[1]!=1);
+      if(paused[18]!=0 || suspended[18]!=0 || active[18]!=1);
       else{
         valveInjectorOnOff.gethook();
         valveInletOnOff.gethook();
@@ -674,7 +642,7 @@ public class FillerPlant extends ClockDomain{
         dosUnitValveExtend.gethook();
       }
       runFinisher();
-      if(active[1] == 0){
+      if(active[18] == 0){
       	this.terminated = true;
       }
       if(!threaded) break;

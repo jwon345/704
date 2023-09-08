@@ -21,6 +21,8 @@ public class RotaryCanvas extends JPanel {
 	BufferedImage arrow_5;
 	BufferedImage arrow_6;
 	
+	private int currentPosition = 1;
+	private final int MAX_POSITIONS = 6;
 	
 	public RotaryCanvas(){
 		try {
@@ -32,6 +34,8 @@ public class RotaryCanvas extends JPanel {
 			arrow_4 = ImageIO.read(new File("res/arrow_4.png"));
 			arrow_5 = ImageIO.read(new File("res/arrow_5.png"));
 			arrow_6 = ImageIO.read(new File("res/arrow_6.png"));
+			
+		
 		} catch (IOException e) {
 			e.printStackTrace();
 			System.exit(1);;
@@ -40,11 +44,35 @@ public class RotaryCanvas extends JPanel {
 	
 	@Override
 	protected void paintComponent(Graphics g){
+		if (States.ROTARY_TABLE_TRIGGERED) {
+            currentPosition++;
+            if (currentPosition > MAX_POSITIONS) {
+                currentPosition = 1;
+            }
+		}
+		
 		super.paintComponent(g);
 		g.drawImage(table, -90, 50, null);	
-		g.drawImage(arrow_1, 120, 175, null);	
 		
-		if(States.ROTARY_TABLE_TRIGGERED)
-			g.drawImage(arrow_1, 100, 100, null);
+		 switch (currentPosition) {
+         case 1:
+        	g.drawImage(arrow_1, 120, 180, null);	
+             break;
+         case 2:
+        	 g.drawImage(arrow_2, 128, 135, null);
+             break;
+         case 3:
+        	 g.drawImage(arrow_3, 177, 105, null);
+             break;
+         case 4:
+        	 g.drawImage(arrow_4, 210, 135, null);
+             break;
+         case 5:
+        	 g.drawImage(arrow_5, 205, 170, null);
+             break;
+         case 6:
+        	 g.drawImage(arrow_6, 175, 195, null);
+             break;
+		 }
 	}
 }

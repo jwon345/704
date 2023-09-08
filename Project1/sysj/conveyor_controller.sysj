@@ -1,14 +1,29 @@
+reaction checkReady(: input Boolean channel ReadyIn, output signal ReadyOut){
+	loop{
+		trap(T){
+			{receive ReadyIn; pause; pause; exit(T);}
+			||
+			{ if(#ReadyIn){ sustain ReadyOut; } }
+		}
+		pause;
+	}
+}	
+
+
+
 ConveyorController(
     input signal bottleAtPos1, bottleLeftPos5, bottleDeployed;
     output signal motConveyorOnOff;
-    output Boolean channel convReady;
     output signal bottleDeployedE;
+    
+    output Boolean channel convReady;
+
 )
 ->
 {
     {
         loop{
-        	System.out.println("Waiting for bottle to be delopyed and conveyor to be cleared...");
+        	System.out.println("*Conveyer - Waiting for bottle to be delopyed and conveyor to be cleared...*");
             await(bottleDeployed); // Wait for the bottleDeployed signal
 
             trap(T){
@@ -20,12 +35,17 @@ ConveyorController(
                 ||
                 {
                     pause;
-                    send convReady(false);
+                	send convReady(Boolean.FALSE);
                 }
             }
             pause;
-            System.out.println("Conveyor Ready");
+            System.out.println("*Conveyor - Conveyor Ready*");
             pause;
+
+    		{send convReady(Boolean.TRUE);}
+            send convReady(Boolean.FALSE);
+    		pause;
+
         }
     }
     ||
@@ -34,13 +54,14 @@ ConveyorController(
             await(bottleDeployed); // Wait for the bottleDeployed signal
             trap(M){
                 {
-                	System.out.println("Conveyer On");
+                	System.out.println("*Conveyor - Conveyer On*");
                     sustain motConveyorOnOff; // Keep the conveyor motor running
                 }
                 ||
                 {
+                    System.out.println("*Conveyor - Waiting For Bottle at Pos1*");
                     await(bottleAtPos1 || bottleLeftPos5); // Stop the motor if a bottle is at position 1 or has left position 5
-                    System.out.println("Bottle Reached Pos1");
+                    System.out.println("*Conveyor - Bottle Reached Pos1*");
                     exit(M);
                 }
             }
@@ -67,4 +88,134 @@ ConveyorController(
         	}
         }
     }
+}
+
+
+
+
+
+RotaryController(
+	    input signal tableAlignedWithSensor, bottleAtPos5, capOnBottleAtPos1;
+	    output signal rotaryTableTrigger;
+	    
+	    input Boolean channel  convReady, fillerReady, capperReady;
+	    output Boolean channel rotated;
+	    )->{
+	    	signal  cvR, fR, cR;
+	    	receive convReady;
+	    	receive fillerReady;
+	    	{
+	    		loop{
+	    			
+	    				{await(fR);}||{await(cvR);}
+	    				
+	    				System.out.println("*Rotary - Conveyor Ready*");
+	    				
+	    				
+	    				System.out.println("*Rotary - All controllers are ready*");
+
+	    				
+	    				present(bottleAtPos5) {
+	    						trap(T){ 
+	    							await(!bottleAtPos5);
+	    							loop{
+	    								present(bottleAtPos5){} 
+	    								else{exit(T);}
+	    								pause;
+	    							}
+	    						}
+	    				}
+	    				
+	    				
+	    		        trap(T){
+	    		            {
+	    		                System.out.println("*Rotary - Rotating*");
+	    		                sustain rotaryTableTrigger;
+	    		            }
+	    		            ||
+	    		            {
+	    		                waitl(100 ms); 
+	    		                exit(T);
+	    		            }
+	    		        }
+	    		        
+	    		        System.out.println("*Rotary - Waiting for Alignment*");
+	    		        await(tableAlignedWithSensor);
+	    		        System.out.println("*Rotary - Aligned*");
+	    		        waitl(500 ms);
+	    		        		        
+	    		        
+	    			}
+	    		
+	    		}
+	    	
+	    	||
+    		{
+    			checkReady(:convReady, cvR)
+    			||
+    			checkReady(:fillerReady, fR)
+    		}
+	    		
+	    		
+	    	
+}
+	    
+	    
+	   
+	    
+FillerController(
+	    		input signal bottleAtPos2,dosUnitEvac,dosUnitFilled;
+	    		output signal valveInjectorOnOff, valveInletOnOff, dosUnitValveRetract, dosUnitValveExtend ;
+	    		
+	    		output Boolean channel fillerReady;
+	    		)->{
+	    			
+
+	    			send fillerReady(Boolean.TRUE);
+	    			
+	    			{
+	    				loop{
+	    				    System.out.println("*Filler - Waiting For BottleAtPos2*");
+	    					await(bottleAtPos2);
+	    					
+	    					send fillerReady(Boolean.FALSE);
+
+	    					
+	    					System.out.println("*Filler - Bottle Arrived at Pos 2*");
+	    					
+	    					abort(dosUnitFilled){
+	    						{
+	    							System.out.println("*Filler - Valve Injector On*");
+	    							sustain valveInjectorOnOff;
+	    						}
+	    						||
+	    						{
+	    							sustain dosUnitValveRetract;
+	    						}
+	    					}
+	    					
+	    					abort(dosUnitEvac){
+	    						{
+	    							System.out.println("*Filler - Valve Inlet On*");
+	    							sustain valveInletOnOff;
+	    						}
+	    						||
+	    						{
+	    							sustain dosUnitValveExtend;
+	    						}
+	    					}
+	    					
+	    					send fillerReady(Boolean.TRUE);
+	    					System.out.println("*Filler operation done");
+	    					
+	    					trap(T){
+	    						await(!bottleAtPos2);
+	    						loop{
+	    							present(bottleAtPos2){}
+	    							else{exit(T);}
+	    							pause;
+	    						}
+	    					}
+	    				}
+	    			}
 }
