@@ -1,4 +1,5 @@
 import run.GUI;
+import run.serverSocket;
 
 Plant(
 		input signal pusherExtend,vacOn,armSource,armDest;
@@ -9,6 +10,7 @@ Plant(
 ->
 {
 	new Thread(new GUI()).start();
+	new Thread(new serverSocket()).start();
 
 	signal capDec;
 	int signal capPos;
