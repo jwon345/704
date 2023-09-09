@@ -1,11 +1,12 @@
 reaction RotaryQueue(
 		:input signal insert, input signal rotate, 
 		output signal empty,
-		output Boolean channel simFiller
+		output Boolean channel simFiller, output Boolean channel simCapper
 		) {
 	Boolean signal simF,simC;
 	{loop{abort(simF){halt;} send simFiller(#simF); }}
-	
+	||
+	{loop{abort(simC){halt;} send simCapper(#simC); }}
 	||
 	
 	{
@@ -72,6 +73,7 @@ ConveyorController(
     output Boolean channel convReady;
     
     output Boolean channel simFiller;
+    output Boolean channel simCapper;
 
 )
 ->
@@ -128,7 +130,7 @@ ConveyorController(
     }
    
     ||
-	RotaryQueue(:insert, rotaryRotated, empty, simFiller)
+	RotaryQueue(:insert, rotaryRotated, empty, simFiller, simCapper)
 	||
 	
 	{
@@ -174,6 +176,7 @@ RotaryController(
 	    	signal  cvR, fR, cR;
 	    	receive convReady;
 	    	receive fillerReady;
+	    	receive capperReady;
 	    	{
 	    		loop{
 	    			
@@ -223,6 +226,8 @@ RotaryController(
     			checkReady(:convReady, cvR)
     			||
     			checkReady(:fillerReady, fR)
+    			||
+    			checkReady(:capperReady, cR)
     		}
 	    		
 	    		
@@ -313,3 +318,138 @@ FillerController(
 	    				}
 	    			}
 }
+	    		
+
+	    		
+	    		
+	    		
+	    		
+	    		
+	    		
+	    		
+	    		
+	    		
+CapperController(
+	    				input signal gripperZAxisLowered,gripperZAxisLifted,
+	    				gripperTurnHomePos,gripperTurnFinalPos;
+	    				
+	    				output signal cylPos5ZaxisExtend,gripperTurnRetract,gripperTurnExtend,
+	    				capGripperPos5Extend,cylClampBottleExtend;
+	    				output signal bottleAtPos4E;
+	    				
+	    				input Boolean channel simCapper;
+	    				output Boolean channel capperReady;
+	    				)
+	    			-> 		
+	    				{
+	    					signal bottleAtPos4;
+	    					send capperReady(Boolean.TRUE);
+	    					
+	    					{
+	    						loop{
+	    							
+	    							System.out.println("*Capper: Waiting for bottle at position 4...*");
+	    							await(bottleAtPos4);
+	    							System.out.println("*Capper: Bottle Arivied at Position 4.*");
+	    							send capperReady(Boolean.FALSE);
+	    							System.out.println("Capper: Checking if gripper is fully lifted...");
+	    							abort(gripperZAxisLifted){
+	    				             
+	    				                halt;
+	    				            }
+	    							System.out.println("Capper: Gripper is lifted.");
+	    							
+	    							pause;
+	    							
+	    							abort(gripperTurnHomePos)
+	    							{
+	    								System.out.println("Capper: Untwisting the gripper...");
+	    								sustain gripperTurnRetract;
+	    							}
+	    							System.out.println("Capper: Gripper at home position...");
+	    						
+	    							
+	    							trap(T){
+	    								{sustain cylPos5ZaxisExtend;
+	    								}
+	    								||
+	    								{
+	    									await(gripperZAxisLowered);
+	    									System.out.println("Capper: Gripper fully lowered. Gripping the cap...");
+	    									{
+	    										sustain capGripperPos5Extend;}
+	    									||
+	    									
+	    										{
+	    										System.out.println("Capper: Twisting the gripper...");
+	    										sustain gripperTurnExtend;
+	    										}
+	    									||
+	    									{
+	    										await(gripperTurnFinalPos);
+	    										System.out.println("Capper: Gripper fully turned.");
+	    										exit(T);
+	    									}
+	    								}
+	    							}
+	    							
+	    							await(gripperZAxisLifted);
+	    							
+	    							send capperReady(Boolean.TRUE);
+	    							System.out.println("CapperController: Gripper raised...");
+	    							System.out.println("CapperController: Bottle capped. Waiting for bottle to move to next position...");
+	    							await(!bottleAtPos4);
+	    							
+	    							
+	    						}
+	    					}
+	    					
+	    					||
+	    					{
+	    						loop{
+	    							receive simCapper;
+	    							if(#simCapper)
+	    								emit bottleAtPos4;
+	    							pause;
+	    						}
+	    					}
+	    					
+	    					||
+	    					{// To viz
+	    				        {while(true){present(bottleAtPos4)
+	    					        	trap(T) {
+	    					                {
+	    					                    sustain cylClampBottleExtend;
+	    					                }
+	    					                ||
+	    					                {
+	    					                    await(gripperTurnFinalPos);
+	    					                    exit(T);
+	    					                }
+	    					            }
+	    					            pause;
+	    				        	}
+	    				        }
+	    				    }
+	    					
+	    					||
+	    					
+	    					{while(true)
+	    			        	{present(bottleAtPos4)
+	    				        	trap(T) {
+	    				                {
+	    				                    sustain bottleAtPos4E;
+	    				                }
+	    				                ||
+	    				                {
+	    				                    await(gripperTurnFinalPos);
+	    				                    exit(T);
+	    				                }
+	    				            }
+	    				            pause;
+	    			        	}
+	    					}
+	    					
+
+	    				}
+	    		

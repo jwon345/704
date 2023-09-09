@@ -1,17 +1,5 @@
 <System xmlns="http://systemjtechnology.com">
 	<SubSystem Name="SS9" Local="true">
-		<ClockDomain Name="CapperCD" Class="CapperController">
-
-			
-		
-			
-			<oSignal Name="cylPos5ZaxisExtend" 		To="CapperPlant.cylPos5ZaxisExtend" 	Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10009" />
-			<oSignal Name="gripperTurnRetract"      To="CapperPlant.gripperTurnRetract"    	Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10009" />
-			<oSignal Name="gripperTurnExtend"    	To="CapperPlant.gripperTurnExtend"    	Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10009" />
-			<oSignal Name="capGripperPos5Extend"    To="CapperPlant.capGripperPos5Extend"   Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10009" />
-			<oSignal Name="cylClampBottleExtend"    To="CapperPlant.cylClampBottleExtend"   Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10009" />
-
-			<oSignal Name="bottleAtPos4E" 			To="UI.bottleAtPos4E" 				Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
-		</ClockDomain>
+	
 	</SubSystem>
 </System>

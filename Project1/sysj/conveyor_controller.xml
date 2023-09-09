@@ -15,10 +15,10 @@
             
             
 			<iChannel Name="rotated"     From="RotaryCD.rotated" />	
-			
-		
             <oChannel Name="convReady"     To="RotaryCD.convReady" />
+            
             <oChannel Name="simFiller"     To="FillerCD.simFiller" />
+            <oChannel Name="simCapper"     To="CapperCD.simCapper" />
         </ClockDomain>
         
         
@@ -38,6 +38,7 @@
             <!-- Input Channels -->
             <iChannel Name="convReady"     			From="ConveyorCD.convReady" />
 			<iChannel Name="fillerReady"     From="FillerCD.fillerReady" />
+			<iChannel Name="capperReady"     From="CapperCD.capperReady" />
 			
 			<oChannel Name="rotated"     To="ConveyorCD.rotated" />		
 
@@ -64,5 +65,35 @@
         </ClockDomain>
         
         
+        
+        
+        <ClockDomain Name="CapperCD" Class="CapperController">
+
+			<iSignal Name="gripperZAxisLowered"     Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10008" />
+			<iSignal Name="gripperZAxisLifted"    	Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10008" />
+			<iSignal Name="gripperTurnHomePos"    	Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10008" />
+			<iSignal Name="gripperTurnFinalPos"    	Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10008" />
+		
+			
+			<oSignal Name="cylPos5ZaxisExtend" 		To="CapperPlant.cylPos5ZaxisExtend" 	Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10009" />
+			<oSignal Name="gripperTurnRetract"      To="CapperPlant.gripperTurnRetract"    	Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10009" />
+			<oSignal Name="gripperTurnExtend"    	To="CapperPlant.gripperTurnExtend"    	Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10009" />
+			<oSignal Name="capGripperPos5Extend"    To="CapperPlant.capGripperPos5Extend"   Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10009" />
+			<oSignal Name="cylClampBottleExtend"    To="CapperPlant.cylClampBottleExtend"   Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10009" />
+
+			<oSignal Name="bottleAtPos4E" 			To="UI.bottleAtPos4E" 				Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+			
+			
+			<oChannel Name="capperReady"     To="RotaryCD.capperReady" />
+
+			<!-- simulation -->
+			<iChannel Name="simCapper"     From="ConveyorCD.simCapper" />
+			
+		</ClockDomain>
+		
+		
+		
+		
+		
     </SubSystem>
 </System>
