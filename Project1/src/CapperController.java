@@ -24,56 +24,56 @@ public class CapperController extends ClockDomain{
   public input_Channel simCapper_in = new input_Channel();
   public output_Channel capperReady_o = new output_Channel();
   private Signal bottleAtPos4_46;
-  private int S31243 = 1;
-  private int S31242 = 1;
-  private int S28206 = 1;
-  private int S28201 = 1;
-  private int S28823 = 1;
-  private int S28224 = 1;
-  private int S28231 = 1;
-  private int S28226 = 1;
-  private int S28293 = 1;
-  private int S28328 = 1;
-  private int S28295 = 1;
-  private int S28300 = 1;
-  private int S28308 = 1;
-  private int S28311 = 1;
-  private int S28380 = 1;
-  private int S28375 = 1;
-  private int S28906 = 1;
-  private int S28850 = 1;
-  private int S28830 = 1;
-  private int S28825 = 1;
-  private int S28941 = 1;
-  private int S28917 = 1;
-  private int S28911 = 1;
-  private int S28914 = 1;
-  private int S28976 = 1;
-  private int S28952 = 1;
-  private int S28946 = 1;
-  private int S28949 = 1;
+  private int S30923 = 1;
+  private int S30922 = 1;
+  private int S27886 = 1;
+  private int S27881 = 1;
+  private int S28503 = 1;
+  private int S27904 = 1;
+  private int S27911 = 1;
+  private int S27906 = 1;
+  private int S27973 = 1;
+  private int S28008 = 1;
+  private int S27975 = 1;
+  private int S27980 = 1;
+  private int S27988 = 1;
+  private int S27991 = 1;
+  private int S28060 = 1;
+  private int S28055 = 1;
+  private int S28586 = 1;
+  private int S28530 = 1;
+  private int S28510 = 1;
+  private int S28505 = 1;
+  private int S28621 = 1;
+  private int S28597 = 1;
+  private int S28591 = 1;
+  private int S28594 = 1;
+  private int S28656 = 1;
+  private int S28632 = 1;
+  private int S28626 = 1;
+  private int S28629 = 1;
   
   private int[] ends = new int[60];
   private int[] tdone = new int[60];
   
-  public void thread31706(int [] tdone, int [] ends){
-        S28949=1;
+  public void thread31386(int [] tdone, int [] ends){
+        S28629=1;
     active[59]=1;
     ends[59]=1;
     tdone[59]=1;
   }
 
-  public void thread31705(int [] tdone, int [] ends){
-        S28946=1;
-    bottleAtPos4E.setPresent();//sysj\conveyor_controller.sysj line: 477, column: 30
+  public void thread31385(int [] tdone, int [] ends){
+        S28626=1;
+    bottleAtPos4E.setPresent();//sysj\conveyor_controller.sysj line: 478, column: 30
     currsigs.addElement(bottleAtPos4E);
     active[58]=1;
     ends[58]=1;
     tdone[58]=1;
   }
 
-  public void thread31703(int [] tdone, int [] ends){
-        switch(S28949){
+  public void thread31383(int [] tdone, int [] ends){
+        switch(S28629){
       case 0 : 
         active[59]=0;
         ends[59]=0;
@@ -81,7 +81,7 @@ public class CapperController extends ClockDomain{
         break;
       
       case 1 : 
-        if(gripperTurnFinalPos.getprestatus()){//sysj\conveyor_controller.sysj line: 481, column: 36
+        if(gripperTurnFinalPos.getprestatus()){//sysj\conveyor_controller.sysj line: 482, column: 36
           ends[59]=2;
           tdone[59]=1;
         }
@@ -95,8 +95,8 @@ public class CapperController extends ClockDomain{
     }
   }
 
-  public void thread31702(int [] tdone, int [] ends){
-        switch(S28946){
+  public void thread31382(int [] tdone, int [] ends){
+        switch(S28626){
       case 0 : 
         active[58]=0;
         ends[58]=0;
@@ -104,7 +104,7 @@ public class CapperController extends ClockDomain{
         break;
       
       case 1 : 
-        bottleAtPos4E.setPresent();//sysj\conveyor_controller.sysj line: 477, column: 30
+        bottleAtPos4E.setPresent();//sysj\conveyor_controller.sysj line: 478, column: 30
         currsigs.addElement(bottleAtPos4E);
         active[58]=1;
         ends[58]=1;
@@ -114,8 +114,8 @@ public class CapperController extends ClockDomain{
     }
   }
 
-  public void thread31701(int [] tdone, int [] ends){
-        switch(S28976){
+  public void thread31381(int [] tdone, int [] ends){
+        switch(S28656){
       case 0 : 
         active[57]=0;
         ends[57]=0;
@@ -123,33 +123,33 @@ public class CapperController extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S28952){
+        switch(S28632){
           case 0 : 
-            thread31702(tdone,ends);
-            thread31703(tdone,ends);
-            int biggest31704 = 0;
-            if(ends[58]>=biggest31704){
-              biggest31704=ends[58];
+            thread31382(tdone,ends);
+            thread31383(tdone,ends);
+            int biggest31384 = 0;
+            if(ends[58]>=biggest31384){
+              biggest31384=ends[58];
             }
-            if(ends[59]>=biggest31704){
-              biggest31704=ends[59];
+            if(ends[59]>=biggest31384){
+              biggest31384=ends[59];
             }
-            if(biggest31704 == 1){
+            if(biggest31384 == 1){
               active[57]=1;
               ends[57]=1;
               tdone[57]=1;
             }
-            if(biggest31704 == 2){
+            if(biggest31384 == 2){
               ends[57]=2;
-              ;//sysj\conveyor_controller.sysj line: 475, column: 19
-              S28952=1;
+              ;//sysj\conveyor_controller.sysj line: 476, column: 19
+              S28632=1;
               active[57]=1;
               ends[57]=1;
               tdone[57]=1;
             }
             //FINXME code
-            if(biggest31704 == 0){
-              S28952=1;
+            if(biggest31384 == 0){
+              S28632=1;
               active[57]=1;
               ends[57]=1;
               tdone[57]=1;
@@ -157,26 +157,26 @@ public class CapperController extends ClockDomain{
             break;
           
           case 1 : 
-            S28952=1;
-            S28952=0;
-            if(bottleAtPos4_46.getprestatus()){//sysj\conveyor_controller.sysj line: 474, column: 27
-              thread31705(tdone,ends);
-              thread31706(tdone,ends);
-              int biggest31707 = 0;
-              if(ends[58]>=biggest31707){
-                biggest31707=ends[58];
+            S28632=1;
+            S28632=0;
+            if(bottleAtPos4_46.getprestatus()){//sysj\conveyor_controller.sysj line: 475, column: 27
+              thread31385(tdone,ends);
+              thread31386(tdone,ends);
+              int biggest31387 = 0;
+              if(ends[58]>=biggest31387){
+                biggest31387=ends[58];
               }
-              if(ends[59]>=biggest31707){
-                biggest31707=ends[59];
+              if(ends[59]>=biggest31387){
+                biggest31387=ends[59];
               }
-              if(biggest31707 == 1){
+              if(biggest31387 == 1){
                 active[57]=1;
                 ends[57]=1;
                 tdone[57]=1;
               }
             }
             else {
-              S28952=1;
+              S28632=1;
               active[57]=1;
               ends[57]=1;
               tdone[57]=1;
@@ -189,24 +189,24 @@ public class CapperController extends ClockDomain{
     }
   }
 
-  public void thread31699(int [] tdone, int [] ends){
-        S28914=1;
+  public void thread31379(int [] tdone, int [] ends){
+        S28594=1;
     active[56]=1;
     ends[56]=1;
     tdone[56]=1;
   }
 
-  public void thread31698(int [] tdone, int [] ends){
-        S28911=1;
-    cylClampBottleExtend.setPresent();//sysj\conveyor_controller.sysj line: 458, column: 31
+  public void thread31378(int [] tdone, int [] ends){
+        S28591=1;
+    cylClampBottleExtend.setPresent();//sysj\conveyor_controller.sysj line: 459, column: 31
     currsigs.addElement(cylClampBottleExtend);
     active[55]=1;
     ends[55]=1;
     tdone[55]=1;
   }
 
-  public void thread31696(int [] tdone, int [] ends){
-        switch(S28914){
+  public void thread31376(int [] tdone, int [] ends){
+        switch(S28594){
       case 0 : 
         active[56]=0;
         ends[56]=0;
@@ -214,7 +214,7 @@ public class CapperController extends ClockDomain{
         break;
       
       case 1 : 
-        if(gripperTurnFinalPos.getprestatus()){//sysj\conveyor_controller.sysj line: 462, column: 37
+        if(gripperTurnFinalPos.getprestatus()){//sysj\conveyor_controller.sysj line: 463, column: 37
           ends[56]=2;
           tdone[56]=1;
         }
@@ -228,8 +228,8 @@ public class CapperController extends ClockDomain{
     }
   }
 
-  public void thread31695(int [] tdone, int [] ends){
-        switch(S28911){
+  public void thread31375(int [] tdone, int [] ends){
+        switch(S28591){
       case 0 : 
         active[55]=0;
         ends[55]=0;
@@ -237,7 +237,7 @@ public class CapperController extends ClockDomain{
         break;
       
       case 1 : 
-        cylClampBottleExtend.setPresent();//sysj\conveyor_controller.sysj line: 458, column: 31
+        cylClampBottleExtend.setPresent();//sysj\conveyor_controller.sysj line: 459, column: 31
         currsigs.addElement(cylClampBottleExtend);
         active[55]=1;
         ends[55]=1;
@@ -247,8 +247,8 @@ public class CapperController extends ClockDomain{
     }
   }
 
-  public void thread31694(int [] tdone, int [] ends){
-        switch(S28941){
+  public void thread31374(int [] tdone, int [] ends){
+        switch(S28621){
       case 0 : 
         active[54]=0;
         ends[54]=0;
@@ -256,33 +256,33 @@ public class CapperController extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S28917){
+        switch(S28597){
           case 0 : 
-            thread31695(tdone,ends);
-            thread31696(tdone,ends);
-            int biggest31697 = 0;
-            if(ends[55]>=biggest31697){
-              biggest31697=ends[55];
+            thread31375(tdone,ends);
+            thread31376(tdone,ends);
+            int biggest31377 = 0;
+            if(ends[55]>=biggest31377){
+              biggest31377=ends[55];
             }
-            if(ends[56]>=biggest31697){
-              biggest31697=ends[56];
+            if(ends[56]>=biggest31377){
+              biggest31377=ends[56];
             }
-            if(biggest31697 == 1){
+            if(biggest31377 == 1){
               active[54]=1;
               ends[54]=1;
               tdone[54]=1;
             }
-            if(biggest31697 == 2){
+            if(biggest31377 == 2){
               ends[54]=2;
-              ;//sysj\conveyor_controller.sysj line: 456, column: 20
-              S28917=1;
+              ;//sysj\conveyor_controller.sysj line: 457, column: 20
+              S28597=1;
               active[54]=1;
               ends[54]=1;
               tdone[54]=1;
             }
             //FINXME code
-            if(biggest31697 == 0){
-              S28917=1;
+            if(biggest31377 == 0){
+              S28597=1;
               active[54]=1;
               ends[54]=1;
               tdone[54]=1;
@@ -290,26 +290,26 @@ public class CapperController extends ClockDomain{
             break;
           
           case 1 : 
-            S28917=1;
-            S28917=0;
-            if(bottleAtPos4_46.getprestatus()){//sysj\conveyor_controller.sysj line: 455, column: 39
-              thread31698(tdone,ends);
-              thread31699(tdone,ends);
-              int biggest31700 = 0;
-              if(ends[55]>=biggest31700){
-                biggest31700=ends[55];
+            S28597=1;
+            S28597=0;
+            if(bottleAtPos4_46.getprestatus()){//sysj\conveyor_controller.sysj line: 456, column: 39
+              thread31378(tdone,ends);
+              thread31379(tdone,ends);
+              int biggest31380 = 0;
+              if(ends[55]>=biggest31380){
+                biggest31380=ends[55];
               }
-              if(ends[56]>=biggest31700){
-                biggest31700=ends[56];
+              if(ends[56]>=biggest31380){
+                biggest31380=ends[56];
               }
-              if(biggest31700 == 1){
+              if(biggest31380 == 1){
                 active[54]=1;
                 ends[54]=1;
                 tdone[54]=1;
               }
             }
             else {
-              S28917=1;
+              S28597=1;
               active[54]=1;
               ends[54]=1;
               tdone[54]=1;
@@ -322,8 +322,8 @@ public class CapperController extends ClockDomain{
     }
   }
 
-  public void thread31693(int [] tdone, int [] ends){
-        switch(S28906){
+  public void thread31373(int [] tdone, int [] ends){
+        switch(S28586){
       case 0 : 
         active[53]=0;
         ends[53]=0;
@@ -331,37 +331,37 @@ public class CapperController extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S28850){
+        switch(S28530){
           case 0 : 
-            switch(S28830){
+            switch(S28510){
               case 0 : 
-                if(!simCapper_in.isPartnerPresent() || simCapper_in.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 445, column: 13
-                  simCapper_in.setACK(false);//sysj\conveyor_controller.sysj line: 445, column: 13
-                  S28830=1;
+                if(!simCapper_in.isPartnerPresent() || simCapper_in.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 446, column: 13
+                  simCapper_in.setACK(false);//sysj\conveyor_controller.sysj line: 446, column: 13
+                  S28510=1;
                   active[53]=1;
                   ends[53]=1;
                   tdone[53]=1;
                 }
                 else {
-                  switch(S28825){
+                  switch(S28505){
                     case 0 : 
-                      if(!simCapper_in.isREQ()){//sysj\conveyor_controller.sysj line: 445, column: 13
-                        simCapper_in.setACK(true);//sysj\conveyor_controller.sysj line: 445, column: 13
-                        S28825=1;
-                        if(simCapper_in.isREQ()){//sysj\conveyor_controller.sysj line: 445, column: 13
-                          simCapper_in.setACK(false);//sysj\conveyor_controller.sysj line: 445, column: 13
+                      if(!simCapper_in.isREQ()){//sysj\conveyor_controller.sysj line: 446, column: 13
+                        simCapper_in.setACK(true);//sysj\conveyor_controller.sysj line: 446, column: 13
+                        S28505=1;
+                        if(simCapper_in.isREQ()){//sysj\conveyor_controller.sysj line: 446, column: 13
+                          simCapper_in.setACK(false);//sysj\conveyor_controller.sysj line: 446, column: 13
                           ends[53]=2;
-                          ;//sysj\conveyor_controller.sysj line: 445, column: 13
-                          if((simCapper_in.getVal() == null ? null : ((Boolean)simCapper_in.getVal()))){//sysj\conveyor_controller.sysj line: 446, column: 16
-                            bottleAtPos4_46.setPresent();//sysj\conveyor_controller.sysj line: 447, column: 14
+                          ;//sysj\conveyor_controller.sysj line: 446, column: 13
+                          if((Boolean)(simCapper_in.getVal() == null ? null : ((Boolean)simCapper_in.getVal()))){//sysj\conveyor_controller.sysj line: 447, column: 16
+                            bottleAtPos4_46.setPresent();//sysj\conveyor_controller.sysj line: 448, column: 14
                             currsigs.addElement(bottleAtPos4_46);
-                            S28850=1;
+                            S28530=1;
                             active[53]=1;
                             ends[53]=1;
                             tdone[53]=1;
                           }
                           else {
-                            S28850=1;
+                            S28530=1;
                             active[53]=1;
                             ends[53]=1;
                             tdone[53]=1;
@@ -381,20 +381,20 @@ public class CapperController extends ClockDomain{
                       break;
                     
                     case 1 : 
-                      if(simCapper_in.isREQ()){//sysj\conveyor_controller.sysj line: 445, column: 13
-                        simCapper_in.setACK(false);//sysj\conveyor_controller.sysj line: 445, column: 13
+                      if(simCapper_in.isREQ()){//sysj\conveyor_controller.sysj line: 446, column: 13
+                        simCapper_in.setACK(false);//sysj\conveyor_controller.sysj line: 446, column: 13
                         ends[53]=2;
-                        ;//sysj\conveyor_controller.sysj line: 445, column: 13
-                        if((simCapper_in.getVal() == null ? null : ((Boolean)simCapper_in.getVal()))){//sysj\conveyor_controller.sysj line: 446, column: 16
-                          bottleAtPos4_46.setPresent();//sysj\conveyor_controller.sysj line: 447, column: 14
+                        ;//sysj\conveyor_controller.sysj line: 446, column: 13
+                        if((Boolean)(simCapper_in.getVal() == null ? null : ((Boolean)simCapper_in.getVal()))){//sysj\conveyor_controller.sysj line: 447, column: 16
+                          bottleAtPos4_46.setPresent();//sysj\conveyor_controller.sysj line: 448, column: 14
                           currsigs.addElement(bottleAtPos4_46);
-                          S28850=1;
+                          S28530=1;
                           active[53]=1;
                           ends[53]=1;
                           tdone[53]=1;
                         }
                         else {
-                          S28850=1;
+                          S28530=1;
                           active[53]=1;
                           ends[53]=1;
                           tdone[53]=1;
@@ -412,34 +412,34 @@ public class CapperController extends ClockDomain{
                 break;
               
               case 1 : 
-                S28830=1;
-                S28830=0;
-                if(!simCapper_in.isPartnerPresent() || simCapper_in.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 445, column: 13
-                  simCapper_in.setACK(false);//sysj\conveyor_controller.sysj line: 445, column: 13
-                  S28830=1;
+                S28510=1;
+                S28510=0;
+                if(!simCapper_in.isPartnerPresent() || simCapper_in.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 446, column: 13
+                  simCapper_in.setACK(false);//sysj\conveyor_controller.sysj line: 446, column: 13
+                  S28510=1;
                   active[53]=1;
                   ends[53]=1;
                   tdone[53]=1;
                 }
                 else {
-                  S28825=0;
-                  if(!simCapper_in.isREQ()){//sysj\conveyor_controller.sysj line: 445, column: 13
-                    simCapper_in.setACK(true);//sysj\conveyor_controller.sysj line: 445, column: 13
-                    S28825=1;
-                    if(simCapper_in.isREQ()){//sysj\conveyor_controller.sysj line: 445, column: 13
-                      simCapper_in.setACK(false);//sysj\conveyor_controller.sysj line: 445, column: 13
+                  S28505=0;
+                  if(!simCapper_in.isREQ()){//sysj\conveyor_controller.sysj line: 446, column: 13
+                    simCapper_in.setACK(true);//sysj\conveyor_controller.sysj line: 446, column: 13
+                    S28505=1;
+                    if(simCapper_in.isREQ()){//sysj\conveyor_controller.sysj line: 446, column: 13
+                      simCapper_in.setACK(false);//sysj\conveyor_controller.sysj line: 446, column: 13
                       ends[53]=2;
-                      ;//sysj\conveyor_controller.sysj line: 445, column: 13
-                      if((simCapper_in.getVal() == null ? null : ((Boolean)simCapper_in.getVal()))){//sysj\conveyor_controller.sysj line: 446, column: 16
-                        bottleAtPos4_46.setPresent();//sysj\conveyor_controller.sysj line: 447, column: 14
+                      ;//sysj\conveyor_controller.sysj line: 446, column: 13
+                      if((Boolean)(simCapper_in.getVal() == null ? null : ((Boolean)simCapper_in.getVal()))){//sysj\conveyor_controller.sysj line: 447, column: 16
+                        bottleAtPos4_46.setPresent();//sysj\conveyor_controller.sysj line: 448, column: 14
                         currsigs.addElement(bottleAtPos4_46);
-                        S28850=1;
+                        S28530=1;
                         active[53]=1;
                         ends[53]=1;
                         tdone[53]=1;
                       }
                       else {
-                        S28850=1;
+                        S28530=1;
                         active[53]=1;
                         ends[53]=1;
                         tdone[53]=1;
@@ -463,35 +463,35 @@ public class CapperController extends ClockDomain{
             break;
           
           case 1 : 
-            S28850=1;
-            S28850=0;
-            S28830=0;
-            if(!simCapper_in.isPartnerPresent() || simCapper_in.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 445, column: 13
-              simCapper_in.setACK(false);//sysj\conveyor_controller.sysj line: 445, column: 13
-              S28830=1;
+            S28530=1;
+            S28530=0;
+            S28510=0;
+            if(!simCapper_in.isPartnerPresent() || simCapper_in.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 446, column: 13
+              simCapper_in.setACK(false);//sysj\conveyor_controller.sysj line: 446, column: 13
+              S28510=1;
               active[53]=1;
               ends[53]=1;
               tdone[53]=1;
             }
             else {
-              S28825=0;
-              if(!simCapper_in.isREQ()){//sysj\conveyor_controller.sysj line: 445, column: 13
-                simCapper_in.setACK(true);//sysj\conveyor_controller.sysj line: 445, column: 13
-                S28825=1;
-                if(simCapper_in.isREQ()){//sysj\conveyor_controller.sysj line: 445, column: 13
-                  simCapper_in.setACK(false);//sysj\conveyor_controller.sysj line: 445, column: 13
+              S28505=0;
+              if(!simCapper_in.isREQ()){//sysj\conveyor_controller.sysj line: 446, column: 13
+                simCapper_in.setACK(true);//sysj\conveyor_controller.sysj line: 446, column: 13
+                S28505=1;
+                if(simCapper_in.isREQ()){//sysj\conveyor_controller.sysj line: 446, column: 13
+                  simCapper_in.setACK(false);//sysj\conveyor_controller.sysj line: 446, column: 13
                   ends[53]=2;
-                  ;//sysj\conveyor_controller.sysj line: 445, column: 13
-                  if((simCapper_in.getVal() == null ? null : ((Boolean)simCapper_in.getVal()))){//sysj\conveyor_controller.sysj line: 446, column: 16
-                    bottleAtPos4_46.setPresent();//sysj\conveyor_controller.sysj line: 447, column: 14
+                  ;//sysj\conveyor_controller.sysj line: 446, column: 13
+                  if((Boolean)(simCapper_in.getVal() == null ? null : ((Boolean)simCapper_in.getVal()))){//sysj\conveyor_controller.sysj line: 447, column: 16
+                    bottleAtPos4_46.setPresent();//sysj\conveyor_controller.sysj line: 448, column: 14
                     currsigs.addElement(bottleAtPos4_46);
-                    S28850=1;
+                    S28530=1;
                     active[53]=1;
                     ends[53]=1;
                     tdone[53]=1;
                   }
                   else {
-                    S28850=1;
+                    S28530=1;
                     active[53]=1;
                     ends[53]=1;
                     tdone[53]=1;
@@ -517,8 +517,8 @@ public class CapperController extends ClockDomain{
     }
   }
 
-  public void thread31690(int [] tdone, int [] ends){
-        switch(S28311){
+  public void thread31370(int [] tdone, int [] ends){
+        switch(S27991){
       case 0 : 
         active[52]=0;
         ends[52]=0;
@@ -526,8 +526,8 @@ public class CapperController extends ClockDomain{
         break;
       
       case 1 : 
-        if(gripperTurnFinalPos.getprestatus()){//sysj\conveyor_controller.sysj line: 424, column: 22
-          System.out.println("Capper: Gripper fully turned.");//sysj\conveyor_controller.sysj line: 425, column: 16
+        if(gripperTurnFinalPos.getprestatus()){//sysj\conveyor_controller.sysj line: 425, column: 22
+          System.out.println("Capper: Gripper fully turned.");//sysj\conveyor_controller.sysj line: 426, column: 16
           ends[52]=2;
           tdone[52]=1;
         }
@@ -541,8 +541,8 @@ public class CapperController extends ClockDomain{
     }
   }
 
-  public void thread31689(int [] tdone, int [] ends){
-        switch(S28308){
+  public void thread31369(int [] tdone, int [] ends){
+        switch(S27988){
       case 0 : 
         active[51]=0;
         ends[51]=0;
@@ -550,7 +550,7 @@ public class CapperController extends ClockDomain{
         break;
       
       case 1 : 
-        gripperTurnExtend.setPresent();//sysj\conveyor_controller.sysj line: 420, column: 16
+        gripperTurnExtend.setPresent();//sysj\conveyor_controller.sysj line: 421, column: 16
         currsigs.addElement(gripperTurnExtend);
         active[51]=1;
         ends[51]=1;
@@ -560,8 +560,8 @@ public class CapperController extends ClockDomain{
     }
   }
 
-  public void thread31688(int [] tdone, int [] ends){
-        switch(S28300){
+  public void thread31368(int [] tdone, int [] ends){
+        switch(S27980){
       case 0 : 
         active[50]=0;
         ends[50]=0;
@@ -569,7 +569,7 @@ public class CapperController extends ClockDomain{
         break;
       
       case 1 : 
-        capGripperPos5Extend.setPresent();//sysj\conveyor_controller.sysj line: 415, column: 16
+        capGripperPos5Extend.setPresent();//sysj\conveyor_controller.sysj line: 416, column: 16
         currsigs.addElement(capGripperPos5Extend);
         active[50]=1;
         ends[50]=1;
@@ -579,34 +579,34 @@ public class CapperController extends ClockDomain{
     }
   }
 
-  public void thread31686(int [] tdone, int [] ends){
-        S28311=1;
+  public void thread31366(int [] tdone, int [] ends){
+        S27991=1;
     active[52]=1;
     ends[52]=1;
     tdone[52]=1;
   }
 
-  public void thread31685(int [] tdone, int [] ends){
-        S28308=1;
-    System.out.println("Capper: Twisting the gripper...");//sysj\conveyor_controller.sysj line: 419, column: 16
-    gripperTurnExtend.setPresent();//sysj\conveyor_controller.sysj line: 420, column: 16
+  public void thread31365(int [] tdone, int [] ends){
+        S27988=1;
+    System.out.println("Capper: Twisting the gripper...");//sysj\conveyor_controller.sysj line: 420, column: 16
+    gripperTurnExtend.setPresent();//sysj\conveyor_controller.sysj line: 421, column: 16
     currsigs.addElement(gripperTurnExtend);
     active[51]=1;
     ends[51]=1;
     tdone[51]=1;
   }
 
-  public void thread31684(int [] tdone, int [] ends){
-        S28300=1;
-    capGripperPos5Extend.setPresent();//sysj\conveyor_controller.sysj line: 415, column: 16
+  public void thread31364(int [] tdone, int [] ends){
+        S27980=1;
+    capGripperPos5Extend.setPresent();//sysj\conveyor_controller.sysj line: 416, column: 16
     currsigs.addElement(capGripperPos5Extend);
     active[50]=1;
     ends[50]=1;
     tdone[50]=1;
   }
 
-  public void thread31683(int [] tdone, int [] ends){
-        switch(S28328){
+  public void thread31363(int [] tdone, int [] ends){
+        switch(S28008){
       case 0 : 
         active[49]=0;
         ends[49]=0;
@@ -614,25 +614,25 @@ public class CapperController extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S28295){
+        switch(S27975){
           case 0 : 
-            if(gripperZAxisLowered.getprestatus()){//sysj\conveyor_controller.sysj line: 412, column: 21
-              System.out.println("Capper: Gripper fully lowered. Gripping the cap...");//sysj\conveyor_controller.sysj line: 413, column: 15
-              S28295=1;
-              thread31684(tdone,ends);
-              thread31685(tdone,ends);
-              thread31686(tdone,ends);
-              int biggest31687 = 0;
-              if(ends[50]>=biggest31687){
-                biggest31687=ends[50];
+            if(gripperZAxisLowered.getprestatus()){//sysj\conveyor_controller.sysj line: 413, column: 21
+              System.out.println("Capper: Gripper fully lowered. Gripping the cap...");//sysj\conveyor_controller.sysj line: 414, column: 15
+              S27975=1;
+              thread31364(tdone,ends);
+              thread31365(tdone,ends);
+              thread31366(tdone,ends);
+              int biggest31367 = 0;
+              if(ends[50]>=biggest31367){
+                biggest31367=ends[50];
               }
-              if(ends[51]>=biggest31687){
-                biggest31687=ends[51];
+              if(ends[51]>=biggest31367){
+                biggest31367=ends[51];
               }
-              if(ends[52]>=biggest31687){
-                biggest31687=ends[52];
+              if(ends[52]>=biggest31367){
+                biggest31367=ends[52];
               }
-              if(biggest31687 == 1){
+              if(biggest31367 == 1){
                 active[49]=1;
                 ends[49]=1;
                 tdone[49]=1;
@@ -646,31 +646,31 @@ public class CapperController extends ClockDomain{
             break;
           
           case 1 : 
-            thread31688(tdone,ends);
-            thread31689(tdone,ends);
-            thread31690(tdone,ends);
-            int biggest31691 = 0;
-            if(ends[50]>=biggest31691){
-              biggest31691=ends[50];
+            thread31368(tdone,ends);
+            thread31369(tdone,ends);
+            thread31370(tdone,ends);
+            int biggest31371 = 0;
+            if(ends[50]>=biggest31371){
+              biggest31371=ends[50];
             }
-            if(ends[51]>=biggest31691){
-              biggest31691=ends[51];
+            if(ends[51]>=biggest31371){
+              biggest31371=ends[51];
             }
-            if(ends[52]>=biggest31691){
-              biggest31691=ends[52];
+            if(ends[52]>=biggest31371){
+              biggest31371=ends[52];
             }
-            if(biggest31691 == 1){
+            if(biggest31371 == 1){
               active[49]=1;
               ends[49]=1;
               tdone[49]=1;
             }
-            if(biggest31691 == 2){
+            if(biggest31371 == 2){
               ends[49]=2;
               tdone[49]=1;
             }
             //FINXME code
-            if(biggest31691 == 0){
-              S28328=0;
+            if(biggest31371 == 0){
+              S28008=0;
               active[49]=0;
               ends[49]=0;
               tdone[49]=1;
@@ -683,8 +683,8 @@ public class CapperController extends ClockDomain{
     }
   }
 
-  public void thread31682(int [] tdone, int [] ends){
-        switch(S28293){
+  public void thread31362(int [] tdone, int [] ends){
+        switch(S27973){
       case 0 : 
         active[48]=0;
         ends[48]=0;
@@ -692,7 +692,7 @@ public class CapperController extends ClockDomain{
         break;
       
       case 1 : 
-        cylPos5ZaxisExtend.setPresent();//sysj\conveyor_controller.sysj line: 408, column: 15
+        cylPos5ZaxisExtend.setPresent();//sysj\conveyor_controller.sysj line: 409, column: 15
         currsigs.addElement(cylPos5ZaxisExtend);
         active[48]=1;
         ends[48]=1;
@@ -702,25 +702,25 @@ public class CapperController extends ClockDomain{
     }
   }
 
-  public void thread31680(int [] tdone, int [] ends){
-        S28328=1;
-    S28295=0;
+  public void thread31360(int [] tdone, int [] ends){
+        S28008=1;
+    S27975=0;
     active[49]=1;
     ends[49]=1;
     tdone[49]=1;
   }
 
-  public void thread31679(int [] tdone, int [] ends){
-        S28293=1;
-    cylPos5ZaxisExtend.setPresent();//sysj\conveyor_controller.sysj line: 408, column: 15
+  public void thread31359(int [] tdone, int [] ends){
+        S27973=1;
+    cylPos5ZaxisExtend.setPresent();//sysj\conveyor_controller.sysj line: 409, column: 15
     currsigs.addElement(cylPos5ZaxisExtend);
     active[48]=1;
     ends[48]=1;
     tdone[48]=1;
   }
 
-  public void thread31678(int [] tdone, int [] ends){
-        switch(S28823){
+  public void thread31358(int [] tdone, int [] ends){
+        switch(S28503){
       case 0 : 
         active[47]=0;
         ends[47]=0;
@@ -728,30 +728,30 @@ public class CapperController extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S28224){
+        switch(S27904){
           case 0 : 
-            if(bottleAtPos4_46.getprestatus()){//sysj\conveyor_controller.sysj line: 387, column: 19
-              S28224=1;
-              S28231=0;
-              if(!capperReady_o.isPartnerPresent() || capperReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 388, column: 13
-                capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 388, column: 13
-                S28231=1;
+            if(bottleAtPos4_46.getprestatus()){//sysj\conveyor_controller.sysj line: 388, column: 19
+              S27904=1;
+              S27911=0;
+              if(!capperReady_o.isPartnerPresent() || capperReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 389, column: 13
+                capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 389, column: 13
+                S27911=1;
                 active[47]=1;
                 ends[47]=1;
                 tdone[47]=1;
               }
               else {
-                S28226=0;
-                if(capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 388, column: 13
-                  capperReady_o.setVal(Boolean.FALSE);//sysj\conveyor_controller.sysj line: 388, column: 13
-                  S28226=1;
-                  if(!capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 388, column: 13
-                    capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 388, column: 13
+                S27906=0;
+                if(capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 389, column: 13
+                  capperReady_o.setVal(Boolean.FALSE);//sysj\conveyor_controller.sysj line: 389, column: 13
+                  S27906=1;
+                  if(!capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 389, column: 13
+                    capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 389, column: 13
                     ends[47]=2;
-                    ;//sysj\conveyor_controller.sysj line: 388, column: 13
-                    System.out.println("*Capper: Bottle Arivied at Position 4.*");//sysj\conveyor_controller.sysj line: 389, column: 13
-                    System.out.println("Capper: Checking if gripper is fully lifted...");//sysj\conveyor_controller.sysj line: 390, column: 13
-                    S28224=2;
+                    ;//sysj\conveyor_controller.sysj line: 389, column: 13
+                    System.out.println("*Capper: Bottle Arivied at Position 4.*");//sysj\conveyor_controller.sysj line: 390, column: 13
+                    System.out.println("Capper: Checking if gripper is fully lifted...");//sysj\conveyor_controller.sysj line: 391, column: 13
+                    S27904=2;
                     active[47]=1;
                     ends[47]=1;
                     tdone[47]=1;
@@ -777,28 +777,28 @@ public class CapperController extends ClockDomain{
             break;
           
           case 1 : 
-            switch(S28231){
+            switch(S27911){
               case 0 : 
-                if(!capperReady_o.isPartnerPresent() || capperReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 388, column: 13
-                  capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 388, column: 13
-                  S28231=1;
+                if(!capperReady_o.isPartnerPresent() || capperReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 389, column: 13
+                  capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 389, column: 13
+                  S27911=1;
                   active[47]=1;
                   ends[47]=1;
                   tdone[47]=1;
                 }
                 else {
-                  switch(S28226){
+                  switch(S27906){
                     case 0 : 
-                      if(capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 388, column: 13
-                        capperReady_o.setVal(Boolean.FALSE);//sysj\conveyor_controller.sysj line: 388, column: 13
-                        S28226=1;
-                        if(!capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 388, column: 13
-                          capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 388, column: 13
+                      if(capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 389, column: 13
+                        capperReady_o.setVal(Boolean.FALSE);//sysj\conveyor_controller.sysj line: 389, column: 13
+                        S27906=1;
+                        if(!capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 389, column: 13
+                          capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 389, column: 13
                           ends[47]=2;
-                          ;//sysj\conveyor_controller.sysj line: 388, column: 13
-                          System.out.println("*Capper: Bottle Arivied at Position 4.*");//sysj\conveyor_controller.sysj line: 389, column: 13
-                          System.out.println("Capper: Checking if gripper is fully lifted...");//sysj\conveyor_controller.sysj line: 390, column: 13
-                          S28224=2;
+                          ;//sysj\conveyor_controller.sysj line: 389, column: 13
+                          System.out.println("*Capper: Bottle Arivied at Position 4.*");//sysj\conveyor_controller.sysj line: 390, column: 13
+                          System.out.println("Capper: Checking if gripper is fully lifted...");//sysj\conveyor_controller.sysj line: 391, column: 13
+                          S27904=2;
                           active[47]=1;
                           ends[47]=1;
                           tdone[47]=1;
@@ -817,13 +817,13 @@ public class CapperController extends ClockDomain{
                       break;
                     
                     case 1 : 
-                      if(!capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 388, column: 13
-                        capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 388, column: 13
+                      if(!capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 389, column: 13
+                        capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 389, column: 13
                         ends[47]=2;
-                        ;//sysj\conveyor_controller.sysj line: 388, column: 13
-                        System.out.println("*Capper: Bottle Arivied at Position 4.*");//sysj\conveyor_controller.sysj line: 389, column: 13
-                        System.out.println("Capper: Checking if gripper is fully lifted...");//sysj\conveyor_controller.sysj line: 390, column: 13
-                        S28224=2;
+                        ;//sysj\conveyor_controller.sysj line: 389, column: 13
+                        System.out.println("*Capper: Bottle Arivied at Position 4.*");//sysj\conveyor_controller.sysj line: 390, column: 13
+                        System.out.println("Capper: Checking if gripper is fully lifted...");//sysj\conveyor_controller.sysj line: 391, column: 13
+                        S27904=2;
                         active[47]=1;
                         ends[47]=1;
                         tdone[47]=1;
@@ -840,27 +840,27 @@ public class CapperController extends ClockDomain{
                 break;
               
               case 1 : 
-                S28231=1;
-                S28231=0;
-                if(!capperReady_o.isPartnerPresent() || capperReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 388, column: 13
-                  capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 388, column: 13
-                  S28231=1;
+                S27911=1;
+                S27911=0;
+                if(!capperReady_o.isPartnerPresent() || capperReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 389, column: 13
+                  capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 389, column: 13
+                  S27911=1;
                   active[47]=1;
                   ends[47]=1;
                   tdone[47]=1;
                 }
                 else {
-                  S28226=0;
-                  if(capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 388, column: 13
-                    capperReady_o.setVal(Boolean.FALSE);//sysj\conveyor_controller.sysj line: 388, column: 13
-                    S28226=1;
-                    if(!capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 388, column: 13
-                      capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 388, column: 13
+                  S27906=0;
+                  if(capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 389, column: 13
+                    capperReady_o.setVal(Boolean.FALSE);//sysj\conveyor_controller.sysj line: 389, column: 13
+                    S27906=1;
+                    if(!capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 389, column: 13
+                      capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 389, column: 13
                       ends[47]=2;
-                      ;//sysj\conveyor_controller.sysj line: 388, column: 13
-                      System.out.println("*Capper: Bottle Arivied at Position 4.*");//sysj\conveyor_controller.sysj line: 389, column: 13
-                      System.out.println("Capper: Checking if gripper is fully lifted...");//sysj\conveyor_controller.sysj line: 390, column: 13
-                      S28224=2;
+                      ;//sysj\conveyor_controller.sysj line: 389, column: 13
+                      System.out.println("*Capper: Bottle Arivied at Position 4.*");//sysj\conveyor_controller.sysj line: 390, column: 13
+                      System.out.println("Capper: Checking if gripper is fully lifted...");//sysj\conveyor_controller.sysj line: 391, column: 13
+                      S27904=2;
                       active[47]=1;
                       ends[47]=1;
                       tdone[47]=1;
@@ -883,9 +883,9 @@ public class CapperController extends ClockDomain{
             break;
           
           case 2 : 
-            if(gripperZAxisLifted.getprestatus()){//sysj\conveyor_controller.sysj line: 391, column: 19
-              System.out.println("Capper: Gripper is lifted.");//sysj\conveyor_controller.sysj line: 395, column: 13
-              S28224=3;
+            if(gripperZAxisLifted.getprestatus()){//sysj\conveyor_controller.sysj line: 392, column: 19
+              System.out.println("Capper: Gripper is lifted.");//sysj\conveyor_controller.sysj line: 396, column: 13
+              S27904=3;
               active[47]=1;
               ends[47]=1;
               tdone[47]=1;
@@ -898,10 +898,10 @@ public class CapperController extends ClockDomain{
             break;
           
           case 3 : 
-            S28224=3;
-            S28224=4;
-            System.out.println("Capper: Untwisting the gripper...");//sysj\conveyor_controller.sysj line: 401, column: 14
-            gripperTurnRetract.setPresent();//sysj\conveyor_controller.sysj line: 402, column: 14
+            S27904=3;
+            S27904=4;
+            System.out.println("Capper: Untwisting the gripper...");//sysj\conveyor_controller.sysj line: 402, column: 14
+            gripperTurnRetract.setPresent();//sysj\conveyor_controller.sysj line: 403, column: 14
             currsigs.addElement(gripperTurnRetract);
             active[47]=1;
             ends[47]=1;
@@ -909,26 +909,26 @@ public class CapperController extends ClockDomain{
             break;
           
           case 4 : 
-            if(gripperTurnHomePos.getprestatus()){//sysj\conveyor_controller.sysj line: 399, column: 19
-              System.out.println("Capper: Gripper at home position...");//sysj\conveyor_controller.sysj line: 404, column: 13
-              S28224=5;
-              thread31679(tdone,ends);
-              thread31680(tdone,ends);
-              int biggest31681 = 0;
-              if(ends[48]>=biggest31681){
-                biggest31681=ends[48];
+            if(gripperTurnHomePos.getprestatus()){//sysj\conveyor_controller.sysj line: 400, column: 19
+              System.out.println("Capper: Gripper at home position...");//sysj\conveyor_controller.sysj line: 405, column: 13
+              S27904=5;
+              thread31359(tdone,ends);
+              thread31360(tdone,ends);
+              int biggest31361 = 0;
+              if(ends[48]>=biggest31361){
+                biggest31361=ends[48];
               }
-              if(ends[49]>=biggest31681){
-                biggest31681=ends[49];
+              if(ends[49]>=biggest31361){
+                biggest31361=ends[49];
               }
-              if(biggest31681 == 1){
+              if(biggest31361 == 1){
                 active[47]=1;
                 ends[47]=1;
                 tdone[47]=1;
               }
             }
             else {
-              gripperTurnRetract.setPresent();//sysj\conveyor_controller.sysj line: 402, column: 14
+              gripperTurnRetract.setPresent();//sysj\conveyor_controller.sysj line: 403, column: 14
               currsigs.addElement(gripperTurnRetract);
               active[47]=1;
               ends[47]=1;
@@ -937,31 +937,31 @@ public class CapperController extends ClockDomain{
             break;
           
           case 5 : 
-            thread31682(tdone,ends);
-            thread31683(tdone,ends);
-            int biggest31692 = 0;
-            if(ends[48]>=biggest31692){
-              biggest31692=ends[48];
+            thread31362(tdone,ends);
+            thread31363(tdone,ends);
+            int biggest31372 = 0;
+            if(ends[48]>=biggest31372){
+              biggest31372=ends[48];
             }
-            if(ends[49]>=biggest31692){
-              biggest31692=ends[49];
+            if(ends[49]>=biggest31372){
+              biggest31372=ends[49];
             }
-            if(biggest31692 == 1){
+            if(biggest31372 == 1){
               active[47]=1;
               ends[47]=1;
               tdone[47]=1;
             }
-            if(biggest31692 == 2){
+            if(biggest31372 == 2){
               ends[47]=2;
-              ;//sysj\conveyor_controller.sysj line: 407, column: 13
-              S28224=6;
+              ;//sysj\conveyor_controller.sysj line: 408, column: 13
+              S27904=6;
               active[47]=1;
               ends[47]=1;
               tdone[47]=1;
             }
             //FINXME code
-            if(biggest31692 == 0){
-              S28224=6;
+            if(biggest31372 == 0){
+              S27904=6;
               active[47]=1;
               ends[47]=1;
               tdone[47]=1;
@@ -969,28 +969,28 @@ public class CapperController extends ClockDomain{
             break;
           
           case 6 : 
-            if(gripperZAxisLifted.getprestatus()){//sysj\conveyor_controller.sysj line: 431, column: 19
-              S28224=7;
-              S28380=0;
-              if(!capperReady_o.isPartnerPresent() || capperReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 433, column: 13
-                capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 433, column: 13
-                S28380=1;
+            if(gripperZAxisLifted.getprestatus()){//sysj\conveyor_controller.sysj line: 432, column: 19
+              S27904=7;
+              S28060=0;
+              if(!capperReady_o.isPartnerPresent() || capperReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 434, column: 13
+                capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 434, column: 13
+                S28060=1;
                 active[47]=1;
                 ends[47]=1;
                 tdone[47]=1;
               }
               else {
-                S28375=0;
-                if(capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 433, column: 13
-                  capperReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 433, column: 13
-                  S28375=1;
-                  if(!capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 433, column: 13
-                    capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 433, column: 13
+                S28055=0;
+                if(capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 434, column: 13
+                  capperReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 434, column: 13
+                  S28055=1;
+                  if(!capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 434, column: 13
+                    capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 434, column: 13
                     ends[47]=2;
-                    ;//sysj\conveyor_controller.sysj line: 433, column: 13
-                    System.out.println("CapperController: Gripper raised...");//sysj\conveyor_controller.sysj line: 434, column: 13
-                    System.out.println("CapperController: Bottle capped. Waiting for bottle to move to next position...");//sysj\conveyor_controller.sysj line: 435, column: 13
-                    S28224=8;
+                    ;//sysj\conveyor_controller.sysj line: 434, column: 13
+                    System.out.println("CapperController: Gripper raised...");//sysj\conveyor_controller.sysj line: 435, column: 13
+                    System.out.println("CapperController: Bottle capped. Waiting for bottle to move to next position...");//sysj\conveyor_controller.sysj line: 436, column: 13
+                    S27904=8;
                     active[47]=1;
                     ends[47]=1;
                     tdone[47]=1;
@@ -1016,28 +1016,28 @@ public class CapperController extends ClockDomain{
             break;
           
           case 7 : 
-            switch(S28380){
+            switch(S28060){
               case 0 : 
-                if(!capperReady_o.isPartnerPresent() || capperReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 433, column: 13
-                  capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 433, column: 13
-                  S28380=1;
+                if(!capperReady_o.isPartnerPresent() || capperReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 434, column: 13
+                  capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 434, column: 13
+                  S28060=1;
                   active[47]=1;
                   ends[47]=1;
                   tdone[47]=1;
                 }
                 else {
-                  switch(S28375){
+                  switch(S28055){
                     case 0 : 
-                      if(capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 433, column: 13
-                        capperReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 433, column: 13
-                        S28375=1;
-                        if(!capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 433, column: 13
-                          capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 433, column: 13
+                      if(capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 434, column: 13
+                        capperReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 434, column: 13
+                        S28055=1;
+                        if(!capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 434, column: 13
+                          capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 434, column: 13
                           ends[47]=2;
-                          ;//sysj\conveyor_controller.sysj line: 433, column: 13
-                          System.out.println("CapperController: Gripper raised...");//sysj\conveyor_controller.sysj line: 434, column: 13
-                          System.out.println("CapperController: Bottle capped. Waiting for bottle to move to next position...");//sysj\conveyor_controller.sysj line: 435, column: 13
-                          S28224=8;
+                          ;//sysj\conveyor_controller.sysj line: 434, column: 13
+                          System.out.println("CapperController: Gripper raised...");//sysj\conveyor_controller.sysj line: 435, column: 13
+                          System.out.println("CapperController: Bottle capped. Waiting for bottle to move to next position...");//sysj\conveyor_controller.sysj line: 436, column: 13
+                          S27904=8;
                           active[47]=1;
                           ends[47]=1;
                           tdone[47]=1;
@@ -1056,13 +1056,13 @@ public class CapperController extends ClockDomain{
                       break;
                     
                     case 1 : 
-                      if(!capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 433, column: 13
-                        capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 433, column: 13
+                      if(!capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 434, column: 13
+                        capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 434, column: 13
                         ends[47]=2;
-                        ;//sysj\conveyor_controller.sysj line: 433, column: 13
-                        System.out.println("CapperController: Gripper raised...");//sysj\conveyor_controller.sysj line: 434, column: 13
-                        System.out.println("CapperController: Bottle capped. Waiting for bottle to move to next position...");//sysj\conveyor_controller.sysj line: 435, column: 13
-                        S28224=8;
+                        ;//sysj\conveyor_controller.sysj line: 434, column: 13
+                        System.out.println("CapperController: Gripper raised...");//sysj\conveyor_controller.sysj line: 435, column: 13
+                        System.out.println("CapperController: Bottle capped. Waiting for bottle to move to next position...");//sysj\conveyor_controller.sysj line: 436, column: 13
+                        S27904=8;
                         active[47]=1;
                         ends[47]=1;
                         tdone[47]=1;
@@ -1079,27 +1079,27 @@ public class CapperController extends ClockDomain{
                 break;
               
               case 1 : 
-                S28380=1;
-                S28380=0;
-                if(!capperReady_o.isPartnerPresent() || capperReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 433, column: 13
-                  capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 433, column: 13
-                  S28380=1;
+                S28060=1;
+                S28060=0;
+                if(!capperReady_o.isPartnerPresent() || capperReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 434, column: 13
+                  capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 434, column: 13
+                  S28060=1;
                   active[47]=1;
                   ends[47]=1;
                   tdone[47]=1;
                 }
                 else {
-                  S28375=0;
-                  if(capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 433, column: 13
-                    capperReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 433, column: 13
-                    S28375=1;
-                    if(!capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 433, column: 13
-                      capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 433, column: 13
+                  S28055=0;
+                  if(capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 434, column: 13
+                    capperReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 434, column: 13
+                    S28055=1;
+                    if(!capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 434, column: 13
+                      capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 434, column: 13
                       ends[47]=2;
-                      ;//sysj\conveyor_controller.sysj line: 433, column: 13
-                      System.out.println("CapperController: Gripper raised...");//sysj\conveyor_controller.sysj line: 434, column: 13
-                      System.out.println("CapperController: Bottle capped. Waiting for bottle to move to next position...");//sysj\conveyor_controller.sysj line: 435, column: 13
-                      S28224=8;
+                      ;//sysj\conveyor_controller.sysj line: 434, column: 13
+                      System.out.println("CapperController: Gripper raised...");//sysj\conveyor_controller.sysj line: 435, column: 13
+                      System.out.println("CapperController: Bottle capped. Waiting for bottle to move to next position...");//sysj\conveyor_controller.sysj line: 436, column: 13
+                      S27904=8;
                       active[47]=1;
                       ends[47]=1;
                       tdone[47]=1;
@@ -1122,9 +1122,9 @@ public class CapperController extends ClockDomain{
             break;
           
           case 8 : 
-            if(!bottleAtPos4_46.getprestatus()){//sysj\conveyor_controller.sysj line: 436, column: 19
-              System.out.println("*Capper: Waiting for bottle at position 4...*");//sysj\conveyor_controller.sysj line: 386, column: 13
-              S28224=0;
+            if(!bottleAtPos4_46.getprestatus()){//sysj\conveyor_controller.sysj line: 437, column: 19
+              System.out.println("*Capper: Waiting for bottle at position 4...*");//sysj\conveyor_controller.sysj line: 387, column: 13
+              S27904=0;
               active[47]=1;
               ends[47]=1;
               tdone[47]=1;
@@ -1142,122 +1142,122 @@ public class CapperController extends ClockDomain{
     }
   }
 
-  public void thread31675(int [] tdone, int [] ends){
-        S28949=1;
+  public void thread31355(int [] tdone, int [] ends){
+        S28629=1;
     active[59]=1;
     ends[59]=1;
     tdone[59]=1;
   }
 
-  public void thread31674(int [] tdone, int [] ends){
-        S28946=1;
-    bottleAtPos4E.setPresent();//sysj\conveyor_controller.sysj line: 477, column: 30
+  public void thread31354(int [] tdone, int [] ends){
+        S28626=1;
+    bottleAtPos4E.setPresent();//sysj\conveyor_controller.sysj line: 478, column: 30
     currsigs.addElement(bottleAtPos4E);
     active[58]=1;
     ends[58]=1;
     tdone[58]=1;
   }
 
-  public void thread31673(int [] tdone, int [] ends){
-        S28976=1;
-    S28952=0;
-    if(bottleAtPos4_46.getprestatus()){//sysj\conveyor_controller.sysj line: 474, column: 27
-      thread31674(tdone,ends);
-      thread31675(tdone,ends);
-      int biggest31676 = 0;
-      if(ends[58]>=biggest31676){
-        biggest31676=ends[58];
+  public void thread31353(int [] tdone, int [] ends){
+        S28656=1;
+    S28632=0;
+    if(bottleAtPos4_46.getprestatus()){//sysj\conveyor_controller.sysj line: 475, column: 27
+      thread31354(tdone,ends);
+      thread31355(tdone,ends);
+      int biggest31356 = 0;
+      if(ends[58]>=biggest31356){
+        biggest31356=ends[58];
       }
-      if(ends[59]>=biggest31676){
-        biggest31676=ends[59];
+      if(ends[59]>=biggest31356){
+        biggest31356=ends[59];
       }
-      if(biggest31676 == 1){
+      if(biggest31356 == 1){
         active[57]=1;
         ends[57]=1;
         tdone[57]=1;
       }
     }
     else {
-      S28952=1;
+      S28632=1;
       active[57]=1;
       ends[57]=1;
       tdone[57]=1;
     }
   }
 
-  public void thread31671(int [] tdone, int [] ends){
-        S28914=1;
+  public void thread31351(int [] tdone, int [] ends){
+        S28594=1;
     active[56]=1;
     ends[56]=1;
     tdone[56]=1;
   }
 
-  public void thread31670(int [] tdone, int [] ends){
-        S28911=1;
-    cylClampBottleExtend.setPresent();//sysj\conveyor_controller.sysj line: 458, column: 31
+  public void thread31350(int [] tdone, int [] ends){
+        S28591=1;
+    cylClampBottleExtend.setPresent();//sysj\conveyor_controller.sysj line: 459, column: 31
     currsigs.addElement(cylClampBottleExtend);
     active[55]=1;
     ends[55]=1;
     tdone[55]=1;
   }
 
-  public void thread31669(int [] tdone, int [] ends){
-        S28941=1;
-    S28917=0;
-    if(bottleAtPos4_46.getprestatus()){//sysj\conveyor_controller.sysj line: 455, column: 39
-      thread31670(tdone,ends);
-      thread31671(tdone,ends);
-      int biggest31672 = 0;
-      if(ends[55]>=biggest31672){
-        biggest31672=ends[55];
+  public void thread31349(int [] tdone, int [] ends){
+        S28621=1;
+    S28597=0;
+    if(bottleAtPos4_46.getprestatus()){//sysj\conveyor_controller.sysj line: 456, column: 39
+      thread31350(tdone,ends);
+      thread31351(tdone,ends);
+      int biggest31352 = 0;
+      if(ends[55]>=biggest31352){
+        biggest31352=ends[55];
       }
-      if(ends[56]>=biggest31672){
-        biggest31672=ends[56];
+      if(ends[56]>=biggest31352){
+        biggest31352=ends[56];
       }
-      if(biggest31672 == 1){
+      if(biggest31352 == 1){
         active[54]=1;
         ends[54]=1;
         tdone[54]=1;
       }
     }
     else {
-      S28917=1;
+      S28597=1;
       active[54]=1;
       ends[54]=1;
       tdone[54]=1;
     }
   }
 
-  public void thread31668(int [] tdone, int [] ends){
-        S28906=1;
-    S28850=0;
-    S28830=0;
-    if(!simCapper_in.isPartnerPresent() || simCapper_in.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 445, column: 13
-      simCapper_in.setACK(false);//sysj\conveyor_controller.sysj line: 445, column: 13
-      S28830=1;
+  public void thread31348(int [] tdone, int [] ends){
+        S28586=1;
+    S28530=0;
+    S28510=0;
+    if(!simCapper_in.isPartnerPresent() || simCapper_in.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 446, column: 13
+      simCapper_in.setACK(false);//sysj\conveyor_controller.sysj line: 446, column: 13
+      S28510=1;
       active[53]=1;
       ends[53]=1;
       tdone[53]=1;
     }
     else {
-      S28825=0;
-      if(!simCapper_in.isREQ()){//sysj\conveyor_controller.sysj line: 445, column: 13
-        simCapper_in.setACK(true);//sysj\conveyor_controller.sysj line: 445, column: 13
-        S28825=1;
-        if(simCapper_in.isREQ()){//sysj\conveyor_controller.sysj line: 445, column: 13
-          simCapper_in.setACK(false);//sysj\conveyor_controller.sysj line: 445, column: 13
+      S28505=0;
+      if(!simCapper_in.isREQ()){//sysj\conveyor_controller.sysj line: 446, column: 13
+        simCapper_in.setACK(true);//sysj\conveyor_controller.sysj line: 446, column: 13
+        S28505=1;
+        if(simCapper_in.isREQ()){//sysj\conveyor_controller.sysj line: 446, column: 13
+          simCapper_in.setACK(false);//sysj\conveyor_controller.sysj line: 446, column: 13
           ends[53]=2;
-          ;//sysj\conveyor_controller.sysj line: 445, column: 13
-          if((simCapper_in.getVal() == null ? null : ((Boolean)simCapper_in.getVal()))){//sysj\conveyor_controller.sysj line: 446, column: 16
-            bottleAtPos4_46.setPresent();//sysj\conveyor_controller.sysj line: 447, column: 14
+          ;//sysj\conveyor_controller.sysj line: 446, column: 13
+          if((Boolean)(simCapper_in.getVal() == null ? null : ((Boolean)simCapper_in.getVal()))){//sysj\conveyor_controller.sysj line: 447, column: 16
+            bottleAtPos4_46.setPresent();//sysj\conveyor_controller.sysj line: 448, column: 14
             currsigs.addElement(bottleAtPos4_46);
-            S28850=1;
+            S28530=1;
             active[53]=1;
             ends[53]=1;
             tdone[53]=1;
           }
           else {
-            S28850=1;
+            S28530=1;
             active[53]=1;
             ends[53]=1;
             tdone[53]=1;
@@ -1277,131 +1277,131 @@ public class CapperController extends ClockDomain{
     }
   }
 
-  public void thread31667(int [] tdone, int [] ends){
-        S28823=1;
-    System.out.println("*Capper: Waiting for bottle at position 4...*");//sysj\conveyor_controller.sysj line: 386, column: 13
-    S28224=0;
+  public void thread31347(int [] tdone, int [] ends){
+        S28503=1;
+    System.out.println("*Capper: Waiting for bottle at position 4...*");//sysj\conveyor_controller.sysj line: 387, column: 13
+    S27904=0;
     active[47]=1;
     ends[47]=1;
     tdone[47]=1;
   }
 
-  public void thread31664(int [] tdone, int [] ends){
-        S28949=1;
+  public void thread31344(int [] tdone, int [] ends){
+        S28629=1;
     active[59]=1;
     ends[59]=1;
     tdone[59]=1;
   }
 
-  public void thread31663(int [] tdone, int [] ends){
-        S28946=1;
-    bottleAtPos4E.setPresent();//sysj\conveyor_controller.sysj line: 477, column: 30
+  public void thread31343(int [] tdone, int [] ends){
+        S28626=1;
+    bottleAtPos4E.setPresent();//sysj\conveyor_controller.sysj line: 478, column: 30
     currsigs.addElement(bottleAtPos4E);
     active[58]=1;
     ends[58]=1;
     tdone[58]=1;
   }
 
-  public void thread31662(int [] tdone, int [] ends){
-        S28976=1;
-    S28952=0;
-    if(bottleAtPos4_46.getprestatus()){//sysj\conveyor_controller.sysj line: 474, column: 27
-      thread31663(tdone,ends);
-      thread31664(tdone,ends);
-      int biggest31665 = 0;
-      if(ends[58]>=biggest31665){
-        biggest31665=ends[58];
+  public void thread31342(int [] tdone, int [] ends){
+        S28656=1;
+    S28632=0;
+    if(bottleAtPos4_46.getprestatus()){//sysj\conveyor_controller.sysj line: 475, column: 27
+      thread31343(tdone,ends);
+      thread31344(tdone,ends);
+      int biggest31345 = 0;
+      if(ends[58]>=biggest31345){
+        biggest31345=ends[58];
       }
-      if(ends[59]>=biggest31665){
-        biggest31665=ends[59];
+      if(ends[59]>=biggest31345){
+        biggest31345=ends[59];
       }
-      if(biggest31665 == 1){
+      if(biggest31345 == 1){
         active[57]=1;
         ends[57]=1;
         tdone[57]=1;
       }
     }
     else {
-      S28952=1;
+      S28632=1;
       active[57]=1;
       ends[57]=1;
       tdone[57]=1;
     }
   }
 
-  public void thread31660(int [] tdone, int [] ends){
-        S28914=1;
+  public void thread31340(int [] tdone, int [] ends){
+        S28594=1;
     active[56]=1;
     ends[56]=1;
     tdone[56]=1;
   }
 
-  public void thread31659(int [] tdone, int [] ends){
-        S28911=1;
-    cylClampBottleExtend.setPresent();//sysj\conveyor_controller.sysj line: 458, column: 31
+  public void thread31339(int [] tdone, int [] ends){
+        S28591=1;
+    cylClampBottleExtend.setPresent();//sysj\conveyor_controller.sysj line: 459, column: 31
     currsigs.addElement(cylClampBottleExtend);
     active[55]=1;
     ends[55]=1;
     tdone[55]=1;
   }
 
-  public void thread31658(int [] tdone, int [] ends){
-        S28941=1;
-    S28917=0;
-    if(bottleAtPos4_46.getprestatus()){//sysj\conveyor_controller.sysj line: 455, column: 39
-      thread31659(tdone,ends);
-      thread31660(tdone,ends);
-      int biggest31661 = 0;
-      if(ends[55]>=biggest31661){
-        biggest31661=ends[55];
+  public void thread31338(int [] tdone, int [] ends){
+        S28621=1;
+    S28597=0;
+    if(bottleAtPos4_46.getprestatus()){//sysj\conveyor_controller.sysj line: 456, column: 39
+      thread31339(tdone,ends);
+      thread31340(tdone,ends);
+      int biggest31341 = 0;
+      if(ends[55]>=biggest31341){
+        biggest31341=ends[55];
       }
-      if(ends[56]>=biggest31661){
-        biggest31661=ends[56];
+      if(ends[56]>=biggest31341){
+        biggest31341=ends[56];
       }
-      if(biggest31661 == 1){
+      if(biggest31341 == 1){
         active[54]=1;
         ends[54]=1;
         tdone[54]=1;
       }
     }
     else {
-      S28917=1;
+      S28597=1;
       active[54]=1;
       ends[54]=1;
       tdone[54]=1;
     }
   }
 
-  public void thread31657(int [] tdone, int [] ends){
-        S28906=1;
-    S28850=0;
-    S28830=0;
-    if(!simCapper_in.isPartnerPresent() || simCapper_in.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 445, column: 13
-      simCapper_in.setACK(false);//sysj\conveyor_controller.sysj line: 445, column: 13
-      S28830=1;
+  public void thread31337(int [] tdone, int [] ends){
+        S28586=1;
+    S28530=0;
+    S28510=0;
+    if(!simCapper_in.isPartnerPresent() || simCapper_in.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 446, column: 13
+      simCapper_in.setACK(false);//sysj\conveyor_controller.sysj line: 446, column: 13
+      S28510=1;
       active[53]=1;
       ends[53]=1;
       tdone[53]=1;
     }
     else {
-      S28825=0;
-      if(!simCapper_in.isREQ()){//sysj\conveyor_controller.sysj line: 445, column: 13
-        simCapper_in.setACK(true);//sysj\conveyor_controller.sysj line: 445, column: 13
-        S28825=1;
-        if(simCapper_in.isREQ()){//sysj\conveyor_controller.sysj line: 445, column: 13
-          simCapper_in.setACK(false);//sysj\conveyor_controller.sysj line: 445, column: 13
+      S28505=0;
+      if(!simCapper_in.isREQ()){//sysj\conveyor_controller.sysj line: 446, column: 13
+        simCapper_in.setACK(true);//sysj\conveyor_controller.sysj line: 446, column: 13
+        S28505=1;
+        if(simCapper_in.isREQ()){//sysj\conveyor_controller.sysj line: 446, column: 13
+          simCapper_in.setACK(false);//sysj\conveyor_controller.sysj line: 446, column: 13
           ends[53]=2;
-          ;//sysj\conveyor_controller.sysj line: 445, column: 13
-          if((simCapper_in.getVal() == null ? null : ((Boolean)simCapper_in.getVal()))){//sysj\conveyor_controller.sysj line: 446, column: 16
-            bottleAtPos4_46.setPresent();//sysj\conveyor_controller.sysj line: 447, column: 14
+          ;//sysj\conveyor_controller.sysj line: 446, column: 13
+          if((Boolean)(simCapper_in.getVal() == null ? null : ((Boolean)simCapper_in.getVal()))){//sysj\conveyor_controller.sysj line: 447, column: 16
+            bottleAtPos4_46.setPresent();//sysj\conveyor_controller.sysj line: 448, column: 14
             currsigs.addElement(bottleAtPos4_46);
-            S28850=1;
+            S28530=1;
             active[53]=1;
             ends[53]=1;
             tdone[53]=1;
           }
           else {
-            S28850=1;
+            S28530=1;
             active[53]=1;
             ends[53]=1;
             tdone[53]=1;
@@ -1421,131 +1421,131 @@ public class CapperController extends ClockDomain{
     }
   }
 
-  public void thread31656(int [] tdone, int [] ends){
-        S28823=1;
-    System.out.println("*Capper: Waiting for bottle at position 4...*");//sysj\conveyor_controller.sysj line: 386, column: 13
-    S28224=0;
+  public void thread31336(int [] tdone, int [] ends){
+        S28503=1;
+    System.out.println("*Capper: Waiting for bottle at position 4...*");//sysj\conveyor_controller.sysj line: 387, column: 13
+    S27904=0;
     active[47]=1;
     ends[47]=1;
     tdone[47]=1;
   }
 
-  public void thread31653(int [] tdone, int [] ends){
-        S28949=1;
+  public void thread31333(int [] tdone, int [] ends){
+        S28629=1;
     active[59]=1;
     ends[59]=1;
     tdone[59]=1;
   }
 
-  public void thread31652(int [] tdone, int [] ends){
-        S28946=1;
-    bottleAtPos4E.setPresent();//sysj\conveyor_controller.sysj line: 477, column: 30
+  public void thread31332(int [] tdone, int [] ends){
+        S28626=1;
+    bottleAtPos4E.setPresent();//sysj\conveyor_controller.sysj line: 478, column: 30
     currsigs.addElement(bottleAtPos4E);
     active[58]=1;
     ends[58]=1;
     tdone[58]=1;
   }
 
-  public void thread31651(int [] tdone, int [] ends){
-        S28976=1;
-    S28952=0;
-    if(bottleAtPos4_46.getprestatus()){//sysj\conveyor_controller.sysj line: 474, column: 27
-      thread31652(tdone,ends);
-      thread31653(tdone,ends);
-      int biggest31654 = 0;
-      if(ends[58]>=biggest31654){
-        biggest31654=ends[58];
+  public void thread31331(int [] tdone, int [] ends){
+        S28656=1;
+    S28632=0;
+    if(bottleAtPos4_46.getprestatus()){//sysj\conveyor_controller.sysj line: 475, column: 27
+      thread31332(tdone,ends);
+      thread31333(tdone,ends);
+      int biggest31334 = 0;
+      if(ends[58]>=biggest31334){
+        biggest31334=ends[58];
       }
-      if(ends[59]>=biggest31654){
-        biggest31654=ends[59];
+      if(ends[59]>=biggest31334){
+        biggest31334=ends[59];
       }
-      if(biggest31654 == 1){
+      if(biggest31334 == 1){
         active[57]=1;
         ends[57]=1;
         tdone[57]=1;
       }
     }
     else {
-      S28952=1;
+      S28632=1;
       active[57]=1;
       ends[57]=1;
       tdone[57]=1;
     }
   }
 
-  public void thread31649(int [] tdone, int [] ends){
-        S28914=1;
+  public void thread31329(int [] tdone, int [] ends){
+        S28594=1;
     active[56]=1;
     ends[56]=1;
     tdone[56]=1;
   }
 
-  public void thread31648(int [] tdone, int [] ends){
-        S28911=1;
-    cylClampBottleExtend.setPresent();//sysj\conveyor_controller.sysj line: 458, column: 31
+  public void thread31328(int [] tdone, int [] ends){
+        S28591=1;
+    cylClampBottleExtend.setPresent();//sysj\conveyor_controller.sysj line: 459, column: 31
     currsigs.addElement(cylClampBottleExtend);
     active[55]=1;
     ends[55]=1;
     tdone[55]=1;
   }
 
-  public void thread31647(int [] tdone, int [] ends){
-        S28941=1;
-    S28917=0;
-    if(bottleAtPos4_46.getprestatus()){//sysj\conveyor_controller.sysj line: 455, column: 39
-      thread31648(tdone,ends);
-      thread31649(tdone,ends);
-      int biggest31650 = 0;
-      if(ends[55]>=biggest31650){
-        biggest31650=ends[55];
+  public void thread31327(int [] tdone, int [] ends){
+        S28621=1;
+    S28597=0;
+    if(bottleAtPos4_46.getprestatus()){//sysj\conveyor_controller.sysj line: 456, column: 39
+      thread31328(tdone,ends);
+      thread31329(tdone,ends);
+      int biggest31330 = 0;
+      if(ends[55]>=biggest31330){
+        biggest31330=ends[55];
       }
-      if(ends[56]>=biggest31650){
-        biggest31650=ends[56];
+      if(ends[56]>=biggest31330){
+        biggest31330=ends[56];
       }
-      if(biggest31650 == 1){
+      if(biggest31330 == 1){
         active[54]=1;
         ends[54]=1;
         tdone[54]=1;
       }
     }
     else {
-      S28917=1;
+      S28597=1;
       active[54]=1;
       ends[54]=1;
       tdone[54]=1;
     }
   }
 
-  public void thread31646(int [] tdone, int [] ends){
-        S28906=1;
-    S28850=0;
-    S28830=0;
-    if(!simCapper_in.isPartnerPresent() || simCapper_in.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 445, column: 13
-      simCapper_in.setACK(false);//sysj\conveyor_controller.sysj line: 445, column: 13
-      S28830=1;
+  public void thread31326(int [] tdone, int [] ends){
+        S28586=1;
+    S28530=0;
+    S28510=0;
+    if(!simCapper_in.isPartnerPresent() || simCapper_in.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 446, column: 13
+      simCapper_in.setACK(false);//sysj\conveyor_controller.sysj line: 446, column: 13
+      S28510=1;
       active[53]=1;
       ends[53]=1;
       tdone[53]=1;
     }
     else {
-      S28825=0;
-      if(!simCapper_in.isREQ()){//sysj\conveyor_controller.sysj line: 445, column: 13
-        simCapper_in.setACK(true);//sysj\conveyor_controller.sysj line: 445, column: 13
-        S28825=1;
-        if(simCapper_in.isREQ()){//sysj\conveyor_controller.sysj line: 445, column: 13
-          simCapper_in.setACK(false);//sysj\conveyor_controller.sysj line: 445, column: 13
+      S28505=0;
+      if(!simCapper_in.isREQ()){//sysj\conveyor_controller.sysj line: 446, column: 13
+        simCapper_in.setACK(true);//sysj\conveyor_controller.sysj line: 446, column: 13
+        S28505=1;
+        if(simCapper_in.isREQ()){//sysj\conveyor_controller.sysj line: 446, column: 13
+          simCapper_in.setACK(false);//sysj\conveyor_controller.sysj line: 446, column: 13
           ends[53]=2;
-          ;//sysj\conveyor_controller.sysj line: 445, column: 13
-          if((simCapper_in.getVal() == null ? null : ((Boolean)simCapper_in.getVal()))){//sysj\conveyor_controller.sysj line: 446, column: 16
-            bottleAtPos4_46.setPresent();//sysj\conveyor_controller.sysj line: 447, column: 14
+          ;//sysj\conveyor_controller.sysj line: 446, column: 13
+          if((Boolean)(simCapper_in.getVal() == null ? null : ((Boolean)simCapper_in.getVal()))){//sysj\conveyor_controller.sysj line: 447, column: 16
+            bottleAtPos4_46.setPresent();//sysj\conveyor_controller.sysj line: 448, column: 14
             currsigs.addElement(bottleAtPos4_46);
-            S28850=1;
+            S28530=1;
             active[53]=1;
             ends[53]=1;
             tdone[53]=1;
           }
           else {
-            S28850=1;
+            S28530=1;
             active[53]=1;
             ends[53]=1;
             tdone[53]=1;
@@ -1565,131 +1565,131 @@ public class CapperController extends ClockDomain{
     }
   }
 
-  public void thread31645(int [] tdone, int [] ends){
-        S28823=1;
-    System.out.println("*Capper: Waiting for bottle at position 4...*");//sysj\conveyor_controller.sysj line: 386, column: 13
-    S28224=0;
+  public void thread31325(int [] tdone, int [] ends){
+        S28503=1;
+    System.out.println("*Capper: Waiting for bottle at position 4...*");//sysj\conveyor_controller.sysj line: 387, column: 13
+    S27904=0;
     active[47]=1;
     ends[47]=1;
     tdone[47]=1;
   }
 
-  public void thread31642(int [] tdone, int [] ends){
-        S28949=1;
+  public void thread31322(int [] tdone, int [] ends){
+        S28629=1;
     active[59]=1;
     ends[59]=1;
     tdone[59]=1;
   }
 
-  public void thread31641(int [] tdone, int [] ends){
-        S28946=1;
-    bottleAtPos4E.setPresent();//sysj\conveyor_controller.sysj line: 477, column: 30
+  public void thread31321(int [] tdone, int [] ends){
+        S28626=1;
+    bottleAtPos4E.setPresent();//sysj\conveyor_controller.sysj line: 478, column: 30
     currsigs.addElement(bottleAtPos4E);
     active[58]=1;
     ends[58]=1;
     tdone[58]=1;
   }
 
-  public void thread31640(int [] tdone, int [] ends){
-        S28976=1;
-    S28952=0;
-    if(bottleAtPos4_46.getprestatus()){//sysj\conveyor_controller.sysj line: 474, column: 27
-      thread31641(tdone,ends);
-      thread31642(tdone,ends);
-      int biggest31643 = 0;
-      if(ends[58]>=biggest31643){
-        biggest31643=ends[58];
+  public void thread31320(int [] tdone, int [] ends){
+        S28656=1;
+    S28632=0;
+    if(bottleAtPos4_46.getprestatus()){//sysj\conveyor_controller.sysj line: 475, column: 27
+      thread31321(tdone,ends);
+      thread31322(tdone,ends);
+      int biggest31323 = 0;
+      if(ends[58]>=biggest31323){
+        biggest31323=ends[58];
       }
-      if(ends[59]>=biggest31643){
-        biggest31643=ends[59];
+      if(ends[59]>=biggest31323){
+        biggest31323=ends[59];
       }
-      if(biggest31643 == 1){
+      if(biggest31323 == 1){
         active[57]=1;
         ends[57]=1;
         tdone[57]=1;
       }
     }
     else {
-      S28952=1;
+      S28632=1;
       active[57]=1;
       ends[57]=1;
       tdone[57]=1;
     }
   }
 
-  public void thread31638(int [] tdone, int [] ends){
-        S28914=1;
+  public void thread31318(int [] tdone, int [] ends){
+        S28594=1;
     active[56]=1;
     ends[56]=1;
     tdone[56]=1;
   }
 
-  public void thread31637(int [] tdone, int [] ends){
-        S28911=1;
-    cylClampBottleExtend.setPresent();//sysj\conveyor_controller.sysj line: 458, column: 31
+  public void thread31317(int [] tdone, int [] ends){
+        S28591=1;
+    cylClampBottleExtend.setPresent();//sysj\conveyor_controller.sysj line: 459, column: 31
     currsigs.addElement(cylClampBottleExtend);
     active[55]=1;
     ends[55]=1;
     tdone[55]=1;
   }
 
-  public void thread31636(int [] tdone, int [] ends){
-        S28941=1;
-    S28917=0;
-    if(bottleAtPos4_46.getprestatus()){//sysj\conveyor_controller.sysj line: 455, column: 39
-      thread31637(tdone,ends);
-      thread31638(tdone,ends);
-      int biggest31639 = 0;
-      if(ends[55]>=biggest31639){
-        biggest31639=ends[55];
+  public void thread31316(int [] tdone, int [] ends){
+        S28621=1;
+    S28597=0;
+    if(bottleAtPos4_46.getprestatus()){//sysj\conveyor_controller.sysj line: 456, column: 39
+      thread31317(tdone,ends);
+      thread31318(tdone,ends);
+      int biggest31319 = 0;
+      if(ends[55]>=biggest31319){
+        biggest31319=ends[55];
       }
-      if(ends[56]>=biggest31639){
-        biggest31639=ends[56];
+      if(ends[56]>=biggest31319){
+        biggest31319=ends[56];
       }
-      if(biggest31639 == 1){
+      if(biggest31319 == 1){
         active[54]=1;
         ends[54]=1;
         tdone[54]=1;
       }
     }
     else {
-      S28917=1;
+      S28597=1;
       active[54]=1;
       ends[54]=1;
       tdone[54]=1;
     }
   }
 
-  public void thread31635(int [] tdone, int [] ends){
-        S28906=1;
-    S28850=0;
-    S28830=0;
-    if(!simCapper_in.isPartnerPresent() || simCapper_in.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 445, column: 13
-      simCapper_in.setACK(false);//sysj\conveyor_controller.sysj line: 445, column: 13
-      S28830=1;
+  public void thread31315(int [] tdone, int [] ends){
+        S28586=1;
+    S28530=0;
+    S28510=0;
+    if(!simCapper_in.isPartnerPresent() || simCapper_in.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 446, column: 13
+      simCapper_in.setACK(false);//sysj\conveyor_controller.sysj line: 446, column: 13
+      S28510=1;
       active[53]=1;
       ends[53]=1;
       tdone[53]=1;
     }
     else {
-      S28825=0;
-      if(!simCapper_in.isREQ()){//sysj\conveyor_controller.sysj line: 445, column: 13
-        simCapper_in.setACK(true);//sysj\conveyor_controller.sysj line: 445, column: 13
-        S28825=1;
-        if(simCapper_in.isREQ()){//sysj\conveyor_controller.sysj line: 445, column: 13
-          simCapper_in.setACK(false);//sysj\conveyor_controller.sysj line: 445, column: 13
+      S28505=0;
+      if(!simCapper_in.isREQ()){//sysj\conveyor_controller.sysj line: 446, column: 13
+        simCapper_in.setACK(true);//sysj\conveyor_controller.sysj line: 446, column: 13
+        S28505=1;
+        if(simCapper_in.isREQ()){//sysj\conveyor_controller.sysj line: 446, column: 13
+          simCapper_in.setACK(false);//sysj\conveyor_controller.sysj line: 446, column: 13
           ends[53]=2;
-          ;//sysj\conveyor_controller.sysj line: 445, column: 13
-          if((simCapper_in.getVal() == null ? null : ((Boolean)simCapper_in.getVal()))){//sysj\conveyor_controller.sysj line: 446, column: 16
-            bottleAtPos4_46.setPresent();//sysj\conveyor_controller.sysj line: 447, column: 14
+          ;//sysj\conveyor_controller.sysj line: 446, column: 13
+          if((Boolean)(simCapper_in.getVal() == null ? null : ((Boolean)simCapper_in.getVal()))){//sysj\conveyor_controller.sysj line: 447, column: 16
+            bottleAtPos4_46.setPresent();//sysj\conveyor_controller.sysj line: 448, column: 14
             currsigs.addElement(bottleAtPos4_46);
-            S28850=1;
+            S28530=1;
             active[53]=1;
             ends[53]=1;
             tdone[53]=1;
           }
           else {
-            S28850=1;
+            S28530=1;
             active[53]=1;
             ends[53]=1;
             tdone[53]=1;
@@ -1709,10 +1709,10 @@ public class CapperController extends ClockDomain{
     }
   }
 
-  public void thread31634(int [] tdone, int [] ends){
-        S28823=1;
-    System.out.println("*Capper: Waiting for bottle at position 4...*");//sysj\conveyor_controller.sysj line: 386, column: 13
-    S28224=0;
+  public void thread31314(int [] tdone, int [] ends){
+        S28503=1;
+    System.out.println("*Capper: Waiting for bottle at position 4...*");//sysj\conveyor_controller.sysj line: 387, column: 13
+    S27904=0;
     active[47]=1;
     ends[47]=1;
     tdone[47]=1;
@@ -1725,52 +1725,52 @@ public class CapperController extends ClockDomain{
     }
     
     RUN: while(true){
-      switch(S31243){
+      switch(S30923){
         case 0 : 
-          S31243=0;
+          S30923=0;
           break RUN;
         
         case 1 : 
-          S31243=2;
-          S31243=2;
-          bottleAtPos4_46.setClear();//sysj\conveyor_controller.sysj line: 380, column: 11
-          S31242=0;
-          S28206=0;
-          if(!capperReady_o.isPartnerPresent() || capperReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 381, column: 11
-            capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 381, column: 11
-            S28206=1;
+          S30923=2;
+          S30923=2;
+          bottleAtPos4_46.setClear();//sysj\conveyor_controller.sysj line: 381, column: 11
+          S30922=0;
+          S27886=0;
+          if(!capperReady_o.isPartnerPresent() || capperReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 382, column: 11
+            capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 382, column: 11
+            S27886=1;
             active[46]=1;
             ends[46]=1;
             break RUN;
           }
           else {
-            S28201=0;
-            if(capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 381, column: 11
-              capperReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 381, column: 11
-              S28201=1;
-              if(!capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 381, column: 11
-                capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 381, column: 11
+            S27881=0;
+            if(capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 382, column: 11
+              capperReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 382, column: 11
+              S27881=1;
+              if(!capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 382, column: 11
+                capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 382, column: 11
                 ends[46]=2;
-                ;//sysj\conveyor_controller.sysj line: 381, column: 11
-                S31242=1;
-                thread31634(tdone,ends);
-                thread31635(tdone,ends);
-                thread31636(tdone,ends);
-                thread31640(tdone,ends);
-                int biggest31644 = 0;
-                if(ends[47]>=biggest31644){
-                  biggest31644=ends[47];
+                ;//sysj\conveyor_controller.sysj line: 382, column: 11
+                S30922=1;
+                thread31314(tdone,ends);
+                thread31315(tdone,ends);
+                thread31316(tdone,ends);
+                thread31320(tdone,ends);
+                int biggest31324 = 0;
+                if(ends[47]>=biggest31324){
+                  biggest31324=ends[47];
                 }
-                if(ends[53]>=biggest31644){
-                  biggest31644=ends[53];
+                if(ends[53]>=biggest31324){
+                  biggest31324=ends[53];
                 }
-                if(ends[54]>=biggest31644){
-                  biggest31644=ends[54];
+                if(ends[54]>=biggest31324){
+                  biggest31324=ends[54];
                 }
-                if(ends[57]>=biggest31644){
-                  biggest31644=ends[57];
+                if(ends[57]>=biggest31324){
+                  biggest31324=ends[57];
                 }
-                if(biggest31644 == 1){
+                if(biggest31324 == 1){
                   active[46]=1;
                   ends[46]=1;
                   break RUN;
@@ -1790,47 +1790,47 @@ public class CapperController extends ClockDomain{
           }
         
         case 2 : 
-          bottleAtPos4_46.setClear();//sysj\conveyor_controller.sysj line: 380, column: 11
-          switch(S31242){
+          bottleAtPos4_46.setClear();//sysj\conveyor_controller.sysj line: 381, column: 11
+          switch(S30922){
             case 0 : 
-              switch(S28206){
+              switch(S27886){
                 case 0 : 
-                  if(!capperReady_o.isPartnerPresent() || capperReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 381, column: 11
-                    capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 381, column: 11
-                    S28206=1;
+                  if(!capperReady_o.isPartnerPresent() || capperReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 382, column: 11
+                    capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 382, column: 11
+                    S27886=1;
                     active[46]=1;
                     ends[46]=1;
                     break RUN;
                   }
                   else {
-                    switch(S28201){
+                    switch(S27881){
                       case 0 : 
-                        if(capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 381, column: 11
-                          capperReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 381, column: 11
-                          S28201=1;
-                          if(!capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 381, column: 11
-                            capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 381, column: 11
+                        if(capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 382, column: 11
+                          capperReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 382, column: 11
+                          S27881=1;
+                          if(!capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 382, column: 11
+                            capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 382, column: 11
                             ends[46]=2;
-                            ;//sysj\conveyor_controller.sysj line: 381, column: 11
-                            S31242=1;
-                            thread31645(tdone,ends);
-                            thread31646(tdone,ends);
-                            thread31647(tdone,ends);
-                            thread31651(tdone,ends);
-                            int biggest31655 = 0;
-                            if(ends[47]>=biggest31655){
-                              biggest31655=ends[47];
+                            ;//sysj\conveyor_controller.sysj line: 382, column: 11
+                            S30922=1;
+                            thread31325(tdone,ends);
+                            thread31326(tdone,ends);
+                            thread31327(tdone,ends);
+                            thread31331(tdone,ends);
+                            int biggest31335 = 0;
+                            if(ends[47]>=biggest31335){
+                              biggest31335=ends[47];
                             }
-                            if(ends[53]>=biggest31655){
-                              biggest31655=ends[53];
+                            if(ends[53]>=biggest31335){
+                              biggest31335=ends[53];
                             }
-                            if(ends[54]>=biggest31655){
-                              biggest31655=ends[54];
+                            if(ends[54]>=biggest31335){
+                              biggest31335=ends[54];
                             }
-                            if(ends[57]>=biggest31655){
-                              biggest31655=ends[57];
+                            if(ends[57]>=biggest31335){
+                              biggest31335=ends[57];
                             }
-                            if(biggest31655 == 1){
+                            if(biggest31335 == 1){
                               active[46]=1;
                               ends[46]=1;
                               break RUN;
@@ -1849,29 +1849,29 @@ public class CapperController extends ClockDomain{
                         }
                       
                       case 1 : 
-                        if(!capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 381, column: 11
-                          capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 381, column: 11
+                        if(!capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 382, column: 11
+                          capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 382, column: 11
                           ends[46]=2;
-                          ;//sysj\conveyor_controller.sysj line: 381, column: 11
-                          S31242=1;
-                          thread31656(tdone,ends);
-                          thread31657(tdone,ends);
-                          thread31658(tdone,ends);
-                          thread31662(tdone,ends);
-                          int biggest31666 = 0;
-                          if(ends[47]>=biggest31666){
-                            biggest31666=ends[47];
+                          ;//sysj\conveyor_controller.sysj line: 382, column: 11
+                          S30922=1;
+                          thread31336(tdone,ends);
+                          thread31337(tdone,ends);
+                          thread31338(tdone,ends);
+                          thread31342(tdone,ends);
+                          int biggest31346 = 0;
+                          if(ends[47]>=biggest31346){
+                            biggest31346=ends[47];
                           }
-                          if(ends[53]>=biggest31666){
-                            biggest31666=ends[53];
+                          if(ends[53]>=biggest31346){
+                            biggest31346=ends[53];
                           }
-                          if(ends[54]>=biggest31666){
-                            biggest31666=ends[54];
+                          if(ends[54]>=biggest31346){
+                            biggest31346=ends[54];
                           }
-                          if(ends[57]>=biggest31666){
-                            biggest31666=ends[57];
+                          if(ends[57]>=biggest31346){
+                            biggest31346=ends[57];
                           }
-                          if(biggest31666 == 1){
+                          if(biggest31346 == 1){
                             active[46]=1;
                             ends[46]=1;
                             break RUN;
@@ -1888,43 +1888,43 @@ public class CapperController extends ClockDomain{
                   break;
                 
                 case 1 : 
-                  S28206=1;
-                  S28206=0;
-                  if(!capperReady_o.isPartnerPresent() || capperReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 381, column: 11
-                    capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 381, column: 11
-                    S28206=1;
+                  S27886=1;
+                  S27886=0;
+                  if(!capperReady_o.isPartnerPresent() || capperReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 382, column: 11
+                    capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 382, column: 11
+                    S27886=1;
                     active[46]=1;
                     ends[46]=1;
                     break RUN;
                   }
                   else {
-                    S28201=0;
-                    if(capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 381, column: 11
-                      capperReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 381, column: 11
-                      S28201=1;
-                      if(!capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 381, column: 11
-                        capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 381, column: 11
+                    S27881=0;
+                    if(capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 382, column: 11
+                      capperReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 382, column: 11
+                      S27881=1;
+                      if(!capperReady_o.isACK()){//sysj\conveyor_controller.sysj line: 382, column: 11
+                        capperReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 382, column: 11
                         ends[46]=2;
-                        ;//sysj\conveyor_controller.sysj line: 381, column: 11
-                        S31242=1;
-                        thread31667(tdone,ends);
-                        thread31668(tdone,ends);
-                        thread31669(tdone,ends);
-                        thread31673(tdone,ends);
-                        int biggest31677 = 0;
-                        if(ends[47]>=biggest31677){
-                          biggest31677=ends[47];
+                        ;//sysj\conveyor_controller.sysj line: 382, column: 11
+                        S30922=1;
+                        thread31347(tdone,ends);
+                        thread31348(tdone,ends);
+                        thread31349(tdone,ends);
+                        thread31353(tdone,ends);
+                        int biggest31357 = 0;
+                        if(ends[47]>=biggest31357){
+                          biggest31357=ends[47];
                         }
-                        if(ends[53]>=biggest31677){
-                          biggest31677=ends[53];
+                        if(ends[53]>=biggest31357){
+                          biggest31357=ends[53];
                         }
-                        if(ends[54]>=biggest31677){
-                          biggest31677=ends[54];
+                        if(ends[54]>=biggest31357){
+                          biggest31357=ends[54];
                         }
-                        if(ends[57]>=biggest31677){
-                          biggest31677=ends[57];
+                        if(ends[57]>=biggest31357){
+                          biggest31357=ends[57];
                         }
-                        if(biggest31677 == 1){
+                        if(biggest31357 == 1){
                           active[46]=1;
                           ends[46]=1;
                           break RUN;
@@ -1947,34 +1947,34 @@ public class CapperController extends ClockDomain{
               break;
             
             case 1 : 
-              thread31678(tdone,ends);
-              thread31693(tdone,ends);
-              thread31694(tdone,ends);
-              thread31701(tdone,ends);
-              int biggest31708 = 0;
-              if(ends[47]>=biggest31708){
-                biggest31708=ends[47];
+              thread31358(tdone,ends);
+              thread31373(tdone,ends);
+              thread31374(tdone,ends);
+              thread31381(tdone,ends);
+              int biggest31388 = 0;
+              if(ends[47]>=biggest31388){
+                biggest31388=ends[47];
               }
-              if(ends[53]>=biggest31708){
-                biggest31708=ends[53];
+              if(ends[53]>=biggest31388){
+                biggest31388=ends[53];
               }
-              if(ends[54]>=biggest31708){
-                biggest31708=ends[54];
+              if(ends[54]>=biggest31388){
+                biggest31388=ends[54];
               }
-              if(ends[57]>=biggest31708){
-                biggest31708=ends[57];
+              if(ends[57]>=biggest31388){
+                biggest31388=ends[57];
               }
-              if(biggest31708 == 1){
+              if(biggest31388 == 1){
                 active[46]=1;
                 ends[46]=1;
                 break RUN;
               }
               //FINXME code
-              if(biggest31708 == 0){
-                S31243=0;
+              if(biggest31388 == 0){
+                S30923=0;
                 active[46]=0;
                 ends[46]=0;
-                S31243=0;
+                S30923=0;
                 break RUN;
               }
             

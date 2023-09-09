@@ -282,8 +282,9 @@ FillerController(
 	    				loop{
 	    				    System.out.println("*Filler - Waiting For BottleAtPos2*");
 	    					await(bottleAtPos2);
-	    					waitl(2 s);  // Delay before filling
 	    					send fillerReady(Boolean.FALSE);
+	    					waitl(2 s);  // Delay before filling
+	    					
 	    					System.out.println("*Filler - Bottle Arrived at Pos 2*");
 	    					
 	    					abort(dosUnitFilled){
@@ -443,7 +444,7 @@ CapperController(
 	    					{
 	    						loop{
 	    							receive simCapper;
-	    							if(#simCapper) 
+	    							if((Boolean)#simCapper) 
 	    								emit bottleAtPos4;
 
 	    							pause;

@@ -151,10 +151,12 @@ FillerPlant(
 								}
 
 								await (gripperTurnRetract);
+								waitl (1s);
 								emit gripperTurnHomePos;
 								pause;
 								
 								await (cylPos5ZaxisExtend);
+								waitl (1s);
 								emit gripperZAxisLowered;
 								pause;
 								{ 
@@ -163,9 +165,11 @@ FillerPlant(
 									{await(gripperTurnExtend);}
 								}
 								
+								waitl (1s);
 								emit gripperTurnFinalPos;
 								pause;
 
+								waitl (1s);
 								emit gripperZAxisLifted;
 								}
 							}
