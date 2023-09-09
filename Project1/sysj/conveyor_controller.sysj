@@ -212,7 +212,6 @@ RotaryController(
 
 	    				
 	    				present(bottleAtPos5) {
-	    			    waitl(1 s);
 	    							trap(T){ 
 	    								await(!bottleAtPos5);
 	    								loop{
@@ -234,8 +233,16 @@ RotaryController(
 	    		        
 	    		        System.out.println("*Rotary - Aligned*");
 	    		    	send rotated(Boolean.TRUE);
-	    		        		        
-	    		        
+	    		    	pause;
+	    				int i = 0;
+	    				trap(T){
+	    					loop{
+	    						i++;
+	    						if(i > 12)
+	    							exit(T);
+	    						pause;
+	    					}
+	    				}
 	    			}
 	    		
 	    		}
@@ -273,8 +280,7 @@ FillerController(
 	    		output Boolean channel fillerReady;
 	    		)->{
 	    			
-	    			signal bottleAtPos2;
-	    			
+	    			signal bottleAtPos2;	    			
 	    			send fillerReady(Boolean.TRUE);
 	    			
 	    			
@@ -434,7 +440,13 @@ CapperController(
 	    							send capperReady(Boolean.TRUE);
 	    							System.out.println("CapperController: Gripper raised...");
 	    							System.out.println("CapperController: Bottle capped. Waiting for bottle to move to next position...");
-	    							await(!bottleAtPos4);
+	    							trap(T){  await(!bottleAtPos4);
+	    								loop{
+	    									present(bottleAtPos4){}
+	    									else{exit(T);}
+	    									pause;
+	    								}
+	    							}
 	    							
 	    							
 	    						}
