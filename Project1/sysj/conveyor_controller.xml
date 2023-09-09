@@ -4,7 +4,6 @@
 
             <!-- Input Signals -->
             <iSignal Name="bottleAtPos1"      Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10004" />
-            <iSignal Name="bottleLeftPos5"    Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10004" />
             <iSignal Name="bottleDeployed"    Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10004" />
 
             <!-- Output Signals -->
@@ -12,7 +11,8 @@
 		
 			 <!-- Visualization Signals -->
             <oSignal Name="bottleDeployedE" To="UI.bottleDeployedE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
-           
+            <oSignal Name="bottleLeftPos5E" To="UI.bottleLeftPos5E" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+
             
 			<iChannel Name="rotated"     From="RotaryCD.rotated" />	
             <oChannel Name="convReady"     To="RotaryCD.convReady" />

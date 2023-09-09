@@ -23,12 +23,13 @@ public class RotaryCanvas extends JPanel {
 	BufferedImage bottle;
 	BufferedImage bottle_Filled;
 	BufferedImage bottle_Capped;
-	private int currentPosition = 1;
-	private final int MAX_POSITIONS = 6;
+	BufferedImage filler;
+	BufferedImage capper;
 	
 	public RotaryCanvas(){
 		try {
-			
+			filler = ImageIO.read(new File("res/filler_table.png"));
+			capper = ImageIO.read(new File("res/capper_table.png"));
 			bottle_Filled = ImageIO.read(new File("res/bottle_table_filled.png"));
 			bottle_Capped = ImageIO.read(new File("res/bottle_table_lid.png"));
 			bottle = ImageIO.read(new File("res/bottle_table.png"));
@@ -52,6 +53,8 @@ public class RotaryCanvas extends JPanel {
 		
 		super.paintComponent(g);
 		g.drawImage(table, -90, 50, null);	
+		g.drawImage(filler, 30, 55, null);	
+		g.drawImage(capper, 243, 68, null);	
 		
 		if (States.BOTTLE_AT_POS2) {
 		g.drawImage(bottle, 85, 105, null);

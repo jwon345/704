@@ -151,11 +151,6 @@ FillerPlant(
 								waitl (1s);
 								emit gripperZAxisLowered;
 								pause;
-								{ 
-									{await(capGripperPos5Extend);}
-									||
-									{await(gripperTurnExtend);}
-								}
 								
 								waitl (1s);
 								emit gripperTurnFinalPos;

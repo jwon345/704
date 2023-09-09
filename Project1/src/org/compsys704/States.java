@@ -27,7 +27,8 @@ public class States {
 	public static volatile boolean MOTOR_ONOFF = false; 
 	public static volatile boolean BOTTLE_AT_POS1 = false; 
 	public static volatile boolean DEPLOY = false; 
-		
+	public static volatile boolean BottleLeftAtPos5 = false; 
+	
 	//TABLE
     public static volatile boolean ROTARY_TABLE_TRIGGERED = false;
     public static volatile boolean BOTTLE_AT_POS3 = false;

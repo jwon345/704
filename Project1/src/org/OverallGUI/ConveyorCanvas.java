@@ -46,5 +46,10 @@ public class ConveyorCanvas extends JPanel {
 	    if (States.BOTTLE_AT_POS1) {
 	    	g.drawImage(bottle, 108, 165, null);
 	    }
+	    
+	    if (States.BottleLeftAtPos5) {
+	    	g.drawImage(bottle, 285, 165, null);
+	    	g.drawImage(conveyor_on, 10, 129, null);
+		}
 	}
 }

@@ -79,6 +79,9 @@ public class LoaderVizWorker extends Worker{
 			States.BOTTLE_AT_POS1 = status;
 			break;
 		
+		case "bottleLeftPos5E":
+			States.BottleLeftAtPos5 = status;
+			break;
 		
 		//ROTARY TABLE
 		case "rotaryTableTriggerE":
@@ -130,7 +133,7 @@ public class LoaderVizWorker extends Worker{
 	
 	static final List<String> signames = Arrays.asList("pusherRetractedE","pusherExtendedE","WPgrippedE","armAtSourceE","armAtDestE","emptyE",
 			"rotaryTableTriggerE", "bottleAtPos3E", "bottleAtPos5E", "bottleAtPos1E",
-			"bottleDeployedE", "motConveyorOnOffE", 
+			"bottleDeployedE", "motConveyorOnOffE", "bottleLeftPos5E", 
 			"valveInjectorOnOffE", "valveInletOnOffE" , "dosUnitValveRetractE", "dosUnitValveExtendE", "bottleAtPos2E", "dosUnitEvacE" , "dosUnitFilledE",
 			"cylPos5ZaxisExtendE", "gripperTurnRetractE", "gripperTurnExtendE", "capGripperPos5ExtendE", "cylClampBottleExtendE", "bottleAtPos4E", "gripperZAxisLoweredE", "gripperZAxisLiftedE", "gripperTurnHomePosE", "gripperTurnFinalPosE");
 	

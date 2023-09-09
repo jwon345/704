@@ -1,6 +1,6 @@
 reaction RotaryQueue(
 		:input signal insert, input signal rotate, 
-		output signal empty,
+		output signal empty, output signal bottleLeftPos5,
 		output Boolean channel simFiller, output Boolean channel simCapper, output Boolean channel checkFive, 
 		output Boolean channel checkThree, 	output Boolean channel checkOne
 		) {
@@ -42,6 +42,12 @@ reaction RotaryQueue(
 				else 
 					sustain empty;
 			} case(rotate) do {
+				
+				if(q[4]) {
+			        emit bottleLeftPos5; // Emitting the signal when a bottle leaves position 5
+			    }
+				
+				
 				for(int i=q.length-1; i>0; i--){
 					q[i] = q[i-1];
 				}
@@ -75,9 +81,9 @@ reaction checkReady(: input Boolean channel ReadyIn, output signal ReadyOut){
 
 
 ConveyorController(
-    input signal bottleAtPos1, bottleLeftPos5, bottleDeployed;
+    input signal bottleAtPos1, bottleDeployed;
     output signal motConveyorOnOff;
-    output signal bottleDeployedE, rotaryTableTriggerE;
+    output signal bottleDeployedE, rotaryTableTriggerE, bottleLeftPos5E;
     
     input Boolean channel rotated;
     output Boolean channel convReady;
@@ -91,7 +97,7 @@ ConveyorController(
 )
 ->
 {
-	signal rotaryRotated,empty,insert;
+	signal rotaryRotated,empty,insert, bottleLeftPos5;
     {
         loop{
         	System.out.println("*Conveyer - Waiting for bottle to be delopyed and conveyor to be cleared...*");
@@ -128,12 +134,16 @@ ConveyorController(
     ||
     {
         loop{
+            
+       
             await(bottleDeployed); // Wait for the bottleDeployed signal
+            
             waitl (1s);
             
             
             trap(M){
                 {
+                	await(!bottleLeftPos5E);
                 	System.out.println("*Conveyor - Conveyer On*");
                     sustain motConveyorOnOff; // Keep the conveyor motor running
                 }
@@ -150,7 +160,7 @@ ConveyorController(
     }
    
     ||
-	RotaryQueue(:insert, rotaryRotated, empty, simFiller, simCapper, checkFive, checkThree, checkOne)
+	RotaryQueue(:insert, rotaryRotated, empty, bottleLeftPos5, simFiller, simCapper, checkFive, checkThree, checkOne)
 	||
 	
 	{
@@ -165,6 +175,15 @@ ConveyorController(
     
     ||
     
+    {
+    	loop{
+	    	await(immediate bottleLeftPos5);
+	    	waitl (1s);
+	    	pause;
+	    	System.out.println("*Bottle Left From Position 5 Of The Index Table, Still On The Conveyor");
+    	}
+    }
+    ||
     {// To viz
         {while(true)
         	{
@@ -182,7 +201,24 @@ ConveyorController(
 	            pause;
         	}
         }
+        
+        ||
 
+        {while(true){
+	        	present(bottleLeftPos5)
+	        	trap(T) {
+	                {
+	                    sustain bottleLeftPos5E;
+	                }
+	                ||
+	                {
+	                    waitl(3s);
+	                    System.out.println("*Bottle Sent to Collection Point");
+	                    exit(T);
+	                }
+	            }
+	            pause;}
+        }
     }
 
 }
@@ -250,7 +286,7 @@ RotaryController(
 	    		        await(tableAlignedWithSensor);
 	    		        System.out.println("*Rotary - Aligned*");
 	    		    	send rotated(Boolean.TRUE);
-	    		    	
+	    		    	waitl(5 ms);
 	    		    	pause;
 	    				int i = 0;
 	    				trap(T){
@@ -262,7 +298,8 @@ RotaryController(
 	    					}
 	    				}
 	    				
-	    				waitl(4s);
+	    				waitl(1s);
+	    				
 	    			}
 	    		
 	    		}
