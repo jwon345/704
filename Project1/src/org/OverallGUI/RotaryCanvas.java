@@ -21,13 +21,16 @@ public class RotaryCanvas extends JPanel {
 	BufferedImage arrow_5;
 	BufferedImage arrow_6;
 	BufferedImage bottle;
-	
+	BufferedImage bottle_Filled;
+	BufferedImage bottle_Capped;
 	private int currentPosition = 1;
 	private final int MAX_POSITIONS = 6;
 	
 	public RotaryCanvas(){
 		try {
-		
+			
+			bottle_Filled = ImageIO.read(new File("res/bottle_table_filled.png"));
+			bottle_Capped = ImageIO.read(new File("res/bottle_table_lid.png"));
 			bottle = ImageIO.read(new File("res/bottle_table.png"));
 			table = ImageIO.read(new File("res/rotary.png"));
 			arrow_1 = ImageIO.read(new File("res/arrow_1.png"));
@@ -59,15 +62,15 @@ public class RotaryCanvas extends JPanel {
 		}
 		
 		if (States.BOTTLE_AT_POS4) {
-		g.drawImage(bottle, 245, 105, null);
+		g.drawImage(bottle_Capped, 238, 100, null);
 		}
 		
 		if (States.BOTTLE_AT_POS5) {
-			g.drawImage(bottle, 245, 195, null);
+			g.drawImage(bottle_Capped, 238, 190, null);
 		}
 		
 		if (States.BOTTLE_AT_POS3) {
-			g.drawImage(bottle, 165, 60, null);
+			g.drawImage(bottle_Filled, 167, 58, null);
 		}
 		
 		//g.drawImage(bottle, 165, 240, null);
