@@ -30,7 +30,7 @@ public class socketListener implements java.lang.Runnable{
 			out = new PrintWriter(clientSocket.getOutputStream(), true);
 			in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 
-			out.println(States.BOTTLE_AT_POS1?"0":"1");
+			out.println(States.BOTTLE_AT_POS1?"1":"0");
 			String message = in.readLine() + ":"; //append random chr to avoid ""
 			
 			if (message.contains("newBottle"))
