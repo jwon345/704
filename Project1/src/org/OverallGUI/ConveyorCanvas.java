@@ -35,14 +35,16 @@ public class ConveyorCanvas extends JPanel {
 		super.paintComponent(g);
 		if (States.MOTOR_ONOFF) {
 	        g.drawImage(conveyor_on, 10, 129, null);
-	        g.drawImage(bottle, 108, 165, null);
 	    } else {
 	        g.drawImage(conveyor_off, 10, 120, null);
 	    }
-
+		
+		if (States.DEPLOY) {
+			g.drawImage(bottle, 20, 165, null);
+		}
 	    // Draw the bottle at deploy position if DEPLOY state is true
-	    if (States.DEPLOY) {
-	        g.drawImage(bottle, 20, 165, null);
+	    if (States.BOTTLE_AT_POS1) {
+	    	g.drawImage(bottle, 108, 165, null);
 	    }
 	}
 }

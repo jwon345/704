@@ -1,16 +1,20 @@
 reaction RotaryQueue(
 		:input signal insert, input signal rotate, 
 		output signal empty,
-		output Boolean channel simFiller, output Boolean channel simCapper, output Boolean channel checkFive
+		output Boolean channel simFiller, output Boolean channel simCapper, output Boolean channel checkFive, 
+		output Boolean channel checkThree, 	output Boolean channel checkOne
 		) {
-	Boolean signal simF,simC, simFive;
+	Boolean signal simF,simC, simFive, simThree, simOne;
 	{loop{abort(simF){halt;} send simFiller(#simF); }}
 	||
 	{loop{abort(simC){halt;} send simCapper(#simC); }}
 	||
 	{loop{abort(simFive){halt;} send checkFive(#simFive); }}
 	||
-	
+	{loop{abort(simThree){halt;} send checkThree(#simThree); }}
+	||
+	{loop{abort(simOne){halt;} send checkOne(#simOne); }}
+	||
 	
 	{
 		boolean[] q = new boolean[5];
@@ -27,7 +31,9 @@ reaction RotaryQueue(
 				System.out.println("\n-------------------------");
 
 				present(rotate){
+					emit simOne(q[1] ? Boolean.TRUE : Boolean.FALSE);
 					emit simF(q[1] ? Boolean.TRUE : Boolean.FALSE);
+					emit simThree(q[2] ? Boolean.TRUE : Boolean.FALSE);
 					emit simC(q[3] ? Boolean.TRUE : Boolean.FALSE);
 					emit simFive(q[4] ? Boolean.TRUE : Boolean.FALSE);
 				}
@@ -71,7 +77,7 @@ reaction checkReady(: input Boolean channel ReadyIn, output signal ReadyOut){
 ConveyorController(
     input signal bottleAtPos1, bottleLeftPos5, bottleDeployed;
     output signal motConveyorOnOff;
-    output signal bottleDeployedE;
+    output signal bottleDeployedE, rotaryTableTriggerE;
     
     input Boolean channel rotated;
     output Boolean channel convReady;
@@ -79,6 +85,8 @@ ConveyorController(
     output Boolean channel simFiller;
     output Boolean channel simCapper;
     output Boolean channel checkFive;
+    output Boolean channel checkThree;
+    output Boolean channel checkOne;
 
 )
 ->
@@ -99,7 +107,7 @@ ConveyorController(
                 	await(immediate empty);
                     pause;
                 	send convReady(Boolean.FALSE);
-                	System.out.println("*empty...*");
+                	System.out.println("*Empty...*");
                 }
             }
             pause;
@@ -108,8 +116,10 @@ ConveyorController(
             pause;
             
             waitl(2 s);
-            
-            {send convReady(Boolean.TRUE);}||{await(rotaryRotated);}
+
+            {send convReady(Boolean.TRUE);}
+            ||
+            {await(rotaryRotated);}
     		pause;
 
         }
@@ -120,6 +130,8 @@ ConveyorController(
         loop{
             await(bottleDeployed); // Wait for the bottleDeployed signal
 
+  
+            
             trap(M){
                 {
                 	System.out.println("*Conveyor - Conveyer On*");
@@ -127,6 +139,7 @@ ConveyorController(
                 }
                 ||
                 {
+                	waitl(2 s);
                     System.out.println("*Conveyor - Waiting For Bottle at Pos1*");
                     await(bottleAtPos1); // Stop the motor if a bottle is at position 1 or has left position 5
                     System.out.println("*Conveyor - Bottle Reached Pos1*");
@@ -137,17 +150,20 @@ ConveyorController(
     }
    
     ||
-	RotaryQueue(:insert, rotaryRotated, empty, simFiller, simCapper, checkFive)
+	RotaryQueue(:insert, rotaryRotated, empty, simFiller, simCapper, checkFive, checkThree, checkOne)
 	||
 	
 	{
 		loop{ 
 			receive rotated; 
 			emit rotaryRotated;
+		  	emit rotaryTableTriggerE;
 			System.out.println("*Rotary rotated");
 			pause;
 		}
 	}
+    
+    ||
     
     {// To viz
         {while(true)
@@ -166,7 +182,9 @@ ConveyorController(
 	            pause;
         	}
         }
+
     }
+
 }
 
 
@@ -175,15 +193,15 @@ ConveyorController(
 
 RotaryController(
 	    input signal tableAlignedWithSensor, capOnBottleAtPos1;
-	    output signal rotaryTableTrigger;
+	    output signal rotaryTableTrigger, bottleAtPos5E, bottleAtPos3E;
 	    
 	    input Boolean channel  convReady, fillerReady, capperReady;
 	    output Boolean channel rotated;
 	    
-	    input Boolean channel checkFive;
+	    input Boolean channel checkFive, checkThree, checkOne;
 	    )->{
 	    	signal  cvR, fR, cR;
-	    	signal bottleAtPos5;
+	    	signal bottleAtPos5, bottleAtPos3;
 	    	receive convReady;
 	    	receive fillerReady;
 	    	receive capperReady;
@@ -230,9 +248,9 @@ RotaryController(
 	    		        
 	    		        System.out.println("*Rotary - Waiting for Alignment*");
 	    		        await(tableAlignedWithSensor);
-	    		        
 	    		        System.out.println("*Rotary - Aligned*");
 	    		    	send rotated(Boolean.TRUE);
+	    		    	
 	    		    	pause;
 	    				int i = 0;
 	    				trap(T){
@@ -243,6 +261,8 @@ RotaryController(
 	    						pause;
 	    					}
 	    				}
+	    				
+	    				waitl(4s);
 	    			}
 	    		
 	    		}
@@ -264,8 +284,61 @@ RotaryController(
 							emit bottleAtPos5;
 						pause;
 					}
+					
+					||
+					
+					{
+						loop{
+							receive checkThree;
+							if((Boolean)#checkThree)
+								emit bottleAtPos3;
+							pause;
+						}
+					}
+					
 			}
 	    	
+	    	|| 
+	    	
+	    	{
+	    	
+	            
+		        {while(true)
+		        	{present(bottleAtPos3)trap(T) {
+		                {
+		                    sustain bottleAtPos3E;
+		                }
+		                ||
+		                {
+		                    await(rotaryTableTrigger);
+		                    exit(T);
+		                };
+		        	}
+		        	pause;
+		        
+		        	}
+		        }
+		        
+		        ||
+		        
+		        {while(true)
+		        	{present(bottleAtPos5)trap(T) {
+		                {
+		                    sustain bottleAtPos5E;
+		                }
+		                ||
+		                {
+		                    await(rotaryTableTrigger);
+		                    exit(T);
+		                };
+		        	}
+		        	pause;
+		        
+		        	}
+		        }
+		        
+		        
+	    	}	    	
 }
 	    
 	    
@@ -315,6 +388,7 @@ FillerController(
 	    						}
 	    					}
 	    					
+	    				
 	    					send fillerReady(Boolean.TRUE);
 	    					System.out.println("*Filler operation done");
 	    					
@@ -498,7 +572,5 @@ CapperController(
 	    				            pause;
 	    			        	}
 	    					}
-	    					
-
 	    				}
 	    		

@@ -20,6 +20,7 @@ public class RotaryCanvas extends JPanel {
 	BufferedImage arrow_4;
 	BufferedImage arrow_5;
 	BufferedImage arrow_6;
+	BufferedImage bottle;
 	
 	private int currentPosition = 1;
 	private final int MAX_POSITIONS = 6;
@@ -27,6 +28,7 @@ public class RotaryCanvas extends JPanel {
 	public RotaryCanvas(){
 		try {
 		
+			bottle = ImageIO.read(new File("res/bottle_table.png"));
 			table = ImageIO.read(new File("res/rotary.png"));
 			arrow_1 = ImageIO.read(new File("res/arrow_1.png"));
 			arrow_2 = ImageIO.read(new File("res/arrow_2.png"));
@@ -44,35 +46,32 @@ public class RotaryCanvas extends JPanel {
 	
 	@Override
 	protected void paintComponent(Graphics g){
-		if (States.ROTARY_TABLE_TRIGGERED) {
-            currentPosition++;
-            if (currentPosition > MAX_POSITIONS) {
-                currentPosition = 1;
-            }
-		}
 		
 		super.paintComponent(g);
 		g.drawImage(table, -90, 50, null);	
 		
-		 switch (currentPosition) {
-         case 1:
-        	g.drawImage(arrow_1, 120, 180, null);	
-             break;
-         case 2:
-        	 g.drawImage(arrow_2, 128, 135, null);
-             break;
-         case 3:
-        	 g.drawImage(arrow_3, 177, 105, null);
-             break;
-         case 4:
-        	 g.drawImage(arrow_4, 210, 135, null);
-             break;
-         case 5:
-        	 g.drawImage(arrow_5, 205, 170, null);
-             break;
-         case 6:
-        	 g.drawImage(arrow_6, 175, 195, null);
-             break;
-		 }
+		if (States.BOTTLE_AT_POS2) {
+		g.drawImage(bottle, 85, 105, null);
+		}
+		
+		if (States.BOTTLE_AT_POS1) {
+		g.drawImage(bottle, 85, 195, null);
+		}
+		
+		if (States.BOTTLE_AT_POS4) {
+		g.drawImage(bottle, 245, 105, null);
+		}
+		
+		if (States.BOTTLE_AT_POS5) {
+			g.drawImage(bottle, 245, 195, null);
+		}
+		
+		if (States.BOTTLE_AT_POS3) {
+			g.drawImage(bottle, 165, 60, null);
+		}
+		
+		//g.drawImage(bottle, 165, 240, null);
+		
+
 	}
 }

@@ -13,13 +13,9 @@ ConveyorPlant(
 	    	while(true) {
 	
 	        await(motConveyorOnOff);
-	        waitl (1 s);
-	        
-
 
 	        emit bottleAtPos1;
 	        pause;
-	        await(!motConveyorOnOff);
 	    	}
 	    }
 	    
@@ -40,7 +36,7 @@ ConveyorPlant(
 	                        }
 	                        ||
 	                        {
-	                        	await (motConveyorOnOff);
+	                        	waitl (500 ms);
 	                            exit(T);
 	                        }
 	                    }
@@ -59,7 +55,7 @@ ConveyorPlant(
 RotaryPlant(
 	    input signal rotaryTableTrigger;
 	    output signal tableAlignedWithSensor, bottleAtPos5, capOnBottleAtPos1;
-	    output signal tableAlignedWithSensorE, bottleAtPos5E, capOnBottleAtPos1E, rotaryTableTriggerE;
+	    output signal tableAlignedWithSensorE, capOnBottleAtPos1E;
 	)
 	->
 	{
@@ -67,20 +63,16 @@ RotaryPlant(
 	    {// Rotary Table Movement
 	    	loop{
 				await(rotaryTableTrigger);
-				pause;
 				emit tableAlignedWithSensor;
 	            System.out.println("*Recieved*");
+	            pause;
 			}
 	    }
 	    ||
 	    {// To viz
 	        {while(true){present(tableAlignedWithSensor){emit tableAlignedWithSensorE;} pause;}}
 	        ||
-	        {while(true){present(bottleAtPos5){emit bottleAtPos5E;} pause;}}
-	        ||
 	        {while(true){present(capOnBottleAtPos1){emit capOnBottleAtPos1E;} pause;}}
-	        ||
-	        {while(true){present(rotaryTableTrigger){;emit rotaryTableTriggerE;} pause;}}
 	    }
 }
 

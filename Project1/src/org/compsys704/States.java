@@ -30,7 +30,9 @@ public class States {
 		
 	//TABLE
     public static volatile boolean ROTARY_TABLE_TRIGGERED = false;
-	
+    public static volatile boolean BOTTLE_AT_POS3 = false;
+    public static volatile boolean BOTTLE_AT_POS5 = false;
+
 	
 	
 	//LID LOADER

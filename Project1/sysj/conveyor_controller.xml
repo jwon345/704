@@ -12,7 +12,7 @@
 		
 			 <!-- Visualization Signals -->
             <oSignal Name="bottleDeployedE" To="UI.bottleDeployedE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
-            
+           
             
 			<iChannel Name="rotated"     From="RotaryCD.rotated" />	
             <oChannel Name="convReady"     To="RotaryCD.convReady" />
@@ -20,6 +20,11 @@
             <oChannel Name="simFiller"     To="FillerCD.simFiller" />
             <oChannel Name="simCapper"     To="CapperCD.simCapper" />
             <oChannel Name="checkFive"     To="RotaryCD.checkFive" />
+            <oChannel Name="checkThree"     To="RotaryCD.checkThree" />
+            <oChannel Name="checkOne"     To="RotaryCD.checkOne" />
+
+            <oSignal Name="rotaryTableTriggerE" 	To="UI.rotaryTableTriggerE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+
         </ClockDomain>
         
         
@@ -33,16 +38,21 @@
             <iSignal Name="capOnBottleAtPos1"  		Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />
             
             <!-- Output Signals -->
-            <oSignal Name="rotaryTableTrigger" 		To="RotaryPlant.rotaryTableTrigger"	Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10003" />
-            
+            <oSignal Name="rotaryTableTrigger" 		To="RotaryPlant.rotaryTableTrigger"	Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10003" />              
+			
+			<oSignal Name="bottleAtPos3E" 			To="UI.bottleAtPos3E" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+			<oSignal Name="bottleAtPos5E" 			To="UI.bottleAtPos5E" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+
             <!-- Input Channels -->
             <iChannel Name="convReady"     			From="ConveyorCD.convReady" />
 			<iChannel Name="fillerReady"     		From="FillerCD.fillerReady" />
 			<iChannel Name="capperReady"     		From="CapperCD.capperReady" />
 			<iChannel Name="checkFive"     			From="ConveyorCD.checkFive" />
-			  
+			<iChannel Name="checkThree"     			From="ConveyorCD.checkThree" />
+			<iChannel Name="checkOne"     			From="ConveyorCD.checkOne" />
+  
 			<oChannel Name="rotated"     			To="ConveyorCD.rotated" />		
-	
+			
         </ClockDomain>
         
         

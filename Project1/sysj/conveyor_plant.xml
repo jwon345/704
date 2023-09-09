@@ -29,10 +29,10 @@
             <oSignal Name="capOnBottleAtPos1" 		To="RotaryCD.capOnBottleAtPos1" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10002" />
             
             <!-- Visualization Signals -->
-            <oSignal Name="tableAlignedWithSensorE" To="UI.tableAlignedWithSensorE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
-            <oSignal Name="bottleAtPos5E" 			To="UI.bottleAtPos5E" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+            <oSignal Name="tableAlignedWithSensorE" To="UI.tableAlignedWithSensorE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />            
             <oSignal Name="capOnBottleAtPos1E" 		To="UI.capOnBottleAtPos1E" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
-            <oSignal Name="rotaryTableTriggerE" 	To="UI.rotaryTableTriggerE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+            
+
         </ClockDomain>
         
         
