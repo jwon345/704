@@ -1,18 +1,22 @@
 reaction RotaryQueue(
 		:input signal insert, input signal rotate, 
 		output signal empty,
-		output Boolean channel simFiller, output Boolean channel simCapper
+		output Boolean channel simFiller, output Boolean channel simCapper, output Boolean channel checkFive
 		) {
-	Boolean signal simF,simC;
+	Boolean signal simF,simC, simFive;
 	{loop{abort(simF){halt;} send simFiller(#simF); }}
 	||
 	{loop{abort(simC){halt;} send simCapper(#simC); }}
 	||
+	{loop{abort(simFive){halt;} send checkFive(#simFive); }}
+	||
+	
 	
 	{
 		boolean[] q = new boolean[5];
 		loop {
 			abort{
+				System.out.println("\n-------------------------");
 				boolean o = false, c = false;
 				System.out.print("* Current bottle's locations :");
 				for(int i=0; i<q.length; i++){
@@ -25,7 +29,7 @@ reaction RotaryQueue(
 				present(rotate){
 					emit simF(q[1] ? Boolean.TRUE : Boolean.FALSE);
 					emit simC(q[3] ? Boolean.TRUE : Boolean.FALSE);
-
+					emit simFive(q[4] ? Boolean.TRUE : Boolean.FALSE);
 				}
 				if(o)
 					halt;
@@ -74,6 +78,7 @@ ConveyorController(
     
     output Boolean channel simFiller;
     output Boolean channel simCapper;
+    output Boolean channel checkFive;
 
 )
 ->
@@ -82,7 +87,6 @@ ConveyorController(
     {
         loop{
         	System.out.println("*Conveyer - Waiting for bottle to be delopyed and conveyor to be cleared...*");
-            await(bottleDeployed); // Wait for the bottleDeployed signal
 
             trap(T){
                 {
@@ -95,15 +99,17 @@ ConveyorController(
                 	await(immediate empty);
                     pause;
                 	send convReady(Boolean.FALSE);
+                	System.out.println("*empty...*");
                 }
             }
             pause;
             emit insert;
-            System.out.println("*Conveyor - Conveyor Ready*");
-            pause;
-
-    		{send convReady(Boolean.TRUE);}
             send convReady(Boolean.FALSE);
+            pause;
+            
+            waitl(2 s);
+            
+            {send convReady(Boolean.TRUE);}||{await(rotaryRotated);}
     		pause;
 
         }
@@ -113,6 +119,7 @@ ConveyorController(
     {
         loop{
             await(bottleDeployed); // Wait for the bottleDeployed signal
+
             trap(M){
                 {
                 	System.out.println("*Conveyor - Conveyer On*");
@@ -121,7 +128,7 @@ ConveyorController(
                 ||
                 {
                     System.out.println("*Conveyor - Waiting For Bottle at Pos1*");
-                    await(bottleAtPos1 || bottleLeftPos5); // Stop the motor if a bottle is at position 1 or has left position 5
+                    await(bottleAtPos1); // Stop the motor if a bottle is at position 1 or has left position 5
                     System.out.println("*Conveyor - Bottle Reached Pos1*");
                     exit(M);
                 }
@@ -130,7 +137,7 @@ ConveyorController(
     }
    
     ||
-	RotaryQueue(:insert, rotaryRotated, empty, simFiller, simCapper)
+	RotaryQueue(:insert, rotaryRotated, empty, simFiller, simCapper, checkFive)
 	||
 	
 	{
@@ -167,13 +174,16 @@ ConveyorController(
 
 
 RotaryController(
-	    input signal tableAlignedWithSensor, bottleAtPos5, capOnBottleAtPos1;
+	    input signal tableAlignedWithSensor, capOnBottleAtPos1;
 	    output signal rotaryTableTrigger;
 	    
 	    input Boolean channel  convReady, fillerReady, capperReady;
 	    output Boolean channel rotated;
+	    
+	    input Boolean channel checkFive;
 	    )->{
 	    	signal  cvR, fR, cR;
+	    	signal bottleAtPos5;
 	    	receive convReady;
 	    	receive fillerReady;
 	    	receive capperReady;
@@ -190,16 +200,25 @@ RotaryController(
 	    					System.out.println("*Rotary - Conveyor Ready*");
 	    				}
 	    				
+	    				||
+	    				{
+	    					await(cR);
+	    					System.out.println("*Rotary - Capper Ready*");
+	    				}
+	    				
 	    				
 	    				
 	    				System.out.println("*Rotary - All controllers are ready*");
 
 	    				
 	    				present(bottleAtPos5) {
-//	    			        waitl(1 s);
-	    							trap(T){ // await(!bottleAtPos5);
+	    			    waitl(1 s);
+	    							trap(T){ 
+	    								await(!bottleAtPos5);
 	    								loop{
-	    									present(bottleAtPos5){} 
+	    									present(bottleAtPos5){
+	    									 	System.out.println("*at pos5*");	
+	    									} 
 	    									else{exit(T);}
 	    									pause;
 	    								}
@@ -228,9 +247,17 @@ RotaryController(
     			checkReady(:fillerReady, fR)
     			||
     			checkReady(:capperReady, cR)
-    		}
-	    		
-	    		
+    		}		
+	    	
+	    	||
+			{
+					loop{
+						receive checkFive;
+						if((Boolean)#checkFive)
+							emit bottleAtPos5;
+						pause;
+					}
+			}
 	    	
 }
 	    
@@ -284,6 +311,14 @@ FillerController(
 	    					send fillerReady(Boolean.TRUE);
 	    					System.out.println("*Filler operation done");
 	    					
+	    					trap(T){ 
+	    						await(!bottleAtPos2);
+	    						loop{
+	    							present(bottleAtPos2){}
+	    							else{exit(T);}
+	    							pause;
+	    						}
+	    					}
 	    				}
 	    			}
 	    			
@@ -350,8 +385,8 @@ CapperController(
 	    							
 	    							System.out.println("*Capper: Waiting for bottle at position 4...*");
 	    							await(bottleAtPos4);
-	    							System.out.println("*Capper: Bottle Arivied at Position 4.*");
 	    							send capperReady(Boolean.FALSE);
+	    							System.out.println("*Capper: Bottle Arivied at Position 4.*");
 	    							System.out.println("Capper: Checking if gripper is fully lifted...");
 	    							abort(gripperZAxisLifted){
 	    				             
@@ -408,8 +443,9 @@ CapperController(
 	    					{
 	    						loop{
 	    							receive simCapper;
-	    							if(#simCapper)
+	    							if(#simCapper) 
 	    								emit bottleAtPos4;
+
 	    							pause;
 	    						}
 	    					}

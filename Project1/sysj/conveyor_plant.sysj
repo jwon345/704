@@ -15,17 +15,11 @@ ConveyorPlant(
 	        await(motConveyorOnOff);
 	        waitl (1 s);
 	        
-	        trap(T) {
-	            {
-	                sustain bottleAtPos1;
-	                System.out.println("*Bottle At Pos1*");
-	            }
-	            ||
-	            {
-	                await(!motConveyorOnOff);
-	                exit(T);
-	            }
-	        }
+
+
+	        emit bottleAtPos1;
+	        pause;
+	        await(!motConveyorOnOff);
 	    	}
 	    }
 	    

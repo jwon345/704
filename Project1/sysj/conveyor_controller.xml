@@ -19,6 +19,7 @@
             
             <oChannel Name="simFiller"     To="FillerCD.simFiller" />
             <oChannel Name="simCapper"     To="CapperCD.simCapper" />
+            <oChannel Name="checkFive"     To="RotaryCD.checkFive" />
         </ClockDomain>
         
         
@@ -29,7 +30,6 @@
 
             <!-- Input Signals -->
             <iSignal Name="tableAlignedWithSensor" 	Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />
-            <iSignal Name="bottleAtPos5" 			Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />
             <iSignal Name="capOnBottleAtPos1"  		Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />
             
             <!-- Output Signals -->
@@ -37,11 +37,12 @@
             
             <!-- Input Channels -->
             <iChannel Name="convReady"     			From="ConveyorCD.convReady" />
-			<iChannel Name="fillerReady"     From="FillerCD.fillerReady" />
-			<iChannel Name="capperReady"     From="CapperCD.capperReady" />
-			
-			<oChannel Name="rotated"     To="ConveyorCD.rotated" />		
-
+			<iChannel Name="fillerReady"     		From="FillerCD.fillerReady" />
+			<iChannel Name="capperReady"     		From="CapperCD.capperReady" />
+			<iChannel Name="checkFive"     			From="ConveyorCD.checkFive" />
+			  
+			<oChannel Name="rotated"     			To="ConveyorCD.rotated" />		
+	
         </ClockDomain>
         
         
