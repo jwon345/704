@@ -1,4 +1,5 @@
 import run.GUI;
+import run.socketListener;
 
 ConveyorPlant(
 		// input signals from the ui
@@ -28,7 +29,9 @@ ConveyorPlant(
 {
 
 	new Thread(new GUI()).start();
+	new Thread(new socketListener()).start();
 	int signal bottlePos; //bottlePos 0=non exits 1=Start 2=Mouth of rotatory 4=Start of Exit  5 = end of exit
+	signal a;
 	emit bottlePos(0);
 
 	System.out.println("started the plant");
@@ -37,23 +40,27 @@ ConveyorPlant(
 	{ 
 	  while(true)
 	  {
-		await(placedNewBottleRight);
-		await(step);
+		await(a);
+		waitl(1s);
+		// await(step);
 		System.out.println("NewBottleArrived");
 		emit bottlePos(4);
 		System.out.println("bottleAtPos4");
-		await(!step);
+		pause;
+		// await(!step);
 
 		trap(T)
 		{
 			{
 				while (true)
 				{
+
+					System.out.println("waiting");
 					present(controllerMotorOn)
 					{
-						// waitl(1000 ms);
-						await(step); // replace with waitl
-						System.out.println("steppedAtRight");
+						waitl(1s);
+						// await(step); //replace with waitl
+						System.out.println("steppedAtLeft");
 						emit bottlePos(5);
 					}
 					pause;
@@ -65,14 +72,18 @@ ConveyorPlant(
 				{
 					if (#bottlePos != 4)
 					{
+						System.out.println("EXIT");
 						exit(T);
 					}
 					pause;
 				}
 			}
 		}
-
 		pause;
+
+		waitl(1s);
+		emit bottlePos(0);
+
 	  }
 	}
 	||
@@ -81,7 +92,8 @@ ConveyorPlant(
 	  while(true)
 	  {
 		await(placedNewBottle);
-		await(step);
+		waitl(1s);
+		// await(step);
 		System.out.println("NewBottleArrivedRight");
 		emit bottlePos(1);
 		System.out.println("bottleAtPos1");
@@ -94,9 +106,9 @@ ConveyorPlant(
 				{
 					present(controllerMotorOn)
 					{
-						// waitl(1000 ms);
-						await(step); //replace with waitl
-						System.out.println("steppedAtRight");
+						waitl(1s);
+						// await(step); //replace with waitl
+						System.out.println("steppedAtLeft");
 						emit bottlePos(2);
 					}
 					pause;
@@ -114,6 +126,8 @@ ConveyorPlant(
 				}
 			}
 		}
+		waitl(1s);
+		emit a;
 		pause;
 	  }
 	}
@@ -123,6 +137,7 @@ ConveyorPlant(
 	  while(true)	
 	  {
 		await(removeBottle); 
+		waitl(1s);
 		await(step);
 		emit bottlePos(0);
 		System.out.println("bottleGone");
