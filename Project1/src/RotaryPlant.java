@@ -18,18 +18,18 @@ public class RotaryPlant extends ClockDomain{
   public Signal capOnBottleAtPos1 = new Signal("capOnBottleAtPos1", Signal.OUTPUT);
   public Signal tableAlignedWithSensorE = new Signal("tableAlignedWithSensorE", Signal.OUTPUT);
   public Signal capOnBottleAtPos1E = new Signal("capOnBottleAtPos1E", Signal.OUTPUT);
-  private int S39061 = 1;
-  private int S39041 = 1;
-  private int S39035 = 1;
-  private int S39059 = 1;
-  private int S39049 = 1;
-  private int S39057 = 1;
+  private int S39408 = 1;
+  private int S39388 = 1;
+  private int S39382 = 1;
+  private int S39406 = 1;
+  private int S39396 = 1;
+  private int S39404 = 1;
   
   private int[] ends = new int[38];
   private int[] tdone = new int[38];
   
-  public void thread40212(int [] tdone, int [] ends){
-        switch(S39057){
+  public void thread40559(int [] tdone, int [] ends){
+        switch(S39404){
       case 0 : 
         active[13]=0;
         ends[13]=0;
@@ -54,8 +54,8 @@ public class RotaryPlant extends ClockDomain{
     }
   }
 
-  public void thread40211(int [] tdone, int [] ends){
-        switch(S39049){
+  public void thread40558(int [] tdone, int [] ends){
+        switch(S39396){
       case 0 : 
         active[12]=0;
         ends[12]=0;
@@ -80,8 +80,8 @@ public class RotaryPlant extends ClockDomain{
     }
   }
 
-  public void thread40210(int [] tdone, int [] ends){
-        switch(S39059){
+  public void thread40557(int [] tdone, int [] ends){
+        switch(S39406){
       case 0 : 
         active[11]=0;
         ends[11]=0;
@@ -89,23 +89,23 @@ public class RotaryPlant extends ClockDomain{
         break;
       
       case 1 : 
-        thread40211(tdone,ends);
-        thread40212(tdone,ends);
-        int biggest40213 = 0;
-        if(ends[12]>=biggest40213){
-          biggest40213=ends[12];
+        thread40558(tdone,ends);
+        thread40559(tdone,ends);
+        int biggest40560 = 0;
+        if(ends[12]>=biggest40560){
+          biggest40560=ends[12];
         }
-        if(ends[13]>=biggest40213){
-          biggest40213=ends[13];
+        if(ends[13]>=biggest40560){
+          biggest40560=ends[13];
         }
-        if(biggest40213 == 1){
+        if(biggest40560 == 1){
           active[11]=1;
           ends[11]=1;
           tdone[11]=1;
         }
         //FINXME code
-        if(biggest40213 == 0){
-          S39059=0;
+        if(biggest40560 == 0){
+          S39406=0;
           active[11]=0;
           ends[11]=0;
           tdone[11]=1;
@@ -115,8 +115,8 @@ public class RotaryPlant extends ClockDomain{
     }
   }
 
-  public void thread40209(int [] tdone, int [] ends){
-        switch(S39041){
+  public void thread40556(int [] tdone, int [] ends){
+        switch(S39388){
       case 0 : 
         active[10]=0;
         ends[10]=0;
@@ -124,13 +124,13 @@ public class RotaryPlant extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S39035){
+        switch(S39382){
           case 0 : 
             if(rotaryTableTrigger.getprestatus()){//sysj\conveyor_plant.sysj line: 65, column: 11
               tableAlignedWithSensor.setPresent();//sysj\conveyor_plant.sysj line: 66, column: 5
               currsigs.addElement(tableAlignedWithSensor);
               System.out.println("*Recieved*");//sysj\conveyor_plant.sysj line: 67, column: 14
-              S39035=1;
+              S39382=1;
               active[10]=1;
               ends[10]=1;
               tdone[10]=1;
@@ -143,8 +143,8 @@ public class RotaryPlant extends ClockDomain{
             break;
           
           case 1 : 
-            S39035=1;
-            S39035=0;
+            S39382=1;
+            S39382=0;
             active[10]=1;
             ends[10]=1;
             tdone[10]=1;
@@ -156,8 +156,8 @@ public class RotaryPlant extends ClockDomain{
     }
   }
 
-  public void thread40206(int [] tdone, int [] ends){
-        S39057=1;
+  public void thread40553(int [] tdone, int [] ends){
+        S39404=1;
     if(capOnBottleAtPos1.getprestatus()){//sysj\conveyor_plant.sysj line: 75, column: 31
       capOnBottleAtPos1E.setPresent();//sysj\conveyor_plant.sysj line: 75, column: 50
       currsigs.addElement(capOnBottleAtPos1E);
@@ -172,8 +172,8 @@ public class RotaryPlant extends ClockDomain{
     }
   }
 
-  public void thread40205(int [] tdone, int [] ends){
-        S39049=1;
+  public void thread40552(int [] tdone, int [] ends){
+        S39396=1;
     if(tableAlignedWithSensor.getprestatus()){//sysj\conveyor_plant.sysj line: 73, column: 31
       tableAlignedWithSensorE.setPresent();//sysj\conveyor_plant.sysj line: 73, column: 55
       currsigs.addElement(tableAlignedWithSensorE);
@@ -188,27 +188,27 @@ public class RotaryPlant extends ClockDomain{
     }
   }
 
-  public void thread40204(int [] tdone, int [] ends){
-        S39059=1;
-    thread40205(tdone,ends);
-    thread40206(tdone,ends);
-    int biggest40207 = 0;
-    if(ends[12]>=biggest40207){
-      biggest40207=ends[12];
+  public void thread40551(int [] tdone, int [] ends){
+        S39406=1;
+    thread40552(tdone,ends);
+    thread40553(tdone,ends);
+    int biggest40554 = 0;
+    if(ends[12]>=biggest40554){
+      biggest40554=ends[12];
     }
-    if(ends[13]>=biggest40207){
-      biggest40207=ends[13];
+    if(ends[13]>=biggest40554){
+      biggest40554=ends[13];
     }
-    if(biggest40207 == 1){
+    if(biggest40554 == 1){
       active[11]=1;
       ends[11]=1;
       tdone[11]=1;
     }
   }
 
-  public void thread40203(int [] tdone, int [] ends){
-        S39041=1;
-    S39035=0;
+  public void thread40550(int [] tdone, int [] ends){
+        S39388=1;
+    S39382=0;
     active[10]=1;
     ends[10]=1;
     tdone[10]=1;
@@ -221,50 +221,50 @@ public class RotaryPlant extends ClockDomain{
     }
     
     RUN: while(true){
-      switch(S39061){
+      switch(S39408){
         case 0 : 
-          S39061=0;
+          S39408=0;
           break RUN;
         
         case 1 : 
-          S39061=2;
-          S39061=2;
-          thread40203(tdone,ends);
-          thread40204(tdone,ends);
-          int biggest40208 = 0;
-          if(ends[10]>=biggest40208){
-            biggest40208=ends[10];
+          S39408=2;
+          S39408=2;
+          thread40550(tdone,ends);
+          thread40551(tdone,ends);
+          int biggest40555 = 0;
+          if(ends[10]>=biggest40555){
+            biggest40555=ends[10];
           }
-          if(ends[11]>=biggest40208){
-            biggest40208=ends[11];
+          if(ends[11]>=biggest40555){
+            biggest40555=ends[11];
           }
-          if(biggest40208 == 1){
+          if(biggest40555 == 1){
             active[9]=1;
             ends[9]=1;
             break RUN;
           }
         
         case 2 : 
-          thread40209(tdone,ends);
-          thread40210(tdone,ends);
-          int biggest40214 = 0;
-          if(ends[10]>=biggest40214){
-            biggest40214=ends[10];
+          thread40556(tdone,ends);
+          thread40557(tdone,ends);
+          int biggest40561 = 0;
+          if(ends[10]>=biggest40561){
+            biggest40561=ends[10];
           }
-          if(ends[11]>=biggest40214){
-            biggest40214=ends[11];
+          if(ends[11]>=biggest40561){
+            biggest40561=ends[11];
           }
-          if(biggest40214 == 1){
+          if(biggest40561 == 1){
             active[9]=1;
             ends[9]=1;
             break RUN;
           }
           //FINXME code
-          if(biggest40214 == 0){
-            S39061=0;
+          if(biggest40561 == 0){
+            S39408=0;
             active[9]=0;
             ends[9]=0;
-            S39061=0;
+            S39408=0;
             break RUN;
           }
         

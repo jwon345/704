@@ -129,8 +129,8 @@ ConveyorController(
     {
         loop{
             await(bottleDeployed); // Wait for the bottleDeployed signal
-
-  
+            waitl (1s);
+            
             
             trap(M){
                 {
@@ -424,7 +424,7 @@ FillerController(
 		    		                }
 		    		                ||
 		    		                {
-		    		                    await(dosUnitFilled);
+		    		                    await(dosUnitEvac);
 		    		                    exit(T);
 		    		                }
 		    		            }
