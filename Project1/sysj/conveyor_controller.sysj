@@ -135,7 +135,8 @@ ConveyorController(
     {
         loop{
             
-       
+          	await(!bottleLeftPos5E);
+          	pause;
             await(bottleDeployed); // Wait for the bottleDeployed signal
             
             waitl (1s);
@@ -143,7 +144,6 @@ ConveyorController(
             
             trap(M){
                 {
-                	await(!bottleLeftPos5E);
                 	System.out.println("*Conveyor - Conveyer On*");
                     sustain motConveyorOnOff; // Keep the conveyor motor running
                 }
@@ -187,6 +187,7 @@ ConveyorController(
     {// To viz
         {while(true)
         	{
+        		await (!bottleLeftPos5E);
 	        	present(bottleDeployed)
 	        	trap(T) {
 	                {
@@ -207,12 +208,10 @@ ConveyorController(
         {while(true){
 	        	present(bottleLeftPos5)
 	        	trap(T) {
-	                {
-	                    sustain bottleLeftPos5E;
-	                }
+	                {sustain bottleLeftPos5E;}
 	                ||
 	                {
-	                    waitl(3s);
+	                    waitl(1s);
 	                    System.out.println("*Bottle Sent to Collection Point");
 	                    exit(T);
 	                }
@@ -279,26 +278,24 @@ RotaryController(
 	    						}
 
 	    						trap(T){
-	    							{sustain rotaryTableTrigger;}||{waitl(100 ms); exit(T);}
+	    							{sustain rotaryTableTrigger;}||{waitl(300 ms); exit(T);}
 	    						}
 	    		        
 	    		        System.out.println("*Rotary - Waiting for Alignment*");
 	    		        await(tableAlignedWithSensor);
 	    		        System.out.println("*Rotary - Aligned*");
 	    		    	send rotated(Boolean.TRUE);
-	    		    	waitl(5 ms);
+	    		    	waitl(5 s);
 	    		    	pause;
 	    				int i = 0;
 	    				trap(T){
 	    					loop{
 	    						i++;
-	    						if(i > 12)
+	    						if(i > 100)
 	    							exit(T);
 	    						pause;
 	    					}
 	    				}
-	    				
-	    				waitl(1s);
 	    				
 	    			}
 	    		
@@ -402,6 +399,8 @@ FillerController(
 	    					waitl(2 s);  // Delay before filling
 	    					
 	    					System.out.println("*Filler - Bottle Arrived at Pos 2*");
+
+	    					
 	    					
 	    					abort(dosUnitFilled){
 	    						{
@@ -413,6 +412,7 @@ FillerController(
 	    							sustain dosUnitValveRetract;
 	    						}
 	    					}
+	    					
 	    					
 	    					abort(dosUnitEvac){
 	    						{

@@ -27,79 +27,90 @@ public class Controller extends ClockDomain{
   public Signal vacOn = new Signal("vacOn", Signal.OUTPUT);
   public Signal armSource = new Signal("armSource", Signal.OUTPUT);
   public Signal armDest = new Signal("armDest", Signal.OUTPUT);
-  private int S1441 = 1;
-  private int S479 = 1;
-  private int S239 = 1;
-  private int S4 = 1;
-  private int S35 = 1;
-  private int S46 = 1;
-  private int S45 = 1;
-  private int S238 = 1;
+  private Signal manualMode_1;
+  private Signal autoMode_1;
+  private int S2166 = 1;
+  private int S2143 = 1;
+  private int S464 = 1;
+  private int S10 = 1;
+  private int S16 = 1;
+  private int S47 = 1;
+  private int S58 = 1;
+  private int S49 = 1;
+  private int S472 = 1;
+  private int S466 = 1;
+  private int S480 = 1;
+  private int S488 = 1;
+  private int S499 = 1;
+  private int S2164 = 1;
+  private int S2163 = 1;
   
-  private int[] ends = new int[8];
-  private int[] tdone = new int[8];
+  private int[] ends = new int[10];
+  private int[] tdone = new int[10];
   
-  public void thread1457(int [] tdone, int [] ends){
-        active[7]=0;
-    ends[7]=0;
-    tdone[7]=1;
-  }
-
-  public void thread1456(int [] tdone, int [] ends){
-        active[6]=0;
-    ends[6]=0;
-    tdone[6]=1;
-  }
-
-  public void thread1455(int [] tdone, int [] ends){
-        active[5]=0;
-    ends[5]=0;
-    tdone[5]=1;
-  }
-
-  public void thread1454(int [] tdone, int [] ends){
-        active[4]=0;
-    ends[4]=0;
-    tdone[4]=1;
-  }
-
-  public void thread1452(int [] tdone, int [] ends){
-        switch(S46){
+  public void thread2188(int [] tdone, int [] ends){
+        switch(S2164){
       case 0 : 
-        active[3]=0;
-        ends[3]=0;
-        tdone[3]=1;
+        active[9]=0;
+        ends[9]=0;
+        tdone[9]=1;
         break;
       
       case 1 : 
-        switch(S45){
+        switch(S2163){
           case 0 : 
-            if(WPgripped.getprestatus()){//sysj\controller.sysj line: 37, column: 14
-              S45=1;
-              armDest.setPresent();//sysj\controller.sysj line: 40, column: 9
-              currsigs.addElement(armDest);
-              active[3]=1;
-              ends[3]=1;
-              tdone[3]=1;
+            if(mode.getprestatus()){//sysj\controller.sysj line: 85, column: 11
+              S2163=1;
+              if((Integer)(mode.getpreval() == null ? null : ((Integer)mode.getpreval())) == 0){//sysj\controller.sysj line: 87, column: 9
+                autoMode_1.setPresent();//sysj\controller.sysj line: 88, column: 7
+                currsigs.addElement(autoMode_1);
+                active[9]=1;
+                ends[9]=1;
+                tdone[9]=1;
+              }
+              else {
+                if((Integer)(mode.getpreval() == null ? null : ((Integer)mode.getpreval())) == 1){//sysj\controller.sysj line: 90, column: 14
+                  manualMode_1.setPresent();//sysj\controller.sysj line: 91, column: 7
+                  currsigs.addElement(manualMode_1);
+                  active[9]=1;
+                  ends[9]=1;
+                  tdone[9]=1;
+                }
+                else {
+                  active[9]=1;
+                  ends[9]=1;
+                  tdone[9]=1;
+                }
+              }
             }
             else {
-              active[3]=1;
-              ends[3]=1;
-              tdone[3]=1;
+              active[9]=1;
+              ends[9]=1;
+              tdone[9]=1;
             }
             break;
           
           case 1 : 
-            if(armAtDest.getprestatus()){//sysj\controller.sysj line: 38, column: 14
-              ends[3]=2;
-              tdone[3]=1;
+            if((Integer)(mode.getpreval() == null ? null : ((Integer)mode.getpreval())) == 0){//sysj\controller.sysj line: 87, column: 9
+              autoMode_1.setPresent();//sysj\controller.sysj line: 88, column: 7
+              currsigs.addElement(autoMode_1);
+              active[9]=1;
+              ends[9]=1;
+              tdone[9]=1;
             }
             else {
-              armDest.setPresent();//sysj\controller.sysj line: 40, column: 9
-              currsigs.addElement(armDest);
-              active[3]=1;
-              ends[3]=1;
-              tdone[3]=1;
+              if((Integer)(mode.getpreval() == null ? null : ((Integer)mode.getpreval())) == 1){//sysj\controller.sysj line: 90, column: 14
+                manualMode_1.setPresent();//sysj\controller.sysj line: 91, column: 7
+                currsigs.addElement(manualMode_1);
+                active[9]=1;
+                ends[9]=1;
+                tdone[9]=1;
+              }
+              else {
+                active[9]=1;
+                ends[9]=1;
+                tdone[9]=1;
+              }
             }
             break;
           
@@ -109,8 +120,292 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread1451(int [] tdone, int [] ends){
-        switch(S35){
+  public void thread2186(int [] tdone, int [] ends){
+        switch(S499){
+      case 0 : 
+        active[8]=0;
+        ends[8]=0;
+        tdone[8]=1;
+        break;
+      
+      case 1 : 
+        if(armDestM.getprestatus()){//sysj\controller.sysj line: 78, column: 21
+          armDest.setPresent();//sysj\controller.sysj line: 78, column: 31
+          currsigs.addElement(armDest);
+          System.out.println("Lid Loader - Lid Placed");//sysj\controller.sysj line: 78, column: 45
+          active[8]=1;
+          ends[8]=1;
+          tdone[8]=1;
+        }
+        else {
+          active[8]=1;
+          ends[8]=1;
+          tdone[8]=1;
+        }
+        break;
+      
+    }
+  }
+
+  public void thread2185(int [] tdone, int [] ends){
+        switch(S488){
+      case 0 : 
+        active[7]=0;
+        ends[7]=0;
+        tdone[7]=1;
+        break;
+      
+      case 1 : 
+        if(armSourceM.getprestatus()){//sysj\controller.sysj line: 76, column: 21
+          armSource.setPresent();//sysj\controller.sysj line: 76, column: 33
+          currsigs.addElement(armSource);
+          active[7]=1;
+          ends[7]=1;
+          tdone[7]=1;
+        }
+        else {
+          active[7]=1;
+          ends[7]=1;
+          tdone[7]=1;
+        }
+        break;
+      
+    }
+  }
+
+  public void thread2184(int [] tdone, int [] ends){
+        switch(S480){
+      case 0 : 
+        active[6]=0;
+        ends[6]=0;
+        tdone[6]=1;
+        break;
+      
+      case 1 : 
+        if(vacOnM.getprestatus()){//sysj\controller.sysj line: 74, column: 21
+          vacOn.setPresent();//sysj\controller.sysj line: 74, column: 29
+          currsigs.addElement(vacOn);
+          active[6]=1;
+          ends[6]=1;
+          tdone[6]=1;
+        }
+        else {
+          active[6]=1;
+          ends[6]=1;
+          tdone[6]=1;
+        }
+        break;
+      
+    }
+  }
+
+  public void thread2183(int [] tdone, int [] ends){
+        switch(S472){
+      case 0 : 
+        active[5]=0;
+        ends[5]=0;
+        tdone[5]=1;
+        break;
+      
+      case 1 : 
+        switch(S466){
+          case 0 : 
+            S466=0;
+            if(pusherExtendM.getprestatus()){//sysj\controller.sysj line: 72, column: 21
+              pusherExtend.setPresent();//sysj\controller.sysj line: 72, column: 36
+              currsigs.addElement(pusherExtend);
+              S466=1;
+              active[5]=1;
+              ends[5]=1;
+              tdone[5]=1;
+            }
+            else {
+              S466=1;
+              active[5]=1;
+              ends[5]=1;
+              tdone[5]=1;
+            }
+            break;
+          
+          case 1 : 
+            S466=1;
+            S466=0;
+            if(pusherExtendM.getprestatus()){//sysj\controller.sysj line: 72, column: 21
+              pusherExtend.setPresent();//sysj\controller.sysj line: 72, column: 36
+              currsigs.addElement(pusherExtend);
+              S466=1;
+              active[5]=1;
+              ends[5]=1;
+              tdone[5]=1;
+            }
+            else {
+              S466=1;
+              active[5]=1;
+              ends[5]=1;
+              tdone[5]=1;
+            }
+            break;
+          
+        }
+        break;
+      
+    }
+  }
+
+  public void thread2181(int [] tdone, int [] ends){
+        S499=1;
+    if(armDestM.getprestatus()){//sysj\controller.sysj line: 78, column: 21
+      armDest.setPresent();//sysj\controller.sysj line: 78, column: 31
+      currsigs.addElement(armDest);
+      System.out.println("Lid Loader - Lid Placed");//sysj\controller.sysj line: 78, column: 45
+      active[8]=1;
+      ends[8]=1;
+      tdone[8]=1;
+    }
+    else {
+      active[8]=1;
+      ends[8]=1;
+      tdone[8]=1;
+    }
+  }
+
+  public void thread2180(int [] tdone, int [] ends){
+        S488=1;
+    if(armSourceM.getprestatus()){//sysj\controller.sysj line: 76, column: 21
+      armSource.setPresent();//sysj\controller.sysj line: 76, column: 33
+      currsigs.addElement(armSource);
+      active[7]=1;
+      ends[7]=1;
+      tdone[7]=1;
+    }
+    else {
+      active[7]=1;
+      ends[7]=1;
+      tdone[7]=1;
+    }
+  }
+
+  public void thread2179(int [] tdone, int [] ends){
+        S480=1;
+    if(vacOnM.getprestatus()){//sysj\controller.sysj line: 74, column: 21
+      vacOn.setPresent();//sysj\controller.sysj line: 74, column: 29
+      currsigs.addElement(vacOn);
+      active[6]=1;
+      ends[6]=1;
+      tdone[6]=1;
+    }
+    else {
+      active[6]=1;
+      ends[6]=1;
+      tdone[6]=1;
+    }
+  }
+
+  public void thread2178(int [] tdone, int [] ends){
+        S472=1;
+    S466=0;
+    if(pusherExtendM.getprestatus()){//sysj\controller.sysj line: 72, column: 21
+      pusherExtend.setPresent();//sysj\controller.sysj line: 72, column: 36
+      currsigs.addElement(pusherExtend);
+      S466=1;
+      active[5]=1;
+      ends[5]=1;
+      tdone[5]=1;
+    }
+    else {
+      S466=1;
+      active[5]=1;
+      ends[5]=1;
+      tdone[5]=1;
+    }
+  }
+
+  public void thread2176(int [] tdone, int [] ends){
+        switch(S58){
+      case 0 : 
+        active[4]=0;
+        ends[4]=0;
+        tdone[4]=1;
+        break;
+      
+      case 1 : 
+        switch(S49){
+          case 0 : 
+            if(WPgripped.getprestatus()){//sysj\controller.sysj line: 48, column: 16
+              System.out.println("WP gripped");//sysj\controller.sysj line: 49, column: 10
+              S49=1;
+              armDest.setPresent();//sysj\controller.sysj line: 51, column: 11
+              currsigs.addElement(armDest);
+              active[4]=1;
+              ends[4]=1;
+              tdone[4]=1;
+            }
+            else {
+              active[4]=1;
+              ends[4]=1;
+              tdone[4]=1;
+            }
+            break;
+          
+          case 1 : 
+            if(armAtDest.getprestatus()){//sysj\controller.sysj line: 50, column: 16
+              System.out.println("Arm at dest");//sysj\controller.sysj line: 53, column: 10
+              ends[4]=2;
+              tdone[4]=1;
+            }
+            else {
+              armDest.setPresent();//sysj\controller.sysj line: 51, column: 11
+              currsigs.addElement(armDest);
+              active[4]=1;
+              ends[4]=1;
+              tdone[4]=1;
+            }
+            break;
+          
+        }
+        break;
+      
+    }
+  }
+
+  public void thread2175(int [] tdone, int [] ends){
+        switch(S47){
+      case 0 : 
+        active[3]=0;
+        ends[3]=0;
+        tdone[3]=1;
+        break;
+      
+      case 1 : 
+        vacOn.setPresent();//sysj\controller.sysj line: 44, column: 10
+        currsigs.addElement(vacOn);
+        active[3]=1;
+        ends[3]=1;
+        tdone[3]=1;
+        break;
+      
+    }
+  }
+
+  public void thread2173(int [] tdone, int [] ends){
+        S58=1;
+    S49=0;
+    active[4]=1;
+    ends[4]=1;
+    tdone[4]=1;
+  }
+
+  public void thread2172(int [] tdone, int [] ends){
+        S47=1;
+    vacOn.setPresent();//sysj\controller.sysj line: 44, column: 10
+    currsigs.addElement(vacOn);
+    active[3]=1;
+    ends[3]=1;
+    tdone[3]=1;
+  }
+
+  public void thread2171(int [] tdone, int [] ends){
+        switch(S2143){
       case 0 : 
         active[2]=0;
         ends[2]=0;
@@ -118,91 +413,335 @@ public class Controller extends ClockDomain{
         break;
       
       case 1 : 
-        vacOn.setPresent();//sysj\controller.sysj line: 33, column: 9
-        currsigs.addElement(vacOn);
-        active[2]=1;
-        ends[2]=1;
-        tdone[2]=1;
+        switch(S464){
+          case 0 : 
+            if(manualMode_1.getprestatus()){//sysj\controller.sysj line: 12, column: 12
+              S464=1;
+              active[2]=1;
+              ends[2]=1;
+              tdone[2]=1;
+            }
+            else {
+              switch(S10){
+                case 0 : 
+                  if(armAtDest.getprestatus()){//sysj\controller.sysj line: 14, column: 13
+                    System.out.println("Arm at dest");//sysj\controller.sysj line: 17, column: 7
+                    S10=1;
+                    active[2]=1;
+                    ends[2]=1;
+                    tdone[2]=1;
+                  }
+                  else {
+                    armDest.setPresent();//sysj\controller.sysj line: 15, column: 8
+                    currsigs.addElement(armDest);
+                    active[2]=1;
+                    ends[2]=1;
+                    tdone[2]=1;
+                  }
+                  break;
+                
+                case 1 : 
+                  if(pusherRetracted.getprestatus()){//sysj\controller.sysj line: 18, column: 13
+                    System.out.println("Pusher retracted");//sysj\controller.sysj line: 19, column: 7
+                    S10=2;
+                    S16=0;
+                    active[2]=1;
+                    ends[2]=1;
+                    tdone[2]=1;
+                  }
+                  else {
+                    active[2]=1;
+                    ends[2]=1;
+                    tdone[2]=1;
+                  }
+                  break;
+                
+                case 2 : 
+                  switch(S16){
+                    case 0 : 
+                      if(!empty.getprestatus()){//sysj\controller.sysj line: 22, column: 14
+                        S16=1;
+                        active[2]=1;
+                        ends[2]=1;
+                        tdone[2]=1;
+                      }
+                      else {
+                        active[2]=1;
+                        ends[2]=1;
+                        tdone[2]=1;
+                      }
+                      break;
+                    
+                    case 1 : 
+                      if(request.getprestatus()){//sysj\controller.sysj line: 23, column: 14
+                        System.out.println("New request");//sysj\controller.sysj line: 24, column: 8
+                        S16=2;
+                        armDest.setPresent();//sysj\controller.sysj line: 26, column: 9
+                        currsigs.addElement(armDest);
+                        active[2]=1;
+                        ends[2]=1;
+                        tdone[2]=1;
+                      }
+                      else {
+                        active[2]=1;
+                        ends[2]=1;
+                        tdone[2]=1;
+                      }
+                      break;
+                    
+                    case 2 : 
+                      if(armAtDest.getprestatus()){//sysj\controller.sysj line: 25, column: 14
+                        System.out.println("Arm at dest");//sysj\controller.sysj line: 28, column: 8
+                        S16=3;
+                        pusherExtend.setPresent();//sysj\controller.sysj line: 31, column: 9
+                        currsigs.addElement(pusherExtend);
+                        active[2]=1;
+                        ends[2]=1;
+                        tdone[2]=1;
+                      }
+                      else {
+                        armDest.setPresent();//sysj\controller.sysj line: 26, column: 9
+                        currsigs.addElement(armDest);
+                        active[2]=1;
+                        ends[2]=1;
+                        tdone[2]=1;
+                      }
+                      break;
+                    
+                    case 3 : 
+                      if(pusherExtended.getprestatus()){//sysj\controller.sysj line: 30, column: 14
+                        System.out.println("Pusher extended");//sysj\controller.sysj line: 33, column: 8
+                        S16=4;
+                        active[2]=1;
+                        ends[2]=1;
+                        tdone[2]=1;
+                      }
+                      else {
+                        pusherExtend.setPresent();//sysj\controller.sysj line: 31, column: 9
+                        currsigs.addElement(pusherExtend);
+                        active[2]=1;
+                        ends[2]=1;
+                        tdone[2]=1;
+                      }
+                      break;
+                    
+                    case 4 : 
+                      if(pusherRetracted.getprestatus()){//sysj\controller.sysj line: 34, column: 14
+                        System.out.println("Pusher retracted");//sysj\controller.sysj line: 35, column: 8
+                        S16=5;
+                        armSource.setPresent();//sysj\controller.sysj line: 38, column: 9
+                        currsigs.addElement(armSource);
+                        active[2]=1;
+                        ends[2]=1;
+                        tdone[2]=1;
+                      }
+                      else {
+                        active[2]=1;
+                        ends[2]=1;
+                        tdone[2]=1;
+                      }
+                      break;
+                    
+                    case 5 : 
+                      if(armAtSource.getprestatus()){//sysj\controller.sysj line: 37, column: 14
+                        System.out.println("Arm at source");//sysj\controller.sysj line: 40, column: 8
+                        S16=6;
+                        thread2172(tdone,ends);
+                        thread2173(tdone,ends);
+                        int biggest2174 = 0;
+                        if(ends[3]>=biggest2174){
+                          biggest2174=ends[3];
+                        }
+                        if(ends[4]>=biggest2174){
+                          biggest2174=ends[4];
+                        }
+                        if(biggest2174 == 1){
+                          active[2]=1;
+                          ends[2]=1;
+                          tdone[2]=1;
+                        }
+                      }
+                      else {
+                        armSource.setPresent();//sysj\controller.sysj line: 38, column: 9
+                        currsigs.addElement(armSource);
+                        active[2]=1;
+                        ends[2]=1;
+                        tdone[2]=1;
+                      }
+                      break;
+                    
+                    case 6 : 
+                      thread2175(tdone,ends);
+                      thread2176(tdone,ends);
+                      int biggest2177 = 0;
+                      if(ends[3]>=biggest2177){
+                        biggest2177=ends[3];
+                      }
+                      if(ends[4]>=biggest2177){
+                        biggest2177=ends[4];
+                      }
+                      if(biggest2177 == 1){
+                        active[2]=1;
+                        ends[2]=1;
+                        tdone[2]=1;
+                      }
+                      if(biggest2177 == 2){
+                        ends[2]=2;
+                        ;//sysj\controller.sysj line: 42, column: 8
+                        S16=7;
+                        active[2]=1;
+                        ends[2]=1;
+                        tdone[2]=1;
+                      }
+                      //FINXME code
+                      if(biggest2177 == 0){
+                        S16=7;
+                        active[2]=1;
+                        ends[2]=1;
+                        tdone[2]=1;
+                      }
+                      break;
+                    
+                    case 7 : 
+                      if(!WPgripped.getprestatus()){//sysj\controller.sysj line: 58, column: 14
+                        S16=8;
+                        armSource.setPresent();//sysj\controller.sysj line: 61, column: 9
+                        currsigs.addElement(armSource);
+                        active[2]=1;
+                        ends[2]=1;
+                        tdone[2]=1;
+                      }
+                      else {
+                        active[2]=1;
+                        ends[2]=1;
+                        tdone[2]=1;
+                      }
+                      break;
+                    
+                    case 8 : 
+                      if(armAtSource.getprestatus()){//sysj\controller.sysj line: 60, column: 14
+                        System.out.println("Arm at source");//sysj\controller.sysj line: 63, column: 8
+                        S16=0;
+                        active[2]=1;
+                        ends[2]=1;
+                        tdone[2]=1;
+                      }
+                      else {
+                        armSource.setPresent();//sysj\controller.sysj line: 61, column: 9
+                        currsigs.addElement(armSource);
+                        active[2]=1;
+                        ends[2]=1;
+                        tdone[2]=1;
+                      }
+                      break;
+                    
+                  }
+                  break;
+                
+              }
+            }
+            break;
+          
+          case 1 : 
+            S464=1;
+            System.out.println("entering manual");//sysj\controller.sysj line: 70, column: 6
+            S464=2;
+            thread2178(tdone,ends);
+            thread2179(tdone,ends);
+            thread2180(tdone,ends);
+            thread2181(tdone,ends);
+            int biggest2182 = 0;
+            if(ends[5]>=biggest2182){
+              biggest2182=ends[5];
+            }
+            if(ends[6]>=biggest2182){
+              biggest2182=ends[6];
+            }
+            if(ends[7]>=biggest2182){
+              biggest2182=ends[7];
+            }
+            if(ends[8]>=biggest2182){
+              biggest2182=ends[8];
+            }
+            if(biggest2182 == 1){
+              active[2]=1;
+              ends[2]=1;
+              tdone[2]=1;
+            }
+            break;
+          
+          case 2 : 
+            if(autoMode_1.getprestatus()){//sysj\controller.sysj line: 71, column: 12
+              S464=0;
+              System.out.println("entering auto");//sysj\controller.sysj line: 13, column: 7
+              S10=0;
+              armDest.setPresent();//sysj\controller.sysj line: 15, column: 8
+              currsigs.addElement(armDest);
+              active[2]=1;
+              ends[2]=1;
+              tdone[2]=1;
+            }
+            else {
+              thread2183(tdone,ends);
+              thread2184(tdone,ends);
+              thread2185(tdone,ends);
+              thread2186(tdone,ends);
+              int biggest2187 = 0;
+              if(ends[5]>=biggest2187){
+                biggest2187=ends[5];
+              }
+              if(ends[6]>=biggest2187){
+                biggest2187=ends[6];
+              }
+              if(ends[7]>=biggest2187){
+                biggest2187=ends[7];
+              }
+              if(ends[8]>=biggest2187){
+                biggest2187=ends[8];
+              }
+              if(biggest2187 == 1){
+                active[2]=1;
+                ends[2]=1;
+                tdone[2]=1;
+              }
+              //FINXME code
+              if(biggest2187 == 0){
+                S464=0;
+                System.out.println("entering auto");//sysj\controller.sysj line: 13, column: 7
+                S10=0;
+                armDest.setPresent();//sysj\controller.sysj line: 15, column: 8
+                currsigs.addElement(armDest);
+                active[2]=1;
+                ends[2]=1;
+                tdone[2]=1;
+              }
+            }
+            break;
+          
+        }
         break;
       
     }
   }
 
-  public void thread1449(int [] tdone, int [] ends){
-        S46=1;
-    S45=0;
-    active[3]=1;
-    ends[3]=1;
-    tdone[3]=1;
+  public void thread2169(int [] tdone, int [] ends){
+        S2164=1;
+    S2163=0;
+    active[9]=1;
+    ends[9]=1;
+    tdone[9]=1;
   }
 
-  public void thread1448(int [] tdone, int [] ends){
-        S35=1;
-    vacOn.setPresent();//sysj\controller.sysj line: 33, column: 9
-    currsigs.addElement(vacOn);
+  public void thread2168(int [] tdone, int [] ends){
+        S2143=1;
+    S464=0;
+    System.out.println("entering auto");//sysj\controller.sysj line: 13, column: 7
+    S10=0;
+    armDest.setPresent();//sysj\controller.sysj line: 15, column: 8
+    currsigs.addElement(armDest);
     active[2]=1;
     ends[2]=1;
     tdone[2]=1;
-  }
-
-  public void thread1446(int [] tdone, int [] ends){
-        if(vacOnM.getprestatus()){//sysj\controller.sysj line: 59, column: 17
-      vacOn.setPresent();//sysj\controller.sysj line: 59, column: 27
-      currsigs.addElement(vacOn);
-      active[7]=0;
-      ends[7]=0;
-      tdone[7]=1;
-    }
-    else {
-      active[7]=0;
-      ends[7]=0;
-      tdone[7]=1;
-    }
-  }
-
-  public void thread1445(int [] tdone, int [] ends){
-        if(armSourceM.getprestatus()){//sysj\controller.sysj line: 58, column: 17
-      armSource.setPresent();//sysj\controller.sysj line: 58, column: 31
-      currsigs.addElement(armSource);
-      active[6]=0;
-      ends[6]=0;
-      tdone[6]=1;
-    }
-    else {
-      active[6]=0;
-      ends[6]=0;
-      tdone[6]=1;
-    }
-  }
-
-  public void thread1444(int [] tdone, int [] ends){
-        if(armDestM.getprestatus()){//sysj\controller.sysj line: 57, column: 17
-      armDest.setPresent();//sysj\controller.sysj line: 57, column: 29
-      currsigs.addElement(armDest);
-      active[5]=0;
-      ends[5]=0;
-      tdone[5]=1;
-    }
-    else {
-      active[5]=0;
-      ends[5]=0;
-      tdone[5]=1;
-    }
-  }
-
-  public void thread1443(int [] tdone, int [] ends){
-        if(pusherExtendM.getprestatus()){//sysj\controller.sysj line: 56, column: 17
-      pusherExtend.setPresent();//sysj\controller.sysj line: 56, column: 34
-      currsigs.addElement(pusherExtend);
-      active[4]=0;
-      ends[4]=0;
-      tdone[4]=1;
-    }
-    else {
-      active[4]=0;
-      ends[4]=0;
-      tdone[4]=1;
-    }
   }
 
   public void runClockDomain(){
@@ -212,276 +751,55 @@ public class Controller extends ClockDomain{
     }
     
     RUN: while(true){
-      switch(S1441){
+      switch(S2166){
         case 0 : 
-          S1441=0;
+          S2166=0;
           break RUN;
         
         case 1 : 
-          S1441=2;
-          S1441=2;
-          S479=0;
-          active[1]=1;
-          ends[1]=1;
-          break RUN;
+          S2166=2;
+          S2166=2;
+          manualMode_1.setClear();//sysj\controller.sysj line: 9, column: 4
+          autoMode_1.setClear();//sysj\controller.sysj line: 9, column: 4
+          thread2168(tdone,ends);
+          thread2169(tdone,ends);
+          int biggest2170 = 0;
+          if(ends[2]>=biggest2170){
+            biggest2170=ends[2];
+          }
+          if(ends[9]>=biggest2170){
+            biggest2170=ends[9];
+          }
+          if(biggest2170 == 1){
+            active[1]=1;
+            ends[1]=1;
+            break RUN;
+          }
         
         case 2 : 
-          switch(S479){
-            case 0 : 
-              if(mode.getprestatus()){//sysj\controller.sysj line: 10, column: 11
-                S479=1;
-                if((mode.getpreval() == null ? null : ((Integer)mode.getpreval())) == 0){//sysj\controller.sysj line: 11, column: 9
-                  S239=0;
-                  S4=0;
-                  active[1]=1;
-                  ends[1]=1;
-                  break RUN;
-                }
-                else {
-                  S239=1;
-                  S238=0;
-                  thread1443(tdone,ends);
-                  thread1444(tdone,ends);
-                  thread1445(tdone,ends);
-                  thread1446(tdone,ends);
-                  int biggest1447 = 0;
-                  if(ends[4]>=biggest1447){
-                    biggest1447=ends[4];
-                  }
-                  if(ends[5]>=biggest1447){
-                    biggest1447=ends[5];
-                  }
-                  if(ends[6]>=biggest1447){
-                    biggest1447=ends[6];
-                  }
-                  if(ends[7]>=biggest1447){
-                    biggest1447=ends[7];
-                  }
-                  //FINXME code
-                  if(biggest1447 == 0){
-                    S238=1;
-                    active[1]=1;
-                    ends[1]=1;
-                    break RUN;
-                  }
-                }
-              }
-              else {
-                active[1]=1;
-                ends[1]=1;
-                break RUN;
-              }
-            
-            case 1 : 
-              switch(S239){
-                case 0 : 
-                  switch(S4){
-                    case 0 : 
-                      if(!empty.getprestatus()){//sysj\controller.sysj line: 13, column: 13
-                        S4=1;
-                        active[1]=1;
-                        ends[1]=1;
-                        break RUN;
-                      }
-                      else {
-                        active[1]=1;
-                        ends[1]=1;
-                        break RUN;
-                      }
-                    
-                    case 1 : 
-                      if(request.getprestatus()){//sysj\controller.sysj line: 14, column: 13
-                        S4=2;
-                        armDest.setPresent();//sysj\controller.sysj line: 17, column: 8
-                        currsigs.addElement(armDest);
-                        active[1]=1;
-                        ends[1]=1;
-                        break RUN;
-                      }
-                      else {
-                        active[1]=1;
-                        ends[1]=1;
-                        break RUN;
-                      }
-                    
-                    case 2 : 
-                      if(armAtDest.getprestatus()){//sysj\controller.sysj line: 15, column: 13
-                        S4=3;
-                        pusherExtend.setPresent();//sysj\controller.sysj line: 22, column: 8
-                        currsigs.addElement(pusherExtend);
-                        active[1]=1;
-                        ends[1]=1;
-                        break RUN;
-                      }
-                      else {
-                        armDest.setPresent();//sysj\controller.sysj line: 17, column: 8
-                        currsigs.addElement(armDest);
-                        active[1]=1;
-                        ends[1]=1;
-                        break RUN;
-                      }
-                    
-                    case 3 : 
-                      if(pusherExtended.getprestatus()){//sysj\controller.sysj line: 19, column: 13
-                        S4=4;
-                        active[1]=1;
-                        ends[1]=1;
-                        break RUN;
-                      }
-                      else {
-                        pusherExtend.setPresent();//sysj\controller.sysj line: 22, column: 8
-                        currsigs.addElement(pusherExtend);
-                        active[1]=1;
-                        ends[1]=1;
-                        break RUN;
-                      }
-                    
-                    case 4 : 
-                      if(pusherRetracted.getprestatus()){//sysj\controller.sysj line: 25, column: 13
-                        S4=5;
-                        armSource.setPresent();//sysj\controller.sysj line: 29, column: 8
-                        currsigs.addElement(armSource);
-                        active[1]=1;
-                        ends[1]=1;
-                        break RUN;
-                      }
-                      else {
-                        active[1]=1;
-                        ends[1]=1;
-                        break RUN;
-                      }
-                    
-                    case 5 : 
-                      if(armAtSource.getprestatus()){//sysj\controller.sysj line: 27, column: 13
-                        S4=6;
-                        thread1448(tdone,ends);
-                        thread1449(tdone,ends);
-                        int biggest1450 = 0;
-                        if(ends[2]>=biggest1450){
-                          biggest1450=ends[2];
-                        }
-                        if(ends[3]>=biggest1450){
-                          biggest1450=ends[3];
-                        }
-                        if(biggest1450 == 1){
-                          active[1]=1;
-                          ends[1]=1;
-                          break RUN;
-                        }
-                      }
-                      else {
-                        armSource.setPresent();//sysj\controller.sysj line: 29, column: 8
-                        currsigs.addElement(armSource);
-                        active[1]=1;
-                        ends[1]=1;
-                        break RUN;
-                      }
-                    
-                    case 6 : 
-                      thread1451(tdone,ends);
-                      thread1452(tdone,ends);
-                      int biggest1453 = 0;
-                      if(ends[2]>=biggest1453){
-                        biggest1453=ends[2];
-                      }
-                      if(ends[3]>=biggest1453){
-                        biggest1453=ends[3];
-                      }
-                      if(biggest1453 == 1){
-                        active[1]=1;
-                        ends[1]=1;
-                        break RUN;
-                      }
-                      if(biggest1453 == 2){
-                        ends[1]=2;
-                        ;//sysj\controller.sysj line: 31, column: 7
-                        S4=7;
-                        active[1]=1;
-                        ends[1]=1;
-                        break RUN;
-                      }
-                      //FINXME code
-                      if(biggest1453 == 0){
-                        S4=7;
-                        active[1]=1;
-                        ends[1]=1;
-                        break RUN;
-                      }
-                    
-                    case 7 : 
-                      if(!WPgripped.getprestatus()){//sysj\controller.sysj line: 45, column: 14
-                        S4=8;
-                        armSource.setPresent();//sysj\controller.sysj line: 48, column: 9
-                        currsigs.addElement(armSource);
-                        active[1]=1;
-                        ends[1]=1;
-                        break RUN;
-                      }
-                      else {
-                        active[1]=1;
-                        ends[1]=1;
-                        break RUN;
-                      }
-                    
-                    case 8 : 
-                      if(armAtSource.getprestatus()){//sysj\controller.sysj line: 46, column: 14
-                        S4=0;
-                        active[1]=1;
-                        ends[1]=1;
-                        break RUN;
-                      }
-                      else {
-                        armSource.setPresent();//sysj\controller.sysj line: 48, column: 9
-                        currsigs.addElement(armSource);
-                        active[1]=1;
-                        ends[1]=1;
-                        break RUN;
-                      }
-                    
-                  }
-                  break;
-                
-                case 1 : 
-                  switch(S238){
-                    case 0 : 
-                      thread1454(tdone,ends);
-                      thread1455(tdone,ends);
-                      thread1456(tdone,ends);
-                      thread1457(tdone,ends);
-                      int biggest1458 = 0;
-                      if(ends[4]>=biggest1458){
-                        biggest1458=ends[4];
-                      }
-                      if(ends[5]>=biggest1458){
-                        biggest1458=ends[5];
-                      }
-                      if(ends[6]>=biggest1458){
-                        biggest1458=ends[6];
-                      }
-                      if(ends[7]>=biggest1458){
-                        biggest1458=ends[7];
-                      }
-                      //FINXME code
-                      if(biggest1458 == 0){
-                        S238=1;
-                        active[1]=1;
-                        ends[1]=1;
-                        break RUN;
-                      }
-                    
-                    case 1 : 
-                      S238=1;
-                      S479=0;
-                      active[1]=1;
-                      ends[1]=1;
-                      break RUN;
-                    
-                  }
-                  break;
-                
-              }
-              break;
-            
+          manualMode_1.setClear();//sysj\controller.sysj line: 9, column: 4
+          autoMode_1.setClear();//sysj\controller.sysj line: 9, column: 4
+          thread2171(tdone,ends);
+          thread2188(tdone,ends);
+          int biggest2189 = 0;
+          if(ends[2]>=biggest2189){
+            biggest2189=ends[2];
+          }
+          if(ends[9]>=biggest2189){
+            biggest2189=ends[9];
+          }
+          if(biggest2189 == 1){
+            active[1]=1;
+            ends[1]=1;
+            break RUN;
+          }
+          //FINXME code
+          if(biggest2189 == 0){
+            S2166=0;
+            active[1]=0;
+            ends[1]=0;
+            S2166=0;
+            break RUN;
           }
         
       }
@@ -489,13 +807,15 @@ public class Controller extends ClockDomain{
   }
 
   public void init(){
-    char [] active1 = {1, 1, 1, 1, 1, 1, 1, 1};
-    char [] paused1 = {0, 0, 0, 0, 0, 0, 0, 0};
-    char [] suspended1 = {0, 0, 0, 0, 0, 0, 0, 0};
+    char [] active1 = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+    char [] paused1 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    char [] suspended1 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     paused = paused1;
     active = active1;
     suspended = suspended1;
     // Now instantiate all the local signals ONLY
+    manualMode_1 = new Signal();
+    autoMode_1 = new Signal();
     // --------------------------------------------------
   }
   
@@ -542,6 +862,8 @@ public class Controller extends ClockDomain{
       vacOn.setpreclear();
       armSource.setpreclear();
       armDest.setpreclear();
+      manualMode_1.setpreclear();
+      autoMode_1.setpreclear();
       int dummyint = 0;
       for(int qw=0;qw<currsigs.size();++qw){
         dummyint = ((Signal)currsigs.elementAt(qw)).getStatus() ? ((Signal)currsigs.elementAt(qw)).setprepresent() : ((Signal)currsigs.elementAt(qw)).setpreclear();
@@ -592,6 +914,8 @@ public class Controller extends ClockDomain{
       armSource.setClear();
       armDest.sethook();
       armDest.setClear();
+      manualMode_1.setClear();
+      autoMode_1.setClear();
       if(paused[1]!=0 || suspended[1]!=0 || active[1]!=1);
       else{
         pusherRetracted.gethook();

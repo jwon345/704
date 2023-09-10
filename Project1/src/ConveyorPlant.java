@@ -19,23 +19,23 @@ public class ConveyorPlant extends ClockDomain{
   public Signal bottleAtPos1E = new Signal("bottleAtPos1E", Signal.OUTPUT);
   public Signal bottleLeftPos5E = new Signal("bottleLeftPos5E", Signal.OUTPUT);
   private long __start_thread_7;//sysj\conveyor_plant.sysj line: 38, column: 26
-  private int S42956 = 1;
-  private int S42762 = 1;
-  private int S42756 = 1;
-  private int S42854 = 1;
-  private int S42770 = 1;
-  private int S42764 = 1;
-  private int S42844 = 1;
-  private int S42794 = 1;
-  private int S42775 = 1;
-  private int S42791 = 1;
-  private int S42852 = 1;
+  private int S36105 = 1;
+  private int S35911 = 1;
+  private int S35905 = 1;
+  private int S36003 = 1;
+  private int S35919 = 1;
+  private int S35913 = 1;
+  private int S35993 = 1;
+  private int S35943 = 1;
+  private int S35924 = 1;
+  private int S35940 = 1;
+  private int S36001 = 1;
   
   private int[] ends = new int[36];
   private int[] tdone = new int[36];
   
-  public void thread44063(int [] tdone, int [] ends){
-        switch(S42852){
+  public void thread36886(int [] tdone, int [] ends){
+        switch(S36001){
       case 0 : 
         active[8]=0;
         ends[8]=0;
@@ -60,8 +60,8 @@ public class ConveyorPlant extends ClockDomain{
     }
   }
 
-  public void thread44061(int [] tdone, int [] ends){
-        S42791=1;
+  public void thread36884(int [] tdone, int [] ends){
+        S35940=1;
     __start_thread_7 = com.systemj.Timer.getMs();//sysj\conveyor_plant.sysj line: 38, column: 26
     if(com.systemj.Timer.getMs() - __start_thread_7 >= (1) * 1000){//sysj\conveyor_plant.sysj line: 38, column: 26
       ends[7]=3;
@@ -76,8 +76,8 @@ public class ConveyorPlant extends ClockDomain{
     }
   }
 
-  public void thread44060(int [] tdone, int [] ends){
-        S42775=1;
+  public void thread36883(int [] tdone, int [] ends){
+        S35924=1;
     bottleAtPos1E.setPresent();//sysj\conveyor_plant.sysj line: 35, column: 30
     currsigs.addElement(bottleAtPos1E);
     active[6]=1;
@@ -85,8 +85,8 @@ public class ConveyorPlant extends ClockDomain{
     tdone[6]=1;
   }
 
-  public void thread44058(int [] tdone, int [] ends){
-        switch(S42791){
+  public void thread36881(int [] tdone, int [] ends){
+        switch(S35940){
       case 0 : 
         active[7]=0;
         ends[7]=0;
@@ -110,8 +110,8 @@ public class ConveyorPlant extends ClockDomain{
     }
   }
 
-  public void thread44057(int [] tdone, int [] ends){
-        switch(S42775){
+  public void thread36880(int [] tdone, int [] ends){
+        switch(S35924){
       case 0 : 
         active[6]=0;
         ends[6]=0;
@@ -129,8 +129,8 @@ public class ConveyorPlant extends ClockDomain{
     }
   }
 
-  public void thread44056(int [] tdone, int [] ends){
-        switch(S42844){
+  public void thread36879(int [] tdone, int [] ends){
+        switch(S35993){
       case 0 : 
         active[5]=0;
         ends[5]=0;
@@ -138,33 +138,33 @@ public class ConveyorPlant extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S42794){
+        switch(S35943){
           case 0 : 
-            thread44057(tdone,ends);
-            thread44058(tdone,ends);
-            int biggest44059 = 0;
-            if(ends[6]>=biggest44059){
-              biggest44059=ends[6];
+            thread36880(tdone,ends);
+            thread36881(tdone,ends);
+            int biggest36882 = 0;
+            if(ends[6]>=biggest36882){
+              biggest36882=ends[6];
             }
-            if(ends[7]>=biggest44059){
-              biggest44059=ends[7];
+            if(ends[7]>=biggest36882){
+              biggest36882=ends[7];
             }
-            if(biggest44059 == 1){
+            if(biggest36882 == 1){
               active[5]=1;
               ends[5]=1;
               tdone[5]=1;
             }
-            if(biggest44059 == 2){
+            if(biggest36882 == 2){
               ends[5]=2;
               ;//sysj\conveyor_plant.sysj line: 33, column: 22
-              S42794=1;
+              S35943=1;
               active[5]=1;
               ends[5]=1;
               tdone[5]=1;
             }
             //FINXME code
-            if(biggest44059 == 0){
-              S42794=1;
+            if(biggest36882 == 0){
+              S35943=1;
               active[5]=1;
               ends[5]=1;
               tdone[5]=1;
@@ -172,34 +172,34 @@ public class ConveyorPlant extends ClockDomain{
             break;
           
           case 1 : 
-            S42794=1;
-            S42794=0;
+            S35943=1;
+            S35943=0;
             if(bottleAtPos1.getprestatus()){//sysj\conveyor_plant.sysj line: 32, column: 26
-              thread44060(tdone,ends);
-              thread44061(tdone,ends);
-              int biggest44062 = 0;
-              if(ends[6]>=biggest44062){
-                biggest44062=ends[6];
+              thread36883(tdone,ends);
+              thread36884(tdone,ends);
+              int biggest36885 = 0;
+              if(ends[6]>=biggest36885){
+                biggest36885=ends[6];
               }
-              if(ends[7]>=biggest44062){
-                biggest44062=ends[7];
+              if(ends[7]>=biggest36885){
+                biggest36885=ends[7];
               }
-              if(biggest44062 == 1){
+              if(biggest36885 == 1){
                 active[5]=1;
                 ends[5]=1;
                 tdone[5]=1;
               }
-              if(biggest44062 == 2){
+              if(biggest36885 == 2){
                 ends[5]=2;
                 ;//sysj\conveyor_plant.sysj line: 33, column: 22
-                S42794=1;
+                S35943=1;
                 active[5]=1;
                 ends[5]=1;
                 tdone[5]=1;
               }
             }
             else {
-              S42794=1;
+              S35943=1;
               active[5]=1;
               ends[5]=1;
               tdone[5]=1;
@@ -212,8 +212,8 @@ public class ConveyorPlant extends ClockDomain{
     }
   }
 
-  public void thread44055(int [] tdone, int [] ends){
-        switch(S42770){
+  public void thread36878(int [] tdone, int [] ends){
+        switch(S35919){
       case 0 : 
         active[4]=0;
         ends[4]=0;
@@ -221,19 +221,19 @@ public class ConveyorPlant extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S42764){
+        switch(S35913){
           case 0 : 
-            S42764=0;
+            S35913=0;
             if(motConveyorOnOff.getprestatus()){//sysj\conveyor_plant.sysj line: 28, column: 31
               motConveyorOnOffE.setPresent();//sysj\conveyor_plant.sysj line: 28, column: 49
               currsigs.addElement(motConveyorOnOffE);
-              S42764=1;
+              S35913=1;
               active[4]=1;
               ends[4]=1;
               tdone[4]=1;
             }
             else {
-              S42764=1;
+              S35913=1;
               active[4]=1;
               ends[4]=1;
               tdone[4]=1;
@@ -241,18 +241,18 @@ public class ConveyorPlant extends ClockDomain{
             break;
           
           case 1 : 
-            S42764=1;
-            S42764=0;
+            S35913=1;
+            S35913=0;
             if(motConveyorOnOff.getprestatus()){//sysj\conveyor_plant.sysj line: 28, column: 31
               motConveyorOnOffE.setPresent();//sysj\conveyor_plant.sysj line: 28, column: 49
               currsigs.addElement(motConveyorOnOffE);
-              S42764=1;
+              S35913=1;
               active[4]=1;
               ends[4]=1;
               tdone[4]=1;
             }
             else {
-              S42764=1;
+              S35913=1;
               active[4]=1;
               ends[4]=1;
               tdone[4]=1;
@@ -265,8 +265,8 @@ public class ConveyorPlant extends ClockDomain{
     }
   }
 
-  public void thread44054(int [] tdone, int [] ends){
-        switch(S42854){
+  public void thread36877(int [] tdone, int [] ends){
+        switch(S36003){
       case 0 : 
         active[3]=0;
         ends[3]=0;
@@ -274,27 +274,27 @@ public class ConveyorPlant extends ClockDomain{
         break;
       
       case 1 : 
-        thread44055(tdone,ends);
-        thread44056(tdone,ends);
-        thread44063(tdone,ends);
-        int biggest44064 = 0;
-        if(ends[4]>=biggest44064){
-          biggest44064=ends[4];
+        thread36878(tdone,ends);
+        thread36879(tdone,ends);
+        thread36886(tdone,ends);
+        int biggest36887 = 0;
+        if(ends[4]>=biggest36887){
+          biggest36887=ends[4];
         }
-        if(ends[5]>=biggest44064){
-          biggest44064=ends[5];
+        if(ends[5]>=biggest36887){
+          biggest36887=ends[5];
         }
-        if(ends[8]>=biggest44064){
-          biggest44064=ends[8];
+        if(ends[8]>=biggest36887){
+          biggest36887=ends[8];
         }
-        if(biggest44064 == 1){
+        if(biggest36887 == 1){
           active[3]=1;
           ends[3]=1;
           tdone[3]=1;
         }
         //FINXME code
-        if(biggest44064 == 0){
-          S42854=0;
+        if(biggest36887 == 0){
+          S36003=0;
           active[3]=0;
           ends[3]=0;
           tdone[3]=1;
@@ -304,8 +304,8 @@ public class ConveyorPlant extends ClockDomain{
     }
   }
 
-  public void thread44053(int [] tdone, int [] ends){
-        switch(S42762){
+  public void thread36876(int [] tdone, int [] ends){
+        switch(S35911){
       case 0 : 
         active[2]=0;
         ends[2]=0;
@@ -313,12 +313,12 @@ public class ConveyorPlant extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S42756){
+        switch(S35905){
           case 0 : 
             if(motConveyorOnOff.getprestatus()){//sysj\conveyor_plant.sysj line: 15, column: 16
               bottleAtPos1.setPresent();//sysj\conveyor_plant.sysj line: 17, column: 10
               currsigs.addElement(bottleAtPos1);
-              S42756=1;
+              S35905=1;
               active[2]=1;
               ends[2]=1;
               tdone[2]=1;
@@ -331,8 +331,8 @@ public class ConveyorPlant extends ClockDomain{
             break;
           
           case 1 : 
-            S42756=1;
-            S42756=0;
+            S35905=1;
+            S35905=0;
             active[2]=1;
             ends[2]=1;
             tdone[2]=1;
@@ -344,8 +344,8 @@ public class ConveyorPlant extends ClockDomain{
     }
   }
 
-  public void thread44050(int [] tdone, int [] ends){
-        S42852=1;
+  public void thread36873(int [] tdone, int [] ends){
+        S36001=1;
     if(bottleLeftPos5.getprestatus()){//sysj\conveyor_plant.sysj line: 48, column: 31
       bottleLeftPos5E.setPresent();//sysj\conveyor_plant.sysj line: 48, column: 47
       currsigs.addElement(bottleLeftPos5E);
@@ -360,8 +360,8 @@ public class ConveyorPlant extends ClockDomain{
     }
   }
 
-  public void thread44048(int [] tdone, int [] ends){
-        S42791=1;
+  public void thread36871(int [] tdone, int [] ends){
+        S35940=1;
     __start_thread_7 = com.systemj.Timer.getMs();//sysj\conveyor_plant.sysj line: 38, column: 26
     if(com.systemj.Timer.getMs() - __start_thread_7 >= (1) * 1000){//sysj\conveyor_plant.sysj line: 38, column: 26
       ends[7]=3;
@@ -376,8 +376,8 @@ public class ConveyorPlant extends ClockDomain{
     }
   }
 
-  public void thread44047(int [] tdone, int [] ends){
-        S42775=1;
+  public void thread36870(int [] tdone, int [] ends){
+        S35924=1;
     bottleAtPos1E.setPresent();//sysj\conveyor_plant.sysj line: 35, column: 30
     currsigs.addElement(bottleAtPos1E);
     active[6]=1;
@@ -385,85 +385,85 @@ public class ConveyorPlant extends ClockDomain{
     tdone[6]=1;
   }
 
-  public void thread44046(int [] tdone, int [] ends){
-        S42844=1;
-    S42794=0;
+  public void thread36869(int [] tdone, int [] ends){
+        S35993=1;
+    S35943=0;
     if(bottleAtPos1.getprestatus()){//sysj\conveyor_plant.sysj line: 32, column: 26
-      thread44047(tdone,ends);
-      thread44048(tdone,ends);
-      int biggest44049 = 0;
-      if(ends[6]>=biggest44049){
-        biggest44049=ends[6];
+      thread36870(tdone,ends);
+      thread36871(tdone,ends);
+      int biggest36872 = 0;
+      if(ends[6]>=biggest36872){
+        biggest36872=ends[6];
       }
-      if(ends[7]>=biggest44049){
-        biggest44049=ends[7];
+      if(ends[7]>=biggest36872){
+        biggest36872=ends[7];
       }
-      if(biggest44049 == 1){
+      if(biggest36872 == 1){
         active[5]=1;
         ends[5]=1;
         tdone[5]=1;
       }
-      if(biggest44049 == 2){
+      if(biggest36872 == 2){
         ends[5]=2;
         ;//sysj\conveyor_plant.sysj line: 33, column: 22
-        S42794=1;
+        S35943=1;
         active[5]=1;
         ends[5]=1;
         tdone[5]=1;
       }
     }
     else {
-      S42794=1;
+      S35943=1;
       active[5]=1;
       ends[5]=1;
       tdone[5]=1;
     }
   }
 
-  public void thread44045(int [] tdone, int [] ends){
-        S42770=1;
-    S42764=0;
+  public void thread36868(int [] tdone, int [] ends){
+        S35919=1;
+    S35913=0;
     if(motConveyorOnOff.getprestatus()){//sysj\conveyor_plant.sysj line: 28, column: 31
       motConveyorOnOffE.setPresent();//sysj\conveyor_plant.sysj line: 28, column: 49
       currsigs.addElement(motConveyorOnOffE);
-      S42764=1;
+      S35913=1;
       active[4]=1;
       ends[4]=1;
       tdone[4]=1;
     }
     else {
-      S42764=1;
+      S35913=1;
       active[4]=1;
       ends[4]=1;
       tdone[4]=1;
     }
   }
 
-  public void thread44044(int [] tdone, int [] ends){
-        S42854=1;
-    thread44045(tdone,ends);
-    thread44046(tdone,ends);
-    thread44050(tdone,ends);
-    int biggest44051 = 0;
-    if(ends[4]>=biggest44051){
-      biggest44051=ends[4];
+  public void thread36867(int [] tdone, int [] ends){
+        S36003=1;
+    thread36868(tdone,ends);
+    thread36869(tdone,ends);
+    thread36873(tdone,ends);
+    int biggest36874 = 0;
+    if(ends[4]>=biggest36874){
+      biggest36874=ends[4];
     }
-    if(ends[5]>=biggest44051){
-      biggest44051=ends[5];
+    if(ends[5]>=biggest36874){
+      biggest36874=ends[5];
     }
-    if(ends[8]>=biggest44051){
-      biggest44051=ends[8];
+    if(ends[8]>=biggest36874){
+      biggest36874=ends[8];
     }
-    if(biggest44051 == 1){
+    if(biggest36874 == 1){
       active[3]=1;
       ends[3]=1;
       tdone[3]=1;
     }
   }
 
-  public void thread44043(int [] tdone, int [] ends){
-        S42762=1;
-    S42756=0;
+  public void thread36866(int [] tdone, int [] ends){
+        S35911=1;
+    S35905=0;
     active[2]=1;
     ends[2]=1;
     tdone[2]=1;
@@ -476,51 +476,51 @@ public class ConveyorPlant extends ClockDomain{
     }
     
     RUN: while(true){
-      switch(S42956){
+      switch(S36105){
         case 0 : 
-          S42956=0;
+          S36105=0;
           break RUN;
         
         case 1 : 
-          S42956=2;
-          S42956=2;
+          S36105=2;
+          S36105=2;
           new Thread(new GUI()).start();//sysj\conveyor_plant.sysj line: 11, column: 2
-          thread44043(tdone,ends);
-          thread44044(tdone,ends);
-          int biggest44052 = 0;
-          if(ends[2]>=biggest44052){
-            biggest44052=ends[2];
+          thread36866(tdone,ends);
+          thread36867(tdone,ends);
+          int biggest36875 = 0;
+          if(ends[2]>=biggest36875){
+            biggest36875=ends[2];
           }
-          if(ends[3]>=biggest44052){
-            biggest44052=ends[3];
+          if(ends[3]>=biggest36875){
+            biggest36875=ends[3];
           }
-          if(biggest44052 == 1){
+          if(biggest36875 == 1){
             active[1]=1;
             ends[1]=1;
             break RUN;
           }
         
         case 2 : 
-          thread44053(tdone,ends);
-          thread44054(tdone,ends);
-          int biggest44065 = 0;
-          if(ends[2]>=biggest44065){
-            biggest44065=ends[2];
+          thread36876(tdone,ends);
+          thread36877(tdone,ends);
+          int biggest36888 = 0;
+          if(ends[2]>=biggest36888){
+            biggest36888=ends[2];
           }
-          if(ends[3]>=biggest44065){
-            biggest44065=ends[3];
+          if(ends[3]>=biggest36888){
+            biggest36888=ends[3];
           }
-          if(biggest44065 == 1){
+          if(biggest36888 == 1){
             active[1]=1;
             ends[1]=1;
             break RUN;
           }
           //FINXME code
-          if(biggest44065 == 0){
-            S42956=0;
+          if(biggest36888 == 0){
+            S36105=0;
             active[1]=0;
             ends[1]=0;
-            S42956=0;
+            S36105=0;
             break RUN;
           }
         

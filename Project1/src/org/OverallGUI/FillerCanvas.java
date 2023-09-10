@@ -59,7 +59,7 @@ public class FillerCanvas extends JPanel {
 	        }
 	        
 	        else {
-	        	 g.drawImage(filler, 80, 50, null);
+	        	 g.drawImage(filler, 80, 0, null);
 	        }
 
 	        g.setColor(Color.gray);

@@ -88,10 +88,12 @@ FillerPlant(
 						await(valveInjectorOnOff);	
 						waitl(1 s);  // Delay before filling
 						emit dosUnitFilled;
+			
 						System.out.println("*Filler - Bottle Filled (Pressure Can At Top) *");
 						await(valveInletOnOff);
 						waitl(1 s);  // Delay before filling
 						emit dosUnitEvac;
+				
 						System.out.println("*Filler - Inlet Open (Pressure Can At Bottem) *");
 					}
 				}
@@ -143,12 +145,12 @@ FillerPlant(
 								}
 
 								await (gripperTurnRetract);
-								waitl (1s);
+								waitl (1 s);
 								emit gripperTurnHomePos;
 								pause;
 								
 								await (cylPos5ZaxisExtend);
-								waitl (1s);
+								waitl (1 s);
 								emit gripperZAxisLowered;
 								pause;
 								
@@ -156,7 +158,7 @@ FillerPlant(
 								emit gripperTurnFinalPos;
 								pause;
 
-								waitl (1s);
+								//waitl (1s);
 								emit gripperZAxisLifted;
 								}
 							}
