@@ -43,7 +43,10 @@ public class Canvas extends JPanel {
 	@Override
 	protected void paintComponent(Graphics g){
 		super.paintComponent(g);
-
+		
+		g.setColor(Color.BLACK);
+		g.drawString("Lid Loader", 140, 20);
+		
 		//LID LOADER SECTION
 		g.drawImage(loader, 0, 100, null);
 		

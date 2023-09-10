@@ -2049,7 +2049,7 @@ public class RotaryController extends ClockDomain{
                     ;//sysj\conveyor_controller.sysj line: 291, column: 13
                     S4066=5;
                     __start_thread_27 = com.systemj.Timer.getMs();//sysj\conveyor_controller.sysj line: 244, column: 7
-                    if(com.systemj.Timer.getMs() - __start_thread_27 >= (5) * 1000){//sysj\conveyor_controller.sysj line: 244, column: 7
+                    if(com.systemj.Timer.getMs() - __start_thread_27 >= (3) * 1000){//sysj\conveyor_controller.sysj line: 244, column: 7
                       ends[27]=2;
                       ;//sysj\conveyor_controller.sysj line: 244, column: 7
                       S4066=6;
@@ -2105,7 +2105,7 @@ public class RotaryController extends ClockDomain{
                           ;//sysj\conveyor_controller.sysj line: 291, column: 13
                           S4066=5;
                           __start_thread_27 = com.systemj.Timer.getMs();//sysj\conveyor_controller.sysj line: 244, column: 7
-                          if(com.systemj.Timer.getMs() - __start_thread_27 >= (5) * 1000){//sysj\conveyor_controller.sysj line: 244, column: 7
+                          if(com.systemj.Timer.getMs() - __start_thread_27 >= (3) * 1000){//sysj\conveyor_controller.sysj line: 244, column: 7
                             ends[27]=2;
                             ;//sysj\conveyor_controller.sysj line: 244, column: 7
                             S4066=6;
@@ -2139,7 +2139,7 @@ public class RotaryController extends ClockDomain{
                         ;//sysj\conveyor_controller.sysj line: 291, column: 13
                         S4066=5;
                         __start_thread_27 = com.systemj.Timer.getMs();//sysj\conveyor_controller.sysj line: 244, column: 7
-                        if(com.systemj.Timer.getMs() - __start_thread_27 >= (5) * 1000){//sysj\conveyor_controller.sysj line: 244, column: 7
+                        if(com.systemj.Timer.getMs() - __start_thread_27 >= (3) * 1000){//sysj\conveyor_controller.sysj line: 244, column: 7
                           ends[27]=2;
                           ;//sysj\conveyor_controller.sysj line: 244, column: 7
                           S4066=6;
@@ -2185,7 +2185,7 @@ public class RotaryController extends ClockDomain{
                       ;//sysj\conveyor_controller.sysj line: 291, column: 13
                       S4066=5;
                       __start_thread_27 = com.systemj.Timer.getMs();//sysj\conveyor_controller.sysj line: 244, column: 7
-                      if(com.systemj.Timer.getMs() - __start_thread_27 >= (5) * 1000){//sysj\conveyor_controller.sysj line: 244, column: 7
+                      if(com.systemj.Timer.getMs() - __start_thread_27 >= (3) * 1000){//sysj\conveyor_controller.sysj line: 244, column: 7
                         ends[27]=2;
                         ;//sysj\conveyor_controller.sysj line: 244, column: 7
                         S4066=6;
@@ -2217,7 +2217,7 @@ public class RotaryController extends ClockDomain{
             break;
           
           case 5 : 
-            if(com.systemj.Timer.getMs() - __start_thread_27 >= (5) * 1000){//sysj\conveyor_controller.sysj line: 244, column: 7
+            if(com.systemj.Timer.getMs() - __start_thread_27 >= (3) * 1000){//sysj\conveyor_controller.sysj line: 244, column: 7
               ends[27]=2;
               ;//sysj\conveyor_controller.sysj line: 244, column: 7
               S4066=6;
@@ -2237,7 +2237,7 @@ public class RotaryController extends ClockDomain{
             i_thread_27 = 0;//sysj\conveyor_controller.sysj line: 294, column: 10
             S4066=7;
             i_thread_27 = i_thread_27 + 1;//sysj\conveyor_controller.sysj line: 297, column: 12
-            if(i_thread_27 > 5){//sysj\conveyor_controller.sysj line: 298, column: 15
+            if(i_thread_27 > 300){//sysj\conveyor_controller.sysj line: 298, column: 15
               ends[27]=2;
               ;//sysj\conveyor_controller.sysj line: 295, column: 10
               S4066=0;
@@ -2273,7 +2273,7 @@ public class RotaryController extends ClockDomain{
           
           case 7 : 
             i_thread_27 = i_thread_27 + 1;//sysj\conveyor_controller.sysj line: 297, column: 12
-            if(i_thread_27 > 5){//sysj\conveyor_controller.sysj line: 298, column: 15
+            if(i_thread_27 > 300){//sysj\conveyor_controller.sysj line: 298, column: 15
               ends[27]=2;
               ;//sysj\conveyor_controller.sysj line: 295, column: 10
               S4066=0;

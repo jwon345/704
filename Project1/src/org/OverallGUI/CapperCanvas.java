@@ -38,9 +38,17 @@ public class CapperCanvas extends JPanel {
 	protected void paintComponent(Graphics g){
 		super.paintComponent(g);
 		
+		g.setColor(Color.BLACK);
+		g.drawString("Capper", 10, 20);
+		
 		if (States.BOTTLE_AT_POS4) {
 		    g.drawImage(bottle, 150, 215, null);
-		}
+		    g.setColor(Color.PINK);
+		    g.fillRect(157, 220, 33, 7);
+		    g.setColor(Color.cyan);
+		    g.fillRect(157, 290, 33, 15);
+		}	 
+		
 		
 		if (States.CYL_CLAMP_BOTTLE_EXTENDED) {
 		     g.drawImage(clamped, 70, 200, null);

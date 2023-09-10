@@ -289,13 +289,13 @@ RotaryController(
 	    		        await(tableAlignedWithSensor);
 	    		        System.out.println("*Rotary - Aligned*");
 	    		    	send rotated(Boolean.TRUE);
-	    		    	waitl(5 s);
+	    		    	waitl(3 s);
 	    		    	pause;
 	    				int i = 0;
 	    				trap(T){
 	    					loop{
 	    						i++;
-	    						if(i > 5)
+	    						if(i > 300)
 	    							exit(T);
 	    						pause;
 	    					}
@@ -391,7 +391,6 @@ FillerController(
 	    							sustain dosUnitValveRetract;
 	    						}
 	    					}
-	    					
 	    					
 	    					abort(dosUnitEvac){
 	    						{

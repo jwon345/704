@@ -32,6 +32,9 @@ public class FillerCanvas extends JPanel {
 	protected void paintComponent(Graphics g){
 		super.paintComponent(g);
 	        
+			g.setColor(Color.BLACK);
+			g.drawString("Filler", 10, 20);
+		
 		 	if (States.BOTTLE_AT_POS2) {
 	            g.drawImage(nocap, 175, 215, null);
 	        }

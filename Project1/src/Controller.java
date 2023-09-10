@@ -34,7 +34,7 @@ public class Controller extends ClockDomain{
   private Signal autoMode_75;
   private Signal bottleAtPos3_75;
   private Signal done_75;
-  private long __start_thread_81;//sysj\conveyor_controller.sysj line: 680, column: 32
+  private long __start_thread_81;//sysj\conveyor_controller.sysj line: 679, column: 32
   private int S95158 = 1;
   private int S95014 = 1;
   private int S95013 = 1;
@@ -81,7 +81,7 @@ public class Controller extends ClockDomain{
 
   public void thread95867(int [] tdone, int [] ends){
         S95123=1;
-    bottleAtPos3E.setPresent();//sysj\conveyor_controller.sysj line: 718, column: 22
+    bottleAtPos3E.setPresent();//sysj\conveyor_controller.sysj line: 717, column: 22
     currsigs.addElement(bottleAtPos3E);
     active[86]=1;
     ends[86]=1;
@@ -97,7 +97,7 @@ public class Controller extends ClockDomain{
         break;
       
       case 1 : 
-        if(done_75.getprestatus()){//sysj\conveyor_controller.sysj line: 722, column: 28
+        if(done_75.getprestatus()){//sysj\conveyor_controller.sysj line: 721, column: 28
           ends[87]=2;
           tdone[87]=1;
         }
@@ -120,7 +120,7 @@ public class Controller extends ClockDomain{
         break;
       
       case 1 : 
-        bottleAtPos3E.setPresent();//sysj\conveyor_controller.sysj line: 718, column: 22
+        bottleAtPos3E.setPresent();//sysj\conveyor_controller.sysj line: 717, column: 22
         currsigs.addElement(bottleAtPos3E);
         active[86]=1;
         ends[86]=1;
@@ -157,7 +157,7 @@ public class Controller extends ClockDomain{
             }
             if(biggest95866 == 2){
               ends[85]=2;
-              ;//sysj\conveyor_controller.sysj line: 716, column: 7
+              ;//sysj\conveyor_controller.sysj line: 715, column: 7
               S95130=1;
               active[85]=1;
               ends[85]=1;
@@ -165,7 +165,7 @@ public class Controller extends ClockDomain{
             }
             //FINXME code
             if(biggest95866 == 0){
-              ;//sysj\conveyor_controller.sysj line: 724, column: 19
+              ;//sysj\conveyor_controller.sysj line: 723, column: 19
               S95130=1;
               active[85]=1;
               ends[85]=1;
@@ -176,7 +176,7 @@ public class Controller extends ClockDomain{
           case 1 : 
             S95130=1;
             S95130=0;
-            if(bottleAtPos3_75.getprestatus()){//sysj\conveyor_controller.sysj line: 715, column: 20
+            if(bottleAtPos3_75.getprestatus()){//sysj\conveyor_controller.sysj line: 714, column: 20
               thread95867(tdone,ends);
               thread95868(tdone,ends);
               int biggest95869 = 0;
@@ -219,8 +219,8 @@ public class Controller extends ClockDomain{
           case 0 : 
             switch(S95042){
               case 0 : 
-                if(!checkThree_in.isPartnerPresent() || checkThree_in.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 705, column: 6
-                  checkThree_in.setACK(false);//sysj\conveyor_controller.sysj line: 705, column: 6
+                if(!checkThree_in.isPartnerPresent() || checkThree_in.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 704, column: 6
+                  checkThree_in.setACK(false);//sysj\conveyor_controller.sysj line: 704, column: 6
                   S95042=1;
                   active[84]=1;
                   ends[84]=1;
@@ -229,15 +229,15 @@ public class Controller extends ClockDomain{
                 else {
                   switch(S95037){
                     case 0 : 
-                      if(!checkThree_in.isREQ()){//sysj\conveyor_controller.sysj line: 705, column: 6
-                        checkThree_in.setACK(true);//sysj\conveyor_controller.sysj line: 705, column: 6
+                      if(!checkThree_in.isREQ()){//sysj\conveyor_controller.sysj line: 704, column: 6
+                        checkThree_in.setACK(true);//sysj\conveyor_controller.sysj line: 704, column: 6
                         S95037=1;
-                        if(checkThree_in.isREQ()){//sysj\conveyor_controller.sysj line: 705, column: 6
-                          checkThree_in.setACK(false);//sysj\conveyor_controller.sysj line: 705, column: 6
+                        if(checkThree_in.isREQ()){//sysj\conveyor_controller.sysj line: 704, column: 6
+                          checkThree_in.setACK(false);//sysj\conveyor_controller.sysj line: 704, column: 6
                           ends[84]=2;
-                          ;//sysj\conveyor_controller.sysj line: 705, column: 6
-                          if((Boolean)(checkThree_in.getVal() == null ? null : ((Boolean)checkThree_in.getVal()))){//sysj\conveyor_controller.sysj line: 706, column: 9
-                            bottleAtPos3_75.setPresent();//sysj\conveyor_controller.sysj line: 707, column: 7
+                          ;//sysj\conveyor_controller.sysj line: 704, column: 6
+                          if((Boolean)(checkThree_in.getVal() == null ? null : ((Boolean)checkThree_in.getVal()))){//sysj\conveyor_controller.sysj line: 705, column: 9
+                            bottleAtPos3_75.setPresent();//sysj\conveyor_controller.sysj line: 706, column: 7
                             currsigs.addElement(bottleAtPos3_75);
                             S95062=1;
                             active[84]=1;
@@ -265,12 +265,12 @@ public class Controller extends ClockDomain{
                       break;
                     
                     case 1 : 
-                      if(checkThree_in.isREQ()){//sysj\conveyor_controller.sysj line: 705, column: 6
-                        checkThree_in.setACK(false);//sysj\conveyor_controller.sysj line: 705, column: 6
+                      if(checkThree_in.isREQ()){//sysj\conveyor_controller.sysj line: 704, column: 6
+                        checkThree_in.setACK(false);//sysj\conveyor_controller.sysj line: 704, column: 6
                         ends[84]=2;
-                        ;//sysj\conveyor_controller.sysj line: 705, column: 6
-                        if((Boolean)(checkThree_in.getVal() == null ? null : ((Boolean)checkThree_in.getVal()))){//sysj\conveyor_controller.sysj line: 706, column: 9
-                          bottleAtPos3_75.setPresent();//sysj\conveyor_controller.sysj line: 707, column: 7
+                        ;//sysj\conveyor_controller.sysj line: 704, column: 6
+                        if((Boolean)(checkThree_in.getVal() == null ? null : ((Boolean)checkThree_in.getVal()))){//sysj\conveyor_controller.sysj line: 705, column: 9
+                          bottleAtPos3_75.setPresent();//sysj\conveyor_controller.sysj line: 706, column: 7
                           currsigs.addElement(bottleAtPos3_75);
                           S95062=1;
                           active[84]=1;
@@ -298,8 +298,8 @@ public class Controller extends ClockDomain{
               case 1 : 
                 S95042=1;
                 S95042=0;
-                if(!checkThree_in.isPartnerPresent() || checkThree_in.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 705, column: 6
-                  checkThree_in.setACK(false);//sysj\conveyor_controller.sysj line: 705, column: 6
+                if(!checkThree_in.isPartnerPresent() || checkThree_in.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 704, column: 6
+                  checkThree_in.setACK(false);//sysj\conveyor_controller.sysj line: 704, column: 6
                   S95042=1;
                   active[84]=1;
                   ends[84]=1;
@@ -307,15 +307,15 @@ public class Controller extends ClockDomain{
                 }
                 else {
                   S95037=0;
-                  if(!checkThree_in.isREQ()){//sysj\conveyor_controller.sysj line: 705, column: 6
-                    checkThree_in.setACK(true);//sysj\conveyor_controller.sysj line: 705, column: 6
+                  if(!checkThree_in.isREQ()){//sysj\conveyor_controller.sysj line: 704, column: 6
+                    checkThree_in.setACK(true);//sysj\conveyor_controller.sysj line: 704, column: 6
                     S95037=1;
-                    if(checkThree_in.isREQ()){//sysj\conveyor_controller.sysj line: 705, column: 6
-                      checkThree_in.setACK(false);//sysj\conveyor_controller.sysj line: 705, column: 6
+                    if(checkThree_in.isREQ()){//sysj\conveyor_controller.sysj line: 704, column: 6
+                      checkThree_in.setACK(false);//sysj\conveyor_controller.sysj line: 704, column: 6
                       ends[84]=2;
-                      ;//sysj\conveyor_controller.sysj line: 705, column: 6
-                      if((Boolean)(checkThree_in.getVal() == null ? null : ((Boolean)checkThree_in.getVal()))){//sysj\conveyor_controller.sysj line: 706, column: 9
-                        bottleAtPos3_75.setPresent();//sysj\conveyor_controller.sysj line: 707, column: 7
+                      ;//sysj\conveyor_controller.sysj line: 704, column: 6
+                      if((Boolean)(checkThree_in.getVal() == null ? null : ((Boolean)checkThree_in.getVal()))){//sysj\conveyor_controller.sysj line: 705, column: 9
+                        bottleAtPos3_75.setPresent();//sysj\conveyor_controller.sysj line: 706, column: 7
                         currsigs.addElement(bottleAtPos3_75);
                         S95062=1;
                         active[84]=1;
@@ -350,8 +350,8 @@ public class Controller extends ClockDomain{
             S95062=1;
             S95062=0;
             S95042=0;
-            if(!checkThree_in.isPartnerPresent() || checkThree_in.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 705, column: 6
-              checkThree_in.setACK(false);//sysj\conveyor_controller.sysj line: 705, column: 6
+            if(!checkThree_in.isPartnerPresent() || checkThree_in.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 704, column: 6
+              checkThree_in.setACK(false);//sysj\conveyor_controller.sysj line: 704, column: 6
               S95042=1;
               active[84]=1;
               ends[84]=1;
@@ -359,15 +359,15 @@ public class Controller extends ClockDomain{
             }
             else {
               S95037=0;
-              if(!checkThree_in.isREQ()){//sysj\conveyor_controller.sysj line: 705, column: 6
-                checkThree_in.setACK(true);//sysj\conveyor_controller.sysj line: 705, column: 6
+              if(!checkThree_in.isREQ()){//sysj\conveyor_controller.sysj line: 704, column: 6
+                checkThree_in.setACK(true);//sysj\conveyor_controller.sysj line: 704, column: 6
                 S95037=1;
-                if(checkThree_in.isREQ()){//sysj\conveyor_controller.sysj line: 705, column: 6
-                  checkThree_in.setACK(false);//sysj\conveyor_controller.sysj line: 705, column: 6
+                if(checkThree_in.isREQ()){//sysj\conveyor_controller.sysj line: 704, column: 6
+                  checkThree_in.setACK(false);//sysj\conveyor_controller.sysj line: 704, column: 6
                   ends[84]=2;
-                  ;//sysj\conveyor_controller.sysj line: 705, column: 6
-                  if((Boolean)(checkThree_in.getVal() == null ? null : ((Boolean)checkThree_in.getVal()))){//sysj\conveyor_controller.sysj line: 706, column: 9
-                    bottleAtPos3_75.setPresent();//sysj\conveyor_controller.sysj line: 707, column: 7
+                  ;//sysj\conveyor_controller.sysj line: 704, column: 6
+                  if((Boolean)(checkThree_in.getVal() == null ? null : ((Boolean)checkThree_in.getVal()))){//sysj\conveyor_controller.sysj line: 705, column: 9
+                    bottleAtPos3_75.setPresent();//sysj\conveyor_controller.sysj line: 706, column: 7
                     currsigs.addElement(bottleAtPos3_75);
                     S95062=1;
                     active[84]=1;
@@ -412,18 +412,18 @@ public class Controller extends ClockDomain{
       case 1 : 
         switch(S95034){
           case 0 : 
-            if(mode.getprestatus()){//sysj\conveyor_controller.sysj line: 689, column: 11
+            if(mode.getprestatus()){//sysj\conveyor_controller.sysj line: 688, column: 11
               S95034=1;
-              if((Integer)(mode.getpreval() == null ? null : ((Integer)mode.getpreval())) == 0){//sysj\conveyor_controller.sysj line: 691, column: 9
-                autoMode_75.setPresent();//sysj\conveyor_controller.sysj line: 692, column: 7
+              if((Integer)(mode.getpreval() == null ? null : ((Integer)mode.getpreval())) == 0){//sysj\conveyor_controller.sysj line: 690, column: 9
+                autoMode_75.setPresent();//sysj\conveyor_controller.sysj line: 691, column: 7
                 currsigs.addElement(autoMode_75);
                 active[83]=1;
                 ends[83]=1;
                 tdone[83]=1;
               }
               else {
-                if((Integer)(mode.getpreval() == null ? null : ((Integer)mode.getpreval())) == 1){//sysj\conveyor_controller.sysj line: 694, column: 14
-                  manualMode_75.setPresent();//sysj\conveyor_controller.sysj line: 695, column: 7
+                if((Integer)(mode.getpreval() == null ? null : ((Integer)mode.getpreval())) == 1){//sysj\conveyor_controller.sysj line: 693, column: 14
+                  manualMode_75.setPresent();//sysj\conveyor_controller.sysj line: 694, column: 7
                   currsigs.addElement(manualMode_75);
                   active[83]=1;
                   ends[83]=1;
@@ -444,16 +444,16 @@ public class Controller extends ClockDomain{
             break;
           
           case 1 : 
-            if((Integer)(mode.getpreval() == null ? null : ((Integer)mode.getpreval())) == 0){//sysj\conveyor_controller.sysj line: 691, column: 9
-              autoMode_75.setPresent();//sysj\conveyor_controller.sysj line: 692, column: 7
+            if((Integer)(mode.getpreval() == null ? null : ((Integer)mode.getpreval())) == 0){//sysj\conveyor_controller.sysj line: 690, column: 9
+              autoMode_75.setPresent();//sysj\conveyor_controller.sysj line: 691, column: 7
               currsigs.addElement(autoMode_75);
               active[83]=1;
               ends[83]=1;
               tdone[83]=1;
             }
             else {
-              if((Integer)(mode.getpreval() == null ? null : ((Integer)mode.getpreval())) == 1){//sysj\conveyor_controller.sysj line: 694, column: 14
-                manualMode_75.setPresent();//sysj\conveyor_controller.sysj line: 695, column: 7
+              if((Integer)(mode.getpreval() == null ? null : ((Integer)mode.getpreval())) == 1){//sysj\conveyor_controller.sysj line: 693, column: 14
+                manualMode_75.setPresent();//sysj\conveyor_controller.sysj line: 694, column: 7
                 currsigs.addElement(manualMode_75);
                 active[83]=1;
                 ends[83]=1;
@@ -482,8 +482,8 @@ public class Controller extends ClockDomain{
         break;
       
       case 1 : 
-        if(armDestM.getprestatus()){//sysj\conveyor_controller.sysj line: 682, column: 21
-          armDest.setPresent();//sysj\conveyor_controller.sysj line: 682, column: 31
+        if(armDestM.getprestatus()){//sysj\conveyor_controller.sysj line: 681, column: 21
+          armDest.setPresent();//sysj\conveyor_controller.sysj line: 681, column: 31
           currsigs.addElement(armDest);
           active[82]=1;
           ends[82]=1;
@@ -514,8 +514,8 @@ public class Controller extends ClockDomain{
               case 0 : 
                 switch(S40033){
                   case 0 : 
-                    if(!lidLoaderReady_o.isPartnerPresent() || lidLoaderReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 680, column: 48
-                      lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 680, column: 48
+                    if(!lidLoaderReady_o.isPartnerPresent() || lidLoaderReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 679, column: 48
+                      lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 679, column: 48
                       S40033=1;
                       active[81]=1;
                       ends[81]=1;
@@ -524,19 +524,19 @@ public class Controller extends ClockDomain{
                     else {
                       switch(S40028){
                         case 0 : 
-                          if(lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 680, column: 48
-                            lidLoaderReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 680, column: 48
+                          if(lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 679, column: 48
+                            lidLoaderReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 679, column: 48
                             S40028=1;
-                            if(!lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 680, column: 48
-                              lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 680, column: 48
+                            if(!lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 679, column: 48
+                              lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 679, column: 48
                               ends[81]=2;
-                              ;//sysj\conveyor_controller.sysj line: 680, column: 48
+                              ;//sysj\conveyor_controller.sysj line: 679, column: 48
                               S40071=1;
-                              __start_thread_81 = com.systemj.Timer.getMs();//sysj\conveyor_controller.sysj line: 680, column: 32
-                              if(com.systemj.Timer.getMs() - __start_thread_81 >= 4000){//sysj\conveyor_controller.sysj line: 680, column: 32
+                              __start_thread_81 = com.systemj.Timer.getMs();//sysj\conveyor_controller.sysj line: 679, column: 32
+                              if(com.systemj.Timer.getMs() - __start_thread_81 >= 4000){//sysj\conveyor_controller.sysj line: 679, column: 32
                                 ends[81]=2;
-                                ;//sysj\conveyor_controller.sysj line: 680, column: 32
-                                done_75.setPresent();//sysj\conveyor_controller.sysj line: 680, column: 100
+                                ;//sysj\conveyor_controller.sysj line: 679, column: 32
+                                done_75.setPresent();//sysj\conveyor_controller.sysj line: 679, column: 100
                                 currsigs.addElement(done_75);
                                 S40129=1;
                                 active[81]=1;
@@ -563,16 +563,16 @@ public class Controller extends ClockDomain{
                           break;
                         
                         case 1 : 
-                          if(!lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 680, column: 48
-                            lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 680, column: 48
+                          if(!lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 679, column: 48
+                            lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 679, column: 48
                             ends[81]=2;
-                            ;//sysj\conveyor_controller.sysj line: 680, column: 48
+                            ;//sysj\conveyor_controller.sysj line: 679, column: 48
                             S40071=1;
-                            __start_thread_81 = com.systemj.Timer.getMs();//sysj\conveyor_controller.sysj line: 680, column: 32
-                            if(com.systemj.Timer.getMs() - __start_thread_81 >= 4000){//sysj\conveyor_controller.sysj line: 680, column: 32
+                            __start_thread_81 = com.systemj.Timer.getMs();//sysj\conveyor_controller.sysj line: 679, column: 32
+                            if(com.systemj.Timer.getMs() - __start_thread_81 >= 4000){//sysj\conveyor_controller.sysj line: 679, column: 32
                               ends[81]=2;
-                              ;//sysj\conveyor_controller.sysj line: 680, column: 32
-                              done_75.setPresent();//sysj\conveyor_controller.sysj line: 680, column: 100
+                              ;//sysj\conveyor_controller.sysj line: 679, column: 32
+                              done_75.setPresent();//sysj\conveyor_controller.sysj line: 679, column: 100
                               currsigs.addElement(done_75);
                               S40129=1;
                               active[81]=1;
@@ -599,8 +599,8 @@ public class Controller extends ClockDomain{
                   case 1 : 
                     S40033=1;
                     S40033=0;
-                    if(!lidLoaderReady_o.isPartnerPresent() || lidLoaderReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 680, column: 48
-                      lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 680, column: 48
+                    if(!lidLoaderReady_o.isPartnerPresent() || lidLoaderReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 679, column: 48
+                      lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 679, column: 48
                       S40033=1;
                       active[81]=1;
                       ends[81]=1;
@@ -608,19 +608,19 @@ public class Controller extends ClockDomain{
                     }
                     else {
                       S40028=0;
-                      if(lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 680, column: 48
-                        lidLoaderReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 680, column: 48
+                      if(lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 679, column: 48
+                        lidLoaderReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 679, column: 48
                         S40028=1;
-                        if(!lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 680, column: 48
-                          lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 680, column: 48
+                        if(!lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 679, column: 48
+                          lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 679, column: 48
                           ends[81]=2;
-                          ;//sysj\conveyor_controller.sysj line: 680, column: 48
+                          ;//sysj\conveyor_controller.sysj line: 679, column: 48
                           S40071=1;
-                          __start_thread_81 = com.systemj.Timer.getMs();//sysj\conveyor_controller.sysj line: 680, column: 32
-                          if(com.systemj.Timer.getMs() - __start_thread_81 >= 4000){//sysj\conveyor_controller.sysj line: 680, column: 32
+                          __start_thread_81 = com.systemj.Timer.getMs();//sysj\conveyor_controller.sysj line: 679, column: 32
+                          if(com.systemj.Timer.getMs() - __start_thread_81 >= 4000){//sysj\conveyor_controller.sysj line: 679, column: 32
                             ends[81]=2;
-                            ;//sysj\conveyor_controller.sysj line: 680, column: 32
-                            done_75.setPresent();//sysj\conveyor_controller.sysj line: 680, column: 100
+                            ;//sysj\conveyor_controller.sysj line: 679, column: 32
+                            done_75.setPresent();//sysj\conveyor_controller.sysj line: 679, column: 100
                             currsigs.addElement(done_75);
                             S40129=1;
                             active[81]=1;
@@ -651,10 +651,10 @@ public class Controller extends ClockDomain{
                 break;
               
               case 1 : 
-                if(com.systemj.Timer.getMs() - __start_thread_81 >= 4000){//sysj\conveyor_controller.sysj line: 680, column: 32
+                if(com.systemj.Timer.getMs() - __start_thread_81 >= 4000){//sysj\conveyor_controller.sysj line: 679, column: 32
                   ends[81]=2;
-                  ;//sysj\conveyor_controller.sysj line: 680, column: 32
-                  done_75.setPresent();//sysj\conveyor_controller.sysj line: 680, column: 100
+                  ;//sysj\conveyor_controller.sysj line: 679, column: 32
+                  done_75.setPresent();//sysj\conveyor_controller.sysj line: 679, column: 100
                   currsigs.addElement(done_75);
                   S40129=1;
                   active[81]=1;
@@ -674,13 +674,13 @@ public class Controller extends ClockDomain{
           case 1 : 
             S40129=1;
             S40129=0;
-            if(armSourceM.getprestatus()){//sysj\conveyor_controller.sysj line: 680, column: 21
-              armSource.setPresent();//sysj\conveyor_controller.sysj line: 680, column: 33
+            if(armSourceM.getprestatus()){//sysj\conveyor_controller.sysj line: 679, column: 21
+              armSource.setPresent();//sysj\conveyor_controller.sysj line: 679, column: 33
               currsigs.addElement(armSource);
               S40071=0;
               S40033=0;
-              if(!lidLoaderReady_o.isPartnerPresent() || lidLoaderReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 680, column: 48
-                lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 680, column: 48
+              if(!lidLoaderReady_o.isPartnerPresent() || lidLoaderReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 679, column: 48
+                lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 679, column: 48
                 S40033=1;
                 active[81]=1;
                 ends[81]=1;
@@ -688,19 +688,19 @@ public class Controller extends ClockDomain{
               }
               else {
                 S40028=0;
-                if(lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 680, column: 48
-                  lidLoaderReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 680, column: 48
+                if(lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 679, column: 48
+                  lidLoaderReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 679, column: 48
                   S40028=1;
-                  if(!lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 680, column: 48
-                    lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 680, column: 48
+                  if(!lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 679, column: 48
+                    lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 679, column: 48
                     ends[81]=2;
-                    ;//sysj\conveyor_controller.sysj line: 680, column: 48
+                    ;//sysj\conveyor_controller.sysj line: 679, column: 48
                     S40071=1;
-                    __start_thread_81 = com.systemj.Timer.getMs();//sysj\conveyor_controller.sysj line: 680, column: 32
-                    if(com.systemj.Timer.getMs() - __start_thread_81 >= 4000){//sysj\conveyor_controller.sysj line: 680, column: 32
+                    __start_thread_81 = com.systemj.Timer.getMs();//sysj\conveyor_controller.sysj line: 679, column: 32
+                    if(com.systemj.Timer.getMs() - __start_thread_81 >= 4000){//sysj\conveyor_controller.sysj line: 679, column: 32
                       ends[81]=2;
-                      ;//sysj\conveyor_controller.sysj line: 680, column: 32
-                      done_75.setPresent();//sysj\conveyor_controller.sysj line: 680, column: 100
+                      ;//sysj\conveyor_controller.sysj line: 679, column: 32
+                      done_75.setPresent();//sysj\conveyor_controller.sysj line: 679, column: 100
                       currsigs.addElement(done_75);
                       S40129=1;
                       active[81]=1;
@@ -749,8 +749,8 @@ public class Controller extends ClockDomain{
         break;
       
       case 1 : 
-        if(vacOnM.getprestatus()){//sysj\conveyor_controller.sysj line: 678, column: 21
-          vacOn.setPresent();//sysj\conveyor_controller.sysj line: 678, column: 29
+        if(vacOnM.getprestatus()){//sysj\conveyor_controller.sysj line: 677, column: 21
+          vacOn.setPresent();//sysj\conveyor_controller.sysj line: 677, column: 29
           currsigs.addElement(vacOn);
           active[80]=1;
           ends[80]=1;
@@ -775,8 +775,8 @@ public class Controller extends ClockDomain{
         break;
       
       case 1 : 
-        if(pusherExtendM.getprestatus()){//sysj\conveyor_controller.sysj line: 676, column: 21
-          pusherExtend.setPresent();//sysj\conveyor_controller.sysj line: 676, column: 36
+        if(pusherExtendM.getprestatus()){//sysj\conveyor_controller.sysj line: 675, column: 21
+          pusherExtend.setPresent();//sysj\conveyor_controller.sysj line: 675, column: 36
           currsigs.addElement(pusherExtend);
           active[79]=1;
           ends[79]=1;
@@ -794,8 +794,8 @@ public class Controller extends ClockDomain{
 
   public void thread95854(int [] tdone, int [] ends){
         S40345=1;
-    if(armDestM.getprestatus()){//sysj\conveyor_controller.sysj line: 682, column: 21
-      armDest.setPresent();//sysj\conveyor_controller.sysj line: 682, column: 31
+    if(armDestM.getprestatus()){//sysj\conveyor_controller.sysj line: 681, column: 21
+      armDest.setPresent();//sysj\conveyor_controller.sysj line: 681, column: 31
       currsigs.addElement(armDest);
       active[82]=1;
       ends[82]=1;
@@ -811,13 +811,13 @@ public class Controller extends ClockDomain{
   public void thread95853(int [] tdone, int [] ends){
         S40337=1;
     S40129=0;
-    if(armSourceM.getprestatus()){//sysj\conveyor_controller.sysj line: 680, column: 21
-      armSource.setPresent();//sysj\conveyor_controller.sysj line: 680, column: 33
+    if(armSourceM.getprestatus()){//sysj\conveyor_controller.sysj line: 679, column: 21
+      armSource.setPresent();//sysj\conveyor_controller.sysj line: 679, column: 33
       currsigs.addElement(armSource);
       S40071=0;
       S40033=0;
-      if(!lidLoaderReady_o.isPartnerPresent() || lidLoaderReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 680, column: 48
-        lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 680, column: 48
+      if(!lidLoaderReady_o.isPartnerPresent() || lidLoaderReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 679, column: 48
+        lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 679, column: 48
         S40033=1;
         active[81]=1;
         ends[81]=1;
@@ -825,19 +825,19 @@ public class Controller extends ClockDomain{
       }
       else {
         S40028=0;
-        if(lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 680, column: 48
-          lidLoaderReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 680, column: 48
+        if(lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 679, column: 48
+          lidLoaderReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 679, column: 48
           S40028=1;
-          if(!lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 680, column: 48
-            lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 680, column: 48
+          if(!lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 679, column: 48
+            lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 679, column: 48
             ends[81]=2;
-            ;//sysj\conveyor_controller.sysj line: 680, column: 48
+            ;//sysj\conveyor_controller.sysj line: 679, column: 48
             S40071=1;
-            __start_thread_81 = com.systemj.Timer.getMs();//sysj\conveyor_controller.sysj line: 680, column: 32
-            if(com.systemj.Timer.getMs() - __start_thread_81 >= 4000){//sysj\conveyor_controller.sysj line: 680, column: 32
+            __start_thread_81 = com.systemj.Timer.getMs();//sysj\conveyor_controller.sysj line: 679, column: 32
+            if(com.systemj.Timer.getMs() - __start_thread_81 >= 4000){//sysj\conveyor_controller.sysj line: 679, column: 32
               ends[81]=2;
-              ;//sysj\conveyor_controller.sysj line: 680, column: 32
-              done_75.setPresent();//sysj\conveyor_controller.sysj line: 680, column: 100
+              ;//sysj\conveyor_controller.sysj line: 679, column: 32
+              done_75.setPresent();//sysj\conveyor_controller.sysj line: 679, column: 100
               currsigs.addElement(done_75);
               S40129=1;
               active[81]=1;
@@ -873,8 +873,8 @@ public class Controller extends ClockDomain{
 
   public void thread95852(int [] tdone, int [] ends){
         S40026=1;
-    if(vacOnM.getprestatus()){//sysj\conveyor_controller.sysj line: 678, column: 21
-      vacOn.setPresent();//sysj\conveyor_controller.sysj line: 678, column: 29
+    if(vacOnM.getprestatus()){//sysj\conveyor_controller.sysj line: 677, column: 21
+      vacOn.setPresent();//sysj\conveyor_controller.sysj line: 677, column: 29
       currsigs.addElement(vacOn);
       active[80]=1;
       ends[80]=1;
@@ -889,8 +889,8 @@ public class Controller extends ClockDomain{
 
   public void thread95851(int [] tdone, int [] ends){
         S40018=1;
-    if(pusherExtendM.getprestatus()){//sysj\conveyor_controller.sysj line: 676, column: 21
-      pusherExtend.setPresent();//sysj\conveyor_controller.sysj line: 676, column: 36
+    if(pusherExtendM.getprestatus()){//sysj\conveyor_controller.sysj line: 675, column: 21
+      pusherExtend.setPresent();//sysj\conveyor_controller.sysj line: 675, column: 36
       currsigs.addElement(pusherExtend);
       active[79]=1;
       ends[79]=1;
@@ -914,10 +914,10 @@ public class Controller extends ClockDomain{
       case 1 : 
         switch(S37154){
           case 0 : 
-            if(WPgripped.getprestatus()){//sysj\conveyor_controller.sysj line: 646, column: 16
-              System.out.println("WP gripped");//sysj\conveyor_controller.sysj line: 647, column: 10
+            if(WPgripped.getprestatus()){//sysj\conveyor_controller.sysj line: 645, column: 16
+              System.out.println("WP gripped");//sysj\conveyor_controller.sysj line: 646, column: 10
               S37154=1;
-              armDest.setPresent();//sysj\conveyor_controller.sysj line: 649, column: 11
+              armDest.setPresent();//sysj\conveyor_controller.sysj line: 648, column: 11
               currsigs.addElement(armDest);
               active[78]=1;
               ends[78]=1;
@@ -931,13 +931,13 @@ public class Controller extends ClockDomain{
             break;
           
           case 1 : 
-            if(armAtDest.getprestatus()){//sysj\conveyor_controller.sysj line: 648, column: 16
-              System.out.println("Arm at dest");//sysj\conveyor_controller.sysj line: 651, column: 10
+            if(armAtDest.getprestatus()){//sysj\conveyor_controller.sysj line: 647, column: 16
+              System.out.println("Arm at dest");//sysj\conveyor_controller.sysj line: 650, column: 10
               ends[78]=2;
               tdone[78]=1;
             }
             else {
-              armDest.setPresent();//sysj\conveyor_controller.sysj line: 649, column: 11
+              armDest.setPresent();//sysj\conveyor_controller.sysj line: 648, column: 11
               currsigs.addElement(armDest);
               active[78]=1;
               ends[78]=1;
@@ -960,7 +960,7 @@ public class Controller extends ClockDomain{
         break;
       
       case 1 : 
-        vacOn.setPresent();//sysj\conveyor_controller.sysj line: 642, column: 10
+        vacOn.setPresent();//sysj\conveyor_controller.sysj line: 641, column: 10
         currsigs.addElement(vacOn);
         active[77]=1;
         ends[77]=1;
@@ -980,7 +980,7 @@ public class Controller extends ClockDomain{
 
   public void thread95845(int [] tdone, int [] ends){
         S37152=1;
-    vacOn.setPresent();//sysj\conveyor_controller.sysj line: 642, column: 10
+    vacOn.setPresent();//sysj\conveyor_controller.sysj line: 641, column: 10
     currsigs.addElement(vacOn);
     active[77]=1;
     ends[77]=1;
@@ -1000,8 +1000,8 @@ public class Controller extends ClockDomain{
           case 0 : 
             switch(S37045){
               case 0 : 
-                if(!lidLoaderReady_o.isPartnerPresent() || lidLoaderReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 606, column: 5
-                  lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 606, column: 5
+                if(!lidLoaderReady_o.isPartnerPresent() || lidLoaderReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 605, column: 5
+                  lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 605, column: 5
                   S37045=1;
                   active[76]=1;
                   ends[76]=1;
@@ -1010,13 +1010,13 @@ public class Controller extends ClockDomain{
                 else {
                   switch(S37040){
                     case 0 : 
-                      if(lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 606, column: 5
-                        lidLoaderReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 606, column: 5
+                      if(lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 605, column: 5
+                        lidLoaderReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 605, column: 5
                         S37040=1;
-                        if(!lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 606, column: 5
-                          lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 606, column: 5
+                        if(!lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 605, column: 5
+                          lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 605, column: 5
                           ends[76]=2;
-                          ;//sysj\conveyor_controller.sysj line: 606, column: 5
+                          ;//sysj\conveyor_controller.sysj line: 605, column: 5
                           S95013=1;
                           S37106=0;
                           active[76]=1;
@@ -1037,10 +1037,10 @@ public class Controller extends ClockDomain{
                       break;
                     
                     case 1 : 
-                      if(!lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 606, column: 5
-                        lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 606, column: 5
+                      if(!lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 605, column: 5
+                        lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 605, column: 5
                         ends[76]=2;
-                        ;//sysj\conveyor_controller.sysj line: 606, column: 5
+                        ;//sysj\conveyor_controller.sysj line: 605, column: 5
                         S95013=1;
                         S37106=0;
                         active[76]=1;
@@ -1061,8 +1061,8 @@ public class Controller extends ClockDomain{
               case 1 : 
                 S37045=1;
                 S37045=0;
-                if(!lidLoaderReady_o.isPartnerPresent() || lidLoaderReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 606, column: 5
-                  lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 606, column: 5
+                if(!lidLoaderReady_o.isPartnerPresent() || lidLoaderReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 605, column: 5
+                  lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 605, column: 5
                   S37045=1;
                   active[76]=1;
                   ends[76]=1;
@@ -1070,13 +1070,13 @@ public class Controller extends ClockDomain{
                 }
                 else {
                   S37040=0;
-                  if(lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 606, column: 5
-                    lidLoaderReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 606, column: 5
+                  if(lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 605, column: 5
+                    lidLoaderReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 605, column: 5
                     S37040=1;
-                    if(!lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 606, column: 5
-                      lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 606, column: 5
+                    if(!lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 605, column: 5
+                      lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 605, column: 5
                       ends[76]=2;
-                      ;//sysj\conveyor_controller.sysj line: 606, column: 5
+                      ;//sysj\conveyor_controller.sysj line: 605, column: 5
                       S95013=1;
                       S37106=0;
                       active[76]=1;
@@ -1103,11 +1103,11 @@ public class Controller extends ClockDomain{
           case 1 : 
             switch(S37106){
               case 0 : 
-                if(bottleAtPos3_75.getprestatus()){//sysj\conveyor_controller.sysj line: 608, column: 13
+                if(bottleAtPos3_75.getprestatus()){//sysj\conveyor_controller.sysj line: 607, column: 13
                   S37106=1;
                   S37068=0;
-                  if(!lidLoaderReady_o.isPartnerPresent() || lidLoaderReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 609, column: 6
-                    lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 609, column: 6
+                  if(!lidLoaderReady_o.isPartnerPresent() || lidLoaderReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 608, column: 6
+                    lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 608, column: 6
                     S37068=1;
                     active[76]=1;
                     ends[76]=1;
@@ -1115,17 +1115,17 @@ public class Controller extends ClockDomain{
                   }
                   else {
                     S37063=0;
-                    if(lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 609, column: 6
-                      lidLoaderReady_o.setVal(Boolean.FALSE);//sysj\conveyor_controller.sysj line: 609, column: 6
+                    if(lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 608, column: 6
+                      lidLoaderReady_o.setVal(Boolean.FALSE);//sysj\conveyor_controller.sysj line: 608, column: 6
                       S37063=1;
-                      if(!lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 609, column: 6
-                        lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 609, column: 6
+                      if(!lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 608, column: 6
+                        lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 608, column: 6
                         ends[76]=2;
-                        ;//sysj\conveyor_controller.sysj line: 609, column: 6
+                        ;//sysj\conveyor_controller.sysj line: 608, column: 6
                         S37106=2;
-                        System.out.println("*Capper - Entering Auto");//sysj\conveyor_controller.sysj line: 611, column: 7
+                        System.out.println("*Capper - Entering Auto");//sysj\conveyor_controller.sysj line: 610, column: 7
                         S37115=0;
-                        armDest.setPresent();//sysj\conveyor_controller.sysj line: 613, column: 8
+                        armDest.setPresent();//sysj\conveyor_controller.sysj line: 612, column: 8
                         currsigs.addElement(armDest);
                         active[76]=1;
                         ends[76]=1;
@@ -1154,8 +1154,8 @@ public class Controller extends ClockDomain{
               case 1 : 
                 switch(S37068){
                   case 0 : 
-                    if(!lidLoaderReady_o.isPartnerPresent() || lidLoaderReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 609, column: 6
-                      lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 609, column: 6
+                    if(!lidLoaderReady_o.isPartnerPresent() || lidLoaderReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 608, column: 6
+                      lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 608, column: 6
                       S37068=1;
                       active[76]=1;
                       ends[76]=1;
@@ -1164,17 +1164,17 @@ public class Controller extends ClockDomain{
                     else {
                       switch(S37063){
                         case 0 : 
-                          if(lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 609, column: 6
-                            lidLoaderReady_o.setVal(Boolean.FALSE);//sysj\conveyor_controller.sysj line: 609, column: 6
+                          if(lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 608, column: 6
+                            lidLoaderReady_o.setVal(Boolean.FALSE);//sysj\conveyor_controller.sysj line: 608, column: 6
                             S37063=1;
-                            if(!lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 609, column: 6
-                              lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 609, column: 6
+                            if(!lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 608, column: 6
+                              lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 608, column: 6
                               ends[76]=2;
-                              ;//sysj\conveyor_controller.sysj line: 609, column: 6
+                              ;//sysj\conveyor_controller.sysj line: 608, column: 6
                               S37106=2;
-                              System.out.println("*Capper - Entering Auto");//sysj\conveyor_controller.sysj line: 611, column: 7
+                              System.out.println("*Capper - Entering Auto");//sysj\conveyor_controller.sysj line: 610, column: 7
                               S37115=0;
-                              armDest.setPresent();//sysj\conveyor_controller.sysj line: 613, column: 8
+                              armDest.setPresent();//sysj\conveyor_controller.sysj line: 612, column: 8
                               currsigs.addElement(armDest);
                               active[76]=1;
                               ends[76]=1;
@@ -1194,14 +1194,14 @@ public class Controller extends ClockDomain{
                           break;
                         
                         case 1 : 
-                          if(!lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 609, column: 6
-                            lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 609, column: 6
+                          if(!lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 608, column: 6
+                            lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 608, column: 6
                             ends[76]=2;
-                            ;//sysj\conveyor_controller.sysj line: 609, column: 6
+                            ;//sysj\conveyor_controller.sysj line: 608, column: 6
                             S37106=2;
-                            System.out.println("*Capper - Entering Auto");//sysj\conveyor_controller.sysj line: 611, column: 7
+                            System.out.println("*Capper - Entering Auto");//sysj\conveyor_controller.sysj line: 610, column: 7
                             S37115=0;
-                            armDest.setPresent();//sysj\conveyor_controller.sysj line: 613, column: 8
+                            armDest.setPresent();//sysj\conveyor_controller.sysj line: 612, column: 8
                             currsigs.addElement(armDest);
                             active[76]=1;
                             ends[76]=1;
@@ -1221,8 +1221,8 @@ public class Controller extends ClockDomain{
                   case 1 : 
                     S37068=1;
                     S37068=0;
-                    if(!lidLoaderReady_o.isPartnerPresent() || lidLoaderReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 609, column: 6
-                      lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 609, column: 6
+                    if(!lidLoaderReady_o.isPartnerPresent() || lidLoaderReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 608, column: 6
+                      lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 608, column: 6
                       S37068=1;
                       active[76]=1;
                       ends[76]=1;
@@ -1230,17 +1230,17 @@ public class Controller extends ClockDomain{
                     }
                     else {
                       S37063=0;
-                      if(lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 609, column: 6
-                        lidLoaderReady_o.setVal(Boolean.FALSE);//sysj\conveyor_controller.sysj line: 609, column: 6
+                      if(lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 608, column: 6
+                        lidLoaderReady_o.setVal(Boolean.FALSE);//sysj\conveyor_controller.sysj line: 608, column: 6
                         S37063=1;
-                        if(!lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 609, column: 6
-                          lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 609, column: 6
+                        if(!lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 608, column: 6
+                          lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 608, column: 6
                           ends[76]=2;
-                          ;//sysj\conveyor_controller.sysj line: 609, column: 6
+                          ;//sysj\conveyor_controller.sysj line: 608, column: 6
                           S37106=2;
-                          System.out.println("*Capper - Entering Auto");//sysj\conveyor_controller.sysj line: 611, column: 7
+                          System.out.println("*Capper - Entering Auto");//sysj\conveyor_controller.sysj line: 610, column: 7
                           S37115=0;
-                          armDest.setPresent();//sysj\conveyor_controller.sysj line: 613, column: 8
+                          armDest.setPresent();//sysj\conveyor_controller.sysj line: 612, column: 8
                           currsigs.addElement(armDest);
                           active[76]=1;
                           ends[76]=1;
@@ -1264,7 +1264,7 @@ public class Controller extends ClockDomain{
                 break;
               
               case 2 : 
-                if(manualMode_75.getprestatus()){//sysj\conveyor_controller.sysj line: 610, column: 12
+                if(manualMode_75.getprestatus()){//sysj\conveyor_controller.sysj line: 609, column: 12
                   lidLoaderReady_o.setPreempted();
                   S37106=3;
                   active[76]=1;
@@ -1274,15 +1274,15 @@ public class Controller extends ClockDomain{
                 else {
                   switch(S37115){
                     case 0 : 
-                      if(armAtDest.getprestatus()){//sysj\conveyor_controller.sysj line: 612, column: 13
-                        System.out.println("Arm at dest");//sysj\conveyor_controller.sysj line: 615, column: 7
+                      if(armAtDest.getprestatus()){//sysj\conveyor_controller.sysj line: 611, column: 13
+                        System.out.println("Arm at dest");//sysj\conveyor_controller.sysj line: 614, column: 7
                         S37115=1;
                         active[76]=1;
                         ends[76]=1;
                         tdone[76]=1;
                       }
                       else {
-                        armDest.setPresent();//sysj\conveyor_controller.sysj line: 613, column: 8
+                        armDest.setPresent();//sysj\conveyor_controller.sysj line: 612, column: 8
                         currsigs.addElement(armDest);
                         active[76]=1;
                         ends[76]=1;
@@ -1291,8 +1291,8 @@ public class Controller extends ClockDomain{
                       break;
                     
                     case 1 : 
-                      if(pusherRetracted.getprestatus()){//sysj\conveyor_controller.sysj line: 616, column: 13
-                        System.out.println("Pusher retracted");//sysj\conveyor_controller.sysj line: 617, column: 7
+                      if(pusherRetracted.getprestatus()){//sysj\conveyor_controller.sysj line: 615, column: 13
+                        System.out.println("Pusher retracted");//sysj\conveyor_controller.sysj line: 616, column: 7
                         S37115=2;
                         S37121=0;
                         active[76]=1;
@@ -1309,7 +1309,7 @@ public class Controller extends ClockDomain{
                     case 2 : 
                       switch(S37121){
                         case 0 : 
-                          if(!empty.getprestatus()){//sysj\conveyor_controller.sysj line: 620, column: 14
+                          if(!empty.getprestatus()){//sysj\conveyor_controller.sysj line: 619, column: 14
                             S37121=1;
                             active[76]=1;
                             ends[76]=1;
@@ -1323,10 +1323,10 @@ public class Controller extends ClockDomain{
                           break;
                         
                         case 1 : 
-                          if(request.getprestatus()){//sysj\conveyor_controller.sysj line: 621, column: 14
-                            System.out.println("New request");//sysj\conveyor_controller.sysj line: 622, column: 8
+                          if(request.getprestatus()){//sysj\conveyor_controller.sysj line: 620, column: 14
+                            System.out.println("New request");//sysj\conveyor_controller.sysj line: 621, column: 8
                             S37121=2;
-                            armDest.setPresent();//sysj\conveyor_controller.sysj line: 624, column: 9
+                            armDest.setPresent();//sysj\conveyor_controller.sysj line: 623, column: 9
                             currsigs.addElement(armDest);
                             active[76]=1;
                             ends[76]=1;
@@ -1340,17 +1340,17 @@ public class Controller extends ClockDomain{
                           break;
                         
                         case 2 : 
-                          if(armAtDest.getprestatus()){//sysj\conveyor_controller.sysj line: 623, column: 14
-                            System.out.println("Arm at dest");//sysj\conveyor_controller.sysj line: 626, column: 8
+                          if(armAtDest.getprestatus()){//sysj\conveyor_controller.sysj line: 622, column: 14
+                            System.out.println("Arm at dest");//sysj\conveyor_controller.sysj line: 625, column: 8
                             S37121=3;
-                            pusherExtend.setPresent();//sysj\conveyor_controller.sysj line: 629, column: 9
+                            pusherExtend.setPresent();//sysj\conveyor_controller.sysj line: 628, column: 9
                             currsigs.addElement(pusherExtend);
                             active[76]=1;
                             ends[76]=1;
                             tdone[76]=1;
                           }
                           else {
-                            armDest.setPresent();//sysj\conveyor_controller.sysj line: 624, column: 9
+                            armDest.setPresent();//sysj\conveyor_controller.sysj line: 623, column: 9
                             currsigs.addElement(armDest);
                             active[76]=1;
                             ends[76]=1;
@@ -1359,15 +1359,15 @@ public class Controller extends ClockDomain{
                           break;
                         
                         case 3 : 
-                          if(pusherExtended.getprestatus()){//sysj\conveyor_controller.sysj line: 628, column: 14
-                            System.out.println("Pusher extended");//sysj\conveyor_controller.sysj line: 631, column: 8
+                          if(pusherExtended.getprestatus()){//sysj\conveyor_controller.sysj line: 627, column: 14
+                            System.out.println("Pusher extended");//sysj\conveyor_controller.sysj line: 630, column: 8
                             S37121=4;
                             active[76]=1;
                             ends[76]=1;
                             tdone[76]=1;
                           }
                           else {
-                            pusherExtend.setPresent();//sysj\conveyor_controller.sysj line: 629, column: 9
+                            pusherExtend.setPresent();//sysj\conveyor_controller.sysj line: 628, column: 9
                             currsigs.addElement(pusherExtend);
                             active[76]=1;
                             ends[76]=1;
@@ -1376,10 +1376,10 @@ public class Controller extends ClockDomain{
                           break;
                         
                         case 4 : 
-                          if(pusherRetracted.getprestatus()){//sysj\conveyor_controller.sysj line: 632, column: 14
-                            System.out.println("Pusher retracted");//sysj\conveyor_controller.sysj line: 633, column: 8
+                          if(pusherRetracted.getprestatus()){//sysj\conveyor_controller.sysj line: 631, column: 14
+                            System.out.println("Pusher retracted");//sysj\conveyor_controller.sysj line: 632, column: 8
                             S37121=5;
-                            armSource.setPresent();//sysj\conveyor_controller.sysj line: 636, column: 9
+                            armSource.setPresent();//sysj\conveyor_controller.sysj line: 635, column: 9
                             currsigs.addElement(armSource);
                             active[76]=1;
                             ends[76]=1;
@@ -1393,8 +1393,8 @@ public class Controller extends ClockDomain{
                           break;
                         
                         case 5 : 
-                          if(armAtSource.getprestatus()){//sysj\conveyor_controller.sysj line: 635, column: 14
-                            System.out.println("Arm at source");//sysj\conveyor_controller.sysj line: 638, column: 8
+                          if(armAtSource.getprestatus()){//sysj\conveyor_controller.sysj line: 634, column: 14
+                            System.out.println("Arm at source");//sysj\conveyor_controller.sysj line: 637, column: 8
                             S37121=6;
                             thread95845(tdone,ends);
                             thread95846(tdone,ends);
@@ -1412,7 +1412,7 @@ public class Controller extends ClockDomain{
                             }
                           }
                           else {
-                            armSource.setPresent();//sysj\conveyor_controller.sysj line: 636, column: 9
+                            armSource.setPresent();//sysj\conveyor_controller.sysj line: 635, column: 9
                             currsigs.addElement(armSource);
                             active[76]=1;
                             ends[76]=1;
@@ -1437,7 +1437,7 @@ public class Controller extends ClockDomain{
                           }
                           if(biggest95850 == 2){
                             ends[76]=2;
-                            ;//sysj\conveyor_controller.sysj line: 640, column: 8
+                            ;//sysj\conveyor_controller.sysj line: 639, column: 8
                             S37121=7;
                             active[76]=1;
                             ends[76]=1;
@@ -1453,9 +1453,9 @@ public class Controller extends ClockDomain{
                           break;
                         
                         case 7 : 
-                          if(!WPgripped.getprestatus()){//sysj\conveyor_controller.sysj line: 656, column: 14
+                          if(!WPgripped.getprestatus()){//sysj\conveyor_controller.sysj line: 655, column: 14
                             S37121=8;
-                            armSource.setPresent();//sysj\conveyor_controller.sysj line: 659, column: 9
+                            armSource.setPresent();//sysj\conveyor_controller.sysj line: 658, column: 9
                             currsigs.addElement(armSource);
                             active[76]=1;
                             ends[76]=1;
@@ -1469,13 +1469,13 @@ public class Controller extends ClockDomain{
                           break;
                         
                         case 8 : 
-                          if(armAtSource.getprestatus()){//sysj\conveyor_controller.sysj line: 658, column: 14
-                            done_75.setPresent();//sysj\conveyor_controller.sysj line: 663, column: 8
+                          if(armAtSource.getprestatus()){//sysj\conveyor_controller.sysj line: 657, column: 14
+                            done_75.setPresent();//sysj\conveyor_controller.sysj line: 662, column: 8
                             currsigs.addElement(done_75);
                             S37121=9;
                             S37199=0;
-                            if(!lidLoaderReady_o.isPartnerPresent() || lidLoaderReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 664, column: 8
-                              lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 664, column: 8
+                            if(!lidLoaderReady_o.isPartnerPresent() || lidLoaderReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 663, column: 8
+                              lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 663, column: 8
                               S37199=1;
                               active[76]=1;
                               ends[76]=1;
@@ -1483,14 +1483,14 @@ public class Controller extends ClockDomain{
                             }
                             else {
                               S37194=0;
-                              if(lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 664, column: 8
-                                lidLoaderReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 664, column: 8
+                              if(lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 663, column: 8
+                                lidLoaderReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 663, column: 8
                                 S37194=1;
-                                if(!lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 664, column: 8
-                                  lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 664, column: 8
+                                if(!lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 663, column: 8
+                                  lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 663, column: 8
                                   ends[76]=2;
-                                  ;//sysj\conveyor_controller.sysj line: 664, column: 8
-                                  System.out.println("Arm at source");//sysj\conveyor_controller.sysj line: 666, column: 8
+                                  ;//sysj\conveyor_controller.sysj line: 663, column: 8
+                                  System.out.println("Arm at source");//sysj\conveyor_controller.sysj line: 665, column: 8
                                   S37121=10;
                                   active[76]=1;
                                   ends[76]=1;
@@ -1510,7 +1510,7 @@ public class Controller extends ClockDomain{
                             }
                           }
                           else {
-                            armSource.setPresent();//sysj\conveyor_controller.sysj line: 659, column: 9
+                            armSource.setPresent();//sysj\conveyor_controller.sysj line: 658, column: 9
                             currsigs.addElement(armSource);
                             active[76]=1;
                             ends[76]=1;
@@ -1521,8 +1521,8 @@ public class Controller extends ClockDomain{
                         case 9 : 
                           switch(S37199){
                             case 0 : 
-                              if(!lidLoaderReady_o.isPartnerPresent() || lidLoaderReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 664, column: 8
-                                lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 664, column: 8
+                              if(!lidLoaderReady_o.isPartnerPresent() || lidLoaderReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 663, column: 8
+                                lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 663, column: 8
                                 S37199=1;
                                 active[76]=1;
                                 ends[76]=1;
@@ -1531,14 +1531,14 @@ public class Controller extends ClockDomain{
                               else {
                                 switch(S37194){
                                   case 0 : 
-                                    if(lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 664, column: 8
-                                      lidLoaderReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 664, column: 8
+                                    if(lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 663, column: 8
+                                      lidLoaderReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 663, column: 8
                                       S37194=1;
-                                      if(!lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 664, column: 8
-                                        lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 664, column: 8
+                                      if(!lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 663, column: 8
+                                        lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 663, column: 8
                                         ends[76]=2;
-                                        ;//sysj\conveyor_controller.sysj line: 664, column: 8
-                                        System.out.println("Arm at source");//sysj\conveyor_controller.sysj line: 666, column: 8
+                                        ;//sysj\conveyor_controller.sysj line: 663, column: 8
+                                        System.out.println("Arm at source");//sysj\conveyor_controller.sysj line: 665, column: 8
                                         S37121=10;
                                         active[76]=1;
                                         ends[76]=1;
@@ -1558,11 +1558,11 @@ public class Controller extends ClockDomain{
                                     break;
                                   
                                   case 1 : 
-                                    if(!lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 664, column: 8
-                                      lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 664, column: 8
+                                    if(!lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 663, column: 8
+                                      lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 663, column: 8
                                       ends[76]=2;
-                                      ;//sysj\conveyor_controller.sysj line: 664, column: 8
-                                      System.out.println("Arm at source");//sysj\conveyor_controller.sysj line: 666, column: 8
+                                      ;//sysj\conveyor_controller.sysj line: 663, column: 8
+                                      System.out.println("Arm at source");//sysj\conveyor_controller.sysj line: 665, column: 8
                                       S37121=10;
                                       active[76]=1;
                                       ends[76]=1;
@@ -1582,8 +1582,8 @@ public class Controller extends ClockDomain{
                             case 1 : 
                               S37199=1;
                               S37199=0;
-                              if(!lidLoaderReady_o.isPartnerPresent() || lidLoaderReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 664, column: 8
-                                lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 664, column: 8
+                              if(!lidLoaderReady_o.isPartnerPresent() || lidLoaderReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 663, column: 8
+                                lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 663, column: 8
                                 S37199=1;
                                 active[76]=1;
                                 ends[76]=1;
@@ -1591,14 +1591,14 @@ public class Controller extends ClockDomain{
                               }
                               else {
                                 S37194=0;
-                                if(lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 664, column: 8
-                                  lidLoaderReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 664, column: 8
+                                if(lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 663, column: 8
+                                  lidLoaderReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 663, column: 8
                                   S37194=1;
-                                  if(!lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 664, column: 8
-                                    lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 664, column: 8
+                                  if(!lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 663, column: 8
+                                    lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 663, column: 8
                                     ends[76]=2;
-                                    ;//sysj\conveyor_controller.sysj line: 664, column: 8
-                                    System.out.println("Arm at source");//sysj\conveyor_controller.sysj line: 666, column: 8
+                                    ;//sysj\conveyor_controller.sysj line: 663, column: 8
+                                    System.out.println("Arm at source");//sysj\conveyor_controller.sysj line: 665, column: 8
                                     S37121=10;
                                     active[76]=1;
                                     ends[76]=1;
@@ -1638,7 +1638,7 @@ public class Controller extends ClockDomain{
               
               case 3 : 
                 S37106=3;
-                System.out.println("entering manual");//sysj\conveyor_controller.sysj line: 674, column: 6
+                System.out.println("entering manual");//sysj\conveyor_controller.sysj line: 673, column: 6
                 S37106=4;
                 thread95851(tdone,ends);
                 thread95852(tdone,ends);
@@ -1665,7 +1665,7 @@ public class Controller extends ClockDomain{
                 break;
               
               case 4 : 
-                if(autoMode_75.getprestatus()){//sysj\conveyor_controller.sysj line: 675, column: 12
+                if(autoMode_75.getprestatus()){//sysj\conveyor_controller.sysj line: 674, column: 12
                   lidLoaderReady_o.setPreempted();
                   S37106=0;
                   active[76]=1;
@@ -1723,7 +1723,7 @@ public class Controller extends ClockDomain{
 
   public void thread95840(int [] tdone, int [] ends){
         S95123=1;
-    bottleAtPos3E.setPresent();//sysj\conveyor_controller.sysj line: 718, column: 22
+    bottleAtPos3E.setPresent();//sysj\conveyor_controller.sysj line: 717, column: 22
     currsigs.addElement(bottleAtPos3E);
     active[86]=1;
     ends[86]=1;
@@ -1733,7 +1733,7 @@ public class Controller extends ClockDomain{
   public void thread95839(int [] tdone, int [] ends){
         S95156=1;
     S95130=0;
-    if(bottleAtPos3_75.getprestatus()){//sysj\conveyor_controller.sysj line: 715, column: 20
+    if(bottleAtPos3_75.getprestatus()){//sysj\conveyor_controller.sysj line: 714, column: 20
       thread95840(tdone,ends);
       thread95841(tdone,ends);
       int biggest95842 = 0;
@@ -1761,8 +1761,8 @@ public class Controller extends ClockDomain{
         S95118=1;
     S95062=0;
     S95042=0;
-    if(!checkThree_in.isPartnerPresent() || checkThree_in.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 705, column: 6
-      checkThree_in.setACK(false);//sysj\conveyor_controller.sysj line: 705, column: 6
+    if(!checkThree_in.isPartnerPresent() || checkThree_in.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 704, column: 6
+      checkThree_in.setACK(false);//sysj\conveyor_controller.sysj line: 704, column: 6
       S95042=1;
       active[84]=1;
       ends[84]=1;
@@ -1770,15 +1770,15 @@ public class Controller extends ClockDomain{
     }
     else {
       S95037=0;
-      if(!checkThree_in.isREQ()){//sysj\conveyor_controller.sysj line: 705, column: 6
-        checkThree_in.setACK(true);//sysj\conveyor_controller.sysj line: 705, column: 6
+      if(!checkThree_in.isREQ()){//sysj\conveyor_controller.sysj line: 704, column: 6
+        checkThree_in.setACK(true);//sysj\conveyor_controller.sysj line: 704, column: 6
         S95037=1;
-        if(checkThree_in.isREQ()){//sysj\conveyor_controller.sysj line: 705, column: 6
-          checkThree_in.setACK(false);//sysj\conveyor_controller.sysj line: 705, column: 6
+        if(checkThree_in.isREQ()){//sysj\conveyor_controller.sysj line: 704, column: 6
+          checkThree_in.setACK(false);//sysj\conveyor_controller.sysj line: 704, column: 6
           ends[84]=2;
-          ;//sysj\conveyor_controller.sysj line: 705, column: 6
-          if((Boolean)(checkThree_in.getVal() == null ? null : ((Boolean)checkThree_in.getVal()))){//sysj\conveyor_controller.sysj line: 706, column: 9
-            bottleAtPos3_75.setPresent();//sysj\conveyor_controller.sysj line: 707, column: 7
+          ;//sysj\conveyor_controller.sysj line: 704, column: 6
+          if((Boolean)(checkThree_in.getVal() == null ? null : ((Boolean)checkThree_in.getVal()))){//sysj\conveyor_controller.sysj line: 705, column: 9
+            bottleAtPos3_75.setPresent();//sysj\conveyor_controller.sysj line: 706, column: 7
             currsigs.addElement(bottleAtPos3_75);
             S95062=1;
             active[84]=1;
@@ -1818,8 +1818,8 @@ public class Controller extends ClockDomain{
         S95014=1;
     S95013=0;
     S37045=0;
-    if(!lidLoaderReady_o.isPartnerPresent() || lidLoaderReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 606, column: 5
-      lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 606, column: 5
+    if(!lidLoaderReady_o.isPartnerPresent() || lidLoaderReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 605, column: 5
+      lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 605, column: 5
       S37045=1;
       active[76]=1;
       ends[76]=1;
@@ -1827,13 +1827,13 @@ public class Controller extends ClockDomain{
     }
     else {
       S37040=0;
-      if(lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 606, column: 5
-        lidLoaderReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 606, column: 5
+      if(lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 605, column: 5
+        lidLoaderReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 605, column: 5
         S37040=1;
-        if(!lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 606, column: 5
-          lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 606, column: 5
+        if(!lidLoaderReady_o.isACK()){//sysj\conveyor_controller.sysj line: 605, column: 5
+          lidLoaderReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 605, column: 5
           ends[76]=2;
-          ;//sysj\conveyor_controller.sysj line: 606, column: 5
+          ;//sysj\conveyor_controller.sysj line: 605, column: 5
           S95013=1;
           S37106=0;
           active[76]=1;
@@ -1869,10 +1869,10 @@ public class Controller extends ClockDomain{
         case 1 : 
           S95158=2;
           S95158=2;
-          manualMode_75.setClear();//sysj\conveyor_controller.sysj line: 604, column: 4
-          autoMode_75.setClear();//sysj\conveyor_controller.sysj line: 604, column: 4
-          bottleAtPos3_75.setClear();//sysj\conveyor_controller.sysj line: 604, column: 4
-          done_75.setClear();//sysj\conveyor_controller.sysj line: 604, column: 4
+          manualMode_75.setClear();//sysj\conveyor_controller.sysj line: 603, column: 4
+          autoMode_75.setClear();//sysj\conveyor_controller.sysj line: 603, column: 4
+          bottleAtPos3_75.setClear();//sysj\conveyor_controller.sysj line: 603, column: 4
+          done_75.setClear();//sysj\conveyor_controller.sysj line: 603, column: 4
           thread95836(tdone,ends);
           thread95837(tdone,ends);
           thread95838(tdone,ends);
@@ -1897,10 +1897,10 @@ public class Controller extends ClockDomain{
           }
         
         case 2 : 
-          manualMode_75.setClear();//sysj\conveyor_controller.sysj line: 604, column: 4
-          autoMode_75.setClear();//sysj\conveyor_controller.sysj line: 604, column: 4
-          bottleAtPos3_75.setClear();//sysj\conveyor_controller.sysj line: 604, column: 4
-          done_75.setClear();//sysj\conveyor_controller.sysj line: 604, column: 4
+          manualMode_75.setClear();//sysj\conveyor_controller.sysj line: 603, column: 4
+          autoMode_75.setClear();//sysj\conveyor_controller.sysj line: 603, column: 4
+          bottleAtPos3_75.setClear();//sysj\conveyor_controller.sysj line: 603, column: 4
+          done_75.setClear();//sysj\conveyor_controller.sysj line: 603, column: 4
           thread95844(tdone,ends);
           thread95861(tdone,ends);
           thread95862(tdone,ends);

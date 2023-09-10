@@ -14,17 +14,13 @@ import org.compsys704.States;
 public class RotaryCanvas extends JPanel {
 
 	BufferedImage table;
-	BufferedImage arrow_1;
-	BufferedImage arrow_2;
-	BufferedImage arrow_3;
-	BufferedImage arrow_4;
-	BufferedImage arrow_5;
-	BufferedImage arrow_6;
 	BufferedImage bottle;
 	BufferedImage bottle_Filled;
 	BufferedImage bottle_Capped;
 	BufferedImage filler;
 	BufferedImage capper;
+	BufferedImage lidloader;
+	BufferedImage lid_table;
 	
 	public RotaryCanvas(){
 		try {
@@ -34,12 +30,8 @@ public class RotaryCanvas extends JPanel {
 			bottle_Capped = ImageIO.read(new File("res/bottle_table_lid.png"));
 			bottle = ImageIO.read(new File("res/bottle_table.png"));
 			table = ImageIO.read(new File("res/rotary.png"));
-			arrow_1 = ImageIO.read(new File("res/arrow_1.png"));
-			arrow_2 = ImageIO.read(new File("res/arrow_2.png"));
-			arrow_3 = ImageIO.read(new File("res/arrow_3.png"));
-			arrow_4 = ImageIO.read(new File("res/arrow_4.png"));
-			arrow_5 = ImageIO.read(new File("res/arrow_5.png"));
-			arrow_6 = ImageIO.read(new File("res/arrow_6.png"));
+			lidloader = ImageIO.read(new File("res/lidloader.png"));
+			lid_table = ImageIO.read(new File("res/lid_table.png"));
 			
 		
 		} catch (IOException e) {
@@ -52,9 +44,14 @@ public class RotaryCanvas extends JPanel {
 	protected void paintComponent(Graphics g){
 		
 		super.paintComponent(g);
+		g.setColor(Color.BLACK);
+		g.drawString("Rotary Table", 10, 20);
+		
 		g.drawImage(table, -90, 50, null);	
 		g.drawImage(filler, 30, 55, null);	
 		g.drawImage(capper, 243, 68, null);	
+		g.drawImage(lid_table, 149, -10, null);	
+		g.drawImage(lidloader, 200, 20, null);	
 		
 		if (States.BOTTLE_AT_POS2) {
 		g.drawImage(bottle, 85, 105, null);

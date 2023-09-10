@@ -28,7 +28,7 @@ public class RotaryPlant extends ClockDomain{
   private int[] ends = new int[49];
   private int[] tdone = new int[49];
   
-  public void thread97529(int [] tdone, int [] ends){
+  public void thread97405(int [] tdone, int [] ends){
         switch(S96096){
       case 0 : 
         active[13]=0;
@@ -54,7 +54,7 @@ public class RotaryPlant extends ClockDomain{
     }
   }
 
-  public void thread97528(int [] tdone, int [] ends){
+  public void thread97404(int [] tdone, int [] ends){
         switch(S96088){
       case 0 : 
         active[12]=0;
@@ -80,7 +80,7 @@ public class RotaryPlant extends ClockDomain{
     }
   }
 
-  public void thread97527(int [] tdone, int [] ends){
+  public void thread97403(int [] tdone, int [] ends){
         switch(S96098){
       case 0 : 
         active[11]=0;
@@ -89,22 +89,22 @@ public class RotaryPlant extends ClockDomain{
         break;
       
       case 1 : 
-        thread97528(tdone,ends);
-        thread97529(tdone,ends);
-        int biggest97530 = 0;
-        if(ends[12]>=biggest97530){
-          biggest97530=ends[12];
+        thread97404(tdone,ends);
+        thread97405(tdone,ends);
+        int biggest97406 = 0;
+        if(ends[12]>=biggest97406){
+          biggest97406=ends[12];
         }
-        if(ends[13]>=biggest97530){
-          biggest97530=ends[13];
+        if(ends[13]>=biggest97406){
+          biggest97406=ends[13];
         }
-        if(biggest97530 == 1){
+        if(biggest97406 == 1){
           active[11]=1;
           ends[11]=1;
           tdone[11]=1;
         }
         //FINXME code
-        if(biggest97530 == 0){
+        if(biggest97406 == 0){
           S96098=0;
           active[11]=0;
           ends[11]=0;
@@ -115,7 +115,7 @@ public class RotaryPlant extends ClockDomain{
     }
   }
 
-  public void thread97526(int [] tdone, int [] ends){
+  public void thread97402(int [] tdone, int [] ends){
         switch(S96080){
       case 0 : 
         active[10]=0;
@@ -156,7 +156,7 @@ public class RotaryPlant extends ClockDomain{
     }
   }
 
-  public void thread97523(int [] tdone, int [] ends){
+  public void thread97399(int [] tdone, int [] ends){
         S96096=1;
     if(capOnBottleAtPos1.getprestatus()){//sysj\conveyor_plant.sysj line: 75, column: 31
       capOnBottleAtPos1E.setPresent();//sysj\conveyor_plant.sysj line: 75, column: 50
@@ -172,7 +172,7 @@ public class RotaryPlant extends ClockDomain{
     }
   }
 
-  public void thread97522(int [] tdone, int [] ends){
+  public void thread97398(int [] tdone, int [] ends){
         S96088=1;
     if(tableAlignedWithSensor.getprestatus()){//sysj\conveyor_plant.sysj line: 73, column: 31
       tableAlignedWithSensorE.setPresent();//sysj\conveyor_plant.sysj line: 73, column: 55
@@ -188,25 +188,25 @@ public class RotaryPlant extends ClockDomain{
     }
   }
 
-  public void thread97521(int [] tdone, int [] ends){
+  public void thread97397(int [] tdone, int [] ends){
         S96098=1;
-    thread97522(tdone,ends);
-    thread97523(tdone,ends);
-    int biggest97524 = 0;
-    if(ends[12]>=biggest97524){
-      biggest97524=ends[12];
+    thread97398(tdone,ends);
+    thread97399(tdone,ends);
+    int biggest97400 = 0;
+    if(ends[12]>=biggest97400){
+      biggest97400=ends[12];
     }
-    if(ends[13]>=biggest97524){
-      biggest97524=ends[13];
+    if(ends[13]>=biggest97400){
+      biggest97400=ends[13];
     }
-    if(biggest97524 == 1){
+    if(biggest97400 == 1){
       active[11]=1;
       ends[11]=1;
       tdone[11]=1;
     }
   }
 
-  public void thread97520(int [] tdone, int [] ends){
+  public void thread97396(int [] tdone, int [] ends){
         S96080=1;
     S96074=0;
     active[10]=1;
@@ -229,38 +229,38 @@ public class RotaryPlant extends ClockDomain{
         case 1 : 
           S96100=2;
           S96100=2;
-          thread97520(tdone,ends);
-          thread97521(tdone,ends);
-          int biggest97525 = 0;
-          if(ends[10]>=biggest97525){
-            biggest97525=ends[10];
+          thread97396(tdone,ends);
+          thread97397(tdone,ends);
+          int biggest97401 = 0;
+          if(ends[10]>=biggest97401){
+            biggest97401=ends[10];
           }
-          if(ends[11]>=biggest97525){
-            biggest97525=ends[11];
+          if(ends[11]>=biggest97401){
+            biggest97401=ends[11];
           }
-          if(biggest97525 == 1){
+          if(biggest97401 == 1){
             active[9]=1;
             ends[9]=1;
             break RUN;
           }
         
         case 2 : 
-          thread97526(tdone,ends);
-          thread97527(tdone,ends);
-          int biggest97531 = 0;
-          if(ends[10]>=biggest97531){
-            biggest97531=ends[10];
+          thread97402(tdone,ends);
+          thread97403(tdone,ends);
+          int biggest97407 = 0;
+          if(ends[10]>=biggest97407){
+            biggest97407=ends[10];
           }
-          if(ends[11]>=biggest97531){
-            biggest97531=ends[11];
+          if(ends[11]>=biggest97407){
+            biggest97407=ends[11];
           }
-          if(biggest97531 == 1){
+          if(biggest97407 == 1){
             active[9]=1;
             ends[9]=1;
             break RUN;
           }
           //FINXME code
-          if(biggest97531 == 0){
+          if(biggest97407 == 0){
             S96100=0;
             active[9]=0;
             ends[9]=0;

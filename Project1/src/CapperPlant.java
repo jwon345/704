@@ -31,25 +31,25 @@ public class CapperPlant extends ClockDomain{
   public Signal gripperTurnHomePosE = new Signal("gripperTurnHomePosE", Signal.OUTPUT);
   public Signal gripperTurnFinalPosE = new Signal("gripperTurnFinalPosE", Signal.OUTPUT);
   private long __start_thread_24;//sysj\conveyor_plant.sysj line: 139, column: 7
-  private int S96831 = 1;
-  private int S96754 = 1;
-  private int S96480 = 1;
-  private int S96829 = 1;
-  private int S96763 = 1;
-  private int S96771 = 1;
-  private int S96779 = 1;
-  private int S96787 = 1;
-  private int S96795 = 1;
-  private int S96803 = 1;
-  private int S96811 = 1;
-  private int S96819 = 1;
-  private int S96827 = 1;
+  private int S96707 = 1;
+  private int S96630 = 1;
+  private int S96350 = 1;
+  private int S96705 = 1;
+  private int S96639 = 1;
+  private int S96647 = 1;
+  private int S96655 = 1;
+  private int S96663 = 1;
+  private int S96671 = 1;
+  private int S96679 = 1;
+  private int S96687 = 1;
+  private int S96695 = 1;
+  private int S96703 = 1;
   
   private int[] ends = new int[49];
   private int[] tdone = new int[49];
   
-  public void thread97577(int [] tdone, int [] ends){
-        switch(S96827){
+  public void thread97453(int [] tdone, int [] ends){
+        switch(S96703){
       case 0 : 
         active[35]=0;
         ends[35]=0;
@@ -57,8 +57,8 @@ public class CapperPlant extends ClockDomain{
         break;
       
       case 1 : 
-        if(gripperTurnFinalPos.getprestatus()){//sysj\conveyor_plant.sysj line: 188, column: 35
-          gripperTurnFinalPosE.setPresent();//sysj\conveyor_plant.sysj line: 188, column: 56
+        if(gripperTurnFinalPos.getprestatus()){//sysj\conveyor_plant.sysj line: 189, column: 35
+          gripperTurnFinalPosE.setPresent();//sysj\conveyor_plant.sysj line: 189, column: 56
           currsigs.addElement(gripperTurnFinalPosE);
           active[35]=1;
           ends[35]=1;
@@ -74,8 +74,8 @@ public class CapperPlant extends ClockDomain{
     }
   }
 
-  public void thread97576(int [] tdone, int [] ends){
-        switch(S96819){
+  public void thread97452(int [] tdone, int [] ends){
+        switch(S96695){
       case 0 : 
         active[34]=0;
         ends[34]=0;
@@ -83,8 +83,8 @@ public class CapperPlant extends ClockDomain{
         break;
       
       case 1 : 
-        if(gripperTurnHomePos.getprestatus()){//sysj\conveyor_plant.sysj line: 186, column: 35
-          gripperTurnHomePosE.setPresent();//sysj\conveyor_plant.sysj line: 186, column: 55
+        if(gripperTurnHomePos.getprestatus()){//sysj\conveyor_plant.sysj line: 187, column: 35
+          gripperTurnHomePosE.setPresent();//sysj\conveyor_plant.sysj line: 187, column: 55
           currsigs.addElement(gripperTurnHomePosE);
           active[34]=1;
           ends[34]=1;
@@ -100,8 +100,8 @@ public class CapperPlant extends ClockDomain{
     }
   }
 
-  public void thread97575(int [] tdone, int [] ends){
-        switch(S96811){
+  public void thread97451(int [] tdone, int [] ends){
+        switch(S96687){
       case 0 : 
         active[33]=0;
         ends[33]=0;
@@ -109,8 +109,8 @@ public class CapperPlant extends ClockDomain{
         break;
       
       case 1 : 
-        if(gripperZAxisLifted.getprestatus()){//sysj\conveyor_plant.sysj line: 184, column: 35
-          gripperZAxisLiftedE.setPresent();//sysj\conveyor_plant.sysj line: 184, column: 55
+        if(gripperZAxisLifted.getprestatus()){//sysj\conveyor_plant.sysj line: 185, column: 35
+          gripperZAxisLiftedE.setPresent();//sysj\conveyor_plant.sysj line: 185, column: 55
           currsigs.addElement(gripperZAxisLiftedE);
           active[33]=1;
           ends[33]=1;
@@ -126,8 +126,8 @@ public class CapperPlant extends ClockDomain{
     }
   }
 
-  public void thread97574(int [] tdone, int [] ends){
-        switch(S96803){
+  public void thread97450(int [] tdone, int [] ends){
+        switch(S96679){
       case 0 : 
         active[32]=0;
         ends[32]=0;
@@ -135,8 +135,8 @@ public class CapperPlant extends ClockDomain{
         break;
       
       case 1 : 
-        if(gripperZAxisLowered.getprestatus()){//sysj\conveyor_plant.sysj line: 182, column: 35
-          gripperZAxisLoweredE.setPresent();//sysj\conveyor_plant.sysj line: 182, column: 56
+        if(gripperZAxisLowered.getprestatus()){//sysj\conveyor_plant.sysj line: 183, column: 35
+          gripperZAxisLoweredE.setPresent();//sysj\conveyor_plant.sysj line: 183, column: 56
           currsigs.addElement(gripperZAxisLoweredE);
           active[32]=1;
           ends[32]=1;
@@ -152,8 +152,8 @@ public class CapperPlant extends ClockDomain{
     }
   }
 
-  public void thread97573(int [] tdone, int [] ends){
-        switch(S96795){
+  public void thread97449(int [] tdone, int [] ends){
+        switch(S96671){
       case 0 : 
         active[31]=0;
         ends[31]=0;
@@ -161,8 +161,8 @@ public class CapperPlant extends ClockDomain{
         break;
       
       case 1 : 
-        if(cylClampBottleExtend.getprestatus()){//sysj\conveyor_plant.sysj line: 180, column: 35
-          cylClampBottleExtendE.setPresent();//sysj\conveyor_plant.sysj line: 180, column: 57
+        if(cylClampBottleExtend.getprestatus()){//sysj\conveyor_plant.sysj line: 181, column: 35
+          cylClampBottleExtendE.setPresent();//sysj\conveyor_plant.sysj line: 181, column: 57
           currsigs.addElement(cylClampBottleExtendE);
           active[31]=1;
           ends[31]=1;
@@ -178,8 +178,8 @@ public class CapperPlant extends ClockDomain{
     }
   }
 
-  public void thread97572(int [] tdone, int [] ends){
-        switch(S96787){
+  public void thread97448(int [] tdone, int [] ends){
+        switch(S96663){
       case 0 : 
         active[30]=0;
         ends[30]=0;
@@ -187,8 +187,8 @@ public class CapperPlant extends ClockDomain{
         break;
       
       case 1 : 
-        if(capGripperPos5Extend.getprestatus()){//sysj\conveyor_plant.sysj line: 178, column: 35
-          capGripperPos5ExtendE.setPresent();//sysj\conveyor_plant.sysj line: 178, column: 57
+        if(capGripperPos5Extend.getprestatus()){//sysj\conveyor_plant.sysj line: 179, column: 35
+          capGripperPos5ExtendE.setPresent();//sysj\conveyor_plant.sysj line: 179, column: 57
           currsigs.addElement(capGripperPos5ExtendE);
           active[30]=1;
           ends[30]=1;
@@ -204,8 +204,8 @@ public class CapperPlant extends ClockDomain{
     }
   }
 
-  public void thread97571(int [] tdone, int [] ends){
-        switch(S96779){
+  public void thread97447(int [] tdone, int [] ends){
+        switch(S96655){
       case 0 : 
         active[29]=0;
         ends[29]=0;
@@ -213,8 +213,8 @@ public class CapperPlant extends ClockDomain{
         break;
       
       case 1 : 
-        if(gripperTurnExtend.getprestatus()){//sysj\conveyor_plant.sysj line: 176, column: 35
-          gripperTurnExtendE.setPresent();//sysj\conveyor_plant.sysj line: 176, column: 54
+        if(gripperTurnExtend.getprestatus()){//sysj\conveyor_plant.sysj line: 177, column: 35
+          gripperTurnExtendE.setPresent();//sysj\conveyor_plant.sysj line: 177, column: 54
           currsigs.addElement(gripperTurnExtendE);
           active[29]=1;
           ends[29]=1;
@@ -230,8 +230,8 @@ public class CapperPlant extends ClockDomain{
     }
   }
 
-  public void thread97570(int [] tdone, int [] ends){
-        switch(S96771){
+  public void thread97446(int [] tdone, int [] ends){
+        switch(S96647){
       case 0 : 
         active[28]=0;
         ends[28]=0;
@@ -239,8 +239,8 @@ public class CapperPlant extends ClockDomain{
         break;
       
       case 1 : 
-        if(gripperTurnRetract.getprestatus()){//sysj\conveyor_plant.sysj line: 174, column: 35
-          gripperTurnRetractE.setPresent();//sysj\conveyor_plant.sysj line: 174, column: 55
+        if(gripperTurnRetract.getprestatus()){//sysj\conveyor_plant.sysj line: 175, column: 35
+          gripperTurnRetractE.setPresent();//sysj\conveyor_plant.sysj line: 175, column: 55
           currsigs.addElement(gripperTurnRetractE);
           active[28]=1;
           ends[28]=1;
@@ -256,8 +256,8 @@ public class CapperPlant extends ClockDomain{
     }
   }
 
-  public void thread97569(int [] tdone, int [] ends){
-        switch(S96763){
+  public void thread97445(int [] tdone, int [] ends){
+        switch(S96639){
       case 0 : 
         active[27]=0;
         ends[27]=0;
@@ -265,8 +265,8 @@ public class CapperPlant extends ClockDomain{
         break;
       
       case 1 : 
-        if(cylPos5ZaxisExtend.getprestatus()){//sysj\conveyor_plant.sysj line: 172, column: 35
-          cylPos5ZaxisExtendE.setPresent();//sysj\conveyor_plant.sysj line: 172, column: 55
+        if(cylPos5ZaxisExtend.getprestatus()){//sysj\conveyor_plant.sysj line: 173, column: 35
+          cylPos5ZaxisExtendE.setPresent();//sysj\conveyor_plant.sysj line: 173, column: 55
           currsigs.addElement(cylPos5ZaxisExtendE);
           active[27]=1;
           ends[27]=1;
@@ -282,8 +282,8 @@ public class CapperPlant extends ClockDomain{
     }
   }
 
-  public void thread97568(int [] tdone, int [] ends){
-        switch(S96829){
+  public void thread97444(int [] tdone, int [] ends){
+        switch(S96705){
       case 0 : 
         active[26]=0;
         ends[26]=0;
@@ -291,51 +291,51 @@ public class CapperPlant extends ClockDomain{
         break;
       
       case 1 : 
-        thread97569(tdone,ends);
-        thread97570(tdone,ends);
-        thread97571(tdone,ends);
-        thread97572(tdone,ends);
-        thread97573(tdone,ends);
-        thread97574(tdone,ends);
-        thread97575(tdone,ends);
-        thread97576(tdone,ends);
-        thread97577(tdone,ends);
-        int biggest97578 = 0;
-        if(ends[27]>=biggest97578){
-          biggest97578=ends[27];
+        thread97445(tdone,ends);
+        thread97446(tdone,ends);
+        thread97447(tdone,ends);
+        thread97448(tdone,ends);
+        thread97449(tdone,ends);
+        thread97450(tdone,ends);
+        thread97451(tdone,ends);
+        thread97452(tdone,ends);
+        thread97453(tdone,ends);
+        int biggest97454 = 0;
+        if(ends[27]>=biggest97454){
+          biggest97454=ends[27];
         }
-        if(ends[28]>=biggest97578){
-          biggest97578=ends[28];
+        if(ends[28]>=biggest97454){
+          biggest97454=ends[28];
         }
-        if(ends[29]>=biggest97578){
-          biggest97578=ends[29];
+        if(ends[29]>=biggest97454){
+          biggest97454=ends[29];
         }
-        if(ends[30]>=biggest97578){
-          biggest97578=ends[30];
+        if(ends[30]>=biggest97454){
+          biggest97454=ends[30];
         }
-        if(ends[31]>=biggest97578){
-          biggest97578=ends[31];
+        if(ends[31]>=biggest97454){
+          biggest97454=ends[31];
         }
-        if(ends[32]>=biggest97578){
-          biggest97578=ends[32];
+        if(ends[32]>=biggest97454){
+          biggest97454=ends[32];
         }
-        if(ends[33]>=biggest97578){
-          biggest97578=ends[33];
+        if(ends[33]>=biggest97454){
+          biggest97454=ends[33];
         }
-        if(ends[34]>=biggest97578){
-          biggest97578=ends[34];
+        if(ends[34]>=biggest97454){
+          biggest97454=ends[34];
         }
-        if(ends[35]>=biggest97578){
-          biggest97578=ends[35];
+        if(ends[35]>=biggest97454){
+          biggest97454=ends[35];
         }
-        if(biggest97578 == 1){
+        if(biggest97454 == 1){
           active[26]=1;
           ends[26]=1;
           tdone[26]=1;
         }
         //FINXME code
-        if(biggest97578 == 0){
-          S96829=0;
+        if(biggest97454 == 0){
+          S96705=0;
           active[26]=0;
           ends[26]=0;
           tdone[26]=1;
@@ -345,14 +345,14 @@ public class CapperPlant extends ClockDomain{
     }
   }
 
-  public void thread97567(int [] tdone, int [] ends){
+  public void thread97443(int [] tdone, int [] ends){
         active[25]=0;
     ends[25]=0;
     tdone[25]=1;
   }
 
-  public void thread97566(int [] tdone, int [] ends){
-        switch(S96754){
+  public void thread97442(int [] tdone, int [] ends){
+        switch(S96630){
       case 0 : 
         active[24]=0;
         ends[24]=0;
@@ -360,10 +360,10 @@ public class CapperPlant extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S96480){
+        switch(S96350){
           case 0 : 
             if(gripperTurnRetract.getprestatus()){//sysj\conveyor_plant.sysj line: 142, column: 15
-              S96480=1;
+              S96350=1;
               active[24]=1;
               ends[24]=1;
               tdone[24]=1;
@@ -379,14 +379,14 @@ public class CapperPlant extends ClockDomain{
           
           case 1 : 
             if(gripperTurnRetract.getprestatus()){//sysj\conveyor_plant.sysj line: 147, column: 16
-              S96480=2;
+              S96350=2;
               __start_thread_24 = com.systemj.Timer.getMs();//sysj\conveyor_plant.sysj line: 139, column: 7
               if(com.systemj.Timer.getMs() - __start_thread_24 >= (1) * 1000){//sysj\conveyor_plant.sysj line: 139, column: 7
                 ends[24]=2;
                 ;//sysj\conveyor_plant.sysj line: 139, column: 7
                 gripperTurnHomePos.setPresent();//sysj\conveyor_plant.sysj line: 149, column: 9
                 currsigs.addElement(gripperTurnHomePos);
-                S96480=3;
+                S96350=3;
                 active[24]=1;
                 ends[24]=1;
                 tdone[24]=1;
@@ -410,7 +410,7 @@ public class CapperPlant extends ClockDomain{
               ;//sysj\conveyor_plant.sysj line: 139, column: 7
               gripperTurnHomePos.setPresent();//sysj\conveyor_plant.sysj line: 149, column: 9
               currsigs.addElement(gripperTurnHomePos);
-              S96480=3;
+              S96350=3;
               active[24]=1;
               ends[24]=1;
               tdone[24]=1;
@@ -423,8 +423,8 @@ public class CapperPlant extends ClockDomain{
             break;
           
           case 3 : 
-            S96480=3;
-            S96480=4;
+            S96350=3;
+            S96350=4;
             active[24]=1;
             ends[24]=1;
             tdone[24]=1;
@@ -432,14 +432,14 @@ public class CapperPlant extends ClockDomain{
           
           case 4 : 
             if(cylPos5ZaxisExtend.getprestatus()){//sysj\conveyor_plant.sysj line: 152, column: 16
-              S96480=5;
+              S96350=5;
               __start_thread_24 = com.systemj.Timer.getMs();//sysj\conveyor_plant.sysj line: 139, column: 7
               if(com.systemj.Timer.getMs() - __start_thread_24 >= (1) * 1000){//sysj\conveyor_plant.sysj line: 139, column: 7
                 ends[24]=2;
                 ;//sysj\conveyor_plant.sysj line: 139, column: 7
                 gripperZAxisLowered.setPresent();//sysj\conveyor_plant.sysj line: 154, column: 9
                 currsigs.addElement(gripperZAxisLowered);
-                S96480=6;
+                S96350=6;
                 active[24]=1;
                 ends[24]=1;
                 tdone[24]=1;
@@ -463,7 +463,7 @@ public class CapperPlant extends ClockDomain{
               ;//sysj\conveyor_plant.sysj line: 139, column: 7
               gripperZAxisLowered.setPresent();//sysj\conveyor_plant.sysj line: 154, column: 9
               currsigs.addElement(gripperZAxisLowered);
-              S96480=6;
+              S96350=6;
               active[24]=1;
               ends[24]=1;
               tdone[24]=1;
@@ -476,36 +476,32 @@ public class CapperPlant extends ClockDomain{
             break;
           
           case 6 : 
-            S96480=6;
-            S96480=7;
-            __start_thread_24 = com.systemj.Timer.getMs();//sysj\conveyor_plant.sysj line: 139, column: 7
-            if(com.systemj.Timer.getMs() - __start_thread_24 >= (1) * 1000){//sysj\conveyor_plant.sysj line: 139, column: 7
-              ends[24]=2;
-              ;//sysj\conveyor_plant.sysj line: 139, column: 7
-              gripperTurnFinalPos.setPresent();//sysj\conveyor_plant.sysj line: 158, column: 9
-              currsigs.addElement(gripperTurnFinalPos);
-              S96480=8;
-              active[24]=1;
-              ends[24]=1;
-              tdone[24]=1;
-            }
-            else {
-              active[24]=1;
-              ends[24]=1;
-              tdone[24]=1;
-            }
+            S96350=6;
+            S96350=7;
+            active[24]=1;
+            ends[24]=1;
+            tdone[24]=1;
             break;
           
           case 7 : 
-            if(com.systemj.Timer.getMs() - __start_thread_24 >= (1) * 1000){//sysj\conveyor_plant.sysj line: 139, column: 7
-              ends[24]=2;
-              ;//sysj\conveyor_plant.sysj line: 139, column: 7
-              gripperTurnFinalPos.setPresent();//sysj\conveyor_plant.sysj line: 158, column: 9
-              currsigs.addElement(gripperTurnFinalPos);
-              S96480=8;
-              active[24]=1;
-              ends[24]=1;
-              tdone[24]=1;
+            if(gripperTurnExtend.getprestatus()){//sysj\conveyor_plant.sysj line: 157, column: 16
+              S96350=8;
+              __start_thread_24 = com.systemj.Timer.getMs();//sysj\conveyor_plant.sysj line: 139, column: 7
+              if(com.systemj.Timer.getMs() - __start_thread_24 >= (1) * 1000){//sysj\conveyor_plant.sysj line: 139, column: 7
+                ends[24]=2;
+                ;//sysj\conveyor_plant.sysj line: 139, column: 7
+                gripperTurnFinalPos.setPresent();//sysj\conveyor_plant.sysj line: 159, column: 9
+                currsigs.addElement(gripperTurnFinalPos);
+                S96350=9;
+                active[24]=1;
+                ends[24]=1;
+                tdone[24]=1;
+              }
+              else {
+                active[24]=1;
+                ends[24]=1;
+                tdone[24]=1;
+              }
             }
             else {
               active[24]=1;
@@ -515,10 +511,28 @@ public class CapperPlant extends ClockDomain{
             break;
           
           case 8 : 
-            S96480=8;
-            gripperZAxisLifted.setPresent();//sysj\conveyor_plant.sysj line: 162, column: 9
+            if(com.systemj.Timer.getMs() - __start_thread_24 >= (1) * 1000){//sysj\conveyor_plant.sysj line: 139, column: 7
+              ends[24]=2;
+              ;//sysj\conveyor_plant.sysj line: 139, column: 7
+              gripperTurnFinalPos.setPresent();//sysj\conveyor_plant.sysj line: 159, column: 9
+              currsigs.addElement(gripperTurnFinalPos);
+              S96350=9;
+              active[24]=1;
+              ends[24]=1;
+              tdone[24]=1;
+            }
+            else {
+              active[24]=1;
+              ends[24]=1;
+              tdone[24]=1;
+            }
+            break;
+          
+          case 9 : 
+            S96350=9;
+            gripperZAxisLifted.setPresent();//sysj\conveyor_plant.sysj line: 163, column: 9
             currsigs.addElement(gripperZAxisLifted);
-            S96480=0;
+            S96350=0;
             gripperZAxisLifted.setPresent();//sysj\conveyor_plant.sysj line: 144, column: 10
             currsigs.addElement(gripperZAxisLifted);
             active[24]=1;
@@ -532,10 +546,10 @@ public class CapperPlant extends ClockDomain{
     }
   }
 
-  public void thread97563(int [] tdone, int [] ends){
-        S96827=1;
-    if(gripperTurnFinalPos.getprestatus()){//sysj\conveyor_plant.sysj line: 188, column: 35
-      gripperTurnFinalPosE.setPresent();//sysj\conveyor_plant.sysj line: 188, column: 56
+  public void thread97439(int [] tdone, int [] ends){
+        S96703=1;
+    if(gripperTurnFinalPos.getprestatus()){//sysj\conveyor_plant.sysj line: 189, column: 35
+      gripperTurnFinalPosE.setPresent();//sysj\conveyor_plant.sysj line: 189, column: 56
       currsigs.addElement(gripperTurnFinalPosE);
       active[35]=1;
       ends[35]=1;
@@ -548,10 +562,10 @@ public class CapperPlant extends ClockDomain{
     }
   }
 
-  public void thread97562(int [] tdone, int [] ends){
-        S96819=1;
-    if(gripperTurnHomePos.getprestatus()){//sysj\conveyor_plant.sysj line: 186, column: 35
-      gripperTurnHomePosE.setPresent();//sysj\conveyor_plant.sysj line: 186, column: 55
+  public void thread97438(int [] tdone, int [] ends){
+        S96695=1;
+    if(gripperTurnHomePos.getprestatus()){//sysj\conveyor_plant.sysj line: 187, column: 35
+      gripperTurnHomePosE.setPresent();//sysj\conveyor_plant.sysj line: 187, column: 55
       currsigs.addElement(gripperTurnHomePosE);
       active[34]=1;
       ends[34]=1;
@@ -564,10 +578,10 @@ public class CapperPlant extends ClockDomain{
     }
   }
 
-  public void thread97561(int [] tdone, int [] ends){
-        S96811=1;
-    if(gripperZAxisLifted.getprestatus()){//sysj\conveyor_plant.sysj line: 184, column: 35
-      gripperZAxisLiftedE.setPresent();//sysj\conveyor_plant.sysj line: 184, column: 55
+  public void thread97437(int [] tdone, int [] ends){
+        S96687=1;
+    if(gripperZAxisLifted.getprestatus()){//sysj\conveyor_plant.sysj line: 185, column: 35
+      gripperZAxisLiftedE.setPresent();//sysj\conveyor_plant.sysj line: 185, column: 55
       currsigs.addElement(gripperZAxisLiftedE);
       active[33]=1;
       ends[33]=1;
@@ -580,10 +594,10 @@ public class CapperPlant extends ClockDomain{
     }
   }
 
-  public void thread97560(int [] tdone, int [] ends){
-        S96803=1;
-    if(gripperZAxisLowered.getprestatus()){//sysj\conveyor_plant.sysj line: 182, column: 35
-      gripperZAxisLoweredE.setPresent();//sysj\conveyor_plant.sysj line: 182, column: 56
+  public void thread97436(int [] tdone, int [] ends){
+        S96679=1;
+    if(gripperZAxisLowered.getprestatus()){//sysj\conveyor_plant.sysj line: 183, column: 35
+      gripperZAxisLoweredE.setPresent();//sysj\conveyor_plant.sysj line: 183, column: 56
       currsigs.addElement(gripperZAxisLoweredE);
       active[32]=1;
       ends[32]=1;
@@ -596,10 +610,10 @@ public class CapperPlant extends ClockDomain{
     }
   }
 
-  public void thread97559(int [] tdone, int [] ends){
-        S96795=1;
-    if(cylClampBottleExtend.getprestatus()){//sysj\conveyor_plant.sysj line: 180, column: 35
-      cylClampBottleExtendE.setPresent();//sysj\conveyor_plant.sysj line: 180, column: 57
+  public void thread97435(int [] tdone, int [] ends){
+        S96671=1;
+    if(cylClampBottleExtend.getprestatus()){//sysj\conveyor_plant.sysj line: 181, column: 35
+      cylClampBottleExtendE.setPresent();//sysj\conveyor_plant.sysj line: 181, column: 57
       currsigs.addElement(cylClampBottleExtendE);
       active[31]=1;
       ends[31]=1;
@@ -612,10 +626,10 @@ public class CapperPlant extends ClockDomain{
     }
   }
 
-  public void thread97558(int [] tdone, int [] ends){
-        S96787=1;
-    if(capGripperPos5Extend.getprestatus()){//sysj\conveyor_plant.sysj line: 178, column: 35
-      capGripperPos5ExtendE.setPresent();//sysj\conveyor_plant.sysj line: 178, column: 57
+  public void thread97434(int [] tdone, int [] ends){
+        S96663=1;
+    if(capGripperPos5Extend.getprestatus()){//sysj\conveyor_plant.sysj line: 179, column: 35
+      capGripperPos5ExtendE.setPresent();//sysj\conveyor_plant.sysj line: 179, column: 57
       currsigs.addElement(capGripperPos5ExtendE);
       active[30]=1;
       ends[30]=1;
@@ -628,10 +642,10 @@ public class CapperPlant extends ClockDomain{
     }
   }
 
-  public void thread97557(int [] tdone, int [] ends){
-        S96779=1;
-    if(gripperTurnExtend.getprestatus()){//sysj\conveyor_plant.sysj line: 176, column: 35
-      gripperTurnExtendE.setPresent();//sysj\conveyor_plant.sysj line: 176, column: 54
+  public void thread97433(int [] tdone, int [] ends){
+        S96655=1;
+    if(gripperTurnExtend.getprestatus()){//sysj\conveyor_plant.sysj line: 177, column: 35
+      gripperTurnExtendE.setPresent();//sysj\conveyor_plant.sysj line: 177, column: 54
       currsigs.addElement(gripperTurnExtendE);
       active[29]=1;
       ends[29]=1;
@@ -644,10 +658,10 @@ public class CapperPlant extends ClockDomain{
     }
   }
 
-  public void thread97556(int [] tdone, int [] ends){
-        S96771=1;
-    if(gripperTurnRetract.getprestatus()){//sysj\conveyor_plant.sysj line: 174, column: 35
-      gripperTurnRetractE.setPresent();//sysj\conveyor_plant.sysj line: 174, column: 55
+  public void thread97432(int [] tdone, int [] ends){
+        S96647=1;
+    if(gripperTurnRetract.getprestatus()){//sysj\conveyor_plant.sysj line: 175, column: 35
+      gripperTurnRetractE.setPresent();//sysj\conveyor_plant.sysj line: 175, column: 55
       currsigs.addElement(gripperTurnRetractE);
       active[28]=1;
       ends[28]=1;
@@ -660,10 +674,10 @@ public class CapperPlant extends ClockDomain{
     }
   }
 
-  public void thread97555(int [] tdone, int [] ends){
-        S96763=1;
-    if(cylPos5ZaxisExtend.getprestatus()){//sysj\conveyor_plant.sysj line: 172, column: 35
-      cylPos5ZaxisExtendE.setPresent();//sysj\conveyor_plant.sysj line: 172, column: 55
+  public void thread97431(int [] tdone, int [] ends){
+        S96639=1;
+    if(cylPos5ZaxisExtend.getprestatus()){//sysj\conveyor_plant.sysj line: 173, column: 35
+      cylPos5ZaxisExtendE.setPresent();//sysj\conveyor_plant.sysj line: 173, column: 55
       currsigs.addElement(cylPos5ZaxisExtendE);
       active[27]=1;
       ends[27]=1;
@@ -676,61 +690,61 @@ public class CapperPlant extends ClockDomain{
     }
   }
 
-  public void thread97554(int [] tdone, int [] ends){
-        S96829=1;
-    thread97555(tdone,ends);
-    thread97556(tdone,ends);
-    thread97557(tdone,ends);
-    thread97558(tdone,ends);
-    thread97559(tdone,ends);
-    thread97560(tdone,ends);
-    thread97561(tdone,ends);
-    thread97562(tdone,ends);
-    thread97563(tdone,ends);
-    int biggest97564 = 0;
-    if(ends[27]>=biggest97564){
-      biggest97564=ends[27];
+  public void thread97430(int [] tdone, int [] ends){
+        S96705=1;
+    thread97431(tdone,ends);
+    thread97432(tdone,ends);
+    thread97433(tdone,ends);
+    thread97434(tdone,ends);
+    thread97435(tdone,ends);
+    thread97436(tdone,ends);
+    thread97437(tdone,ends);
+    thread97438(tdone,ends);
+    thread97439(tdone,ends);
+    int biggest97440 = 0;
+    if(ends[27]>=biggest97440){
+      biggest97440=ends[27];
     }
-    if(ends[28]>=biggest97564){
-      biggest97564=ends[28];
+    if(ends[28]>=biggest97440){
+      biggest97440=ends[28];
     }
-    if(ends[29]>=biggest97564){
-      biggest97564=ends[29];
+    if(ends[29]>=biggest97440){
+      biggest97440=ends[29];
     }
-    if(ends[30]>=biggest97564){
-      biggest97564=ends[30];
+    if(ends[30]>=biggest97440){
+      biggest97440=ends[30];
     }
-    if(ends[31]>=biggest97564){
-      biggest97564=ends[31];
+    if(ends[31]>=biggest97440){
+      biggest97440=ends[31];
     }
-    if(ends[32]>=biggest97564){
-      biggest97564=ends[32];
+    if(ends[32]>=biggest97440){
+      biggest97440=ends[32];
     }
-    if(ends[33]>=biggest97564){
-      biggest97564=ends[33];
+    if(ends[33]>=biggest97440){
+      biggest97440=ends[33];
     }
-    if(ends[34]>=biggest97564){
-      biggest97564=ends[34];
+    if(ends[34]>=biggest97440){
+      biggest97440=ends[34];
     }
-    if(ends[35]>=biggest97564){
-      biggest97564=ends[35];
+    if(ends[35]>=biggest97440){
+      biggest97440=ends[35];
     }
-    if(biggest97564 == 1){
+    if(biggest97440 == 1){
       active[26]=1;
       ends[26]=1;
       tdone[26]=1;
     }
   }
 
-  public void thread97553(int [] tdone, int [] ends){
+  public void thread97429(int [] tdone, int [] ends){
         active[25]=0;
     ends[25]=0;
     tdone[25]=1;
   }
 
-  public void thread97552(int [] tdone, int [] ends){
-        S96754=1;
-    S96480=0;
+  public void thread97428(int [] tdone, int [] ends){
+        S96630=1;
+    S96350=0;
     gripperZAxisLifted.setPresent();//sysj\conveyor_plant.sysj line: 144, column: 10
     currsigs.addElement(gripperZAxisLifted);
     active[24]=1;
@@ -745,58 +759,58 @@ public class CapperPlant extends ClockDomain{
     }
     
     RUN: while(true){
-      switch(S96831){
+      switch(S96707){
         case 0 : 
-          S96831=0;
+          S96707=0;
           break RUN;
         
         case 1 : 
-          S96831=2;
-          S96831=2;
-          thread97552(tdone,ends);
-          thread97553(tdone,ends);
-          thread97554(tdone,ends);
-          int biggest97565 = 0;
-          if(ends[24]>=biggest97565){
-            biggest97565=ends[24];
+          S96707=2;
+          S96707=2;
+          thread97428(tdone,ends);
+          thread97429(tdone,ends);
+          thread97430(tdone,ends);
+          int biggest97441 = 0;
+          if(ends[24]>=biggest97441){
+            biggest97441=ends[24];
           }
-          if(ends[25]>=biggest97565){
-            biggest97565=ends[25];
+          if(ends[25]>=biggest97441){
+            biggest97441=ends[25];
           }
-          if(ends[26]>=biggest97565){
-            biggest97565=ends[26];
+          if(ends[26]>=biggest97441){
+            biggest97441=ends[26];
           }
-          if(biggest97565 == 1){
+          if(biggest97441 == 1){
             active[23]=1;
             ends[23]=1;
             break RUN;
           }
         
         case 2 : 
-          thread97566(tdone,ends);
-          thread97567(tdone,ends);
-          thread97568(tdone,ends);
-          int biggest97579 = 0;
-          if(ends[24]>=biggest97579){
-            biggest97579=ends[24];
+          thread97442(tdone,ends);
+          thread97443(tdone,ends);
+          thread97444(tdone,ends);
+          int biggest97455 = 0;
+          if(ends[24]>=biggest97455){
+            biggest97455=ends[24];
           }
-          if(ends[25]>=biggest97579){
-            biggest97579=ends[25];
+          if(ends[25]>=biggest97455){
+            biggest97455=ends[25];
           }
-          if(ends[26]>=biggest97579){
-            biggest97579=ends[26];
+          if(ends[26]>=biggest97455){
+            biggest97455=ends[26];
           }
-          if(biggest97579 == 1){
+          if(biggest97455 == 1){
             active[23]=1;
             ends[23]=1;
             break RUN;
           }
           //FINXME code
-          if(biggest97579 == 0){
-            S96831=0;
+          if(biggest97455 == 0){
+            S96707=0;
             active[23]=0;
             ends[23]=0;
-            S96831=0;
+            S96707=0;
             break RUN;
           }
         

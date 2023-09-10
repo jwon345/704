@@ -33,6 +33,10 @@ public class ConveyorCanvas extends JPanel {
 	@Override
 	protected void paintComponent(Graphics g){
 		super.paintComponent(g);
+		
+		g.setColor(Color.BLACK);
+		g.drawString("Conveyor", 10, 20);
+		
 		if (States.MOTOR_ONOFF) {
 	        g.drawImage(conveyor_on, 10, 129, null);
 	    } else {
