@@ -27,22 +27,22 @@ public class FillerPlant extends ClockDomain{
   public Signal dosUnitEvacE = new Signal("dosUnitEvacE", Signal.OUTPUT);
   public Signal dosUnitFilledE = new Signal("dosUnitFilledE", Signal.OUTPUT);
   private long __start_thread_15;//sysj\conveyor_plant.sysj line: 86, column: 5
-  private int S36506 = 1;
-  private int S36445 = 1;
-  private int S36163 = 1;
-  private int S36504 = 1;
-  private int S36453 = 1;
-  private int S36461 = 1;
-  private int S36469 = 1;
-  private int S36480 = 1;
-  private int S36491 = 1;
-  private int S36502 = 1;
+  private int S48325 = 1;
+  private int S48264 = 1;
+  private int S47982 = 1;
+  private int S48323 = 1;
+  private int S48272 = 1;
+  private int S48280 = 1;
+  private int S48288 = 1;
+  private int S48299 = 1;
+  private int S48310 = 1;
+  private int S48321 = 1;
   
-  private int[] ends = new int[36];
-  private int[] tdone = new int[36];
+  private int[] ends = new int[49];
+  private int[] tdone = new int[49];
   
-  public void thread36918(int [] tdone, int [] ends){
-        switch(S36502){
+  public void thread49401(int [] tdone, int [] ends){
+        switch(S48321){
       case 0 : 
         active[22]=0;
         ends[22]=0;
@@ -68,8 +68,8 @@ public class FillerPlant extends ClockDomain{
     }
   }
 
-  public void thread36917(int [] tdone, int [] ends){
-        switch(S36491){
+  public void thread49400(int [] tdone, int [] ends){
+        switch(S48310){
       case 0 : 
         active[21]=0;
         ends[21]=0;
@@ -95,8 +95,8 @@ public class FillerPlant extends ClockDomain{
     }
   }
 
-  public void thread36916(int [] tdone, int [] ends){
-        switch(S36480){
+  public void thread49399(int [] tdone, int [] ends){
+        switch(S48299){
       case 0 : 
         active[20]=0;
         ends[20]=0;
@@ -122,8 +122,8 @@ public class FillerPlant extends ClockDomain{
     }
   }
 
-  public void thread36915(int [] tdone, int [] ends){
-        switch(S36469){
+  public void thread49398(int [] tdone, int [] ends){
+        switch(S48288){
       case 0 : 
         active[19]=0;
         ends[19]=0;
@@ -148,8 +148,8 @@ public class FillerPlant extends ClockDomain{
     }
   }
 
-  public void thread36914(int [] tdone, int [] ends){
-        switch(S36461){
+  public void thread49397(int [] tdone, int [] ends){
+        switch(S48280){
       case 0 : 
         active[18]=0;
         ends[18]=0;
@@ -174,8 +174,8 @@ public class FillerPlant extends ClockDomain{
     }
   }
 
-  public void thread36913(int [] tdone, int [] ends){
-        switch(S36453){
+  public void thread49396(int [] tdone, int [] ends){
+        switch(S48272){
       case 0 : 
         active[17]=0;
         ends[17]=0;
@@ -200,8 +200,8 @@ public class FillerPlant extends ClockDomain{
     }
   }
 
-  public void thread36912(int [] tdone, int [] ends){
-        switch(S36504){
+  public void thread49395(int [] tdone, int [] ends){
+        switch(S48323){
       case 0 : 
         active[16]=0;
         ends[16]=0;
@@ -209,39 +209,39 @@ public class FillerPlant extends ClockDomain{
         break;
       
       case 1 : 
-        thread36913(tdone,ends);
-        thread36914(tdone,ends);
-        thread36915(tdone,ends);
-        thread36916(tdone,ends);
-        thread36917(tdone,ends);
-        thread36918(tdone,ends);
-        int biggest36919 = 0;
-        if(ends[17]>=biggest36919){
-          biggest36919=ends[17];
+        thread49396(tdone,ends);
+        thread49397(tdone,ends);
+        thread49398(tdone,ends);
+        thread49399(tdone,ends);
+        thread49400(tdone,ends);
+        thread49401(tdone,ends);
+        int biggest49402 = 0;
+        if(ends[17]>=biggest49402){
+          biggest49402=ends[17];
         }
-        if(ends[18]>=biggest36919){
-          biggest36919=ends[18];
+        if(ends[18]>=biggest49402){
+          biggest49402=ends[18];
         }
-        if(ends[19]>=biggest36919){
-          biggest36919=ends[19];
+        if(ends[19]>=biggest49402){
+          biggest49402=ends[19];
         }
-        if(ends[20]>=biggest36919){
-          biggest36919=ends[20];
+        if(ends[20]>=biggest49402){
+          biggest49402=ends[20];
         }
-        if(ends[21]>=biggest36919){
-          biggest36919=ends[21];
+        if(ends[21]>=biggest49402){
+          biggest49402=ends[21];
         }
-        if(ends[22]>=biggest36919){
-          biggest36919=ends[22];
+        if(ends[22]>=biggest49402){
+          biggest49402=ends[22];
         }
-        if(biggest36919 == 1){
+        if(biggest49402 == 1){
           active[16]=1;
           ends[16]=1;
           tdone[16]=1;
         }
         //FINXME code
-        if(biggest36919 == 0){
-          S36504=0;
+        if(biggest49402 == 0){
+          S48323=0;
           active[16]=0;
           ends[16]=0;
           tdone[16]=1;
@@ -251,8 +251,8 @@ public class FillerPlant extends ClockDomain{
     }
   }
 
-  public void thread36911(int [] tdone, int [] ends){
-        switch(S36445){
+  public void thread49394(int [] tdone, int [] ends){
+        switch(S48264){
       case 0 : 
         active[15]=0;
         ends[15]=0;
@@ -260,10 +260,10 @@ public class FillerPlant extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S36163){
+        switch(S47982){
           case 0 : 
             if(valveInjectorOnOff.getprestatus()){//sysj\conveyor_plant.sysj line: 88, column: 13
-              S36163=1;
+              S47982=1;
               __start_thread_15 = com.systemj.Timer.getMs();//sysj\conveyor_plant.sysj line: 86, column: 5
               if(com.systemj.Timer.getMs() - __start_thread_15 >= (1) * 1000){//sysj\conveyor_plant.sysj line: 86, column: 5
                 ends[15]=2;
@@ -271,7 +271,7 @@ public class FillerPlant extends ClockDomain{
                 dosUnitFilled.setPresent();//sysj\conveyor_plant.sysj line: 90, column: 7
                 currsigs.addElement(dosUnitFilled);
                 System.out.println("*Filler - Bottle Filled (Pressure Can At Top) *");//sysj\conveyor_plant.sysj line: 92, column: 7
-                S36163=2;
+                S47982=2;
                 active[15]=1;
                 ends[15]=1;
                 tdone[15]=1;
@@ -296,7 +296,7 @@ public class FillerPlant extends ClockDomain{
               dosUnitFilled.setPresent();//sysj\conveyor_plant.sysj line: 90, column: 7
               currsigs.addElement(dosUnitFilled);
               System.out.println("*Filler - Bottle Filled (Pressure Can At Top) *");//sysj\conveyor_plant.sysj line: 92, column: 7
-              S36163=2;
+              S47982=2;
               active[15]=1;
               ends[15]=1;
               tdone[15]=1;
@@ -310,7 +310,7 @@ public class FillerPlant extends ClockDomain{
           
           case 2 : 
             if(valveInletOnOff.getprestatus()){//sysj\conveyor_plant.sysj line: 93, column: 13
-              S36163=3;
+              S47982=3;
               __start_thread_15 = com.systemj.Timer.getMs();//sysj\conveyor_plant.sysj line: 86, column: 5
               if(com.systemj.Timer.getMs() - __start_thread_15 >= (1) * 1000){//sysj\conveyor_plant.sysj line: 86, column: 5
                 ends[15]=2;
@@ -318,7 +318,7 @@ public class FillerPlant extends ClockDomain{
                 dosUnitEvac.setPresent();//sysj\conveyor_plant.sysj line: 95, column: 7
                 currsigs.addElement(dosUnitEvac);
                 System.out.println("*Filler - Inlet Open (Pressure Can At Bottem) *");//sysj\conveyor_plant.sysj line: 97, column: 7
-                S36163=0;
+                S47982=0;
                 active[15]=1;
                 ends[15]=1;
                 tdone[15]=1;
@@ -343,7 +343,7 @@ public class FillerPlant extends ClockDomain{
               dosUnitEvac.setPresent();//sysj\conveyor_plant.sysj line: 95, column: 7
               currsigs.addElement(dosUnitEvac);
               System.out.println("*Filler - Inlet Open (Pressure Can At Bottem) *");//sysj\conveyor_plant.sysj line: 97, column: 7
-              S36163=0;
+              S47982=0;
               active[15]=1;
               ends[15]=1;
               tdone[15]=1;
@@ -361,8 +361,8 @@ public class FillerPlant extends ClockDomain{
     }
   }
 
-  public void thread36908(int [] tdone, int [] ends){
-        S36502=1;
+  public void thread49391(int [] tdone, int [] ends){
+        S48321=1;
     if(dosUnitFilled.getprestatus()){//sysj\conveyor_plant.sysj line: 116, column: 34
       ;//sysj\conveyor_plant.sysj line: 116, column: 49
       dosUnitFilledE.setPresent();//sysj\conveyor_plant.sysj line: 116, column: 50
@@ -378,8 +378,8 @@ public class FillerPlant extends ClockDomain{
     }
   }
 
-  public void thread36907(int [] tdone, int [] ends){
-        S36491=1;
+  public void thread49390(int [] tdone, int [] ends){
+        S48310=1;
     if(dosUnitEvac.getprestatus()){//sysj\conveyor_plant.sysj line: 114, column: 34
       ;//sysj\conveyor_plant.sysj line: 114, column: 47
       dosUnitEvacE.setPresent();//sysj\conveyor_plant.sysj line: 114, column: 48
@@ -395,8 +395,8 @@ public class FillerPlant extends ClockDomain{
     }
   }
 
-  public void thread36906(int [] tdone, int [] ends){
-        S36480=1;
+  public void thread49389(int [] tdone, int [] ends){
+        S48299=1;
     if(dosUnitValveExtend.getprestatus()){//sysj\conveyor_plant.sysj line: 112, column: 34
       ;//sysj\conveyor_plant.sysj line: 112, column: 54
       dosUnitValveExtendE.setPresent();//sysj\conveyor_plant.sysj line: 112, column: 55
@@ -412,8 +412,8 @@ public class FillerPlant extends ClockDomain{
     }
   }
 
-  public void thread36905(int [] tdone, int [] ends){
-        S36469=1;
+  public void thread49388(int [] tdone, int [] ends){
+        S48288=1;
     if(dosUnitValveRetract.getprestatus()){//sysj\conveyor_plant.sysj line: 110, column: 34
       dosUnitValveRetractE.setPresent();//sysj\conveyor_plant.sysj line: 110, column: 55
       currsigs.addElement(dosUnitValveRetractE);
@@ -428,8 +428,8 @@ public class FillerPlant extends ClockDomain{
     }
   }
 
-  public void thread36904(int [] tdone, int [] ends){
-        S36461=1;
+  public void thread49387(int [] tdone, int [] ends){
+        S48280=1;
     if(valveInletOnOff.getprestatus()){//sysj\conveyor_plant.sysj line: 108, column: 34
       valveInletOnOffE.setPresent();//sysj\conveyor_plant.sysj line: 108, column: 51
       currsigs.addElement(valveInletOnOffE);
@@ -444,8 +444,8 @@ public class FillerPlant extends ClockDomain{
     }
   }
 
-  public void thread36903(int [] tdone, int [] ends){
-        S36453=1;
+  public void thread49386(int [] tdone, int [] ends){
+        S48272=1;
     if(valveInjectorOnOff.getprestatus()){//sysj\conveyor_plant.sysj line: 106, column: 34
       valveInjectorOnOffE.setPresent();//sysj\conveyor_plant.sysj line: 106, column: 54
       currsigs.addElement(valveInjectorOnOffE);
@@ -460,43 +460,43 @@ public class FillerPlant extends ClockDomain{
     }
   }
 
-  public void thread36902(int [] tdone, int [] ends){
-        S36504=1;
-    thread36903(tdone,ends);
-    thread36904(tdone,ends);
-    thread36905(tdone,ends);
-    thread36906(tdone,ends);
-    thread36907(tdone,ends);
-    thread36908(tdone,ends);
-    int biggest36909 = 0;
-    if(ends[17]>=biggest36909){
-      biggest36909=ends[17];
+  public void thread49385(int [] tdone, int [] ends){
+        S48323=1;
+    thread49386(tdone,ends);
+    thread49387(tdone,ends);
+    thread49388(tdone,ends);
+    thread49389(tdone,ends);
+    thread49390(tdone,ends);
+    thread49391(tdone,ends);
+    int biggest49392 = 0;
+    if(ends[17]>=biggest49392){
+      biggest49392=ends[17];
     }
-    if(ends[18]>=biggest36909){
-      biggest36909=ends[18];
+    if(ends[18]>=biggest49392){
+      biggest49392=ends[18];
     }
-    if(ends[19]>=biggest36909){
-      biggest36909=ends[19];
+    if(ends[19]>=biggest49392){
+      biggest49392=ends[19];
     }
-    if(ends[20]>=biggest36909){
-      biggest36909=ends[20];
+    if(ends[20]>=biggest49392){
+      biggest49392=ends[20];
     }
-    if(ends[21]>=biggest36909){
-      biggest36909=ends[21];
+    if(ends[21]>=biggest49392){
+      biggest49392=ends[21];
     }
-    if(ends[22]>=biggest36909){
-      biggest36909=ends[22];
+    if(ends[22]>=biggest49392){
+      biggest49392=ends[22];
     }
-    if(biggest36909 == 1){
+    if(biggest49392 == 1){
       active[16]=1;
       ends[16]=1;
       tdone[16]=1;
     }
   }
 
-  public void thread36901(int [] tdone, int [] ends){
-        S36445=1;
-    S36163=0;
+  public void thread49384(int [] tdone, int [] ends){
+        S48264=1;
+    S47982=0;
     active[15]=1;
     ends[15]=1;
     tdone[15]=1;
@@ -509,50 +509,50 @@ public class FillerPlant extends ClockDomain{
     }
     
     RUN: while(true){
-      switch(S36506){
+      switch(S48325){
         case 0 : 
-          S36506=0;
+          S48325=0;
           break RUN;
         
         case 1 : 
-          S36506=2;
-          S36506=2;
-          thread36901(tdone,ends);
-          thread36902(tdone,ends);
-          int biggest36910 = 0;
-          if(ends[15]>=biggest36910){
-            biggest36910=ends[15];
+          S48325=2;
+          S48325=2;
+          thread49384(tdone,ends);
+          thread49385(tdone,ends);
+          int biggest49393 = 0;
+          if(ends[15]>=biggest49393){
+            biggest49393=ends[15];
           }
-          if(ends[16]>=biggest36910){
-            biggest36910=ends[16];
+          if(ends[16]>=biggest49393){
+            biggest49393=ends[16];
           }
-          if(biggest36910 == 1){
+          if(biggest49393 == 1){
             active[14]=1;
             ends[14]=1;
             break RUN;
           }
         
         case 2 : 
-          thread36911(tdone,ends);
-          thread36912(tdone,ends);
-          int biggest36920 = 0;
-          if(ends[15]>=biggest36920){
-            biggest36920=ends[15];
+          thread49394(tdone,ends);
+          thread49395(tdone,ends);
+          int biggest49403 = 0;
+          if(ends[15]>=biggest49403){
+            biggest49403=ends[15];
           }
-          if(ends[16]>=biggest36920){
-            biggest36920=ends[16];
+          if(ends[16]>=biggest49403){
+            biggest49403=ends[16];
           }
-          if(biggest36920 == 1){
+          if(biggest49403 == 1){
             active[14]=1;
             ends[14]=1;
             break RUN;
           }
           //FINXME code
-          if(biggest36920 == 0){
-            S36506=0;
+          if(biggest49403 == 0){
+            S48325=0;
             active[14]=0;
             ends[14]=0;
-            S36506=0;
+            S48325=0;
             break RUN;
           }
         
@@ -561,9 +561,9 @@ public class FillerPlant extends ClockDomain{
   }
 
   public void init(){
-    char [] active1 = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
-    char [] paused1 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    char [] suspended1 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    char [] active1 = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+    char [] paused1 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    char [] suspended1 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     paused = paused1;
     active = active1;
     suspended = suspended1;

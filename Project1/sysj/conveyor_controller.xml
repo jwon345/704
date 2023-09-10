@@ -47,8 +47,10 @@
             <iChannel Name="convReady"     			From="ConveyorCD.convReady" />
 			<iChannel Name="fillerReady"     		From="FillerCD.fillerReady" />
 			<iChannel Name="capperReady"     		From="CapperCD.capperReady" />
+			<iChannel Name="lidLoaderReady"     	From="ControllerCD.lidLoaderReady" />
+			
 			<iChannel Name="checkFive"     			From="ConveyorCD.checkFive" />
-			<iChannel Name="checkThree"     			From="ConveyorCD.checkThree" />
+			<iChannel Name="checkThree"     		From="ConveyorCD.checkThree" />
 			<iChannel Name="checkOne"     			From="ConveyorCD.checkOne" />
   
 			<oChannel Name="rotated"     			To="ConveyorCD.rotated" />		
@@ -102,7 +104,28 @@
 			
 		</ClockDomain>
 		
-		
+			<ClockDomain Name="ControllerCD" Class="Controller">
+			<iSignal Name="pusherRetracted" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+			<iSignal Name="pusherExtended"  Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+			<iSignal Name="WPgripped"       Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+			<iSignal Name="armAtSource"     Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+			<iSignal Name="armAtDest"       Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+			<iSignal Name="empty"           Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+			<iSignal Name="request"         Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+
+			<oSignal Name="pusherExtend" To="PlantCD.pusherExtend" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10001" />
+			<oSignal Name="vacOn"        To="PlantCD.vacOn"        Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10001" />
+			<oSignal Name="armSource"    To="PlantCD.armSource"    Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10001" />
+			<oSignal Name="armDest"      To="PlantCD.armDest"      Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10001" />
+
+			<iSignal Name="mode"          Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+			<iSignal Name="pusherExtendM" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+			<iSignal Name="vacOnM"        Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+			<iSignal Name="armSourceM"    Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+			<iSignal Name="armDestM"      Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+			
+			<oChannel Name="lidLoaderReady"     To="RotaryCD.lidLoaderReady" />
+		</ClockDomain>
 		
 		
 		

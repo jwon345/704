@@ -230,16 +230,17 @@ RotaryController(
 	    input signal tableAlignedWithSensor, capOnBottleAtPos1;
 	    output signal rotaryTableTrigger, bottleAtPos5E, bottleAtPos3E;
 	    
-	    input Boolean channel  convReady, fillerReady, capperReady;
+	    input Boolean channel  convReady, fillerReady, capperReady, lidLoaderReady;
 	    output Boolean channel rotated;
 	    
 	    input Boolean channel checkFive, checkThree, checkOne;
 	    )->{
-	    	signal  cvR, fR, cR;
+	    	signal  cvR, fR, cR , lR;
 	    	signal bottleAtPos5, bottleAtPos3;
 	    	receive convReady;
 	    	receive fillerReady;
 	    	receive capperReady;
+	    	receive lidLoaderReady;
 	    	{
 	    		loop{
 	    			
@@ -259,8 +260,12 @@ RotaryController(
 	    					System.out.println("*Rotary - Capper Ready*");
 	    				}
 	    				
-	    				
-	    				
+	    				||
+	    				{
+	    					await(lR);
+	    					System.out.println("*Rotary - LidLoader Ready*");
+	    				}
+	    							
 	    				System.out.println("*Rotary - All controllers are ready*");
 
 	    				
@@ -268,8 +273,7 @@ RotaryController(
 	    							trap(T){ 
 	    								await(!bottleAtPos5);
 	    								loop{
-	    									present(bottleAtPos5){
-	    									 	System.out.println("*at pos5*");	
+	    									present(bottleAtPos5){	
 	    									} 
 	    									else{exit(T);}
 	    									pause;
@@ -308,6 +312,8 @@ RotaryController(
     			checkReady(:fillerReady, fR)
     			||
     			checkReady(:capperReady, cR)
+    			||
+    			checkReady(:lidLoaderReady, lR)
     		}		
 	    	
 	    	||
@@ -611,3 +617,102 @@ CapperController(
 	    					}
 	    				}
 	    		
+
+Controller(
+		input signal pusherRetracted,pusherExtended,WPgripped,armAtSource,armAtDest,empty,request;
+		output signal pusherExtend,vacOn,armSource,armDest;
+		input Integer signal mode;
+		input signal pusherExtendM,vacOnM,armSourceM,armDestM;
+		
+		output Boolean channel lidLoaderReady;
+		)->{
+			
+			signal manualMode, autoMode;
+			{
+				send lidLoaderReady(Boolean.TRUE);
+				while(true){
+					abort(manualMode){
+						System.out.println("*Capper - entering auto");
+						abort(armAtDest){
+							sustain armDest;
+						}
+						System.out.println("Arm at dest");
+						await(pusherRetracted);
+						System.out.println("Pusher retracted");
+
+						while(true){
+							abort(!empty){halt;}
+							await(request);
+							System.out.println("New request");
+							abort(armAtDest){
+								sustain armDest;
+							}
+							System.out.println("Arm at dest");
+
+							abort(pusherExtended){
+								sustain pusherExtend;
+							}
+							System.out.println("Pusher extended");
+							await(pusherRetracted);
+							System.out.println("Pusher retracted");
+
+							abort(armAtSource){
+								sustain armSource;
+							}
+							System.out.println("Arm at source");
+							
+							trap(T){
+								{
+									sustain vacOn;
+								}
+								||
+								{
+									await(WPgripped);
+									System.out.println("WP gripped");
+									abort(armAtDest){
+										sustain armDest;
+									}
+									System.out.println("Arm at dest");
+									exit(T);
+								}
+							}
+
+							await(!WPgripped);
+
+							abort(armAtSource){
+								sustain armSource;
+							}
+							System.out.println("Arm at source");
+							// Need a feedback from the Arm indicating a cap is picked up
+						}
+					}
+					pause; // breaking path
+
+					// Simply forward signals to outputs
+					System.out.println("entering manual");
+					abort(autoMode){
+						{loop{present(pusherExtendM){emit pusherExtend;} pause;} }
+						||
+						{loop{present(vacOnM){emit vacOn;} pause;} }
+						||
+						{loop{present(armSourceM){emit armSource;} pause;} }
+						||
+						{loop{present(armDestM){emit armDest; System.out.println("Lid Loader - Lid Placed");} pause;} }
+					}
+				}
+			}
+			||
+			{
+				// Checking modes
+				await(mode);
+				while(true){
+					if((Integer)#mode == 0){
+						emit autoMode;
+					}
+					else if((Integer)#mode == 1){
+						emit manualMode;
+					}
+					pause;
+				}
+			}
+		}	    				
