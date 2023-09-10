@@ -228,15 +228,15 @@ ConveyorController(
 
 RotaryController(
 	    input signal tableAlignedWithSensor, capOnBottleAtPos1;
-	    output signal rotaryTableTrigger, bottleAtPos5E, bottleAtPos3E;
+	    output signal rotaryTableTrigger, bottleAtPos5E;
 	    
 	    input Boolean channel  convReady, fillerReady, capperReady, lidLoaderReady;
 	    output Boolean channel rotated;
 	    
-	    input Boolean channel checkFive, checkThree, checkOne;
+	    input Boolean channel checkFive, checkOne;
 	    )->{
 	    	signal  cvR, fR, cR , lR;
-	    	signal bottleAtPos5, bottleAtPos3;
+	    	signal bottleAtPos5;
 	    	receive convReady;
 	    	receive fillerReady;
 	    	receive capperReady;
@@ -295,7 +295,7 @@ RotaryController(
 	    				trap(T){
 	    					loop{
 	    						i++;
-	    						if(i > 100)
+	    						if(i > 5)
 	    							exit(T);
 	    						pause;
 	    					}
@@ -325,16 +325,7 @@ RotaryController(
 						pause;
 					}
 					
-					||
 					
-					{
-						loop{
-							receive checkThree;
-							if((Boolean)#checkThree)
-								emit bottleAtPos3;
-							pause;
-						}
-					}
 					
 			}
 	    	
@@ -342,24 +333,6 @@ RotaryController(
 	    	
 	    	{
 	    	
-	            
-		        {while(true)
-		        	{present(bottleAtPos3)trap(T) {
-		                {
-		                    sustain bottleAtPos3E;
-		                }
-		                ||
-		                {
-		                    await(rotaryTableTrigger);
-		                    exit(T);
-		                };
-		        	}
-		        	pause;
-		        
-		        	}
-		        }
-		        
-		        ||
 		        
 		        {while(true)
 		        	{present(bottleAtPos5)trap(T) {
@@ -620,19 +593,22 @@ CapperController(
 
 Controller(
 		input signal pusherRetracted,pusherExtended,WPgripped,armAtSource,armAtDest,empty,request;
-		output signal pusherExtend,vacOn,armSource,armDest;
+		output signal pusherExtend,vacOn,armSource,armDest, bottleAtPos3E;
 		input Integer signal mode;
 		input signal pusherExtendM,vacOnM,armSourceM,armDestM;
 		
+		input Boolean channel checkThree;
 		output Boolean channel lidLoaderReady;
 		)->{
 			
-			signal manualMode, autoMode;
+			signal manualMode, autoMode, bottleAtPos3, done;
 			{
 				send lidLoaderReady(Boolean.TRUE);
 				while(true){
+					await (bottleAtPos3);
+					send lidLoaderReady(Boolean.FALSE);
 					abort(manualMode){
-						System.out.println("*Capper - entering auto");
+						System.out.println("*Capper - Entering Auto");
 						abort(armAtDest){
 							sustain armDest;
 						}
@@ -682,7 +658,13 @@ Controller(
 							abort(armAtSource){
 								sustain armSource;
 							}
+							
+							
+							emit done;
+							send lidLoaderReady(Boolean.TRUE);
+							
 							System.out.println("Arm at source");
+							pause;
 							// Need a feedback from the Arm indicating a cap is picked up
 						}
 					}
@@ -695,9 +677,9 @@ Controller(
 						||
 						{loop{present(vacOnM){emit vacOn;} pause;} }
 						||
-						{loop{present(armSourceM){emit armSource;} pause;} }
+						{loop{present(armSourceM){emit armSource;send lidLoaderReady(Boolean.TRUE); waitl (4000 ms); emit done;} pause;} }
 						||
-						{loop{present(armDestM){emit armDest; System.out.println("Lid Loader - Lid Placed");} pause;} }
+						{loop{present(armDestM){emit armDest;} pause;} }
 					}
 				}
 			}
@@ -715,4 +697,34 @@ Controller(
 					pause;
 				}
 			}
+			
+			||
+			
+			{
+				loop{
+					receive checkThree;
+					if((Boolean)#checkThree)
+						emit bottleAtPos3;
+					pause;
+				}
+			}
+			
+			||
+			
+			  {while(true)
+	        	{present(bottleAtPos3)
+				  trap(T) {
+	                {
+	                    sustain bottleAtPos3E;
+	                }
+	                ||
+	                {
+	                    await(done);
+	                    exit(T);
+	                };
+	        	}
+	        	pause;
+	        
+	        	}
+			  }
 		}	    				

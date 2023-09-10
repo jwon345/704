@@ -20,7 +20,7 @@
             <oChannel Name="simFiller"     To="FillerCD.simFiller" />
             <oChannel Name="simCapper"     To="CapperCD.simCapper" />
             <oChannel Name="checkFive"     To="RotaryCD.checkFive" />
-            <oChannel Name="checkThree"     To="RotaryCD.checkThree" />
+            <oChannel Name="checkThree"     To="ControllerCD.checkThree" />
             <oChannel Name="checkOne"     To="RotaryCD.checkOne" />
 
             <oSignal Name="rotaryTableTriggerE" 	To="UI.rotaryTableTriggerE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
@@ -40,7 +40,6 @@
             <!-- Output Signals -->
             <oSignal Name="rotaryTableTrigger" 		To="RotaryPlant.rotaryTableTrigger"	Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10003" />              
 			
-			<oSignal Name="bottleAtPos3E" 			To="UI.bottleAtPos3E" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
 			<oSignal Name="bottleAtPos5E" 			To="UI.bottleAtPos5E" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
 
             <!-- Input Channels -->
@@ -50,7 +49,6 @@
 			<iChannel Name="lidLoaderReady"     	From="ControllerCD.lidLoaderReady" />
 			
 			<iChannel Name="checkFive"     			From="ConveyorCD.checkFive" />
-			<iChannel Name="checkThree"     		From="ConveyorCD.checkThree" />
 			<iChannel Name="checkOne"     			From="ConveyorCD.checkOne" />
   
 			<oChannel Name="rotated"     			To="ConveyorCD.rotated" />		
@@ -117,6 +115,7 @@
 			<oSignal Name="vacOn"        To="PlantCD.vacOn"        Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10001" />
 			<oSignal Name="armSource"    To="PlantCD.armSource"    Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10001" />
 			<oSignal Name="armDest"      To="PlantCD.armDest"      Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10001" />
+			<oSignal Name="bottleAtPos3E" 			To="UI.bottleAtPos3E" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
 
 			<iSignal Name="mode"          Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
 			<iSignal Name="pusherExtendM" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
@@ -124,6 +123,7 @@
 			<iSignal Name="armSourceM"    Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
 			<iSignal Name="armDestM"      Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
 			
+			<iChannel Name="checkThree"     	From="ConveyorCD.checkThree" />
 			<oChannel Name="lidLoaderReady"     To="RotaryCD.lidLoaderReady" />
 		</ClockDomain>
 		
