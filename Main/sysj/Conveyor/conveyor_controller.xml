@@ -4,6 +4,9 @@
 		
 		<!-- Input signals from the plant -->
 		<iSignal Name="toControllerBottleAtRotaryStart" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+
+		<iSignal Name="fileReadSignal" Class="com.systemj.ipc.InputFileReader" File="input.txt"/>
+		
 		
 		<!-- Signal to the Plant -->
 		<oSignal Name="controllerMotorOn" To="ConveyorPlantCD.controllerMotorOn" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10001" />

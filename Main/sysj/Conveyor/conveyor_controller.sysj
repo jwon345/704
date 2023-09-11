@@ -1,25 +1,40 @@
 ConveyorController(
     input signal toControllerBottleAtRotaryStart;
+    input String signal fileReadSignal;
 		output signal controllerMotorOn;
 		)
 ->
 {
-	while(true)
 	{
-    //couldn't get aborts to work
-    trap(P){
-      {
-        System.out.println("Conveyor is on");
-        sustain controllerMotorOn;
-      }
-      ||
-      {
-        await(toControllerBottleAtRotaryStart); 
-        exit(P);
-      }
-    }
-    System.out.println("off and Waiting bottle to leave rotatory mouth");
-    await(!toControllerBottleAtRotaryStart);
-    pause;
+		while(true)
+		{
+		//couldn't get aborts to work
+		trap(P){
+		  {
+			System.out.println("Conveyor is on");
+			sustain controllerMotorOn;
+		  }
+		  ||
+		  {
+			await(toControllerBottleAtRotaryStart); 
+			exit(P);
+		  }
+		}
+		System.out.println("off and Waiting bottle to leave rotatory mouth");
+		await(!toControllerBottleAtRotaryStart);
+		pause;
+		}
+	}
+	||
+	{
+		while(true)
+		{
+	        pause;
+	        System.out.println(helperClass.parseString(#fileReadSignal,0));
+	        System.out.println(helperClass.parseString(#fileReadSignal,1));
+	        System.out.println(helperClass.parseString(#fileReadSignal,2));
+	        System.out.println(helperClass.parseString(#fileReadSignal,3));
+			waitl(1s);
+		}
 	}
 }
