@@ -14,10 +14,10 @@ public class ECS_SmokeController extends ClockDomain{
   public Signal detectSmoke = new Signal("detectSmoke", Signal.INPUT);
   public Signal stopAll = new Signal("stopAll", Signal.INPUT);
   public Signal sirenONOFF = new Signal("sirenONOFF", Signal.OUTPUT);
-  private int S224962 = 1;
+  private int S225803 = 1;
   
-  private int[] ends = new int[24];
-  private int[] tdone = new int[24];
+  private int[] ends = new int[66];
+  private int[] tdone = new int[66];
   
   public void runClockDomain(){
     for(int i=0;i<ends.length;i++){
@@ -26,40 +26,40 @@ public class ECS_SmokeController extends ClockDomain{
     }
     
     RUN: while(true){
-      switch(S224962){
+      switch(S225803){
         case 0 : 
-          S224962=0;
+          S225803=0;
           break RUN;
         
         case 1 : 
-          S224962=2;
-          S224962=2;
-          if(detectSmoke.getprestatus()){//sysj\ECS.sysj line: 405, column: 11
-            sirenONOFF.setPresent();//sysj\ECS.sysj line: 407, column: 4
+          S225803=2;
+          S225803=2;
+          if(detectSmoke.getprestatus()){//sysj\ECS.sysj line: 421, column: 11
+            sirenONOFF.setPresent();//sysj\ECS.sysj line: 423, column: 4
             currsigs.addElement(sirenONOFF);
-            System.out.println("Fire Alert - Please Exit The Building");//sysj\ECS.sysj line: 408, column: 4
-            active[23]=1;
-            ends[23]=1;
+            System.out.println("Fire Alert - Please Exit The Building");//sysj\ECS.sysj line: 424, column: 4
+            active[65]=1;
+            ends[65]=1;
             break RUN;
           }
           else {
-            active[23]=1;
-            ends[23]=1;
+            active[65]=1;
+            ends[65]=1;
             break RUN;
           }
         
         case 2 : 
-          if(detectSmoke.getprestatus()){//sysj\ECS.sysj line: 405, column: 11
-            sirenONOFF.setPresent();//sysj\ECS.sysj line: 407, column: 4
+          if(detectSmoke.getprestatus()){//sysj\ECS.sysj line: 421, column: 11
+            sirenONOFF.setPresent();//sysj\ECS.sysj line: 423, column: 4
             currsigs.addElement(sirenONOFF);
-            System.out.println("Fire Alert - Please Exit The Building");//sysj\ECS.sysj line: 408, column: 4
-            active[23]=1;
-            ends[23]=1;
+            System.out.println("Fire Alert - Please Exit The Building");//sysj\ECS.sysj line: 424, column: 4
+            active[65]=1;
+            ends[65]=1;
             break RUN;
           }
           else {
-            active[23]=1;
-            ends[23]=1;
+            active[65]=1;
+            ends[65]=1;
             break RUN;
           }
         
@@ -68,9 +68,9 @@ public class ECS_SmokeController extends ClockDomain{
   }
 
   public void init(){
-    char [] active1 = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
-    char [] paused1 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    char [] suspended1 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    char [] active1 = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+    char [] paused1 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    char [] suspended1 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     paused = paused1;
     active = active1;
     suspended = suspended1;
@@ -79,14 +79,14 @@ public class ECS_SmokeController extends ClockDomain{
   }
   
   public void run(){
-    while(active[23] != 0){
-      int index = 23;
+    while(active[65] != 0){
+      int index = 65;
       if(paused[index]==1 || suspended[index]==1 || active[index] == 0){
         for(int h=1;h<paused.length;++h){
           paused[h]=0;
         }
       }
-      if(paused[23]!=0 || suspended[23]!=0 || active[23]!=1);
+      if(paused[65]!=0 || suspended[65]!=0 || active[65]!=1);
       else{
         if(!df){
           detectSmoke.gethook();
@@ -112,13 +112,13 @@ public class ECS_SmokeController extends ClockDomain{
       stopAll.setClear();
       sirenONOFF.sethook();
       sirenONOFF.setClear();
-      if(paused[23]!=0 || suspended[23]!=0 || active[23]!=1);
+      if(paused[65]!=0 || suspended[65]!=0 || active[65]!=1);
       else{
         detectSmoke.gethook();
         stopAll.gethook();
       }
       runFinisher();
-      if(active[23] == 0){
+      if(active[65] == 0){
       	this.terminated = true;
       }
       if(!threaded) break;

@@ -138,6 +138,7 @@ ECS_LightingPlant(
 		        loop{
 		            await(zoneOneWindowONOFF);
 		            System.out.println("Work Hours - Zone 1 Detected Person and Intensity is Low");
+		            await(!zoneOneWindowONOFF);
 		        }
 		    }
 		    ||
@@ -145,6 +146,7 @@ ECS_LightingPlant(
 		        loop{
 		            await(zoneTwoWindowONOFF);
 		            System.out.println("Work Hours - Zone 2 Detected Person and Intensity is Low");
+		            await(!zoneTwoWindowONOFF);
 		        }
 		    }
 		    
@@ -153,6 +155,7 @@ ECS_LightingPlant(
 		        loop{
 		            await(zoneThreeWindowONOFF);
 		            System.out.println("Work Hours - Zone 3 Detected Person and Intensity is Low");
+		            await(!zoneThreeWindowONOFF);
 		        }
 		    }
 		    
@@ -161,6 +164,7 @@ ECS_LightingPlant(
 		        loop{
 		            await(zoneFourWindowONOFF);
 		            System.out.println("Work Hours - Zone 4 Detected Person and Intensity is Low");
+		            await(!zoneFourWindowONOFF);
 		        }
 		    }
 		    
@@ -169,6 +173,7 @@ ECS_LightingPlant(
 		        loop{
 		            await(zoneFiveWindowONOFF);
 		            System.out.println("Work Hours - Zone 5 Detected Person and Intensity is Low");
+		            await(!zoneFiveWindowONOFF);
 		        }
 		    }
 		    
@@ -177,6 +182,7 @@ ECS_LightingPlant(
 		        loop{
 		            await(zoneSixWindowONOFF);
 		            System.out.println("Work Hours - Zone 6 Detected Person and Intensity is Low");
+		            await(!zoneSixWindowONOFF);
 		        }
 		    }
 		    
@@ -185,6 +191,7 @@ ECS_LightingPlant(
 		        loop{
 		            await(zoneSevenWindowONOFF);
 		            System.out.println("Work Hours - Zone 7 Detected Person and Intensity is Low");
+		            await(!zoneSevenWindowONOFF);
 		        }
 		    }
 		    
@@ -198,6 +205,7 @@ ECS_LightingPlant(
 		        loop{
 		            await(zoneOneLightONOFF);
 		            System.out.println("After Hours - Zone 1 Detected Person and Intensity is Low");
+		            await(!zoneOneLightONOFF);
 		        }
 		    }
 		    
@@ -206,6 +214,7 @@ ECS_LightingPlant(
 		        loop{
 		            await(zoneTwoLightONOFF);
 		            System.out.println("After Hours - Zone 2 Detected Person and Intensity is Low");
+		            await(!zoneTwoLightONOFF);
 		        }
 		    }
 		    
@@ -215,6 +224,7 @@ ECS_LightingPlant(
 		        loop{
 		            await(zoneThreeLightONOFF);
 		            System.out.println("After Hours - Zone 3 Detected Person and Intensity is Low");
+		            await(!zoneThreeLightONOFF);
 		        }
 		    }
 		    
@@ -224,6 +234,7 @@ ECS_LightingPlant(
 		        loop{
 		            await(zoneFourLightONOFF);
 		            System.out.println("After Hours - Zone 4 Detected Person and Intensity is Low");
+		            await(!zoneFourLightONOFF);
 		        }
 		    }
 		    
@@ -233,6 +244,7 @@ ECS_LightingPlant(
 		        loop{
 		            await(zoneFiveLightONOFF);
 		            System.out.println("After Hours - Zone 5 Detected Person and Intensity is Low");
+		            await(!zoneFiveLightONOFF);
 		        }
 		    }
 		    
@@ -242,6 +254,7 @@ ECS_LightingPlant(
 		        loop{
 		            await(zoneSixLightONOFF);
 		            System.out.println("After Hours - Zone 6 Detected Person and Intensity is Low");
+		            await(!zoneSixLightONOFF);
 		        }
 		    }
 		    
@@ -251,6 +264,7 @@ ECS_LightingPlant(
 		        loop{
 		            await(zoneSevenLightONOFF);
 		            System.out.println("After Hours - Zone 7 Detected Person and Intensity is Low");
+		            await(!zoneSevenLightONOFF);
 		        }
 		    }
 		    
