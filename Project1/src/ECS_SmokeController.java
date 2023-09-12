@@ -34,10 +34,10 @@ public class ECS_SmokeController extends ClockDomain{
         case 1 : 
           S224962=2;
           S224962=2;
-          if(detectSmoke.getprestatus()){//sysj\ECS.sysj line: 407, column: 11
-            sirenONOFF.setPresent();//sysj\ECS.sysj line: 409, column: 4
+          if(detectSmoke.getprestatus()){//sysj\ECS.sysj line: 405, column: 11
+            sirenONOFF.setPresent();//sysj\ECS.sysj line: 407, column: 4
             currsigs.addElement(sirenONOFF);
-            System.out.println("Fire Alert - Please Exit The Building");//sysj\ECS.sysj line: 410, column: 4
+            System.out.println("Fire Alert - Please Exit The Building");//sysj\ECS.sysj line: 408, column: 4
             active[23]=1;
             ends[23]=1;
             break RUN;
@@ -49,10 +49,10 @@ public class ECS_SmokeController extends ClockDomain{
           }
         
         case 2 : 
-          if(detectSmoke.getprestatus()){//sysj\ECS.sysj line: 407, column: 11
-            sirenONOFF.setPresent();//sysj\ECS.sysj line: 409, column: 4
+          if(detectSmoke.getprestatus()){//sysj\ECS.sysj line: 405, column: 11
+            sirenONOFF.setPresent();//sysj\ECS.sysj line: 407, column: 4
             currsigs.addElement(sirenONOFF);
-            System.out.println("Fire Alert - Please Exit The Building");//sysj\ECS.sysj line: 410, column: 4
+            System.out.println("Fire Alert - Please Exit The Building");//sysj\ECS.sysj line: 408, column: 4
             active[23]=1;
             ends[23]=1;
             break RUN;

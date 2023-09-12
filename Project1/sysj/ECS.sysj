@@ -19,7 +19,7 @@ reaction checkZoneAfterHours(: input int signal occupancy, input int signal ligh
 		{
 			int zoneOcc = (Integer)#occupancy;
 		    int zoneLightInt = (Integer)#lightingI;
-		    if (zoneOcc > 0 && zoneLightInt < 50 && (zoneLightInt != prevLightInt)) {
+		    if (zoneOcc > 0 && zoneLightInt < 50) {
 	            emit LightONOFF;
 	        }
 		
