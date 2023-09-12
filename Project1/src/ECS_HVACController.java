@@ -30,48 +30,48 @@ public class ECS_HVACController extends ClockDomain{
   public Signal zoneTwoThreeHeaterONOFF = new Signal("zoneTwoThreeHeaterONOFF", Signal.OUTPUT);
   private Signal workhrs_1;
   private Signal afterhrs_1;
-  private int currentTemp_thread_1;//sysj\ECS.sysj line: 50, column: 2
-  private int previousHour_thread_1;//sysj\ECS.sysj line: 51, column: 2
-  private int currentTemp_thread_3;//sysj\ECS.sysj line: 70, column: 2
-  private int currentHumidity_thread_3;//sysj\ECS.sysj line: 71, column: 2
-  private int currentTemp_thread_4;//sysj\ECS.sysj line: 182, column: 2
-  private int currentHumidity_thread_4;//sysj\ECS.sysj line: 183, column: 2
-  private int currentTemp_thread_5;//sysj\ECS.sysj line: 239, column: 2
-  private int currentHumidity_thread_5;//sysj\ECS.sysj line: 240, column: 2
-  private int currentHour_thread_2;//sysj\ECS.sysj line: 55, column: 6
-  private int tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 75, column: 4
-  private int humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 76, column: 4
-  private int zoneOneOcc_thread_3;//sysj\ECS.sysj line: 123, column: 14
-  private int zoneSevenOcc_thread_3;//sysj\ECS.sysj line: 124, column: 14
-  private int tempzoneTwoThree_thread_4;//sysj\ECS.sysj line: 189, column: 7
-  private int humidityzoneTwoThree_thread_4;//sysj\ECS.sysj line: 190, column: 7
-  private int tempzoneFourFiveSixTemp_thread_5;//sysj\ECS.sysj line: 246, column: 7
-  private int humidityzoneFourFiveSix_thread_5;//sysj\ECS.sysj line: 247, column: 7
-  private int S108443 = 1;
+  private int currentTemp_thread_1;//sysj\ECS.sysj line: 46, column: 2
+  private int previousHour_thread_1;//sysj\ECS.sysj line: 47, column: 2
+  private int currentTemp_thread_3;//sysj\ECS.sysj line: 66, column: 2
+  private int currentHumidity_thread_3;//sysj\ECS.sysj line: 67, column: 2
+  private int currentTemp_thread_4;//sysj\ECS.sysj line: 178, column: 2
+  private int currentHumidity_thread_4;//sysj\ECS.sysj line: 179, column: 2
+  private int currentTemp_thread_5;//sysj\ECS.sysj line: 235, column: 2
+  private int currentHumidity_thread_5;//sysj\ECS.sysj line: 236, column: 2
+  private int currentHour_thread_2;//sysj\ECS.sysj line: 51, column: 6
+  private int tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 71, column: 4
+  private int humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 72, column: 4
+  private int zoneOneOcc_thread_3;//sysj\ECS.sysj line: 119, column: 14
+  private int zoneSevenOcc_thread_3;//sysj\ECS.sysj line: 120, column: 14
+  private int tempzoneTwoThree_thread_4;//sysj\ECS.sysj line: 185, column: 7
+  private int humidityzoneTwoThree_thread_4;//sysj\ECS.sysj line: 186, column: 7
+  private int tempzoneFourFiveSixTemp_thread_5;//sysj\ECS.sysj line: 242, column: 7
+  private int humidityzoneFourFiveSix_thread_5;//sysj\ECS.sysj line: 243, column: 7
+  private int S107099 = 1;
   private int S97504 = 1;
   private int S97488 = 1;
-  private int S102300 = 1;
+  private int S101628 = 1;
   private int S97506 = 1;
   private int S97547 = 1;
   private int S97514 = 1;
   private int S97522 = 1;
-  private int S97608 = 1;
+  private int S97632 = 1;
   private int S97599 = 1;
-  private int S97616 = 1;
-  private int S102632 = 1;
-  private int S102356 = 1;
-  private int S102302 = 1;
-  private int S102330 = 1;
-  private int S102964 = 1;
-  private int S102688 = 1;
-  private int S102634 = 1;
-  private int S102662 = 1;
+  private int S97607 = 1;
+  private int S101960 = 1;
+  private int S101684 = 1;
+  private int S101630 = 1;
+  private int S101658 = 1;
+  private int S102292 = 1;
+  private int S102016 = 1;
+  private int S101962 = 1;
+  private int S101990 = 1;
   
   private int[] ends = new int[24];
   private int[] tdone = new int[24];
   
-  public void thread109511(int [] tdone, int [] ends){
-        switch(S102964){
+  public void thread107625(int [] tdone, int [] ends){
+        switch(S102292){
       case 0 : 
         active[5]=0;
         ends[5]=0;
@@ -79,48 +79,48 @@ public class ECS_HVACController extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S102688){
+        switch(S102016){
           case 0 : 
-            switch(S102634){
+            switch(S101962){
               case 0 : 
-                if(zoneFourFiveSixAtTempHumid.getprestatus()){//sysj\ECS.sysj line: 254, column: 14
-                  System.out.println("Current Temp for Zone 4,5,6:" + currentTemp_thread_5 + "(°C)");//sysj\ECS.sysj line: 255, column: 8
-                  System.out.println("\n-------------------------");//sysj\ECS.sysj line: 256, column: 8
-                  S102634=1;
-                  if(tempzoneFourFiveSixTemp_thread_5 < currentTemp_thread_5){//sysj\ECS.sysj line: 259, column: 11
-                    System.out.println("Turning ON AC to Cool Down for Zone 4,5,6");//sysj\ECS.sysj line: 260, column: 8
-                    zoneFourFiveSixACONOFF.setPresent();//sysj\ECS.sysj line: 261, column: 8
+                if(zoneFourFiveSixAtTempHumid.getprestatus()){//sysj\ECS.sysj line: 250, column: 14
+                  System.out.println("Current Temp for Zone 4,5,6:" + currentTemp_thread_5 + "(°C)");//sysj\ECS.sysj line: 251, column: 8
+                  System.out.println("\n-------------------------");//sysj\ECS.sysj line: 252, column: 8
+                  S101962=1;
+                  if(tempzoneFourFiveSixTemp_thread_5 < currentTemp_thread_5){//sysj\ECS.sysj line: 255, column: 11
+                    System.out.println("Turning ON AC to Cool Down for Zone 4,5,6");//sysj\ECS.sysj line: 256, column: 8
+                    zoneFourFiveSixACONOFF.setPresent();//sysj\ECS.sysj line: 257, column: 8
                     currsigs.addElement(zoneFourFiveSixACONOFF);
-                    currentTemp_thread_5 = tempzoneFourFiveSixTemp_thread_5;//sysj\ECS.sysj line: 262, column: 8
+                    currentTemp_thread_5 = tempzoneFourFiveSixTemp_thread_5;//sysj\ECS.sysj line: 258, column: 8
                     active[5]=1;
                     ends[5]=1;
                     tdone[5]=1;
                   }
                   else {
-                    S102634=2;
-                    if(humidityzoneFourFiveSix_thread_5 > currentHumidity_thread_5){//sysj\ECS.sysj line: 269, column: 11
-                      S102662=0;
-                      System.out.println("Turning ON AC to increase humidity for Zone 4,5,6");//sysj\ECS.sysj line: 270, column: 14
-                      zoneFourFiveSixACONOFF.setPresent();//sysj\ECS.sysj line: 271, column: 11
+                    S101962=2;
+                    if(humidityzoneFourFiveSix_thread_5 > currentHumidity_thread_5){//sysj\ECS.sysj line: 265, column: 11
+                      S101990=0;
+                      System.out.println("Turning ON AC to increase humidity for Zone 4,5,6");//sysj\ECS.sysj line: 266, column: 14
+                      zoneFourFiveSixACONOFF.setPresent();//sysj\ECS.sysj line: 267, column: 11
                       currsigs.addElement(zoneFourFiveSixACONOFF);
-                      currentHumidity_thread_5 = humidityzoneFourFiveSix_thread_5;//sysj\ECS.sysj line: 272, column: 14
+                      currentHumidity_thread_5 = humidityzoneFourFiveSix_thread_5;//sysj\ECS.sysj line: 268, column: 14
                       active[5]=1;
                       ends[5]=1;
                       tdone[5]=1;
                     }
                     else {
-                      S102662=1;
-                      if(humidityzoneFourFiveSix_thread_5 < currentHumidity_thread_5){//sysj\ECS.sysj line: 277, column: 21
-                        System.out.println("Turning ON AC to reduce humidity for Zone 4,5,6");//sysj\ECS.sysj line: 278, column: 14
-                        zoneFourFiveSixACONOFF.setPresent();//sysj\ECS.sysj line: 279, column: 11
+                      S101990=1;
+                      if(humidityzoneFourFiveSix_thread_5 < currentHumidity_thread_5){//sysj\ECS.sysj line: 273, column: 21
+                        System.out.println("Turning ON AC to reduce humidity for Zone 4,5,6");//sysj\ECS.sysj line: 274, column: 14
+                        zoneFourFiveSixACONOFF.setPresent();//sysj\ECS.sysj line: 275, column: 11
                         currsigs.addElement(zoneFourFiveSixACONOFF);
-                        currentHumidity_thread_5 = humidityzoneFourFiveSix_thread_5;//sysj\ECS.sysj line: 280, column: 14
+                        currentHumidity_thread_5 = humidityzoneFourFiveSix_thread_5;//sysj\ECS.sysj line: 276, column: 14
                         active[5]=1;
                         ends[5]=1;
                         tdone[5]=1;
                       }
                       else {
-                        S102688=1;
+                        S102016=1;
                         active[5]=1;
                         ends[5]=1;
                         tdone[5]=1;
@@ -136,33 +136,33 @@ public class ECS_HVACController extends ClockDomain{
                 break;
               
               case 1 : 
-                if(zoneFourFiveSixAtTempHumid.getprestatus()){//sysj\ECS.sysj line: 264, column: 14
-                  System.out.println("Current Temp for Zone 4,5,6:" + currentTemp_thread_5 + "(°C)");//sysj\ECS.sysj line: 265, column: 8
-                  System.out.println("\n-------------------------");//sysj\ECS.sysj line: 266, column: 8
-                  S102634=2;
-                  if(humidityzoneFourFiveSix_thread_5 > currentHumidity_thread_5){//sysj\ECS.sysj line: 269, column: 11
-                    S102662=0;
-                    System.out.println("Turning ON AC to increase humidity for Zone 4,5,6");//sysj\ECS.sysj line: 270, column: 14
-                    zoneFourFiveSixACONOFF.setPresent();//sysj\ECS.sysj line: 271, column: 11
+                if(zoneFourFiveSixAtTempHumid.getprestatus()){//sysj\ECS.sysj line: 260, column: 14
+                  System.out.println("Current Temp for Zone 4,5,6:" + currentTemp_thread_5 + "(°C)");//sysj\ECS.sysj line: 261, column: 8
+                  System.out.println("\n-------------------------");//sysj\ECS.sysj line: 262, column: 8
+                  S101962=2;
+                  if(humidityzoneFourFiveSix_thread_5 > currentHumidity_thread_5){//sysj\ECS.sysj line: 265, column: 11
+                    S101990=0;
+                    System.out.println("Turning ON AC to increase humidity for Zone 4,5,6");//sysj\ECS.sysj line: 266, column: 14
+                    zoneFourFiveSixACONOFF.setPresent();//sysj\ECS.sysj line: 267, column: 11
                     currsigs.addElement(zoneFourFiveSixACONOFF);
-                    currentHumidity_thread_5 = humidityzoneFourFiveSix_thread_5;//sysj\ECS.sysj line: 272, column: 14
+                    currentHumidity_thread_5 = humidityzoneFourFiveSix_thread_5;//sysj\ECS.sysj line: 268, column: 14
                     active[5]=1;
                     ends[5]=1;
                     tdone[5]=1;
                   }
                   else {
-                    S102662=1;
-                    if(humidityzoneFourFiveSix_thread_5 < currentHumidity_thread_5){//sysj\ECS.sysj line: 277, column: 21
-                      System.out.println("Turning ON AC to reduce humidity for Zone 4,5,6");//sysj\ECS.sysj line: 278, column: 14
-                      zoneFourFiveSixACONOFF.setPresent();//sysj\ECS.sysj line: 279, column: 11
+                    S101990=1;
+                    if(humidityzoneFourFiveSix_thread_5 < currentHumidity_thread_5){//sysj\ECS.sysj line: 273, column: 21
+                      System.out.println("Turning ON AC to reduce humidity for Zone 4,5,6");//sysj\ECS.sysj line: 274, column: 14
+                      zoneFourFiveSixACONOFF.setPresent();//sysj\ECS.sysj line: 275, column: 11
                       currsigs.addElement(zoneFourFiveSixACONOFF);
-                      currentHumidity_thread_5 = humidityzoneFourFiveSix_thread_5;//sysj\ECS.sysj line: 280, column: 14
+                      currentHumidity_thread_5 = humidityzoneFourFiveSix_thread_5;//sysj\ECS.sysj line: 276, column: 14
                       active[5]=1;
                       ends[5]=1;
                       tdone[5]=1;
                     }
                     else {
-                      S102688=1;
+                      S102016=1;
                       active[5]=1;
                       ends[5]=1;
                       tdone[5]=1;
@@ -177,12 +177,12 @@ public class ECS_HVACController extends ClockDomain{
                 break;
               
               case 2 : 
-                switch(S102662){
+                switch(S101990){
                   case 0 : 
-                    if(zoneFourFiveSixAtTempHumid.getprestatus()){//sysj\ECS.sysj line: 274, column: 17
-                      System.out.println("Current Humidity For Zone 4,5,6: " + currentHumidity_thread_5 + "(%)");//sysj\ECS.sysj line: 275, column: 14
-                      System.out.println("\n-------------------------");//sysj\ECS.sysj line: 276, column: 11
-                      S102688=1;
+                    if(zoneFourFiveSixAtTempHumid.getprestatus()){//sysj\ECS.sysj line: 270, column: 17
+                      System.out.println("Current Humidity For Zone 4,5,6: " + currentHumidity_thread_5 + "(%)");//sysj\ECS.sysj line: 271, column: 14
+                      System.out.println("\n-------------------------");//sysj\ECS.sysj line: 272, column: 11
+                      S102016=1;
                       active[5]=1;
                       ends[5]=1;
                       tdone[5]=1;
@@ -195,10 +195,10 @@ public class ECS_HVACController extends ClockDomain{
                     break;
                   
                   case 1 : 
-                    if(zoneFourFiveSixAtTempHumid.getprestatus()){//sysj\ECS.sysj line: 282, column: 17
-                      System.out.println("Current Humidity For Zone 4,5,6: " + currentHumidity_thread_5 + "(%)");//sysj\ECS.sysj line: 283, column: 14
-                      System.out.println("\n-------------------------");//sysj\ECS.sysj line: 284, column: 11
-                      S102688=1;
+                    if(zoneFourFiveSixAtTempHumid.getprestatus()){//sysj\ECS.sysj line: 278, column: 17
+                      System.out.println("Current Humidity For Zone 4,5,6: " + currentHumidity_thread_5 + "(%)");//sysj\ECS.sysj line: 279, column: 14
+                      System.out.println("\n-------------------------");//sysj\ECS.sysj line: 280, column: 11
+                      S102016=1;
                       active[5]=1;
                       ends[5]=1;
                       tdone[5]=1;
@@ -217,57 +217,57 @@ public class ECS_HVACController extends ClockDomain{
             break;
           
           case 1 : 
-            S102688=1;
-            S102688=0;
-            if(workhrs_1.getprestatus()){//sysj\ECS.sysj line: 245, column: 12
-              tempzoneFourFiveSixTemp_thread_5 = (Integer)(zoneFourFiveSixTemp.getpreval() == null ? 0 : ((Integer)zoneFourFiveSixTemp.getpreval()).intValue());//sysj\ECS.sysj line: 246, column: 7
-              humidityzoneFourFiveSix_thread_5 = (Integer)(zoneFourFiveSixHumid.getpreval() == null ? 0 : ((Integer)zoneFourFiveSixHumid.getpreval()).intValue());//sysj\ECS.sysj line: 247, column: 7
-              S102634=0;
-              if(tempzoneFourFiveSixTemp_thread_5 > currentTemp_thread_5){//sysj\ECS.sysj line: 249, column: 11
-                System.out.println("Turning ON AC to Heat Up for Zone 4,5,6");//sysj\ECS.sysj line: 250, column: 8
-                zoneFourFiveSixACONOFF.setPresent();//sysj\ECS.sysj line: 251, column: 8
+            S102016=1;
+            S102016=0;
+            if(workhrs_1.getprestatus()){//sysj\ECS.sysj line: 241, column: 12
+              tempzoneFourFiveSixTemp_thread_5 = (Integer)(zoneFourFiveSixTemp.getpreval() == null ? 0 : ((Integer)zoneFourFiveSixTemp.getpreval()).intValue());//sysj\ECS.sysj line: 242, column: 7
+              humidityzoneFourFiveSix_thread_5 = (Integer)(zoneFourFiveSixHumid.getpreval() == null ? 0 : ((Integer)zoneFourFiveSixHumid.getpreval()).intValue());//sysj\ECS.sysj line: 243, column: 7
+              S101962=0;
+              if(tempzoneFourFiveSixTemp_thread_5 > currentTemp_thread_5){//sysj\ECS.sysj line: 245, column: 11
+                System.out.println("Turning ON AC to Heat Up for Zone 4,5,6");//sysj\ECS.sysj line: 246, column: 8
+                zoneFourFiveSixACONOFF.setPresent();//sysj\ECS.sysj line: 247, column: 8
                 currsigs.addElement(zoneFourFiveSixACONOFF);
-                currentTemp_thread_5 = tempzoneFourFiveSixTemp_thread_5;//sysj\ECS.sysj line: 252, column: 8
+                currentTemp_thread_5 = tempzoneFourFiveSixTemp_thread_5;//sysj\ECS.sysj line: 248, column: 8
                 active[5]=1;
                 ends[5]=1;
                 tdone[5]=1;
               }
               else {
-                S102634=1;
-                if(tempzoneFourFiveSixTemp_thread_5 < currentTemp_thread_5){//sysj\ECS.sysj line: 259, column: 11
-                  System.out.println("Turning ON AC to Cool Down for Zone 4,5,6");//sysj\ECS.sysj line: 260, column: 8
-                  zoneFourFiveSixACONOFF.setPresent();//sysj\ECS.sysj line: 261, column: 8
+                S101962=1;
+                if(tempzoneFourFiveSixTemp_thread_5 < currentTemp_thread_5){//sysj\ECS.sysj line: 255, column: 11
+                  System.out.println("Turning ON AC to Cool Down for Zone 4,5,6");//sysj\ECS.sysj line: 256, column: 8
+                  zoneFourFiveSixACONOFF.setPresent();//sysj\ECS.sysj line: 257, column: 8
                   currsigs.addElement(zoneFourFiveSixACONOFF);
-                  currentTemp_thread_5 = tempzoneFourFiveSixTemp_thread_5;//sysj\ECS.sysj line: 262, column: 8
+                  currentTemp_thread_5 = tempzoneFourFiveSixTemp_thread_5;//sysj\ECS.sysj line: 258, column: 8
                   active[5]=1;
                   ends[5]=1;
                   tdone[5]=1;
                 }
                 else {
-                  S102634=2;
-                  if(humidityzoneFourFiveSix_thread_5 > currentHumidity_thread_5){//sysj\ECS.sysj line: 269, column: 11
-                    S102662=0;
-                    System.out.println("Turning ON AC to increase humidity for Zone 4,5,6");//sysj\ECS.sysj line: 270, column: 14
-                    zoneFourFiveSixACONOFF.setPresent();//sysj\ECS.sysj line: 271, column: 11
+                  S101962=2;
+                  if(humidityzoneFourFiveSix_thread_5 > currentHumidity_thread_5){//sysj\ECS.sysj line: 265, column: 11
+                    S101990=0;
+                    System.out.println("Turning ON AC to increase humidity for Zone 4,5,6");//sysj\ECS.sysj line: 266, column: 14
+                    zoneFourFiveSixACONOFF.setPresent();//sysj\ECS.sysj line: 267, column: 11
                     currsigs.addElement(zoneFourFiveSixACONOFF);
-                    currentHumidity_thread_5 = humidityzoneFourFiveSix_thread_5;//sysj\ECS.sysj line: 272, column: 14
+                    currentHumidity_thread_5 = humidityzoneFourFiveSix_thread_5;//sysj\ECS.sysj line: 268, column: 14
                     active[5]=1;
                     ends[5]=1;
                     tdone[5]=1;
                   }
                   else {
-                    S102662=1;
-                    if(humidityzoneFourFiveSix_thread_5 < currentHumidity_thread_5){//sysj\ECS.sysj line: 277, column: 21
-                      System.out.println("Turning ON AC to reduce humidity for Zone 4,5,6");//sysj\ECS.sysj line: 278, column: 14
-                      zoneFourFiveSixACONOFF.setPresent();//sysj\ECS.sysj line: 279, column: 11
+                    S101990=1;
+                    if(humidityzoneFourFiveSix_thread_5 < currentHumidity_thread_5){//sysj\ECS.sysj line: 273, column: 21
+                      System.out.println("Turning ON AC to reduce humidity for Zone 4,5,6");//sysj\ECS.sysj line: 274, column: 14
+                      zoneFourFiveSixACONOFF.setPresent();//sysj\ECS.sysj line: 275, column: 11
                       currsigs.addElement(zoneFourFiveSixACONOFF);
-                      currentHumidity_thread_5 = humidityzoneFourFiveSix_thread_5;//sysj\ECS.sysj line: 280, column: 14
+                      currentHumidity_thread_5 = humidityzoneFourFiveSix_thread_5;//sysj\ECS.sysj line: 276, column: 14
                       active[5]=1;
                       ends[5]=1;
                       tdone[5]=1;
                     }
                     else {
-                      S102688=1;
+                      S102016=1;
                       active[5]=1;
                       ends[5]=1;
                       tdone[5]=1;
@@ -277,7 +277,7 @@ public class ECS_HVACController extends ClockDomain{
               }
             }
             else {
-              S102688=1;
+              S102016=1;
               active[5]=1;
               ends[5]=1;
               tdone[5]=1;
@@ -290,8 +290,8 @@ public class ECS_HVACController extends ClockDomain{
     }
   }
 
-  public void thread109510(int [] tdone, int [] ends){
-        switch(S102632){
+  public void thread107624(int [] tdone, int [] ends){
+        switch(S101960){
       case 0 : 
         active[4]=0;
         ends[4]=0;
@@ -299,48 +299,48 @@ public class ECS_HVACController extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S102356){
+        switch(S101684){
           case 0 : 
-            switch(S102302){
+            switch(S101630){
               case 0 : 
-                if(zoneTwoThreeAtTempHumid.getprestatus()){//sysj\ECS.sysj line: 197, column: 15
-                  System.out.println("Current Temp for Zone 2,3:" + currentTemp_thread_4 + "(°C)");//sysj\ECS.sysj line: 198, column: 8
-                  System.out.println("\n-------------------------");//sysj\ECS.sysj line: 199, column: 8
-                  S102302=1;
-                  if(tempzoneTwoThree_thread_4 < currentTemp_thread_4){//sysj\ECS.sysj line: 202, column: 11
-                    System.out.println("Turning ON Fan to Cool Down for Zone 2,3");//sysj\ECS.sysj line: 203, column: 8
-                    zoneTwoThreeFanONOFF.setPresent();//sysj\ECS.sysj line: 204, column: 8
+                if(zoneTwoThreeAtTempHumid.getprestatus()){//sysj\ECS.sysj line: 193, column: 15
+                  System.out.println("Current Temp for Zone 2,3:" + currentTemp_thread_4 + "(°C)");//sysj\ECS.sysj line: 194, column: 8
+                  System.out.println("\n-------------------------");//sysj\ECS.sysj line: 195, column: 8
+                  S101630=1;
+                  if(tempzoneTwoThree_thread_4 < currentTemp_thread_4){//sysj\ECS.sysj line: 198, column: 11
+                    System.out.println("Turning ON Fan to Cool Down for Zone 2,3");//sysj\ECS.sysj line: 199, column: 8
+                    zoneTwoThreeFanONOFF.setPresent();//sysj\ECS.sysj line: 200, column: 8
                     currsigs.addElement(zoneTwoThreeFanONOFF);
-                    currentTemp_thread_4 = tempzoneTwoThree_thread_4;//sysj\ECS.sysj line: 205, column: 8
+                    currentTemp_thread_4 = tempzoneTwoThree_thread_4;//sysj\ECS.sysj line: 201, column: 8
                     active[4]=1;
                     ends[4]=1;
                     tdone[4]=1;
                   }
                   else {
-                    S102302=2;
-                    if(humidityzoneTwoThree_thread_4 > currentHumidity_thread_4){//sysj\ECS.sysj line: 213, column: 11
-                      S102330=0;
-                      System.out.println("Turning ON Heater to increase humidity for Zone 2,3");//sysj\ECS.sysj line: 214, column: 14
-                      zoneTwoThreeHeaterONOFF.setPresent();//sysj\ECS.sysj line: 215, column: 8
+                    S101630=2;
+                    if(humidityzoneTwoThree_thread_4 > currentHumidity_thread_4){//sysj\ECS.sysj line: 209, column: 11
+                      S101658=0;
+                      System.out.println("Turning ON Heater to increase humidity for Zone 2,3");//sysj\ECS.sysj line: 210, column: 14
+                      zoneTwoThreeHeaterONOFF.setPresent();//sysj\ECS.sysj line: 211, column: 8
                       currsigs.addElement(zoneTwoThreeHeaterONOFF);
-                      currentHumidity_thread_4 = humidityzoneTwoThree_thread_4;//sysj\ECS.sysj line: 216, column: 14
+                      currentHumidity_thread_4 = humidityzoneTwoThree_thread_4;//sysj\ECS.sysj line: 212, column: 14
                       active[4]=1;
                       ends[4]=1;
                       tdone[4]=1;
                     }
                     else {
-                      S102330=1;
-                      if(humidityzoneTwoThree_thread_4 < currentHumidity_thread_4){//sysj\ECS.sysj line: 221, column: 21
-                        System.out.println("Turning ON Fan to reduce humidity for Zone 2,3");//sysj\ECS.sysj line: 222, column: 14
-                        zoneTwoThreeFanONOFF.setPresent();//sysj\ECS.sysj line: 223, column: 11
+                      S101658=1;
+                      if(humidityzoneTwoThree_thread_4 < currentHumidity_thread_4){//sysj\ECS.sysj line: 217, column: 21
+                        System.out.println("Turning ON Fan to reduce humidity for Zone 2,3");//sysj\ECS.sysj line: 218, column: 14
+                        zoneTwoThreeFanONOFF.setPresent();//sysj\ECS.sysj line: 219, column: 11
                         currsigs.addElement(zoneTwoThreeFanONOFF);
-                        currentHumidity_thread_4 = humidityzoneTwoThree_thread_4;//sysj\ECS.sysj line: 224, column: 14
+                        currentHumidity_thread_4 = humidityzoneTwoThree_thread_4;//sysj\ECS.sysj line: 220, column: 14
                         active[4]=1;
                         ends[4]=1;
                         tdone[4]=1;
                       }
                       else {
-                        S102356=1;
+                        S101684=1;
                         active[4]=1;
                         ends[4]=1;
                         tdone[4]=1;
@@ -356,33 +356,33 @@ public class ECS_HVACController extends ClockDomain{
                 break;
               
               case 1 : 
-                if(zoneTwoThreeAtTempHumid.getprestatus()){//sysj\ECS.sysj line: 208, column: 15
-                  System.out.println("Current Temp for Zone 2,3:" + currentTemp_thread_4 + "(°C)");//sysj\ECS.sysj line: 209, column: 8
-                  System.out.println("\n-------------------------");//sysj\ECS.sysj line: 210, column: 8
-                  S102302=2;
-                  if(humidityzoneTwoThree_thread_4 > currentHumidity_thread_4){//sysj\ECS.sysj line: 213, column: 11
-                    S102330=0;
-                    System.out.println("Turning ON Heater to increase humidity for Zone 2,3");//sysj\ECS.sysj line: 214, column: 14
-                    zoneTwoThreeHeaterONOFF.setPresent();//sysj\ECS.sysj line: 215, column: 8
+                if(zoneTwoThreeAtTempHumid.getprestatus()){//sysj\ECS.sysj line: 204, column: 15
+                  System.out.println("Current Temp for Zone 2,3:" + currentTemp_thread_4 + "(°C)");//sysj\ECS.sysj line: 205, column: 8
+                  System.out.println("\n-------------------------");//sysj\ECS.sysj line: 206, column: 8
+                  S101630=2;
+                  if(humidityzoneTwoThree_thread_4 > currentHumidity_thread_4){//sysj\ECS.sysj line: 209, column: 11
+                    S101658=0;
+                    System.out.println("Turning ON Heater to increase humidity for Zone 2,3");//sysj\ECS.sysj line: 210, column: 14
+                    zoneTwoThreeHeaterONOFF.setPresent();//sysj\ECS.sysj line: 211, column: 8
                     currsigs.addElement(zoneTwoThreeHeaterONOFF);
-                    currentHumidity_thread_4 = humidityzoneTwoThree_thread_4;//sysj\ECS.sysj line: 216, column: 14
+                    currentHumidity_thread_4 = humidityzoneTwoThree_thread_4;//sysj\ECS.sysj line: 212, column: 14
                     active[4]=1;
                     ends[4]=1;
                     tdone[4]=1;
                   }
                   else {
-                    S102330=1;
-                    if(humidityzoneTwoThree_thread_4 < currentHumidity_thread_4){//sysj\ECS.sysj line: 221, column: 21
-                      System.out.println("Turning ON Fan to reduce humidity for Zone 2,3");//sysj\ECS.sysj line: 222, column: 14
-                      zoneTwoThreeFanONOFF.setPresent();//sysj\ECS.sysj line: 223, column: 11
+                    S101658=1;
+                    if(humidityzoneTwoThree_thread_4 < currentHumidity_thread_4){//sysj\ECS.sysj line: 217, column: 21
+                      System.out.println("Turning ON Fan to reduce humidity for Zone 2,3");//sysj\ECS.sysj line: 218, column: 14
+                      zoneTwoThreeFanONOFF.setPresent();//sysj\ECS.sysj line: 219, column: 11
                       currsigs.addElement(zoneTwoThreeFanONOFF);
-                      currentHumidity_thread_4 = humidityzoneTwoThree_thread_4;//sysj\ECS.sysj line: 224, column: 14
+                      currentHumidity_thread_4 = humidityzoneTwoThree_thread_4;//sysj\ECS.sysj line: 220, column: 14
                       active[4]=1;
                       ends[4]=1;
                       tdone[4]=1;
                     }
                     else {
-                      S102356=1;
+                      S101684=1;
                       active[4]=1;
                       ends[4]=1;
                       tdone[4]=1;
@@ -397,12 +397,12 @@ public class ECS_HVACController extends ClockDomain{
                 break;
               
               case 2 : 
-                switch(S102330){
+                switch(S101658){
                   case 0 : 
-                    if(zoneTwoThreeAtTempHumid.getprestatus()){//sysj\ECS.sysj line: 218, column: 15
-                      System.out.println("Current Humidity For Zone 2,3: " + currentHumidity_thread_4 + "(%)");//sysj\ECS.sysj line: 219, column: 14
-                      System.out.println("\n-------------------------");//sysj\ECS.sysj line: 220, column: 11
-                      S102356=1;
+                    if(zoneTwoThreeAtTempHumid.getprestatus()){//sysj\ECS.sysj line: 214, column: 15
+                      System.out.println("Current Humidity For Zone 2,3: " + currentHumidity_thread_4 + "(%)");//sysj\ECS.sysj line: 215, column: 14
+                      System.out.println("\n-------------------------");//sysj\ECS.sysj line: 216, column: 11
+                      S101684=1;
                       active[4]=1;
                       ends[4]=1;
                       tdone[4]=1;
@@ -415,10 +415,10 @@ public class ECS_HVACController extends ClockDomain{
                     break;
                   
                   case 1 : 
-                    if(zoneTwoThreeAtTempHumid.getprestatus()){//sysj\ECS.sysj line: 227, column: 15
-                      System.out.println("Current Humidity For Zone 2,3: " + currentHumidity_thread_4 + "(%)");//sysj\ECS.sysj line: 228, column: 14
-                      System.out.println("\n-------------------------");//sysj\ECS.sysj line: 229, column: 11
-                      S102356=1;
+                    if(zoneTwoThreeAtTempHumid.getprestatus()){//sysj\ECS.sysj line: 223, column: 15
+                      System.out.println("Current Humidity For Zone 2,3: " + currentHumidity_thread_4 + "(%)");//sysj\ECS.sysj line: 224, column: 14
+                      System.out.println("\n-------------------------");//sysj\ECS.sysj line: 225, column: 11
+                      S101684=1;
                       active[4]=1;
                       ends[4]=1;
                       tdone[4]=1;
@@ -437,57 +437,57 @@ public class ECS_HVACController extends ClockDomain{
             break;
           
           case 1 : 
-            S102356=1;
-            S102356=0;
-            if(workhrs_1.getprestatus()){//sysj\ECS.sysj line: 188, column: 12
-              tempzoneTwoThree_thread_4 = (Integer)(zoneTwoThreeTemp.getpreval() == null ? 0 : ((Integer)zoneTwoThreeTemp.getpreval()).intValue());//sysj\ECS.sysj line: 189, column: 7
-              humidityzoneTwoThree_thread_4 = (Integer)(zoneTwoThreeHumid.getpreval() == null ? 0 : ((Integer)zoneTwoThreeHumid.getpreval()).intValue());//sysj\ECS.sysj line: 190, column: 7
-              S102302=0;
-              if(tempzoneTwoThree_thread_4 > currentTemp_thread_4){//sysj\ECS.sysj line: 192, column: 11
-                System.out.println("Turning ON Heater to Heat Up for Zone 2,3");//sysj\ECS.sysj line: 193, column: 8
-                zoneTwoThreeHeaterONOFF.setPresent();//sysj\ECS.sysj line: 194, column: 8
+            S101684=1;
+            S101684=0;
+            if(workhrs_1.getprestatus()){//sysj\ECS.sysj line: 184, column: 12
+              tempzoneTwoThree_thread_4 = (Integer)(zoneTwoThreeTemp.getpreval() == null ? 0 : ((Integer)zoneTwoThreeTemp.getpreval()).intValue());//sysj\ECS.sysj line: 185, column: 7
+              humidityzoneTwoThree_thread_4 = (Integer)(zoneTwoThreeHumid.getpreval() == null ? 0 : ((Integer)zoneTwoThreeHumid.getpreval()).intValue());//sysj\ECS.sysj line: 186, column: 7
+              S101630=0;
+              if(tempzoneTwoThree_thread_4 > currentTemp_thread_4){//sysj\ECS.sysj line: 188, column: 11
+                System.out.println("Turning ON Heater to Heat Up for Zone 2,3");//sysj\ECS.sysj line: 189, column: 8
+                zoneTwoThreeHeaterONOFF.setPresent();//sysj\ECS.sysj line: 190, column: 8
                 currsigs.addElement(zoneTwoThreeHeaterONOFF);
-                currentTemp_thread_4 = tempzoneTwoThree_thread_4;//sysj\ECS.sysj line: 195, column: 8
+                currentTemp_thread_4 = tempzoneTwoThree_thread_4;//sysj\ECS.sysj line: 191, column: 8
                 active[4]=1;
                 ends[4]=1;
                 tdone[4]=1;
               }
               else {
-                S102302=1;
-                if(tempzoneTwoThree_thread_4 < currentTemp_thread_4){//sysj\ECS.sysj line: 202, column: 11
-                  System.out.println("Turning ON Fan to Cool Down for Zone 2,3");//sysj\ECS.sysj line: 203, column: 8
-                  zoneTwoThreeFanONOFF.setPresent();//sysj\ECS.sysj line: 204, column: 8
+                S101630=1;
+                if(tempzoneTwoThree_thread_4 < currentTemp_thread_4){//sysj\ECS.sysj line: 198, column: 11
+                  System.out.println("Turning ON Fan to Cool Down for Zone 2,3");//sysj\ECS.sysj line: 199, column: 8
+                  zoneTwoThreeFanONOFF.setPresent();//sysj\ECS.sysj line: 200, column: 8
                   currsigs.addElement(zoneTwoThreeFanONOFF);
-                  currentTemp_thread_4 = tempzoneTwoThree_thread_4;//sysj\ECS.sysj line: 205, column: 8
+                  currentTemp_thread_4 = tempzoneTwoThree_thread_4;//sysj\ECS.sysj line: 201, column: 8
                   active[4]=1;
                   ends[4]=1;
                   tdone[4]=1;
                 }
                 else {
-                  S102302=2;
-                  if(humidityzoneTwoThree_thread_4 > currentHumidity_thread_4){//sysj\ECS.sysj line: 213, column: 11
-                    S102330=0;
-                    System.out.println("Turning ON Heater to increase humidity for Zone 2,3");//sysj\ECS.sysj line: 214, column: 14
-                    zoneTwoThreeHeaterONOFF.setPresent();//sysj\ECS.sysj line: 215, column: 8
+                  S101630=2;
+                  if(humidityzoneTwoThree_thread_4 > currentHumidity_thread_4){//sysj\ECS.sysj line: 209, column: 11
+                    S101658=0;
+                    System.out.println("Turning ON Heater to increase humidity for Zone 2,3");//sysj\ECS.sysj line: 210, column: 14
+                    zoneTwoThreeHeaterONOFF.setPresent();//sysj\ECS.sysj line: 211, column: 8
                     currsigs.addElement(zoneTwoThreeHeaterONOFF);
-                    currentHumidity_thread_4 = humidityzoneTwoThree_thread_4;//sysj\ECS.sysj line: 216, column: 14
+                    currentHumidity_thread_4 = humidityzoneTwoThree_thread_4;//sysj\ECS.sysj line: 212, column: 14
                     active[4]=1;
                     ends[4]=1;
                     tdone[4]=1;
                   }
                   else {
-                    S102330=1;
-                    if(humidityzoneTwoThree_thread_4 < currentHumidity_thread_4){//sysj\ECS.sysj line: 221, column: 21
-                      System.out.println("Turning ON Fan to reduce humidity for Zone 2,3");//sysj\ECS.sysj line: 222, column: 14
-                      zoneTwoThreeFanONOFF.setPresent();//sysj\ECS.sysj line: 223, column: 11
+                    S101658=1;
+                    if(humidityzoneTwoThree_thread_4 < currentHumidity_thread_4){//sysj\ECS.sysj line: 217, column: 21
+                      System.out.println("Turning ON Fan to reduce humidity for Zone 2,3");//sysj\ECS.sysj line: 218, column: 14
+                      zoneTwoThreeFanONOFF.setPresent();//sysj\ECS.sysj line: 219, column: 11
                       currsigs.addElement(zoneTwoThreeFanONOFF);
-                      currentHumidity_thread_4 = humidityzoneTwoThree_thread_4;//sysj\ECS.sysj line: 224, column: 14
+                      currentHumidity_thread_4 = humidityzoneTwoThree_thread_4;//sysj\ECS.sysj line: 220, column: 14
                       active[4]=1;
                       ends[4]=1;
                       tdone[4]=1;
                     }
                     else {
-                      S102356=1;
+                      S101684=1;
                       active[4]=1;
                       ends[4]=1;
                       tdone[4]=1;
@@ -497,7 +497,7 @@ public class ECS_HVACController extends ClockDomain{
               }
             }
             else {
-              S102356=1;
+              S101684=1;
               active[4]=1;
               ends[4]=1;
               tdone[4]=1;
@@ -510,8 +510,8 @@ public class ECS_HVACController extends ClockDomain{
     }
   }
 
-  public void thread109509(int [] tdone, int [] ends){
-        switch(S102300){
+  public void thread107623(int [] tdone, int [] ends){
+        switch(S101628){
       case 0 : 
         active[3]=0;
         ends[3]=0;
@@ -525,79 +525,78 @@ public class ECS_HVACController extends ClockDomain{
               case 0 : 
                 switch(S97514){
                   case 0 : 
-                    if(zoneOneSevenAtTempHumid.getprestatus()){//sysj\ECS.sysj line: 86, column: 15
-                      System.out.println("Current Temp For Zone 1,7: " + currentTemp_thread_3 + "(°C)");//sysj\ECS.sysj line: 87, column: 8
-                      System.out.println("\n-------------------------");//sysj\ECS.sysj line: 88, column: 8
+                    if(zoneOneSevenAtTempHumid.getprestatus()){//sysj\ECS.sysj line: 82, column: 15
+                      System.out.println("Current Temp For Zone 1,7: " + currentTemp_thread_3 + "(°C)");//sysj\ECS.sysj line: 83, column: 8
+                      System.out.println("\n-------------------------");//sysj\ECS.sysj line: 84, column: 8
                       S97547=1;
-                      if(humidityZoneOneSeven_thread_3 > currentHumidity_thread_3){//sysj\ECS.sysj line: 102, column: 11
+                      if(humidityZoneOneSeven_thread_3 > currentHumidity_thread_3){//sysj\ECS.sysj line: 98, column: 11
                         S97522=0;
-                        System.out.println("Turning ON Heater to increase humidity for Zone 1,7");//sysj\ECS.sysj line: 103, column: 14
-                        zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 104, column: 14
+                        System.out.println("Turning ON Heater to increase humidity for Zone 1,7");//sysj\ECS.sysj line: 99, column: 14
+                        zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 100, column: 14
                         currsigs.addElement(zoneOneSevenHeaterONOFF);
-                        currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 105, column: 14
+                        currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 101, column: 14
                         active[3]=1;
                         ends[3]=1;
                         tdone[3]=1;
                       }
                       else {
                         S97522=1;
-                        if(humidityZoneOneSeven_thread_3 < currentHumidity_thread_3){//sysj\ECS.sysj line: 110, column: 21
-                          System.out.println("Turning ON Fan to reduce humidity for Zone 1,7");//sysj\ECS.sysj line: 111, column: 14
-                          zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 112, column: 14
+                        if(humidityZoneOneSeven_thread_3 < currentHumidity_thread_3){//sysj\ECS.sysj line: 106, column: 21
+                          System.out.println("Turning ON Fan to reduce humidity for Zone 1,7");//sysj\ECS.sysj line: 107, column: 14
+                          zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 108, column: 14
                           currsigs.addElement(zoneOneSevenFanONOFF);
-                          currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 113, column: 14
+                          currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 109, column: 14
                           active[3]=1;
                           ends[3]=1;
                           tdone[3]=1;
                         }
                         else {
                           S97506=1;
-                          if(afterhrs_1.getprestatus()){//sysj\ECS.sysj line: 121, column: 15
-                            zoneOneOcc_thread_3 = (Integer)(zoneOneOccupancy_B.getpreval() == null ? 0 : ((Integer)zoneOneOccupancy_B.getpreval()).intValue());//sysj\ECS.sysj line: 123, column: 14
-                            zoneSevenOcc_thread_3 = (Integer)(zoneSevenOccupancy_B.getpreval() == null ? 0 : ((Integer)zoneSevenOccupancy_B.getpreval()).intValue());//sysj\ECS.sysj line: 124, column: 14
-                            if(zoneOneOcc_thread_3 > 0 || zoneSevenOcc_thread_3 > 0){//sysj\ECS.sysj line: 126, column: 18
-                              System.out.println("Someone detected in Zone 1 or Zone 7 during non-working hours Enabling Fan/Heaters");//sysj\ECS.sysj line: 127, column: 18
-                              S97608=0;
-                              if(tempZoneOneSeven_thread_3 > currentTemp_thread_3){//sysj\ECS.sysj line: 129, column: 22
+                          if(afterhrs_1.getprestatus()){//sysj\ECS.sysj line: 117, column: 15
+                            zoneOneOcc_thread_3 = (Integer)(zoneOneOccupancy_B.getpreval() == null ? 0 : ((Integer)zoneOneOccupancy_B.getpreval()).intValue());//sysj\ECS.sysj line: 119, column: 14
+                            zoneSevenOcc_thread_3 = (Integer)(zoneSevenOccupancy_B.getpreval() == null ? 0 : ((Integer)zoneSevenOccupancy_B.getpreval()).intValue());//sysj\ECS.sysj line: 120, column: 14
+                            if(zoneOneOcc_thread_3 > 0 || zoneSevenOcc_thread_3 > 0){//sysj\ECS.sysj line: 122, column: 18
+                              S97632=0;
+                              if(tempZoneOneSeven_thread_3 > currentTemp_thread_3){//sysj\ECS.sysj line: 125, column: 22
                                 S97599=0;
-                                System.out.println("Turning ON Heater to Heat Up for Zone 1,7");//sysj\ECS.sysj line: 130, column: 13
-                                zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 131, column: 13
+                                System.out.println("Turning ON Heater to Heat Up for Zone 1,7");//sysj\ECS.sysj line: 126, column: 13
+                                zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 127, column: 13
                                 currsigs.addElement(zoneOneSevenHeaterONOFF);
-                                currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 132, column: 13
+                                currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 128, column: 13
                                 active[3]=1;
                                 ends[3]=1;
                                 tdone[3]=1;
                               }
                               else {
                                 S97599=1;
-                                if(tempZoneOneSeven_thread_3 < currentTemp_thread_3){//sysj\ECS.sysj line: 140, column: 21
-                                  System.out.println("Turning ON Fan to Cool Down for Zone 1,7");//sysj\ECS.sysj line: 141, column: 13
-                                  currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 142, column: 13
-                                  zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 143, column: 16
+                                if(tempZoneOneSeven_thread_3 < currentTemp_thread_3){//sysj\ECS.sysj line: 136, column: 21
+                                  System.out.println("Turning ON Fan to Cool Down for Zone 1,7");//sysj\ECS.sysj line: 137, column: 13
+                                  currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 138, column: 13
+                                  zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 139, column: 16
                                   currsigs.addElement(zoneOneSevenFanONOFF);
                                   active[3]=1;
                                   ends[3]=1;
                                   tdone[3]=1;
                                 }
                                 else {
-                                  S97608=1;
-                                  if(humidityZoneOneSeven_thread_3 > currentHumidity_thread_3){//sysj\ECS.sysj line: 150, column: 16
-                                    S97616=0;
-                                    System.out.println("Turning ON Heater to increase humidity for Zone 1,7");//sysj\ECS.sysj line: 151, column: 19
-                                    zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 152, column: 19
+                                  S97632=1;
+                                  if(humidityZoneOneSeven_thread_3 > currentHumidity_thread_3){//sysj\ECS.sysj line: 146, column: 16
+                                    S97607=0;
+                                    System.out.println("Turning ON Heater to increase humidity for Zone 1,7");//sysj\ECS.sysj line: 147, column: 19
+                                    zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 148, column: 19
                                     currsigs.addElement(zoneOneSevenHeaterONOFF);
-                                    currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 153, column: 19
+                                    currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 149, column: 19
                                     active[3]=1;
                                     ends[3]=1;
                                     tdone[3]=1;
                                   }
                                   else {
-                                    S97616=1;
-                                    if(humidityZoneOneSeven_thread_3 < currentHumidity_thread_3){//sysj\ECS.sysj line: 158, column: 26
-                                      System.out.println("Turning ON Fan to reduce humidity for Zone 1,7");//sysj\ECS.sysj line: 159, column: 19
-                                      zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 160, column: 19
+                                    S97607=1;
+                                    if(humidityZoneOneSeven_thread_3 < currentHumidity_thread_3){//sysj\ECS.sysj line: 154, column: 26
+                                      System.out.println("Turning ON Fan to reduce humidity for Zone 1,7");//sysj\ECS.sysj line: 155, column: 19
+                                      zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 156, column: 19
                                       currsigs.addElement(zoneOneSevenFanONOFF);
-                                      currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 161, column: 19
+                                      currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 157, column: 19
                                       active[3]=1;
                                       ends[3]=1;
                                       tdone[3]=1;
@@ -636,79 +635,78 @@ public class ECS_HVACController extends ClockDomain{
                     break;
                   
                   case 1 : 
-                    if(zoneOneSevenAtTempHumid.getprestatus()){//sysj\ECS.sysj line: 97, column: 18
-                      System.out.println("Current Temp For Zone 1,7: " + currentTemp_thread_3 + "(°C)");//sysj\ECS.sysj line: 98, column: 8
-                      System.out.println("\n-------------------------");//sysj\ECS.sysj line: 99, column: 8
+                    if(zoneOneSevenAtTempHumid.getprestatus()){//sysj\ECS.sysj line: 93, column: 18
+                      System.out.println("Current Temp For Zone 1,7: " + currentTemp_thread_3 + "(°C)");//sysj\ECS.sysj line: 94, column: 8
+                      System.out.println("\n-------------------------");//sysj\ECS.sysj line: 95, column: 8
                       S97547=1;
-                      if(humidityZoneOneSeven_thread_3 > currentHumidity_thread_3){//sysj\ECS.sysj line: 102, column: 11
+                      if(humidityZoneOneSeven_thread_3 > currentHumidity_thread_3){//sysj\ECS.sysj line: 98, column: 11
                         S97522=0;
-                        System.out.println("Turning ON Heater to increase humidity for Zone 1,7");//sysj\ECS.sysj line: 103, column: 14
-                        zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 104, column: 14
+                        System.out.println("Turning ON Heater to increase humidity for Zone 1,7");//sysj\ECS.sysj line: 99, column: 14
+                        zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 100, column: 14
                         currsigs.addElement(zoneOneSevenHeaterONOFF);
-                        currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 105, column: 14
+                        currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 101, column: 14
                         active[3]=1;
                         ends[3]=1;
                         tdone[3]=1;
                       }
                       else {
                         S97522=1;
-                        if(humidityZoneOneSeven_thread_3 < currentHumidity_thread_3){//sysj\ECS.sysj line: 110, column: 21
-                          System.out.println("Turning ON Fan to reduce humidity for Zone 1,7");//sysj\ECS.sysj line: 111, column: 14
-                          zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 112, column: 14
+                        if(humidityZoneOneSeven_thread_3 < currentHumidity_thread_3){//sysj\ECS.sysj line: 106, column: 21
+                          System.out.println("Turning ON Fan to reduce humidity for Zone 1,7");//sysj\ECS.sysj line: 107, column: 14
+                          zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 108, column: 14
                           currsigs.addElement(zoneOneSevenFanONOFF);
-                          currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 113, column: 14
+                          currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 109, column: 14
                           active[3]=1;
                           ends[3]=1;
                           tdone[3]=1;
                         }
                         else {
                           S97506=1;
-                          if(afterhrs_1.getprestatus()){//sysj\ECS.sysj line: 121, column: 15
-                            zoneOneOcc_thread_3 = (Integer)(zoneOneOccupancy_B.getpreval() == null ? 0 : ((Integer)zoneOneOccupancy_B.getpreval()).intValue());//sysj\ECS.sysj line: 123, column: 14
-                            zoneSevenOcc_thread_3 = (Integer)(zoneSevenOccupancy_B.getpreval() == null ? 0 : ((Integer)zoneSevenOccupancy_B.getpreval()).intValue());//sysj\ECS.sysj line: 124, column: 14
-                            if(zoneOneOcc_thread_3 > 0 || zoneSevenOcc_thread_3 > 0){//sysj\ECS.sysj line: 126, column: 18
-                              System.out.println("Someone detected in Zone 1 or Zone 7 during non-working hours Enabling Fan/Heaters");//sysj\ECS.sysj line: 127, column: 18
-                              S97608=0;
-                              if(tempZoneOneSeven_thread_3 > currentTemp_thread_3){//sysj\ECS.sysj line: 129, column: 22
+                          if(afterhrs_1.getprestatus()){//sysj\ECS.sysj line: 117, column: 15
+                            zoneOneOcc_thread_3 = (Integer)(zoneOneOccupancy_B.getpreval() == null ? 0 : ((Integer)zoneOneOccupancy_B.getpreval()).intValue());//sysj\ECS.sysj line: 119, column: 14
+                            zoneSevenOcc_thread_3 = (Integer)(zoneSevenOccupancy_B.getpreval() == null ? 0 : ((Integer)zoneSevenOccupancy_B.getpreval()).intValue());//sysj\ECS.sysj line: 120, column: 14
+                            if(zoneOneOcc_thread_3 > 0 || zoneSevenOcc_thread_3 > 0){//sysj\ECS.sysj line: 122, column: 18
+                              S97632=0;
+                              if(tempZoneOneSeven_thread_3 > currentTemp_thread_3){//sysj\ECS.sysj line: 125, column: 22
                                 S97599=0;
-                                System.out.println("Turning ON Heater to Heat Up for Zone 1,7");//sysj\ECS.sysj line: 130, column: 13
-                                zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 131, column: 13
+                                System.out.println("Turning ON Heater to Heat Up for Zone 1,7");//sysj\ECS.sysj line: 126, column: 13
+                                zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 127, column: 13
                                 currsigs.addElement(zoneOneSevenHeaterONOFF);
-                                currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 132, column: 13
+                                currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 128, column: 13
                                 active[3]=1;
                                 ends[3]=1;
                                 tdone[3]=1;
                               }
                               else {
                                 S97599=1;
-                                if(tempZoneOneSeven_thread_3 < currentTemp_thread_3){//sysj\ECS.sysj line: 140, column: 21
-                                  System.out.println("Turning ON Fan to Cool Down for Zone 1,7");//sysj\ECS.sysj line: 141, column: 13
-                                  currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 142, column: 13
-                                  zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 143, column: 16
+                                if(tempZoneOneSeven_thread_3 < currentTemp_thread_3){//sysj\ECS.sysj line: 136, column: 21
+                                  System.out.println("Turning ON Fan to Cool Down for Zone 1,7");//sysj\ECS.sysj line: 137, column: 13
+                                  currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 138, column: 13
+                                  zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 139, column: 16
                                   currsigs.addElement(zoneOneSevenFanONOFF);
                                   active[3]=1;
                                   ends[3]=1;
                                   tdone[3]=1;
                                 }
                                 else {
-                                  S97608=1;
-                                  if(humidityZoneOneSeven_thread_3 > currentHumidity_thread_3){//sysj\ECS.sysj line: 150, column: 16
-                                    S97616=0;
-                                    System.out.println("Turning ON Heater to increase humidity for Zone 1,7");//sysj\ECS.sysj line: 151, column: 19
-                                    zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 152, column: 19
+                                  S97632=1;
+                                  if(humidityZoneOneSeven_thread_3 > currentHumidity_thread_3){//sysj\ECS.sysj line: 146, column: 16
+                                    S97607=0;
+                                    System.out.println("Turning ON Heater to increase humidity for Zone 1,7");//sysj\ECS.sysj line: 147, column: 19
+                                    zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 148, column: 19
                                     currsigs.addElement(zoneOneSevenHeaterONOFF);
-                                    currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 153, column: 19
+                                    currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 149, column: 19
                                     active[3]=1;
                                     ends[3]=1;
                                     tdone[3]=1;
                                   }
                                   else {
-                                    S97616=1;
-                                    if(humidityZoneOneSeven_thread_3 < currentHumidity_thread_3){//sysj\ECS.sysj line: 158, column: 26
-                                      System.out.println("Turning ON Fan to reduce humidity for Zone 1,7");//sysj\ECS.sysj line: 159, column: 19
-                                      zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 160, column: 19
+                                    S97607=1;
+                                    if(humidityZoneOneSeven_thread_3 < currentHumidity_thread_3){//sysj\ECS.sysj line: 154, column: 26
+                                      System.out.println("Turning ON Fan to reduce humidity for Zone 1,7");//sysj\ECS.sysj line: 155, column: 19
+                                      zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 156, column: 19
                                       currsigs.addElement(zoneOneSevenFanONOFF);
-                                      currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 161, column: 19
+                                      currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 157, column: 19
                                       active[3]=1;
                                       ends[3]=1;
                                       tdone[3]=1;
@@ -752,56 +750,55 @@ public class ECS_HVACController extends ClockDomain{
               case 1 : 
                 switch(S97522){
                   case 0 : 
-                    if(zoneOneSevenAtTempHumid.getprestatus()){//sysj\ECS.sysj line: 107, column: 18
-                      System.out.println("Current Humidity For Zone 1,7: " + currentHumidity_thread_3 + "(%)");//sysj\ECS.sysj line: 108, column: 14
-                      System.out.println("\n-------------------------");//sysj\ECS.sysj line: 109, column: 11
+                    if(zoneOneSevenAtTempHumid.getprestatus()){//sysj\ECS.sysj line: 103, column: 18
+                      System.out.println("Current Humidity For Zone 1,7: " + currentHumidity_thread_3 + "(%)");//sysj\ECS.sysj line: 104, column: 14
+                      System.out.println("\n-------------------------");//sysj\ECS.sysj line: 105, column: 11
                       S97506=1;
-                      if(afterhrs_1.getprestatus()){//sysj\ECS.sysj line: 121, column: 15
-                        zoneOneOcc_thread_3 = (Integer)(zoneOneOccupancy_B.getpreval() == null ? 0 : ((Integer)zoneOneOccupancy_B.getpreval()).intValue());//sysj\ECS.sysj line: 123, column: 14
-                        zoneSevenOcc_thread_3 = (Integer)(zoneSevenOccupancy_B.getpreval() == null ? 0 : ((Integer)zoneSevenOccupancy_B.getpreval()).intValue());//sysj\ECS.sysj line: 124, column: 14
-                        if(zoneOneOcc_thread_3 > 0 || zoneSevenOcc_thread_3 > 0){//sysj\ECS.sysj line: 126, column: 18
-                          System.out.println("Someone detected in Zone 1 or Zone 7 during non-working hours Enabling Fan/Heaters");//sysj\ECS.sysj line: 127, column: 18
-                          S97608=0;
-                          if(tempZoneOneSeven_thread_3 > currentTemp_thread_3){//sysj\ECS.sysj line: 129, column: 22
+                      if(afterhrs_1.getprestatus()){//sysj\ECS.sysj line: 117, column: 15
+                        zoneOneOcc_thread_3 = (Integer)(zoneOneOccupancy_B.getpreval() == null ? 0 : ((Integer)zoneOneOccupancy_B.getpreval()).intValue());//sysj\ECS.sysj line: 119, column: 14
+                        zoneSevenOcc_thread_3 = (Integer)(zoneSevenOccupancy_B.getpreval() == null ? 0 : ((Integer)zoneSevenOccupancy_B.getpreval()).intValue());//sysj\ECS.sysj line: 120, column: 14
+                        if(zoneOneOcc_thread_3 > 0 || zoneSevenOcc_thread_3 > 0){//sysj\ECS.sysj line: 122, column: 18
+                          S97632=0;
+                          if(tempZoneOneSeven_thread_3 > currentTemp_thread_3){//sysj\ECS.sysj line: 125, column: 22
                             S97599=0;
-                            System.out.println("Turning ON Heater to Heat Up for Zone 1,7");//sysj\ECS.sysj line: 130, column: 13
-                            zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 131, column: 13
+                            System.out.println("Turning ON Heater to Heat Up for Zone 1,7");//sysj\ECS.sysj line: 126, column: 13
+                            zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 127, column: 13
                             currsigs.addElement(zoneOneSevenHeaterONOFF);
-                            currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 132, column: 13
+                            currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 128, column: 13
                             active[3]=1;
                             ends[3]=1;
                             tdone[3]=1;
                           }
                           else {
                             S97599=1;
-                            if(tempZoneOneSeven_thread_3 < currentTemp_thread_3){//sysj\ECS.sysj line: 140, column: 21
-                              System.out.println("Turning ON Fan to Cool Down for Zone 1,7");//sysj\ECS.sysj line: 141, column: 13
-                              currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 142, column: 13
-                              zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 143, column: 16
+                            if(tempZoneOneSeven_thread_3 < currentTemp_thread_3){//sysj\ECS.sysj line: 136, column: 21
+                              System.out.println("Turning ON Fan to Cool Down for Zone 1,7");//sysj\ECS.sysj line: 137, column: 13
+                              currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 138, column: 13
+                              zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 139, column: 16
                               currsigs.addElement(zoneOneSevenFanONOFF);
                               active[3]=1;
                               ends[3]=1;
                               tdone[3]=1;
                             }
                             else {
-                              S97608=1;
-                              if(humidityZoneOneSeven_thread_3 > currentHumidity_thread_3){//sysj\ECS.sysj line: 150, column: 16
-                                S97616=0;
-                                System.out.println("Turning ON Heater to increase humidity for Zone 1,7");//sysj\ECS.sysj line: 151, column: 19
-                                zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 152, column: 19
+                              S97632=1;
+                              if(humidityZoneOneSeven_thread_3 > currentHumidity_thread_3){//sysj\ECS.sysj line: 146, column: 16
+                                S97607=0;
+                                System.out.println("Turning ON Heater to increase humidity for Zone 1,7");//sysj\ECS.sysj line: 147, column: 19
+                                zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 148, column: 19
                                 currsigs.addElement(zoneOneSevenHeaterONOFF);
-                                currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 153, column: 19
+                                currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 149, column: 19
                                 active[3]=1;
                                 ends[3]=1;
                                 tdone[3]=1;
                               }
                               else {
-                                S97616=1;
-                                if(humidityZoneOneSeven_thread_3 < currentHumidity_thread_3){//sysj\ECS.sysj line: 158, column: 26
-                                  System.out.println("Turning ON Fan to reduce humidity for Zone 1,7");//sysj\ECS.sysj line: 159, column: 19
-                                  zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 160, column: 19
+                                S97607=1;
+                                if(humidityZoneOneSeven_thread_3 < currentHumidity_thread_3){//sysj\ECS.sysj line: 154, column: 26
+                                  System.out.println("Turning ON Fan to reduce humidity for Zone 1,7");//sysj\ECS.sysj line: 155, column: 19
+                                  zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 156, column: 19
                                   currsigs.addElement(zoneOneSevenFanONOFF);
-                                  currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 161, column: 19
+                                  currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 157, column: 19
                                   active[3]=1;
                                   ends[3]=1;
                                   tdone[3]=1;
@@ -838,56 +835,55 @@ public class ECS_HVACController extends ClockDomain{
                     break;
                   
                   case 1 : 
-                    if(zoneOneSevenAtTempHumid.getprestatus()){//sysj\ECS.sysj line: 115, column: 18
-                      System.out.println("Current Humidity For Zone 1,7: " + currentHumidity_thread_3 + "(%)");//sysj\ECS.sysj line: 116, column: 14
-                      System.out.println("\n-------------------------");//sysj\ECS.sysj line: 117, column: 11
+                    if(zoneOneSevenAtTempHumid.getprestatus()){//sysj\ECS.sysj line: 111, column: 18
+                      System.out.println("Current Humidity For Zone 1,7: " + currentHumidity_thread_3 + "(%)");//sysj\ECS.sysj line: 112, column: 14
+                      System.out.println("\n-------------------------");//sysj\ECS.sysj line: 113, column: 11
                       S97506=1;
-                      if(afterhrs_1.getprestatus()){//sysj\ECS.sysj line: 121, column: 15
-                        zoneOneOcc_thread_3 = (Integer)(zoneOneOccupancy_B.getpreval() == null ? 0 : ((Integer)zoneOneOccupancy_B.getpreval()).intValue());//sysj\ECS.sysj line: 123, column: 14
-                        zoneSevenOcc_thread_3 = (Integer)(zoneSevenOccupancy_B.getpreval() == null ? 0 : ((Integer)zoneSevenOccupancy_B.getpreval()).intValue());//sysj\ECS.sysj line: 124, column: 14
-                        if(zoneOneOcc_thread_3 > 0 || zoneSevenOcc_thread_3 > 0){//sysj\ECS.sysj line: 126, column: 18
-                          System.out.println("Someone detected in Zone 1 or Zone 7 during non-working hours Enabling Fan/Heaters");//sysj\ECS.sysj line: 127, column: 18
-                          S97608=0;
-                          if(tempZoneOneSeven_thread_3 > currentTemp_thread_3){//sysj\ECS.sysj line: 129, column: 22
+                      if(afterhrs_1.getprestatus()){//sysj\ECS.sysj line: 117, column: 15
+                        zoneOneOcc_thread_3 = (Integer)(zoneOneOccupancy_B.getpreval() == null ? 0 : ((Integer)zoneOneOccupancy_B.getpreval()).intValue());//sysj\ECS.sysj line: 119, column: 14
+                        zoneSevenOcc_thread_3 = (Integer)(zoneSevenOccupancy_B.getpreval() == null ? 0 : ((Integer)zoneSevenOccupancy_B.getpreval()).intValue());//sysj\ECS.sysj line: 120, column: 14
+                        if(zoneOneOcc_thread_3 > 0 || zoneSevenOcc_thread_3 > 0){//sysj\ECS.sysj line: 122, column: 18
+                          S97632=0;
+                          if(tempZoneOneSeven_thread_3 > currentTemp_thread_3){//sysj\ECS.sysj line: 125, column: 22
                             S97599=0;
-                            System.out.println("Turning ON Heater to Heat Up for Zone 1,7");//sysj\ECS.sysj line: 130, column: 13
-                            zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 131, column: 13
+                            System.out.println("Turning ON Heater to Heat Up for Zone 1,7");//sysj\ECS.sysj line: 126, column: 13
+                            zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 127, column: 13
                             currsigs.addElement(zoneOneSevenHeaterONOFF);
-                            currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 132, column: 13
+                            currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 128, column: 13
                             active[3]=1;
                             ends[3]=1;
                             tdone[3]=1;
                           }
                           else {
                             S97599=1;
-                            if(tempZoneOneSeven_thread_3 < currentTemp_thread_3){//sysj\ECS.sysj line: 140, column: 21
-                              System.out.println("Turning ON Fan to Cool Down for Zone 1,7");//sysj\ECS.sysj line: 141, column: 13
-                              currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 142, column: 13
-                              zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 143, column: 16
+                            if(tempZoneOneSeven_thread_3 < currentTemp_thread_3){//sysj\ECS.sysj line: 136, column: 21
+                              System.out.println("Turning ON Fan to Cool Down for Zone 1,7");//sysj\ECS.sysj line: 137, column: 13
+                              currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 138, column: 13
+                              zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 139, column: 16
                               currsigs.addElement(zoneOneSevenFanONOFF);
                               active[3]=1;
                               ends[3]=1;
                               tdone[3]=1;
                             }
                             else {
-                              S97608=1;
-                              if(humidityZoneOneSeven_thread_3 > currentHumidity_thread_3){//sysj\ECS.sysj line: 150, column: 16
-                                S97616=0;
-                                System.out.println("Turning ON Heater to increase humidity for Zone 1,7");//sysj\ECS.sysj line: 151, column: 19
-                                zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 152, column: 19
+                              S97632=1;
+                              if(humidityZoneOneSeven_thread_3 > currentHumidity_thread_3){//sysj\ECS.sysj line: 146, column: 16
+                                S97607=0;
+                                System.out.println("Turning ON Heater to increase humidity for Zone 1,7");//sysj\ECS.sysj line: 147, column: 19
+                                zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 148, column: 19
                                 currsigs.addElement(zoneOneSevenHeaterONOFF);
-                                currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 153, column: 19
+                                currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 149, column: 19
                                 active[3]=1;
                                 ends[3]=1;
                                 tdone[3]=1;
                               }
                               else {
-                                S97616=1;
-                                if(humidityZoneOneSeven_thread_3 < currentHumidity_thread_3){//sysj\ECS.sysj line: 158, column: 26
-                                  System.out.println("Turning ON Fan to reduce humidity for Zone 1,7");//sysj\ECS.sysj line: 159, column: 19
-                                  zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 160, column: 19
+                                S97607=1;
+                                if(humidityZoneOneSeven_thread_3 < currentHumidity_thread_3){//sysj\ECS.sysj line: 154, column: 26
+                                  System.out.println("Turning ON Fan to reduce humidity for Zone 1,7");//sysj\ECS.sysj line: 155, column: 19
+                                  zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 156, column: 19
                                   currsigs.addElement(zoneOneSevenFanONOFF);
-                                  currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 161, column: 19
+                                  currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 157, column: 19
                                   active[3]=1;
                                   ends[3]=1;
                                   tdone[3]=1;
@@ -930,31 +926,31 @@ public class ECS_HVACController extends ClockDomain{
             break;
           
           case 1 : 
-            switch(S97608){
+            switch(S97632){
               case 0 : 
                 switch(S97599){
                   case 0 : 
-                    if(zoneOneSevenAtTempHumid.getprestatus()){//sysj\ECS.sysj line: 134, column: 20
-                      System.out.println("Current Temp For Zone 1,7: " + currentTemp_thread_3 + "(°C)");//sysj\ECS.sysj line: 135, column: 13
-                      System.out.println("\n-------------------------");//sysj\ECS.sysj line: 136, column: 13
-                      S97608=1;
-                      if(humidityZoneOneSeven_thread_3 > currentHumidity_thread_3){//sysj\ECS.sysj line: 150, column: 16
-                        S97616=0;
-                        System.out.println("Turning ON Heater to increase humidity for Zone 1,7");//sysj\ECS.sysj line: 151, column: 19
-                        zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 152, column: 19
+                    if(zoneOneSevenAtTempHumid.getprestatus()){//sysj\ECS.sysj line: 130, column: 20
+                      System.out.println("Current Temp For Zone 1,7: " + currentTemp_thread_3 + "(°C)");//sysj\ECS.sysj line: 131, column: 13
+                      System.out.println("\n-------------------------");//sysj\ECS.sysj line: 132, column: 13
+                      S97632=1;
+                      if(humidityZoneOneSeven_thread_3 > currentHumidity_thread_3){//sysj\ECS.sysj line: 146, column: 16
+                        S97607=0;
+                        System.out.println("Turning ON Heater to increase humidity for Zone 1,7");//sysj\ECS.sysj line: 147, column: 19
+                        zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 148, column: 19
                         currsigs.addElement(zoneOneSevenHeaterONOFF);
-                        currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 153, column: 19
+                        currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 149, column: 19
                         active[3]=1;
                         ends[3]=1;
                         tdone[3]=1;
                       }
                       else {
-                        S97616=1;
-                        if(humidityZoneOneSeven_thread_3 < currentHumidity_thread_3){//sysj\ECS.sysj line: 158, column: 26
-                          System.out.println("Turning ON Fan to reduce humidity for Zone 1,7");//sysj\ECS.sysj line: 159, column: 19
-                          zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 160, column: 19
+                        S97607=1;
+                        if(humidityZoneOneSeven_thread_3 < currentHumidity_thread_3){//sysj\ECS.sysj line: 154, column: 26
+                          System.out.println("Turning ON Fan to reduce humidity for Zone 1,7");//sysj\ECS.sysj line: 155, column: 19
+                          zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 156, column: 19
                           currsigs.addElement(zoneOneSevenFanONOFF);
-                          currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 161, column: 19
+                          currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 157, column: 19
                           active[3]=1;
                           ends[3]=1;
                           tdone[3]=1;
@@ -975,27 +971,27 @@ public class ECS_HVACController extends ClockDomain{
                     break;
                   
                   case 1 : 
-                    if(zoneOneSevenAtTempHumid.getprestatus()){//sysj\ECS.sysj line: 145, column: 23
-                      System.out.println("Current Temp For Zone 1,7: " + currentTemp_thread_3 + "(°C)");//sysj\ECS.sysj line: 146, column: 13
-                      System.out.println("\n-------------------------");//sysj\ECS.sysj line: 147, column: 13
-                      S97608=1;
-                      if(humidityZoneOneSeven_thread_3 > currentHumidity_thread_3){//sysj\ECS.sysj line: 150, column: 16
-                        S97616=0;
-                        System.out.println("Turning ON Heater to increase humidity for Zone 1,7");//sysj\ECS.sysj line: 151, column: 19
-                        zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 152, column: 19
+                    if(zoneOneSevenAtTempHumid.getprestatus()){//sysj\ECS.sysj line: 141, column: 23
+                      System.out.println("Current Temp For Zone 1,7: " + currentTemp_thread_3 + "(°C)");//sysj\ECS.sysj line: 142, column: 13
+                      System.out.println("\n-------------------------");//sysj\ECS.sysj line: 143, column: 13
+                      S97632=1;
+                      if(humidityZoneOneSeven_thread_3 > currentHumidity_thread_3){//sysj\ECS.sysj line: 146, column: 16
+                        S97607=0;
+                        System.out.println("Turning ON Heater to increase humidity for Zone 1,7");//sysj\ECS.sysj line: 147, column: 19
+                        zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 148, column: 19
                         currsigs.addElement(zoneOneSevenHeaterONOFF);
-                        currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 153, column: 19
+                        currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 149, column: 19
                         active[3]=1;
                         ends[3]=1;
                         tdone[3]=1;
                       }
                       else {
-                        S97616=1;
-                        if(humidityZoneOneSeven_thread_3 < currentHumidity_thread_3){//sysj\ECS.sysj line: 158, column: 26
-                          System.out.println("Turning ON Fan to reduce humidity for Zone 1,7");//sysj\ECS.sysj line: 159, column: 19
-                          zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 160, column: 19
+                        S97607=1;
+                        if(humidityZoneOneSeven_thread_3 < currentHumidity_thread_3){//sysj\ECS.sysj line: 154, column: 26
+                          System.out.println("Turning ON Fan to reduce humidity for Zone 1,7");//sysj\ECS.sysj line: 155, column: 19
+                          zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 156, column: 19
                           currsigs.addElement(zoneOneSevenFanONOFF);
-                          currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 161, column: 19
+                          currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 157, column: 19
                           active[3]=1;
                           ends[3]=1;
                           tdone[3]=1;
@@ -1019,11 +1015,11 @@ public class ECS_HVACController extends ClockDomain{
                 break;
               
               case 1 : 
-                switch(S97616){
+                switch(S97607){
                   case 0 : 
-                    if(zoneOneSevenAtTempHumid.getprestatus()){//sysj\ECS.sysj line: 155, column: 23
-                      System.out.println("Current Humidity For Zone 1,7: " + currentHumidity_thread_3 + "(%)");//sysj\ECS.sysj line: 156, column: 19
-                      System.out.println("\n-------------------------");//sysj\ECS.sysj line: 157, column: 16
+                    if(zoneOneSevenAtTempHumid.getprestatus()){//sysj\ECS.sysj line: 151, column: 23
+                      System.out.println("Current Humidity For Zone 1,7: " + currentHumidity_thread_3 + "(%)");//sysj\ECS.sysj line: 152, column: 19
+                      System.out.println("\n-------------------------");//sysj\ECS.sysj line: 153, column: 16
                       S97506=2;
                       active[3]=1;
                       ends[3]=1;
@@ -1037,9 +1033,9 @@ public class ECS_HVACController extends ClockDomain{
                     break;
                   
                   case 1 : 
-                    if(zoneOneSevenAtTempHumid.getprestatus()){//sysj\ECS.sysj line: 163, column: 23
-                      System.out.println("Current Humidity For Zone 1,7: " + currentHumidity_thread_3 + "(%)");//sysj\ECS.sysj line: 164, column: 19
-                      System.out.println("\n-------------------------");//sysj\ECS.sysj line: 165, column: 16
+                    if(zoneOneSevenAtTempHumid.getprestatus()){//sysj\ECS.sysj line: 159, column: 23
+                      System.out.println("Current Humidity For Zone 1,7: " + currentHumidity_thread_3 + "(%)");//sysj\ECS.sysj line: 160, column: 19
+                      System.out.println("\n-------------------------");//sysj\ECS.sysj line: 161, column: 16
                       S97506=2;
                       active[3]=1;
                       ends[3]=1;
@@ -1060,27 +1056,27 @@ public class ECS_HVACController extends ClockDomain{
           
           case 2 : 
             S97506=2;
-            tempZoneOneSeven_thread_3 = (Integer)(zoneOneSevenTemp.getpreval() == null ? 0 : ((Integer)zoneOneSevenTemp.getpreval()).intValue());//sysj\ECS.sysj line: 75, column: 4
-            humidityZoneOneSeven_thread_3 = (Integer)(zoneOneSevenHumid.getpreval() == null ? 0 : ((Integer)zoneOneSevenHumid.getpreval()).intValue());//sysj\ECS.sysj line: 76, column: 4
+            tempZoneOneSeven_thread_3 = (Integer)(zoneOneSevenTemp.getpreval() == null ? 0 : ((Integer)zoneOneSevenTemp.getpreval()).intValue());//sysj\ECS.sysj line: 71, column: 4
+            humidityZoneOneSeven_thread_3 = (Integer)(zoneOneSevenHumid.getpreval() == null ? 0 : ((Integer)zoneOneSevenHumid.getpreval()).intValue());//sysj\ECS.sysj line: 72, column: 4
             S97506=0;
-            if(workhrs_1.getprestatus()){//sysj\ECS.sysj line: 78, column: 15
+            if(workhrs_1.getprestatus()){//sysj\ECS.sysj line: 74, column: 15
               S97547=0;
-              if(tempZoneOneSeven_thread_3 > currentTemp_thread_3){//sysj\ECS.sysj line: 81, column: 11
+              if(tempZoneOneSeven_thread_3 > currentTemp_thread_3){//sysj\ECS.sysj line: 77, column: 11
                 S97514=0;
-                System.out.println("Turning ON Heater to Heat Up for Zone 1,7");//sysj\ECS.sysj line: 82, column: 8
-                zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 83, column: 8
+                System.out.println("Turning ON Heater to Heat Up for Zone 1,7");//sysj\ECS.sysj line: 78, column: 8
+                zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 79, column: 8
                 currsigs.addElement(zoneOneSevenHeaterONOFF);
-                currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 84, column: 8
+                currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 80, column: 8
                 active[3]=1;
                 ends[3]=1;
                 tdone[3]=1;
               }
               else {
                 S97514=1;
-                if(tempZoneOneSeven_thread_3 < currentTemp_thread_3){//sysj\ECS.sysj line: 92, column: 16
-                  System.out.println("Turning ON Fan to Cool Down for Zone 1,7");//sysj\ECS.sysj line: 93, column: 8
-                  currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 94, column: 8
-                  zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 95, column: 11
+                if(tempZoneOneSeven_thread_3 < currentTemp_thread_3){//sysj\ECS.sysj line: 88, column: 16
+                  System.out.println("Turning ON Fan to Cool Down for Zone 1,7");//sysj\ECS.sysj line: 89, column: 8
+                  currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 90, column: 8
+                  zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 91, column: 11
                   currsigs.addElement(zoneOneSevenFanONOFF);
                   active[3]=1;
                   ends[3]=1;
@@ -1088,75 +1084,74 @@ public class ECS_HVACController extends ClockDomain{
                 }
                 else {
                   S97547=1;
-                  if(humidityZoneOneSeven_thread_3 > currentHumidity_thread_3){//sysj\ECS.sysj line: 102, column: 11
+                  if(humidityZoneOneSeven_thread_3 > currentHumidity_thread_3){//sysj\ECS.sysj line: 98, column: 11
                     S97522=0;
-                    System.out.println("Turning ON Heater to increase humidity for Zone 1,7");//sysj\ECS.sysj line: 103, column: 14
-                    zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 104, column: 14
+                    System.out.println("Turning ON Heater to increase humidity for Zone 1,7");//sysj\ECS.sysj line: 99, column: 14
+                    zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 100, column: 14
                     currsigs.addElement(zoneOneSevenHeaterONOFF);
-                    currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 105, column: 14
+                    currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 101, column: 14
                     active[3]=1;
                     ends[3]=1;
                     tdone[3]=1;
                   }
                   else {
                     S97522=1;
-                    if(humidityZoneOneSeven_thread_3 < currentHumidity_thread_3){//sysj\ECS.sysj line: 110, column: 21
-                      System.out.println("Turning ON Fan to reduce humidity for Zone 1,7");//sysj\ECS.sysj line: 111, column: 14
-                      zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 112, column: 14
+                    if(humidityZoneOneSeven_thread_3 < currentHumidity_thread_3){//sysj\ECS.sysj line: 106, column: 21
+                      System.out.println("Turning ON Fan to reduce humidity for Zone 1,7");//sysj\ECS.sysj line: 107, column: 14
+                      zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 108, column: 14
                       currsigs.addElement(zoneOneSevenFanONOFF);
-                      currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 113, column: 14
+                      currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 109, column: 14
                       active[3]=1;
                       ends[3]=1;
                       tdone[3]=1;
                     }
                     else {
                       S97506=1;
-                      if(afterhrs_1.getprestatus()){//sysj\ECS.sysj line: 121, column: 15
-                        zoneOneOcc_thread_3 = (Integer)(zoneOneOccupancy_B.getpreval() == null ? 0 : ((Integer)zoneOneOccupancy_B.getpreval()).intValue());//sysj\ECS.sysj line: 123, column: 14
-                        zoneSevenOcc_thread_3 = (Integer)(zoneSevenOccupancy_B.getpreval() == null ? 0 : ((Integer)zoneSevenOccupancy_B.getpreval()).intValue());//sysj\ECS.sysj line: 124, column: 14
-                        if(zoneOneOcc_thread_3 > 0 || zoneSevenOcc_thread_3 > 0){//sysj\ECS.sysj line: 126, column: 18
-                          System.out.println("Someone detected in Zone 1 or Zone 7 during non-working hours Enabling Fan/Heaters");//sysj\ECS.sysj line: 127, column: 18
-                          S97608=0;
-                          if(tempZoneOneSeven_thread_3 > currentTemp_thread_3){//sysj\ECS.sysj line: 129, column: 22
+                      if(afterhrs_1.getprestatus()){//sysj\ECS.sysj line: 117, column: 15
+                        zoneOneOcc_thread_3 = (Integer)(zoneOneOccupancy_B.getpreval() == null ? 0 : ((Integer)zoneOneOccupancy_B.getpreval()).intValue());//sysj\ECS.sysj line: 119, column: 14
+                        zoneSevenOcc_thread_3 = (Integer)(zoneSevenOccupancy_B.getpreval() == null ? 0 : ((Integer)zoneSevenOccupancy_B.getpreval()).intValue());//sysj\ECS.sysj line: 120, column: 14
+                        if(zoneOneOcc_thread_3 > 0 || zoneSevenOcc_thread_3 > 0){//sysj\ECS.sysj line: 122, column: 18
+                          S97632=0;
+                          if(tempZoneOneSeven_thread_3 > currentTemp_thread_3){//sysj\ECS.sysj line: 125, column: 22
                             S97599=0;
-                            System.out.println("Turning ON Heater to Heat Up for Zone 1,7");//sysj\ECS.sysj line: 130, column: 13
-                            zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 131, column: 13
+                            System.out.println("Turning ON Heater to Heat Up for Zone 1,7");//sysj\ECS.sysj line: 126, column: 13
+                            zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 127, column: 13
                             currsigs.addElement(zoneOneSevenHeaterONOFF);
-                            currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 132, column: 13
+                            currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 128, column: 13
                             active[3]=1;
                             ends[3]=1;
                             tdone[3]=1;
                           }
                           else {
                             S97599=1;
-                            if(tempZoneOneSeven_thread_3 < currentTemp_thread_3){//sysj\ECS.sysj line: 140, column: 21
-                              System.out.println("Turning ON Fan to Cool Down for Zone 1,7");//sysj\ECS.sysj line: 141, column: 13
-                              currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 142, column: 13
-                              zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 143, column: 16
+                            if(tempZoneOneSeven_thread_3 < currentTemp_thread_3){//sysj\ECS.sysj line: 136, column: 21
+                              System.out.println("Turning ON Fan to Cool Down for Zone 1,7");//sysj\ECS.sysj line: 137, column: 13
+                              currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 138, column: 13
+                              zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 139, column: 16
                               currsigs.addElement(zoneOneSevenFanONOFF);
                               active[3]=1;
                               ends[3]=1;
                               tdone[3]=1;
                             }
                             else {
-                              S97608=1;
-                              if(humidityZoneOneSeven_thread_3 > currentHumidity_thread_3){//sysj\ECS.sysj line: 150, column: 16
-                                S97616=0;
-                                System.out.println("Turning ON Heater to increase humidity for Zone 1,7");//sysj\ECS.sysj line: 151, column: 19
-                                zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 152, column: 19
+                              S97632=1;
+                              if(humidityZoneOneSeven_thread_3 > currentHumidity_thread_3){//sysj\ECS.sysj line: 146, column: 16
+                                S97607=0;
+                                System.out.println("Turning ON Heater to increase humidity for Zone 1,7");//sysj\ECS.sysj line: 147, column: 19
+                                zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 148, column: 19
                                 currsigs.addElement(zoneOneSevenHeaterONOFF);
-                                currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 153, column: 19
+                                currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 149, column: 19
                                 active[3]=1;
                                 ends[3]=1;
                                 tdone[3]=1;
                               }
                               else {
-                                S97616=1;
-                                if(humidityZoneOneSeven_thread_3 < currentHumidity_thread_3){//sysj\ECS.sysj line: 158, column: 26
-                                  System.out.println("Turning ON Fan to reduce humidity for Zone 1,7");//sysj\ECS.sysj line: 159, column: 19
-                                  zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 160, column: 19
+                                S97607=1;
+                                if(humidityZoneOneSeven_thread_3 < currentHumidity_thread_3){//sysj\ECS.sysj line: 154, column: 26
+                                  System.out.println("Turning ON Fan to reduce humidity for Zone 1,7");//sysj\ECS.sysj line: 155, column: 19
+                                  zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 156, column: 19
                                   currsigs.addElement(zoneOneSevenFanONOFF);
-                                  currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 161, column: 19
+                                  currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 157, column: 19
                                   active[3]=1;
                                   ends[3]=1;
                                   tdone[3]=1;
@@ -1191,52 +1186,51 @@ public class ECS_HVACController extends ClockDomain{
             }
             else {
               S97506=1;
-              if(afterhrs_1.getprestatus()){//sysj\ECS.sysj line: 121, column: 15
-                zoneOneOcc_thread_3 = (Integer)(zoneOneOccupancy_B.getpreval() == null ? 0 : ((Integer)zoneOneOccupancy_B.getpreval()).intValue());//sysj\ECS.sysj line: 123, column: 14
-                zoneSevenOcc_thread_3 = (Integer)(zoneSevenOccupancy_B.getpreval() == null ? 0 : ((Integer)zoneSevenOccupancy_B.getpreval()).intValue());//sysj\ECS.sysj line: 124, column: 14
-                if(zoneOneOcc_thread_3 > 0 || zoneSevenOcc_thread_3 > 0){//sysj\ECS.sysj line: 126, column: 18
-                  System.out.println("Someone detected in Zone 1 or Zone 7 during non-working hours Enabling Fan/Heaters");//sysj\ECS.sysj line: 127, column: 18
-                  S97608=0;
-                  if(tempZoneOneSeven_thread_3 > currentTemp_thread_3){//sysj\ECS.sysj line: 129, column: 22
+              if(afterhrs_1.getprestatus()){//sysj\ECS.sysj line: 117, column: 15
+                zoneOneOcc_thread_3 = (Integer)(zoneOneOccupancy_B.getpreval() == null ? 0 : ((Integer)zoneOneOccupancy_B.getpreval()).intValue());//sysj\ECS.sysj line: 119, column: 14
+                zoneSevenOcc_thread_3 = (Integer)(zoneSevenOccupancy_B.getpreval() == null ? 0 : ((Integer)zoneSevenOccupancy_B.getpreval()).intValue());//sysj\ECS.sysj line: 120, column: 14
+                if(zoneOneOcc_thread_3 > 0 || zoneSevenOcc_thread_3 > 0){//sysj\ECS.sysj line: 122, column: 18
+                  S97632=0;
+                  if(tempZoneOneSeven_thread_3 > currentTemp_thread_3){//sysj\ECS.sysj line: 125, column: 22
                     S97599=0;
-                    System.out.println("Turning ON Heater to Heat Up for Zone 1,7");//sysj\ECS.sysj line: 130, column: 13
-                    zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 131, column: 13
+                    System.out.println("Turning ON Heater to Heat Up for Zone 1,7");//sysj\ECS.sysj line: 126, column: 13
+                    zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 127, column: 13
                     currsigs.addElement(zoneOneSevenHeaterONOFF);
-                    currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 132, column: 13
+                    currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 128, column: 13
                     active[3]=1;
                     ends[3]=1;
                     tdone[3]=1;
                   }
                   else {
                     S97599=1;
-                    if(tempZoneOneSeven_thread_3 < currentTemp_thread_3){//sysj\ECS.sysj line: 140, column: 21
-                      System.out.println("Turning ON Fan to Cool Down for Zone 1,7");//sysj\ECS.sysj line: 141, column: 13
-                      currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 142, column: 13
-                      zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 143, column: 16
+                    if(tempZoneOneSeven_thread_3 < currentTemp_thread_3){//sysj\ECS.sysj line: 136, column: 21
+                      System.out.println("Turning ON Fan to Cool Down for Zone 1,7");//sysj\ECS.sysj line: 137, column: 13
+                      currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 138, column: 13
+                      zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 139, column: 16
                       currsigs.addElement(zoneOneSevenFanONOFF);
                       active[3]=1;
                       ends[3]=1;
                       tdone[3]=1;
                     }
                     else {
-                      S97608=1;
-                      if(humidityZoneOneSeven_thread_3 > currentHumidity_thread_3){//sysj\ECS.sysj line: 150, column: 16
-                        S97616=0;
-                        System.out.println("Turning ON Heater to increase humidity for Zone 1,7");//sysj\ECS.sysj line: 151, column: 19
-                        zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 152, column: 19
+                      S97632=1;
+                      if(humidityZoneOneSeven_thread_3 > currentHumidity_thread_3){//sysj\ECS.sysj line: 146, column: 16
+                        S97607=0;
+                        System.out.println("Turning ON Heater to increase humidity for Zone 1,7");//sysj\ECS.sysj line: 147, column: 19
+                        zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 148, column: 19
                         currsigs.addElement(zoneOneSevenHeaterONOFF);
-                        currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 153, column: 19
+                        currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 149, column: 19
                         active[3]=1;
                         ends[3]=1;
                         tdone[3]=1;
                       }
                       else {
-                        S97616=1;
-                        if(humidityZoneOneSeven_thread_3 < currentHumidity_thread_3){//sysj\ECS.sysj line: 158, column: 26
-                          System.out.println("Turning ON Fan to reduce humidity for Zone 1,7");//sysj\ECS.sysj line: 159, column: 19
-                          zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 160, column: 19
+                        S97607=1;
+                        if(humidityZoneOneSeven_thread_3 < currentHumidity_thread_3){//sysj\ECS.sysj line: 154, column: 26
+                          System.out.println("Turning ON Fan to reduce humidity for Zone 1,7");//sysj\ECS.sysj line: 155, column: 19
+                          zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 156, column: 19
                           currsigs.addElement(zoneOneSevenFanONOFF);
-                          currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 161, column: 19
+                          currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 157, column: 19
                           active[3]=1;
                           ends[3]=1;
                           tdone[3]=1;
@@ -1273,7 +1267,7 @@ public class ECS_HVACController extends ClockDomain{
     }
   }
 
-  public void thread109508(int [] tdone, int [] ends){
+  public void thread107622(int [] tdone, int [] ends){
         switch(S97504){
       case 0 : 
         active[2]=0;
@@ -1284,11 +1278,11 @@ public class ECS_HVACController extends ClockDomain{
       case 1 : 
         switch(S97488){
           case 0 : 
-            if(currentTime.getprestatus()){//sysj\ECS.sysj line: 54, column: 12
-              currentHour_thread_2 = (Integer)(currentTime.getpreval() == null ? 0 : ((Integer)currentTime.getpreval()).intValue());//sysj\ECS.sysj line: 55, column: 6
+            if(currentTime.getprestatus()){//sysj\ECS.sysj line: 50, column: 12
+              currentHour_thread_2 = (Integer)(currentTime.getpreval() == null ? 0 : ((Integer)currentTime.getpreval()).intValue());//sysj\ECS.sysj line: 51, column: 6
               S97488=1;
-              if(currentHour_thread_2 >= 9 && currentHour_thread_2 <= 17){//sysj\ECS.sysj line: 57, column: 14
-                workhrs_1.setPresent();//sysj\ECS.sysj line: 58, column: 14
+              if(currentHour_thread_2 >= 9 && currentHour_thread_2 <= 17){//sysj\ECS.sysj line: 53, column: 14
+                workhrs_1.setPresent();//sysj\ECS.sysj line: 54, column: 14
                 currsigs.addElement(workhrs_1);
                 S97488=0;
                 active[2]=1;
@@ -1296,7 +1290,7 @@ public class ECS_HVACController extends ClockDomain{
                 tdone[2]=1;
               }
               else {
-                afterhrs_1.setPresent();//sysj\ECS.sysj line: 60, column: 14
+                afterhrs_1.setPresent();//sysj\ECS.sysj line: 56, column: 14
                 currsigs.addElement(afterhrs_1);
                 S97488=0;
                 active[2]=1;
@@ -1324,61 +1318,61 @@ public class ECS_HVACController extends ClockDomain{
     }
   }
 
-  public void thread109506(int [] tdone, int [] ends){
-        S102964=1;
-    currentTemp_thread_5 = 30;//sysj\ECS.sysj line: 239, column: 2
-    currentHumidity_thread_5 = 50;//sysj\ECS.sysj line: 240, column: 2
-    System.out.println("Current Temp For Zone 4,5,6: " + currentTemp_thread_5);//sysj\ECS.sysj line: 241, column: 2
-    S102688=0;
-    if(workhrs_1.getprestatus()){//sysj\ECS.sysj line: 245, column: 12
-      tempzoneFourFiveSixTemp_thread_5 = (Integer)(zoneFourFiveSixTemp.getpreval() == null ? 0 : ((Integer)zoneFourFiveSixTemp.getpreval()).intValue());//sysj\ECS.sysj line: 246, column: 7
-      humidityzoneFourFiveSix_thread_5 = (Integer)(zoneFourFiveSixHumid.getpreval() == null ? 0 : ((Integer)zoneFourFiveSixHumid.getpreval()).intValue());//sysj\ECS.sysj line: 247, column: 7
-      S102634=0;
-      if(tempzoneFourFiveSixTemp_thread_5 > currentTemp_thread_5){//sysj\ECS.sysj line: 249, column: 11
-        System.out.println("Turning ON AC to Heat Up for Zone 4,5,6");//sysj\ECS.sysj line: 250, column: 8
-        zoneFourFiveSixACONOFF.setPresent();//sysj\ECS.sysj line: 251, column: 8
+  public void thread107620(int [] tdone, int [] ends){
+        S102292=1;
+    currentTemp_thread_5 = 30;//sysj\ECS.sysj line: 235, column: 2
+    currentHumidity_thread_5 = 50;//sysj\ECS.sysj line: 236, column: 2
+    System.out.println("Current Temp For Zone 4,5,6: " + currentTemp_thread_5);//sysj\ECS.sysj line: 237, column: 2
+    S102016=0;
+    if(workhrs_1.getprestatus()){//sysj\ECS.sysj line: 241, column: 12
+      tempzoneFourFiveSixTemp_thread_5 = (Integer)(zoneFourFiveSixTemp.getpreval() == null ? 0 : ((Integer)zoneFourFiveSixTemp.getpreval()).intValue());//sysj\ECS.sysj line: 242, column: 7
+      humidityzoneFourFiveSix_thread_5 = (Integer)(zoneFourFiveSixHumid.getpreval() == null ? 0 : ((Integer)zoneFourFiveSixHumid.getpreval()).intValue());//sysj\ECS.sysj line: 243, column: 7
+      S101962=0;
+      if(tempzoneFourFiveSixTemp_thread_5 > currentTemp_thread_5){//sysj\ECS.sysj line: 245, column: 11
+        System.out.println("Turning ON AC to Heat Up for Zone 4,5,6");//sysj\ECS.sysj line: 246, column: 8
+        zoneFourFiveSixACONOFF.setPresent();//sysj\ECS.sysj line: 247, column: 8
         currsigs.addElement(zoneFourFiveSixACONOFF);
-        currentTemp_thread_5 = tempzoneFourFiveSixTemp_thread_5;//sysj\ECS.sysj line: 252, column: 8
+        currentTemp_thread_5 = tempzoneFourFiveSixTemp_thread_5;//sysj\ECS.sysj line: 248, column: 8
         active[5]=1;
         ends[5]=1;
         tdone[5]=1;
       }
       else {
-        S102634=1;
-        if(tempzoneFourFiveSixTemp_thread_5 < currentTemp_thread_5){//sysj\ECS.sysj line: 259, column: 11
-          System.out.println("Turning ON AC to Cool Down for Zone 4,5,6");//sysj\ECS.sysj line: 260, column: 8
-          zoneFourFiveSixACONOFF.setPresent();//sysj\ECS.sysj line: 261, column: 8
+        S101962=1;
+        if(tempzoneFourFiveSixTemp_thread_5 < currentTemp_thread_5){//sysj\ECS.sysj line: 255, column: 11
+          System.out.println("Turning ON AC to Cool Down for Zone 4,5,6");//sysj\ECS.sysj line: 256, column: 8
+          zoneFourFiveSixACONOFF.setPresent();//sysj\ECS.sysj line: 257, column: 8
           currsigs.addElement(zoneFourFiveSixACONOFF);
-          currentTemp_thread_5 = tempzoneFourFiveSixTemp_thread_5;//sysj\ECS.sysj line: 262, column: 8
+          currentTemp_thread_5 = tempzoneFourFiveSixTemp_thread_5;//sysj\ECS.sysj line: 258, column: 8
           active[5]=1;
           ends[5]=1;
           tdone[5]=1;
         }
         else {
-          S102634=2;
-          if(humidityzoneFourFiveSix_thread_5 > currentHumidity_thread_5){//sysj\ECS.sysj line: 269, column: 11
-            S102662=0;
-            System.out.println("Turning ON AC to increase humidity for Zone 4,5,6");//sysj\ECS.sysj line: 270, column: 14
-            zoneFourFiveSixACONOFF.setPresent();//sysj\ECS.sysj line: 271, column: 11
+          S101962=2;
+          if(humidityzoneFourFiveSix_thread_5 > currentHumidity_thread_5){//sysj\ECS.sysj line: 265, column: 11
+            S101990=0;
+            System.out.println("Turning ON AC to increase humidity for Zone 4,5,6");//sysj\ECS.sysj line: 266, column: 14
+            zoneFourFiveSixACONOFF.setPresent();//sysj\ECS.sysj line: 267, column: 11
             currsigs.addElement(zoneFourFiveSixACONOFF);
-            currentHumidity_thread_5 = humidityzoneFourFiveSix_thread_5;//sysj\ECS.sysj line: 272, column: 14
+            currentHumidity_thread_5 = humidityzoneFourFiveSix_thread_5;//sysj\ECS.sysj line: 268, column: 14
             active[5]=1;
             ends[5]=1;
             tdone[5]=1;
           }
           else {
-            S102662=1;
-            if(humidityzoneFourFiveSix_thread_5 < currentHumidity_thread_5){//sysj\ECS.sysj line: 277, column: 21
-              System.out.println("Turning ON AC to reduce humidity for Zone 4,5,6");//sysj\ECS.sysj line: 278, column: 14
-              zoneFourFiveSixACONOFF.setPresent();//sysj\ECS.sysj line: 279, column: 11
+            S101990=1;
+            if(humidityzoneFourFiveSix_thread_5 < currentHumidity_thread_5){//sysj\ECS.sysj line: 273, column: 21
+              System.out.println("Turning ON AC to reduce humidity for Zone 4,5,6");//sysj\ECS.sysj line: 274, column: 14
+              zoneFourFiveSixACONOFF.setPresent();//sysj\ECS.sysj line: 275, column: 11
               currsigs.addElement(zoneFourFiveSixACONOFF);
-              currentHumidity_thread_5 = humidityzoneFourFiveSix_thread_5;//sysj\ECS.sysj line: 280, column: 14
+              currentHumidity_thread_5 = humidityzoneFourFiveSix_thread_5;//sysj\ECS.sysj line: 276, column: 14
               active[5]=1;
               ends[5]=1;
               tdone[5]=1;
             }
             else {
-              S102688=1;
+              S102016=1;
               active[5]=1;
               ends[5]=1;
               tdone[5]=1;
@@ -1388,68 +1382,68 @@ public class ECS_HVACController extends ClockDomain{
       }
     }
     else {
-      S102688=1;
+      S102016=1;
       active[5]=1;
       ends[5]=1;
       tdone[5]=1;
     }
   }
 
-  public void thread109505(int [] tdone, int [] ends){
-        S102632=1;
-    currentTemp_thread_4 = 30;//sysj\ECS.sysj line: 182, column: 2
-    currentHumidity_thread_4 = 50;//sysj\ECS.sysj line: 183, column: 2
-    System.out.println("Current Temp For Zone 2,3: " + currentTemp_thread_4);//sysj\ECS.sysj line: 184, column: 2
-    S102356=0;
-    if(workhrs_1.getprestatus()){//sysj\ECS.sysj line: 188, column: 12
-      tempzoneTwoThree_thread_4 = (Integer)(zoneTwoThreeTemp.getpreval() == null ? 0 : ((Integer)zoneTwoThreeTemp.getpreval()).intValue());//sysj\ECS.sysj line: 189, column: 7
-      humidityzoneTwoThree_thread_4 = (Integer)(zoneTwoThreeHumid.getpreval() == null ? 0 : ((Integer)zoneTwoThreeHumid.getpreval()).intValue());//sysj\ECS.sysj line: 190, column: 7
-      S102302=0;
-      if(tempzoneTwoThree_thread_4 > currentTemp_thread_4){//sysj\ECS.sysj line: 192, column: 11
-        System.out.println("Turning ON Heater to Heat Up for Zone 2,3");//sysj\ECS.sysj line: 193, column: 8
-        zoneTwoThreeHeaterONOFF.setPresent();//sysj\ECS.sysj line: 194, column: 8
+  public void thread107619(int [] tdone, int [] ends){
+        S101960=1;
+    currentTemp_thread_4 = 30;//sysj\ECS.sysj line: 178, column: 2
+    currentHumidity_thread_4 = 50;//sysj\ECS.sysj line: 179, column: 2
+    System.out.println("Current Temp For Zone 2,3: " + currentTemp_thread_4);//sysj\ECS.sysj line: 180, column: 2
+    S101684=0;
+    if(workhrs_1.getprestatus()){//sysj\ECS.sysj line: 184, column: 12
+      tempzoneTwoThree_thread_4 = (Integer)(zoneTwoThreeTemp.getpreval() == null ? 0 : ((Integer)zoneTwoThreeTemp.getpreval()).intValue());//sysj\ECS.sysj line: 185, column: 7
+      humidityzoneTwoThree_thread_4 = (Integer)(zoneTwoThreeHumid.getpreval() == null ? 0 : ((Integer)zoneTwoThreeHumid.getpreval()).intValue());//sysj\ECS.sysj line: 186, column: 7
+      S101630=0;
+      if(tempzoneTwoThree_thread_4 > currentTemp_thread_4){//sysj\ECS.sysj line: 188, column: 11
+        System.out.println("Turning ON Heater to Heat Up for Zone 2,3");//sysj\ECS.sysj line: 189, column: 8
+        zoneTwoThreeHeaterONOFF.setPresent();//sysj\ECS.sysj line: 190, column: 8
         currsigs.addElement(zoneTwoThreeHeaterONOFF);
-        currentTemp_thread_4 = tempzoneTwoThree_thread_4;//sysj\ECS.sysj line: 195, column: 8
+        currentTemp_thread_4 = tempzoneTwoThree_thread_4;//sysj\ECS.sysj line: 191, column: 8
         active[4]=1;
         ends[4]=1;
         tdone[4]=1;
       }
       else {
-        S102302=1;
-        if(tempzoneTwoThree_thread_4 < currentTemp_thread_4){//sysj\ECS.sysj line: 202, column: 11
-          System.out.println("Turning ON Fan to Cool Down for Zone 2,3");//sysj\ECS.sysj line: 203, column: 8
-          zoneTwoThreeFanONOFF.setPresent();//sysj\ECS.sysj line: 204, column: 8
+        S101630=1;
+        if(tempzoneTwoThree_thread_4 < currentTemp_thread_4){//sysj\ECS.sysj line: 198, column: 11
+          System.out.println("Turning ON Fan to Cool Down for Zone 2,3");//sysj\ECS.sysj line: 199, column: 8
+          zoneTwoThreeFanONOFF.setPresent();//sysj\ECS.sysj line: 200, column: 8
           currsigs.addElement(zoneTwoThreeFanONOFF);
-          currentTemp_thread_4 = tempzoneTwoThree_thread_4;//sysj\ECS.sysj line: 205, column: 8
+          currentTemp_thread_4 = tempzoneTwoThree_thread_4;//sysj\ECS.sysj line: 201, column: 8
           active[4]=1;
           ends[4]=1;
           tdone[4]=1;
         }
         else {
-          S102302=2;
-          if(humidityzoneTwoThree_thread_4 > currentHumidity_thread_4){//sysj\ECS.sysj line: 213, column: 11
-            S102330=0;
-            System.out.println("Turning ON Heater to increase humidity for Zone 2,3");//sysj\ECS.sysj line: 214, column: 14
-            zoneTwoThreeHeaterONOFF.setPresent();//sysj\ECS.sysj line: 215, column: 8
+          S101630=2;
+          if(humidityzoneTwoThree_thread_4 > currentHumidity_thread_4){//sysj\ECS.sysj line: 209, column: 11
+            S101658=0;
+            System.out.println("Turning ON Heater to increase humidity for Zone 2,3");//sysj\ECS.sysj line: 210, column: 14
+            zoneTwoThreeHeaterONOFF.setPresent();//sysj\ECS.sysj line: 211, column: 8
             currsigs.addElement(zoneTwoThreeHeaterONOFF);
-            currentHumidity_thread_4 = humidityzoneTwoThree_thread_4;//sysj\ECS.sysj line: 216, column: 14
+            currentHumidity_thread_4 = humidityzoneTwoThree_thread_4;//sysj\ECS.sysj line: 212, column: 14
             active[4]=1;
             ends[4]=1;
             tdone[4]=1;
           }
           else {
-            S102330=1;
-            if(humidityzoneTwoThree_thread_4 < currentHumidity_thread_4){//sysj\ECS.sysj line: 221, column: 21
-              System.out.println("Turning ON Fan to reduce humidity for Zone 2,3");//sysj\ECS.sysj line: 222, column: 14
-              zoneTwoThreeFanONOFF.setPresent();//sysj\ECS.sysj line: 223, column: 11
+            S101658=1;
+            if(humidityzoneTwoThree_thread_4 < currentHumidity_thread_4){//sysj\ECS.sysj line: 217, column: 21
+              System.out.println("Turning ON Fan to reduce humidity for Zone 2,3");//sysj\ECS.sysj line: 218, column: 14
+              zoneTwoThreeFanONOFF.setPresent();//sysj\ECS.sysj line: 219, column: 11
               currsigs.addElement(zoneTwoThreeFanONOFF);
-              currentHumidity_thread_4 = humidityzoneTwoThree_thread_4;//sysj\ECS.sysj line: 224, column: 14
+              currentHumidity_thread_4 = humidityzoneTwoThree_thread_4;//sysj\ECS.sysj line: 220, column: 14
               active[4]=1;
               ends[4]=1;
               tdone[4]=1;
             }
             else {
-              S102356=1;
+              S101684=1;
               active[4]=1;
               ends[4]=1;
               tdone[4]=1;
@@ -1459,39 +1453,39 @@ public class ECS_HVACController extends ClockDomain{
       }
     }
     else {
-      S102356=1;
+      S101684=1;
       active[4]=1;
       ends[4]=1;
       tdone[4]=1;
     }
   }
 
-  public void thread109504(int [] tdone, int [] ends){
-        S102300=1;
-    currentTemp_thread_3 = 30;//sysj\ECS.sysj line: 70, column: 2
-    currentHumidity_thread_3 = 50;//sysj\ECS.sysj line: 71, column: 2
-    System.out.println("Current Temp For Zone 1,7: " + currentTemp_thread_3);//sysj\ECS.sysj line: 72, column: 2
-    tempZoneOneSeven_thread_3 = (Integer)(zoneOneSevenTemp.getpreval() == null ? 0 : ((Integer)zoneOneSevenTemp.getpreval()).intValue());//sysj\ECS.sysj line: 75, column: 4
-    humidityZoneOneSeven_thread_3 = (Integer)(zoneOneSevenHumid.getpreval() == null ? 0 : ((Integer)zoneOneSevenHumid.getpreval()).intValue());//sysj\ECS.sysj line: 76, column: 4
+  public void thread107618(int [] tdone, int [] ends){
+        S101628=1;
+    currentTemp_thread_3 = 30;//sysj\ECS.sysj line: 66, column: 2
+    currentHumidity_thread_3 = 50;//sysj\ECS.sysj line: 67, column: 2
+    System.out.println("Current Temp For Zone 1,7: " + currentTemp_thread_3);//sysj\ECS.sysj line: 68, column: 2
+    tempZoneOneSeven_thread_3 = (Integer)(zoneOneSevenTemp.getpreval() == null ? 0 : ((Integer)zoneOneSevenTemp.getpreval()).intValue());//sysj\ECS.sysj line: 71, column: 4
+    humidityZoneOneSeven_thread_3 = (Integer)(zoneOneSevenHumid.getpreval() == null ? 0 : ((Integer)zoneOneSevenHumid.getpreval()).intValue());//sysj\ECS.sysj line: 72, column: 4
     S97506=0;
-    if(workhrs_1.getprestatus()){//sysj\ECS.sysj line: 78, column: 15
+    if(workhrs_1.getprestatus()){//sysj\ECS.sysj line: 74, column: 15
       S97547=0;
-      if(tempZoneOneSeven_thread_3 > currentTemp_thread_3){//sysj\ECS.sysj line: 81, column: 11
+      if(tempZoneOneSeven_thread_3 > currentTemp_thread_3){//sysj\ECS.sysj line: 77, column: 11
         S97514=0;
-        System.out.println("Turning ON Heater to Heat Up for Zone 1,7");//sysj\ECS.sysj line: 82, column: 8
-        zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 83, column: 8
+        System.out.println("Turning ON Heater to Heat Up for Zone 1,7");//sysj\ECS.sysj line: 78, column: 8
+        zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 79, column: 8
         currsigs.addElement(zoneOneSevenHeaterONOFF);
-        currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 84, column: 8
+        currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 80, column: 8
         active[3]=1;
         ends[3]=1;
         tdone[3]=1;
       }
       else {
         S97514=1;
-        if(tempZoneOneSeven_thread_3 < currentTemp_thread_3){//sysj\ECS.sysj line: 92, column: 16
-          System.out.println("Turning ON Fan to Cool Down for Zone 1,7");//sysj\ECS.sysj line: 93, column: 8
-          currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 94, column: 8
-          zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 95, column: 11
+        if(tempZoneOneSeven_thread_3 < currentTemp_thread_3){//sysj\ECS.sysj line: 88, column: 16
+          System.out.println("Turning ON Fan to Cool Down for Zone 1,7");//sysj\ECS.sysj line: 89, column: 8
+          currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 90, column: 8
+          zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 91, column: 11
           currsigs.addElement(zoneOneSevenFanONOFF);
           active[3]=1;
           ends[3]=1;
@@ -1499,75 +1493,74 @@ public class ECS_HVACController extends ClockDomain{
         }
         else {
           S97547=1;
-          if(humidityZoneOneSeven_thread_3 > currentHumidity_thread_3){//sysj\ECS.sysj line: 102, column: 11
+          if(humidityZoneOneSeven_thread_3 > currentHumidity_thread_3){//sysj\ECS.sysj line: 98, column: 11
             S97522=0;
-            System.out.println("Turning ON Heater to increase humidity for Zone 1,7");//sysj\ECS.sysj line: 103, column: 14
-            zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 104, column: 14
+            System.out.println("Turning ON Heater to increase humidity for Zone 1,7");//sysj\ECS.sysj line: 99, column: 14
+            zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 100, column: 14
             currsigs.addElement(zoneOneSevenHeaterONOFF);
-            currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 105, column: 14
+            currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 101, column: 14
             active[3]=1;
             ends[3]=1;
             tdone[3]=1;
           }
           else {
             S97522=1;
-            if(humidityZoneOneSeven_thread_3 < currentHumidity_thread_3){//sysj\ECS.sysj line: 110, column: 21
-              System.out.println("Turning ON Fan to reduce humidity for Zone 1,7");//sysj\ECS.sysj line: 111, column: 14
-              zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 112, column: 14
+            if(humidityZoneOneSeven_thread_3 < currentHumidity_thread_3){//sysj\ECS.sysj line: 106, column: 21
+              System.out.println("Turning ON Fan to reduce humidity for Zone 1,7");//sysj\ECS.sysj line: 107, column: 14
+              zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 108, column: 14
               currsigs.addElement(zoneOneSevenFanONOFF);
-              currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 113, column: 14
+              currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 109, column: 14
               active[3]=1;
               ends[3]=1;
               tdone[3]=1;
             }
             else {
               S97506=1;
-              if(afterhrs_1.getprestatus()){//sysj\ECS.sysj line: 121, column: 15
-                zoneOneOcc_thread_3 = (Integer)(zoneOneOccupancy_B.getpreval() == null ? 0 : ((Integer)zoneOneOccupancy_B.getpreval()).intValue());//sysj\ECS.sysj line: 123, column: 14
-                zoneSevenOcc_thread_3 = (Integer)(zoneSevenOccupancy_B.getpreval() == null ? 0 : ((Integer)zoneSevenOccupancy_B.getpreval()).intValue());//sysj\ECS.sysj line: 124, column: 14
-                if(zoneOneOcc_thread_3 > 0 || zoneSevenOcc_thread_3 > 0){//sysj\ECS.sysj line: 126, column: 18
-                  System.out.println("Someone detected in Zone 1 or Zone 7 during non-working hours Enabling Fan/Heaters");//sysj\ECS.sysj line: 127, column: 18
-                  S97608=0;
-                  if(tempZoneOneSeven_thread_3 > currentTemp_thread_3){//sysj\ECS.sysj line: 129, column: 22
+              if(afterhrs_1.getprestatus()){//sysj\ECS.sysj line: 117, column: 15
+                zoneOneOcc_thread_3 = (Integer)(zoneOneOccupancy_B.getpreval() == null ? 0 : ((Integer)zoneOneOccupancy_B.getpreval()).intValue());//sysj\ECS.sysj line: 119, column: 14
+                zoneSevenOcc_thread_3 = (Integer)(zoneSevenOccupancy_B.getpreval() == null ? 0 : ((Integer)zoneSevenOccupancy_B.getpreval()).intValue());//sysj\ECS.sysj line: 120, column: 14
+                if(zoneOneOcc_thread_3 > 0 || zoneSevenOcc_thread_3 > 0){//sysj\ECS.sysj line: 122, column: 18
+                  S97632=0;
+                  if(tempZoneOneSeven_thread_3 > currentTemp_thread_3){//sysj\ECS.sysj line: 125, column: 22
                     S97599=0;
-                    System.out.println("Turning ON Heater to Heat Up for Zone 1,7");//sysj\ECS.sysj line: 130, column: 13
-                    zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 131, column: 13
+                    System.out.println("Turning ON Heater to Heat Up for Zone 1,7");//sysj\ECS.sysj line: 126, column: 13
+                    zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 127, column: 13
                     currsigs.addElement(zoneOneSevenHeaterONOFF);
-                    currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 132, column: 13
+                    currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 128, column: 13
                     active[3]=1;
                     ends[3]=1;
                     tdone[3]=1;
                   }
                   else {
                     S97599=1;
-                    if(tempZoneOneSeven_thread_3 < currentTemp_thread_3){//sysj\ECS.sysj line: 140, column: 21
-                      System.out.println("Turning ON Fan to Cool Down for Zone 1,7");//sysj\ECS.sysj line: 141, column: 13
-                      currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 142, column: 13
-                      zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 143, column: 16
+                    if(tempZoneOneSeven_thread_3 < currentTemp_thread_3){//sysj\ECS.sysj line: 136, column: 21
+                      System.out.println("Turning ON Fan to Cool Down for Zone 1,7");//sysj\ECS.sysj line: 137, column: 13
+                      currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 138, column: 13
+                      zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 139, column: 16
                       currsigs.addElement(zoneOneSevenFanONOFF);
                       active[3]=1;
                       ends[3]=1;
                       tdone[3]=1;
                     }
                     else {
-                      S97608=1;
-                      if(humidityZoneOneSeven_thread_3 > currentHumidity_thread_3){//sysj\ECS.sysj line: 150, column: 16
-                        S97616=0;
-                        System.out.println("Turning ON Heater to increase humidity for Zone 1,7");//sysj\ECS.sysj line: 151, column: 19
-                        zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 152, column: 19
+                      S97632=1;
+                      if(humidityZoneOneSeven_thread_3 > currentHumidity_thread_3){//sysj\ECS.sysj line: 146, column: 16
+                        S97607=0;
+                        System.out.println("Turning ON Heater to increase humidity for Zone 1,7");//sysj\ECS.sysj line: 147, column: 19
+                        zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 148, column: 19
                         currsigs.addElement(zoneOneSevenHeaterONOFF);
-                        currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 153, column: 19
+                        currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 149, column: 19
                         active[3]=1;
                         ends[3]=1;
                         tdone[3]=1;
                       }
                       else {
-                        S97616=1;
-                        if(humidityZoneOneSeven_thread_3 < currentHumidity_thread_3){//sysj\ECS.sysj line: 158, column: 26
-                          System.out.println("Turning ON Fan to reduce humidity for Zone 1,7");//sysj\ECS.sysj line: 159, column: 19
-                          zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 160, column: 19
+                        S97607=1;
+                        if(humidityZoneOneSeven_thread_3 < currentHumidity_thread_3){//sysj\ECS.sysj line: 154, column: 26
+                          System.out.println("Turning ON Fan to reduce humidity for Zone 1,7");//sysj\ECS.sysj line: 155, column: 19
+                          zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 156, column: 19
                           currsigs.addElement(zoneOneSevenFanONOFF);
-                          currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 161, column: 19
+                          currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 157, column: 19
                           active[3]=1;
                           ends[3]=1;
                           tdone[3]=1;
@@ -1602,52 +1595,51 @@ public class ECS_HVACController extends ClockDomain{
     }
     else {
       S97506=1;
-      if(afterhrs_1.getprestatus()){//sysj\ECS.sysj line: 121, column: 15
-        zoneOneOcc_thread_3 = (Integer)(zoneOneOccupancy_B.getpreval() == null ? 0 : ((Integer)zoneOneOccupancy_B.getpreval()).intValue());//sysj\ECS.sysj line: 123, column: 14
-        zoneSevenOcc_thread_3 = (Integer)(zoneSevenOccupancy_B.getpreval() == null ? 0 : ((Integer)zoneSevenOccupancy_B.getpreval()).intValue());//sysj\ECS.sysj line: 124, column: 14
-        if(zoneOneOcc_thread_3 > 0 || zoneSevenOcc_thread_3 > 0){//sysj\ECS.sysj line: 126, column: 18
-          System.out.println("Someone detected in Zone 1 or Zone 7 during non-working hours Enabling Fan/Heaters");//sysj\ECS.sysj line: 127, column: 18
-          S97608=0;
-          if(tempZoneOneSeven_thread_3 > currentTemp_thread_3){//sysj\ECS.sysj line: 129, column: 22
+      if(afterhrs_1.getprestatus()){//sysj\ECS.sysj line: 117, column: 15
+        zoneOneOcc_thread_3 = (Integer)(zoneOneOccupancy_B.getpreval() == null ? 0 : ((Integer)zoneOneOccupancy_B.getpreval()).intValue());//sysj\ECS.sysj line: 119, column: 14
+        zoneSevenOcc_thread_3 = (Integer)(zoneSevenOccupancy_B.getpreval() == null ? 0 : ((Integer)zoneSevenOccupancy_B.getpreval()).intValue());//sysj\ECS.sysj line: 120, column: 14
+        if(zoneOneOcc_thread_3 > 0 || zoneSevenOcc_thread_3 > 0){//sysj\ECS.sysj line: 122, column: 18
+          S97632=0;
+          if(tempZoneOneSeven_thread_3 > currentTemp_thread_3){//sysj\ECS.sysj line: 125, column: 22
             S97599=0;
-            System.out.println("Turning ON Heater to Heat Up for Zone 1,7");//sysj\ECS.sysj line: 130, column: 13
-            zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 131, column: 13
+            System.out.println("Turning ON Heater to Heat Up for Zone 1,7");//sysj\ECS.sysj line: 126, column: 13
+            zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 127, column: 13
             currsigs.addElement(zoneOneSevenHeaterONOFF);
-            currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 132, column: 13
+            currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 128, column: 13
             active[3]=1;
             ends[3]=1;
             tdone[3]=1;
           }
           else {
             S97599=1;
-            if(tempZoneOneSeven_thread_3 < currentTemp_thread_3){//sysj\ECS.sysj line: 140, column: 21
-              System.out.println("Turning ON Fan to Cool Down for Zone 1,7");//sysj\ECS.sysj line: 141, column: 13
-              currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 142, column: 13
-              zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 143, column: 16
+            if(tempZoneOneSeven_thread_3 < currentTemp_thread_3){//sysj\ECS.sysj line: 136, column: 21
+              System.out.println("Turning ON Fan to Cool Down for Zone 1,7");//sysj\ECS.sysj line: 137, column: 13
+              currentTemp_thread_3 = tempZoneOneSeven_thread_3;//sysj\ECS.sysj line: 138, column: 13
+              zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 139, column: 16
               currsigs.addElement(zoneOneSevenFanONOFF);
               active[3]=1;
               ends[3]=1;
               tdone[3]=1;
             }
             else {
-              S97608=1;
-              if(humidityZoneOneSeven_thread_3 > currentHumidity_thread_3){//sysj\ECS.sysj line: 150, column: 16
-                S97616=0;
-                System.out.println("Turning ON Heater to increase humidity for Zone 1,7");//sysj\ECS.sysj line: 151, column: 19
-                zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 152, column: 19
+              S97632=1;
+              if(humidityZoneOneSeven_thread_3 > currentHumidity_thread_3){//sysj\ECS.sysj line: 146, column: 16
+                S97607=0;
+                System.out.println("Turning ON Heater to increase humidity for Zone 1,7");//sysj\ECS.sysj line: 147, column: 19
+                zoneOneSevenHeaterONOFF.setPresent();//sysj\ECS.sysj line: 148, column: 19
                 currsigs.addElement(zoneOneSevenHeaterONOFF);
-                currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 153, column: 19
+                currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 149, column: 19
                 active[3]=1;
                 ends[3]=1;
                 tdone[3]=1;
               }
               else {
-                S97616=1;
-                if(humidityZoneOneSeven_thread_3 < currentHumidity_thread_3){//sysj\ECS.sysj line: 158, column: 26
-                  System.out.println("Turning ON Fan to reduce humidity for Zone 1,7");//sysj\ECS.sysj line: 159, column: 19
-                  zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 160, column: 19
+                S97607=1;
+                if(humidityZoneOneSeven_thread_3 < currentHumidity_thread_3){//sysj\ECS.sysj line: 154, column: 26
+                  System.out.println("Turning ON Fan to reduce humidity for Zone 1,7");//sysj\ECS.sysj line: 155, column: 19
+                  zoneOneSevenFanONOFF.setPresent();//sysj\ECS.sysj line: 156, column: 19
                   currsigs.addElement(zoneOneSevenFanONOFF);
-                  currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 161, column: 19
+                  currentHumidity_thread_3 = humidityZoneOneSeven_thread_3;//sysj\ECS.sysj line: 157, column: 19
                   active[3]=1;
                   ends[3]=1;
                   tdone[3]=1;
@@ -1678,7 +1670,7 @@ public class ECS_HVACController extends ClockDomain{
     }
   }
 
-  public void thread109503(int [] tdone, int [] ends){
+  public void thread107617(int [] tdone, int [] ends){
         S97504=1;
     S97488=0;
     active[2]=1;
@@ -1693,72 +1685,72 @@ public class ECS_HVACController extends ClockDomain{
     }
     
     RUN: while(true){
-      switch(S108443){
+      switch(S107099){
         case 0 : 
-          S108443=0;
+          S107099=0;
           break RUN;
         
         case 1 : 
-          S108443=2;
-          S108443=2;
-          workhrs_1.setClear();//sysj\ECS.sysj line: 47, column: 2
-          afterhrs_1.setClear();//sysj\ECS.sysj line: 47, column: 2
-          currentTemp_thread_1 = 30;//sysj\ECS.sysj line: 50, column: 2
-          previousHour_thread_1 = -1;//sysj\ECS.sysj line: 51, column: 2
-          thread109503(tdone,ends);
-          thread109504(tdone,ends);
-          thread109505(tdone,ends);
-          thread109506(tdone,ends);
-          int biggest109507 = 0;
-          if(ends[2]>=biggest109507){
-            biggest109507=ends[2];
+          S107099=2;
+          S107099=2;
+          workhrs_1.setClear();//sysj\ECS.sysj line: 43, column: 2
+          afterhrs_1.setClear();//sysj\ECS.sysj line: 43, column: 2
+          currentTemp_thread_1 = 30;//sysj\ECS.sysj line: 46, column: 2
+          previousHour_thread_1 = -1;//sysj\ECS.sysj line: 47, column: 2
+          thread107617(tdone,ends);
+          thread107618(tdone,ends);
+          thread107619(tdone,ends);
+          thread107620(tdone,ends);
+          int biggest107621 = 0;
+          if(ends[2]>=biggest107621){
+            biggest107621=ends[2];
           }
-          if(ends[3]>=biggest109507){
-            biggest109507=ends[3];
+          if(ends[3]>=biggest107621){
+            biggest107621=ends[3];
           }
-          if(ends[4]>=biggest109507){
-            biggest109507=ends[4];
+          if(ends[4]>=biggest107621){
+            biggest107621=ends[4];
           }
-          if(ends[5]>=biggest109507){
-            biggest109507=ends[5];
+          if(ends[5]>=biggest107621){
+            biggest107621=ends[5];
           }
-          if(biggest109507 == 1){
+          if(biggest107621 == 1){
             active[1]=1;
             ends[1]=1;
             break RUN;
           }
         
         case 2 : 
-          workhrs_1.setClear();//sysj\ECS.sysj line: 47, column: 2
-          afterhrs_1.setClear();//sysj\ECS.sysj line: 47, column: 2
-          thread109508(tdone,ends);
-          thread109509(tdone,ends);
-          thread109510(tdone,ends);
-          thread109511(tdone,ends);
-          int biggest109512 = 0;
-          if(ends[2]>=biggest109512){
-            biggest109512=ends[2];
+          workhrs_1.setClear();//sysj\ECS.sysj line: 43, column: 2
+          afterhrs_1.setClear();//sysj\ECS.sysj line: 43, column: 2
+          thread107622(tdone,ends);
+          thread107623(tdone,ends);
+          thread107624(tdone,ends);
+          thread107625(tdone,ends);
+          int biggest107626 = 0;
+          if(ends[2]>=biggest107626){
+            biggest107626=ends[2];
           }
-          if(ends[3]>=biggest109512){
-            biggest109512=ends[3];
+          if(ends[3]>=biggest107626){
+            biggest107626=ends[3];
           }
-          if(ends[4]>=biggest109512){
-            biggest109512=ends[4];
+          if(ends[4]>=biggest107626){
+            biggest107626=ends[4];
           }
-          if(ends[5]>=biggest109512){
-            biggest109512=ends[5];
+          if(ends[5]>=biggest107626){
+            biggest107626=ends[5];
           }
-          if(biggest109512 == 1){
+          if(biggest107626 == 1){
             active[1]=1;
             ends[1]=1;
             break RUN;
           }
           //FINXME code
-          if(biggest109512 == 0){
-            S108443=0;
+          if(biggest107626 == 0){
+            S107099=0;
             active[1]=0;
             ends[1]=0;
-            S108443=0;
+            S107099=0;
             break RUN;
           }
         

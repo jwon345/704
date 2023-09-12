@@ -1,31 +1,27 @@
-
-
 reaction checkZoneWorkHours(: input int signal occupancy, input int signal lightingI, signal windowONOFF){
-	loop{
+    int prevLightInt = -1;  // Initialize with an invalid value
 
-		{
-			int zoneOcc = (Integer)#occupancy;
-		    int zoneLightInt = (Integer)#lightingI;
-		    if (zoneOcc > 0 && zoneLightInt < 50) {
-	            emit windowONOFF;
-	        }
-		}
-		pause;
-	}
-}	
+        int zoneOcc = (Integer)#occupancy;
+        int zoneLightInt = (Integer)#lightingI;
+        
+        if (zoneOcc > 0 && zoneLightInt < 50 && (zoneLightInt != prevLightInt)) {
+            emit windowONOFF;
+        }
+        pause;
+}
+
 
 reaction checkZoneAfterHours(: input int signal occupancy, input int signal lightingI, signal LightONOFF){
-	loop{
-
+	 int prevLightInt = -1;  // Initialize with an invalid value
+		
 		{
 			int zoneOcc = (Integer)#occupancy;
 		    int zoneLightInt = (Integer)#lightingI;
-		    if (zoneOcc > 0 && zoneLightInt < 50) {
+		    if (zoneOcc > 0 && zoneLightInt < 50 && (zoneLightInt != prevLightInt)) {
 	            emit LightONOFF;
 	        }
 		}
 		pause;
-	}
 }	
 
 
@@ -124,7 +120,7 @@ ECS_HVACController (input int signal currentTime;
 	            int zoneSevenOcc = (Integer)#zoneSevenOccupancy_B;
 
 	            if (zoneOneOcc > 0 || zoneSevenOcc > 0) {
-	                System.out.println("Someone detected in Zone 1 or Zone 7 during non-working hours Enabling Fan/Heaters");
+	                //System.out.println("Someone detected in Zone 1 or Zone 7 during non-working hours Enabling Fan/Heaters");
 	                
 	                if (tempZoneOneSeven > currentTemp) {
 	    	    		System.out.println("Turning ON Heater to Heat Up for Zone 1,7");
@@ -306,9 +302,6 @@ ECS_LightingController (
 		) -> {
 			
 			signal workhrs, afterhrs;
-
-			
-		
 			
 			{loop{
 
@@ -317,11 +310,16 @@ ECS_LightingController (
 			    
 			        if (currentHour >= 9 && currentHour <= 17) {
 			            emit workhrs; 
-			        } else {
-			            emit afterhrs; 
+			            pause;
 
 
+			        } else if ((currentHour >= 18 && currentHour <= 24) || (currentHour >= 0 && currentHour < 9)) {
+			            emit afterhrs;
+			            pause;
+			            
 			        }
+			     
+			        
 			    }
 			
 			
@@ -329,45 +327,63 @@ ECS_LightingController (
 			
 			||
 			
-			{loop{
-				present(afterhrs) {
-				    checkZoneAfterHours(:zoneOneOccupancy, zoneOneLightingI, zoneOneLightONOFF)
-				    ||
-				    checkZoneAfterHours(:zoneTwoOccupancy, zoneTwoLightingI, zoneTwoLightONOFF)
-				    ||
-				    checkZoneAfterHours(:zoneThreeOccupancy, zoneThreeLightingI, zoneThreeLightONOFF)
-				    ||
-				    checkZoneAfterHours(:zoneFourOccupancy, zoneFourLightingI, zoneFourLightONOFF)
-				    ||
-				    checkZoneAfterHours(:zoneFiveOccupancy, zoneFiveLightingI, zoneFiveLightONOFF)
-				    ||
-				    checkZoneAfterHours(:zoneSixOccupancy, zoneSixLightingI, zoneSixLightONOFF)
-				    ||
-				    checkZoneAfterHours(:zoneSevenOccupancy, zoneSevenLightingI, zoneSevenLightONOFF)
-				}
-			    
-			    present(workhrs) {
-			        checkZoneWorkHours(:zoneOneOccupancy, zoneOneLightingI, zoneOneWindowONOFF)
-			        ||
-			        checkZoneWorkHours(:zoneTwoOccupancy, zoneTwoLightingI, zoneTwoWindowONOFF)
-			        ||
-			        checkZoneWorkHours(:zoneThreeOccupancy, zoneThreeLightingI, zoneThreeWindowONOFF)
-			        ||
-			        checkZoneWorkHours(:zoneFourOccupancy, zoneFourLightingI, zoneFourWindowONOFF)
-			        ||
-			        checkZoneWorkHours(:zoneFiveOccupancy, zoneFiveLightingI, zoneFiveWindowONOFF)
-			        ||
-			        checkZoneWorkHours(:zoneSixOccupancy, zoneSixLightingI, zoneSixWindowONOFF)
-			        ||
-			        checkZoneWorkHours(:zoneSevenOccupancy, zoneSevenLightingI, zoneSevenWindowONOFF)
-			    }
-
-			    pause;
+			{
+				loop{
+				    present(workhrs) {
+				        {
+				            checkZoneWorkHours(:zoneOneOccupancy, zoneOneLightingI, zoneOneWindowONOFF)
+				            ||
+				            checkZoneWorkHours(:zoneTwoOccupancy, zoneTwoLightingI, zoneTwoWindowONOFF)
+				            ||
+				            checkZoneWorkHours(:zoneThreeOccupancy, zoneThreeLightingI, zoneThreeWindowONOFF)
+				            ||
+				            checkZoneWorkHours(:zoneFourOccupancy, zoneFourLightingI, zoneFourWindowONOFF)
+				            ||
+				            checkZoneWorkHours(:zoneFiveOccupancy, zoneFiveLightingI, zoneFiveWindowONOFF)
+				            ||
+				            checkZoneWorkHours(:zoneSixOccupancy, zoneSixLightingI, zoneSixWindowONOFF)
+				            ||
+				            checkZoneWorkHours(:zoneSevenOccupancy, zoneSevenLightingI, zoneSevenWindowONOFF)
+				        }
+				        pause;
+				    }
+				    
+				    
+				    present(afterhrs) {
+				        {
+				            checkZoneAfterHours(:zoneOneOccupancy, zoneOneLightingI, zoneOneLightONOFF)
+				            ||
+				            checkZoneAfterHours(:zoneTwoOccupancy, zoneTwoLightingI, zoneTwoLightONOFF)
+				            ||
+				            checkZoneAfterHours(:zoneThreeOccupancy, zoneThreeLightingI, zoneThreeLightONOFF)
+				            ||
+				            checkZoneAfterHours(:zoneFourOccupancy, zoneFourLightingI, zoneFourLightONOFF)
+				            ||
+				            checkZoneAfterHours(:zoneFiveOccupancy, zoneFiveLightingI, zoneFiveLightONOFF)
+				            ||
+				            checkZoneAfterHours(:zoneSixOccupancy, zoneSixLightingI, zoneSixLightONOFF)
+				            ||
+				            checkZoneAfterHours(:zoneSevenOccupancy, zoneSevenLightingI, zoneSevenLightONOFF)
+				        }
+				        pause;
+				    }
+				    pause;
 				}
 			}
-		
+
 			
-	
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		}
 
 

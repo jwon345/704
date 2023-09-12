@@ -9,6 +9,88 @@ public class LoaderVizWorker extends Worker{
 	public void setSignal(boolean status) {
 //		System.out.println(signame+"  "+status);
 		switch(signame){
+		
+		// Smoke 
+		 case "sirenONOFF_E":
+			 States.sirenONOFF_E = status;
+			 break;
+			 
+		// Lighting
+			 
+		 case "zoneOneLightONOFF_E":
+			 States.zoneOneLightONOFF_E = status;
+			 break;
+			 
+		 case "zoneTwoLightONOFF_E":
+			 States.zoneTwoLightONOFF_E = status;
+			 break;
+		
+		 case "zoneThreeLightONOFF_E":
+			 States.zoneThreeLightONOFF_E = status;
+			 break;
+			 
+		 case "zoneFourLightONOFF_E":
+			 States.zoneFourLightONOFF_E = status;
+			 break;
+			 
+		 case "zoneFiveLightONOFF_E":
+			 States.zoneFiveLightONOFF_E = status;
+			 break;
+			 
+		 case "zoneSixLightONOFF_E":
+			 States.zoneSixLightONOFF_E = status;
+			 break;
+			 
+		 case "zoneSevenLightONOFF_E":
+			 States.zoneSevenLightONOFF_E = status;
+			 break;
+			 
+			 
+		//windows
+		 case "zoneOneWindowONOFF_E":
+			 States.zoneOneWindowONOFF_E = status;
+			 break;
+			 
+		 case "zoneTwoWindowONOFF_E":
+			 States.zoneTwoWindowONOFF_E = status;
+			 break;
+			 
+		 case "zoneThreeWindowONOFF_E":
+			 States.zoneThreeWindowONOFF_E = status;
+			 break;
+			 
+		 case "zoneFourWindowONOFF_E":
+			 States.zoneFourWindowONOFF_E = status;
+			 break;
+	
+		 case "zoneFiveWindowONOFF_E":
+			 States.zoneFiveWindowONOFF_E = status;
+			 break;
+			 
+		 case "zoneSixWindowONOFF_E":
+			 States.zoneSixWindowONOFF_E = status;
+			 break;
+			 
+		 case "zoneSevenWindowONOFF_E":
+			 States.zoneSevenWindowONOFF_E = status;
+			 break;
+		// HVAC
+	    case "zoneOneSevenFanONOFF_E":
+	        States.zoneOneSevenFanONOFF_E = status;
+	        break;
+	    case "zoneOneSevenHeaterONOFF_E":
+	        States.zoneOneSevenHeaterONOFF_E = status;
+	        break;
+	    case "zoneTwoThreeFanONOFF_E":
+	        States.zoneTwoThreeFanONOFF_E = status;
+	        break;
+	    case "zoneTwoThreeHeaterONOFF_E":
+	        States.zoneTwoThreeHeaterONOFF_E = status;
+	        break;
+	    case "zoneFourFiveSixACONOFF_E":
+	        States.zoneFourFiveSixACONOFF_E = status;
+	        break;
+		
 		// Capper
 		case "cylPos5ZaxisExtendE":
 		    States.CYL_POS5_ZAXIS_EXTENDED = status;
@@ -135,7 +217,11 @@ public class LoaderVizWorker extends Worker{
 			"rotaryTableTriggerE", "bottleAtPos3E", "bottleAtPos5E", "bottleAtPos1E",
 			"bottleDeployedE", "motConveyorOnOffE", "bottleLeftPos5E", 
 			"valveInjectorOnOffE", "valveInletOnOffE" , "dosUnitValveRetractE", "dosUnitValveExtendE", "bottleAtPos2E", "dosUnitEvacE" , "dosUnitFilledE",
-			"cylPos5ZaxisExtendE", "gripperTurnRetractE", "gripperTurnExtendE", "capGripperPos5ExtendE", "cylClampBottleExtendE", "bottleAtPos4E", "gripperZAxisLoweredE", "gripperZAxisLiftedE", "gripperTurnHomePosE", "gripperTurnFinalPosE");
+			"cylPos5ZaxisExtendE", "gripperTurnRetractE", "gripperTurnExtendE", "capGripperPos5ExtendE", "cylClampBottleExtendE", "bottleAtPos4E", "gripperZAxisLoweredE", "gripperZAxisLiftedE", "gripperTurnHomePosE", "gripperTurnFinalPosE",
+			"zoneOneSevenFanONOFF_E", "zoneOneSevenHeaterONOFF_E", "zoneTwoThreeFanONOFF_E", "zoneTwoThreeHeaterONOFF_E", "zoneFourFiveSixACONOFF_E",
+			"zoneOneLightONOFF_E", "zoneTwoLightONOFF_E" , "zoneThreeLightONOFF_E", "zoneFourLightONOFF_E", "zoneFiveLightONOFF_E", "zoneSixLightONOFF_E", "zoneSevenLightONOFF_E",
+			"zoneOneWindowONOFF_E", "zoneTwoWindowONOFF_E", "zoneThreeWindowONOFF_E", "zoneFourWindowONOFF_E", "zoneFiveWindowONOFF_E", "zoneSixWindowONOFF_E", "zoneSevenWindowONOFF_E",
+			"sirenONOFF_E");
 	
 	@Override
 	public boolean hasSignal(String sn) {

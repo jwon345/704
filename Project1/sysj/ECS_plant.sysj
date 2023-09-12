@@ -6,6 +6,9 @@ ECS_HVAC_Plant(input signal zoneOneSevenFanONOFF,zoneOneSevenHeaterONOFF,zoneTwo
 		
 		output signal zoneOneSevenAtTempHumid, zoneTwoThreeAtTempHumid, zoneFourFiveSixAtTempHumid;
 		
+		output signal zoneOneSevenFanONOFF_E,zoneOneSevenHeaterONOFF_E,zoneTwoThreeFanONOFF_E,zoneTwoThreeHeaterONOFF_E,
+		zoneFourFiveSixACONOFF_E;
+		
 		) -> {
 
 			new Thread(new ECS_GUI()).start();
@@ -16,6 +19,7 @@ ECS_HVAC_Plant(input signal zoneOneSevenFanONOFF,zoneOneSevenHeaterONOFF,zoneTwo
 						await(zoneOneSevenFanONOFF);
 						{
 							System.out.println("Zone(1,7) Fan - On");
+							waitl (2s);
 							emit zoneOneSevenAtTempHumid;
 						}
 					}
@@ -28,6 +32,7 @@ ECS_HVAC_Plant(input signal zoneOneSevenFanONOFF,zoneOneSevenHeaterONOFF,zoneTwo
 						await(zoneOneSevenHeaterONOFF);
 						{
 						System.out.println("Zone(1,7) Heater - On");
+						waitl (2s);
 						emit zoneOneSevenAtTempHumid;
 						}
 					}
@@ -40,6 +45,7 @@ ECS_HVAC_Plant(input signal zoneOneSevenFanONOFF,zoneOneSevenHeaterONOFF,zoneTwo
 						await(zoneTwoThreeFanONOFF);
 						{
 						System.out.println("Zone(2,3) Fan - On");
+						waitl (2s);
 						emit zoneTwoThreeAtTempHumid;
 						}
 				}
@@ -47,30 +53,66 @@ ECS_HVAC_Plant(input signal zoneOneSevenFanONOFF,zoneOneSevenHeaterONOFF,zoneTwo
 			}
 			||
 			{
-			loop{
-			{
-			await(zoneTwoThreeHeaterONOFF);
-			{
-				System.out.println("Zone(2,3) Heater - On");
-				emit zoneTwoThreeAtTempHumid;
-			}
-			}
-			}
+				loop{
+					{await(zoneTwoThreeHeaterONOFF);
+					{System.out.println("Zone(2,3) Heater - On");waitl (2s);emit zoneTwoThreeAtTempHumid;}
+					}}	
 			}
 			
 			||
 			{
 				loop{
-				{
-				await(zoneFourFiveSixACONOFF);
-				{
-					System.out.println("Zone(2,3) Heater - On");
-					emit zoneFourFiveSixAtTempHumid;
-				}
-				}
-				}
-				}
-				
+					{await(zoneFourFiveSixACONOFF);
+					{System.out.println("Zone(4,5,6) AC - On");waitl (2s);emit zoneFourFiveSixAtTempHumid;}
+					}}	
+			}
+			
+			||
+			{{while(true){present(zoneOneSevenFanONOFF)
+			    trap(T) {
+			        {sustain zoneOneSevenFanONOFF_E;}
+			        ||
+			        {await(zoneOneSevenAtTempHumid);exit(T);}
+			    }
+			    pause;}}
+			}
+			||
+			{{while(true){present(zoneOneSevenHeaterONOFF)
+			    trap(T) {
+			        {sustain zoneOneSevenHeaterONOFF_E;}
+			        ||
+			        {await(zoneOneSevenAtTempHumid);exit(T);}
+			    }
+			    pause;}}
+			}
+			||
+			{{while(true){present(zoneTwoThreeFanONOFF)
+			    trap(T) {
+			        {sustain zoneTwoThreeFanONOFF_E;}
+			        ||
+			        {await(zoneTwoThreeAtTempHumid);exit(T);}
+			    }
+			    pause;}}
+			}
+			||
+			{{while(true){present(zoneTwoThreeHeaterONOFF)
+			    trap(T) {
+			        {sustain zoneTwoThreeHeaterONOFF_E;}
+			        ||
+			        {await(zoneTwoThreeAtTempHumid);exit(T);}
+			    }
+			    pause;}}
+			}
+			||
+			{{while(true){present(zoneFourFiveSixACONOFF)
+			    trap(T) {
+			        {sustain zoneFourFiveSixACONOFF_E;}
+			        ||
+			        {await(zoneFourFiveSixAtTempHumid);exit(T);}
+			    }
+			    pause;}}
+			}
+
 
 }
 
@@ -79,8 +121,17 @@ ECS_LightingPlant(input signal zoneOneLightONOFF, zoneTwoLightONOFF, zoneThreeLi
 		zoneFiveLightONOFF, zoneSixLightONOFF, zoneSevenLightONOFF;
 
 		input signal zoneOneWindowONOFF, zoneTwoWindowONOFF, zoneThreeWindowONOFF, zoneFourWindowONOFF, 
-		zoneFiveWindowONOFF, zoneSixWindowONOFF, zoneSevenWindowONOFF;) -> {
-			
+		zoneFiveWindowONOFF, zoneSixWindowONOFF, zoneSevenWindowONOFF;
+		
+		output signal zoneOneFinished, zoneTwoFinished, zoneThreeFinished, zoneFourFinished,
+		zoneFiveFinished, zoneSixFinished, zoneSevenFinished;
+
+		output signal zoneOneLightONOFF_E, zoneTwoLightONOFF_E, zoneThreeLightONOFF_E, zoneFourLightONOFF_E,
+		zoneFiveLightONOFF_E, zoneSixLightONOFF_E, zoneSevenLightONOFF_E;
+
+		output signal zoneOneWindowONOFF_E, zoneTwoWindowONOFF_E, zoneThreeWindowONOFF_E, zoneFourWindowONOFF_E, 
+		zoneFiveWindowONOFF_E, zoneSixWindowONOFF_E, zoneSevenWindowONOFF_E;) -> {
+
 			{
 		        loop{
 		            await(zoneOneWindowONOFF);
@@ -201,12 +252,46 @@ ECS_LightingPlant(input signal zoneOneLightONOFF, zoneTwoLightONOFF, zoneThreeLi
 		        }
 		    }
 		    
+		    ||
+	        {while(true){present(zoneOneLightONOFF){emit zoneOneLightONOFF_E;} pause;}}
+		    ||
+	        {while(true){present(zoneTwoLightONOFF){emit zoneTwoLightONOFF_E;} pause;}}
+		    ||
+	        {while(true){present(zoneThreeLightONOFF){emit zoneThreeLightONOFF_E;} pause;}}
+		    ||
+	        {while(true){present(zoneFourLightONOFF){emit zoneFourLightONOFF_E;} pause;}}
+		    ||
+	        {while(true){present(zoneFiveLightONOFF){emit zoneFiveLightONOFF_E;} pause;}}
+		    ||
+	        {while(true){present(zoneSixLightONOFF){emit zoneSixLightONOFF_E;} pause;}}
+		    ||
+	        {while(true){present(zoneSevenLightONOFF){emit zoneSevenLightONOFF_E;} pause;}}
+		    
+		    
+		    
+		    
+		    ||
+	        {while(true){present(zoneOneWindowONOFF){emit zoneOneWindowONOFF_E;} pause;}}
+		    ||
+	        {while(true){present(zoneTwoWindowONOFF){emit zoneTwoWindowONOFF_E;} pause;}}
+		    ||
+	        {while(true){present(zoneThreeWindowONOFF){emit zoneThreeWindowONOFF_E;} pause;}}
+		    ||
+	        {while(true){present(zoneFourWindowONOFF){emit zoneFourWindowONOFF_E;} pause;}}
+		    ||
+	        {while(true){present(zoneFiveWindowONOFF){emit zoneFiveWindowONOFF_E;} pause;}}
+		    ||
+	        {while(true){present(zoneSixWindowONOFF){emit zoneSixWindowONOFF_E;} pause;}}
+		    ||
+	        {while(true){present(zoneSevenWindowONOFF){emit zoneSevenWindowONOFF_E;} pause;}}
+		    
 		    
 }
 			
 
 ECS_SmokePlant(input signal sirenONOFF;
-			output signal detectSmoke, stopAll;) -> {
+			output signal detectSmoke, stopAll;
+			output signal sirenONOFF_E;) -> {
 			
 
 			{while(true){
@@ -218,4 +303,7 @@ ECS_SmokePlant(input signal sirenONOFF;
 					pause;
 				}
 			}
+			
+			||
+		    {while(true){present(sirenONOFF){emit sirenONOFF_E;} pause;}}
 }

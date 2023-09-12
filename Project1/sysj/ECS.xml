@@ -56,12 +56,12 @@
 		<oSignal Name="zoneSevenLightONOFF" To="ECS_LightingPlant.zoneSevenLightONOFF" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10003" />
 		
 		<oSignal Name="zoneOneWindowONOFF"  	To="ECS_LightingPlant.zoneOneWindowONOFF" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10003" />
-		<oSignal Name="zoneTwoWindowONOFF"   To="ECS_LightingPlant.zoneTwoWindowONOFF" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10003" />
-		<oSignal Name="zoneThreeWindowONOFF" To="ECS_LightingPlant.zoneThreeWindowONOFF" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10003" />
-		<oSignal Name="zoneFourWindowONOFF"  To="ECS_LightingPlant.zoneFourWindowONOFF" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10003" />
-		<oSignal Name="zoneFiveWindowONOFF"  To="ECS_LightingPlant.zoneFiveWindowONOFF" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10003" />
+		<oSignal Name="zoneTwoWindowONOFF"   	To="ECS_LightingPlant.zoneTwoWindowONOFF" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10003" />
+		<oSignal Name="zoneThreeWindowONOFF" 	To="ECS_LightingPlant.zoneThreeWindowONOFF" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10003" />
+		<oSignal Name="zoneFourWindowONOFF"  	To="ECS_LightingPlant.zoneFourWindowONOFF" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10003" />
+		<oSignal Name="zoneFiveWindowONOFF"  	To="ECS_LightingPlant.zoneFiveWindowONOFF" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10003" />
 		<oSignal Name="zoneSixWindowONOFF"  	To="ECS_LightingPlant.zoneSixWindowONOFF" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10003" />
-		<oSignal Name="zoneSevenWindowONOFF" To="ECS_LightingPlant.zoneSevenWindowONOFF" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10003" />
+		<oSignal Name="zoneSevenWindowONOFF" 	To="ECS_LightingPlant.zoneSevenWindowONOFF" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10003" />
 		
 
 

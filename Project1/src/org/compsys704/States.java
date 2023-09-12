@@ -1,6 +1,31 @@
 package org.compsys704;
 
 public class States {
+	public static volatile boolean sirenONOFF_E = false;
+	
+	public static volatile boolean zoneOneLightONOFF_E = false;
+	public static volatile boolean zoneTwoLightONOFF_E = false;
+	public static volatile boolean zoneThreeLightONOFF_E = false;
+	public static volatile boolean zoneFourLightONOFF_E = false;
+	public static volatile boolean zoneFiveLightONOFF_E = false;
+	public static volatile boolean zoneSixLightONOFF_E = false;
+	public static volatile boolean zoneSevenLightONOFF_E = false;
+	
+	public static volatile boolean zoneOneWindowONOFF_E = false;
+	public static volatile boolean zoneTwoWindowONOFF_E = false;
+	public static volatile boolean zoneThreeWindowONOFF_E = false;
+	public static volatile boolean zoneFourWindowONOFF_E = false;
+	public static volatile boolean zoneFiveWindowONOFF_E = false;
+	public static volatile boolean zoneSixWindowONOFF_E = false;
+	public static volatile boolean zoneSevenWindowONOFF_E = false;
+	
+	
+	public static volatile boolean zoneOneSevenFanONOFF_E = false;
+	public static volatile boolean zoneOneSevenHeaterONOFF_E = false;
+	public static volatile boolean zoneTwoThreeFanONOFF_E = false;
+	public static volatile boolean zoneTwoThreeHeaterONOFF_E = false;
+	public static volatile boolean zoneFourFiveSixACONOFF_E = false;
+	    
 	// CAPPER
     public static volatile boolean CYL_POS5_ZAXIS_EXTENDED = false;
     public static volatile boolean GRIPPER_TURN_RETRACTED = false;
