@@ -4,8 +4,12 @@ reaction checkZoneWorkHours(: input int signal occupancy, input int signal light
         int zoneOcc = (Integer)#occupancy;
         int zoneLightInt = (Integer)#lightingI;
         
-        if (zoneOcc > 0 && zoneLightInt < 50 && (zoneLightInt != prevLightInt)) {
+        if (zoneOcc > 0 && zoneLightInt < 50) {
             emit windowONOFF;
+        }
+        
+        else {
+        	
         }
         pause;
 }
@@ -20,8 +24,13 @@ reaction checkZoneAfterHours(: input int signal occupancy, input int signal ligh
 		    if (zoneOcc > 0 && zoneLightInt < 50 && (zoneLightInt != prevLightInt)) {
 	            emit LightONOFF;
 	        }
-		}
+		
+		
+		else {
+	        	
+	    }
 		pause;
+		}
 }	
 
 
@@ -289,6 +298,9 @@ ECS_HVACController (input int signal currentTime;
 }	
 
 ECS_LightingController (
+		input signal Zone1_Finished;
+		
+		
 		input int signal currentTime_2;
 		input int signal zoneOneOccupancy, zoneTwoOccupancy, zoneThreeOccupancy, zoneFourOccupancy, zoneFiveOccupancy, zoneSixOccupancy, zoneSevenOccupancy;
 		input int signal zoneOneLightingI, zoneTwoLightingI, zoneThreeLightingI, zoneFourLightingI, zoneFiveLightingI, zoneSixLightingI, zoneSevenLightingI;

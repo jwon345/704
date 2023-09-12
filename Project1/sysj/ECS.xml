@@ -29,6 +29,8 @@
         </ClockDomain>
         
         <ClockDomain Name="ECS_LightingCD" Class="ECS_LightingController">
+		<iSignal Name="Zone1_Finished"      Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />
+
 		<iSignal Name="currentTime_2" 		Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />
 
 		<iSignal Name="zoneOneOccupancy" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />

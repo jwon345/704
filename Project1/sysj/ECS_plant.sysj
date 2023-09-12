@@ -117,7 +117,9 @@ ECS_HVAC_Plant(input signal zoneOneSevenFanONOFF,zoneOneSevenHeaterONOFF,zoneTwo
 }
 
 
-ECS_LightingPlant(input signal zoneOneLightONOFF, zoneTwoLightONOFF, zoneThreeLightONOFF, zoneFourLightONOFF,
+ECS_LightingPlant(
+		output signal Zone1_Finished;
+		input signal zoneOneLightONOFF, zoneTwoLightONOFF, zoneThreeLightONOFF, zoneFourLightONOFF,
 		zoneFiveLightONOFF, zoneSixLightONOFF, zoneSevenLightONOFF;
 
 		input signal zoneOneWindowONOFF, zoneTwoWindowONOFF, zoneThreeWindowONOFF, zoneFourWindowONOFF, 

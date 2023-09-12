@@ -363,6 +363,10 @@ FillerController(
 	    		
 				input Boolean channel simFiller;
 	    		output Boolean channel fillerReady;
+	    		
+	    		input signal ordered;
+	    		output signal order_finished;
+	    		input int signal orderFill_1, orderFill_2, orderFill_3, orderFill_4;
 	    		)->{
 	    			
 	    			signal filler1,filler2,filler3,filler4;
@@ -379,13 +383,24 @@ FillerController(
 	    		        int total = 100;
 	    		        emit total_fill(total);
 	    		        emit current_fill(current);
-	    		        
-	    		        emit filler1_amount(25);
-	    		        emit filler2_amount(25);
-	    		        emit filler3_amount(25);
-	    		        emit filler4_amount(25);
+	    		       
 	    		        
 	    		        loop {
+	    		        	
+	    		        	present(ordered) {
+	    		                emit filler1_amount(#orderFill_1);
+	    		                emit filler2_amount(#orderFill_2);
+	    		                emit filler3_amount(#orderFill_3);
+	    		                emit filler4_amount(#orderFill_4);
+	    		            }
+	    		            else {
+	    		                emit filler1_amount(25);
+	    		                emit filler2_amount(25);
+	    		                emit filler3_amount(25);
+	    		                emit filler4_amount(25);
+	    		            }
+	    		            
+	    		                
 	    		            System.out.println("*Filler - Waiting For BottleAtPos2*");
 	    		            await(bottleAtPos2);
 	    		            send fillerReady(Boolean.FALSE);
@@ -512,6 +527,8 @@ FillerController(
 	    		                emit current_fill(current);
 
 	    		            }
+	    		            
+	    		            emit order_finished;
 	    		            
 	    		            send fillerReady(Boolean.TRUE);
 	    		            System.out.println("*Filler operation done");
