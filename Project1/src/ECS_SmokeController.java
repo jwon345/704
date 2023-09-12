@@ -14,7 +14,7 @@ public class ECS_SmokeController extends ClockDomain{
   public Signal detectSmoke = new Signal("detectSmoke", Signal.INPUT);
   public Signal stopAll = new Signal("stopAll", Signal.INPUT);
   public Signal sirenONOFF = new Signal("sirenONOFF", Signal.OUTPUT);
-  private int S108113 = 1;
+  private int S109501 = 1;
   
   private int[] ends = new int[24];
   private int[] tdone = new int[24];
@@ -26,18 +26,18 @@ public class ECS_SmokeController extends ClockDomain{
     }
     
     RUN: while(true){
-      switch(S108113){
+      switch(S109501){
         case 0 : 
-          S108113=0;
+          S109501=0;
           break RUN;
         
         case 1 : 
-          S108113=2;
-          S108113=2;
-          if(detectSmoke.getprestatus()){//sysj\ECS.sysj line: 319, column: 11
-            sirenONOFF.setPresent();//sysj\ECS.sysj line: 321, column: 4
+          S109501=2;
+          S109501=2;
+          if(detectSmoke.getprestatus()){//sysj\ECS.sysj line: 379, column: 11
+            sirenONOFF.setPresent();//sysj\ECS.sysj line: 381, column: 4
             currsigs.addElement(sirenONOFF);
-            System.out.println("Fire Alert - Please Exit The Building");//sysj\ECS.sysj line: 322, column: 4
+            System.out.println("Fire Alert - Please Exit The Building");//sysj\ECS.sysj line: 382, column: 4
             active[23]=1;
             ends[23]=1;
             break RUN;
@@ -49,10 +49,10 @@ public class ECS_SmokeController extends ClockDomain{
           }
         
         case 2 : 
-          if(detectSmoke.getprestatus()){//sysj\ECS.sysj line: 319, column: 11
-            sirenONOFF.setPresent();//sysj\ECS.sysj line: 321, column: 4
+          if(detectSmoke.getprestatus()){//sysj\ECS.sysj line: 379, column: 11
+            sirenONOFF.setPresent();//sysj\ECS.sysj line: 381, column: 4
             currsigs.addElement(sirenONOFF);
-            System.out.println("Fire Alert - Please Exit The Building");//sysj\ECS.sysj line: 322, column: 4
+            System.out.println("Fire Alert - Please Exit The Building");//sysj\ECS.sysj line: 382, column: 4
             active[23]=1;
             ends[23]=1;
             break RUN;

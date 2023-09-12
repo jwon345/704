@@ -72,12 +72,11 @@ ECS_HVACController (input int signal currentTime;
 	System.out.println("Current Temp For Zone 1,7: " + currentTemp);
 	
 	loop{
-
-	    	await(zoneOneSevenTemp);
+			int tempZoneOneSeven = (Integer)#zoneOneSevenTemp;
+			int humidityZoneOneSeven = (Integer)#zoneOneSevenHumid;
 
 	    	present(workhrs){
-	    	int tempZoneOneSeven = (Integer)#zoneOneSevenTemp;
-	    	int humidityZoneOneSeven = (Integer)#zoneOneSevenHumid;
+	  
 	    	
 	    	if (tempZoneOneSeven > currentTemp) {
 	    		System.out.println("Turning ON Heater to Heat Up for Zone 1,7");
@@ -85,7 +84,8 @@ ECS_HVACController (input int signal currentTime;
 	    		currentTemp = tempZoneOneSeven;
 	    		
 	    		await (zoneOneSevenAtTempHumid);
-	    		System.out.println("Current Temp For Zone 1,7:" + currentTemp);
+	    		System.out.println("Current Temp For Zone 1,7: " + currentTemp + "(°C)");
+	    		System.out.println("\n-------------------------");
 	    		
 	    	}
 	    	
@@ -95,7 +95,8 @@ ECS_HVACController (input int signal currentTime;
 	       		emit zoneOneSevenFanONOFF;
 
 	       		await (zoneOneSevenAtTempHumid);
-	    		System.out.println("Current Temp For Zone 1,7:" + currentTemp);
+	    		System.out.println("Current Temp For Zone 1,7: " + currentTemp + "(°C)");
+	    		System.out.println("\n-------------------------");
 	    	}
 	    	
 	    	if (humidityZoneOneSeven > currentHumidity) {
@@ -104,14 +105,16 @@ ECS_HVACController (input int signal currentTime;
 	            currentHumidity = humidityZoneOneSeven;
 	            
 	        	await (zoneOneSevenAtTempHumid);
-	            System.out.println("Current Humidity For Zone 1,7:" + currentHumidity);
+	            System.out.println("Current Humidity For Zone 1,7: " + currentHumidity + "(%)");
+	        	System.out.println("\n-------------------------");
 	        } else if (humidityZoneOneSeven < currentHumidity) {
 	            System.out.println("Turning ON Fan to reduce humidity for Zone 1,7");
 	            emit zoneOneSevenFanONOFF;
 	            currentHumidity = humidityZoneOneSeven;
 	            
 	        	await (zoneOneSevenAtTempHumid);
-	            System.out.println("Current Humidity For Zone 1,7:" + currentHumidity);
+	            System.out.println("Current Humidity For Zone 1,7: " + currentHumidity + "(%)");
+	        	System.out.println("\n-------------------------");
 	        }
 	    	}
 	    	
@@ -121,9 +124,54 @@ ECS_HVACController (input int signal currentTime;
 	            int zoneSevenOcc = (Integer)#zoneSevenOccupancy_B;
 
 	            if (zoneOneOcc > 0 || zoneSevenOcc > 0) {
-	                System.out.println("Someone detected in Zone 1 or Zone 7 during non-working hours");
+	                System.out.println("Someone detected in Zone 1 or Zone 7 during non-working hours Enabling Fan/Heaters");
+	                
+	                if (tempZoneOneSeven > currentTemp) {
+	    	    		System.out.println("Turning ON Heater to Heat Up for Zone 1,7");
+	    	    		emit zoneOneSevenHeaterONOFF;
+	    	    		currentTemp = tempZoneOneSeven;
+	    	    		
+	    	    		await (zoneOneSevenAtTempHumid);
+	    	    		System.out.println("Current Temp For Zone 1,7: " + currentTemp + "(°C)");
+	    	    		System.out.println("\n-------------------------");
+	    	    		
+	    	    	}
+	    	    	
+	    	    	else if (tempZoneOneSeven < currentTemp) {
+	    	    		System.out.println("Turning ON Fan to Cool Down for Zone 1,7");
+	    	    		currentTemp = tempZoneOneSeven;
+	    	       		emit zoneOneSevenFanONOFF;
+
+	    	       		await (zoneOneSevenAtTempHumid);
+	    	    		System.out.println("Current Temp For Zone 1,7: " + currentTemp + "(°C)");
+	    	    		System.out.println("\n-------------------------");
+	    	    	}
+	    	    	
+	    	    	if (humidityZoneOneSeven > currentHumidity) {
+	    	            System.out.println("Turning ON Heater to increase humidity for Zone 1,7");
+	    	            emit zoneOneSevenHeaterONOFF;
+	    	            currentHumidity = humidityZoneOneSeven;
+	    	            
+	    	        	await (zoneOneSevenAtTempHumid);
+	    	            System.out.println("Current Humidity For Zone 1,7: " + currentHumidity + "(%)");
+	    	        	System.out.println("\n-------------------------");
+	    	        } else if (humidityZoneOneSeven < currentHumidity) {
+	    	            System.out.println("Turning ON Fan to reduce humidity for Zone 1,7");
+	    	            emit zoneOneSevenFanONOFF;
+	    	            currentHumidity = humidityZoneOneSeven;
+	    	            
+	    	        	await (zoneOneSevenAtTempHumid);
+	    	            System.out.println("Current Humidity For Zone 1,7: " + currentHumidity + "(%)");
+	    	        	System.out.println("\n-------------------------");
+	    	        }
+	            }
+	            
+	            else {
+	            	
 	            }
 	        }
+	    	
+	    	pause;
 
 		}
 	}
@@ -137,7 +185,7 @@ ECS_HVACController (input int signal currentTime;
 	
 	
 		loop{
-	    	await(zoneTwoThreeTemp);
+			present(workhrs){
 	    	int tempzoneTwoThree = (Integer)#zoneTwoThreeTemp;
 	    	int humidityzoneTwoThree = (Integer)#zoneTwoThreeHumid;
 
@@ -147,7 +195,8 @@ ECS_HVACController (input int signal currentTime;
 	    		currentTemp = tempzoneTwoThree;
 	    		
 	    		await (zoneTwoThreeAtTempHumid);
-	    		System.out.println("Current Temp:" + currentTemp);
+	    		System.out.println("Current Temp for Zone 2,3:" + currentTemp + "(°C)");
+	    		System.out.println("\n-------------------------");
 	    	}
 	    	
 	    	if (tempzoneTwoThree < currentTemp) {
@@ -157,7 +206,8 @@ ECS_HVACController (input int signal currentTime;
 	    		
 	    		
 	    		await (zoneTwoThreeAtTempHumid);
-	    		System.out.println("Current Temp:" + currentTemp);
+	    		System.out.println("Current Temp for Zone 2,3:" + currentTemp + "(°C)");
+	    		System.out.println("\n-------------------------");
 	    	}
 	    	
 	    	if (humidityzoneTwoThree > currentHumidity) {
@@ -166,7 +216,8 @@ ECS_HVACController (input int signal currentTime;
 	            currentHumidity = humidityzoneTwoThree;
 	        	
 	    		await (zoneTwoThreeAtTempHumid);
-	            System.out.println("Current Humidity For Zone 2,3: " + currentHumidity);
+	            System.out.println("Current Humidity For Zone 2,3: " + currentHumidity + "(%)");
+	        	System.out.println("\n-------------------------");
 	        } else if (humidityzoneTwoThree < currentHumidity) {
 	            System.out.println("Turning ON Fan to reduce humidity for Zone 2,3");
 	        	emit zoneTwoThreeFanONOFF;
@@ -174,8 +225,11 @@ ECS_HVACController (input int signal currentTime;
 	            
 	        	
 	    		await (zoneTwoThreeAtTempHumid);
-	            System.out.println("Current Humidity For Zone 2,3: " + currentHumidity);
+	            System.out.println("Current Humidity For Zone 2,3: " + currentHumidity + "(%)");
+	        	System.out.println("\n-------------------------");
 	        }
+			}
+	    	pause;
 		}
 	}
 	
@@ -188,7 +242,7 @@ ECS_HVACController (input int signal currentTime;
 	
 	
 		loop{
-	    	await(zoneFourFiveSixTemp);
+			present(workhrs){
 	    	int tempzoneFourFiveSixTemp = (Integer)#zoneFourFiveSixTemp;
 	    	int humidityzoneFourFiveSix = (Integer)#zoneFourFiveSixHumid;
 	    	
@@ -198,7 +252,8 @@ ECS_HVACController (input int signal currentTime;
 	    		currentTemp = tempzoneFourFiveSixTemp;
 	    		
 	    		await(zoneFourFiveSixAtTempHumid);
-	    		System.out.println("Current Temp:" + currentTemp);
+	    		System.out.println("Current Temp for Zone 4,5,6:" + currentTemp + "(°C)");
+	    		System.out.println("\n-------------------------");
 	    	}
 	    	
 	    	if (tempzoneFourFiveSixTemp < currentTemp) {
@@ -207,7 +262,8 @@ ECS_HVACController (input int signal currentTime;
 	    		currentTemp = tempzoneFourFiveSixTemp;
 	    		
 	    		await(zoneFourFiveSixAtTempHumid);
-	    		System.out.println("Current Temp:" + currentTemp);
+	    		System.out.println("Current Temp for Zone 4,5,6:" + currentTemp + "(°C)");
+	    		System.out.println("\n-------------------------");
 	    	}
 	    	
 	    	if (humidityzoneFourFiveSix > currentHumidity) {
@@ -216,15 +272,20 @@ ECS_HVACController (input int signal currentTime;
 	            currentHumidity = humidityzoneFourFiveSix;
 	            
 	        	await(zoneFourFiveSixAtTempHumid);
-	            System.out.println("Current Humidity For Zone 4,5,6: " + currentHumidity);
+	            System.out.println("Current Humidity For Zone 4,5,6: " + currentHumidity + "(%)");
+	        	System.out.println("\n-------------------------");
 	        } else if (humidityzoneFourFiveSix < currentHumidity) {
 	            System.out.println("Turning ON AC to reduce humidity for Zone 4,5,6");
 	        	emit zoneFourFiveSixACONOFF;
 	            currentHumidity = humidityzoneFourFiveSix;
 	            
 	        	await(zoneFourFiveSixAtTempHumid);
-	            System.out.println("Current Humidity For Zone 4,5,6: " + currentHumidity);
+	            System.out.println("Current Humidity For Zone 4,5,6: " + currentHumidity + "(%)");
+	        	System.out.println("\n-------------------------");
 	        }
+	    	
+			}
+	    	pause;
 		}
 	}
 			

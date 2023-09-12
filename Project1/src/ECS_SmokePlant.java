@@ -15,7 +15,7 @@ public class ECS_SmokePlant extends ClockDomain{
   public Signal sirenONOFF = new Signal("sirenONOFF", Signal.INPUT);
   public Signal detectSmoke = new Signal("detectSmoke", Signal.OUTPUT);
   public Signal stopAll = new Signal("stopAll", Signal.OUTPUT);
-  private int S108393 = 1;
+  private int S109781 = 1;
   
   private int[] ends = new int[23];
   private int[] tdone = new int[23];
@@ -27,14 +27,14 @@ public class ECS_SmokePlant extends ClockDomain{
     }
     
     RUN: while(true){
-      switch(S108393){
+      switch(S109781){
         case 0 : 
-          S108393=0;
+          S109781=0;
           break RUN;
         
         case 1 : 
-          S108393=2;
-          S108393=2;
+          S109781=2;
+          S109781=2;
           if(sirenONOFF.getprestatus()){//sysj\ECS_plant.sysj line: 213, column: 13
             stopAll.setPresent();//sysj\ECS_plant.sysj line: 215, column: 6
             currsigs.addElement(stopAll);

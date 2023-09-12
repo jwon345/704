@@ -20,18 +20,18 @@ public class ECS_HVAC_Plant extends ClockDomain{
   public Signal zoneOneSevenAtTempHumid = new Signal("zoneOneSevenAtTempHumid", Signal.OUTPUT);
   public Signal zoneTwoThreeAtTempHumid = new Signal("zoneTwoThreeAtTempHumid", Signal.OUTPUT);
   public Signal zoneFourFiveSixAtTempHumid = new Signal("zoneFourFiveSixAtTempHumid", Signal.OUTPUT);
-  private int S108268 = 1;
-  private int S108194 = 1;
-  private int S108202 = 1;
-  private int S108210 = 1;
-  private int S108218 = 1;
-  private int S108226 = 1;
+  private int S109656 = 1;
+  private int S109582 = 1;
+  private int S109590 = 1;
+  private int S109598 = 1;
+  private int S109606 = 1;
+  private int S109614 = 1;
   
   private int[] ends = new int[23];
   private int[] tdone = new int[23];
   
-  public void thread108405(int [] tdone, int [] ends){
-        switch(S108226){
+  public void thread109793(int [] tdone, int [] ends){
+        switch(S109614){
       case 0 : 
         active[6]=0;
         ends[6]=0;
@@ -57,8 +57,8 @@ public class ECS_HVAC_Plant extends ClockDomain{
     }
   }
 
-  public void thread108404(int [] tdone, int [] ends){
-        switch(S108218){
+  public void thread109792(int [] tdone, int [] ends){
+        switch(S109606){
       case 0 : 
         active[5]=0;
         ends[5]=0;
@@ -84,8 +84,8 @@ public class ECS_HVAC_Plant extends ClockDomain{
     }
   }
 
-  public void thread108403(int [] tdone, int [] ends){
-        switch(S108210){
+  public void thread109791(int [] tdone, int [] ends){
+        switch(S109598){
       case 0 : 
         active[4]=0;
         ends[4]=0;
@@ -111,8 +111,8 @@ public class ECS_HVAC_Plant extends ClockDomain{
     }
   }
 
-  public void thread108402(int [] tdone, int [] ends){
-        switch(S108202){
+  public void thread109790(int [] tdone, int [] ends){
+        switch(S109590){
       case 0 : 
         active[3]=0;
         ends[3]=0;
@@ -138,8 +138,8 @@ public class ECS_HVAC_Plant extends ClockDomain{
     }
   }
 
-  public void thread108401(int [] tdone, int [] ends){
-        switch(S108194){
+  public void thread109789(int [] tdone, int [] ends){
+        switch(S109582){
       case 0 : 
         active[2]=0;
         ends[2]=0;
@@ -165,36 +165,36 @@ public class ECS_HVAC_Plant extends ClockDomain{
     }
   }
 
-  public void thread108399(int [] tdone, int [] ends){
-        S108226=1;
+  public void thread109787(int [] tdone, int [] ends){
+        S109614=1;
     active[6]=1;
     ends[6]=1;
     tdone[6]=1;
   }
 
-  public void thread108398(int [] tdone, int [] ends){
-        S108218=1;
+  public void thread109786(int [] tdone, int [] ends){
+        S109606=1;
     active[5]=1;
     ends[5]=1;
     tdone[5]=1;
   }
 
-  public void thread108397(int [] tdone, int [] ends){
-        S108210=1;
+  public void thread109785(int [] tdone, int [] ends){
+        S109598=1;
     active[4]=1;
     ends[4]=1;
     tdone[4]=1;
   }
 
-  public void thread108396(int [] tdone, int [] ends){
-        S108202=1;
+  public void thread109784(int [] tdone, int [] ends){
+        S109590=1;
     active[3]=1;
     ends[3]=1;
     tdone[3]=1;
   }
 
-  public void thread108395(int [] tdone, int [] ends){
-        S108194=1;
+  public void thread109783(int [] tdone, int [] ends){
+        S109582=1;
     active[2]=1;
     ends[2]=1;
     tdone[2]=1;
@@ -207,75 +207,75 @@ public class ECS_HVAC_Plant extends ClockDomain{
     }
     
     RUN: while(true){
-      switch(S108268){
+      switch(S109656){
         case 0 : 
-          S108268=0;
+          S109656=0;
           break RUN;
         
         case 1 : 
-          S108268=2;
-          S108268=2;
+          S109656=2;
+          S109656=2;
           new Thread(new ECS_GUI()).start();//sysj\ECS_plant.sysj line: 11, column: 4
-          thread108395(tdone,ends);
-          thread108396(tdone,ends);
-          thread108397(tdone,ends);
-          thread108398(tdone,ends);
-          thread108399(tdone,ends);
-          int biggest108400 = 0;
-          if(ends[2]>=biggest108400){
-            biggest108400=ends[2];
+          thread109783(tdone,ends);
+          thread109784(tdone,ends);
+          thread109785(tdone,ends);
+          thread109786(tdone,ends);
+          thread109787(tdone,ends);
+          int biggest109788 = 0;
+          if(ends[2]>=biggest109788){
+            biggest109788=ends[2];
           }
-          if(ends[3]>=biggest108400){
-            biggest108400=ends[3];
+          if(ends[3]>=biggest109788){
+            biggest109788=ends[3];
           }
-          if(ends[4]>=biggest108400){
-            biggest108400=ends[4];
+          if(ends[4]>=biggest109788){
+            biggest109788=ends[4];
           }
-          if(ends[5]>=biggest108400){
-            biggest108400=ends[5];
+          if(ends[5]>=biggest109788){
+            biggest109788=ends[5];
           }
-          if(ends[6]>=biggest108400){
-            biggest108400=ends[6];
+          if(ends[6]>=biggest109788){
+            biggest109788=ends[6];
           }
-          if(biggest108400 == 1){
+          if(biggest109788 == 1){
             active[1]=1;
             ends[1]=1;
             break RUN;
           }
         
         case 2 : 
-          thread108401(tdone,ends);
-          thread108402(tdone,ends);
-          thread108403(tdone,ends);
-          thread108404(tdone,ends);
-          thread108405(tdone,ends);
-          int biggest108406 = 0;
-          if(ends[2]>=biggest108406){
-            biggest108406=ends[2];
+          thread109789(tdone,ends);
+          thread109790(tdone,ends);
+          thread109791(tdone,ends);
+          thread109792(tdone,ends);
+          thread109793(tdone,ends);
+          int biggest109794 = 0;
+          if(ends[2]>=biggest109794){
+            biggest109794=ends[2];
           }
-          if(ends[3]>=biggest108406){
-            biggest108406=ends[3];
+          if(ends[3]>=biggest109794){
+            biggest109794=ends[3];
           }
-          if(ends[4]>=biggest108406){
-            biggest108406=ends[4];
+          if(ends[4]>=biggest109794){
+            biggest109794=ends[4];
           }
-          if(ends[5]>=biggest108406){
-            biggest108406=ends[5];
+          if(ends[5]>=biggest109794){
+            biggest109794=ends[5];
           }
-          if(ends[6]>=biggest108406){
-            biggest108406=ends[6];
+          if(ends[6]>=biggest109794){
+            biggest109794=ends[6];
           }
-          if(biggest108406 == 1){
+          if(biggest109794 == 1){
             active[1]=1;
             ends[1]=1;
             break RUN;
           }
           //FINXME code
-          if(biggest108406 == 0){
-            S108268=0;
+          if(biggest109794 == 0){
+            S109656=0;
             active[1]=0;
             ends[1]=0;
-            S108268=0;
+            S109656=0;
             break RUN;
           }
         
