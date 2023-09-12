@@ -1,5 +1,5 @@
 import run.GUI;
-
+import run.socketListener;
 ConveyorPlant(
     input signal motConveyorOnOff;
     output signal bottleAtPos1, bottleLeftPos5;
@@ -9,6 +9,7 @@ ConveyorPlant(
 
 {
 	new Thread(new GUI()).start();
+	new Thread(new socketListener()).start();
 		{
 	    	while(true) {
 	
