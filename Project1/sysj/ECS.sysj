@@ -1,5 +1,4 @@
 reaction checkZoneWorkHours(: input int signal occupancy, input int signal lightingI, signal windowONOFF){
-    int prevLightInt = -1;  // Initialize with an invalid value
 
         int zoneOcc = (Integer)#occupancy;
         int zoneLightInt = (Integer)#lightingI;
@@ -16,7 +15,6 @@ reaction checkZoneWorkHours(: input int signal occupancy, input int signal light
 
 
 reaction checkZoneAfterHours(: input int signal occupancy, input int signal lightingI, signal LightONOFF){
-	 int prevLightInt = -1;  // Initialize with an invalid value
 		
 		{
 			int zoneOcc = (Integer)#occupancy;
