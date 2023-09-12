@@ -289,17 +289,18 @@ RotaryController(
 	    		        await(tableAlignedWithSensor);
 	    		        System.out.println("*Rotary - Aligned*");
 	    		    	send rotated(Boolean.TRUE);
-	    		    	waitl(3 s);
+	 
 	    		    	pause;
 	    				int i = 0;
 	    				trap(T){
 	    					loop{
 	    						i++;
-	    						if(i > 300)
+	    						if(i > 30)
 	    							exit(T);
 	    						pause;
 	    					}
 	    				}
+	    				waitl(5 s);
 	    				
 	    			}
 	    		
@@ -366,7 +367,10 @@ FillerController(
 	    		output Boolean channel fillerReady;
 	    		)->{
 	    			
-	    			signal bottleAtPos2;	    			
+	    			signal filler1,filler2,filler3,filler4;
+	    			
+	    			signal bottleAtPos2;	  
+	    			
 	    			send fillerReady(Boolean.TRUE);
 	    			
 	    			
@@ -417,6 +421,9 @@ FillerController(
 	    					}
 	    				}
 	    			}
+	    			
+	    			
+	    			
 	    			
 	    			||
 	    			{
