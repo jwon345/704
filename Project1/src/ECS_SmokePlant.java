@@ -32,8 +32,8 @@ public class ECS_SmokePlant extends ClockDomain{
         break;
       
       case 1 : 
-        if(sirenONOFF.getprestatus()){//sysj\ECS_plant.sysj line: 311, column: 28
-          sirenONOFF_E.setPresent();//sysj\ECS_plant.sysj line: 311, column: 40
+        if(sirenONOFF.getprestatus()){//sysj\ECS_plant.sysj line: 310, column: 28
+          sirenONOFF_E.setPresent();//sysj\ECS_plant.sysj line: 310, column: 40
           currsigs.addElement(sirenONOFF_E);
           active[53]=1;
           ends[53]=1;
@@ -58,10 +58,10 @@ public class ECS_SmokePlant extends ClockDomain{
         break;
       
       case 1 : 
-        if(sirenONOFF.getprestatus()){//sysj\ECS_plant.sysj line: 301, column: 13
-          stopAll.setPresent();//sysj\ECS_plant.sysj line: 303, column: 6
+        if(sirenONOFF.getprestatus()){//sysj\ECS_plant.sysj line: 300, column: 13
+          stopAll.setPresent();//sysj\ECS_plant.sysj line: 302, column: 6
           currsigs.addElement(stopAll);
-          System.out.println("SIREN - ON");//sysj\ECS_plant.sysj line: 304, column: 6
+          System.out.println("SIREN - ON");//sysj\ECS_plant.sysj line: 303, column: 6
           active[52]=1;
           ends[52]=1;
           tdone[52]=1;
@@ -78,8 +78,8 @@ public class ECS_SmokePlant extends ClockDomain{
 
   public void thread227282(int [] tdone, int [] ends){
         S227152=1;
-    if(sirenONOFF.getprestatus()){//sysj\ECS_plant.sysj line: 311, column: 28
-      sirenONOFF_E.setPresent();//sysj\ECS_plant.sysj line: 311, column: 40
+    if(sirenONOFF.getprestatus()){//sysj\ECS_plant.sysj line: 310, column: 28
+      sirenONOFF_E.setPresent();//sysj\ECS_plant.sysj line: 310, column: 40
       currsigs.addElement(sirenONOFF_E);
       active[53]=1;
       ends[53]=1;
@@ -94,10 +94,10 @@ public class ECS_SmokePlant extends ClockDomain{
 
   public void thread227281(int [] tdone, int [] ends){
         S227144=1;
-    if(sirenONOFF.getprestatus()){//sysj\ECS_plant.sysj line: 301, column: 13
-      stopAll.setPresent();//sysj\ECS_plant.sysj line: 303, column: 6
+    if(sirenONOFF.getprestatus()){//sysj\ECS_plant.sysj line: 300, column: 13
+      stopAll.setPresent();//sysj\ECS_plant.sysj line: 302, column: 6
       currsigs.addElement(stopAll);
-      System.out.println("SIREN - ON");//sysj\ECS_plant.sysj line: 304, column: 6
+      System.out.println("SIREN - ON");//sysj\ECS_plant.sysj line: 303, column: 6
       active[52]=1;
       ends[52]=1;
       tdone[52]=1;

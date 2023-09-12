@@ -9,7 +9,7 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
-import org.compsys704.States;
+import org.ECS.States;
 
 public class Zone2_Canvas extends JPanel {
 

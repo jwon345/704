@@ -24,12 +24,12 @@ import javax.swing.SpinnerNumberModel;
 import javax.swing.text.NumberFormatter;
 
 import org.OverallGUI.FillerCanvas;
-import org.compsys704.LoaderVizWorker;
-import org.compsys704.Ports;
-import org.compsys704.SignalCheckBoxClient;
-import org.compsys704.SignalServer;
-import org.compsys704.SignalSpinnerClient;
-import org.compsys704.SignalSpinner_BClient;
+import org.ECS.LoaderVizWorker;
+import org.ECS.Ports;
+import org.ECS.SignalCheckBoxClient;
+import org.ECS.SignalServer;
+import org.ECS.SignalSpinnerClient;
+import org.ECS.SignalSpinner_BClient;
 
 public class ECS_Window extends JFrame {
 	private JPanel zone1;
