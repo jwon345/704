@@ -1,0 +1,13 @@
+<System xmlns="http://systemjtechnology.com">
+    <SubSystem Name="ECS_plant" Local="true">
+		
+        
+        <ClockDomain Name="ECS_SmokePlant" Class="ECS_SmokePlant">
+			<iSignal Name="sirenONOFF" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10005" />
+			
+			<oSignal Name="detectSmoke" To="ECS_SmokeCD.detectSmoke" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10004" />
+			<oSignal Name="stopAll" To="ECS_SmokeCD.stopAll" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10004" />
+
+        </ClockDomain>
+    </SubSystem>  
+</System>

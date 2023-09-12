@@ -1,0 +1,20 @@
+
+
+
+
+
+
+ECS_SmokePlant(input signal sirenONOFF;
+			output signal detectSmoke, stopAll;) -> {
+			
+
+			{while(true){
+				present(sirenONOFF)
+					{
+					emit stopAll;
+					System.out.println("SIREN - ON");
+					} 
+					pause;
+				}
+			}
+}

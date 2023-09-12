@@ -1,0 +1,195 @@
+import run.ECS_GUI;
+	
+	ECS_HVACController (input int signal currentTime;
+						input int signal zoneOneSevenTemp, zoneTwoThreeTemp, zoneFourFiveSixTemp;
+						input int signal zoneOneSevenHumid, zoneTwoThreeHumid, zoneFourFiveSixHumid;
+						
+						output int signal zoneOneSevenFanONOFF, zoneTwoThreeFanONOFF, zoneFourFiveSixACONOFF;
+						output int signal zoneOneSevenHeaterONOFF, zoneTwoThreeHeaterONOFF;
+			) -> 
+
+
+{
+	
+	signal workhrs, afterhrs;
+	
+	int currentTemp = 30;
+	new Thread(new ECS_GUI()).start();
+	int previousHour = 8; // Initialize with an invalid hour value
+		
+	{loop{
+	    await(currentTime);
+	    int currentHour = (Integer)#currentTime;
+	    
+	        if (currentHour >= 9 && currentHour < 17) {
+	            emit workhrs; 
+	        } else {
+	            emit afterhrs; 
+	        }
+	    }
+	}
+	
+	||
+	
+	{
+		
+	int currentTemp = 30;
+	int currentHumidity = 50;
+	System.out.println("Current Temp For Zone 1,7:" + currentTemp);
+	
+	loop{
+	    	await(zoneOneSevenTemp);
+	    	int tempZoneOneSeven = (Integer)#zoneOneSevenTemp;
+	    	int humidityZoneOneSeven = (Integer)#zoneOneSevenHumid;
+	    	
+	    	if (tempZoneOneSeven > currentTemp) {
+	    		System.out.println("Turning ON AC to Heat Up for Zone 1,7");
+	    		currentTemp = tempZoneOneSeven;
+	    		System.out.println("Current Temp For Zone 1,7:" + currentTemp);
+	    	}
+	    	
+	    	if (tempZoneOneSeven < currentTemp) {
+	    		System.out.println("Turning ON AC to Cool Down for Zone 1,7");
+	    		currentTemp = tempZoneOneSeven;
+	    		System.out.println("Current Temp For Zone 1,7:" + currentTemp);
+	    	}
+	    	
+	    	if (humidityZoneOneSeven > currentHumidity) {
+	            System.out.println("Turning ON Heater to increase humidity for Zone 1,7");
+	            currentHumidity = humidityZoneOneSeven;
+	            System.out.println("Current Humidity For Zone 1,7:" + currentHumidity);
+	        } else if (humidityZoneOneSeven < currentHumidity) {
+	            System.out.println("Turning ON Fan to reduce humidity for Zone 1,7");
+	            currentHumidity = humidityZoneOneSeven;
+	            System.out.println("Current Humidity For Zone 1,7:" + currentHumidity);
+	        }
+	    	
+
+		}
+	}
+	
+	||
+	
+	{
+	int currentTemp = 30;
+	int currentHumidity = 50;
+	System.out.println("Current Temp For Zone 2,3:"+ currentTemp);
+	
+	
+		loop{
+	    	await(zoneTwoThreeTemp);
+	    	int tempzoneTwoThree = (Integer)#zoneTwoThreeTemp;
+	    	int humidityzoneTwoThree = (Integer)#zoneTwoThreeHumid;
+
+	    	if (tempzoneTwoThree > currentTemp) {
+	    		System.out.println("Turning ON Heater to Heat Up for Zone 2,3");
+	    		currentTemp = tempzoneTwoThree;
+	    		System.out.println("Current Temp:" + currentTemp);
+	    	}
+	    	
+	    	if (tempzoneTwoThree < currentTemp) {
+	    		System.out.println("Turning ON Fan to Cool Down for Zone 2,3");
+	    		currentTemp = tempzoneTwoThree;
+	    		System.out.println("Current Temp:" + currentTemp);
+	    	}
+	    	
+	    	if (humidityzoneTwoThree > currentHumidity) {
+	            System.out.println("Turning ON Heater to increase humidity for Zone 2,3");
+	            currentHumidity = humidityzoneTwoThree;
+	            System.out.println("Current Humidity For Zone 2,3: " + currentHumidity);
+	        } else if (humidityzoneTwoThree < currentHumidity) {
+	            System.out.println("Turning ON Fan to reduce humidity for Zone 2,3");
+	            currentHumidity = humidityzoneTwoThree;
+	            System.out.println("Current Humidity For Zone 2,3: " + currentHumidity);
+	        }
+		}
+	}
+	
+	||
+	
+	{
+	int currentTemp = 30;
+	int currentHumidity = 50;
+	System.out.println("Current Temp For Zone 4,5,6:"+ currentTemp);
+	
+	
+		loop{
+	    	await(zoneFourFiveSixTemp);
+	    	int tempzoneFourFiveSixTemp = (Integer)#zoneFourFiveSixTemp;
+	    	int humidityzoneFourFiveSix = (Integer)#zoneFourFiveSixHumid;
+	    	
+	    	if (tempzoneFourFiveSixTemp > currentTemp) {
+	    		System.out.println("Turning ON Heater to Heat Up for Zone 4,5,6");
+	    		currentTemp = tempzoneFourFiveSixTemp;
+	    		System.out.println("Current Temp:" + currentTemp);
+	    	}
+	    	
+	    	if (tempzoneFourFiveSixTemp < currentTemp) {
+	    		System.out.println("Turning ON Fan to Cool Down for Zone 4,5,6");
+	    		currentTemp = tempzoneFourFiveSixTemp;
+	    		System.out.println("Current Temp:" + currentTemp);
+	    	}
+	    	
+	    	if (humidityzoneFourFiveSix > currentHumidity) {
+	            System.out.println("Turning ON Heater to increase humidity for Zone 4,5,6");
+	            currentHumidity = humidityzoneFourFiveSix;
+	            System.out.println("Current Humidity For Zone 4,5,6: " + currentHumidity);
+	        } else if (humidityzoneFourFiveSix < currentHumidity) {
+	            System.out.println("Turning ON Fan to reduce humidity for Zone 4,5,6");
+	            currentHumidity = humidityzoneFourFiveSix;
+	            System.out.println("Current Humidity For Zone 4,5,6: " + currentHumidity);
+	        }
+		}
+	}
+			
+
+}	
+
+ECS_LightingController (input int signal zoneOneOccupancy, zoneTwoOccupancy, zoneThreeOccupancy, zoneFourOccupancy, zoneFiveOccupancy, zoneSixOccupancy, zoneSevenOccupancy;
+input int signal zoneOneLightingI, zoneTwoLightingI, zoneThreeLightingI, zoneFourLightingI, zoneFiveLightingI, zoneSixLightingI, zoneSevenLightingI;
+) -> {
+	
+	loop{
+		await(zoneOneOccupancy);
+		System.out.println("People In Zone One:" + #zoneOneOccupancy);
+		pause;
+		}
+	||
+	loop{
+		await(zoneOneLightingI);
+		System.out.println("Lighting In:" + #zoneOneLightingI);
+		pause;
+		}
+	
+	loop{
+		await(zoneTwoOccupancy);
+		System.out.println("People In Zone One:" + #zoneTwoOccupancy);
+		pause;
+		}
+	||
+	loop{
+		await(zoneTwoLightingI);
+		System.out.println("Lighting In:" + #zoneTwoLightingI);
+		pause;
+		}
+	
+}
+
+ECS_SmokeController (input signal detectSmoke, stopAll;
+					output signal sirenONOFF;
+) 
+-> {
+	{while(true){
+		present(detectSmoke)
+			{
+			emit sirenONOFF;
+			System.out.println("Fire Alert - Please Exit The Building");
+			} 
+			pause;
+		}
+	}
+}
+
+	
+
+

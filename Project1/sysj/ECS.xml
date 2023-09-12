@@ -1,0 +1,46 @@
+<System xmlns="http://systemjtechnology.com">
+    <SubSystem Name="ECSController" Local="true">
+      	<ClockDomain Name="ECS_HVACCD" Class="ECS_HVACController">
+		<iSignal Name="currentTime" 		Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+		
+		<iSignal Name="zoneOneSevenTemp" 	Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+		<iSignal Name="zoneTwoThreeTemp" 	Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+		<iSignal Name="zoneFourFiveSixTemp" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+		
+		<iSignal Name="zoneOneSevenHumid" 	Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+		<iSignal Name="zoneTwoThreeHumid" 	Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+		<iSignal Name="zoneFourFiveSixHumid" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+
+        </ClockDomain>
+        
+        <ClockDomain Name="ECS_LightingCD" Class="ECS_LightingController">
+		<iSignal Name="zoneOneOccupancy" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />
+		<iSignal Name="zoneTwoOccupancy" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />
+		<iSignal Name="zoneThreeOccupancy" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />
+		<iSignal Name="zoneFourOccupancy" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />
+		<iSignal Name="zoneFiveOccupancy" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />
+		<iSignal Name="zoneSixOccupancy" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />
+		<iSignal Name="zoneSevenOccupancy" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />
+		
+		<iSignal Name="zoneOneLightingI" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />
+		<iSignal Name="zoneTwoLightingI" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />
+		<iSignal Name="zoneThreeLightingI" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />
+		<iSignal Name="zoneFourLightingI" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />
+		<iSignal Name="zoneFiveLightingI" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />
+		<iSignal Name="zoneSixLightingI" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />
+		<iSignal Name="zoneSevenLightingI" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />
+		</ClockDomain>
+		
+		<ClockDomain Name="ECS_SmokeCD" Class="ECS_SmokeController">
+		<iSignal Name="detectSmoke" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10004" />
+		<iSignal Name="stopAll" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10004" />
+			
+		<oSignal Name="sirenONOFF" To="ECS_SmokePlant.sirenONOFF" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10005" />
+
+		</ClockDomain>
+		
+		
+		     
+
+    </SubSystem>  
+</System>
