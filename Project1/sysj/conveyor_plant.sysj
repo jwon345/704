@@ -86,7 +86,7 @@ FillerPlant(
 				{
 					loop{
 						await(valveInjectorOnOff);	
-						waitl(1 s);  // Delay before filling
+						waitl(500 ms);  // Delay before filling
 						emit dosUnitFilled;
 						pause;
 						System.out.println("*Filler - Bottle Filled (Pressure Can At Top) *");

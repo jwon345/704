@@ -149,7 +149,7 @@ ConveyorController(
                 }
                 ||
                 {
-                	waitl(2 s);
+                	waitl(500 ms);
                     System.out.println("*Conveyor - Waiting For Bottle at Pos1*");
                     await(bottleAtPos1); // Stop the motor if a bottle is at position 1 or has left position 5
                     System.out.println("*Conveyor - Bottle Reached Pos1*");
@@ -282,25 +282,23 @@ RotaryController(
 	    						}
 
 	    						trap(T){
-	    							{sustain rotaryTableTrigger;}||{waitl(300 ms); exit(T);}
+	    							{sustain rotaryTableTrigger;}||{waitl(100 ms); exit(T);}
 	    						}
 	    		        
 	    		        System.out.println("*Rotary - Waiting for Alignment*");
 	    		        await(tableAlignedWithSensor);
 	    		        System.out.println("*Rotary - Aligned*");
 	    		    	send rotated(Boolean.TRUE);
-	 
-	    		    	pause;
+	    		    	waitl(5 ms);
 	    				int i = 0;
 	    				trap(T){
 	    					loop{
 	    						i++;
-	    						if(i > 30)
+	    						if(i > 15)
 	    							exit(T);
 	    						pause;
 	    					}
 	    				}
-	    				waitl(5 s);
 	    				
 	    			}
 	    		
@@ -369,63 +367,171 @@ FillerController(
 	    			
 	    			signal filler1,filler2,filler3,filler4;
 	    			
+	    			int signal filler1_amount, filler2_amount, filler3_amount, filler4_amount;
+	    			int signal current_fill, total_fill;
+	    			
 	    			signal bottleAtPos2;	  
 	    			
 	    			send fillerReady(Boolean.TRUE);
 	    			
-	    			
 	    			{
-	    				loop{
-	    				    System.out.println("*Filler - Waiting For BottleAtPos2*");
-	    					await(bottleAtPos2);
-	    					send fillerReady(Boolean.FALSE);
-	    					waitl(2 s);  // Delay before filling
-	    					
-	    					System.out.println("*Filler - Bottle Arrived at Pos 2*");
+	    		        int current = 0;
+	    		        int total = 100;
+	    		        emit total_fill(total);
+	    		        emit current_fill(current);
+	    		        
+	    		        emit filler1_amount(25);
+	    		        emit filler2_amount(25);
+	    		        emit filler3_amount(25);
+	    		        emit filler4_amount(25);
+	    		        
+	    		        loop {
+	    		            System.out.println("*Filler - Waiting For BottleAtPos2*");
+	    		            await(bottleAtPos2);
+	    		            send fillerReady(Boolean.FALSE);
+	    		            waitl(2 s);  // Delay before filling
+	    		            
+	    		            System.out.println("*Filler - Bottle Arrived at Pos 2*");
+	    		            
+	    		            
+	    		            if ((#filler1_amount > 0) && (current + #filler1_amount <= total)) {
+	    		                // Filler process for filler1
+	    		                abort(dosUnitFilled) {
+	    		                    {
+	    		                        System.out.println("*Filler #1 - Valve Injector On*");
+	    		                        sustain valveInjectorOnOff;
+	    		                    }
+	    		                    ||
+	    		                    {
+	    		                        sustain dosUnitValveRetract;
+	    		                    }
+	    		                }
+	    		                abort(dosUnitEvac) {
+	    		                    {
+	    		                        System.out.println("*Filler #1 - Valve Inlet On*");
+	    		                        sustain valveInletOnOff;
+	    		                    }
+	    		                    ||
+	    		                    {
+	    		                        sustain dosUnitValveExtend;
+	    		                    }
+	    		                }
+	    		                
+	    		                System.out.println("*Filler #1 - Filled Amount: " + #filler1_amount);
+	    		                current += #filler1_amount;
+	    		                System.out.println("*Current Filled Amount: " + current);
+	    		                emit current_fill(current);
 
-	    					
-	    					
-	    					abort(dosUnitFilled){
-	    						{
-	    							System.out.println("*Filler - Valve Injector On*");
-	    							sustain valveInjectorOnOff;
-	    						}
-	    						||
-	    						{
-	    							sustain dosUnitValveRetract;
-	    						}
-	    					}
-	    					
-	    					abort(dosUnitEvac){
-	    						{
-	    							System.out.println("*Filler - Valve Inlet On*");
-	    							sustain valveInletOnOff;
-	    						}
-	    						||
-	    						{
-	    							sustain dosUnitValveExtend;
-	    						}
-	    					}
-	    					
-	    				
-	    					send fillerReady(Boolean.TRUE);
-	    					System.out.println("*Filler operation done");
-	    					
-	    					trap(T){ 
-	    						await(!bottleAtPos2);
-	    						loop{
-	    							present(bottleAtPos2){}
-	    							else{exit(T);}
-	    							pause;
-	    						}
-	    					}
-	    				}
-	    			}
-	    			
+	    		            }
+	    		            
+	    		            if ((#filler2_amount > 0) && (current + #filler2_amount <= total)) {
+	    		                // Filler process for filler2
+	    		                abort(dosUnitFilled) {
+	    		                    {
+	    		                        System.out.println("*Filler #2 - Valve Injector On*");
+	    		                        sustain valveInjectorOnOff;
+	    		                    }
+	    		                    ||
+	    		                    {
+	    		                        sustain dosUnitValveRetract;
+	    		                    }
+	    		                }
+	    		                abort(dosUnitEvac) {
+	    		                    {
+	    		                        System.out.println("*Filler #2 - Valve Inlet On*");
+	    		                        sustain valveInletOnOff;
+	    		                    }
+	    		                    ||
+	    		                    {
+	    		                        sustain dosUnitValveExtend;
+	    		                    }
+	    		                }
+	    		                
+	    		                System.out.println("*Filler #2 - Filled Amount: " + #filler2_amount);
+	    		                current += #filler2_amount;
+	    		                System.out.println("*Current Filled Amount: " + current);
+	    		                emit current_fill(current);
+
+	    		            }
+	    		            
+	    		            if ((#filler3_amount > 0) && (current + #filler3_amount <= total)) {
+	    		                // Filler process for filler3
+	    		                abort(dosUnitFilled) {
+	    		                    {
+	    		                        System.out.println("*Filler #3 - Valve Injector On*");
+	    		                        sustain valveInjectorOnOff;
+	    		                    }
+	    		                    ||
+	    		                    {
+	    		                        sustain dosUnitValveRetract;
+	    		                    }
+	    		                }
+	    		                abort(dosUnitEvac) {
+	    		                    {
+	    		                        System.out.println("*Filler #3 - Valve Inlet On*");
+	    		                        sustain valveInletOnOff;
+	    		                    }
+	    		                    ||
+	    		                    {
+	    		                        sustain dosUnitValveExtend;
+	    		                    }
+	    		                }
+	    		                
+	    		                System.out.println("*Filler #3 - Filled Amount: " + #filler3_amount);
+	    		                current += #filler3_amount;
+	    		                System.out.println("*Current Filled Amount: " + current);
+	    		                emit current_fill(current);
+	    		            }
+	    		            
+	    		            if ((#filler4_amount > 0) && (current + #filler4_amount <= total)) {
+	    		                // Filler process for filler4
+	    		                abort(dosUnitFilled) {
+	    		                    {
+	    		                        System.out.println("*Filler #4 - Valve Injector On*");
+	    		                        sustain valveInjectorOnOff;
+	    		                    }
+	    		                    ||
+	    		                    {
+	    		                        sustain dosUnitValveRetract;
+	    		                    }
+	    		                }
+	    		                abort(dosUnitEvac) {
+	    		                    {
+	    		                        System.out.println("*Filler #4 - Valve Inlet On*");
+	    		                        sustain valveInletOnOff;
+	    		                    }
+	    		                    ||
+	    		                    {
+	    		                        sustain dosUnitValveExtend;
+	    		                    }
+	    		                }
+	    		                
+	    		                System.out.println("*Filler #4 - Filled Amount: " + #filler4_amount);
+	    		                current += #filler4_amount;
+	    		                System.out.println("*Current Filled Amount: " + current);
+	    		                emit current_fill(current);
+
+	    		            }
+	    		            
+	    		            send fillerReady(Boolean.TRUE);
+	    		            System.out.println("*Filler operation done");
+	    		            
+	    		            trap(T) { 
+	    		                await(!bottleAtPos2);
+	    		                loop {
+	    		                    present(bottleAtPos2) {}
+	    		                    else { exit(T); }
+	    		                    pause;
+	    		                }
+	    		            }
+	    		        }
+	    		    }
+	    		
 	    			
 	    			
 	    			
 	    			||
+	    			
 	    			{
 	    					loop{
 	    						receive simFiller;
