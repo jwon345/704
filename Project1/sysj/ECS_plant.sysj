@@ -1,8 +1,209 @@
+import run.ECS_GUI;
 
 
+ECS_HVAC_Plant(input signal zoneOneSevenFanONOFF,zoneOneSevenHeaterONOFF,zoneTwoThreeFanONOFF,zoneTwoThreeHeaterONOFF,
+		zoneFourFiveSixACONOFF;
+		
+		output signal zoneOneSevenAtTempHumid, zoneTwoThreeAtTempHumid, zoneFourFiveSixAtTempHumid;
+		
+		) -> {
+
+			new Thread(new ECS_GUI()).start();
+
+			{
+			loop{
+					{
+						await(zoneOneSevenFanONOFF);
+						{
+							System.out.println("Zone(1,7) Fan - On");
+							emit zoneOneSevenAtTempHumid;
+						}
+					}
+				}
+			}
+			||
+			{
+			loop{
+					{
+						await(zoneOneSevenHeaterONOFF);
+						{
+						System.out.println("Zone(1,7) Heater - On");
+						emit zoneOneSevenAtTempHumid;
+						}
+					}
+				}
+			}
+			||
+			{
+			loop{
+					{
+						await(zoneTwoThreeFanONOFF);
+						{
+						System.out.println("Zone(2,3) Fan - On");
+						emit zoneTwoThreeAtTempHumid;
+						}
+				}
+			}
+			}
+			||
+			{
+			loop{
+			{
+			await(zoneTwoThreeHeaterONOFF);
+			{
+				System.out.println("Zone(2,3) Heater - On");
+				emit zoneTwoThreeAtTempHumid;
+			}
+			}
+			}
+			}
+			
+			||
+			{
+				loop{
+				{
+				await(zoneFourFiveSixACONOFF);
+				{
+					System.out.println("Zone(2,3) Heater - On");
+					emit zoneFourFiveSixAtTempHumid;
+				}
+				}
+				}
+				}
+				
+
+}
 
 
+ECS_LightingPlant(input signal zoneOneLightONOFF, zoneTwoLightONOFF, zoneThreeLightONOFF, zoneFourLightONOFF,
+		zoneFiveLightONOFF, zoneSixLightONOFF, zoneSevenLightONOFF;
 
+		input signal zoneOneWindowONOFF, zoneTwoWindowONOFF, zoneThreeWindowONOFF, zoneFourWindowONOFF, 
+		zoneFiveWindowONOFF, zoneSixWindowONOFF, zoneSevenWindowONOFF;) -> {
+			
+			{
+		        loop{
+		            await(zoneOneWindowONOFF);
+		            System.out.println("Work Hours - Zone 1 Detected Person and Intensity is Low");
+		        }
+		    }
+		    ||
+		    {
+		        loop{
+		            await(zoneTwoWindowONOFF);
+		            System.out.println("Work Hours - Zone 2 Detected Person and Intensity is Low");
+		        }
+		    }
+		    
+		    ||
+		    {
+		        loop{
+		            await(zoneThreeWindowONOFF);
+		            System.out.println("Work Hours - Zone 3 Detected Person and Intensity is Low");
+		        }
+		    }
+		    
+		    ||
+		    {
+		        loop{
+		            await(zoneFourWindowONOFF);
+		            System.out.println("Work Hours - Zone 4 Detected Person and Intensity is Low");
+		        }
+		    }
+		    
+		    ||
+		    {
+		        loop{
+		            await(zoneFiveWindowONOFF);
+		            System.out.println("Work Hours - Zone 5 Detected Person and Intensity is Low");
+		        }
+		    }
+		    
+		    ||
+		    {
+		        loop{
+		            await(zoneSixWindowONOFF);
+		            System.out.println("Work Hours - Zone 6 Detected Person and Intensity is Low");
+		        }
+		    }
+		    
+		    ||
+		    {
+		        loop{
+		            await(zoneSevenWindowONOFF);
+		            System.out.println("Work Hours - Zone 7 Detected Person and Intensity is Low");
+		        }
+		    }
+		    
+		    
+		    // LIGTHS
+		    
+		    
+		    
+		    ||
+		    {
+		        loop{
+		            await(zoneOneLightONOFF);
+		            System.out.println("After Hours - Zone 1 Detected Person and Intensity is Low");
+		        }
+		    }
+		    
+		    ||
+		    {
+		        loop{
+		            await(zoneTwoLightONOFF);
+		            System.out.println("After Hours - Zone 2 Detected Person and Intensity is Low");
+		        }
+		    }
+		    
+		    
+		    ||
+		    {
+		        loop{
+		            await(zoneThreeLightONOFF);
+		            System.out.println("After Hours - Zone 3 Detected Person and Intensity is Low");
+		        }
+		    }
+		    
+		    
+		    ||
+		    {
+		        loop{
+		            await(zoneFourLightONOFF);
+		            System.out.println("After Hours - Zone 4 Detected Person and Intensity is Low");
+		        }
+		    }
+		    
+		    
+		    ||
+		    {
+		        loop{
+		            await(zoneFiveLightONOFF);
+		            System.out.println("After Hours - Zone 5 Detected Person and Intensity is Low");
+		        }
+		    }
+		    
+		    
+		    ||
+		    {
+		        loop{
+		            await(zoneSixLightONOFF);
+		            System.out.println("After Hours - Zone 6 Detected Person and Intensity is Low");
+		        }
+		    }
+		    
+		    
+		    ||
+		    {
+		        loop{
+		            await(zoneSevenLightONOFF);
+		            System.out.println("After Hours - Zone 7 Detected Person and Intensity is Low");
+		        }
+		    }
+		    
+		    
+}
+			
 
 ECS_SmokePlant(input signal sirenONOFF;
 			output signal detectSmoke, stopAll;) -> {

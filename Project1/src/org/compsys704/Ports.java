@@ -14,7 +14,12 @@ public class Ports {
 	public static final String zoneFourFiveSixTemp = "ECS_HVACCD.zoneFourFiveSixTemp";
 	public static final String zoneFourFiveSixHumid = "ECS_HVACCD.zoneFourFiveSixHumid";
 	
+	public static final String zoneOneOccupancy_B = "ECS_HVACCD.zoneOneOccupancy_B";
+	public static final String zoneSevenOccupancy_B = "ECS_HVACCD.zoneSevenOccupancy_B";
+	
+	
 	public static final int PORT_ECS_LIGHTING_CONTROLLER = 10002;
+	public static final String CurrentTime_2 = "ECS_LightingCD.currentTime_2";
 	public static final String zoneOneOccupancy = "ECS_LightingCD.zoneOneOccupancy";
 	public static final String zoneTwoOccupancy = "ECS_LightingCD.zoneTwoOccupancy";
 	public static final String zoneThreeOccupancy = "ECS_LightingCD.zoneThreeOccupancy";

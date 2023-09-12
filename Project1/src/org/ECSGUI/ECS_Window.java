@@ -47,8 +47,8 @@ public class ECS_Window extends JFrame {
 
 	    // Current Time Panel
 	    JPanel timePanel = new JPanel();
-	    timePanel.setBorder(BorderFactory.createTitledBorder("Current Time (24 HR)"));
-	    
+	    timePanel.setBorder(BorderFactory.createTitledBorder("Current Time (24 HR) - Set A Time First"));
+	    timePanel.setPreferredSize(new Dimension(300, 50));	
 	    SpinnerDateModel spinnerDateModel = new SpinnerDateModel();
 	    JSpinner timeSpinner = new JSpinner(spinnerDateModel);
 	    JSpinner.DateEditor timeEditor = new JSpinner.DateEditor(timeSpinner, "HH");
@@ -57,6 +57,10 @@ public class ECS_Window extends JFrame {
 	    // Attach the SignalSpinnerClient to the timeSpinner
 	    SignalSpinnerClient ssc = new SignalSpinnerClient(Ports.PORT_ECS_HVAC_CONTROLLER, Ports.CurrentTime);
 	    timeSpinner.addChangeListener(ssc);
+	    
+	    SignalSpinnerClient two = new SignalSpinnerClient(Ports.PORT_ECS_LIGHTING_CONTROLLER, Ports.CurrentTime_2);
+	    timeSpinner.addChangeListener(two);
+
 	    
 	    timePanel.add(new JLabel("Set Time: "));
 	    timePanel.add(timeSpinner);
@@ -76,7 +80,7 @@ public class ECS_Window extends JFrame {
 
 	 // Zone - 1,7 Panel
 	    JPanel zone1Panel = new JPanel();
-	    zone1Panel.setBorder(BorderFactory.createTitledBorder("Zone - 1,7"));
+	    zone1Panel.setBorder(BorderFactory.createTitledBorder("Zone - 1,7 (Office Zone)"));
 	    zone1Panel.add(new JLabel("Temperature (°C): "));
 	    SpinnerNumberModel temp1Model = new SpinnerNumberModel(0, 0, 100, 1);
 	    JSpinner temp1Spinner = new JSpinner(temp1Model);
@@ -97,7 +101,7 @@ public class ECS_Window extends JFrame {
 
 	    // Zone - 2,3 Panel
 	    JPanel zone2Panel = new JPanel();
-	    zone2Panel.setBorder(BorderFactory.createTitledBorder("Zone - 2,3"));
+	    zone2Panel.setBorder(BorderFactory.createTitledBorder("Zone - 2,3 (Storage Zone)"));
 	    zone2Panel.add(new JLabel("Temperature (°C): "));
 	    SpinnerNumberModel temp2Model = new SpinnerNumberModel(0, 0, 100, 1);
 	    JSpinner temp2Spinner = new JSpinner(temp2Model);
@@ -118,7 +122,7 @@ public class ECS_Window extends JFrame {
 
 	    // Zone - 4,5,6 Panel
 	    JPanel zone3Panel = new JPanel();
-	    zone3Panel.setBorder(BorderFactory.createTitledBorder("Zone - 4,5,6"));
+	    zone3Panel.setBorder(BorderFactory.createTitledBorder("Zone - 4,5,6 (Manufacturing Zone)"));
 	    zone3Panel.add(new JLabel("Temperature (°C): "));
 	    SpinnerNumberModel temp3Model = new SpinnerNumberModel(0, 0, 100, 1);
 	    JSpinner temp3Spinner = new JSpinner(temp3Model);
@@ -150,6 +154,10 @@ public class ECS_Window extends JFrame {
 	    JSpinner occupancy1Spinner = new JSpinner(occupancy1Model);
 	    SignalSpinner_BClient occupancy1Client = new SignalSpinner_BClient(Ports.PORT_ECS_LIGHTING_CONTROLLER, Ports.zoneOneOccupancy);
 	    occupancy1Spinner.addChangeListener(occupancy1Client);
+	    
+	    SignalSpinner_BClient occupancy1bClient = new SignalSpinner_BClient(Ports.PORT_ECS_HVAC_CONTROLLER, Ports.zoneOneOccupancy_B);
+	    occupancy1Spinner.addChangeListener(occupancy1bClient);
+	    
 	    zone1OccupancyPanel.add(new JLabel("Occupancy (People): "));
 	    zone1OccupancyPanel.add(occupancy1Spinner);
 
@@ -284,8 +292,13 @@ public class ECS_Window extends JFrame {
 	    
 	    SpinnerNumberModel occupancy7Model = new SpinnerNumberModel(0, 0, 50, 1);
 	    JSpinner occupancy7Spinner = new JSpinner(occupancy7Model);
+	    
 	    SignalSpinner_BClient occupancy7Client = new SignalSpinner_BClient(Ports.PORT_ECS_LIGHTING_CONTROLLER, Ports.zoneSevenOccupancy);
 	    occupancy7Spinner.addChangeListener(occupancy7Client);
+	    
+	    SignalSpinner_BClient occupancy7bClient = new SignalSpinner_BClient(Ports.PORT_ECS_HVAC_CONTROLLER, Ports.zoneSevenOccupancy_B);
+	    occupancy7Spinner.addChangeListener(occupancy7bClient);
+	    
 	    zone7OccupancyPanel.add(new JLabel("Occupancy (People): "));
 	    zone7OccupancyPanel.add(occupancy7Spinner);
 	    
