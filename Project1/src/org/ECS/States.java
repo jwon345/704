@@ -3,14 +3,6 @@ package org.ECS;
 public class States {
 	public static volatile boolean sirenONOFF_E = false;
 	
-	public static volatile int zoneOneLightingI_E = 0;
-	public static volatile int zoneTwoLightingI_E = 0;
-	public static volatile int zoneThreeLightingI_E = 0;
-	public static volatile int zoneFourLightingI_E = 0;
-	public static volatile int zoneFiveLightingI_E = 0;
-	public static volatile int zoneSixLightingI_E = 0;
-	public static volatile int zoneSevenLightingI_E = 0;
-	    
 	public static volatile boolean zoneOneLightONOFF_E = false;
 	public static volatile boolean zoneTwoLightONOFF_E = false;
 	public static volatile boolean zoneThreeLightONOFF_E = false;
