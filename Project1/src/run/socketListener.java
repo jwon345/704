@@ -12,6 +12,10 @@ public class socketListener implements java.lang.Runnable{
     private BufferedReader in;
 	private final int socketPort = 1234; 
 
+	private int queTracking = 0;
+	private boolean readyNewBottle = true;
+
+
 	public void run()
 	{
         try {
@@ -30,19 +34,40 @@ public class socketListener implements java.lang.Runnable{
 			out = new PrintWriter(clientSocket.getOutputStream(), true);
 			in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 
-			out.println(States.BOTTLE_AT_POS1?"1":"0");
+//			out.println(readyNewBottle?"1":"0"); // response to API
+			
+			if ((readyNewBottle && !States.BOTTLE_AT_POS1))
+			{
+				out.println("1");
+			}
+			else
+			{
+				out.println("0");
+			}
+			
 			String message = in.readLine() + ":"; //append random chr to avoid ""
 			
 			if (message.contains("newBottle"))
 			{
 				// System.out.println("newBottle is here");
 	    		new SignalClient(Ports.PORT_CONVEYOR_CONTROLLER, Ports.DEPLOY_SIGNAL).actionPerformed(null);
+				readyNewBottle = false;
+				// queTracking = 1;
 			}
-			else
+//			else
+//			{
+//				// System.out.println("OtherReq");
+//                // new SignalClient2(10001, "ConveyorPlantCD.placedNewBottle").actionPerformed(null);
+//				continue;
+//			}
+
+			if (!readyNewBottle)
 			{
-				// System.out.println("OtherReq");
-                // new SignalClient2(10001, "ConveyorPlantCD.placedNewBottle").actionPerformed(null);
-				continue;
+				if ((!States.DEPLOY && !States.BOTTLE_AT_POS1)) 
+				{
+					readyNewBottle = true;
+			 		// System.out.println("new bottle ready");
+				}
 			}
 				
         }
