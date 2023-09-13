@@ -411,7 +411,7 @@ public class ECS_Window extends JFrame {
 	    lightingGuidePanel.setLayout(new BorderLayout());
 
 	    JTextArea lightingGuideInfo = new JTextArea();
-	    lightingGuideInfo.setText("If there is more than one person in the zone and lighting intensity is under 50%, the following will occur:\n- Daytime: Blinds will open.\n- Nighttime: Lights will turn on.");
+	    lightingGuideInfo.setText("If there is one person set intensity to 50% more than 1 set to 100% and 0 = 0 % the following will occur:\n- Daytime: Blinds will open.\n- Nighttime: Lights will turn on.");
 	    lightingGuideInfo.setEditable(false); 
 	    lightingGuideInfo.setWrapStyleWord(true); 
 	    lightingGuideInfo.setLineWrap(true); 
