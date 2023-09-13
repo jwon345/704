@@ -4,6 +4,7 @@ import com.systemj.Signal;
 import com.systemj.input_Channel;
 import com.systemj.output_Channel;
 import run.GUI;//sysj\conveyor_plant.sysj line: 1, column: 1
+import run.socketListener;//sysj\conveyor_plant.sysj line: 2, column: 1
 
 public class FillerPlant extends ClockDomain{
   public FillerPlant(String name){super(name);}
@@ -26,7 +27,7 @@ public class FillerPlant extends ClockDomain{
   public Signal bottleAtPos2E = new Signal("bottleAtPos2E", Signal.OUTPUT);
   public Signal dosUnitEvacE = new Signal("dosUnitEvacE", Signal.OUTPUT);
   public Signal dosUnitFilledE = new Signal("dosUnitFilledE", Signal.OUTPUT);
-  private long __start_thread_15;//sysj\conveyor_plant.sysj line: 86, column: 5
+  private long __start_thread_15;//sysj\conveyor_plant.sysj line: 87, column: 5
   private int S213690 = 1;
   private int S213629 = 1;
   private int S213477 = 1;
@@ -50,9 +51,9 @@ public class FillerPlant extends ClockDomain{
         break;
       
       case 1 : 
-        if(dosUnitFilled.getprestatus()){//sysj\conveyor_plant.sysj line: 116, column: 34
-          ;//sysj\conveyor_plant.sysj line: 116, column: 49
-          dosUnitFilledE.setPresent();//sysj\conveyor_plant.sysj line: 116, column: 50
+        if(dosUnitFilled.getprestatus()){//sysj\conveyor_plant.sysj line: 117, column: 34
+          ;//sysj\conveyor_plant.sysj line: 117, column: 49
+          dosUnitFilledE.setPresent();//sysj\conveyor_plant.sysj line: 117, column: 50
           currsigs.addElement(dosUnitFilledE);
           active[22]=1;
           ends[22]=1;
@@ -77,9 +78,9 @@ public class FillerPlant extends ClockDomain{
         break;
       
       case 1 : 
-        if(dosUnitEvac.getprestatus()){//sysj\conveyor_plant.sysj line: 114, column: 34
-          ;//sysj\conveyor_plant.sysj line: 114, column: 47
-          dosUnitEvacE.setPresent();//sysj\conveyor_plant.sysj line: 114, column: 48
+        if(dosUnitEvac.getprestatus()){//sysj\conveyor_plant.sysj line: 115, column: 34
+          ;//sysj\conveyor_plant.sysj line: 115, column: 47
+          dosUnitEvacE.setPresent();//sysj\conveyor_plant.sysj line: 115, column: 48
           currsigs.addElement(dosUnitEvacE);
           active[21]=1;
           ends[21]=1;
@@ -104,9 +105,9 @@ public class FillerPlant extends ClockDomain{
         break;
       
       case 1 : 
-        if(dosUnitValveExtend.getprestatus()){//sysj\conveyor_plant.sysj line: 112, column: 34
-          ;//sysj\conveyor_plant.sysj line: 112, column: 54
-          dosUnitValveExtendE.setPresent();//sysj\conveyor_plant.sysj line: 112, column: 55
+        if(dosUnitValveExtend.getprestatus()){//sysj\conveyor_plant.sysj line: 113, column: 34
+          ;//sysj\conveyor_plant.sysj line: 113, column: 54
+          dosUnitValveExtendE.setPresent();//sysj\conveyor_plant.sysj line: 113, column: 55
           currsigs.addElement(dosUnitValveExtendE);
           active[20]=1;
           ends[20]=1;
@@ -131,8 +132,8 @@ public class FillerPlant extends ClockDomain{
         break;
       
       case 1 : 
-        if(dosUnitValveRetract.getprestatus()){//sysj\conveyor_plant.sysj line: 110, column: 34
-          dosUnitValveRetractE.setPresent();//sysj\conveyor_plant.sysj line: 110, column: 55
+        if(dosUnitValveRetract.getprestatus()){//sysj\conveyor_plant.sysj line: 111, column: 34
+          dosUnitValveRetractE.setPresent();//sysj\conveyor_plant.sysj line: 111, column: 55
           currsigs.addElement(dosUnitValveRetractE);
           active[19]=1;
           ends[19]=1;
@@ -157,8 +158,8 @@ public class FillerPlant extends ClockDomain{
         break;
       
       case 1 : 
-        if(valveInletOnOff.getprestatus()){//sysj\conveyor_plant.sysj line: 108, column: 34
-          valveInletOnOffE.setPresent();//sysj\conveyor_plant.sysj line: 108, column: 51
+        if(valveInletOnOff.getprestatus()){//sysj\conveyor_plant.sysj line: 109, column: 34
+          valveInletOnOffE.setPresent();//sysj\conveyor_plant.sysj line: 109, column: 51
           currsigs.addElement(valveInletOnOffE);
           active[18]=1;
           ends[18]=1;
@@ -183,8 +184,8 @@ public class FillerPlant extends ClockDomain{
         break;
       
       case 1 : 
-        if(valveInjectorOnOff.getprestatus()){//sysj\conveyor_plant.sysj line: 106, column: 34
-          valveInjectorOnOffE.setPresent();//sysj\conveyor_plant.sysj line: 106, column: 54
+        if(valveInjectorOnOff.getprestatus()){//sysj\conveyor_plant.sysj line: 107, column: 34
+          valveInjectorOnOffE.setPresent();//sysj\conveyor_plant.sysj line: 107, column: 54
           currsigs.addElement(valveInjectorOnOffE);
           active[17]=1;
           ends[17]=1;
@@ -262,13 +263,13 @@ public class FillerPlant extends ClockDomain{
       case 1 : 
         switch(S213477){
           case 0 : 
-            if(valveInjectorOnOff.getprestatus()){//sysj\conveyor_plant.sysj line: 88, column: 13
+            if(valveInjectorOnOff.getprestatus()){//sysj\conveyor_plant.sysj line: 89, column: 13
               S213477=1;
-              __start_thread_15 = com.systemj.Timer.getMs();//sysj\conveyor_plant.sysj line: 86, column: 5
-              if(com.systemj.Timer.getMs() - __start_thread_15 >= 500){//sysj\conveyor_plant.sysj line: 86, column: 5
+              __start_thread_15 = com.systemj.Timer.getMs();//sysj\conveyor_plant.sysj line: 87, column: 5
+              if(com.systemj.Timer.getMs() - __start_thread_15 >= 500){//sysj\conveyor_plant.sysj line: 87, column: 5
                 ends[15]=2;
-                ;//sysj\conveyor_plant.sysj line: 86, column: 5
-                dosUnitFilled.setPresent();//sysj\conveyor_plant.sysj line: 90, column: 7
+                ;//sysj\conveyor_plant.sysj line: 87, column: 5
+                dosUnitFilled.setPresent();//sysj\conveyor_plant.sysj line: 91, column: 7
                 currsigs.addElement(dosUnitFilled);
                 S213477=2;
                 active[15]=1;
@@ -289,10 +290,10 @@ public class FillerPlant extends ClockDomain{
             break;
           
           case 1 : 
-            if(com.systemj.Timer.getMs() - __start_thread_15 >= 500){//sysj\conveyor_plant.sysj line: 86, column: 5
+            if(com.systemj.Timer.getMs() - __start_thread_15 >= 500){//sysj\conveyor_plant.sysj line: 87, column: 5
               ends[15]=2;
-              ;//sysj\conveyor_plant.sysj line: 86, column: 5
-              dosUnitFilled.setPresent();//sysj\conveyor_plant.sysj line: 90, column: 7
+              ;//sysj\conveyor_plant.sysj line: 87, column: 5
+              dosUnitFilled.setPresent();//sysj\conveyor_plant.sysj line: 91, column: 7
               currsigs.addElement(dosUnitFilled);
               S213477=2;
               active[15]=1;
@@ -308,7 +309,7 @@ public class FillerPlant extends ClockDomain{
           
           case 2 : 
             S213477=2;
-            System.out.println("*Filler - Bottle Filled (Pressure Can At Top) *");//sysj\conveyor_plant.sysj line: 92, column: 7
+            System.out.println("*Filler - Bottle Filled (Pressure Can At Top) *");//sysj\conveyor_plant.sysj line: 93, column: 7
             S213477=3;
             active[15]=1;
             ends[15]=1;
@@ -316,13 +317,13 @@ public class FillerPlant extends ClockDomain{
             break;
           
           case 3 : 
-            if(valveInletOnOff.getprestatus()){//sysj\conveyor_plant.sysj line: 93, column: 13
+            if(valveInletOnOff.getprestatus()){//sysj\conveyor_plant.sysj line: 94, column: 13
               S213477=4;
-              __start_thread_15 = com.systemj.Timer.getMs();//sysj\conveyor_plant.sysj line: 86, column: 5
-              if(com.systemj.Timer.getMs() - __start_thread_15 >= 500){//sysj\conveyor_plant.sysj line: 86, column: 5
+              __start_thread_15 = com.systemj.Timer.getMs();//sysj\conveyor_plant.sysj line: 87, column: 5
+              if(com.systemj.Timer.getMs() - __start_thread_15 >= 500){//sysj\conveyor_plant.sysj line: 87, column: 5
                 ends[15]=2;
-                ;//sysj\conveyor_plant.sysj line: 86, column: 5
-                dosUnitEvac.setPresent();//sysj\conveyor_plant.sysj line: 95, column: 7
+                ;//sysj\conveyor_plant.sysj line: 87, column: 5
+                dosUnitEvac.setPresent();//sysj\conveyor_plant.sysj line: 96, column: 7
                 currsigs.addElement(dosUnitEvac);
                 S213477=5;
                 active[15]=1;
@@ -343,10 +344,10 @@ public class FillerPlant extends ClockDomain{
             break;
           
           case 4 : 
-            if(com.systemj.Timer.getMs() - __start_thread_15 >= 500){//sysj\conveyor_plant.sysj line: 86, column: 5
+            if(com.systemj.Timer.getMs() - __start_thread_15 >= 500){//sysj\conveyor_plant.sysj line: 87, column: 5
               ends[15]=2;
-              ;//sysj\conveyor_plant.sysj line: 86, column: 5
-              dosUnitEvac.setPresent();//sysj\conveyor_plant.sysj line: 95, column: 7
+              ;//sysj\conveyor_plant.sysj line: 87, column: 5
+              dosUnitEvac.setPresent();//sysj\conveyor_plant.sysj line: 96, column: 7
               currsigs.addElement(dosUnitEvac);
               S213477=5;
               active[15]=1;
@@ -362,7 +363,7 @@ public class FillerPlant extends ClockDomain{
           
           case 5 : 
             S213477=5;
-            System.out.println("*Filler - Inlet Open (Pressure Can At Bottem) *");//sysj\conveyor_plant.sysj line: 97, column: 7
+            System.out.println("*Filler - Inlet Open (Pressure Can At Bottem) *");//sysj\conveyor_plant.sysj line: 98, column: 7
             S213477=0;
             active[15]=1;
             ends[15]=1;
@@ -377,9 +378,9 @@ public class FillerPlant extends ClockDomain{
 
   public void thread214762(int [] tdone, int [] ends){
         S213686=1;
-    if(dosUnitFilled.getprestatus()){//sysj\conveyor_plant.sysj line: 116, column: 34
-      ;//sysj\conveyor_plant.sysj line: 116, column: 49
-      dosUnitFilledE.setPresent();//sysj\conveyor_plant.sysj line: 116, column: 50
+    if(dosUnitFilled.getprestatus()){//sysj\conveyor_plant.sysj line: 117, column: 34
+      ;//sysj\conveyor_plant.sysj line: 117, column: 49
+      dosUnitFilledE.setPresent();//sysj\conveyor_plant.sysj line: 117, column: 50
       currsigs.addElement(dosUnitFilledE);
       active[22]=1;
       ends[22]=1;
@@ -394,9 +395,9 @@ public class FillerPlant extends ClockDomain{
 
   public void thread214761(int [] tdone, int [] ends){
         S213675=1;
-    if(dosUnitEvac.getprestatus()){//sysj\conveyor_plant.sysj line: 114, column: 34
-      ;//sysj\conveyor_plant.sysj line: 114, column: 47
-      dosUnitEvacE.setPresent();//sysj\conveyor_plant.sysj line: 114, column: 48
+    if(dosUnitEvac.getprestatus()){//sysj\conveyor_plant.sysj line: 115, column: 34
+      ;//sysj\conveyor_plant.sysj line: 115, column: 47
+      dosUnitEvacE.setPresent();//sysj\conveyor_plant.sysj line: 115, column: 48
       currsigs.addElement(dosUnitEvacE);
       active[21]=1;
       ends[21]=1;
@@ -411,9 +412,9 @@ public class FillerPlant extends ClockDomain{
 
   public void thread214760(int [] tdone, int [] ends){
         S213664=1;
-    if(dosUnitValveExtend.getprestatus()){//sysj\conveyor_plant.sysj line: 112, column: 34
-      ;//sysj\conveyor_plant.sysj line: 112, column: 54
-      dosUnitValveExtendE.setPresent();//sysj\conveyor_plant.sysj line: 112, column: 55
+    if(dosUnitValveExtend.getprestatus()){//sysj\conveyor_plant.sysj line: 113, column: 34
+      ;//sysj\conveyor_plant.sysj line: 113, column: 54
+      dosUnitValveExtendE.setPresent();//sysj\conveyor_plant.sysj line: 113, column: 55
       currsigs.addElement(dosUnitValveExtendE);
       active[20]=1;
       ends[20]=1;
@@ -428,8 +429,8 @@ public class FillerPlant extends ClockDomain{
 
   public void thread214759(int [] tdone, int [] ends){
         S213653=1;
-    if(dosUnitValveRetract.getprestatus()){//sysj\conveyor_plant.sysj line: 110, column: 34
-      dosUnitValveRetractE.setPresent();//sysj\conveyor_plant.sysj line: 110, column: 55
+    if(dosUnitValveRetract.getprestatus()){//sysj\conveyor_plant.sysj line: 111, column: 34
+      dosUnitValveRetractE.setPresent();//sysj\conveyor_plant.sysj line: 111, column: 55
       currsigs.addElement(dosUnitValveRetractE);
       active[19]=1;
       ends[19]=1;
@@ -444,8 +445,8 @@ public class FillerPlant extends ClockDomain{
 
   public void thread214758(int [] tdone, int [] ends){
         S213645=1;
-    if(valveInletOnOff.getprestatus()){//sysj\conveyor_plant.sysj line: 108, column: 34
-      valveInletOnOffE.setPresent();//sysj\conveyor_plant.sysj line: 108, column: 51
+    if(valveInletOnOff.getprestatus()){//sysj\conveyor_plant.sysj line: 109, column: 34
+      valveInletOnOffE.setPresent();//sysj\conveyor_plant.sysj line: 109, column: 51
       currsigs.addElement(valveInletOnOffE);
       active[18]=1;
       ends[18]=1;
@@ -460,8 +461,8 @@ public class FillerPlant extends ClockDomain{
 
   public void thread214757(int [] tdone, int [] ends){
         S213637=1;
-    if(valveInjectorOnOff.getprestatus()){//sysj\conveyor_plant.sysj line: 106, column: 34
-      valveInjectorOnOffE.setPresent();//sysj\conveyor_plant.sysj line: 106, column: 54
+    if(valveInjectorOnOff.getprestatus()){//sysj\conveyor_plant.sysj line: 107, column: 34
+      valveInjectorOnOffE.setPresent();//sysj\conveyor_plant.sysj line: 107, column: 54
       currsigs.addElement(valveInjectorOnOffE);
       active[17]=1;
       ends[17]=1;
