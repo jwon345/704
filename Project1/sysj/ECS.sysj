@@ -415,15 +415,29 @@ ECS_LightingController (
 
 ECS_SmokeController (input signal detectSmoke, stopAll;
 					output signal sirenONOFF;
+					output signal ReadySmoke;
 ) 
 -> {
 	{while(true){
 		present(detectSmoke)
-			{
-			emit sirenONOFF;
-			System.out.println("Fire Alert - Please Exit The Building");
-			} 
-			pause;
+		{
+		    trap(T) {
+		        {
+		            sustain sirenONOFF;  // This will keep the sirenONOFF signal active
+		        }
+		        ||
+		        {
+		            sustain ReadySmoke;  // This will keep the sirenONOFF signal active
+		        }
+		        ||
+		        {
+		            System.out.println("Fire Alert - Please Exit The Building");
+		            await(!detectSmoke);  // Wait until the smoke is no longer detected
+		            exit(T);  // Exit the trap once the smoke is cleared
+		        }
+		    }
+		}
+		pause;
 		}
 	}
 }

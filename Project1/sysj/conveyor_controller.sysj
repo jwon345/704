@@ -232,7 +232,7 @@ ConveyorController(
 
 
 RotaryController(
-	    input signal tableAlignedWithSensor, capOnBottleAtPos1;
+	    input signal tableAlignedWithSensor, capOnBottleAtPos1, ReadySmoke;
 	    output signal rotaryTableTrigger, bottleAtPos5E, bottleAtPos1E;
 	    
 	    input Boolean channel  convReady, fillerReady, capperReady, lidLoaderReady;
@@ -248,7 +248,12 @@ RotaryController(
 	    	receive lidLoaderReady;
 	    	{
 	    		loop{
-	    			
+	    				{
+    					await(!ReadySmoke);
+    					System.out.println("*Rotary - No Smoke/Fire*");
+    					}
+	    				||
+    				
 	    				{
 	    					await(fR);
 	    					System.out.println("*Rotary - Filler Ready*");
@@ -313,6 +318,7 @@ RotaryController(
 	    		}
 	    	
 	    	||
+
     		{
     			checkReady(:convReady, cvR)
     			||

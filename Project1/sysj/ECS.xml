@@ -76,6 +76,7 @@
 		<iSignal Name="stopAll" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.2" Port="30004" />
 			
 		<oSignal Name="sirenONOFF" To="ECS_SmokePlant.sirenONOFF" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.2" Port="30005" />
+		<oSignal Name="ReadySmoke" To="RotaryCD.ReadySmoke" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10002" />
 
 		</ClockDomain>
 		

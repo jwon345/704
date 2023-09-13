@@ -36,7 +36,8 @@
             <!-- Input Signals -->
             <iSignal Name="tableAlignedWithSensor" 	Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />
             <iSignal Name="capOnBottleAtPos1"  		Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />
-            
+           	<iSignal Name="ReadySmoke"  			Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10002" />
+
             <!-- Output Signals -->
             <oSignal Name="rotaryTableTrigger" 		To="RotaryPlant.rotaryTableTrigger"	Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10003" />              
 			
