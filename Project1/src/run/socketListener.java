@@ -12,7 +12,6 @@ public class socketListener implements java.lang.Runnable{
     private BufferedReader in;
 	private final int socketPort = 1234; 
 
-	private int queTracking = 0;
 	private boolean readyNewBottle = true;
 
 
@@ -35,10 +34,18 @@ public class socketListener implements java.lang.Runnable{
 			in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 
 //			out.println(readyNewBottle?"1":"0"); // response to API
+
 			
 			if ((readyNewBottle && !States.BOTTLE_AT_POS1))
 			{
-				out.println("1");
+				if (!States.BOTTLE_AT_POS2 && !States.BOTTLE_AT_POS3)
+				{
+					out.println("2");
+				}
+				else
+				{
+					out.println("1");
+				}
 			}
 			else
 			{
@@ -54,12 +61,6 @@ public class socketListener implements java.lang.Runnable{
 				readyNewBottle = false;
 				// queTracking = 1;
 			}
-//			else
-//			{
-//				// System.out.println("OtherReq");
-//                // new SignalClient2(10001, "ConveyorPlantCD.placedNewBottle").actionPerformed(null);
-//				continue;
-//			}
 
 			if (!readyNewBottle)
 			{
