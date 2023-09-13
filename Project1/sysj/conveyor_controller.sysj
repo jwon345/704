@@ -270,6 +270,7 @@ RotaryController(
 
 	    				
 	    				present(bottleAtPos5) {
+	    					waitl(2 s);
 	    							trap(T){ 
 	    								await(!bottleAtPos5);
 	    								loop{
@@ -289,16 +290,8 @@ RotaryController(
 	    		        await(tableAlignedWithSensor);
 	    		        System.out.println("*Rotary - Aligned*");
 	    		    	send rotated(Boolean.TRUE);
-	    		    	waitl(5 ms);
-	    				int i = 0;
-	    				trap(T){
-	    					loop{
-	    						i++;
-	    						if(i > 15)
-	    							exit(T);
-	    						pause;
-	    					}
-	    				}
+	    		    	waitl(10 ms);
+	    	
 	    				
 	    			}
 	    		

@@ -37,70 +37,70 @@ public class FillerController extends ClockDomain{
   private Signal current_fill_51;
   private Signal total_fill_51;
   private Signal bottleAtPos2_51;
-  private int current_thread_52;//sysj\conveyor_controller.sysj line: 382, column: 16
-  private int total_thread_52;//sysj\conveyor_controller.sysj line: 383, column: 16
-  private long __start_thread_52;//sysj\conveyor_controller.sysj line: 381, column: 9
-  private int S148479 = 1;
-  private int S148478 = 1;
-  private int S38262 = 1;
-  private int S38257 = 1;
-  private int S65709 = 1;
-  private int S38282 = 1;
-  private int S38292 = 1;
-  private int S38287 = 1;
-  private int S38442 = 1;
-  private int S38393 = 1;
-  private int S38398 = 1;
-  private int S38407 = 1;
-  private int S38412 = 1;
-  private int S38790 = 1;
-  private int S38741 = 1;
-  private int S38746 = 1;
-  private int S38755 = 1;
-  private int S38760 = 1;
-  private int S39254 = 1;
-  private int S39205 = 1;
-  private int S39210 = 1;
-  private int S39219 = 1;
-  private int S39224 = 1;
-  private int S39834 = 1;
-  private int S39785 = 1;
-  private int S39790 = 1;
-  private int S39799 = 1;
-  private int S39804 = 1;
-  private int S40480 = 1;
-  private int S40475 = 1;
-  private int S40795 = 1;
-  private int S65792 = 1;
-  private int S65736 = 1;
-  private int S65716 = 1;
-  private int S65711 = 1;
-  private int S65827 = 1;
-  private int S65803 = 1;
-  private int S65797 = 1;
-  private int S65800 = 1;
+  private int current_thread_52;//sysj\conveyor_controller.sysj line: 375, column: 16
+  private int total_thread_52;//sysj\conveyor_controller.sysj line: 376, column: 16
+  private long __start_thread_52;//sysj\conveyor_controller.sysj line: 374, column: 9
+  private int S146239 = 1;
+  private int S146238 = 1;
+  private int S36022 = 1;
+  private int S36017 = 1;
+  private int S63469 = 1;
+  private int S36042 = 1;
+  private int S36052 = 1;
+  private int S36047 = 1;
+  private int S36202 = 1;
+  private int S36153 = 1;
+  private int S36158 = 1;
+  private int S36167 = 1;
+  private int S36172 = 1;
+  private int S36550 = 1;
+  private int S36501 = 1;
+  private int S36506 = 1;
+  private int S36515 = 1;
+  private int S36520 = 1;
+  private int S37014 = 1;
+  private int S36965 = 1;
+  private int S36970 = 1;
+  private int S36979 = 1;
+  private int S36984 = 1;
+  private int S37594 = 1;
+  private int S37545 = 1;
+  private int S37550 = 1;
+  private int S37559 = 1;
+  private int S37564 = 1;
+  private int S38240 = 1;
+  private int S38235 = 1;
+  private int S38555 = 1;
+  private int S63552 = 1;
+  private int S63496 = 1;
+  private int S63476 = 1;
+  private int S63471 = 1;
+  private int S63587 = 1;
+  private int S63563 = 1;
+  private int S63557 = 1;
+  private int S63560 = 1;
   
   private int[] ends = new int[100];
   private int[] tdone = new int[100];
   
-  public void thread213105(int [] tdone, int [] ends){
-        S65800=1;
+  public void thread210860(int [] tdone, int [] ends){
+        S63560=1;
     active[72]=1;
     ends[72]=1;
     tdone[72]=1;
   }
 
-  public void thread213104(int [] tdone, int [] ends){
-        S65797=1;
-    bottleAtPos2E.setPresent();//sysj\conveyor_controller.sysj line: 568, column: 29
+  public void thread210859(int [] tdone, int [] ends){
+        S63557=1;
+    bottleAtPos2E.setPresent();//sysj\conveyor_controller.sysj line: 561, column: 29
     currsigs.addElement(bottleAtPos2E);
     active[71]=1;
     ends[71]=1;
     tdone[71]=1;
   }
 
-  public void thread213102(int [] tdone, int [] ends){
-        switch(S65800){
+  public void thread210857(int [] tdone, int [] ends){
+        switch(S63560){
       case 0 : 
         active[72]=0;
         ends[72]=0;
@@ -108,7 +108,7 @@ public class FillerController extends ClockDomain{
         break;
       
       case 1 : 
-        if(dosUnitEvac.getprestatus()){//sysj\conveyor_controller.sysj line: 572, column: 35
+        if(dosUnitEvac.getprestatus()){//sysj\conveyor_controller.sysj line: 565, column: 35
           ends[72]=2;
           tdone[72]=1;
         }
@@ -122,8 +122,8 @@ public class FillerController extends ClockDomain{
     }
   }
 
-  public void thread213101(int [] tdone, int [] ends){
-        switch(S65797){
+  public void thread210856(int [] tdone, int [] ends){
+        switch(S63557){
       case 0 : 
         active[71]=0;
         ends[71]=0;
@@ -131,7 +131,7 @@ public class FillerController extends ClockDomain{
         break;
       
       case 1 : 
-        bottleAtPos2E.setPresent();//sysj\conveyor_controller.sysj line: 568, column: 29
+        bottleAtPos2E.setPresent();//sysj\conveyor_controller.sysj line: 561, column: 29
         currsigs.addElement(bottleAtPos2E);
         active[71]=1;
         ends[71]=1;
@@ -141,8 +141,8 @@ public class FillerController extends ClockDomain{
     }
   }
 
-  public void thread213100(int [] tdone, int [] ends){
-        switch(S65827){
+  public void thread210855(int [] tdone, int [] ends){
+        switch(S63587){
       case 0 : 
         active[70]=0;
         ends[70]=0;
@@ -150,33 +150,33 @@ public class FillerController extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S65803){
+        switch(S63563){
           case 0 : 
-            thread213101(tdone,ends);
-            thread213102(tdone,ends);
-            int biggest213103 = 0;
-            if(ends[71]>=biggest213103){
-              biggest213103=ends[71];
+            thread210856(tdone,ends);
+            thread210857(tdone,ends);
+            int biggest210858 = 0;
+            if(ends[71]>=biggest210858){
+              biggest210858=ends[71];
             }
-            if(ends[72]>=biggest213103){
-              biggest213103=ends[72];
+            if(ends[72]>=biggest210858){
+              biggest210858=ends[72];
             }
-            if(biggest213103 == 1){
+            if(biggest210858 == 1){
               active[70]=1;
               ends[70]=1;
               tdone[70]=1;
             }
-            if(biggest213103 == 2){
+            if(biggest210858 == 2){
               ends[70]=2;
-              ;//sysj\conveyor_controller.sysj line: 566, column: 18
-              S65803=1;
+              ;//sysj\conveyor_controller.sysj line: 559, column: 18
+              S63563=1;
               active[70]=1;
               ends[70]=1;
               tdone[70]=1;
             }
             //FINXME code
-            if(biggest213103 == 0){
-              S65803=1;
+            if(biggest210858 == 0){
+              S63563=1;
               active[70]=1;
               ends[70]=1;
               tdone[70]=1;
@@ -184,26 +184,26 @@ public class FillerController extends ClockDomain{
             break;
           
           case 1 : 
-            S65803=1;
-            S65803=0;
-            if(bottleAtPos2_51.getprestatus()){//sysj\conveyor_controller.sysj line: 565, column: 26
-              thread213104(tdone,ends);
-              thread213105(tdone,ends);
-              int biggest213106 = 0;
-              if(ends[71]>=biggest213106){
-                biggest213106=ends[71];
+            S63563=1;
+            S63563=0;
+            if(bottleAtPos2_51.getprestatus()){//sysj\conveyor_controller.sysj line: 558, column: 26
+              thread210859(tdone,ends);
+              thread210860(tdone,ends);
+              int biggest210861 = 0;
+              if(ends[71]>=biggest210861){
+                biggest210861=ends[71];
               }
-              if(ends[72]>=biggest213106){
-                biggest213106=ends[72];
+              if(ends[72]>=biggest210861){
+                biggest210861=ends[72];
               }
-              if(biggest213106 == 1){
+              if(biggest210861 == 1){
                 active[70]=1;
                 ends[70]=1;
                 tdone[70]=1;
               }
             }
             else {
-              S65803=1;
+              S63563=1;
               active[70]=1;
               ends[70]=1;
               tdone[70]=1;
@@ -216,8 +216,8 @@ public class FillerController extends ClockDomain{
     }
   }
 
-  public void thread213099(int [] tdone, int [] ends){
-        switch(S65792){
+  public void thread210854(int [] tdone, int [] ends){
+        switch(S63552){
       case 0 : 
         active[69]=0;
         ends[69]=0;
@@ -225,37 +225,37 @@ public class FillerController extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S65736){
+        switch(S63496){
           case 0 : 
-            switch(S65716){
+            switch(S63476){
               case 0 : 
-                if(!simFiller_in.isPartnerPresent() || simFiller_in.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 554, column: 12
-                  simFiller_in.setACK(false);//sysj\conveyor_controller.sysj line: 554, column: 12
-                  S65716=1;
+                if(!simFiller_in.isPartnerPresent() || simFiller_in.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 547, column: 12
+                  simFiller_in.setACK(false);//sysj\conveyor_controller.sysj line: 547, column: 12
+                  S63476=1;
                   active[69]=1;
                   ends[69]=1;
                   tdone[69]=1;
                 }
                 else {
-                  switch(S65711){
+                  switch(S63471){
                     case 0 : 
-                      if(!simFiller_in.isREQ()){//sysj\conveyor_controller.sysj line: 554, column: 12
-                        simFiller_in.setACK(true);//sysj\conveyor_controller.sysj line: 554, column: 12
-                        S65711=1;
-                        if(simFiller_in.isREQ()){//sysj\conveyor_controller.sysj line: 554, column: 12
-                          simFiller_in.setACK(false);//sysj\conveyor_controller.sysj line: 554, column: 12
+                      if(!simFiller_in.isREQ()){//sysj\conveyor_controller.sysj line: 547, column: 12
+                        simFiller_in.setACK(true);//sysj\conveyor_controller.sysj line: 547, column: 12
+                        S63471=1;
+                        if(simFiller_in.isREQ()){//sysj\conveyor_controller.sysj line: 547, column: 12
+                          simFiller_in.setACK(false);//sysj\conveyor_controller.sysj line: 547, column: 12
                           ends[69]=2;
-                          ;//sysj\conveyor_controller.sysj line: 554, column: 12
-                          if((Boolean)(simFiller_in.getVal() == null ? null : ((Boolean)simFiller_in.getVal()))){//sysj\conveyor_controller.sysj line: 555, column: 15
-                            bottleAtPos2_51.setPresent();//sysj\conveyor_controller.sysj line: 556, column: 13
+                          ;//sysj\conveyor_controller.sysj line: 547, column: 12
+                          if((Boolean)(simFiller_in.getVal() == null ? null : ((Boolean)simFiller_in.getVal()))){//sysj\conveyor_controller.sysj line: 548, column: 15
+                            bottleAtPos2_51.setPresent();//sysj\conveyor_controller.sysj line: 549, column: 13
                             currsigs.addElement(bottleAtPos2_51);
-                            S65736=1;
+                            S63496=1;
                             active[69]=1;
                             ends[69]=1;
                             tdone[69]=1;
                           }
                           else {
-                            S65736=1;
+                            S63496=1;
                             active[69]=1;
                             ends[69]=1;
                             tdone[69]=1;
@@ -275,20 +275,20 @@ public class FillerController extends ClockDomain{
                       break;
                     
                     case 1 : 
-                      if(simFiller_in.isREQ()){//sysj\conveyor_controller.sysj line: 554, column: 12
-                        simFiller_in.setACK(false);//sysj\conveyor_controller.sysj line: 554, column: 12
+                      if(simFiller_in.isREQ()){//sysj\conveyor_controller.sysj line: 547, column: 12
+                        simFiller_in.setACK(false);//sysj\conveyor_controller.sysj line: 547, column: 12
                         ends[69]=2;
-                        ;//sysj\conveyor_controller.sysj line: 554, column: 12
-                        if((Boolean)(simFiller_in.getVal() == null ? null : ((Boolean)simFiller_in.getVal()))){//sysj\conveyor_controller.sysj line: 555, column: 15
-                          bottleAtPos2_51.setPresent();//sysj\conveyor_controller.sysj line: 556, column: 13
+                        ;//sysj\conveyor_controller.sysj line: 547, column: 12
+                        if((Boolean)(simFiller_in.getVal() == null ? null : ((Boolean)simFiller_in.getVal()))){//sysj\conveyor_controller.sysj line: 548, column: 15
+                          bottleAtPos2_51.setPresent();//sysj\conveyor_controller.sysj line: 549, column: 13
                           currsigs.addElement(bottleAtPos2_51);
-                          S65736=1;
+                          S63496=1;
                           active[69]=1;
                           ends[69]=1;
                           tdone[69]=1;
                         }
                         else {
-                          S65736=1;
+                          S63496=1;
                           active[69]=1;
                           ends[69]=1;
                           tdone[69]=1;
@@ -306,34 +306,34 @@ public class FillerController extends ClockDomain{
                 break;
               
               case 1 : 
-                S65716=1;
-                S65716=0;
-                if(!simFiller_in.isPartnerPresent() || simFiller_in.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 554, column: 12
-                  simFiller_in.setACK(false);//sysj\conveyor_controller.sysj line: 554, column: 12
-                  S65716=1;
+                S63476=1;
+                S63476=0;
+                if(!simFiller_in.isPartnerPresent() || simFiller_in.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 547, column: 12
+                  simFiller_in.setACK(false);//sysj\conveyor_controller.sysj line: 547, column: 12
+                  S63476=1;
                   active[69]=1;
                   ends[69]=1;
                   tdone[69]=1;
                 }
                 else {
-                  S65711=0;
-                  if(!simFiller_in.isREQ()){//sysj\conveyor_controller.sysj line: 554, column: 12
-                    simFiller_in.setACK(true);//sysj\conveyor_controller.sysj line: 554, column: 12
-                    S65711=1;
-                    if(simFiller_in.isREQ()){//sysj\conveyor_controller.sysj line: 554, column: 12
-                      simFiller_in.setACK(false);//sysj\conveyor_controller.sysj line: 554, column: 12
+                  S63471=0;
+                  if(!simFiller_in.isREQ()){//sysj\conveyor_controller.sysj line: 547, column: 12
+                    simFiller_in.setACK(true);//sysj\conveyor_controller.sysj line: 547, column: 12
+                    S63471=1;
+                    if(simFiller_in.isREQ()){//sysj\conveyor_controller.sysj line: 547, column: 12
+                      simFiller_in.setACK(false);//sysj\conveyor_controller.sysj line: 547, column: 12
                       ends[69]=2;
-                      ;//sysj\conveyor_controller.sysj line: 554, column: 12
-                      if((Boolean)(simFiller_in.getVal() == null ? null : ((Boolean)simFiller_in.getVal()))){//sysj\conveyor_controller.sysj line: 555, column: 15
-                        bottleAtPos2_51.setPresent();//sysj\conveyor_controller.sysj line: 556, column: 13
+                      ;//sysj\conveyor_controller.sysj line: 547, column: 12
+                      if((Boolean)(simFiller_in.getVal() == null ? null : ((Boolean)simFiller_in.getVal()))){//sysj\conveyor_controller.sysj line: 548, column: 15
+                        bottleAtPos2_51.setPresent();//sysj\conveyor_controller.sysj line: 549, column: 13
                         currsigs.addElement(bottleAtPos2_51);
-                        S65736=1;
+                        S63496=1;
                         active[69]=1;
                         ends[69]=1;
                         tdone[69]=1;
                       }
                       else {
-                        S65736=1;
+                        S63496=1;
                         active[69]=1;
                         ends[69]=1;
                         tdone[69]=1;
@@ -357,35 +357,35 @@ public class FillerController extends ClockDomain{
             break;
           
           case 1 : 
-            S65736=1;
-            S65736=0;
-            S65716=0;
-            if(!simFiller_in.isPartnerPresent() || simFiller_in.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 554, column: 12
-              simFiller_in.setACK(false);//sysj\conveyor_controller.sysj line: 554, column: 12
-              S65716=1;
+            S63496=1;
+            S63496=0;
+            S63476=0;
+            if(!simFiller_in.isPartnerPresent() || simFiller_in.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 547, column: 12
+              simFiller_in.setACK(false);//sysj\conveyor_controller.sysj line: 547, column: 12
+              S63476=1;
               active[69]=1;
               ends[69]=1;
               tdone[69]=1;
             }
             else {
-              S65711=0;
-              if(!simFiller_in.isREQ()){//sysj\conveyor_controller.sysj line: 554, column: 12
-                simFiller_in.setACK(true);//sysj\conveyor_controller.sysj line: 554, column: 12
-                S65711=1;
-                if(simFiller_in.isREQ()){//sysj\conveyor_controller.sysj line: 554, column: 12
-                  simFiller_in.setACK(false);//sysj\conveyor_controller.sysj line: 554, column: 12
+              S63471=0;
+              if(!simFiller_in.isREQ()){//sysj\conveyor_controller.sysj line: 547, column: 12
+                simFiller_in.setACK(true);//sysj\conveyor_controller.sysj line: 547, column: 12
+                S63471=1;
+                if(simFiller_in.isREQ()){//sysj\conveyor_controller.sysj line: 547, column: 12
+                  simFiller_in.setACK(false);//sysj\conveyor_controller.sysj line: 547, column: 12
                   ends[69]=2;
-                  ;//sysj\conveyor_controller.sysj line: 554, column: 12
-                  if((Boolean)(simFiller_in.getVal() == null ? null : ((Boolean)simFiller_in.getVal()))){//sysj\conveyor_controller.sysj line: 555, column: 15
-                    bottleAtPos2_51.setPresent();//sysj\conveyor_controller.sysj line: 556, column: 13
+                  ;//sysj\conveyor_controller.sysj line: 547, column: 12
+                  if((Boolean)(simFiller_in.getVal() == null ? null : ((Boolean)simFiller_in.getVal()))){//sysj\conveyor_controller.sysj line: 548, column: 15
+                    bottleAtPos2_51.setPresent();//sysj\conveyor_controller.sysj line: 549, column: 13
                     currsigs.addElement(bottleAtPos2_51);
-                    S65736=1;
+                    S63496=1;
                     active[69]=1;
                     ends[69]=1;
                     tdone[69]=1;
                   }
                   else {
-                    S65736=1;
+                    S63496=1;
                     active[69]=1;
                     ends[69]=1;
                     tdone[69]=1;
@@ -411,8 +411,8 @@ public class FillerController extends ClockDomain{
     }
   }
 
-  public void thread213097(int [] tdone, int [] ends){
-        switch(S39804){
+  public void thread210852(int [] tdone, int [] ends){
+        switch(S37564){
       case 0 : 
         active[68]=0;
         ends[68]=0;
@@ -420,7 +420,7 @@ public class FillerController extends ClockDomain{
         break;
       
       case 1 : 
-        dosUnitValveExtend.setPresent();//sysj\conveyor_controller.sysj line: 520, column: 32
+        dosUnitValveExtend.setPresent();//sysj\conveyor_controller.sysj line: 513, column: 32
         currsigs.addElement(dosUnitValveExtend);
         active[68]=1;
         ends[68]=1;
@@ -430,8 +430,8 @@ public class FillerController extends ClockDomain{
     }
   }
 
-  public void thread213096(int [] tdone, int [] ends){
-        switch(S39799){
+  public void thread210851(int [] tdone, int [] ends){
+        switch(S37559){
       case 0 : 
         active[67]=0;
         ends[67]=0;
@@ -439,7 +439,7 @@ public class FillerController extends ClockDomain{
         break;
       
       case 1 : 
-        valveInletOnOff.setPresent();//sysj\conveyor_controller.sysj line: 516, column: 32
+        valveInletOnOff.setPresent();//sysj\conveyor_controller.sysj line: 509, column: 32
         currsigs.addElement(valveInletOnOff);
         active[67]=1;
         ends[67]=1;
@@ -449,27 +449,27 @@ public class FillerController extends ClockDomain{
     }
   }
 
-  public void thread213094(int [] tdone, int [] ends){
-        S39804=1;
-    dosUnitValveExtend.setPresent();//sysj\conveyor_controller.sysj line: 520, column: 32
+  public void thread210849(int [] tdone, int [] ends){
+        S37564=1;
+    dosUnitValveExtend.setPresent();//sysj\conveyor_controller.sysj line: 513, column: 32
     currsigs.addElement(dosUnitValveExtend);
     active[68]=1;
     ends[68]=1;
     tdone[68]=1;
   }
 
-  public void thread213093(int [] tdone, int [] ends){
-        S39799=1;
-    System.out.println("*Filler #4 - Valve Inlet On*");//sysj\conveyor_controller.sysj line: 515, column: 32
-    valveInletOnOff.setPresent();//sysj\conveyor_controller.sysj line: 516, column: 32
+  public void thread210848(int [] tdone, int [] ends){
+        S37559=1;
+    System.out.println("*Filler #4 - Valve Inlet On*");//sysj\conveyor_controller.sysj line: 508, column: 32
+    valveInletOnOff.setPresent();//sysj\conveyor_controller.sysj line: 509, column: 32
     currsigs.addElement(valveInletOnOff);
     active[67]=1;
     ends[67]=1;
     tdone[67]=1;
   }
 
-  public void thread213091(int [] tdone, int [] ends){
-        switch(S39790){
+  public void thread210846(int [] tdone, int [] ends){
+        switch(S37550){
       case 0 : 
         active[66]=0;
         ends[66]=0;
@@ -477,7 +477,7 @@ public class FillerController extends ClockDomain{
         break;
       
       case 1 : 
-        dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 510, column: 32
+        dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 503, column: 32
         currsigs.addElement(dosUnitValveRetract);
         active[66]=1;
         ends[66]=1;
@@ -487,8 +487,8 @@ public class FillerController extends ClockDomain{
     }
   }
 
-  public void thread213090(int [] tdone, int [] ends){
-        switch(S39785){
+  public void thread210845(int [] tdone, int [] ends){
+        switch(S37545){
       case 0 : 
         active[65]=0;
         ends[65]=0;
@@ -496,7 +496,7 @@ public class FillerController extends ClockDomain{
         break;
       
       case 1 : 
-        valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 506, column: 32
+        valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 499, column: 32
         currsigs.addElement(valveInjectorOnOff);
         active[65]=1;
         ends[65]=1;
@@ -506,46 +506,46 @@ public class FillerController extends ClockDomain{
     }
   }
 
-  public void thread213088(int [] tdone, int [] ends){
-        S39804=1;
-    dosUnitValveExtend.setPresent();//sysj\conveyor_controller.sysj line: 520, column: 32
+  public void thread210843(int [] tdone, int [] ends){
+        S37564=1;
+    dosUnitValveExtend.setPresent();//sysj\conveyor_controller.sysj line: 513, column: 32
     currsigs.addElement(dosUnitValveExtend);
     active[68]=1;
     ends[68]=1;
     tdone[68]=1;
   }
 
-  public void thread213087(int [] tdone, int [] ends){
-        S39799=1;
-    System.out.println("*Filler #4 - Valve Inlet On*");//sysj\conveyor_controller.sysj line: 515, column: 32
-    valveInletOnOff.setPresent();//sysj\conveyor_controller.sysj line: 516, column: 32
+  public void thread210842(int [] tdone, int [] ends){
+        S37559=1;
+    System.out.println("*Filler #4 - Valve Inlet On*");//sysj\conveyor_controller.sysj line: 508, column: 32
+    valveInletOnOff.setPresent();//sysj\conveyor_controller.sysj line: 509, column: 32
     currsigs.addElement(valveInletOnOff);
     active[67]=1;
     ends[67]=1;
     tdone[67]=1;
   }
 
-  public void thread213085(int [] tdone, int [] ends){
-        S39790=1;
-    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 510, column: 32
+  public void thread210840(int [] tdone, int [] ends){
+        S37550=1;
+    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 503, column: 32
     currsigs.addElement(dosUnitValveRetract);
     active[66]=1;
     ends[66]=1;
     tdone[66]=1;
   }
 
-  public void thread213084(int [] tdone, int [] ends){
-        S39785=1;
-    System.out.println("*Filler #4 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 505, column: 32
-    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 506, column: 32
+  public void thread210839(int [] tdone, int [] ends){
+        S37545=1;
+    System.out.println("*Filler #4 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 498, column: 32
+    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 499, column: 32
     currsigs.addElement(valveInjectorOnOff);
     active[65]=1;
     ends[65]=1;
     tdone[65]=1;
   }
 
-  public void thread213082(int [] tdone, int [] ends){
-        switch(S39224){
+  public void thread210837(int [] tdone, int [] ends){
+        switch(S36984){
       case 0 : 
         active[64]=0;
         ends[64]=0;
@@ -553,7 +553,7 @@ public class FillerController extends ClockDomain{
         break;
       
       case 1 : 
-        dosUnitValveExtend.setPresent();//sysj\conveyor_controller.sysj line: 491, column: 32
+        dosUnitValveExtend.setPresent();//sysj\conveyor_controller.sysj line: 484, column: 32
         currsigs.addElement(dosUnitValveExtend);
         active[64]=1;
         ends[64]=1;
@@ -563,8 +563,8 @@ public class FillerController extends ClockDomain{
     }
   }
 
-  public void thread213081(int [] tdone, int [] ends){
-        switch(S39219){
+  public void thread210836(int [] tdone, int [] ends){
+        switch(S36979){
       case 0 : 
         active[63]=0;
         ends[63]=0;
@@ -572,7 +572,7 @@ public class FillerController extends ClockDomain{
         break;
       
       case 1 : 
-        valveInletOnOff.setPresent();//sysj\conveyor_controller.sysj line: 487, column: 32
+        valveInletOnOff.setPresent();//sysj\conveyor_controller.sysj line: 480, column: 32
         currsigs.addElement(valveInletOnOff);
         active[63]=1;
         ends[63]=1;
@@ -582,46 +582,46 @@ public class FillerController extends ClockDomain{
     }
   }
 
-  public void thread213079(int [] tdone, int [] ends){
-        S39790=1;
-    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 510, column: 32
+  public void thread210834(int [] tdone, int [] ends){
+        S37550=1;
+    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 503, column: 32
     currsigs.addElement(dosUnitValveRetract);
     active[66]=1;
     ends[66]=1;
     tdone[66]=1;
   }
 
-  public void thread213078(int [] tdone, int [] ends){
-        S39785=1;
-    System.out.println("*Filler #4 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 505, column: 32
-    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 506, column: 32
+  public void thread210833(int [] tdone, int [] ends){
+        S37545=1;
+    System.out.println("*Filler #4 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 498, column: 32
+    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 499, column: 32
     currsigs.addElement(valveInjectorOnOff);
     active[65]=1;
     ends[65]=1;
     tdone[65]=1;
   }
 
-  public void thread213076(int [] tdone, int [] ends){
-        S39224=1;
-    dosUnitValveExtend.setPresent();//sysj\conveyor_controller.sysj line: 491, column: 32
+  public void thread210831(int [] tdone, int [] ends){
+        S36984=1;
+    dosUnitValveExtend.setPresent();//sysj\conveyor_controller.sysj line: 484, column: 32
     currsigs.addElement(dosUnitValveExtend);
     active[64]=1;
     ends[64]=1;
     tdone[64]=1;
   }
 
-  public void thread213075(int [] tdone, int [] ends){
-        S39219=1;
-    System.out.println("*Filler #3 - Valve Inlet On*");//sysj\conveyor_controller.sysj line: 486, column: 32
-    valveInletOnOff.setPresent();//sysj\conveyor_controller.sysj line: 487, column: 32
+  public void thread210830(int [] tdone, int [] ends){
+        S36979=1;
+    System.out.println("*Filler #3 - Valve Inlet On*");//sysj\conveyor_controller.sysj line: 479, column: 32
+    valveInletOnOff.setPresent();//sysj\conveyor_controller.sysj line: 480, column: 32
     currsigs.addElement(valveInletOnOff);
     active[63]=1;
     ends[63]=1;
     tdone[63]=1;
   }
 
-  public void thread213073(int [] tdone, int [] ends){
-        switch(S39210){
+  public void thread210828(int [] tdone, int [] ends){
+        switch(S36970){
       case 0 : 
         active[62]=0;
         ends[62]=0;
@@ -629,7 +629,7 @@ public class FillerController extends ClockDomain{
         break;
       
       case 1 : 
-        dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 481, column: 32
+        dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 474, column: 32
         currsigs.addElement(dosUnitValveRetract);
         active[62]=1;
         ends[62]=1;
@@ -639,8 +639,8 @@ public class FillerController extends ClockDomain{
     }
   }
 
-  public void thread213072(int [] tdone, int [] ends){
-        switch(S39205){
+  public void thread210827(int [] tdone, int [] ends){
+        switch(S36965){
       case 0 : 
         active[61]=0;
         ends[61]=0;
@@ -648,7 +648,7 @@ public class FillerController extends ClockDomain{
         break;
       
       case 1 : 
-        valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 477, column: 32
+        valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 470, column: 32
         currsigs.addElement(valveInjectorOnOff);
         active[61]=1;
         ends[61]=1;
@@ -658,65 +658,65 @@ public class FillerController extends ClockDomain{
     }
   }
 
-  public void thread213070(int [] tdone, int [] ends){
-        S39224=1;
-    dosUnitValveExtend.setPresent();//sysj\conveyor_controller.sysj line: 491, column: 32
+  public void thread210825(int [] tdone, int [] ends){
+        S36984=1;
+    dosUnitValveExtend.setPresent();//sysj\conveyor_controller.sysj line: 484, column: 32
     currsigs.addElement(dosUnitValveExtend);
     active[64]=1;
     ends[64]=1;
     tdone[64]=1;
   }
 
-  public void thread213069(int [] tdone, int [] ends){
-        S39219=1;
-    System.out.println("*Filler #3 - Valve Inlet On*");//sysj\conveyor_controller.sysj line: 486, column: 32
-    valveInletOnOff.setPresent();//sysj\conveyor_controller.sysj line: 487, column: 32
+  public void thread210824(int [] tdone, int [] ends){
+        S36979=1;
+    System.out.println("*Filler #3 - Valve Inlet On*");//sysj\conveyor_controller.sysj line: 479, column: 32
+    valveInletOnOff.setPresent();//sysj\conveyor_controller.sysj line: 480, column: 32
     currsigs.addElement(valveInletOnOff);
     active[63]=1;
     ends[63]=1;
     tdone[63]=1;
   }
 
-  public void thread213067(int [] tdone, int [] ends){
-        S39790=1;
-    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 510, column: 32
+  public void thread210822(int [] tdone, int [] ends){
+        S37550=1;
+    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 503, column: 32
     currsigs.addElement(dosUnitValveRetract);
     active[66]=1;
     ends[66]=1;
     tdone[66]=1;
   }
 
-  public void thread213066(int [] tdone, int [] ends){
-        S39785=1;
-    System.out.println("*Filler #4 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 505, column: 32
-    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 506, column: 32
+  public void thread210821(int [] tdone, int [] ends){
+        S37545=1;
+    System.out.println("*Filler #4 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 498, column: 32
+    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 499, column: 32
     currsigs.addElement(valveInjectorOnOff);
     active[65]=1;
     ends[65]=1;
     tdone[65]=1;
   }
 
-  public void thread213064(int [] tdone, int [] ends){
-        S39210=1;
-    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 481, column: 32
+  public void thread210819(int [] tdone, int [] ends){
+        S36970=1;
+    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 474, column: 32
     currsigs.addElement(dosUnitValveRetract);
     active[62]=1;
     ends[62]=1;
     tdone[62]=1;
   }
 
-  public void thread213063(int [] tdone, int [] ends){
-        S39205=1;
-    System.out.println("*Filler #3 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 476, column: 32
-    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 477, column: 32
+  public void thread210818(int [] tdone, int [] ends){
+        S36965=1;
+    System.out.println("*Filler #3 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 469, column: 32
+    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 470, column: 32
     currsigs.addElement(valveInjectorOnOff);
     active[61]=1;
     ends[61]=1;
     tdone[61]=1;
   }
 
-  public void thread213061(int [] tdone, int [] ends){
-        switch(S38760){
+  public void thread210816(int [] tdone, int [] ends){
+        switch(S36520){
       case 0 : 
         active[60]=0;
         ends[60]=0;
@@ -724,7 +724,7 @@ public class FillerController extends ClockDomain{
         break;
       
       case 1 : 
-        dosUnitValveExtend.setPresent();//sysj\conveyor_controller.sysj line: 461, column: 32
+        dosUnitValveExtend.setPresent();//sysj\conveyor_controller.sysj line: 454, column: 32
         currsigs.addElement(dosUnitValveExtend);
         active[60]=1;
         ends[60]=1;
@@ -734,8 +734,8 @@ public class FillerController extends ClockDomain{
     }
   }
 
-  public void thread213060(int [] tdone, int [] ends){
-        switch(S38755){
+  public void thread210815(int [] tdone, int [] ends){
+        switch(S36515){
       case 0 : 
         active[59]=0;
         ends[59]=0;
@@ -743,7 +743,7 @@ public class FillerController extends ClockDomain{
         break;
       
       case 1 : 
-        valveInletOnOff.setPresent();//sysj\conveyor_controller.sysj line: 457, column: 32
+        valveInletOnOff.setPresent();//sysj\conveyor_controller.sysj line: 450, column: 32
         currsigs.addElement(valveInletOnOff);
         active[59]=1;
         ends[59]=1;
@@ -753,65 +753,65 @@ public class FillerController extends ClockDomain{
     }
   }
 
-  public void thread213058(int [] tdone, int [] ends){
-        S39790=1;
-    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 510, column: 32
+  public void thread210813(int [] tdone, int [] ends){
+        S37550=1;
+    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 503, column: 32
     currsigs.addElement(dosUnitValveRetract);
     active[66]=1;
     ends[66]=1;
     tdone[66]=1;
   }
 
-  public void thread213057(int [] tdone, int [] ends){
-        S39785=1;
-    System.out.println("*Filler #4 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 505, column: 32
-    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 506, column: 32
+  public void thread210812(int [] tdone, int [] ends){
+        S37545=1;
+    System.out.println("*Filler #4 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 498, column: 32
+    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 499, column: 32
     currsigs.addElement(valveInjectorOnOff);
     active[65]=1;
     ends[65]=1;
     tdone[65]=1;
   }
 
-  public void thread213055(int [] tdone, int [] ends){
-        S39210=1;
-    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 481, column: 32
+  public void thread210810(int [] tdone, int [] ends){
+        S36970=1;
+    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 474, column: 32
     currsigs.addElement(dosUnitValveRetract);
     active[62]=1;
     ends[62]=1;
     tdone[62]=1;
   }
 
-  public void thread213054(int [] tdone, int [] ends){
-        S39205=1;
-    System.out.println("*Filler #3 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 476, column: 32
-    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 477, column: 32
+  public void thread210809(int [] tdone, int [] ends){
+        S36965=1;
+    System.out.println("*Filler #3 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 469, column: 32
+    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 470, column: 32
     currsigs.addElement(valveInjectorOnOff);
     active[61]=1;
     ends[61]=1;
     tdone[61]=1;
   }
 
-  public void thread213052(int [] tdone, int [] ends){
-        S38760=1;
-    dosUnitValveExtend.setPresent();//sysj\conveyor_controller.sysj line: 461, column: 32
+  public void thread210807(int [] tdone, int [] ends){
+        S36520=1;
+    dosUnitValveExtend.setPresent();//sysj\conveyor_controller.sysj line: 454, column: 32
     currsigs.addElement(dosUnitValveExtend);
     active[60]=1;
     ends[60]=1;
     tdone[60]=1;
   }
 
-  public void thread213051(int [] tdone, int [] ends){
-        S38755=1;
-    System.out.println("*Filler #2 - Valve Inlet On*");//sysj\conveyor_controller.sysj line: 456, column: 32
-    valveInletOnOff.setPresent();//sysj\conveyor_controller.sysj line: 457, column: 32
+  public void thread210806(int [] tdone, int [] ends){
+        S36515=1;
+    System.out.println("*Filler #2 - Valve Inlet On*");//sysj\conveyor_controller.sysj line: 449, column: 32
+    valveInletOnOff.setPresent();//sysj\conveyor_controller.sysj line: 450, column: 32
     currsigs.addElement(valveInletOnOff);
     active[59]=1;
     ends[59]=1;
     tdone[59]=1;
   }
 
-  public void thread213049(int [] tdone, int [] ends){
-        switch(S38746){
+  public void thread210804(int [] tdone, int [] ends){
+        switch(S36506){
       case 0 : 
         active[58]=0;
         ends[58]=0;
@@ -819,7 +819,7 @@ public class FillerController extends ClockDomain{
         break;
       
       case 1 : 
-        dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 451, column: 32
+        dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 444, column: 32
         currsigs.addElement(dosUnitValveRetract);
         active[58]=1;
         ends[58]=1;
@@ -829,8 +829,8 @@ public class FillerController extends ClockDomain{
     }
   }
 
-  public void thread213048(int [] tdone, int [] ends){
-        switch(S38741){
+  public void thread210803(int [] tdone, int [] ends){
+        switch(S36501){
       case 0 : 
         active[57]=0;
         ends[57]=0;
@@ -838,7 +838,7 @@ public class FillerController extends ClockDomain{
         break;
       
       case 1 : 
-        valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 447, column: 32
+        valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 440, column: 32
         currsigs.addElement(valveInjectorOnOff);
         active[57]=1;
         ends[57]=1;
@@ -848,84 +848,84 @@ public class FillerController extends ClockDomain{
     }
   }
 
-  public void thread213046(int [] tdone, int [] ends){
-        S38760=1;
-    dosUnitValveExtend.setPresent();//sysj\conveyor_controller.sysj line: 461, column: 32
+  public void thread210801(int [] tdone, int [] ends){
+        S36520=1;
+    dosUnitValveExtend.setPresent();//sysj\conveyor_controller.sysj line: 454, column: 32
     currsigs.addElement(dosUnitValveExtend);
     active[60]=1;
     ends[60]=1;
     tdone[60]=1;
   }
 
-  public void thread213045(int [] tdone, int [] ends){
-        S38755=1;
-    System.out.println("*Filler #2 - Valve Inlet On*");//sysj\conveyor_controller.sysj line: 456, column: 32
-    valveInletOnOff.setPresent();//sysj\conveyor_controller.sysj line: 457, column: 32
+  public void thread210800(int [] tdone, int [] ends){
+        S36515=1;
+    System.out.println("*Filler #2 - Valve Inlet On*");//sysj\conveyor_controller.sysj line: 449, column: 32
+    valveInletOnOff.setPresent();//sysj\conveyor_controller.sysj line: 450, column: 32
     currsigs.addElement(valveInletOnOff);
     active[59]=1;
     ends[59]=1;
     tdone[59]=1;
   }
 
-  public void thread213043(int [] tdone, int [] ends){
-        S39790=1;
-    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 510, column: 32
+  public void thread210798(int [] tdone, int [] ends){
+        S37550=1;
+    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 503, column: 32
     currsigs.addElement(dosUnitValveRetract);
     active[66]=1;
     ends[66]=1;
     tdone[66]=1;
   }
 
-  public void thread213042(int [] tdone, int [] ends){
-        S39785=1;
-    System.out.println("*Filler #4 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 505, column: 32
-    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 506, column: 32
+  public void thread210797(int [] tdone, int [] ends){
+        S37545=1;
+    System.out.println("*Filler #4 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 498, column: 32
+    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 499, column: 32
     currsigs.addElement(valveInjectorOnOff);
     active[65]=1;
     ends[65]=1;
     tdone[65]=1;
   }
 
-  public void thread213040(int [] tdone, int [] ends){
-        S39210=1;
-    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 481, column: 32
+  public void thread210795(int [] tdone, int [] ends){
+        S36970=1;
+    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 474, column: 32
     currsigs.addElement(dosUnitValveRetract);
     active[62]=1;
     ends[62]=1;
     tdone[62]=1;
   }
 
-  public void thread213039(int [] tdone, int [] ends){
-        S39205=1;
-    System.out.println("*Filler #3 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 476, column: 32
-    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 477, column: 32
+  public void thread210794(int [] tdone, int [] ends){
+        S36965=1;
+    System.out.println("*Filler #3 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 469, column: 32
+    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 470, column: 32
     currsigs.addElement(valveInjectorOnOff);
     active[61]=1;
     ends[61]=1;
     tdone[61]=1;
   }
 
-  public void thread213037(int [] tdone, int [] ends){
-        S38746=1;
-    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 451, column: 32
+  public void thread210792(int [] tdone, int [] ends){
+        S36506=1;
+    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 444, column: 32
     currsigs.addElement(dosUnitValveRetract);
     active[58]=1;
     ends[58]=1;
     tdone[58]=1;
   }
 
-  public void thread213036(int [] tdone, int [] ends){
-        S38741=1;
-    System.out.println("*Filler #2 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 446, column: 32
-    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 447, column: 32
+  public void thread210791(int [] tdone, int [] ends){
+        S36501=1;
+    System.out.println("*Filler #2 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 439, column: 32
+    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 440, column: 32
     currsigs.addElement(valveInjectorOnOff);
     active[57]=1;
     ends[57]=1;
     tdone[57]=1;
   }
 
-  public void thread213034(int [] tdone, int [] ends){
-        switch(S38412){
+  public void thread210789(int [] tdone, int [] ends){
+        switch(S36172){
       case 0 : 
         active[56]=0;
         ends[56]=0;
@@ -933,7 +933,7 @@ public class FillerController extends ClockDomain{
         break;
       
       case 1 : 
-        dosUnitValveExtend.setPresent();//sysj\conveyor_controller.sysj line: 431, column: 32
+        dosUnitValveExtend.setPresent();//sysj\conveyor_controller.sysj line: 424, column: 32
         currsigs.addElement(dosUnitValveExtend);
         active[56]=1;
         ends[56]=1;
@@ -943,8 +943,8 @@ public class FillerController extends ClockDomain{
     }
   }
 
-  public void thread213033(int [] tdone, int [] ends){
-        switch(S38407){
+  public void thread210788(int [] tdone, int [] ends){
+        switch(S36167){
       case 0 : 
         active[55]=0;
         ends[55]=0;
@@ -952,7 +952,7 @@ public class FillerController extends ClockDomain{
         break;
       
       case 1 : 
-        valveInletOnOff.setPresent();//sysj\conveyor_controller.sysj line: 427, column: 32
+        valveInletOnOff.setPresent();//sysj\conveyor_controller.sysj line: 420, column: 32
         currsigs.addElement(valveInletOnOff);
         active[55]=1;
         ends[55]=1;
@@ -962,84 +962,84 @@ public class FillerController extends ClockDomain{
     }
   }
 
-  public void thread213031(int [] tdone, int [] ends){
-        S39790=1;
-    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 510, column: 32
+  public void thread210786(int [] tdone, int [] ends){
+        S37550=1;
+    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 503, column: 32
     currsigs.addElement(dosUnitValveRetract);
     active[66]=1;
     ends[66]=1;
     tdone[66]=1;
   }
 
-  public void thread213030(int [] tdone, int [] ends){
-        S39785=1;
-    System.out.println("*Filler #4 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 505, column: 32
-    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 506, column: 32
+  public void thread210785(int [] tdone, int [] ends){
+        S37545=1;
+    System.out.println("*Filler #4 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 498, column: 32
+    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 499, column: 32
     currsigs.addElement(valveInjectorOnOff);
     active[65]=1;
     ends[65]=1;
     tdone[65]=1;
   }
 
-  public void thread213028(int [] tdone, int [] ends){
-        S39210=1;
-    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 481, column: 32
+  public void thread210783(int [] tdone, int [] ends){
+        S36970=1;
+    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 474, column: 32
     currsigs.addElement(dosUnitValveRetract);
     active[62]=1;
     ends[62]=1;
     tdone[62]=1;
   }
 
-  public void thread213027(int [] tdone, int [] ends){
-        S39205=1;
-    System.out.println("*Filler #3 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 476, column: 32
-    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 477, column: 32
+  public void thread210782(int [] tdone, int [] ends){
+        S36965=1;
+    System.out.println("*Filler #3 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 469, column: 32
+    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 470, column: 32
     currsigs.addElement(valveInjectorOnOff);
     active[61]=1;
     ends[61]=1;
     tdone[61]=1;
   }
 
-  public void thread213025(int [] tdone, int [] ends){
-        S38746=1;
-    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 451, column: 32
+  public void thread210780(int [] tdone, int [] ends){
+        S36506=1;
+    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 444, column: 32
     currsigs.addElement(dosUnitValveRetract);
     active[58]=1;
     ends[58]=1;
     tdone[58]=1;
   }
 
-  public void thread213024(int [] tdone, int [] ends){
-        S38741=1;
-    System.out.println("*Filler #2 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 446, column: 32
-    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 447, column: 32
+  public void thread210779(int [] tdone, int [] ends){
+        S36501=1;
+    System.out.println("*Filler #2 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 439, column: 32
+    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 440, column: 32
     currsigs.addElement(valveInjectorOnOff);
     active[57]=1;
     ends[57]=1;
     tdone[57]=1;
   }
 
-  public void thread213022(int [] tdone, int [] ends){
-        S38412=1;
-    dosUnitValveExtend.setPresent();//sysj\conveyor_controller.sysj line: 431, column: 32
+  public void thread210777(int [] tdone, int [] ends){
+        S36172=1;
+    dosUnitValveExtend.setPresent();//sysj\conveyor_controller.sysj line: 424, column: 32
     currsigs.addElement(dosUnitValveExtend);
     active[56]=1;
     ends[56]=1;
     tdone[56]=1;
   }
 
-  public void thread213021(int [] tdone, int [] ends){
-        S38407=1;
-    System.out.println("*Filler #1 - Valve Inlet On*");//sysj\conveyor_controller.sysj line: 426, column: 32
-    valveInletOnOff.setPresent();//sysj\conveyor_controller.sysj line: 427, column: 32
+  public void thread210776(int [] tdone, int [] ends){
+        S36167=1;
+    System.out.println("*Filler #1 - Valve Inlet On*");//sysj\conveyor_controller.sysj line: 419, column: 32
+    valveInletOnOff.setPresent();//sysj\conveyor_controller.sysj line: 420, column: 32
     currsigs.addElement(valveInletOnOff);
     active[55]=1;
     ends[55]=1;
     tdone[55]=1;
   }
 
-  public void thread213019(int [] tdone, int [] ends){
-        switch(S38398){
+  public void thread210774(int [] tdone, int [] ends){
+        switch(S36158){
       case 0 : 
         active[54]=0;
         ends[54]=0;
@@ -1047,7 +1047,7 @@ public class FillerController extends ClockDomain{
         break;
       
       case 1 : 
-        dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 421, column: 32
+        dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 414, column: 32
         currsigs.addElement(dosUnitValveRetract);
         active[54]=1;
         ends[54]=1;
@@ -1057,8 +1057,8 @@ public class FillerController extends ClockDomain{
     }
   }
 
-  public void thread213018(int [] tdone, int [] ends){
-        switch(S38393){
+  public void thread210773(int [] tdone, int [] ends){
+        switch(S36153){
       case 0 : 
         active[53]=0;
         ends[53]=0;
@@ -1066,7 +1066,7 @@ public class FillerController extends ClockDomain{
         break;
       
       case 1 : 
-        valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 417, column: 32
+        valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 410, column: 32
         currsigs.addElement(valveInjectorOnOff);
         active[53]=1;
         ends[53]=1;
@@ -1076,407 +1076,407 @@ public class FillerController extends ClockDomain{
     }
   }
 
-  public void thread213016(int [] tdone, int [] ends){
-        S38412=1;
-    dosUnitValveExtend.setPresent();//sysj\conveyor_controller.sysj line: 431, column: 32
+  public void thread210771(int [] tdone, int [] ends){
+        S36172=1;
+    dosUnitValveExtend.setPresent();//sysj\conveyor_controller.sysj line: 424, column: 32
     currsigs.addElement(dosUnitValveExtend);
     active[56]=1;
     ends[56]=1;
     tdone[56]=1;
   }
 
-  public void thread213015(int [] tdone, int [] ends){
-        S38407=1;
-    System.out.println("*Filler #1 - Valve Inlet On*");//sysj\conveyor_controller.sysj line: 426, column: 32
-    valveInletOnOff.setPresent();//sysj\conveyor_controller.sysj line: 427, column: 32
+  public void thread210770(int [] tdone, int [] ends){
+        S36167=1;
+    System.out.println("*Filler #1 - Valve Inlet On*");//sysj\conveyor_controller.sysj line: 419, column: 32
+    valveInletOnOff.setPresent();//sysj\conveyor_controller.sysj line: 420, column: 32
     currsigs.addElement(valveInletOnOff);
     active[55]=1;
     ends[55]=1;
     tdone[55]=1;
   }
 
-  public void thread213013(int [] tdone, int [] ends){
-        S39790=1;
-    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 510, column: 32
+  public void thread210768(int [] tdone, int [] ends){
+        S37550=1;
+    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 503, column: 32
     currsigs.addElement(dosUnitValveRetract);
     active[66]=1;
     ends[66]=1;
     tdone[66]=1;
   }
 
-  public void thread213012(int [] tdone, int [] ends){
-        S39785=1;
-    System.out.println("*Filler #4 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 505, column: 32
-    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 506, column: 32
+  public void thread210767(int [] tdone, int [] ends){
+        S37545=1;
+    System.out.println("*Filler #4 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 498, column: 32
+    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 499, column: 32
     currsigs.addElement(valveInjectorOnOff);
     active[65]=1;
     ends[65]=1;
     tdone[65]=1;
   }
 
-  public void thread213010(int [] tdone, int [] ends){
-        S39210=1;
-    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 481, column: 32
+  public void thread210765(int [] tdone, int [] ends){
+        S36970=1;
+    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 474, column: 32
     currsigs.addElement(dosUnitValveRetract);
     active[62]=1;
     ends[62]=1;
     tdone[62]=1;
   }
 
-  public void thread213009(int [] tdone, int [] ends){
-        S39205=1;
-    System.out.println("*Filler #3 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 476, column: 32
-    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 477, column: 32
+  public void thread210764(int [] tdone, int [] ends){
+        S36965=1;
+    System.out.println("*Filler #3 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 469, column: 32
+    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 470, column: 32
     currsigs.addElement(valveInjectorOnOff);
     active[61]=1;
     ends[61]=1;
     tdone[61]=1;
   }
 
-  public void thread213007(int [] tdone, int [] ends){
-        S38746=1;
-    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 451, column: 32
+  public void thread210762(int [] tdone, int [] ends){
+        S36506=1;
+    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 444, column: 32
     currsigs.addElement(dosUnitValveRetract);
     active[58]=1;
     ends[58]=1;
     tdone[58]=1;
   }
 
-  public void thread213006(int [] tdone, int [] ends){
-        S38741=1;
-    System.out.println("*Filler #2 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 446, column: 32
-    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 447, column: 32
+  public void thread210761(int [] tdone, int [] ends){
+        S36501=1;
+    System.out.println("*Filler #2 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 439, column: 32
+    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 440, column: 32
     currsigs.addElement(valveInjectorOnOff);
     active[57]=1;
     ends[57]=1;
     tdone[57]=1;
   }
 
-  public void thread213004(int [] tdone, int [] ends){
-        S38398=1;
-    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 421, column: 32
+  public void thread210759(int [] tdone, int [] ends){
+        S36158=1;
+    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 414, column: 32
     currsigs.addElement(dosUnitValveRetract);
     active[54]=1;
     ends[54]=1;
     tdone[54]=1;
   }
 
-  public void thread213003(int [] tdone, int [] ends){
-        S38393=1;
-    System.out.println("*Filler #1 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 416, column: 32
-    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 417, column: 32
+  public void thread210758(int [] tdone, int [] ends){
+        S36153=1;
+    System.out.println("*Filler #1 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 409, column: 32
+    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 410, column: 32
     currsigs.addElement(valveInjectorOnOff);
     active[53]=1;
     ends[53]=1;
     tdone[53]=1;
   }
 
-  public void thread213001(int [] tdone, int [] ends){
-        S39790=1;
-    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 510, column: 32
+  public void thread210756(int [] tdone, int [] ends){
+        S37550=1;
+    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 503, column: 32
     currsigs.addElement(dosUnitValveRetract);
     active[66]=1;
     ends[66]=1;
     tdone[66]=1;
   }
 
-  public void thread213000(int [] tdone, int [] ends){
-        S39785=1;
-    System.out.println("*Filler #4 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 505, column: 32
-    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 506, column: 32
+  public void thread210755(int [] tdone, int [] ends){
+        S37545=1;
+    System.out.println("*Filler #4 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 498, column: 32
+    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 499, column: 32
     currsigs.addElement(valveInjectorOnOff);
     active[65]=1;
     ends[65]=1;
     tdone[65]=1;
   }
 
-  public void thread212998(int [] tdone, int [] ends){
-        S39210=1;
-    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 481, column: 32
+  public void thread210753(int [] tdone, int [] ends){
+        S36970=1;
+    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 474, column: 32
     currsigs.addElement(dosUnitValveRetract);
     active[62]=1;
     ends[62]=1;
     tdone[62]=1;
   }
 
-  public void thread212997(int [] tdone, int [] ends){
-        S39205=1;
-    System.out.println("*Filler #3 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 476, column: 32
-    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 477, column: 32
+  public void thread210752(int [] tdone, int [] ends){
+        S36965=1;
+    System.out.println("*Filler #3 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 469, column: 32
+    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 470, column: 32
     currsigs.addElement(valveInjectorOnOff);
     active[61]=1;
     ends[61]=1;
     tdone[61]=1;
   }
 
-  public void thread212995(int [] tdone, int [] ends){
-        S38746=1;
-    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 451, column: 32
+  public void thread210750(int [] tdone, int [] ends){
+        S36506=1;
+    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 444, column: 32
     currsigs.addElement(dosUnitValveRetract);
     active[58]=1;
     ends[58]=1;
     tdone[58]=1;
   }
 
-  public void thread212994(int [] tdone, int [] ends){
-        S38741=1;
-    System.out.println("*Filler #2 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 446, column: 32
-    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 447, column: 32
+  public void thread210749(int [] tdone, int [] ends){
+        S36501=1;
+    System.out.println("*Filler #2 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 439, column: 32
+    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 440, column: 32
     currsigs.addElement(valveInjectorOnOff);
     active[57]=1;
     ends[57]=1;
     tdone[57]=1;
   }
 
-  public void thread212992(int [] tdone, int [] ends){
-        S38398=1;
-    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 421, column: 32
+  public void thread210747(int [] tdone, int [] ends){
+        S36158=1;
+    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 414, column: 32
     currsigs.addElement(dosUnitValveRetract);
     active[54]=1;
     ends[54]=1;
     tdone[54]=1;
   }
 
-  public void thread212991(int [] tdone, int [] ends){
-        S38393=1;
-    System.out.println("*Filler #1 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 416, column: 32
-    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 417, column: 32
+  public void thread210746(int [] tdone, int [] ends){
+        S36153=1;
+    System.out.println("*Filler #1 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 409, column: 32
+    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 410, column: 32
     currsigs.addElement(valveInjectorOnOff);
     active[53]=1;
     ends[53]=1;
     tdone[53]=1;
   }
 
-  public void thread212989(int [] tdone, int [] ends){
-        S39790=1;
-    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 510, column: 32
+  public void thread210744(int [] tdone, int [] ends){
+        S37550=1;
+    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 503, column: 32
     currsigs.addElement(dosUnitValveRetract);
     active[66]=1;
     ends[66]=1;
     tdone[66]=1;
   }
 
-  public void thread212988(int [] tdone, int [] ends){
-        S39785=1;
-    System.out.println("*Filler #4 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 505, column: 32
-    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 506, column: 32
+  public void thread210743(int [] tdone, int [] ends){
+        S37545=1;
+    System.out.println("*Filler #4 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 498, column: 32
+    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 499, column: 32
     currsigs.addElement(valveInjectorOnOff);
     active[65]=1;
     ends[65]=1;
     tdone[65]=1;
   }
 
-  public void thread212986(int [] tdone, int [] ends){
-        S39210=1;
-    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 481, column: 32
+  public void thread210741(int [] tdone, int [] ends){
+        S36970=1;
+    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 474, column: 32
     currsigs.addElement(dosUnitValveRetract);
     active[62]=1;
     ends[62]=1;
     tdone[62]=1;
   }
 
-  public void thread212985(int [] tdone, int [] ends){
-        S39205=1;
-    System.out.println("*Filler #3 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 476, column: 32
-    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 477, column: 32
+  public void thread210740(int [] tdone, int [] ends){
+        S36965=1;
+    System.out.println("*Filler #3 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 469, column: 32
+    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 470, column: 32
     currsigs.addElement(valveInjectorOnOff);
     active[61]=1;
     ends[61]=1;
     tdone[61]=1;
   }
 
-  public void thread212983(int [] tdone, int [] ends){
-        S38746=1;
-    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 451, column: 32
+  public void thread210738(int [] tdone, int [] ends){
+        S36506=1;
+    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 444, column: 32
     currsigs.addElement(dosUnitValveRetract);
     active[58]=1;
     ends[58]=1;
     tdone[58]=1;
   }
 
-  public void thread212982(int [] tdone, int [] ends){
-        S38741=1;
-    System.out.println("*Filler #2 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 446, column: 32
-    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 447, column: 32
+  public void thread210737(int [] tdone, int [] ends){
+        S36501=1;
+    System.out.println("*Filler #2 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 439, column: 32
+    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 440, column: 32
     currsigs.addElement(valveInjectorOnOff);
     active[57]=1;
     ends[57]=1;
     tdone[57]=1;
   }
 
-  public void thread212980(int [] tdone, int [] ends){
-        S38398=1;
-    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 421, column: 32
+  public void thread210735(int [] tdone, int [] ends){
+        S36158=1;
+    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 414, column: 32
     currsigs.addElement(dosUnitValveRetract);
     active[54]=1;
     ends[54]=1;
     tdone[54]=1;
   }
 
-  public void thread212979(int [] tdone, int [] ends){
-        S38393=1;
-    System.out.println("*Filler #1 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 416, column: 32
-    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 417, column: 32
+  public void thread210734(int [] tdone, int [] ends){
+        S36153=1;
+    System.out.println("*Filler #1 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 409, column: 32
+    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 410, column: 32
     currsigs.addElement(valveInjectorOnOff);
     active[53]=1;
     ends[53]=1;
     tdone[53]=1;
   }
 
-  public void thread212977(int [] tdone, int [] ends){
-        S39790=1;
-    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 510, column: 32
+  public void thread210732(int [] tdone, int [] ends){
+        S37550=1;
+    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 503, column: 32
     currsigs.addElement(dosUnitValveRetract);
     active[66]=1;
     ends[66]=1;
     tdone[66]=1;
   }
 
-  public void thread212976(int [] tdone, int [] ends){
-        S39785=1;
-    System.out.println("*Filler #4 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 505, column: 32
-    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 506, column: 32
+  public void thread210731(int [] tdone, int [] ends){
+        S37545=1;
+    System.out.println("*Filler #4 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 498, column: 32
+    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 499, column: 32
     currsigs.addElement(valveInjectorOnOff);
     active[65]=1;
     ends[65]=1;
     tdone[65]=1;
   }
 
-  public void thread212974(int [] tdone, int [] ends){
-        S39210=1;
-    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 481, column: 32
+  public void thread210729(int [] tdone, int [] ends){
+        S36970=1;
+    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 474, column: 32
     currsigs.addElement(dosUnitValveRetract);
     active[62]=1;
     ends[62]=1;
     tdone[62]=1;
   }
 
-  public void thread212973(int [] tdone, int [] ends){
-        S39205=1;
-    System.out.println("*Filler #3 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 476, column: 32
-    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 477, column: 32
+  public void thread210728(int [] tdone, int [] ends){
+        S36965=1;
+    System.out.println("*Filler #3 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 469, column: 32
+    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 470, column: 32
     currsigs.addElement(valveInjectorOnOff);
     active[61]=1;
     ends[61]=1;
     tdone[61]=1;
   }
 
-  public void thread212971(int [] tdone, int [] ends){
-        S38746=1;
-    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 451, column: 32
+  public void thread210726(int [] tdone, int [] ends){
+        S36506=1;
+    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 444, column: 32
     currsigs.addElement(dosUnitValveRetract);
     active[58]=1;
     ends[58]=1;
     tdone[58]=1;
   }
 
-  public void thread212970(int [] tdone, int [] ends){
-        S38741=1;
-    System.out.println("*Filler #2 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 446, column: 32
-    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 447, column: 32
+  public void thread210725(int [] tdone, int [] ends){
+        S36501=1;
+    System.out.println("*Filler #2 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 439, column: 32
+    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 440, column: 32
     currsigs.addElement(valveInjectorOnOff);
     active[57]=1;
     ends[57]=1;
     tdone[57]=1;
   }
 
-  public void thread212968(int [] tdone, int [] ends){
-        S38398=1;
-    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 421, column: 32
+  public void thread210723(int [] tdone, int [] ends){
+        S36158=1;
+    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 414, column: 32
     currsigs.addElement(dosUnitValveRetract);
     active[54]=1;
     ends[54]=1;
     tdone[54]=1;
   }
 
-  public void thread212967(int [] tdone, int [] ends){
-        S38393=1;
-    System.out.println("*Filler #1 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 416, column: 32
-    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 417, column: 32
+  public void thread210722(int [] tdone, int [] ends){
+        S36153=1;
+    System.out.println("*Filler #1 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 409, column: 32
+    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 410, column: 32
     currsigs.addElement(valveInjectorOnOff);
     active[53]=1;
     ends[53]=1;
     tdone[53]=1;
   }
 
-  public void thread212965(int [] tdone, int [] ends){
-        S39790=1;
-    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 510, column: 32
+  public void thread210720(int [] tdone, int [] ends){
+        S37550=1;
+    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 503, column: 32
     currsigs.addElement(dosUnitValveRetract);
     active[66]=1;
     ends[66]=1;
     tdone[66]=1;
   }
 
-  public void thread212964(int [] tdone, int [] ends){
-        S39785=1;
-    System.out.println("*Filler #4 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 505, column: 32
-    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 506, column: 32
+  public void thread210719(int [] tdone, int [] ends){
+        S37545=1;
+    System.out.println("*Filler #4 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 498, column: 32
+    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 499, column: 32
     currsigs.addElement(valveInjectorOnOff);
     active[65]=1;
     ends[65]=1;
     tdone[65]=1;
   }
 
-  public void thread212962(int [] tdone, int [] ends){
-        S39210=1;
-    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 481, column: 32
+  public void thread210717(int [] tdone, int [] ends){
+        S36970=1;
+    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 474, column: 32
     currsigs.addElement(dosUnitValveRetract);
     active[62]=1;
     ends[62]=1;
     tdone[62]=1;
   }
 
-  public void thread212961(int [] tdone, int [] ends){
-        S39205=1;
-    System.out.println("*Filler #3 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 476, column: 32
-    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 477, column: 32
+  public void thread210716(int [] tdone, int [] ends){
+        S36965=1;
+    System.out.println("*Filler #3 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 469, column: 32
+    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 470, column: 32
     currsigs.addElement(valveInjectorOnOff);
     active[61]=1;
     ends[61]=1;
     tdone[61]=1;
   }
 
-  public void thread212959(int [] tdone, int [] ends){
-        S38746=1;
-    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 451, column: 32
+  public void thread210714(int [] tdone, int [] ends){
+        S36506=1;
+    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 444, column: 32
     currsigs.addElement(dosUnitValveRetract);
     active[58]=1;
     ends[58]=1;
     tdone[58]=1;
   }
 
-  public void thread212958(int [] tdone, int [] ends){
-        S38741=1;
-    System.out.println("*Filler #2 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 446, column: 32
-    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 447, column: 32
+  public void thread210713(int [] tdone, int [] ends){
+        S36501=1;
+    System.out.println("*Filler #2 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 439, column: 32
+    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 440, column: 32
     currsigs.addElement(valveInjectorOnOff);
     active[57]=1;
     ends[57]=1;
     tdone[57]=1;
   }
 
-  public void thread212956(int [] tdone, int [] ends){
-        S38398=1;
-    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 421, column: 32
+  public void thread210711(int [] tdone, int [] ends){
+        S36158=1;
+    dosUnitValveRetract.setPresent();//sysj\conveyor_controller.sysj line: 414, column: 32
     currsigs.addElement(dosUnitValveRetract);
     active[54]=1;
     ends[54]=1;
     tdone[54]=1;
   }
 
-  public void thread212955(int [] tdone, int [] ends){
-        S38393=1;
-    System.out.println("*Filler #1 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 416, column: 32
-    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 417, column: 32
+  public void thread210710(int [] tdone, int [] ends){
+        S36153=1;
+    System.out.println("*Filler #1 - Valve Injector On*");//sysj\conveyor_controller.sysj line: 409, column: 32
+    valveInjectorOnOff.setPresent();//sysj\conveyor_controller.sysj line: 410, column: 32
     currsigs.addElement(valveInjectorOnOff);
     active[53]=1;
     ends[53]=1;
     tdone[53]=1;
   }
 
-  public void thread212954(int [] tdone, int [] ends){
-        switch(S65709){
+  public void thread210709(int [] tdone, int [] ends){
+        switch(S63469){
       case 0 : 
         active[52]=0;
         ends[52]=0;
@@ -1484,132 +1484,132 @@ public class FillerController extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S38282){
+        switch(S36042){
           case 0 : 
-            if(bottleAtPos2_51.getprestatus()){//sysj\conveyor_controller.sysj line: 405, column: 26
-              S38282=1;
-              S38292=0;
-              if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 406, column: 20
-                fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 406, column: 20
-                S38292=1;
+            if(bottleAtPos2_51.getprestatus()){//sysj\conveyor_controller.sysj line: 398, column: 26
+              S36042=1;
+              S36052=0;
+              if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 399, column: 20
+                fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 399, column: 20
+                S36052=1;
                 active[52]=1;
                 ends[52]=1;
                 tdone[52]=1;
               }
               else {
-                S38287=0;
-                if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 406, column: 20
-                  fillerReady_o.setVal(Boolean.FALSE);//sysj\conveyor_controller.sysj line: 406, column: 20
-                  S38287=1;
-                  if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 406, column: 20
-                    fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 406, column: 20
+                S36047=0;
+                if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 399, column: 20
+                  fillerReady_o.setVal(Boolean.FALSE);//sysj\conveyor_controller.sysj line: 399, column: 20
+                  S36047=1;
+                  if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 399, column: 20
+                    fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 399, column: 20
                     ends[52]=2;
-                    ;//sysj\conveyor_controller.sysj line: 406, column: 20
-                    S38282=2;
-                    __start_thread_52 = com.systemj.Timer.getMs();//sysj\conveyor_controller.sysj line: 381, column: 9
-                    if(com.systemj.Timer.getMs() - __start_thread_52 >= (2) * 1000){//sysj\conveyor_controller.sysj line: 381, column: 9
+                    ;//sysj\conveyor_controller.sysj line: 399, column: 20
+                    S36042=2;
+                    __start_thread_52 = com.systemj.Timer.getMs();//sysj\conveyor_controller.sysj line: 374, column: 9
+                    if(com.systemj.Timer.getMs() - __start_thread_52 >= (2) * 1000){//sysj\conveyor_controller.sysj line: 374, column: 9
                       ends[52]=2;
-                      ;//sysj\conveyor_controller.sysj line: 381, column: 9
-                      System.out.println("*Filler - Bottle Arrived at Pos 2*");//sysj\conveyor_controller.sysj line: 409, column: 20
-                      S38282=3;
-                      if(((filler1_amount_51.getpreval() == null ? 0 : ((Integer)filler1_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler1_amount_51.getpreval() == null ? 0 : ((Integer)filler1_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 412, column: 24
-                        S38442=0;
-                        thread212955(tdone,ends);
-                        thread212956(tdone,ends);
-                        int biggest212957 = 0;
-                        if(ends[53]>=biggest212957){
-                          biggest212957=ends[53];
+                      ;//sysj\conveyor_controller.sysj line: 374, column: 9
+                      System.out.println("*Filler - Bottle Arrived at Pos 2*");//sysj\conveyor_controller.sysj line: 402, column: 20
+                      S36042=3;
+                      if(((filler1_amount_51.getpreval() == null ? 0 : ((Integer)filler1_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler1_amount_51.getpreval() == null ? 0 : ((Integer)filler1_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 405, column: 24
+                        S36202=0;
+                        thread210710(tdone,ends);
+                        thread210711(tdone,ends);
+                        int biggest210712 = 0;
+                        if(ends[53]>=biggest210712){
+                          biggest210712=ends[53];
                         }
-                        if(ends[54]>=biggest212957){
-                          biggest212957=ends[54];
+                        if(ends[54]>=biggest210712){
+                          biggest210712=ends[54];
                         }
-                        if(biggest212957 == 1){
+                        if(biggest210712 == 1){
                           active[52]=1;
                           ends[52]=1;
                           tdone[52]=1;
                         }
                       }
                       else {
-                        S38282=4;
-                        if(((filler2_amount_51.getpreval() == null ? 0 : ((Integer)filler2_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler2_amount_51.getpreval() == null ? 0 : ((Integer)filler2_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 442, column: 24
-                          S38790=0;
-                          thread212958(tdone,ends);
-                          thread212959(tdone,ends);
-                          int biggest212960 = 0;
-                          if(ends[57]>=biggest212960){
-                            biggest212960=ends[57];
+                        S36042=4;
+                        if(((filler2_amount_51.getpreval() == null ? 0 : ((Integer)filler2_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler2_amount_51.getpreval() == null ? 0 : ((Integer)filler2_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 435, column: 24
+                          S36550=0;
+                          thread210713(tdone,ends);
+                          thread210714(tdone,ends);
+                          int biggest210715 = 0;
+                          if(ends[57]>=biggest210715){
+                            biggest210715=ends[57];
                           }
-                          if(ends[58]>=biggest212960){
-                            biggest212960=ends[58];
+                          if(ends[58]>=biggest210715){
+                            biggest210715=ends[58];
                           }
-                          if(biggest212960 == 1){
+                          if(biggest210715 == 1){
                             active[52]=1;
                             ends[52]=1;
                             tdone[52]=1;
                           }
                         }
                         else {
-                          S38282=5;
-                          if(((filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 472, column: 24
-                            S39254=0;
-                            thread212961(tdone,ends);
-                            thread212962(tdone,ends);
-                            int biggest212963 = 0;
-                            if(ends[61]>=biggest212963){
-                              biggest212963=ends[61];
+                          S36042=5;
+                          if(((filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 465, column: 24
+                            S37014=0;
+                            thread210716(tdone,ends);
+                            thread210717(tdone,ends);
+                            int biggest210718 = 0;
+                            if(ends[61]>=biggest210718){
+                              biggest210718=ends[61];
                             }
-                            if(ends[62]>=biggest212963){
-                              biggest212963=ends[62];
+                            if(ends[62]>=biggest210718){
+                              biggest210718=ends[62];
                             }
-                            if(biggest212963 == 1){
+                            if(biggest210718 == 1){
                               active[52]=1;
                               ends[52]=1;
                               tdone[52]=1;
                             }
                           }
                           else {
-                            S38282=6;
-                            if(((filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 501, column: 24
-                              S39834=0;
-                              thread212964(tdone,ends);
-                              thread212965(tdone,ends);
-                              int biggest212966 = 0;
-                              if(ends[65]>=biggest212966){
-                                biggest212966=ends[65];
+                            S36042=6;
+                            if(((filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 494, column: 24
+                              S37594=0;
+                              thread210719(tdone,ends);
+                              thread210720(tdone,ends);
+                              int biggest210721 = 0;
+                              if(ends[65]>=biggest210721){
+                                biggest210721=ends[65];
                               }
-                              if(ends[66]>=biggest212966){
-                                biggest212966=ends[66];
+                              if(ends[66]>=biggest210721){
+                                biggest210721=ends[66];
                               }
-                              if(biggest212966 == 1){
+                              if(biggest210721 == 1){
                                 active[52]=1;
                                 ends[52]=1;
                                 tdone[52]=1;
                               }
                             }
                             else {
-                              order_finished.setPresent();//sysj\conveyor_controller.sysj line: 531, column: 20
+                              order_finished.setPresent();//sysj\conveyor_controller.sysj line: 524, column: 20
                               currsigs.addElement(order_finished);
-                              S38282=7;
-                              S40480=0;
-                              if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                                fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 533, column: 20
-                                S40480=1;
+                              S36042=7;
+                              S38240=0;
+                              if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                                fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 526, column: 20
+                                S38240=1;
                                 active[52]=1;
                                 ends[52]=1;
                                 tdone[52]=1;
                               }
                               else {
-                                S40475=0;
-                                if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                                  fillerReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 533, column: 20
-                                  S40475=1;
-                                  if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                                    fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 533, column: 20
+                                S38235=0;
+                                if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                                  fillerReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 526, column: 20
+                                  S38235=1;
+                                  if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                                    fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 526, column: 20
                                     ends[52]=2;
-                                    ;//sysj\conveyor_controller.sysj line: 533, column: 20
-                                    System.out.println("*Filler operation done");//sysj\conveyor_controller.sysj line: 534, column: 20
-                                    S38282=8;
-                                    S40795=0;
+                                    ;//sysj\conveyor_controller.sysj line: 526, column: 20
+                                    System.out.println("*Filler operation done");//sysj\conveyor_controller.sysj line: 527, column: 20
+                                    S36042=8;
+                                    S38555=0;
                                     active[52]=1;
                                     ends[52]=1;
                                     tdone[52]=1;
@@ -1658,130 +1658,130 @@ public class FillerController extends ClockDomain{
             break;
           
           case 1 : 
-            switch(S38292){
+            switch(S36052){
               case 0 : 
-                if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 406, column: 20
-                  fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 406, column: 20
-                  S38292=1;
+                if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 399, column: 20
+                  fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 399, column: 20
+                  S36052=1;
                   active[52]=1;
                   ends[52]=1;
                   tdone[52]=1;
                 }
                 else {
-                  switch(S38287){
+                  switch(S36047){
                     case 0 : 
-                      if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 406, column: 20
-                        fillerReady_o.setVal(Boolean.FALSE);//sysj\conveyor_controller.sysj line: 406, column: 20
-                        S38287=1;
-                        if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 406, column: 20
-                          fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 406, column: 20
+                      if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 399, column: 20
+                        fillerReady_o.setVal(Boolean.FALSE);//sysj\conveyor_controller.sysj line: 399, column: 20
+                        S36047=1;
+                        if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 399, column: 20
+                          fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 399, column: 20
                           ends[52]=2;
-                          ;//sysj\conveyor_controller.sysj line: 406, column: 20
-                          S38282=2;
-                          __start_thread_52 = com.systemj.Timer.getMs();//sysj\conveyor_controller.sysj line: 381, column: 9
-                          if(com.systemj.Timer.getMs() - __start_thread_52 >= (2) * 1000){//sysj\conveyor_controller.sysj line: 381, column: 9
+                          ;//sysj\conveyor_controller.sysj line: 399, column: 20
+                          S36042=2;
+                          __start_thread_52 = com.systemj.Timer.getMs();//sysj\conveyor_controller.sysj line: 374, column: 9
+                          if(com.systemj.Timer.getMs() - __start_thread_52 >= (2) * 1000){//sysj\conveyor_controller.sysj line: 374, column: 9
                             ends[52]=2;
-                            ;//sysj\conveyor_controller.sysj line: 381, column: 9
-                            System.out.println("*Filler - Bottle Arrived at Pos 2*");//sysj\conveyor_controller.sysj line: 409, column: 20
-                            S38282=3;
-                            if(((filler1_amount_51.getpreval() == null ? 0 : ((Integer)filler1_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler1_amount_51.getpreval() == null ? 0 : ((Integer)filler1_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 412, column: 24
-                              S38442=0;
-                              thread212967(tdone,ends);
-                              thread212968(tdone,ends);
-                              int biggest212969 = 0;
-                              if(ends[53]>=biggest212969){
-                                biggest212969=ends[53];
+                            ;//sysj\conveyor_controller.sysj line: 374, column: 9
+                            System.out.println("*Filler - Bottle Arrived at Pos 2*");//sysj\conveyor_controller.sysj line: 402, column: 20
+                            S36042=3;
+                            if(((filler1_amount_51.getpreval() == null ? 0 : ((Integer)filler1_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler1_amount_51.getpreval() == null ? 0 : ((Integer)filler1_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 405, column: 24
+                              S36202=0;
+                              thread210722(tdone,ends);
+                              thread210723(tdone,ends);
+                              int biggest210724 = 0;
+                              if(ends[53]>=biggest210724){
+                                biggest210724=ends[53];
                               }
-                              if(ends[54]>=biggest212969){
-                                biggest212969=ends[54];
+                              if(ends[54]>=biggest210724){
+                                biggest210724=ends[54];
                               }
-                              if(biggest212969 == 1){
+                              if(biggest210724 == 1){
                                 active[52]=1;
                                 ends[52]=1;
                                 tdone[52]=1;
                               }
                             }
                             else {
-                              S38282=4;
-                              if(((filler2_amount_51.getpreval() == null ? 0 : ((Integer)filler2_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler2_amount_51.getpreval() == null ? 0 : ((Integer)filler2_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 442, column: 24
-                                S38790=0;
-                                thread212970(tdone,ends);
-                                thread212971(tdone,ends);
-                                int biggest212972 = 0;
-                                if(ends[57]>=biggest212972){
-                                  biggest212972=ends[57];
+                              S36042=4;
+                              if(((filler2_amount_51.getpreval() == null ? 0 : ((Integer)filler2_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler2_amount_51.getpreval() == null ? 0 : ((Integer)filler2_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 435, column: 24
+                                S36550=0;
+                                thread210725(tdone,ends);
+                                thread210726(tdone,ends);
+                                int biggest210727 = 0;
+                                if(ends[57]>=biggest210727){
+                                  biggest210727=ends[57];
                                 }
-                                if(ends[58]>=biggest212972){
-                                  biggest212972=ends[58];
+                                if(ends[58]>=biggest210727){
+                                  biggest210727=ends[58];
                                 }
-                                if(biggest212972 == 1){
+                                if(biggest210727 == 1){
                                   active[52]=1;
                                   ends[52]=1;
                                   tdone[52]=1;
                                 }
                               }
                               else {
-                                S38282=5;
-                                if(((filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 472, column: 24
-                                  S39254=0;
-                                  thread212973(tdone,ends);
-                                  thread212974(tdone,ends);
-                                  int biggest212975 = 0;
-                                  if(ends[61]>=biggest212975){
-                                    biggest212975=ends[61];
+                                S36042=5;
+                                if(((filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 465, column: 24
+                                  S37014=0;
+                                  thread210728(tdone,ends);
+                                  thread210729(tdone,ends);
+                                  int biggest210730 = 0;
+                                  if(ends[61]>=biggest210730){
+                                    biggest210730=ends[61];
                                   }
-                                  if(ends[62]>=biggest212975){
-                                    biggest212975=ends[62];
+                                  if(ends[62]>=biggest210730){
+                                    biggest210730=ends[62];
                                   }
-                                  if(biggest212975 == 1){
+                                  if(biggest210730 == 1){
                                     active[52]=1;
                                     ends[52]=1;
                                     tdone[52]=1;
                                   }
                                 }
                                 else {
-                                  S38282=6;
-                                  if(((filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 501, column: 24
-                                    S39834=0;
-                                    thread212976(tdone,ends);
-                                    thread212977(tdone,ends);
-                                    int biggest212978 = 0;
-                                    if(ends[65]>=biggest212978){
-                                      biggest212978=ends[65];
+                                  S36042=6;
+                                  if(((filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 494, column: 24
+                                    S37594=0;
+                                    thread210731(tdone,ends);
+                                    thread210732(tdone,ends);
+                                    int biggest210733 = 0;
+                                    if(ends[65]>=biggest210733){
+                                      biggest210733=ends[65];
                                     }
-                                    if(ends[66]>=biggest212978){
-                                      biggest212978=ends[66];
+                                    if(ends[66]>=biggest210733){
+                                      biggest210733=ends[66];
                                     }
-                                    if(biggest212978 == 1){
+                                    if(biggest210733 == 1){
                                       active[52]=1;
                                       ends[52]=1;
                                       tdone[52]=1;
                                     }
                                   }
                                   else {
-                                    order_finished.setPresent();//sysj\conveyor_controller.sysj line: 531, column: 20
+                                    order_finished.setPresent();//sysj\conveyor_controller.sysj line: 524, column: 20
                                     currsigs.addElement(order_finished);
-                                    S38282=7;
-                                    S40480=0;
-                                    if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                                      fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 533, column: 20
-                                      S40480=1;
+                                    S36042=7;
+                                    S38240=0;
+                                    if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                                      fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 526, column: 20
+                                      S38240=1;
                                       active[52]=1;
                                       ends[52]=1;
                                       tdone[52]=1;
                                     }
                                     else {
-                                      S40475=0;
-                                      if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                                        fillerReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 533, column: 20
-                                        S40475=1;
-                                        if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                                          fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 533, column: 20
+                                      S38235=0;
+                                      if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                                        fillerReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 526, column: 20
+                                        S38235=1;
+                                        if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                                          fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 526, column: 20
                                           ends[52]=2;
-                                          ;//sysj\conveyor_controller.sysj line: 533, column: 20
-                                          System.out.println("*Filler operation done");//sysj\conveyor_controller.sysj line: 534, column: 20
-                                          S38282=8;
-                                          S40795=0;
+                                          ;//sysj\conveyor_controller.sysj line: 526, column: 20
+                                          System.out.println("*Filler operation done");//sysj\conveyor_controller.sysj line: 527, column: 20
+                                          S36042=8;
+                                          S38555=0;
                                           active[52]=1;
                                           ends[52]=1;
                                           tdone[52]=1;
@@ -1823,115 +1823,115 @@ public class FillerController extends ClockDomain{
                       break;
                     
                     case 1 : 
-                      if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 406, column: 20
-                        fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 406, column: 20
+                      if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 399, column: 20
+                        fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 399, column: 20
                         ends[52]=2;
-                        ;//sysj\conveyor_controller.sysj line: 406, column: 20
-                        S38282=2;
-                        __start_thread_52 = com.systemj.Timer.getMs();//sysj\conveyor_controller.sysj line: 381, column: 9
-                        if(com.systemj.Timer.getMs() - __start_thread_52 >= (2) * 1000){//sysj\conveyor_controller.sysj line: 381, column: 9
+                        ;//sysj\conveyor_controller.sysj line: 399, column: 20
+                        S36042=2;
+                        __start_thread_52 = com.systemj.Timer.getMs();//sysj\conveyor_controller.sysj line: 374, column: 9
+                        if(com.systemj.Timer.getMs() - __start_thread_52 >= (2) * 1000){//sysj\conveyor_controller.sysj line: 374, column: 9
                           ends[52]=2;
-                          ;//sysj\conveyor_controller.sysj line: 381, column: 9
-                          System.out.println("*Filler - Bottle Arrived at Pos 2*");//sysj\conveyor_controller.sysj line: 409, column: 20
-                          S38282=3;
-                          if(((filler1_amount_51.getpreval() == null ? 0 : ((Integer)filler1_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler1_amount_51.getpreval() == null ? 0 : ((Integer)filler1_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 412, column: 24
-                            S38442=0;
-                            thread212979(tdone,ends);
-                            thread212980(tdone,ends);
-                            int biggest212981 = 0;
-                            if(ends[53]>=biggest212981){
-                              biggest212981=ends[53];
+                          ;//sysj\conveyor_controller.sysj line: 374, column: 9
+                          System.out.println("*Filler - Bottle Arrived at Pos 2*");//sysj\conveyor_controller.sysj line: 402, column: 20
+                          S36042=3;
+                          if(((filler1_amount_51.getpreval() == null ? 0 : ((Integer)filler1_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler1_amount_51.getpreval() == null ? 0 : ((Integer)filler1_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 405, column: 24
+                            S36202=0;
+                            thread210734(tdone,ends);
+                            thread210735(tdone,ends);
+                            int biggest210736 = 0;
+                            if(ends[53]>=biggest210736){
+                              biggest210736=ends[53];
                             }
-                            if(ends[54]>=biggest212981){
-                              biggest212981=ends[54];
+                            if(ends[54]>=biggest210736){
+                              biggest210736=ends[54];
                             }
-                            if(biggest212981 == 1){
+                            if(biggest210736 == 1){
                               active[52]=1;
                               ends[52]=1;
                               tdone[52]=1;
                             }
                           }
                           else {
-                            S38282=4;
-                            if(((filler2_amount_51.getpreval() == null ? 0 : ((Integer)filler2_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler2_amount_51.getpreval() == null ? 0 : ((Integer)filler2_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 442, column: 24
-                              S38790=0;
-                              thread212982(tdone,ends);
-                              thread212983(tdone,ends);
-                              int biggest212984 = 0;
-                              if(ends[57]>=biggest212984){
-                                biggest212984=ends[57];
+                            S36042=4;
+                            if(((filler2_amount_51.getpreval() == null ? 0 : ((Integer)filler2_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler2_amount_51.getpreval() == null ? 0 : ((Integer)filler2_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 435, column: 24
+                              S36550=0;
+                              thread210737(tdone,ends);
+                              thread210738(tdone,ends);
+                              int biggest210739 = 0;
+                              if(ends[57]>=biggest210739){
+                                biggest210739=ends[57];
                               }
-                              if(ends[58]>=biggest212984){
-                                biggest212984=ends[58];
+                              if(ends[58]>=biggest210739){
+                                biggest210739=ends[58];
                               }
-                              if(biggest212984 == 1){
+                              if(biggest210739 == 1){
                                 active[52]=1;
                                 ends[52]=1;
                                 tdone[52]=1;
                               }
                             }
                             else {
-                              S38282=5;
-                              if(((filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 472, column: 24
-                                S39254=0;
-                                thread212985(tdone,ends);
-                                thread212986(tdone,ends);
-                                int biggest212987 = 0;
-                                if(ends[61]>=biggest212987){
-                                  biggest212987=ends[61];
+                              S36042=5;
+                              if(((filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 465, column: 24
+                                S37014=0;
+                                thread210740(tdone,ends);
+                                thread210741(tdone,ends);
+                                int biggest210742 = 0;
+                                if(ends[61]>=biggest210742){
+                                  biggest210742=ends[61];
                                 }
-                                if(ends[62]>=biggest212987){
-                                  biggest212987=ends[62];
+                                if(ends[62]>=biggest210742){
+                                  biggest210742=ends[62];
                                 }
-                                if(biggest212987 == 1){
+                                if(biggest210742 == 1){
                                   active[52]=1;
                                   ends[52]=1;
                                   tdone[52]=1;
                                 }
                               }
                               else {
-                                S38282=6;
-                                if(((filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 501, column: 24
-                                  S39834=0;
-                                  thread212988(tdone,ends);
-                                  thread212989(tdone,ends);
-                                  int biggest212990 = 0;
-                                  if(ends[65]>=biggest212990){
-                                    biggest212990=ends[65];
+                                S36042=6;
+                                if(((filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 494, column: 24
+                                  S37594=0;
+                                  thread210743(tdone,ends);
+                                  thread210744(tdone,ends);
+                                  int biggest210745 = 0;
+                                  if(ends[65]>=biggest210745){
+                                    biggest210745=ends[65];
                                   }
-                                  if(ends[66]>=biggest212990){
-                                    biggest212990=ends[66];
+                                  if(ends[66]>=biggest210745){
+                                    biggest210745=ends[66];
                                   }
-                                  if(biggest212990 == 1){
+                                  if(biggest210745 == 1){
                                     active[52]=1;
                                     ends[52]=1;
                                     tdone[52]=1;
                                   }
                                 }
                                 else {
-                                  order_finished.setPresent();//sysj\conveyor_controller.sysj line: 531, column: 20
+                                  order_finished.setPresent();//sysj\conveyor_controller.sysj line: 524, column: 20
                                   currsigs.addElement(order_finished);
-                                  S38282=7;
-                                  S40480=0;
-                                  if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                                    fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 533, column: 20
-                                    S40480=1;
+                                  S36042=7;
+                                  S38240=0;
+                                  if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                                    fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 526, column: 20
+                                    S38240=1;
                                     active[52]=1;
                                     ends[52]=1;
                                     tdone[52]=1;
                                   }
                                   else {
-                                    S40475=0;
-                                    if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                                      fillerReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 533, column: 20
-                                      S40475=1;
-                                      if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                                        fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 533, column: 20
+                                    S38235=0;
+                                    if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                                      fillerReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 526, column: 20
+                                      S38235=1;
+                                      if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                                        fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 526, column: 20
                                         ends[52]=2;
-                                        ;//sysj\conveyor_controller.sysj line: 533, column: 20
-                                        System.out.println("*Filler operation done");//sysj\conveyor_controller.sysj line: 534, column: 20
-                                        S38282=8;
-                                        S40795=0;
+                                        ;//sysj\conveyor_controller.sysj line: 526, column: 20
+                                        System.out.println("*Filler operation done");//sysj\conveyor_controller.sysj line: 527, column: 20
+                                        S36042=8;
+                                        S38555=0;
                                         active[52]=1;
                                         ends[52]=1;
                                         tdone[52]=1;
@@ -1971,129 +1971,129 @@ public class FillerController extends ClockDomain{
                 break;
               
               case 1 : 
-                S38292=1;
-                S38292=0;
-                if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 406, column: 20
-                  fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 406, column: 20
-                  S38292=1;
+                S36052=1;
+                S36052=0;
+                if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 399, column: 20
+                  fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 399, column: 20
+                  S36052=1;
                   active[52]=1;
                   ends[52]=1;
                   tdone[52]=1;
                 }
                 else {
-                  S38287=0;
-                  if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 406, column: 20
-                    fillerReady_o.setVal(Boolean.FALSE);//sysj\conveyor_controller.sysj line: 406, column: 20
-                    S38287=1;
-                    if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 406, column: 20
-                      fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 406, column: 20
+                  S36047=0;
+                  if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 399, column: 20
+                    fillerReady_o.setVal(Boolean.FALSE);//sysj\conveyor_controller.sysj line: 399, column: 20
+                    S36047=1;
+                    if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 399, column: 20
+                      fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 399, column: 20
                       ends[52]=2;
-                      ;//sysj\conveyor_controller.sysj line: 406, column: 20
-                      S38282=2;
-                      __start_thread_52 = com.systemj.Timer.getMs();//sysj\conveyor_controller.sysj line: 381, column: 9
-                      if(com.systemj.Timer.getMs() - __start_thread_52 >= (2) * 1000){//sysj\conveyor_controller.sysj line: 381, column: 9
+                      ;//sysj\conveyor_controller.sysj line: 399, column: 20
+                      S36042=2;
+                      __start_thread_52 = com.systemj.Timer.getMs();//sysj\conveyor_controller.sysj line: 374, column: 9
+                      if(com.systemj.Timer.getMs() - __start_thread_52 >= (2) * 1000){//sysj\conveyor_controller.sysj line: 374, column: 9
                         ends[52]=2;
-                        ;//sysj\conveyor_controller.sysj line: 381, column: 9
-                        System.out.println("*Filler - Bottle Arrived at Pos 2*");//sysj\conveyor_controller.sysj line: 409, column: 20
-                        S38282=3;
-                        if(((filler1_amount_51.getpreval() == null ? 0 : ((Integer)filler1_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler1_amount_51.getpreval() == null ? 0 : ((Integer)filler1_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 412, column: 24
-                          S38442=0;
-                          thread212991(tdone,ends);
-                          thread212992(tdone,ends);
-                          int biggest212993 = 0;
-                          if(ends[53]>=biggest212993){
-                            biggest212993=ends[53];
+                        ;//sysj\conveyor_controller.sysj line: 374, column: 9
+                        System.out.println("*Filler - Bottle Arrived at Pos 2*");//sysj\conveyor_controller.sysj line: 402, column: 20
+                        S36042=3;
+                        if(((filler1_amount_51.getpreval() == null ? 0 : ((Integer)filler1_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler1_amount_51.getpreval() == null ? 0 : ((Integer)filler1_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 405, column: 24
+                          S36202=0;
+                          thread210746(tdone,ends);
+                          thread210747(tdone,ends);
+                          int biggest210748 = 0;
+                          if(ends[53]>=biggest210748){
+                            biggest210748=ends[53];
                           }
-                          if(ends[54]>=biggest212993){
-                            biggest212993=ends[54];
+                          if(ends[54]>=biggest210748){
+                            biggest210748=ends[54];
                           }
-                          if(biggest212993 == 1){
+                          if(biggest210748 == 1){
                             active[52]=1;
                             ends[52]=1;
                             tdone[52]=1;
                           }
                         }
                         else {
-                          S38282=4;
-                          if(((filler2_amount_51.getpreval() == null ? 0 : ((Integer)filler2_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler2_amount_51.getpreval() == null ? 0 : ((Integer)filler2_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 442, column: 24
-                            S38790=0;
-                            thread212994(tdone,ends);
-                            thread212995(tdone,ends);
-                            int biggest212996 = 0;
-                            if(ends[57]>=biggest212996){
-                              biggest212996=ends[57];
+                          S36042=4;
+                          if(((filler2_amount_51.getpreval() == null ? 0 : ((Integer)filler2_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler2_amount_51.getpreval() == null ? 0 : ((Integer)filler2_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 435, column: 24
+                            S36550=0;
+                            thread210749(tdone,ends);
+                            thread210750(tdone,ends);
+                            int biggest210751 = 0;
+                            if(ends[57]>=biggest210751){
+                              biggest210751=ends[57];
                             }
-                            if(ends[58]>=biggest212996){
-                              biggest212996=ends[58];
+                            if(ends[58]>=biggest210751){
+                              biggest210751=ends[58];
                             }
-                            if(biggest212996 == 1){
+                            if(biggest210751 == 1){
                               active[52]=1;
                               ends[52]=1;
                               tdone[52]=1;
                             }
                           }
                           else {
-                            S38282=5;
-                            if(((filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 472, column: 24
-                              S39254=0;
-                              thread212997(tdone,ends);
-                              thread212998(tdone,ends);
-                              int biggest212999 = 0;
-                              if(ends[61]>=biggest212999){
-                                biggest212999=ends[61];
+                            S36042=5;
+                            if(((filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 465, column: 24
+                              S37014=0;
+                              thread210752(tdone,ends);
+                              thread210753(tdone,ends);
+                              int biggest210754 = 0;
+                              if(ends[61]>=biggest210754){
+                                biggest210754=ends[61];
                               }
-                              if(ends[62]>=biggest212999){
-                                biggest212999=ends[62];
+                              if(ends[62]>=biggest210754){
+                                biggest210754=ends[62];
                               }
-                              if(biggest212999 == 1){
+                              if(biggest210754 == 1){
                                 active[52]=1;
                                 ends[52]=1;
                                 tdone[52]=1;
                               }
                             }
                             else {
-                              S38282=6;
-                              if(((filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 501, column: 24
-                                S39834=0;
-                                thread213000(tdone,ends);
-                                thread213001(tdone,ends);
-                                int biggest213002 = 0;
-                                if(ends[65]>=biggest213002){
-                                  biggest213002=ends[65];
+                              S36042=6;
+                              if(((filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 494, column: 24
+                                S37594=0;
+                                thread210755(tdone,ends);
+                                thread210756(tdone,ends);
+                                int biggest210757 = 0;
+                                if(ends[65]>=biggest210757){
+                                  biggest210757=ends[65];
                                 }
-                                if(ends[66]>=biggest213002){
-                                  biggest213002=ends[66];
+                                if(ends[66]>=biggest210757){
+                                  biggest210757=ends[66];
                                 }
-                                if(biggest213002 == 1){
+                                if(biggest210757 == 1){
                                   active[52]=1;
                                   ends[52]=1;
                                   tdone[52]=1;
                                 }
                               }
                               else {
-                                order_finished.setPresent();//sysj\conveyor_controller.sysj line: 531, column: 20
+                                order_finished.setPresent();//sysj\conveyor_controller.sysj line: 524, column: 20
                                 currsigs.addElement(order_finished);
-                                S38282=7;
-                                S40480=0;
-                                if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                                  fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 533, column: 20
-                                  S40480=1;
+                                S36042=7;
+                                S38240=0;
+                                if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                                  fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 526, column: 20
+                                  S38240=1;
                                   active[52]=1;
                                   ends[52]=1;
                                   tdone[52]=1;
                                 }
                                 else {
-                                  S40475=0;
-                                  if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                                    fillerReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 533, column: 20
-                                    S40475=1;
-                                    if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                                      fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 533, column: 20
+                                  S38235=0;
+                                  if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                                    fillerReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 526, column: 20
+                                    S38235=1;
+                                    if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                                      fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 526, column: 20
                                       ends[52]=2;
-                                      ;//sysj\conveyor_controller.sysj line: 533, column: 20
-                                      System.out.println("*Filler operation done");//sysj\conveyor_controller.sysj line: 534, column: 20
-                                      S38282=8;
-                                      S40795=0;
+                                      ;//sysj\conveyor_controller.sysj line: 526, column: 20
+                                      System.out.println("*Filler operation done");//sysj\conveyor_controller.sysj line: 527, column: 20
+                                      S36042=8;
+                                      S38555=0;
                                       active[52]=1;
                                       ends[52]=1;
                                       tdone[52]=1;
@@ -2139,109 +2139,109 @@ public class FillerController extends ClockDomain{
             break;
           
           case 2 : 
-            if(com.systemj.Timer.getMs() - __start_thread_52 >= (2) * 1000){//sysj\conveyor_controller.sysj line: 381, column: 9
+            if(com.systemj.Timer.getMs() - __start_thread_52 >= (2) * 1000){//sysj\conveyor_controller.sysj line: 374, column: 9
               ends[52]=2;
-              ;//sysj\conveyor_controller.sysj line: 381, column: 9
-              System.out.println("*Filler - Bottle Arrived at Pos 2*");//sysj\conveyor_controller.sysj line: 409, column: 20
-              S38282=3;
-              if(((filler1_amount_51.getpreval() == null ? 0 : ((Integer)filler1_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler1_amount_51.getpreval() == null ? 0 : ((Integer)filler1_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 412, column: 24
-                S38442=0;
-                thread213003(tdone,ends);
-                thread213004(tdone,ends);
-                int biggest213005 = 0;
-                if(ends[53]>=biggest213005){
-                  biggest213005=ends[53];
+              ;//sysj\conveyor_controller.sysj line: 374, column: 9
+              System.out.println("*Filler - Bottle Arrived at Pos 2*");//sysj\conveyor_controller.sysj line: 402, column: 20
+              S36042=3;
+              if(((filler1_amount_51.getpreval() == null ? 0 : ((Integer)filler1_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler1_amount_51.getpreval() == null ? 0 : ((Integer)filler1_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 405, column: 24
+                S36202=0;
+                thread210758(tdone,ends);
+                thread210759(tdone,ends);
+                int biggest210760 = 0;
+                if(ends[53]>=biggest210760){
+                  biggest210760=ends[53];
                 }
-                if(ends[54]>=biggest213005){
-                  biggest213005=ends[54];
+                if(ends[54]>=biggest210760){
+                  biggest210760=ends[54];
                 }
-                if(biggest213005 == 1){
+                if(biggest210760 == 1){
                   active[52]=1;
                   ends[52]=1;
                   tdone[52]=1;
                 }
               }
               else {
-                S38282=4;
-                if(((filler2_amount_51.getpreval() == null ? 0 : ((Integer)filler2_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler2_amount_51.getpreval() == null ? 0 : ((Integer)filler2_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 442, column: 24
-                  S38790=0;
-                  thread213006(tdone,ends);
-                  thread213007(tdone,ends);
-                  int biggest213008 = 0;
-                  if(ends[57]>=biggest213008){
-                    biggest213008=ends[57];
+                S36042=4;
+                if(((filler2_amount_51.getpreval() == null ? 0 : ((Integer)filler2_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler2_amount_51.getpreval() == null ? 0 : ((Integer)filler2_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 435, column: 24
+                  S36550=0;
+                  thread210761(tdone,ends);
+                  thread210762(tdone,ends);
+                  int biggest210763 = 0;
+                  if(ends[57]>=biggest210763){
+                    biggest210763=ends[57];
                   }
-                  if(ends[58]>=biggest213008){
-                    biggest213008=ends[58];
+                  if(ends[58]>=biggest210763){
+                    biggest210763=ends[58];
                   }
-                  if(biggest213008 == 1){
+                  if(biggest210763 == 1){
                     active[52]=1;
                     ends[52]=1;
                     tdone[52]=1;
                   }
                 }
                 else {
-                  S38282=5;
-                  if(((filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 472, column: 24
-                    S39254=0;
-                    thread213009(tdone,ends);
-                    thread213010(tdone,ends);
-                    int biggest213011 = 0;
-                    if(ends[61]>=biggest213011){
-                      biggest213011=ends[61];
+                  S36042=5;
+                  if(((filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 465, column: 24
+                    S37014=0;
+                    thread210764(tdone,ends);
+                    thread210765(tdone,ends);
+                    int biggest210766 = 0;
+                    if(ends[61]>=biggest210766){
+                      biggest210766=ends[61];
                     }
-                    if(ends[62]>=biggest213011){
-                      biggest213011=ends[62];
+                    if(ends[62]>=biggest210766){
+                      biggest210766=ends[62];
                     }
-                    if(biggest213011 == 1){
+                    if(biggest210766 == 1){
                       active[52]=1;
                       ends[52]=1;
                       tdone[52]=1;
                     }
                   }
                   else {
-                    S38282=6;
-                    if(((filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 501, column: 24
-                      S39834=0;
-                      thread213012(tdone,ends);
-                      thread213013(tdone,ends);
-                      int biggest213014 = 0;
-                      if(ends[65]>=biggest213014){
-                        biggest213014=ends[65];
+                    S36042=6;
+                    if(((filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 494, column: 24
+                      S37594=0;
+                      thread210767(tdone,ends);
+                      thread210768(tdone,ends);
+                      int biggest210769 = 0;
+                      if(ends[65]>=biggest210769){
+                        biggest210769=ends[65];
                       }
-                      if(ends[66]>=biggest213014){
-                        biggest213014=ends[66];
+                      if(ends[66]>=biggest210769){
+                        biggest210769=ends[66];
                       }
-                      if(biggest213014 == 1){
+                      if(biggest210769 == 1){
                         active[52]=1;
                         ends[52]=1;
                         tdone[52]=1;
                       }
                     }
                     else {
-                      order_finished.setPresent();//sysj\conveyor_controller.sysj line: 531, column: 20
+                      order_finished.setPresent();//sysj\conveyor_controller.sysj line: 524, column: 20
                       currsigs.addElement(order_finished);
-                      S38282=7;
-                      S40480=0;
-                      if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                        fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 533, column: 20
-                        S40480=1;
+                      S36042=7;
+                      S38240=0;
+                      if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                        fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 526, column: 20
+                        S38240=1;
                         active[52]=1;
                         ends[52]=1;
                         tdone[52]=1;
                       }
                       else {
-                        S40475=0;
-                        if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                          fillerReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 533, column: 20
-                          S40475=1;
-                          if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                            fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 533, column: 20
+                        S38235=0;
+                        if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                          fillerReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 526, column: 20
+                          S38235=1;
+                          if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                            fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 526, column: 20
                             ends[52]=2;
-                            ;//sysj\conveyor_controller.sysj line: 533, column: 20
-                            System.out.println("*Filler operation done");//sysj\conveyor_controller.sysj line: 534, column: 20
-                            S38282=8;
-                            S40795=0;
+                            ;//sysj\conveyor_controller.sysj line: 526, column: 20
+                            System.out.println("*Filler operation done");//sysj\conveyor_controller.sysj line: 527, column: 20
+                            S36042=8;
+                            S38555=0;
                             active[52]=1;
                             ends[52]=1;
                             tdone[52]=1;
@@ -2271,53 +2271,53 @@ public class FillerController extends ClockDomain{
             break;
           
           case 3 : 
-            switch(S38442){
+            switch(S36202){
               case 0 : 
-                if(dosUnitFilled.getprestatus()){//sysj\conveyor_controller.sysj line: 414, column: 30
-                  S38442=1;
-                  thread213015(tdone,ends);
-                  thread213016(tdone,ends);
-                  int biggest213017 = 0;
-                  if(ends[55]>=biggest213017){
-                    biggest213017=ends[55];
+                if(dosUnitFilled.getprestatus()){//sysj\conveyor_controller.sysj line: 407, column: 30
+                  S36202=1;
+                  thread210770(tdone,ends);
+                  thread210771(tdone,ends);
+                  int biggest210772 = 0;
+                  if(ends[55]>=biggest210772){
+                    biggest210772=ends[55];
                   }
-                  if(ends[56]>=biggest213017){
-                    biggest213017=ends[56];
+                  if(ends[56]>=biggest210772){
+                    biggest210772=ends[56];
                   }
-                  if(biggest213017 == 1){
+                  if(biggest210772 == 1){
                     active[52]=1;
                     ends[52]=1;
                     tdone[52]=1;
                   }
                 }
                 else {
-                  thread213018(tdone,ends);
-                  thread213019(tdone,ends);
-                  int biggest213020 = 0;
-                  if(ends[53]>=biggest213020){
-                    biggest213020=ends[53];
+                  thread210773(tdone,ends);
+                  thread210774(tdone,ends);
+                  int biggest210775 = 0;
+                  if(ends[53]>=biggest210775){
+                    biggest210775=ends[53];
                   }
-                  if(ends[54]>=biggest213020){
-                    biggest213020=ends[54];
+                  if(ends[54]>=biggest210775){
+                    biggest210775=ends[54];
                   }
-                  if(biggest213020 == 1){
+                  if(biggest210775 == 1){
                     active[52]=1;
                     ends[52]=1;
                     tdone[52]=1;
                   }
                   //FINXME code
-                  if(biggest213020 == 0){
-                    S38442=1;
-                    thread213021(tdone,ends);
-                    thread213022(tdone,ends);
-                    int biggest213023 = 0;
-                    if(ends[55]>=biggest213023){
-                      biggest213023=ends[55];
+                  if(biggest210775 == 0){
+                    S36202=1;
+                    thread210776(tdone,ends);
+                    thread210777(tdone,ends);
+                    int biggest210778 = 0;
+                    if(ends[55]>=biggest210778){
+                      biggest210778=ends[55];
                     }
-                    if(ends[56]>=biggest213023){
-                      biggest213023=ends[56];
+                    if(ends[56]>=biggest210778){
+                      biggest210778=ends[56];
                     }
-                    if(biggest213023 == 1){
+                    if(biggest210778 == 1){
                       active[52]=1;
                       ends[52]=1;
                       tdone[52]=1;
@@ -2327,93 +2327,93 @@ public class FillerController extends ClockDomain{
                 break;
               
               case 1 : 
-                if(dosUnitEvac.getprestatus()){//sysj\conveyor_controller.sysj line: 424, column: 30
-                  System.out.println("*Filler #1 - Filled Amount: " + (filler1_amount_51.getpreval() == null ? 0 : ((Integer)filler1_amount_51.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 435, column: 24
-                  current_thread_52 += (filler1_amount_51.getpreval() == null ? 0 : ((Integer)filler1_amount_51.getpreval()).intValue());//sysj\conveyor_controller.sysj line: 436, column: 24
-                  System.out.println("*Current Filled Amount: " + current_thread_52);//sysj\conveyor_controller.sysj line: 437, column: 24
-                  current_fill_51.setPresent();//sysj\conveyor_controller.sysj line: 438, column: 24
+                if(dosUnitEvac.getprestatus()){//sysj\conveyor_controller.sysj line: 417, column: 30
+                  System.out.println("*Filler #1 - Filled Amount: " + (filler1_amount_51.getpreval() == null ? 0 : ((Integer)filler1_amount_51.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 428, column: 24
+                  current_thread_52 += (filler1_amount_51.getpreval() == null ? 0 : ((Integer)filler1_amount_51.getpreval()).intValue());//sysj\conveyor_controller.sysj line: 429, column: 24
+                  System.out.println("*Current Filled Amount: " + current_thread_52);//sysj\conveyor_controller.sysj line: 430, column: 24
+                  current_fill_51.setPresent();//sysj\conveyor_controller.sysj line: 431, column: 24
                   currsigs.addElement(current_fill_51);
-                  current_fill_51.setValue(current_thread_52);//sysj\conveyor_controller.sysj line: 438, column: 24
-                  S38282=4;
-                  if(((filler2_amount_51.getpreval() == null ? 0 : ((Integer)filler2_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler2_amount_51.getpreval() == null ? 0 : ((Integer)filler2_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 442, column: 24
-                    S38790=0;
-                    thread213024(tdone,ends);
-                    thread213025(tdone,ends);
-                    int biggest213026 = 0;
-                    if(ends[57]>=biggest213026){
-                      biggest213026=ends[57];
+                  current_fill_51.setValue(current_thread_52);//sysj\conveyor_controller.sysj line: 431, column: 24
+                  S36042=4;
+                  if(((filler2_amount_51.getpreval() == null ? 0 : ((Integer)filler2_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler2_amount_51.getpreval() == null ? 0 : ((Integer)filler2_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 435, column: 24
+                    S36550=0;
+                    thread210779(tdone,ends);
+                    thread210780(tdone,ends);
+                    int biggest210781 = 0;
+                    if(ends[57]>=biggest210781){
+                      biggest210781=ends[57];
                     }
-                    if(ends[58]>=biggest213026){
-                      biggest213026=ends[58];
+                    if(ends[58]>=biggest210781){
+                      biggest210781=ends[58];
                     }
-                    if(biggest213026 == 1){
+                    if(biggest210781 == 1){
                       active[52]=1;
                       ends[52]=1;
                       tdone[52]=1;
                     }
                   }
                   else {
-                    S38282=5;
-                    if(((filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 472, column: 24
-                      S39254=0;
-                      thread213027(tdone,ends);
-                      thread213028(tdone,ends);
-                      int biggest213029 = 0;
-                      if(ends[61]>=biggest213029){
-                        biggest213029=ends[61];
+                    S36042=5;
+                    if(((filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 465, column: 24
+                      S37014=0;
+                      thread210782(tdone,ends);
+                      thread210783(tdone,ends);
+                      int biggest210784 = 0;
+                      if(ends[61]>=biggest210784){
+                        biggest210784=ends[61];
                       }
-                      if(ends[62]>=biggest213029){
-                        biggest213029=ends[62];
+                      if(ends[62]>=biggest210784){
+                        biggest210784=ends[62];
                       }
-                      if(biggest213029 == 1){
+                      if(biggest210784 == 1){
                         active[52]=1;
                         ends[52]=1;
                         tdone[52]=1;
                       }
                     }
                     else {
-                      S38282=6;
-                      if(((filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 501, column: 24
-                        S39834=0;
-                        thread213030(tdone,ends);
-                        thread213031(tdone,ends);
-                        int biggest213032 = 0;
-                        if(ends[65]>=biggest213032){
-                          biggest213032=ends[65];
+                      S36042=6;
+                      if(((filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 494, column: 24
+                        S37594=0;
+                        thread210785(tdone,ends);
+                        thread210786(tdone,ends);
+                        int biggest210787 = 0;
+                        if(ends[65]>=biggest210787){
+                          biggest210787=ends[65];
                         }
-                        if(ends[66]>=biggest213032){
-                          biggest213032=ends[66];
+                        if(ends[66]>=biggest210787){
+                          biggest210787=ends[66];
                         }
-                        if(biggest213032 == 1){
+                        if(biggest210787 == 1){
                           active[52]=1;
                           ends[52]=1;
                           tdone[52]=1;
                         }
                       }
                       else {
-                        order_finished.setPresent();//sysj\conveyor_controller.sysj line: 531, column: 20
+                        order_finished.setPresent();//sysj\conveyor_controller.sysj line: 524, column: 20
                         currsigs.addElement(order_finished);
-                        S38282=7;
-                        S40480=0;
-                        if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                          fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 533, column: 20
-                          S40480=1;
+                        S36042=7;
+                        S38240=0;
+                        if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                          fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 526, column: 20
+                          S38240=1;
                           active[52]=1;
                           ends[52]=1;
                           tdone[52]=1;
                         }
                         else {
-                          S40475=0;
-                          if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                            fillerReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 533, column: 20
-                            S40475=1;
-                            if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                              fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 533, column: 20
+                          S38235=0;
+                          if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                            fillerReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 526, column: 20
+                            S38235=1;
+                            if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                              fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 526, column: 20
                               ends[52]=2;
-                              ;//sysj\conveyor_controller.sysj line: 533, column: 20
-                              System.out.println("*Filler operation done");//sysj\conveyor_controller.sysj line: 534, column: 20
-                              S38282=8;
-                              S40795=0;
+                              ;//sysj\conveyor_controller.sysj line: 526, column: 20
+                              System.out.println("*Filler operation done");//sysj\conveyor_controller.sysj line: 527, column: 20
+                              S36042=8;
+                              S38555=0;
                               active[52]=1;
                               ends[52]=1;
                               tdone[52]=1;
@@ -2435,108 +2435,108 @@ public class FillerController extends ClockDomain{
                   }
                 }
                 else {
-                  thread213033(tdone,ends);
-                  thread213034(tdone,ends);
-                  int biggest213035 = 0;
-                  if(ends[55]>=biggest213035){
-                    biggest213035=ends[55];
+                  thread210788(tdone,ends);
+                  thread210789(tdone,ends);
+                  int biggest210790 = 0;
+                  if(ends[55]>=biggest210790){
+                    biggest210790=ends[55];
                   }
-                  if(ends[56]>=biggest213035){
-                    biggest213035=ends[56];
+                  if(ends[56]>=biggest210790){
+                    biggest210790=ends[56];
                   }
-                  if(biggest213035 == 1){
+                  if(biggest210790 == 1){
                     active[52]=1;
                     ends[52]=1;
                     tdone[52]=1;
                   }
                   //FINXME code
-                  if(biggest213035 == 0){
-                    System.out.println("*Filler #1 - Filled Amount: " + (filler1_amount_51.getpreval() == null ? 0 : ((Integer)filler1_amount_51.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 435, column: 24
-                    current_thread_52 += (filler1_amount_51.getpreval() == null ? 0 : ((Integer)filler1_amount_51.getpreval()).intValue());//sysj\conveyor_controller.sysj line: 436, column: 24
-                    System.out.println("*Current Filled Amount: " + current_thread_52);//sysj\conveyor_controller.sysj line: 437, column: 24
-                    current_fill_51.setPresent();//sysj\conveyor_controller.sysj line: 438, column: 24
+                  if(biggest210790 == 0){
+                    System.out.println("*Filler #1 - Filled Amount: " + (filler1_amount_51.getpreval() == null ? 0 : ((Integer)filler1_amount_51.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 428, column: 24
+                    current_thread_52 += (filler1_amount_51.getpreval() == null ? 0 : ((Integer)filler1_amount_51.getpreval()).intValue());//sysj\conveyor_controller.sysj line: 429, column: 24
+                    System.out.println("*Current Filled Amount: " + current_thread_52);//sysj\conveyor_controller.sysj line: 430, column: 24
+                    current_fill_51.setPresent();//sysj\conveyor_controller.sysj line: 431, column: 24
                     currsigs.addElement(current_fill_51);
-                    current_fill_51.setValue(current_thread_52);//sysj\conveyor_controller.sysj line: 438, column: 24
-                    S38282=4;
-                    if(((filler2_amount_51.getpreval() == null ? 0 : ((Integer)filler2_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler2_amount_51.getpreval() == null ? 0 : ((Integer)filler2_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 442, column: 24
-                      S38790=0;
-                      thread213036(tdone,ends);
-                      thread213037(tdone,ends);
-                      int biggest213038 = 0;
-                      if(ends[57]>=biggest213038){
-                        biggest213038=ends[57];
+                    current_fill_51.setValue(current_thread_52);//sysj\conveyor_controller.sysj line: 431, column: 24
+                    S36042=4;
+                    if(((filler2_amount_51.getpreval() == null ? 0 : ((Integer)filler2_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler2_amount_51.getpreval() == null ? 0 : ((Integer)filler2_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 435, column: 24
+                      S36550=0;
+                      thread210791(tdone,ends);
+                      thread210792(tdone,ends);
+                      int biggest210793 = 0;
+                      if(ends[57]>=biggest210793){
+                        biggest210793=ends[57];
                       }
-                      if(ends[58]>=biggest213038){
-                        biggest213038=ends[58];
+                      if(ends[58]>=biggest210793){
+                        biggest210793=ends[58];
                       }
-                      if(biggest213038 == 1){
+                      if(biggest210793 == 1){
                         active[52]=1;
                         ends[52]=1;
                         tdone[52]=1;
                       }
                     }
                     else {
-                      S38282=5;
-                      if(((filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 472, column: 24
-                        S39254=0;
-                        thread213039(tdone,ends);
-                        thread213040(tdone,ends);
-                        int biggest213041 = 0;
-                        if(ends[61]>=biggest213041){
-                          biggest213041=ends[61];
+                      S36042=5;
+                      if(((filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 465, column: 24
+                        S37014=0;
+                        thread210794(tdone,ends);
+                        thread210795(tdone,ends);
+                        int biggest210796 = 0;
+                        if(ends[61]>=biggest210796){
+                          biggest210796=ends[61];
                         }
-                        if(ends[62]>=biggest213041){
-                          biggest213041=ends[62];
+                        if(ends[62]>=biggest210796){
+                          biggest210796=ends[62];
                         }
-                        if(biggest213041 == 1){
+                        if(biggest210796 == 1){
                           active[52]=1;
                           ends[52]=1;
                           tdone[52]=1;
                         }
                       }
                       else {
-                        S38282=6;
-                        if(((filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 501, column: 24
-                          S39834=0;
-                          thread213042(tdone,ends);
-                          thread213043(tdone,ends);
-                          int biggest213044 = 0;
-                          if(ends[65]>=biggest213044){
-                            biggest213044=ends[65];
+                        S36042=6;
+                        if(((filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 494, column: 24
+                          S37594=0;
+                          thread210797(tdone,ends);
+                          thread210798(tdone,ends);
+                          int biggest210799 = 0;
+                          if(ends[65]>=biggest210799){
+                            biggest210799=ends[65];
                           }
-                          if(ends[66]>=biggest213044){
-                            biggest213044=ends[66];
+                          if(ends[66]>=biggest210799){
+                            biggest210799=ends[66];
                           }
-                          if(biggest213044 == 1){
+                          if(biggest210799 == 1){
                             active[52]=1;
                             ends[52]=1;
                             tdone[52]=1;
                           }
                         }
                         else {
-                          order_finished.setPresent();//sysj\conveyor_controller.sysj line: 531, column: 20
+                          order_finished.setPresent();//sysj\conveyor_controller.sysj line: 524, column: 20
                           currsigs.addElement(order_finished);
-                          S38282=7;
-                          S40480=0;
-                          if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                            fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 533, column: 20
-                            S40480=1;
+                          S36042=7;
+                          S38240=0;
+                          if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                            fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 526, column: 20
+                            S38240=1;
                             active[52]=1;
                             ends[52]=1;
                             tdone[52]=1;
                           }
                           else {
-                            S40475=0;
-                            if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                              fillerReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 533, column: 20
-                              S40475=1;
-                              if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                                fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 533, column: 20
+                            S38235=0;
+                            if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                              fillerReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 526, column: 20
+                              S38235=1;
+                              if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                                fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 526, column: 20
                                 ends[52]=2;
-                                ;//sysj\conveyor_controller.sysj line: 533, column: 20
-                                System.out.println("*Filler operation done");//sysj\conveyor_controller.sysj line: 534, column: 20
-                                S38282=8;
-                                S40795=0;
+                                ;//sysj\conveyor_controller.sysj line: 526, column: 20
+                                System.out.println("*Filler operation done");//sysj\conveyor_controller.sysj line: 527, column: 20
+                                S36042=8;
+                                S38555=0;
                                 active[52]=1;
                                 ends[52]=1;
                                 tdone[52]=1;
@@ -2564,53 +2564,53 @@ public class FillerController extends ClockDomain{
             break;
           
           case 4 : 
-            switch(S38790){
+            switch(S36550){
               case 0 : 
-                if(dosUnitFilled.getprestatus()){//sysj\conveyor_controller.sysj line: 444, column: 30
-                  S38790=1;
-                  thread213045(tdone,ends);
-                  thread213046(tdone,ends);
-                  int biggest213047 = 0;
-                  if(ends[59]>=biggest213047){
-                    biggest213047=ends[59];
+                if(dosUnitFilled.getprestatus()){//sysj\conveyor_controller.sysj line: 437, column: 30
+                  S36550=1;
+                  thread210800(tdone,ends);
+                  thread210801(tdone,ends);
+                  int biggest210802 = 0;
+                  if(ends[59]>=biggest210802){
+                    biggest210802=ends[59];
                   }
-                  if(ends[60]>=biggest213047){
-                    biggest213047=ends[60];
+                  if(ends[60]>=biggest210802){
+                    biggest210802=ends[60];
                   }
-                  if(biggest213047 == 1){
+                  if(biggest210802 == 1){
                     active[52]=1;
                     ends[52]=1;
                     tdone[52]=1;
                   }
                 }
                 else {
-                  thread213048(tdone,ends);
-                  thread213049(tdone,ends);
-                  int biggest213050 = 0;
-                  if(ends[57]>=biggest213050){
-                    biggest213050=ends[57];
+                  thread210803(tdone,ends);
+                  thread210804(tdone,ends);
+                  int biggest210805 = 0;
+                  if(ends[57]>=biggest210805){
+                    biggest210805=ends[57];
                   }
-                  if(ends[58]>=biggest213050){
-                    biggest213050=ends[58];
+                  if(ends[58]>=biggest210805){
+                    biggest210805=ends[58];
                   }
-                  if(biggest213050 == 1){
+                  if(biggest210805 == 1){
                     active[52]=1;
                     ends[52]=1;
                     tdone[52]=1;
                   }
                   //FINXME code
-                  if(biggest213050 == 0){
-                    S38790=1;
-                    thread213051(tdone,ends);
-                    thread213052(tdone,ends);
-                    int biggest213053 = 0;
-                    if(ends[59]>=biggest213053){
-                      biggest213053=ends[59];
+                  if(biggest210805 == 0){
+                    S36550=1;
+                    thread210806(tdone,ends);
+                    thread210807(tdone,ends);
+                    int biggest210808 = 0;
+                    if(ends[59]>=biggest210808){
+                      biggest210808=ends[59];
                     }
-                    if(ends[60]>=biggest213053){
-                      biggest213053=ends[60];
+                    if(ends[60]>=biggest210808){
+                      biggest210808=ends[60];
                     }
-                    if(biggest213053 == 1){
+                    if(biggest210808 == 1){
                       active[52]=1;
                       ends[52]=1;
                       tdone[52]=1;
@@ -2620,74 +2620,74 @@ public class FillerController extends ClockDomain{
                 break;
               
               case 1 : 
-                if(dosUnitEvac.getprestatus()){//sysj\conveyor_controller.sysj line: 454, column: 30
-                  System.out.println("*Filler #2 - Filled Amount: " + (filler2_amount_51.getpreval() == null ? 0 : ((Integer)filler2_amount_51.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 465, column: 24
-                  current_thread_52 += (filler2_amount_51.getpreval() == null ? 0 : ((Integer)filler2_amount_51.getpreval()).intValue());//sysj\conveyor_controller.sysj line: 466, column: 24
-                  System.out.println("*Current Filled Amount: " + current_thread_52);//sysj\conveyor_controller.sysj line: 467, column: 24
-                  current_fill_51.setPresent();//sysj\conveyor_controller.sysj line: 468, column: 24
+                if(dosUnitEvac.getprestatus()){//sysj\conveyor_controller.sysj line: 447, column: 30
+                  System.out.println("*Filler #2 - Filled Amount: " + (filler2_amount_51.getpreval() == null ? 0 : ((Integer)filler2_amount_51.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 458, column: 24
+                  current_thread_52 += (filler2_amount_51.getpreval() == null ? 0 : ((Integer)filler2_amount_51.getpreval()).intValue());//sysj\conveyor_controller.sysj line: 459, column: 24
+                  System.out.println("*Current Filled Amount: " + current_thread_52);//sysj\conveyor_controller.sysj line: 460, column: 24
+                  current_fill_51.setPresent();//sysj\conveyor_controller.sysj line: 461, column: 24
                   currsigs.addElement(current_fill_51);
-                  current_fill_51.setValue(current_thread_52);//sysj\conveyor_controller.sysj line: 468, column: 24
-                  S38282=5;
-                  if(((filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 472, column: 24
-                    S39254=0;
-                    thread213054(tdone,ends);
-                    thread213055(tdone,ends);
-                    int biggest213056 = 0;
-                    if(ends[61]>=biggest213056){
-                      biggest213056=ends[61];
+                  current_fill_51.setValue(current_thread_52);//sysj\conveyor_controller.sysj line: 461, column: 24
+                  S36042=5;
+                  if(((filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 465, column: 24
+                    S37014=0;
+                    thread210809(tdone,ends);
+                    thread210810(tdone,ends);
+                    int biggest210811 = 0;
+                    if(ends[61]>=biggest210811){
+                      biggest210811=ends[61];
                     }
-                    if(ends[62]>=biggest213056){
-                      biggest213056=ends[62];
+                    if(ends[62]>=biggest210811){
+                      biggest210811=ends[62];
                     }
-                    if(biggest213056 == 1){
+                    if(biggest210811 == 1){
                       active[52]=1;
                       ends[52]=1;
                       tdone[52]=1;
                     }
                   }
                   else {
-                    S38282=6;
-                    if(((filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 501, column: 24
-                      S39834=0;
-                      thread213057(tdone,ends);
-                      thread213058(tdone,ends);
-                      int biggest213059 = 0;
-                      if(ends[65]>=biggest213059){
-                        biggest213059=ends[65];
+                    S36042=6;
+                    if(((filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 494, column: 24
+                      S37594=0;
+                      thread210812(tdone,ends);
+                      thread210813(tdone,ends);
+                      int biggest210814 = 0;
+                      if(ends[65]>=biggest210814){
+                        biggest210814=ends[65];
                       }
-                      if(ends[66]>=biggest213059){
-                        biggest213059=ends[66];
+                      if(ends[66]>=biggest210814){
+                        biggest210814=ends[66];
                       }
-                      if(biggest213059 == 1){
+                      if(biggest210814 == 1){
                         active[52]=1;
                         ends[52]=1;
                         tdone[52]=1;
                       }
                     }
                     else {
-                      order_finished.setPresent();//sysj\conveyor_controller.sysj line: 531, column: 20
+                      order_finished.setPresent();//sysj\conveyor_controller.sysj line: 524, column: 20
                       currsigs.addElement(order_finished);
-                      S38282=7;
-                      S40480=0;
-                      if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                        fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 533, column: 20
-                        S40480=1;
+                      S36042=7;
+                      S38240=0;
+                      if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                        fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 526, column: 20
+                        S38240=1;
                         active[52]=1;
                         ends[52]=1;
                         tdone[52]=1;
                       }
                       else {
-                        S40475=0;
-                        if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                          fillerReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 533, column: 20
-                          S40475=1;
-                          if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                            fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 533, column: 20
+                        S38235=0;
+                        if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                          fillerReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 526, column: 20
+                          S38235=1;
+                          if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                            fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 526, column: 20
                             ends[52]=2;
-                            ;//sysj\conveyor_controller.sysj line: 533, column: 20
-                            System.out.println("*Filler operation done");//sysj\conveyor_controller.sysj line: 534, column: 20
-                            S38282=8;
-                            S40795=0;
+                            ;//sysj\conveyor_controller.sysj line: 526, column: 20
+                            System.out.println("*Filler operation done");//sysj\conveyor_controller.sysj line: 527, column: 20
+                            S36042=8;
+                            S38555=0;
                             active[52]=1;
                             ends[52]=1;
                             tdone[52]=1;
@@ -2708,89 +2708,89 @@ public class FillerController extends ClockDomain{
                   }
                 }
                 else {
-                  thread213060(tdone,ends);
-                  thread213061(tdone,ends);
-                  int biggest213062 = 0;
-                  if(ends[59]>=biggest213062){
-                    biggest213062=ends[59];
+                  thread210815(tdone,ends);
+                  thread210816(tdone,ends);
+                  int biggest210817 = 0;
+                  if(ends[59]>=biggest210817){
+                    biggest210817=ends[59];
                   }
-                  if(ends[60]>=biggest213062){
-                    biggest213062=ends[60];
+                  if(ends[60]>=biggest210817){
+                    biggest210817=ends[60];
                   }
-                  if(biggest213062 == 1){
+                  if(biggest210817 == 1){
                     active[52]=1;
                     ends[52]=1;
                     tdone[52]=1;
                   }
                   //FINXME code
-                  if(biggest213062 == 0){
-                    System.out.println("*Filler #2 - Filled Amount: " + (filler2_amount_51.getpreval() == null ? 0 : ((Integer)filler2_amount_51.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 465, column: 24
-                    current_thread_52 += (filler2_amount_51.getpreval() == null ? 0 : ((Integer)filler2_amount_51.getpreval()).intValue());//sysj\conveyor_controller.sysj line: 466, column: 24
-                    System.out.println("*Current Filled Amount: " + current_thread_52);//sysj\conveyor_controller.sysj line: 467, column: 24
-                    current_fill_51.setPresent();//sysj\conveyor_controller.sysj line: 468, column: 24
+                  if(biggest210817 == 0){
+                    System.out.println("*Filler #2 - Filled Amount: " + (filler2_amount_51.getpreval() == null ? 0 : ((Integer)filler2_amount_51.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 458, column: 24
+                    current_thread_52 += (filler2_amount_51.getpreval() == null ? 0 : ((Integer)filler2_amount_51.getpreval()).intValue());//sysj\conveyor_controller.sysj line: 459, column: 24
+                    System.out.println("*Current Filled Amount: " + current_thread_52);//sysj\conveyor_controller.sysj line: 460, column: 24
+                    current_fill_51.setPresent();//sysj\conveyor_controller.sysj line: 461, column: 24
                     currsigs.addElement(current_fill_51);
-                    current_fill_51.setValue(current_thread_52);//sysj\conveyor_controller.sysj line: 468, column: 24
-                    S38282=5;
-                    if(((filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 472, column: 24
-                      S39254=0;
-                      thread213063(tdone,ends);
-                      thread213064(tdone,ends);
-                      int biggest213065 = 0;
-                      if(ends[61]>=biggest213065){
-                        biggest213065=ends[61];
+                    current_fill_51.setValue(current_thread_52);//sysj\conveyor_controller.sysj line: 461, column: 24
+                    S36042=5;
+                    if(((filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 465, column: 24
+                      S37014=0;
+                      thread210818(tdone,ends);
+                      thread210819(tdone,ends);
+                      int biggest210820 = 0;
+                      if(ends[61]>=biggest210820){
+                        biggest210820=ends[61];
                       }
-                      if(ends[62]>=biggest213065){
-                        biggest213065=ends[62];
+                      if(ends[62]>=biggest210820){
+                        biggest210820=ends[62];
                       }
-                      if(biggest213065 == 1){
+                      if(biggest210820 == 1){
                         active[52]=1;
                         ends[52]=1;
                         tdone[52]=1;
                       }
                     }
                     else {
-                      S38282=6;
-                      if(((filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 501, column: 24
-                        S39834=0;
-                        thread213066(tdone,ends);
-                        thread213067(tdone,ends);
-                        int biggest213068 = 0;
-                        if(ends[65]>=biggest213068){
-                          biggest213068=ends[65];
+                      S36042=6;
+                      if(((filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 494, column: 24
+                        S37594=0;
+                        thread210821(tdone,ends);
+                        thread210822(tdone,ends);
+                        int biggest210823 = 0;
+                        if(ends[65]>=biggest210823){
+                          biggest210823=ends[65];
                         }
-                        if(ends[66]>=biggest213068){
-                          biggest213068=ends[66];
+                        if(ends[66]>=biggest210823){
+                          biggest210823=ends[66];
                         }
-                        if(biggest213068 == 1){
+                        if(biggest210823 == 1){
                           active[52]=1;
                           ends[52]=1;
                           tdone[52]=1;
                         }
                       }
                       else {
-                        order_finished.setPresent();//sysj\conveyor_controller.sysj line: 531, column: 20
+                        order_finished.setPresent();//sysj\conveyor_controller.sysj line: 524, column: 20
                         currsigs.addElement(order_finished);
-                        S38282=7;
-                        S40480=0;
-                        if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                          fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 533, column: 20
-                          S40480=1;
+                        S36042=7;
+                        S38240=0;
+                        if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                          fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 526, column: 20
+                          S38240=1;
                           active[52]=1;
                           ends[52]=1;
                           tdone[52]=1;
                         }
                         else {
-                          S40475=0;
-                          if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                            fillerReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 533, column: 20
-                            S40475=1;
-                            if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                              fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 533, column: 20
+                          S38235=0;
+                          if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                            fillerReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 526, column: 20
+                            S38235=1;
+                            if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                              fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 526, column: 20
                               ends[52]=2;
-                              ;//sysj\conveyor_controller.sysj line: 533, column: 20
-                              System.out.println("*Filler operation done");//sysj\conveyor_controller.sysj line: 534, column: 20
-                              S38282=8;
-                              S40795=0;
+                              ;//sysj\conveyor_controller.sysj line: 526, column: 20
+                              System.out.println("*Filler operation done");//sysj\conveyor_controller.sysj line: 527, column: 20
+                              S36042=8;
+                              S38555=0;
                               active[52]=1;
                               ends[52]=1;
                               tdone[52]=1;
@@ -2817,53 +2817,53 @@ public class FillerController extends ClockDomain{
             break;
           
           case 5 : 
-            switch(S39254){
+            switch(S37014){
               case 0 : 
-                if(dosUnitFilled.getprestatus()){//sysj\conveyor_controller.sysj line: 474, column: 30
-                  S39254=1;
-                  thread213069(tdone,ends);
-                  thread213070(tdone,ends);
-                  int biggest213071 = 0;
-                  if(ends[63]>=biggest213071){
-                    biggest213071=ends[63];
+                if(dosUnitFilled.getprestatus()){//sysj\conveyor_controller.sysj line: 467, column: 30
+                  S37014=1;
+                  thread210824(tdone,ends);
+                  thread210825(tdone,ends);
+                  int biggest210826 = 0;
+                  if(ends[63]>=biggest210826){
+                    biggest210826=ends[63];
                   }
-                  if(ends[64]>=biggest213071){
-                    biggest213071=ends[64];
+                  if(ends[64]>=biggest210826){
+                    biggest210826=ends[64];
                   }
-                  if(biggest213071 == 1){
+                  if(biggest210826 == 1){
                     active[52]=1;
                     ends[52]=1;
                     tdone[52]=1;
                   }
                 }
                 else {
-                  thread213072(tdone,ends);
-                  thread213073(tdone,ends);
-                  int biggest213074 = 0;
-                  if(ends[61]>=biggest213074){
-                    biggest213074=ends[61];
+                  thread210827(tdone,ends);
+                  thread210828(tdone,ends);
+                  int biggest210829 = 0;
+                  if(ends[61]>=biggest210829){
+                    biggest210829=ends[61];
                   }
-                  if(ends[62]>=biggest213074){
-                    biggest213074=ends[62];
+                  if(ends[62]>=biggest210829){
+                    biggest210829=ends[62];
                   }
-                  if(biggest213074 == 1){
+                  if(biggest210829 == 1){
                     active[52]=1;
                     ends[52]=1;
                     tdone[52]=1;
                   }
                   //FINXME code
-                  if(biggest213074 == 0){
-                    S39254=1;
-                    thread213075(tdone,ends);
-                    thread213076(tdone,ends);
-                    int biggest213077 = 0;
-                    if(ends[63]>=biggest213077){
-                      biggest213077=ends[63];
+                  if(biggest210829 == 0){
+                    S37014=1;
+                    thread210830(tdone,ends);
+                    thread210831(tdone,ends);
+                    int biggest210832 = 0;
+                    if(ends[63]>=biggest210832){
+                      biggest210832=ends[63];
                     }
-                    if(ends[64]>=biggest213077){
-                      biggest213077=ends[64];
+                    if(ends[64]>=biggest210832){
+                      biggest210832=ends[64];
                     }
-                    if(biggest213077 == 1){
+                    if(biggest210832 == 1){
                       active[52]=1;
                       ends[52]=1;
                       tdone[52]=1;
@@ -2873,55 +2873,55 @@ public class FillerController extends ClockDomain{
                 break;
               
               case 1 : 
-                if(dosUnitEvac.getprestatus()){//sysj\conveyor_controller.sysj line: 484, column: 30
-                  System.out.println("*Filler #3 - Filled Amount: " + (filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 495, column: 24
-                  current_thread_52 += (filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue());//sysj\conveyor_controller.sysj line: 496, column: 24
-                  System.out.println("*Current Filled Amount: " + current_thread_52);//sysj\conveyor_controller.sysj line: 497, column: 24
-                  current_fill_51.setPresent();//sysj\conveyor_controller.sysj line: 498, column: 24
+                if(dosUnitEvac.getprestatus()){//sysj\conveyor_controller.sysj line: 477, column: 30
+                  System.out.println("*Filler #3 - Filled Amount: " + (filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 488, column: 24
+                  current_thread_52 += (filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue());//sysj\conveyor_controller.sysj line: 489, column: 24
+                  System.out.println("*Current Filled Amount: " + current_thread_52);//sysj\conveyor_controller.sysj line: 490, column: 24
+                  current_fill_51.setPresent();//sysj\conveyor_controller.sysj line: 491, column: 24
                   currsigs.addElement(current_fill_51);
-                  current_fill_51.setValue(current_thread_52);//sysj\conveyor_controller.sysj line: 498, column: 24
-                  S38282=6;
-                  if(((filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 501, column: 24
-                    S39834=0;
-                    thread213078(tdone,ends);
-                    thread213079(tdone,ends);
-                    int biggest213080 = 0;
-                    if(ends[65]>=biggest213080){
-                      biggest213080=ends[65];
+                  current_fill_51.setValue(current_thread_52);//sysj\conveyor_controller.sysj line: 491, column: 24
+                  S36042=6;
+                  if(((filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 494, column: 24
+                    S37594=0;
+                    thread210833(tdone,ends);
+                    thread210834(tdone,ends);
+                    int biggest210835 = 0;
+                    if(ends[65]>=biggest210835){
+                      biggest210835=ends[65];
                     }
-                    if(ends[66]>=biggest213080){
-                      biggest213080=ends[66];
+                    if(ends[66]>=biggest210835){
+                      biggest210835=ends[66];
                     }
-                    if(biggest213080 == 1){
+                    if(biggest210835 == 1){
                       active[52]=1;
                       ends[52]=1;
                       tdone[52]=1;
                     }
                   }
                   else {
-                    order_finished.setPresent();//sysj\conveyor_controller.sysj line: 531, column: 20
+                    order_finished.setPresent();//sysj\conveyor_controller.sysj line: 524, column: 20
                     currsigs.addElement(order_finished);
-                    S38282=7;
-                    S40480=0;
-                    if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                      fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 533, column: 20
-                      S40480=1;
+                    S36042=7;
+                    S38240=0;
+                    if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                      fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 526, column: 20
+                      S38240=1;
                       active[52]=1;
                       ends[52]=1;
                       tdone[52]=1;
                     }
                     else {
-                      S40475=0;
-                      if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                        fillerReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 533, column: 20
-                        S40475=1;
-                        if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                          fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 533, column: 20
+                      S38235=0;
+                      if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                        fillerReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 526, column: 20
+                        S38235=1;
+                        if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                          fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 526, column: 20
                           ends[52]=2;
-                          ;//sysj\conveyor_controller.sysj line: 533, column: 20
-                          System.out.println("*Filler operation done");//sysj\conveyor_controller.sysj line: 534, column: 20
-                          S38282=8;
-                          S40795=0;
+                          ;//sysj\conveyor_controller.sysj line: 526, column: 20
+                          System.out.println("*Filler operation done");//sysj\conveyor_controller.sysj line: 527, column: 20
+                          S36042=8;
+                          S38555=0;
                           active[52]=1;
                           ends[52]=1;
                           tdone[52]=1;
@@ -2941,70 +2941,70 @@ public class FillerController extends ClockDomain{
                   }
                 }
                 else {
-                  thread213081(tdone,ends);
-                  thread213082(tdone,ends);
-                  int biggest213083 = 0;
-                  if(ends[63]>=biggest213083){
-                    biggest213083=ends[63];
+                  thread210836(tdone,ends);
+                  thread210837(tdone,ends);
+                  int biggest210838 = 0;
+                  if(ends[63]>=biggest210838){
+                    biggest210838=ends[63];
                   }
-                  if(ends[64]>=biggest213083){
-                    biggest213083=ends[64];
+                  if(ends[64]>=biggest210838){
+                    biggest210838=ends[64];
                   }
-                  if(biggest213083 == 1){
+                  if(biggest210838 == 1){
                     active[52]=1;
                     ends[52]=1;
                     tdone[52]=1;
                   }
                   //FINXME code
-                  if(biggest213083 == 0){
-                    System.out.println("*Filler #3 - Filled Amount: " + (filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 495, column: 24
-                    current_thread_52 += (filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue());//sysj\conveyor_controller.sysj line: 496, column: 24
-                    System.out.println("*Current Filled Amount: " + current_thread_52);//sysj\conveyor_controller.sysj line: 497, column: 24
-                    current_fill_51.setPresent();//sysj\conveyor_controller.sysj line: 498, column: 24
+                  if(biggest210838 == 0){
+                    System.out.println("*Filler #3 - Filled Amount: " + (filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 488, column: 24
+                    current_thread_52 += (filler3_amount_51.getpreval() == null ? 0 : ((Integer)filler3_amount_51.getpreval()).intValue());//sysj\conveyor_controller.sysj line: 489, column: 24
+                    System.out.println("*Current Filled Amount: " + current_thread_52);//sysj\conveyor_controller.sysj line: 490, column: 24
+                    current_fill_51.setPresent();//sysj\conveyor_controller.sysj line: 491, column: 24
                     currsigs.addElement(current_fill_51);
-                    current_fill_51.setValue(current_thread_52);//sysj\conveyor_controller.sysj line: 498, column: 24
-                    S38282=6;
-                    if(((filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 501, column: 24
-                      S39834=0;
-                      thread213084(tdone,ends);
-                      thread213085(tdone,ends);
-                      int biggest213086 = 0;
-                      if(ends[65]>=biggest213086){
-                        biggest213086=ends[65];
+                    current_fill_51.setValue(current_thread_52);//sysj\conveyor_controller.sysj line: 491, column: 24
+                    S36042=6;
+                    if(((filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) > 0) && (current_thread_52 + (filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()) <= total_thread_52)){//sysj\conveyor_controller.sysj line: 494, column: 24
+                      S37594=0;
+                      thread210839(tdone,ends);
+                      thread210840(tdone,ends);
+                      int biggest210841 = 0;
+                      if(ends[65]>=biggest210841){
+                        biggest210841=ends[65];
                       }
-                      if(ends[66]>=biggest213086){
-                        biggest213086=ends[66];
+                      if(ends[66]>=biggest210841){
+                        biggest210841=ends[66];
                       }
-                      if(biggest213086 == 1){
+                      if(biggest210841 == 1){
                         active[52]=1;
                         ends[52]=1;
                         tdone[52]=1;
                       }
                     }
                     else {
-                      order_finished.setPresent();//sysj\conveyor_controller.sysj line: 531, column: 20
+                      order_finished.setPresent();//sysj\conveyor_controller.sysj line: 524, column: 20
                       currsigs.addElement(order_finished);
-                      S38282=7;
-                      S40480=0;
-                      if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                        fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 533, column: 20
-                        S40480=1;
+                      S36042=7;
+                      S38240=0;
+                      if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                        fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 526, column: 20
+                        S38240=1;
                         active[52]=1;
                         ends[52]=1;
                         tdone[52]=1;
                       }
                       else {
-                        S40475=0;
-                        if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                          fillerReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 533, column: 20
-                          S40475=1;
-                          if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                            fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 533, column: 20
+                        S38235=0;
+                        if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                          fillerReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 526, column: 20
+                          S38235=1;
+                          if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                            fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 526, column: 20
                             ends[52]=2;
-                            ;//sysj\conveyor_controller.sysj line: 533, column: 20
-                            System.out.println("*Filler operation done");//sysj\conveyor_controller.sysj line: 534, column: 20
-                            S38282=8;
-                            S40795=0;
+                            ;//sysj\conveyor_controller.sysj line: 526, column: 20
+                            System.out.println("*Filler operation done");//sysj\conveyor_controller.sysj line: 527, column: 20
+                            S36042=8;
+                            S38555=0;
                             active[52]=1;
                             ends[52]=1;
                             tdone[52]=1;
@@ -3030,53 +3030,53 @@ public class FillerController extends ClockDomain{
             break;
           
           case 6 : 
-            switch(S39834){
+            switch(S37594){
               case 0 : 
-                if(dosUnitFilled.getprestatus()){//sysj\conveyor_controller.sysj line: 503, column: 30
-                  S39834=1;
-                  thread213087(tdone,ends);
-                  thread213088(tdone,ends);
-                  int biggest213089 = 0;
-                  if(ends[67]>=biggest213089){
-                    biggest213089=ends[67];
+                if(dosUnitFilled.getprestatus()){//sysj\conveyor_controller.sysj line: 496, column: 30
+                  S37594=1;
+                  thread210842(tdone,ends);
+                  thread210843(tdone,ends);
+                  int biggest210844 = 0;
+                  if(ends[67]>=biggest210844){
+                    biggest210844=ends[67];
                   }
-                  if(ends[68]>=biggest213089){
-                    biggest213089=ends[68];
+                  if(ends[68]>=biggest210844){
+                    biggest210844=ends[68];
                   }
-                  if(biggest213089 == 1){
+                  if(biggest210844 == 1){
                     active[52]=1;
                     ends[52]=1;
                     tdone[52]=1;
                   }
                 }
                 else {
-                  thread213090(tdone,ends);
-                  thread213091(tdone,ends);
-                  int biggest213092 = 0;
-                  if(ends[65]>=biggest213092){
-                    biggest213092=ends[65];
+                  thread210845(tdone,ends);
+                  thread210846(tdone,ends);
+                  int biggest210847 = 0;
+                  if(ends[65]>=biggest210847){
+                    biggest210847=ends[65];
                   }
-                  if(ends[66]>=biggest213092){
-                    biggest213092=ends[66];
+                  if(ends[66]>=biggest210847){
+                    biggest210847=ends[66];
                   }
-                  if(biggest213092 == 1){
+                  if(biggest210847 == 1){
                     active[52]=1;
                     ends[52]=1;
                     tdone[52]=1;
                   }
                   //FINXME code
-                  if(biggest213092 == 0){
-                    S39834=1;
-                    thread213093(tdone,ends);
-                    thread213094(tdone,ends);
-                    int biggest213095 = 0;
-                    if(ends[67]>=biggest213095){
-                      biggest213095=ends[67];
+                  if(biggest210847 == 0){
+                    S37594=1;
+                    thread210848(tdone,ends);
+                    thread210849(tdone,ends);
+                    int biggest210850 = 0;
+                    if(ends[67]>=biggest210850){
+                      biggest210850=ends[67];
                     }
-                    if(ends[68]>=biggest213095){
-                      biggest213095=ends[68];
+                    if(ends[68]>=biggest210850){
+                      biggest210850=ends[68];
                     }
-                    if(biggest213095 == 1){
+                    if(biggest210850 == 1){
                       active[52]=1;
                       ends[52]=1;
                       tdone[52]=1;
@@ -3086,36 +3086,36 @@ public class FillerController extends ClockDomain{
                 break;
               
               case 1 : 
-                if(dosUnitEvac.getprestatus()){//sysj\conveyor_controller.sysj line: 513, column: 30
-                  System.out.println("*Filler #4 - Filled Amount: " + (filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 524, column: 24
-                  current_thread_52 += (filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue());//sysj\conveyor_controller.sysj line: 525, column: 24
-                  System.out.println("*Current Filled Amount: " + current_thread_52);//sysj\conveyor_controller.sysj line: 526, column: 24
-                  current_fill_51.setPresent();//sysj\conveyor_controller.sysj line: 527, column: 24
+                if(dosUnitEvac.getprestatus()){//sysj\conveyor_controller.sysj line: 506, column: 30
+                  System.out.println("*Filler #4 - Filled Amount: " + (filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 517, column: 24
+                  current_thread_52 += (filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue());//sysj\conveyor_controller.sysj line: 518, column: 24
+                  System.out.println("*Current Filled Amount: " + current_thread_52);//sysj\conveyor_controller.sysj line: 519, column: 24
+                  current_fill_51.setPresent();//sysj\conveyor_controller.sysj line: 520, column: 24
                   currsigs.addElement(current_fill_51);
-                  current_fill_51.setValue(current_thread_52);//sysj\conveyor_controller.sysj line: 527, column: 24
-                  order_finished.setPresent();//sysj\conveyor_controller.sysj line: 531, column: 20
+                  current_fill_51.setValue(current_thread_52);//sysj\conveyor_controller.sysj line: 520, column: 24
+                  order_finished.setPresent();//sysj\conveyor_controller.sysj line: 524, column: 20
                   currsigs.addElement(order_finished);
-                  S38282=7;
-                  S40480=0;
-                  if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                    fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 533, column: 20
-                    S40480=1;
+                  S36042=7;
+                  S38240=0;
+                  if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                    fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 526, column: 20
+                    S38240=1;
                     active[52]=1;
                     ends[52]=1;
                     tdone[52]=1;
                   }
                   else {
-                    S40475=0;
-                    if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                      fillerReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 533, column: 20
-                      S40475=1;
-                      if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                        fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 533, column: 20
+                    S38235=0;
+                    if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                      fillerReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 526, column: 20
+                      S38235=1;
+                      if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                        fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 526, column: 20
                         ends[52]=2;
-                        ;//sysj\conveyor_controller.sysj line: 533, column: 20
-                        System.out.println("*Filler operation done");//sysj\conveyor_controller.sysj line: 534, column: 20
-                        S38282=8;
-                        S40795=0;
+                        ;//sysj\conveyor_controller.sysj line: 526, column: 20
+                        System.out.println("*Filler operation done");//sysj\conveyor_controller.sysj line: 527, column: 20
+                        S36042=8;
+                        S38555=0;
                         active[52]=1;
                         ends[52]=1;
                         tdone[52]=1;
@@ -3134,51 +3134,51 @@ public class FillerController extends ClockDomain{
                   }
                 }
                 else {
-                  thread213096(tdone,ends);
-                  thread213097(tdone,ends);
-                  int biggest213098 = 0;
-                  if(ends[67]>=biggest213098){
-                    biggest213098=ends[67];
+                  thread210851(tdone,ends);
+                  thread210852(tdone,ends);
+                  int biggest210853 = 0;
+                  if(ends[67]>=biggest210853){
+                    biggest210853=ends[67];
                   }
-                  if(ends[68]>=biggest213098){
-                    biggest213098=ends[68];
+                  if(ends[68]>=biggest210853){
+                    biggest210853=ends[68];
                   }
-                  if(biggest213098 == 1){
+                  if(biggest210853 == 1){
                     active[52]=1;
                     ends[52]=1;
                     tdone[52]=1;
                   }
                   //FINXME code
-                  if(biggest213098 == 0){
-                    System.out.println("*Filler #4 - Filled Amount: " + (filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 524, column: 24
-                    current_thread_52 += (filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue());//sysj\conveyor_controller.sysj line: 525, column: 24
-                    System.out.println("*Current Filled Amount: " + current_thread_52);//sysj\conveyor_controller.sysj line: 526, column: 24
-                    current_fill_51.setPresent();//sysj\conveyor_controller.sysj line: 527, column: 24
+                  if(biggest210853 == 0){
+                    System.out.println("*Filler #4 - Filled Amount: " + (filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 517, column: 24
+                    current_thread_52 += (filler4_amount_51.getpreval() == null ? 0 : ((Integer)filler4_amount_51.getpreval()).intValue());//sysj\conveyor_controller.sysj line: 518, column: 24
+                    System.out.println("*Current Filled Amount: " + current_thread_52);//sysj\conveyor_controller.sysj line: 519, column: 24
+                    current_fill_51.setPresent();//sysj\conveyor_controller.sysj line: 520, column: 24
                     currsigs.addElement(current_fill_51);
-                    current_fill_51.setValue(current_thread_52);//sysj\conveyor_controller.sysj line: 527, column: 24
-                    order_finished.setPresent();//sysj\conveyor_controller.sysj line: 531, column: 20
+                    current_fill_51.setValue(current_thread_52);//sysj\conveyor_controller.sysj line: 520, column: 24
+                    order_finished.setPresent();//sysj\conveyor_controller.sysj line: 524, column: 20
                     currsigs.addElement(order_finished);
-                    S38282=7;
-                    S40480=0;
-                    if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                      fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 533, column: 20
-                      S40480=1;
+                    S36042=7;
+                    S38240=0;
+                    if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                      fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 526, column: 20
+                      S38240=1;
                       active[52]=1;
                       ends[52]=1;
                       tdone[52]=1;
                     }
                     else {
-                      S40475=0;
-                      if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                        fillerReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 533, column: 20
-                        S40475=1;
-                        if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                          fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 533, column: 20
+                      S38235=0;
+                      if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                        fillerReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 526, column: 20
+                        S38235=1;
+                        if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                          fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 526, column: 20
                           ends[52]=2;
-                          ;//sysj\conveyor_controller.sysj line: 533, column: 20
-                          System.out.println("*Filler operation done");//sysj\conveyor_controller.sysj line: 534, column: 20
-                          S38282=8;
-                          S40795=0;
+                          ;//sysj\conveyor_controller.sysj line: 526, column: 20
+                          System.out.println("*Filler operation done");//sysj\conveyor_controller.sysj line: 527, column: 20
+                          S36042=8;
+                          S38555=0;
                           active[52]=1;
                           ends[52]=1;
                           tdone[52]=1;
@@ -3203,28 +3203,28 @@ public class FillerController extends ClockDomain{
             break;
           
           case 7 : 
-            switch(S40480){
+            switch(S38240){
               case 0 : 
-                if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                  fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 533, column: 20
-                  S40480=1;
+                if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                  fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 526, column: 20
+                  S38240=1;
                   active[52]=1;
                   ends[52]=1;
                   tdone[52]=1;
                 }
                 else {
-                  switch(S40475){
+                  switch(S38235){
                     case 0 : 
-                      if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                        fillerReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 533, column: 20
-                        S40475=1;
-                        if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                          fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 533, column: 20
+                      if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                        fillerReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 526, column: 20
+                        S38235=1;
+                        if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                          fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 526, column: 20
                           ends[52]=2;
-                          ;//sysj\conveyor_controller.sysj line: 533, column: 20
-                          System.out.println("*Filler operation done");//sysj\conveyor_controller.sysj line: 534, column: 20
-                          S38282=8;
-                          S40795=0;
+                          ;//sysj\conveyor_controller.sysj line: 526, column: 20
+                          System.out.println("*Filler operation done");//sysj\conveyor_controller.sysj line: 527, column: 20
+                          S36042=8;
+                          S38555=0;
                           active[52]=1;
                           ends[52]=1;
                           tdone[52]=1;
@@ -3243,13 +3243,13 @@ public class FillerController extends ClockDomain{
                       break;
                     
                     case 1 : 
-                      if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                        fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 533, column: 20
+                      if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                        fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 526, column: 20
                         ends[52]=2;
-                        ;//sysj\conveyor_controller.sysj line: 533, column: 20
-                        System.out.println("*Filler operation done");//sysj\conveyor_controller.sysj line: 534, column: 20
-                        S38282=8;
-                        S40795=0;
+                        ;//sysj\conveyor_controller.sysj line: 526, column: 20
+                        System.out.println("*Filler operation done");//sysj\conveyor_controller.sysj line: 527, column: 20
+                        S36042=8;
+                        S38555=0;
                         active[52]=1;
                         ends[52]=1;
                         tdone[52]=1;
@@ -3266,27 +3266,27 @@ public class FillerController extends ClockDomain{
                 break;
               
               case 1 : 
-                S40480=1;
-                S40480=0;
-                if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                  fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 533, column: 20
-                  S40480=1;
+                S38240=1;
+                S38240=0;
+                if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                  fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 526, column: 20
+                  S38240=1;
                   active[52]=1;
                   ends[52]=1;
                   tdone[52]=1;
                 }
                 else {
-                  S40475=0;
-                  if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                    fillerReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 533, column: 20
-                    S40475=1;
-                    if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 533, column: 20
-                      fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 533, column: 20
+                  S38235=0;
+                  if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                    fillerReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 526, column: 20
+                    S38235=1;
+                    if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 526, column: 20
+                      fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 526, column: 20
                       ends[52]=2;
-                      ;//sysj\conveyor_controller.sysj line: 533, column: 20
-                      System.out.println("*Filler operation done");//sysj\conveyor_controller.sysj line: 534, column: 20
-                      S38282=8;
-                      S40795=0;
+                      ;//sysj\conveyor_controller.sysj line: 526, column: 20
+                      System.out.println("*Filler operation done");//sysj\conveyor_controller.sysj line: 527, column: 20
+                      S36042=8;
+                      S38555=0;
                       active[52]=1;
                       ends[52]=1;
                       tdone[52]=1;
@@ -3309,52 +3309,52 @@ public class FillerController extends ClockDomain{
             break;
           
           case 8 : 
-            switch(S40795){
+            switch(S38555){
               case 0 : 
-                if(!bottleAtPos2_51.getprestatus()){//sysj\conveyor_controller.sysj line: 537, column: 30
-                  S40795=1;
-                  if(bottleAtPos2_51.getprestatus()){//sysj\conveyor_controller.sysj line: 539, column: 36
+                if(!bottleAtPos2_51.getprestatus()){//sysj\conveyor_controller.sysj line: 530, column: 30
+                  S38555=1;
+                  if(bottleAtPos2_51.getprestatus()){//sysj\conveyor_controller.sysj line: 532, column: 36
                     active[52]=1;
                     ends[52]=1;
                     tdone[52]=1;
                   }
                   else {
                     ends[52]=2;
-                    ;//sysj\conveyor_controller.sysj line: 536, column: 20
-                    if(ordered.getprestatus()){//sysj\conveyor_controller.sysj line: 390, column: 25
-                      filler1_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 391, column: 24
+                    ;//sysj\conveyor_controller.sysj line: 529, column: 20
+                    if(ordered.getprestatus()){//sysj\conveyor_controller.sysj line: 383, column: 25
+                      filler1_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 384, column: 24
                       currsigs.addElement(filler1_amount_51);
-                      filler1_amount_51.setValue((orderFill_1.getpreval() == null ? 0 : ((Integer)orderFill_1.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 391, column: 24
-                      filler2_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 392, column: 24
+                      filler1_amount_51.setValue((orderFill_1.getpreval() == null ? 0 : ((Integer)orderFill_1.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 384, column: 24
+                      filler2_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 385, column: 24
                       currsigs.addElement(filler2_amount_51);
-                      filler2_amount_51.setValue((orderFill_2.getpreval() == null ? 0 : ((Integer)orderFill_2.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 392, column: 24
-                      filler3_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 393, column: 24
+                      filler2_amount_51.setValue((orderFill_2.getpreval() == null ? 0 : ((Integer)orderFill_2.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 385, column: 24
+                      filler3_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 386, column: 24
                       currsigs.addElement(filler3_amount_51);
-                      filler3_amount_51.setValue((orderFill_3.getpreval() == null ? 0 : ((Integer)orderFill_3.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 393, column: 24
-                      filler4_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 394, column: 24
+                      filler3_amount_51.setValue((orderFill_3.getpreval() == null ? 0 : ((Integer)orderFill_3.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 386, column: 24
+                      filler4_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 387, column: 24
                       currsigs.addElement(filler4_amount_51);
-                      filler4_amount_51.setValue((orderFill_4.getpreval() == null ? 0 : ((Integer)orderFill_4.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 394, column: 24
-                      System.out.println("*Filler - Waiting For BottleAtPos2*");//sysj\conveyor_controller.sysj line: 404, column: 20
-                      S38282=0;
+                      filler4_amount_51.setValue((orderFill_4.getpreval() == null ? 0 : ((Integer)orderFill_4.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 387, column: 24
+                      System.out.println("*Filler - Waiting For BottleAtPos2*");//sysj\conveyor_controller.sysj line: 397, column: 20
+                      S36042=0;
                       active[52]=1;
                       ends[52]=1;
                       tdone[52]=1;
                     }
                     else {
-                      filler1_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 397, column: 24
+                      filler1_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 390, column: 24
                       currsigs.addElement(filler1_amount_51);
-                      filler1_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 397, column: 24
-                      filler2_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 398, column: 24
+                      filler1_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 390, column: 24
+                      filler2_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 391, column: 24
                       currsigs.addElement(filler2_amount_51);
-                      filler2_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 398, column: 24
-                      filler3_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 399, column: 24
+                      filler2_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 391, column: 24
+                      filler3_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 392, column: 24
                       currsigs.addElement(filler3_amount_51);
-                      filler3_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 399, column: 24
-                      filler4_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 400, column: 24
+                      filler3_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 392, column: 24
+                      filler4_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 393, column: 24
                       currsigs.addElement(filler4_amount_51);
-                      filler4_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 400, column: 24
-                      System.out.println("*Filler - Waiting For BottleAtPos2*");//sysj\conveyor_controller.sysj line: 404, column: 20
-                      S38282=0;
+                      filler4_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 393, column: 24
+                      System.out.println("*Filler - Waiting For BottleAtPos2*");//sysj\conveyor_controller.sysj line: 397, column: 20
+                      S36042=0;
                       active[52]=1;
                       ends[52]=1;
                       tdone[52]=1;
@@ -3369,48 +3369,48 @@ public class FillerController extends ClockDomain{
                 break;
               
               case 1 : 
-                if(bottleAtPos2_51.getprestatus()){//sysj\conveyor_controller.sysj line: 539, column: 36
+                if(bottleAtPos2_51.getprestatus()){//sysj\conveyor_controller.sysj line: 532, column: 36
                   active[52]=1;
                   ends[52]=1;
                   tdone[52]=1;
                 }
                 else {
                   ends[52]=2;
-                  ;//sysj\conveyor_controller.sysj line: 536, column: 20
-                  if(ordered.getprestatus()){//sysj\conveyor_controller.sysj line: 390, column: 25
-                    filler1_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 391, column: 24
+                  ;//sysj\conveyor_controller.sysj line: 529, column: 20
+                  if(ordered.getprestatus()){//sysj\conveyor_controller.sysj line: 383, column: 25
+                    filler1_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 384, column: 24
                     currsigs.addElement(filler1_amount_51);
-                    filler1_amount_51.setValue((orderFill_1.getpreval() == null ? 0 : ((Integer)orderFill_1.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 391, column: 24
-                    filler2_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 392, column: 24
+                    filler1_amount_51.setValue((orderFill_1.getpreval() == null ? 0 : ((Integer)orderFill_1.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 384, column: 24
+                    filler2_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 385, column: 24
                     currsigs.addElement(filler2_amount_51);
-                    filler2_amount_51.setValue((orderFill_2.getpreval() == null ? 0 : ((Integer)orderFill_2.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 392, column: 24
-                    filler3_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 393, column: 24
+                    filler2_amount_51.setValue((orderFill_2.getpreval() == null ? 0 : ((Integer)orderFill_2.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 385, column: 24
+                    filler3_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 386, column: 24
                     currsigs.addElement(filler3_amount_51);
-                    filler3_amount_51.setValue((orderFill_3.getpreval() == null ? 0 : ((Integer)orderFill_3.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 393, column: 24
-                    filler4_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 394, column: 24
+                    filler3_amount_51.setValue((orderFill_3.getpreval() == null ? 0 : ((Integer)orderFill_3.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 386, column: 24
+                    filler4_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 387, column: 24
                     currsigs.addElement(filler4_amount_51);
-                    filler4_amount_51.setValue((orderFill_4.getpreval() == null ? 0 : ((Integer)orderFill_4.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 394, column: 24
-                    System.out.println("*Filler - Waiting For BottleAtPos2*");//sysj\conveyor_controller.sysj line: 404, column: 20
-                    S38282=0;
+                    filler4_amount_51.setValue((orderFill_4.getpreval() == null ? 0 : ((Integer)orderFill_4.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 387, column: 24
+                    System.out.println("*Filler - Waiting For BottleAtPos2*");//sysj\conveyor_controller.sysj line: 397, column: 20
+                    S36042=0;
                     active[52]=1;
                     ends[52]=1;
                     tdone[52]=1;
                   }
                   else {
-                    filler1_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 397, column: 24
+                    filler1_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 390, column: 24
                     currsigs.addElement(filler1_amount_51);
-                    filler1_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 397, column: 24
-                    filler2_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 398, column: 24
+                    filler1_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 390, column: 24
+                    filler2_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 391, column: 24
                     currsigs.addElement(filler2_amount_51);
-                    filler2_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 398, column: 24
-                    filler3_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 399, column: 24
+                    filler2_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 391, column: 24
+                    filler3_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 392, column: 24
                     currsigs.addElement(filler3_amount_51);
-                    filler3_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 399, column: 24
-                    filler4_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 400, column: 24
+                    filler3_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 392, column: 24
+                    filler4_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 393, column: 24
                     currsigs.addElement(filler4_amount_51);
-                    filler4_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 400, column: 24
-                    System.out.println("*Filler - Waiting For BottleAtPos2*");//sysj\conveyor_controller.sysj line: 404, column: 20
-                    S38282=0;
+                    filler4_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 393, column: 24
+                    System.out.println("*Filler - Waiting For BottleAtPos2*");//sysj\conveyor_controller.sysj line: 397, column: 20
+                    S36042=0;
                     active[52]=1;
                     ends[52]=1;
                     tdone[52]=1;
@@ -3427,79 +3427,79 @@ public class FillerController extends ClockDomain{
     }
   }
 
-  public void thread212951(int [] tdone, int [] ends){
-        S65800=1;
+  public void thread210706(int [] tdone, int [] ends){
+        S63560=1;
     active[72]=1;
     ends[72]=1;
     tdone[72]=1;
   }
 
-  public void thread212950(int [] tdone, int [] ends){
-        S65797=1;
-    bottleAtPos2E.setPresent();//sysj\conveyor_controller.sysj line: 568, column: 29
+  public void thread210705(int [] tdone, int [] ends){
+        S63557=1;
+    bottleAtPos2E.setPresent();//sysj\conveyor_controller.sysj line: 561, column: 29
     currsigs.addElement(bottleAtPos2E);
     active[71]=1;
     ends[71]=1;
     tdone[71]=1;
   }
 
-  public void thread212949(int [] tdone, int [] ends){
-        S65827=1;
-    S65803=0;
-    if(bottleAtPos2_51.getprestatus()){//sysj\conveyor_controller.sysj line: 565, column: 26
-      thread212950(tdone,ends);
-      thread212951(tdone,ends);
-      int biggest212952 = 0;
-      if(ends[71]>=biggest212952){
-        biggest212952=ends[71];
+  public void thread210704(int [] tdone, int [] ends){
+        S63587=1;
+    S63563=0;
+    if(bottleAtPos2_51.getprestatus()){//sysj\conveyor_controller.sysj line: 558, column: 26
+      thread210705(tdone,ends);
+      thread210706(tdone,ends);
+      int biggest210707 = 0;
+      if(ends[71]>=biggest210707){
+        biggest210707=ends[71];
       }
-      if(ends[72]>=biggest212952){
-        biggest212952=ends[72];
+      if(ends[72]>=biggest210707){
+        biggest210707=ends[72];
       }
-      if(biggest212952 == 1){
+      if(biggest210707 == 1){
         active[70]=1;
         ends[70]=1;
         tdone[70]=1;
       }
     }
     else {
-      S65803=1;
+      S63563=1;
       active[70]=1;
       ends[70]=1;
       tdone[70]=1;
     }
   }
 
-  public void thread212948(int [] tdone, int [] ends){
-        S65792=1;
-    S65736=0;
-    S65716=0;
-    if(!simFiller_in.isPartnerPresent() || simFiller_in.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 554, column: 12
-      simFiller_in.setACK(false);//sysj\conveyor_controller.sysj line: 554, column: 12
-      S65716=1;
+  public void thread210703(int [] tdone, int [] ends){
+        S63552=1;
+    S63496=0;
+    S63476=0;
+    if(!simFiller_in.isPartnerPresent() || simFiller_in.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 547, column: 12
+      simFiller_in.setACK(false);//sysj\conveyor_controller.sysj line: 547, column: 12
+      S63476=1;
       active[69]=1;
       ends[69]=1;
       tdone[69]=1;
     }
     else {
-      S65711=0;
-      if(!simFiller_in.isREQ()){//sysj\conveyor_controller.sysj line: 554, column: 12
-        simFiller_in.setACK(true);//sysj\conveyor_controller.sysj line: 554, column: 12
-        S65711=1;
-        if(simFiller_in.isREQ()){//sysj\conveyor_controller.sysj line: 554, column: 12
-          simFiller_in.setACK(false);//sysj\conveyor_controller.sysj line: 554, column: 12
+      S63471=0;
+      if(!simFiller_in.isREQ()){//sysj\conveyor_controller.sysj line: 547, column: 12
+        simFiller_in.setACK(true);//sysj\conveyor_controller.sysj line: 547, column: 12
+        S63471=1;
+        if(simFiller_in.isREQ()){//sysj\conveyor_controller.sysj line: 547, column: 12
+          simFiller_in.setACK(false);//sysj\conveyor_controller.sysj line: 547, column: 12
           ends[69]=2;
-          ;//sysj\conveyor_controller.sysj line: 554, column: 12
-          if((Boolean)(simFiller_in.getVal() == null ? null : ((Boolean)simFiller_in.getVal()))){//sysj\conveyor_controller.sysj line: 555, column: 15
-            bottleAtPos2_51.setPresent();//sysj\conveyor_controller.sysj line: 556, column: 13
+          ;//sysj\conveyor_controller.sysj line: 547, column: 12
+          if((Boolean)(simFiller_in.getVal() == null ? null : ((Boolean)simFiller_in.getVal()))){//sysj\conveyor_controller.sysj line: 548, column: 15
+            bottleAtPos2_51.setPresent();//sysj\conveyor_controller.sysj line: 549, column: 13
             currsigs.addElement(bottleAtPos2_51);
-            S65736=1;
+            S63496=1;
             active[69]=1;
             ends[69]=1;
             tdone[69]=1;
           }
           else {
-            S65736=1;
+            S63496=1;
             active[69]=1;
             ends[69]=1;
             tdone[69]=1;
@@ -3519,129 +3519,129 @@ public class FillerController extends ClockDomain{
     }
   }
 
-  public void thread212947(int [] tdone, int [] ends){
-        S65709=1;
-    current_thread_52 = 0;//sysj\conveyor_controller.sysj line: 382, column: 16
-    total_thread_52 = 100;//sysj\conveyor_controller.sysj line: 383, column: 16
-    total_fill_51.setPresent();//sysj\conveyor_controller.sysj line: 384, column: 16
+  public void thread210702(int [] tdone, int [] ends){
+        S63469=1;
+    current_thread_52 = 0;//sysj\conveyor_controller.sysj line: 375, column: 16
+    total_thread_52 = 100;//sysj\conveyor_controller.sysj line: 376, column: 16
+    total_fill_51.setPresent();//sysj\conveyor_controller.sysj line: 377, column: 16
     currsigs.addElement(total_fill_51);
-    total_fill_51.setValue(total_thread_52);//sysj\conveyor_controller.sysj line: 384, column: 16
-    current_fill_51.setPresent();//sysj\conveyor_controller.sysj line: 385, column: 16
+    total_fill_51.setValue(total_thread_52);//sysj\conveyor_controller.sysj line: 377, column: 16
+    current_fill_51.setPresent();//sysj\conveyor_controller.sysj line: 378, column: 16
     currsigs.addElement(current_fill_51);
-    current_fill_51.setValue(current_thread_52);//sysj\conveyor_controller.sysj line: 385, column: 16
-    if(ordered.getprestatus()){//sysj\conveyor_controller.sysj line: 390, column: 25
-      filler1_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 391, column: 24
+    current_fill_51.setValue(current_thread_52);//sysj\conveyor_controller.sysj line: 378, column: 16
+    if(ordered.getprestatus()){//sysj\conveyor_controller.sysj line: 383, column: 25
+      filler1_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 384, column: 24
       currsigs.addElement(filler1_amount_51);
-      filler1_amount_51.setValue((orderFill_1.getpreval() == null ? 0 : ((Integer)orderFill_1.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 391, column: 24
-      filler2_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 392, column: 24
+      filler1_amount_51.setValue((orderFill_1.getpreval() == null ? 0 : ((Integer)orderFill_1.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 384, column: 24
+      filler2_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 385, column: 24
       currsigs.addElement(filler2_amount_51);
-      filler2_amount_51.setValue((orderFill_2.getpreval() == null ? 0 : ((Integer)orderFill_2.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 392, column: 24
-      filler3_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 393, column: 24
+      filler2_amount_51.setValue((orderFill_2.getpreval() == null ? 0 : ((Integer)orderFill_2.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 385, column: 24
+      filler3_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 386, column: 24
       currsigs.addElement(filler3_amount_51);
-      filler3_amount_51.setValue((orderFill_3.getpreval() == null ? 0 : ((Integer)orderFill_3.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 393, column: 24
-      filler4_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 394, column: 24
+      filler3_amount_51.setValue((orderFill_3.getpreval() == null ? 0 : ((Integer)orderFill_3.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 386, column: 24
+      filler4_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 387, column: 24
       currsigs.addElement(filler4_amount_51);
-      filler4_amount_51.setValue((orderFill_4.getpreval() == null ? 0 : ((Integer)orderFill_4.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 394, column: 24
-      System.out.println("*Filler - Waiting For BottleAtPos2*");//sysj\conveyor_controller.sysj line: 404, column: 20
-      S38282=0;
+      filler4_amount_51.setValue((orderFill_4.getpreval() == null ? 0 : ((Integer)orderFill_4.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 387, column: 24
+      System.out.println("*Filler - Waiting For BottleAtPos2*");//sysj\conveyor_controller.sysj line: 397, column: 20
+      S36042=0;
       active[52]=1;
       ends[52]=1;
       tdone[52]=1;
     }
     else {
-      filler1_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 397, column: 24
+      filler1_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 390, column: 24
       currsigs.addElement(filler1_amount_51);
-      filler1_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 397, column: 24
-      filler2_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 398, column: 24
+      filler1_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 390, column: 24
+      filler2_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 391, column: 24
       currsigs.addElement(filler2_amount_51);
-      filler2_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 398, column: 24
-      filler3_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 399, column: 24
+      filler2_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 391, column: 24
+      filler3_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 392, column: 24
       currsigs.addElement(filler3_amount_51);
-      filler3_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 399, column: 24
-      filler4_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 400, column: 24
+      filler3_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 392, column: 24
+      filler4_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 393, column: 24
       currsigs.addElement(filler4_amount_51);
-      filler4_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 400, column: 24
-      System.out.println("*Filler - Waiting For BottleAtPos2*");//sysj\conveyor_controller.sysj line: 404, column: 20
-      S38282=0;
+      filler4_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 393, column: 24
+      System.out.println("*Filler - Waiting For BottleAtPos2*");//sysj\conveyor_controller.sysj line: 397, column: 20
+      S36042=0;
       active[52]=1;
       ends[52]=1;
       tdone[52]=1;
     }
   }
 
-  public void thread212944(int [] tdone, int [] ends){
-        S65800=1;
+  public void thread210699(int [] tdone, int [] ends){
+        S63560=1;
     active[72]=1;
     ends[72]=1;
     tdone[72]=1;
   }
 
-  public void thread212943(int [] tdone, int [] ends){
-        S65797=1;
-    bottleAtPos2E.setPresent();//sysj\conveyor_controller.sysj line: 568, column: 29
+  public void thread210698(int [] tdone, int [] ends){
+        S63557=1;
+    bottleAtPos2E.setPresent();//sysj\conveyor_controller.sysj line: 561, column: 29
     currsigs.addElement(bottleAtPos2E);
     active[71]=1;
     ends[71]=1;
     tdone[71]=1;
   }
 
-  public void thread212942(int [] tdone, int [] ends){
-        S65827=1;
-    S65803=0;
-    if(bottleAtPos2_51.getprestatus()){//sysj\conveyor_controller.sysj line: 565, column: 26
-      thread212943(tdone,ends);
-      thread212944(tdone,ends);
-      int biggest212945 = 0;
-      if(ends[71]>=biggest212945){
-        biggest212945=ends[71];
+  public void thread210697(int [] tdone, int [] ends){
+        S63587=1;
+    S63563=0;
+    if(bottleAtPos2_51.getprestatus()){//sysj\conveyor_controller.sysj line: 558, column: 26
+      thread210698(tdone,ends);
+      thread210699(tdone,ends);
+      int biggest210700 = 0;
+      if(ends[71]>=biggest210700){
+        biggest210700=ends[71];
       }
-      if(ends[72]>=biggest212945){
-        biggest212945=ends[72];
+      if(ends[72]>=biggest210700){
+        biggest210700=ends[72];
       }
-      if(biggest212945 == 1){
+      if(biggest210700 == 1){
         active[70]=1;
         ends[70]=1;
         tdone[70]=1;
       }
     }
     else {
-      S65803=1;
+      S63563=1;
       active[70]=1;
       ends[70]=1;
       tdone[70]=1;
     }
   }
 
-  public void thread212941(int [] tdone, int [] ends){
-        S65792=1;
-    S65736=0;
-    S65716=0;
-    if(!simFiller_in.isPartnerPresent() || simFiller_in.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 554, column: 12
-      simFiller_in.setACK(false);//sysj\conveyor_controller.sysj line: 554, column: 12
-      S65716=1;
+  public void thread210696(int [] tdone, int [] ends){
+        S63552=1;
+    S63496=0;
+    S63476=0;
+    if(!simFiller_in.isPartnerPresent() || simFiller_in.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 547, column: 12
+      simFiller_in.setACK(false);//sysj\conveyor_controller.sysj line: 547, column: 12
+      S63476=1;
       active[69]=1;
       ends[69]=1;
       tdone[69]=1;
     }
     else {
-      S65711=0;
-      if(!simFiller_in.isREQ()){//sysj\conveyor_controller.sysj line: 554, column: 12
-        simFiller_in.setACK(true);//sysj\conveyor_controller.sysj line: 554, column: 12
-        S65711=1;
-        if(simFiller_in.isREQ()){//sysj\conveyor_controller.sysj line: 554, column: 12
-          simFiller_in.setACK(false);//sysj\conveyor_controller.sysj line: 554, column: 12
+      S63471=0;
+      if(!simFiller_in.isREQ()){//sysj\conveyor_controller.sysj line: 547, column: 12
+        simFiller_in.setACK(true);//sysj\conveyor_controller.sysj line: 547, column: 12
+        S63471=1;
+        if(simFiller_in.isREQ()){//sysj\conveyor_controller.sysj line: 547, column: 12
+          simFiller_in.setACK(false);//sysj\conveyor_controller.sysj line: 547, column: 12
           ends[69]=2;
-          ;//sysj\conveyor_controller.sysj line: 554, column: 12
-          if((Boolean)(simFiller_in.getVal() == null ? null : ((Boolean)simFiller_in.getVal()))){//sysj\conveyor_controller.sysj line: 555, column: 15
-            bottleAtPos2_51.setPresent();//sysj\conveyor_controller.sysj line: 556, column: 13
+          ;//sysj\conveyor_controller.sysj line: 547, column: 12
+          if((Boolean)(simFiller_in.getVal() == null ? null : ((Boolean)simFiller_in.getVal()))){//sysj\conveyor_controller.sysj line: 548, column: 15
+            bottleAtPos2_51.setPresent();//sysj\conveyor_controller.sysj line: 549, column: 13
             currsigs.addElement(bottleAtPos2_51);
-            S65736=1;
+            S63496=1;
             active[69]=1;
             ends[69]=1;
             tdone[69]=1;
           }
           else {
-            S65736=1;
+            S63496=1;
             active[69]=1;
             ends[69]=1;
             tdone[69]=1;
@@ -3661,129 +3661,129 @@ public class FillerController extends ClockDomain{
     }
   }
 
-  public void thread212940(int [] tdone, int [] ends){
-        S65709=1;
-    current_thread_52 = 0;//sysj\conveyor_controller.sysj line: 382, column: 16
-    total_thread_52 = 100;//sysj\conveyor_controller.sysj line: 383, column: 16
-    total_fill_51.setPresent();//sysj\conveyor_controller.sysj line: 384, column: 16
+  public void thread210695(int [] tdone, int [] ends){
+        S63469=1;
+    current_thread_52 = 0;//sysj\conveyor_controller.sysj line: 375, column: 16
+    total_thread_52 = 100;//sysj\conveyor_controller.sysj line: 376, column: 16
+    total_fill_51.setPresent();//sysj\conveyor_controller.sysj line: 377, column: 16
     currsigs.addElement(total_fill_51);
-    total_fill_51.setValue(total_thread_52);//sysj\conveyor_controller.sysj line: 384, column: 16
-    current_fill_51.setPresent();//sysj\conveyor_controller.sysj line: 385, column: 16
+    total_fill_51.setValue(total_thread_52);//sysj\conveyor_controller.sysj line: 377, column: 16
+    current_fill_51.setPresent();//sysj\conveyor_controller.sysj line: 378, column: 16
     currsigs.addElement(current_fill_51);
-    current_fill_51.setValue(current_thread_52);//sysj\conveyor_controller.sysj line: 385, column: 16
-    if(ordered.getprestatus()){//sysj\conveyor_controller.sysj line: 390, column: 25
-      filler1_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 391, column: 24
+    current_fill_51.setValue(current_thread_52);//sysj\conveyor_controller.sysj line: 378, column: 16
+    if(ordered.getprestatus()){//sysj\conveyor_controller.sysj line: 383, column: 25
+      filler1_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 384, column: 24
       currsigs.addElement(filler1_amount_51);
-      filler1_amount_51.setValue((orderFill_1.getpreval() == null ? 0 : ((Integer)orderFill_1.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 391, column: 24
-      filler2_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 392, column: 24
+      filler1_amount_51.setValue((orderFill_1.getpreval() == null ? 0 : ((Integer)orderFill_1.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 384, column: 24
+      filler2_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 385, column: 24
       currsigs.addElement(filler2_amount_51);
-      filler2_amount_51.setValue((orderFill_2.getpreval() == null ? 0 : ((Integer)orderFill_2.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 392, column: 24
-      filler3_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 393, column: 24
+      filler2_amount_51.setValue((orderFill_2.getpreval() == null ? 0 : ((Integer)orderFill_2.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 385, column: 24
+      filler3_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 386, column: 24
       currsigs.addElement(filler3_amount_51);
-      filler3_amount_51.setValue((orderFill_3.getpreval() == null ? 0 : ((Integer)orderFill_3.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 393, column: 24
-      filler4_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 394, column: 24
+      filler3_amount_51.setValue((orderFill_3.getpreval() == null ? 0 : ((Integer)orderFill_3.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 386, column: 24
+      filler4_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 387, column: 24
       currsigs.addElement(filler4_amount_51);
-      filler4_amount_51.setValue((orderFill_4.getpreval() == null ? 0 : ((Integer)orderFill_4.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 394, column: 24
-      System.out.println("*Filler - Waiting For BottleAtPos2*");//sysj\conveyor_controller.sysj line: 404, column: 20
-      S38282=0;
+      filler4_amount_51.setValue((orderFill_4.getpreval() == null ? 0 : ((Integer)orderFill_4.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 387, column: 24
+      System.out.println("*Filler - Waiting For BottleAtPos2*");//sysj\conveyor_controller.sysj line: 397, column: 20
+      S36042=0;
       active[52]=1;
       ends[52]=1;
       tdone[52]=1;
     }
     else {
-      filler1_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 397, column: 24
+      filler1_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 390, column: 24
       currsigs.addElement(filler1_amount_51);
-      filler1_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 397, column: 24
-      filler2_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 398, column: 24
+      filler1_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 390, column: 24
+      filler2_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 391, column: 24
       currsigs.addElement(filler2_amount_51);
-      filler2_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 398, column: 24
-      filler3_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 399, column: 24
+      filler2_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 391, column: 24
+      filler3_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 392, column: 24
       currsigs.addElement(filler3_amount_51);
-      filler3_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 399, column: 24
-      filler4_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 400, column: 24
+      filler3_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 392, column: 24
+      filler4_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 393, column: 24
       currsigs.addElement(filler4_amount_51);
-      filler4_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 400, column: 24
-      System.out.println("*Filler - Waiting For BottleAtPos2*");//sysj\conveyor_controller.sysj line: 404, column: 20
-      S38282=0;
+      filler4_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 393, column: 24
+      System.out.println("*Filler - Waiting For BottleAtPos2*");//sysj\conveyor_controller.sysj line: 397, column: 20
+      S36042=0;
       active[52]=1;
       ends[52]=1;
       tdone[52]=1;
     }
   }
 
-  public void thread212937(int [] tdone, int [] ends){
-        S65800=1;
+  public void thread210692(int [] tdone, int [] ends){
+        S63560=1;
     active[72]=1;
     ends[72]=1;
     tdone[72]=1;
   }
 
-  public void thread212936(int [] tdone, int [] ends){
-        S65797=1;
-    bottleAtPos2E.setPresent();//sysj\conveyor_controller.sysj line: 568, column: 29
+  public void thread210691(int [] tdone, int [] ends){
+        S63557=1;
+    bottleAtPos2E.setPresent();//sysj\conveyor_controller.sysj line: 561, column: 29
     currsigs.addElement(bottleAtPos2E);
     active[71]=1;
     ends[71]=1;
     tdone[71]=1;
   }
 
-  public void thread212935(int [] tdone, int [] ends){
-        S65827=1;
-    S65803=0;
-    if(bottleAtPos2_51.getprestatus()){//sysj\conveyor_controller.sysj line: 565, column: 26
-      thread212936(tdone,ends);
-      thread212937(tdone,ends);
-      int biggest212938 = 0;
-      if(ends[71]>=biggest212938){
-        biggest212938=ends[71];
+  public void thread210690(int [] tdone, int [] ends){
+        S63587=1;
+    S63563=0;
+    if(bottleAtPos2_51.getprestatus()){//sysj\conveyor_controller.sysj line: 558, column: 26
+      thread210691(tdone,ends);
+      thread210692(tdone,ends);
+      int biggest210693 = 0;
+      if(ends[71]>=biggest210693){
+        biggest210693=ends[71];
       }
-      if(ends[72]>=biggest212938){
-        biggest212938=ends[72];
+      if(ends[72]>=biggest210693){
+        biggest210693=ends[72];
       }
-      if(biggest212938 == 1){
+      if(biggest210693 == 1){
         active[70]=1;
         ends[70]=1;
         tdone[70]=1;
       }
     }
     else {
-      S65803=1;
+      S63563=1;
       active[70]=1;
       ends[70]=1;
       tdone[70]=1;
     }
   }
 
-  public void thread212934(int [] tdone, int [] ends){
-        S65792=1;
-    S65736=0;
-    S65716=0;
-    if(!simFiller_in.isPartnerPresent() || simFiller_in.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 554, column: 12
-      simFiller_in.setACK(false);//sysj\conveyor_controller.sysj line: 554, column: 12
-      S65716=1;
+  public void thread210689(int [] tdone, int [] ends){
+        S63552=1;
+    S63496=0;
+    S63476=0;
+    if(!simFiller_in.isPartnerPresent() || simFiller_in.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 547, column: 12
+      simFiller_in.setACK(false);//sysj\conveyor_controller.sysj line: 547, column: 12
+      S63476=1;
       active[69]=1;
       ends[69]=1;
       tdone[69]=1;
     }
     else {
-      S65711=0;
-      if(!simFiller_in.isREQ()){//sysj\conveyor_controller.sysj line: 554, column: 12
-        simFiller_in.setACK(true);//sysj\conveyor_controller.sysj line: 554, column: 12
-        S65711=1;
-        if(simFiller_in.isREQ()){//sysj\conveyor_controller.sysj line: 554, column: 12
-          simFiller_in.setACK(false);//sysj\conveyor_controller.sysj line: 554, column: 12
+      S63471=0;
+      if(!simFiller_in.isREQ()){//sysj\conveyor_controller.sysj line: 547, column: 12
+        simFiller_in.setACK(true);//sysj\conveyor_controller.sysj line: 547, column: 12
+        S63471=1;
+        if(simFiller_in.isREQ()){//sysj\conveyor_controller.sysj line: 547, column: 12
+          simFiller_in.setACK(false);//sysj\conveyor_controller.sysj line: 547, column: 12
           ends[69]=2;
-          ;//sysj\conveyor_controller.sysj line: 554, column: 12
-          if((Boolean)(simFiller_in.getVal() == null ? null : ((Boolean)simFiller_in.getVal()))){//sysj\conveyor_controller.sysj line: 555, column: 15
-            bottleAtPos2_51.setPresent();//sysj\conveyor_controller.sysj line: 556, column: 13
+          ;//sysj\conveyor_controller.sysj line: 547, column: 12
+          if((Boolean)(simFiller_in.getVal() == null ? null : ((Boolean)simFiller_in.getVal()))){//sysj\conveyor_controller.sysj line: 548, column: 15
+            bottleAtPos2_51.setPresent();//sysj\conveyor_controller.sysj line: 549, column: 13
             currsigs.addElement(bottleAtPos2_51);
-            S65736=1;
+            S63496=1;
             active[69]=1;
             ends[69]=1;
             tdone[69]=1;
           }
           else {
-            S65736=1;
+            S63496=1;
             active[69]=1;
             ends[69]=1;
             tdone[69]=1;
@@ -3803,129 +3803,129 @@ public class FillerController extends ClockDomain{
     }
   }
 
-  public void thread212933(int [] tdone, int [] ends){
-        S65709=1;
-    current_thread_52 = 0;//sysj\conveyor_controller.sysj line: 382, column: 16
-    total_thread_52 = 100;//sysj\conveyor_controller.sysj line: 383, column: 16
-    total_fill_51.setPresent();//sysj\conveyor_controller.sysj line: 384, column: 16
+  public void thread210688(int [] tdone, int [] ends){
+        S63469=1;
+    current_thread_52 = 0;//sysj\conveyor_controller.sysj line: 375, column: 16
+    total_thread_52 = 100;//sysj\conveyor_controller.sysj line: 376, column: 16
+    total_fill_51.setPresent();//sysj\conveyor_controller.sysj line: 377, column: 16
     currsigs.addElement(total_fill_51);
-    total_fill_51.setValue(total_thread_52);//sysj\conveyor_controller.sysj line: 384, column: 16
-    current_fill_51.setPresent();//sysj\conveyor_controller.sysj line: 385, column: 16
+    total_fill_51.setValue(total_thread_52);//sysj\conveyor_controller.sysj line: 377, column: 16
+    current_fill_51.setPresent();//sysj\conveyor_controller.sysj line: 378, column: 16
     currsigs.addElement(current_fill_51);
-    current_fill_51.setValue(current_thread_52);//sysj\conveyor_controller.sysj line: 385, column: 16
-    if(ordered.getprestatus()){//sysj\conveyor_controller.sysj line: 390, column: 25
-      filler1_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 391, column: 24
+    current_fill_51.setValue(current_thread_52);//sysj\conveyor_controller.sysj line: 378, column: 16
+    if(ordered.getprestatus()){//sysj\conveyor_controller.sysj line: 383, column: 25
+      filler1_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 384, column: 24
       currsigs.addElement(filler1_amount_51);
-      filler1_amount_51.setValue((orderFill_1.getpreval() == null ? 0 : ((Integer)orderFill_1.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 391, column: 24
-      filler2_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 392, column: 24
+      filler1_amount_51.setValue((orderFill_1.getpreval() == null ? 0 : ((Integer)orderFill_1.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 384, column: 24
+      filler2_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 385, column: 24
       currsigs.addElement(filler2_amount_51);
-      filler2_amount_51.setValue((orderFill_2.getpreval() == null ? 0 : ((Integer)orderFill_2.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 392, column: 24
-      filler3_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 393, column: 24
+      filler2_amount_51.setValue((orderFill_2.getpreval() == null ? 0 : ((Integer)orderFill_2.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 385, column: 24
+      filler3_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 386, column: 24
       currsigs.addElement(filler3_amount_51);
-      filler3_amount_51.setValue((orderFill_3.getpreval() == null ? 0 : ((Integer)orderFill_3.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 393, column: 24
-      filler4_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 394, column: 24
+      filler3_amount_51.setValue((orderFill_3.getpreval() == null ? 0 : ((Integer)orderFill_3.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 386, column: 24
+      filler4_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 387, column: 24
       currsigs.addElement(filler4_amount_51);
-      filler4_amount_51.setValue((orderFill_4.getpreval() == null ? 0 : ((Integer)orderFill_4.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 394, column: 24
-      System.out.println("*Filler - Waiting For BottleAtPos2*");//sysj\conveyor_controller.sysj line: 404, column: 20
-      S38282=0;
+      filler4_amount_51.setValue((orderFill_4.getpreval() == null ? 0 : ((Integer)orderFill_4.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 387, column: 24
+      System.out.println("*Filler - Waiting For BottleAtPos2*");//sysj\conveyor_controller.sysj line: 397, column: 20
+      S36042=0;
       active[52]=1;
       ends[52]=1;
       tdone[52]=1;
     }
     else {
-      filler1_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 397, column: 24
+      filler1_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 390, column: 24
       currsigs.addElement(filler1_amount_51);
-      filler1_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 397, column: 24
-      filler2_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 398, column: 24
+      filler1_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 390, column: 24
+      filler2_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 391, column: 24
       currsigs.addElement(filler2_amount_51);
-      filler2_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 398, column: 24
-      filler3_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 399, column: 24
+      filler2_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 391, column: 24
+      filler3_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 392, column: 24
       currsigs.addElement(filler3_amount_51);
-      filler3_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 399, column: 24
-      filler4_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 400, column: 24
+      filler3_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 392, column: 24
+      filler4_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 393, column: 24
       currsigs.addElement(filler4_amount_51);
-      filler4_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 400, column: 24
-      System.out.println("*Filler - Waiting For BottleAtPos2*");//sysj\conveyor_controller.sysj line: 404, column: 20
-      S38282=0;
+      filler4_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 393, column: 24
+      System.out.println("*Filler - Waiting For BottleAtPos2*");//sysj\conveyor_controller.sysj line: 397, column: 20
+      S36042=0;
       active[52]=1;
       ends[52]=1;
       tdone[52]=1;
     }
   }
 
-  public void thread212930(int [] tdone, int [] ends){
-        S65800=1;
+  public void thread210685(int [] tdone, int [] ends){
+        S63560=1;
     active[72]=1;
     ends[72]=1;
     tdone[72]=1;
   }
 
-  public void thread212929(int [] tdone, int [] ends){
-        S65797=1;
-    bottleAtPos2E.setPresent();//sysj\conveyor_controller.sysj line: 568, column: 29
+  public void thread210684(int [] tdone, int [] ends){
+        S63557=1;
+    bottleAtPos2E.setPresent();//sysj\conveyor_controller.sysj line: 561, column: 29
     currsigs.addElement(bottleAtPos2E);
     active[71]=1;
     ends[71]=1;
     tdone[71]=1;
   }
 
-  public void thread212928(int [] tdone, int [] ends){
-        S65827=1;
-    S65803=0;
-    if(bottleAtPos2_51.getprestatus()){//sysj\conveyor_controller.sysj line: 565, column: 26
-      thread212929(tdone,ends);
-      thread212930(tdone,ends);
-      int biggest212931 = 0;
-      if(ends[71]>=biggest212931){
-        biggest212931=ends[71];
+  public void thread210683(int [] tdone, int [] ends){
+        S63587=1;
+    S63563=0;
+    if(bottleAtPos2_51.getprestatus()){//sysj\conveyor_controller.sysj line: 558, column: 26
+      thread210684(tdone,ends);
+      thread210685(tdone,ends);
+      int biggest210686 = 0;
+      if(ends[71]>=biggest210686){
+        biggest210686=ends[71];
       }
-      if(ends[72]>=biggest212931){
-        biggest212931=ends[72];
+      if(ends[72]>=biggest210686){
+        biggest210686=ends[72];
       }
-      if(biggest212931 == 1){
+      if(biggest210686 == 1){
         active[70]=1;
         ends[70]=1;
         tdone[70]=1;
       }
     }
     else {
-      S65803=1;
+      S63563=1;
       active[70]=1;
       ends[70]=1;
       tdone[70]=1;
     }
   }
 
-  public void thread212927(int [] tdone, int [] ends){
-        S65792=1;
-    S65736=0;
-    S65716=0;
-    if(!simFiller_in.isPartnerPresent() || simFiller_in.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 554, column: 12
-      simFiller_in.setACK(false);//sysj\conveyor_controller.sysj line: 554, column: 12
-      S65716=1;
+  public void thread210682(int [] tdone, int [] ends){
+        S63552=1;
+    S63496=0;
+    S63476=0;
+    if(!simFiller_in.isPartnerPresent() || simFiller_in.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 547, column: 12
+      simFiller_in.setACK(false);//sysj\conveyor_controller.sysj line: 547, column: 12
+      S63476=1;
       active[69]=1;
       ends[69]=1;
       tdone[69]=1;
     }
     else {
-      S65711=0;
-      if(!simFiller_in.isREQ()){//sysj\conveyor_controller.sysj line: 554, column: 12
-        simFiller_in.setACK(true);//sysj\conveyor_controller.sysj line: 554, column: 12
-        S65711=1;
-        if(simFiller_in.isREQ()){//sysj\conveyor_controller.sysj line: 554, column: 12
-          simFiller_in.setACK(false);//sysj\conveyor_controller.sysj line: 554, column: 12
+      S63471=0;
+      if(!simFiller_in.isREQ()){//sysj\conveyor_controller.sysj line: 547, column: 12
+        simFiller_in.setACK(true);//sysj\conveyor_controller.sysj line: 547, column: 12
+        S63471=1;
+        if(simFiller_in.isREQ()){//sysj\conveyor_controller.sysj line: 547, column: 12
+          simFiller_in.setACK(false);//sysj\conveyor_controller.sysj line: 547, column: 12
           ends[69]=2;
-          ;//sysj\conveyor_controller.sysj line: 554, column: 12
-          if((Boolean)(simFiller_in.getVal() == null ? null : ((Boolean)simFiller_in.getVal()))){//sysj\conveyor_controller.sysj line: 555, column: 15
-            bottleAtPos2_51.setPresent();//sysj\conveyor_controller.sysj line: 556, column: 13
+          ;//sysj\conveyor_controller.sysj line: 547, column: 12
+          if((Boolean)(simFiller_in.getVal() == null ? null : ((Boolean)simFiller_in.getVal()))){//sysj\conveyor_controller.sysj line: 548, column: 15
+            bottleAtPos2_51.setPresent();//sysj\conveyor_controller.sysj line: 549, column: 13
             currsigs.addElement(bottleAtPos2_51);
-            S65736=1;
+            S63496=1;
             active[69]=1;
             ends[69]=1;
             tdone[69]=1;
           }
           else {
-            S65736=1;
+            S63496=1;
             active[69]=1;
             ends[69]=1;
             tdone[69]=1;
@@ -3945,50 +3945,50 @@ public class FillerController extends ClockDomain{
     }
   }
 
-  public void thread212926(int [] tdone, int [] ends){
-        S65709=1;
-    current_thread_52 = 0;//sysj\conveyor_controller.sysj line: 382, column: 16
-    total_thread_52 = 100;//sysj\conveyor_controller.sysj line: 383, column: 16
-    total_fill_51.setPresent();//sysj\conveyor_controller.sysj line: 384, column: 16
+  public void thread210681(int [] tdone, int [] ends){
+        S63469=1;
+    current_thread_52 = 0;//sysj\conveyor_controller.sysj line: 375, column: 16
+    total_thread_52 = 100;//sysj\conveyor_controller.sysj line: 376, column: 16
+    total_fill_51.setPresent();//sysj\conveyor_controller.sysj line: 377, column: 16
     currsigs.addElement(total_fill_51);
-    total_fill_51.setValue(total_thread_52);//sysj\conveyor_controller.sysj line: 384, column: 16
-    current_fill_51.setPresent();//sysj\conveyor_controller.sysj line: 385, column: 16
+    total_fill_51.setValue(total_thread_52);//sysj\conveyor_controller.sysj line: 377, column: 16
+    current_fill_51.setPresent();//sysj\conveyor_controller.sysj line: 378, column: 16
     currsigs.addElement(current_fill_51);
-    current_fill_51.setValue(current_thread_52);//sysj\conveyor_controller.sysj line: 385, column: 16
-    if(ordered.getprestatus()){//sysj\conveyor_controller.sysj line: 390, column: 25
-      filler1_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 391, column: 24
+    current_fill_51.setValue(current_thread_52);//sysj\conveyor_controller.sysj line: 378, column: 16
+    if(ordered.getprestatus()){//sysj\conveyor_controller.sysj line: 383, column: 25
+      filler1_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 384, column: 24
       currsigs.addElement(filler1_amount_51);
-      filler1_amount_51.setValue((orderFill_1.getpreval() == null ? 0 : ((Integer)orderFill_1.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 391, column: 24
-      filler2_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 392, column: 24
+      filler1_amount_51.setValue((orderFill_1.getpreval() == null ? 0 : ((Integer)orderFill_1.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 384, column: 24
+      filler2_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 385, column: 24
       currsigs.addElement(filler2_amount_51);
-      filler2_amount_51.setValue((orderFill_2.getpreval() == null ? 0 : ((Integer)orderFill_2.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 392, column: 24
-      filler3_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 393, column: 24
+      filler2_amount_51.setValue((orderFill_2.getpreval() == null ? 0 : ((Integer)orderFill_2.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 385, column: 24
+      filler3_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 386, column: 24
       currsigs.addElement(filler3_amount_51);
-      filler3_amount_51.setValue((orderFill_3.getpreval() == null ? 0 : ((Integer)orderFill_3.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 393, column: 24
-      filler4_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 394, column: 24
+      filler3_amount_51.setValue((orderFill_3.getpreval() == null ? 0 : ((Integer)orderFill_3.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 386, column: 24
+      filler4_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 387, column: 24
       currsigs.addElement(filler4_amount_51);
-      filler4_amount_51.setValue((orderFill_4.getpreval() == null ? 0 : ((Integer)orderFill_4.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 394, column: 24
-      System.out.println("*Filler - Waiting For BottleAtPos2*");//sysj\conveyor_controller.sysj line: 404, column: 20
-      S38282=0;
+      filler4_amount_51.setValue((orderFill_4.getpreval() == null ? 0 : ((Integer)orderFill_4.getpreval()).intValue()));//sysj\conveyor_controller.sysj line: 387, column: 24
+      System.out.println("*Filler - Waiting For BottleAtPos2*");//sysj\conveyor_controller.sysj line: 397, column: 20
+      S36042=0;
       active[52]=1;
       ends[52]=1;
       tdone[52]=1;
     }
     else {
-      filler1_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 397, column: 24
+      filler1_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 390, column: 24
       currsigs.addElement(filler1_amount_51);
-      filler1_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 397, column: 24
-      filler2_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 398, column: 24
+      filler1_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 390, column: 24
+      filler2_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 391, column: 24
       currsigs.addElement(filler2_amount_51);
-      filler2_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 398, column: 24
-      filler3_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 399, column: 24
+      filler2_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 391, column: 24
+      filler3_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 392, column: 24
       currsigs.addElement(filler3_amount_51);
-      filler3_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 399, column: 24
-      filler4_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 400, column: 24
+      filler3_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 392, column: 24
+      filler4_amount_51.setPresent();//sysj\conveyor_controller.sysj line: 393, column: 24
       currsigs.addElement(filler4_amount_51);
-      filler4_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 400, column: 24
-      System.out.println("*Filler - Waiting For BottleAtPos2*");//sysj\conveyor_controller.sysj line: 404, column: 20
-      S38282=0;
+      filler4_amount_51.setValue(25);//sysj\conveyor_controller.sysj line: 393, column: 24
+      System.out.println("*Filler - Waiting For BottleAtPos2*");//sysj\conveyor_controller.sysj line: 397, column: 20
+      S36042=0;
       active[52]=1;
       ends[52]=1;
       tdone[52]=1;
@@ -4002,58 +4002,58 @@ public class FillerController extends ClockDomain{
     }
     
     RUN: while(true){
-      switch(S148479){
+      switch(S146239){
         case 0 : 
-          S148479=0;
+          S146239=0;
           break RUN;
         
         case 1 : 
-          S148479=2;
-          S148479=2;
-          filler1_51.setClear();//sysj\conveyor_controller.sysj line: 372, column: 9
-          filler2_51.setClear();//sysj\conveyor_controller.sysj line: 372, column: 9
-          filler3_51.setClear();//sysj\conveyor_controller.sysj line: 372, column: 9
-          filler4_51.setClear();//sysj\conveyor_controller.sysj line: 372, column: 9
-          filler1_amount_51.setClear();//sysj\conveyor_controller.sysj line: 374, column: 9
-          filler2_amount_51.setClear();//sysj\conveyor_controller.sysj line: 374, column: 9
-          filler3_amount_51.setClear();//sysj\conveyor_controller.sysj line: 374, column: 9
-          filler4_amount_51.setClear();//sysj\conveyor_controller.sysj line: 374, column: 9
-          current_fill_51.setClear();//sysj\conveyor_controller.sysj line: 375, column: 9
-          total_fill_51.setClear();//sysj\conveyor_controller.sysj line: 375, column: 9
-          bottleAtPos2_51.setClear();//sysj\conveyor_controller.sysj line: 377, column: 9
-          S148478=0;
-          S38262=0;
-          if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 379, column: 9
-            fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 379, column: 9
-            S38262=1;
+          S146239=2;
+          S146239=2;
+          filler1_51.setClear();//sysj\conveyor_controller.sysj line: 365, column: 9
+          filler2_51.setClear();//sysj\conveyor_controller.sysj line: 365, column: 9
+          filler3_51.setClear();//sysj\conveyor_controller.sysj line: 365, column: 9
+          filler4_51.setClear();//sysj\conveyor_controller.sysj line: 365, column: 9
+          filler1_amount_51.setClear();//sysj\conveyor_controller.sysj line: 367, column: 9
+          filler2_amount_51.setClear();//sysj\conveyor_controller.sysj line: 367, column: 9
+          filler3_amount_51.setClear();//sysj\conveyor_controller.sysj line: 367, column: 9
+          filler4_amount_51.setClear();//sysj\conveyor_controller.sysj line: 367, column: 9
+          current_fill_51.setClear();//sysj\conveyor_controller.sysj line: 368, column: 9
+          total_fill_51.setClear();//sysj\conveyor_controller.sysj line: 368, column: 9
+          bottleAtPos2_51.setClear();//sysj\conveyor_controller.sysj line: 370, column: 9
+          S146238=0;
+          S36022=0;
+          if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 372, column: 9
+            fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 372, column: 9
+            S36022=1;
             active[51]=1;
             ends[51]=1;
             break RUN;
           }
           else {
-            S38257=0;
-            if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 379, column: 9
-              fillerReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 379, column: 9
-              S38257=1;
-              if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 379, column: 9
-                fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 379, column: 9
+            S36017=0;
+            if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 372, column: 9
+              fillerReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 372, column: 9
+              S36017=1;
+              if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 372, column: 9
+                fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 372, column: 9
                 ends[51]=2;
-                ;//sysj\conveyor_controller.sysj line: 379, column: 9
-                S148478=1;
-                thread212926(tdone,ends);
-                thread212927(tdone,ends);
-                thread212928(tdone,ends);
-                int biggest212932 = 0;
-                if(ends[52]>=biggest212932){
-                  biggest212932=ends[52];
+                ;//sysj\conveyor_controller.sysj line: 372, column: 9
+                S146238=1;
+                thread210681(tdone,ends);
+                thread210682(tdone,ends);
+                thread210683(tdone,ends);
+                int biggest210687 = 0;
+                if(ends[52]>=biggest210687){
+                  biggest210687=ends[52];
                 }
-                if(ends[69]>=biggest212932){
-                  biggest212932=ends[69];
+                if(ends[69]>=biggest210687){
+                  biggest210687=ends[69];
                 }
-                if(ends[70]>=biggest212932){
-                  biggest212932=ends[70];
+                if(ends[70]>=biggest210687){
+                  biggest210687=ends[70];
                 }
-                if(biggest212932 == 1){
+                if(biggest210687 == 1){
                   active[51]=1;
                   ends[51]=1;
                   break RUN;
@@ -4073,53 +4073,53 @@ public class FillerController extends ClockDomain{
           }
         
         case 2 : 
-          filler1_51.setClear();//sysj\conveyor_controller.sysj line: 372, column: 9
-          filler2_51.setClear();//sysj\conveyor_controller.sysj line: 372, column: 9
-          filler3_51.setClear();//sysj\conveyor_controller.sysj line: 372, column: 9
-          filler4_51.setClear();//sysj\conveyor_controller.sysj line: 372, column: 9
-          filler1_amount_51.setClear();//sysj\conveyor_controller.sysj line: 374, column: 9
-          filler2_amount_51.setClear();//sysj\conveyor_controller.sysj line: 374, column: 9
-          filler3_amount_51.setClear();//sysj\conveyor_controller.sysj line: 374, column: 9
-          filler4_amount_51.setClear();//sysj\conveyor_controller.sysj line: 374, column: 9
-          current_fill_51.setClear();//sysj\conveyor_controller.sysj line: 375, column: 9
-          total_fill_51.setClear();//sysj\conveyor_controller.sysj line: 375, column: 9
-          bottleAtPos2_51.setClear();//sysj\conveyor_controller.sysj line: 377, column: 9
-          switch(S148478){
+          filler1_51.setClear();//sysj\conveyor_controller.sysj line: 365, column: 9
+          filler2_51.setClear();//sysj\conveyor_controller.sysj line: 365, column: 9
+          filler3_51.setClear();//sysj\conveyor_controller.sysj line: 365, column: 9
+          filler4_51.setClear();//sysj\conveyor_controller.sysj line: 365, column: 9
+          filler1_amount_51.setClear();//sysj\conveyor_controller.sysj line: 367, column: 9
+          filler2_amount_51.setClear();//sysj\conveyor_controller.sysj line: 367, column: 9
+          filler3_amount_51.setClear();//sysj\conveyor_controller.sysj line: 367, column: 9
+          filler4_amount_51.setClear();//sysj\conveyor_controller.sysj line: 367, column: 9
+          current_fill_51.setClear();//sysj\conveyor_controller.sysj line: 368, column: 9
+          total_fill_51.setClear();//sysj\conveyor_controller.sysj line: 368, column: 9
+          bottleAtPos2_51.setClear();//sysj\conveyor_controller.sysj line: 370, column: 9
+          switch(S146238){
             case 0 : 
-              switch(S38262){
+              switch(S36022){
                 case 0 : 
-                  if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 379, column: 9
-                    fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 379, column: 9
-                    S38262=1;
+                  if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 372, column: 9
+                    fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 372, column: 9
+                    S36022=1;
                     active[51]=1;
                     ends[51]=1;
                     break RUN;
                   }
                   else {
-                    switch(S38257){
+                    switch(S36017){
                       case 0 : 
-                        if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 379, column: 9
-                          fillerReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 379, column: 9
-                          S38257=1;
-                          if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 379, column: 9
-                            fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 379, column: 9
+                        if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 372, column: 9
+                          fillerReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 372, column: 9
+                          S36017=1;
+                          if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 372, column: 9
+                            fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 372, column: 9
                             ends[51]=2;
-                            ;//sysj\conveyor_controller.sysj line: 379, column: 9
-                            S148478=1;
-                            thread212933(tdone,ends);
-                            thread212934(tdone,ends);
-                            thread212935(tdone,ends);
-                            int biggest212939 = 0;
-                            if(ends[52]>=biggest212939){
-                              biggest212939=ends[52];
+                            ;//sysj\conveyor_controller.sysj line: 372, column: 9
+                            S146238=1;
+                            thread210688(tdone,ends);
+                            thread210689(tdone,ends);
+                            thread210690(tdone,ends);
+                            int biggest210694 = 0;
+                            if(ends[52]>=biggest210694){
+                              biggest210694=ends[52];
                             }
-                            if(ends[69]>=biggest212939){
-                              biggest212939=ends[69];
+                            if(ends[69]>=biggest210694){
+                              biggest210694=ends[69];
                             }
-                            if(ends[70]>=biggest212939){
-                              biggest212939=ends[70];
+                            if(ends[70]>=biggest210694){
+                              biggest210694=ends[70];
                             }
-                            if(biggest212939 == 1){
+                            if(biggest210694 == 1){
                               active[51]=1;
                               ends[51]=1;
                               break RUN;
@@ -4138,25 +4138,25 @@ public class FillerController extends ClockDomain{
                         }
                       
                       case 1 : 
-                        if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 379, column: 9
-                          fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 379, column: 9
+                        if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 372, column: 9
+                          fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 372, column: 9
                           ends[51]=2;
-                          ;//sysj\conveyor_controller.sysj line: 379, column: 9
-                          S148478=1;
-                          thread212940(tdone,ends);
-                          thread212941(tdone,ends);
-                          thread212942(tdone,ends);
-                          int biggest212946 = 0;
-                          if(ends[52]>=biggest212946){
-                            biggest212946=ends[52];
+                          ;//sysj\conveyor_controller.sysj line: 372, column: 9
+                          S146238=1;
+                          thread210695(tdone,ends);
+                          thread210696(tdone,ends);
+                          thread210697(tdone,ends);
+                          int biggest210701 = 0;
+                          if(ends[52]>=biggest210701){
+                            biggest210701=ends[52];
                           }
-                          if(ends[69]>=biggest212946){
-                            biggest212946=ends[69];
+                          if(ends[69]>=biggest210701){
+                            biggest210701=ends[69];
                           }
-                          if(ends[70]>=biggest212946){
-                            biggest212946=ends[70];
+                          if(ends[70]>=biggest210701){
+                            biggest210701=ends[70];
                           }
-                          if(biggest212946 == 1){
+                          if(biggest210701 == 1){
                             active[51]=1;
                             ends[51]=1;
                             break RUN;
@@ -4173,39 +4173,39 @@ public class FillerController extends ClockDomain{
                   break;
                 
                 case 1 : 
-                  S38262=1;
-                  S38262=0;
-                  if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 379, column: 9
-                    fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 379, column: 9
-                    S38262=1;
+                  S36022=1;
+                  S36022=0;
+                  if(!fillerReady_o.isPartnerPresent() || fillerReady_o.isPartnerPreempted()){//sysj\conveyor_controller.sysj line: 372, column: 9
+                    fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 372, column: 9
+                    S36022=1;
                     active[51]=1;
                     ends[51]=1;
                     break RUN;
                   }
                   else {
-                    S38257=0;
-                    if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 379, column: 9
-                      fillerReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 379, column: 9
-                      S38257=1;
-                      if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 379, column: 9
-                        fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 379, column: 9
+                    S36017=0;
+                    if(fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 372, column: 9
+                      fillerReady_o.setVal(Boolean.TRUE);//sysj\conveyor_controller.sysj line: 372, column: 9
+                      S36017=1;
+                      if(!fillerReady_o.isACK()){//sysj\conveyor_controller.sysj line: 372, column: 9
+                        fillerReady_o.setREQ(false);//sysj\conveyor_controller.sysj line: 372, column: 9
                         ends[51]=2;
-                        ;//sysj\conveyor_controller.sysj line: 379, column: 9
-                        S148478=1;
-                        thread212947(tdone,ends);
-                        thread212948(tdone,ends);
-                        thread212949(tdone,ends);
-                        int biggest212953 = 0;
-                        if(ends[52]>=biggest212953){
-                          biggest212953=ends[52];
+                        ;//sysj\conveyor_controller.sysj line: 372, column: 9
+                        S146238=1;
+                        thread210702(tdone,ends);
+                        thread210703(tdone,ends);
+                        thread210704(tdone,ends);
+                        int biggest210708 = 0;
+                        if(ends[52]>=biggest210708){
+                          biggest210708=ends[52];
                         }
-                        if(ends[69]>=biggest212953){
-                          biggest212953=ends[69];
+                        if(ends[69]>=biggest210708){
+                          biggest210708=ends[69];
                         }
-                        if(ends[70]>=biggest212953){
-                          biggest212953=ends[70];
+                        if(ends[70]>=biggest210708){
+                          biggest210708=ends[70];
                         }
-                        if(biggest212953 == 1){
+                        if(biggest210708 == 1){
                           active[51]=1;
                           ends[51]=1;
                           break RUN;
@@ -4228,30 +4228,30 @@ public class FillerController extends ClockDomain{
               break;
             
             case 1 : 
-              thread212954(tdone,ends);
-              thread213099(tdone,ends);
-              thread213100(tdone,ends);
-              int biggest213107 = 0;
-              if(ends[52]>=biggest213107){
-                biggest213107=ends[52];
+              thread210709(tdone,ends);
+              thread210854(tdone,ends);
+              thread210855(tdone,ends);
+              int biggest210862 = 0;
+              if(ends[52]>=biggest210862){
+                biggest210862=ends[52];
               }
-              if(ends[69]>=biggest213107){
-                biggest213107=ends[69];
+              if(ends[69]>=biggest210862){
+                biggest210862=ends[69];
               }
-              if(ends[70]>=biggest213107){
-                biggest213107=ends[70];
+              if(ends[70]>=biggest210862){
+                biggest210862=ends[70];
               }
-              if(biggest213107 == 1){
+              if(biggest210862 == 1){
                 active[51]=1;
                 ends[51]=1;
                 break RUN;
               }
               //FINXME code
-              if(biggest213107 == 0){
-                S148479=0;
+              if(biggest210862 == 0){
+                S146239=0;
                 active[51]=0;
                 ends[51]=0;
-                S148479=0;
+                S146239=0;
                 break RUN;
               }
             
