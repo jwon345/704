@@ -1,5 +1,6 @@
 package org.ECSGUI;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
@@ -17,7 +18,9 @@ import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JSpinner;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.SpinnerDateModel;
 import javax.swing.SpinnerNumberModel;
@@ -82,14 +85,14 @@ public class ECS_Window extends JFrame {
 	    JPanel zone1Panel = new JPanel();
 	    zone1Panel.setBorder(BorderFactory.createTitledBorder("Zone - 1,7 (Office Zone)"));
 	    zone1Panel.add(new JLabel("Temperature (°C): "));
-	    SpinnerNumberModel temp1Model = new SpinnerNumberModel(30, 0, 100, 1);
+	    SpinnerNumberModel temp1Model = new SpinnerNumberModel(0, 0, 100, 1);
 	    JSpinner temp1Spinner = new JSpinner(temp1Model);
 	    SignalSpinner_BClient temp1Client = new SignalSpinner_BClient(Ports.PORT_ECS_HVAC_CONTROLLER, Ports.zoneOneSevenTemp);
 	    temp1Spinner.addChangeListener(temp1Client);
 	    zone1Panel.add(temp1Spinner);
 
 	    zone1Panel.add(new JLabel("Humidity (%): "));
-	    SpinnerNumberModel humidity1Model = new SpinnerNumberModel(50, 0, 100, 1);
+	    SpinnerNumberModel humidity1Model = new SpinnerNumberModel(0, 0, 100, 1);
 	    JSpinner humidity1Spinner = new JSpinner(humidity1Model);
 	    SignalSpinner_BClient humidity1Client = new SignalSpinner_BClient(Ports.PORT_ECS_HVAC_CONTROLLER, Ports.zoneOneSevenHumid);
 	    humidity1Spinner.addChangeListener(humidity1Client);
@@ -103,14 +106,14 @@ public class ECS_Window extends JFrame {
 	    JPanel zone2Panel = new JPanel();
 	    zone2Panel.setBorder(BorderFactory.createTitledBorder("Zone - 2,3 (Storage Zone)"));
 	    zone2Panel.add(new JLabel("Temperature (°C): "));
-	    SpinnerNumberModel temp2Model = new SpinnerNumberModel(30, 0, 100, 1);
+	    SpinnerNumberModel temp2Model = new SpinnerNumberModel(0, 0, 100, 1);
 	    JSpinner temp2Spinner = new JSpinner(temp2Model);
 	    SignalSpinner_BClient temp2Client = new SignalSpinner_BClient(Ports.PORT_ECS_HVAC_CONTROLLER, Ports.zoneTwoThreeTemp);
 	    temp2Spinner.addChangeListener(temp2Client);	    
 	    zone2Panel.add(temp2Spinner);
 
 	    zone2Panel.add(new JLabel("Humidity (%): "));
-	    SpinnerNumberModel humidity2Model = new SpinnerNumberModel(50, 0, 100, 1);
+	    SpinnerNumberModel humidity2Model = new SpinnerNumberModel(0, 0, 100, 1);
 	    JSpinner humidity2Spinner = new JSpinner(humidity2Model);
 	    SignalSpinner_BClient humidity2Client = new SignalSpinner_BClient(Ports.PORT_ECS_HVAC_CONTROLLER, Ports.zoneTwoThreeHumid);
 	    humidity2Spinner.addChangeListener(humidity2Client);	    
@@ -124,14 +127,14 @@ public class ECS_Window extends JFrame {
 	    JPanel zone3Panel = new JPanel();
 	    zone3Panel.setBorder(BorderFactory.createTitledBorder("Zone - 4,5,6 (Manufacturing Zone)"));
 	    zone3Panel.add(new JLabel("Temperature (°C): "));
-	    SpinnerNumberModel temp3Model = new SpinnerNumberModel(30, 0, 100, 1);
+	    SpinnerNumberModel temp3Model = new SpinnerNumberModel(0, 0, 100, 1);
 	    JSpinner temp3Spinner = new JSpinner(temp3Model);
 	    SignalSpinner_BClient temp3Client = new SignalSpinner_BClient(Ports.PORT_ECS_HVAC_CONTROLLER, Ports.zoneFourFiveSixTemp);
 	    temp3Spinner.addChangeListener(temp3Client);	
 	    zone3Panel.add(temp3Spinner);
 
 	    zone3Panel.add(new JLabel("Humidity (%): "));
-	    SpinnerNumberModel humidity3Model = new SpinnerNumberModel(50, 0, 100, 1);
+	    SpinnerNumberModel humidity3Model = new SpinnerNumberModel(0, 0, 100, 1);
 	    JSpinner humidity3Spinner = new JSpinner(humidity3Model);
 	    SignalSpinner_BClient humidity3Client = new SignalSpinner_BClient(Ports.PORT_ECS_HVAC_CONTROLLER, Ports.zoneFourFiveSixHumid);
 	    humidity3Spinner.addChangeListener(humidity3Client);
@@ -162,7 +165,7 @@ public class ECS_Window extends JFrame {
 	    zone1OccupancyPanel.add(occupancy1Spinner);
 
 	    // Light Intensity Spinner
-	    SpinnerNumberModel lightIntensity1Model = new SpinnerNumberModel(50, 0, 100, 1);
+	    SpinnerNumberModel lightIntensity1Model = new SpinnerNumberModel(49, 0, 100, 1);
 	    JSpinner lightIntensity1Spinner = new JSpinner(lightIntensity1Model);
 	    SignalSpinner_BClient lightIntensity1Client = new SignalSpinner_BClient(Ports.PORT_ECS_LIGHTING_CONTROLLER, Ports.zoneOneLightingI);
 	    lightIntensity1Spinner.addChangeListener(lightIntensity1Client);
@@ -186,7 +189,7 @@ public class ECS_Window extends JFrame {
 	    zone2OccupancyPanel.add(occupancy2Spinner);
 	    
 	    
-	    SpinnerNumberModel lightIntensity2Model = new SpinnerNumberModel(50, 0, 100, 1);
+	    SpinnerNumberModel lightIntensity2Model = new SpinnerNumberModel(49, 0, 100, 1);
 	    JSpinner lightIntensity2Spinner = new JSpinner(lightIntensity2Model);
 	    SignalSpinner_BClient lightIntensity2Client = new SignalSpinner_BClient(Ports.PORT_ECS_LIGHTING_CONTROLLER, Ports.zoneTwoLightingI);
 	    lightIntensity2Spinner.addChangeListener(lightIntensity2Client);
@@ -209,7 +212,7 @@ public class ECS_Window extends JFrame {
 	    zone3OccupancyPanel.add(occupancy3Spinner);
 	    
 	    
-	    SpinnerNumberModel lightIntensity3Model = new SpinnerNumberModel(50, 0, 100, 1);
+	    SpinnerNumberModel lightIntensity3Model = new SpinnerNumberModel(49, 0, 100, 1);
 	    JSpinner lightIntensity3Spinner = new JSpinner(lightIntensity3Model);
 	    SignalSpinner_BClient lightIntensity3Client = new SignalSpinner_BClient(Ports.PORT_ECS_LIGHTING_CONTROLLER, Ports.zoneThreeLightingI);
 	    lightIntensity3Spinner.addChangeListener(lightIntensity3Client);
@@ -231,7 +234,7 @@ public class ECS_Window extends JFrame {
 	    zone4OccupancyPanel.add(new JLabel("Occupancy (People): "));
 	    zone4OccupancyPanel.add(occupancy4Spinner);
 	    
-	    SpinnerNumberModel lightIntensity4Model = new SpinnerNumberModel(50, 0, 100, 1);
+	    SpinnerNumberModel lightIntensity4Model = new SpinnerNumberModel(49, 0, 100, 1);
 	    JSpinner lightIntensity4Spinner = new JSpinner(lightIntensity4Model);
 	    SignalSpinner_BClient lightIntensity4Client = new SignalSpinner_BClient(Ports.PORT_ECS_LIGHTING_CONTROLLER, Ports.zoneFourLightingI);
 	    lightIntensity4Spinner.addChangeListener(lightIntensity4Client);
@@ -253,7 +256,7 @@ public class ECS_Window extends JFrame {
 	    SignalSpinner_BClient occupancy5Client = new SignalSpinner_BClient(Ports.PORT_ECS_LIGHTING_CONTROLLER, Ports.zoneFiveOccupancy);
 	    occupancy5Spinner.addChangeListener(occupancy5Client);
 	    
-	    SpinnerNumberModel lightIntensity5Model = new SpinnerNumberModel(50, 0, 100, 1);
+	    SpinnerNumberModel lightIntensity5Model = new SpinnerNumberModel(49, 0, 100, 1);
 	    JSpinner lightIntensity5Spinner = new JSpinner(lightIntensity5Model);
 	    SignalSpinner_BClient lightIntensity5Client = new SignalSpinner_BClient(Ports.PORT_ECS_LIGHTING_CONTROLLER, Ports.zoneFiveLightingI);
 	    lightIntensity5Spinner.addChangeListener(lightIntensity5Client);
@@ -275,7 +278,7 @@ public class ECS_Window extends JFrame {
 	    zone6OccupancyPanel.add(new JLabel("Occupancy (People): "));
 	    zone6OccupancyPanel.add(occupancy6Spinner);
 	    
-	    SpinnerNumberModel lightIntensity6Model = new SpinnerNumberModel(50, 0, 100, 1);
+	    SpinnerNumberModel lightIntensity6Model = new SpinnerNumberModel(49, 0, 100, 1);
 	    JSpinner lightIntensity6Spinner = new JSpinner(lightIntensity6Model);
 	    SignalSpinner_BClient lightIntensity6Client = new SignalSpinner_BClient(Ports.PORT_ECS_LIGHTING_CONTROLLER, Ports.zoneSixLightingI);
 	    lightIntensity6Spinner.addChangeListener(lightIntensity6Client);
@@ -302,7 +305,7 @@ public class ECS_Window extends JFrame {
 	    zone7OccupancyPanel.add(new JLabel("Occupancy (People): "));
 	    zone7OccupancyPanel.add(occupancy7Spinner);
 	    
-	    SpinnerNumberModel lightIntensity7Model = new SpinnerNumberModel(50, 0, 100, 1);
+	    SpinnerNumberModel lightIntensity7Model = new SpinnerNumberModel(49, 0, 100, 1);
 	    JSpinner lightIntensity7Spinner = new JSpinner(lightIntensity7Model);
 	    SignalSpinner_BClient lightIntensity7Client = new SignalSpinner_BClient(Ports.PORT_ECS_LIGHTING_CONTROLLER, Ports.zoneSevenLightingI);
 	    lightIntensity7Spinner.addChangeListener(lightIntensity7Client);
@@ -369,7 +372,47 @@ public class ECS_Window extends JFrame {
 	    c.gridy = 6; // New panel's y position (same row as the existing one)
 	    this.add(zone7, c);
 	    
-	    
+	 // Existing HVAC guide panel code
+	    JPanel guidePanel = new JPanel();
+	    guidePanel.setPreferredSize(new Dimension(300, 150));
+	    guidePanel.setBackground(Color.white); 
+	    guidePanel.setBorder(BorderFactory.createTitledBorder("HVAC Guide")); 
+	    guidePanel.setLayout(new BorderLayout());
+
+	    JTextArea guideInfo = new JTextArea();
+	    guideInfo.setText("Work hours: 9-17\nAfterhours: 17-8\nAny HVAC can be activated during work hours.\nAfter hours only Zone 1-7 can be activated if there is someone in those zones.");
+	    guideInfo.setEditable(false); 
+	    guideInfo.setWrapStyleWord(true); 
+	    guideInfo.setLineWrap(true); 
+	    guideInfo.setCaretPosition(0);
+	    guideInfo.setMargin(new Insets(10,10,10,10));
+
+	    guidePanel.add(new JScrollPane(guideInfo), BorderLayout.CENTER);
+
+	    c.gridx = 1; 
+	    c.gridy = 6; 
+	    this.add(guidePanel, c);
+
+	    // Lighting guide panel
+	    JPanel lightingGuidePanel = new JPanel();
+	    lightingGuidePanel.setPreferredSize(new Dimension(300, 150));
+	    lightingGuidePanel.setBackground(Color.white); 
+	    lightingGuidePanel.setBorder(BorderFactory.createTitledBorder("Lighting Guide")); 
+	    lightingGuidePanel.setLayout(new BorderLayout());
+
+	    JTextArea lightingGuideInfo = new JTextArea();
+	    lightingGuideInfo.setText("If there is more than one person in the zone and lighting intensity is under 50%, the following will occur:\n- Daytime: Blinds will open.\n- Nighttime: Lights will turn on.");
+	    lightingGuideInfo.setEditable(false); 
+	    lightingGuideInfo.setWrapStyleWord(true); 
+	    lightingGuideInfo.setLineWrap(true); 
+	    lightingGuideInfo.setCaretPosition(0);
+	    lightingGuideInfo.setMargin(new Insets(10,10,10,10));
+
+	    lightingGuidePanel.add(new JScrollPane(lightingGuideInfo), BorderLayout.CENTER);
+
+	    c.gridx = 2;  // Adjust gridx to position the lighting guide panel next to the HVAC guide panel
+	    c.gridy = 6; 
+	    this.add(lightingGuidePanel, c);
 	    
 	    
 	    

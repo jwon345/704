@@ -1320,8 +1320,8 @@ public class ECS_HVACController extends ClockDomain{
 
   public void thread204758(int [] tdone, int [] ends){
         S198589=1;
-    currentTemp_thread_5 = 30;//sysj\ECS.sysj line: 275, column: 2
-    currentHumidity_thread_5 = 50;//sysj\ECS.sysj line: 276, column: 2
+    currentTemp_thread_5 = 0;//sysj\ECS.sysj line: 275, column: 2
+    currentHumidity_thread_5 = 0;//sysj\ECS.sysj line: 276, column: 2
     System.out.println("Current Temp For Zone 4,5,6: " + currentTemp_thread_5);//sysj\ECS.sysj line: 277, column: 2
     S198313=0;
     if(workhrs_1.getprestatus()){//sysj\ECS.sysj line: 281, column: 12
@@ -1391,8 +1391,8 @@ public class ECS_HVACController extends ClockDomain{
 
   public void thread204757(int [] tdone, int [] ends){
         S198257=1;
-    currentTemp_thread_4 = 30;//sysj\ECS.sysj line: 218, column: 2
-    currentHumidity_thread_4 = 50;//sysj\ECS.sysj line: 219, column: 2
+    currentTemp_thread_4 = 0;//sysj\ECS.sysj line: 218, column: 2
+    currentHumidity_thread_4 = 0;//sysj\ECS.sysj line: 219, column: 2
     System.out.println("Current Temp For Zone 2,3: " + currentTemp_thread_4);//sysj\ECS.sysj line: 220, column: 2
     S197981=0;
     if(workhrs_1.getprestatus()){//sysj\ECS.sysj line: 224, column: 12
@@ -1462,8 +1462,8 @@ public class ECS_HVACController extends ClockDomain{
 
   public void thread204756(int [] tdone, int [] ends){
         S197925=1;
-    currentTemp_thread_3 = 30;//sysj\ECS.sysj line: 106, column: 2
-    currentHumidity_thread_3 = 50;//sysj\ECS.sysj line: 107, column: 2
+    currentTemp_thread_3 = 0;//sysj\ECS.sysj line: 106, column: 2
+    currentHumidity_thread_3 = 0;//sysj\ECS.sysj line: 107, column: 2
     System.out.println("Current Temp For Zone 1,7: " + currentTemp_thread_3);//sysj\ECS.sysj line: 108, column: 2
     tempZoneOneSeven_thread_3 = (Integer)(zoneOneSevenTemp.getpreval() == null ? 0 : ((Integer)zoneOneSevenTemp.getpreval()).intValue());//sysj\ECS.sysj line: 111, column: 4
     humidityZoneOneSeven_thread_3 = (Integer)(zoneOneSevenHumid.getpreval() == null ? 0 : ((Integer)zoneOneSevenHumid.getpreval()).intValue());//sysj\ECS.sysj line: 112, column: 4
@@ -1695,7 +1695,7 @@ public class ECS_HVACController extends ClockDomain{
           S203396=2;
           workhrs_1.setClear();//sysj\ECS.sysj line: 83, column: 2
           afterhrs_1.setClear();//sysj\ECS.sysj line: 83, column: 2
-          currentTemp_thread_1 = 30;//sysj\ECS.sysj line: 86, column: 2
+          currentTemp_thread_1 = 0;//sysj\ECS.sysj line: 86, column: 2
           previousHour_thread_1 = -1;//sysj\ECS.sysj line: 87, column: 2
           thread204755(tdone,ends);
           thread204756(tdone,ends);

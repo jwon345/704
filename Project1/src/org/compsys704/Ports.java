@@ -2,8 +2,8 @@ package org.compsys704;
 
 public class Ports {
 	//ECS
-	public static final int PORT_ECS_HVAC_PLANT = 10001;
-	public static final int PORT_ECS_HVAC_CONTROLLER= 10000;
+	public static final int PORT_ECS_HVAC_PLANT = 30001;
+	public static final int PORT_ECS_HVAC_CONTROLLER= 30000;
 	public static final String CurrentTime = "ECS_HVACCD.currentTime";
 	public static final String zoneOneSevenTemp = "ECS_HVACCD.zoneOneSevenTemp";
 	public static final String zoneOneSevenHumid = "ECS_HVACCD.zoneOneSevenHumid";
@@ -18,7 +18,7 @@ public class Ports {
 	public static final String zoneSevenOccupancy_B = "ECS_HVACCD.zoneSevenOccupancy_B";
 	
 	
-	public static final int PORT_ECS_LIGHTING_CONTROLLER = 10002;
+	public static final int PORT_ECS_LIGHTING_CONTROLLER = 30002;
 	public static final String CurrentTime_2 = "ECS_LightingCD.currentTime_2";
 	public static final String zoneOneOccupancy = "ECS_LightingCD.zoneOneOccupancy";
 	public static final String zoneTwoOccupancy = "ECS_LightingCD.zoneTwoOccupancy";
@@ -36,7 +36,7 @@ public class Ports {
 	public static final String zoneSixLightingI = "ECS_LightingCD.zoneSixLightingI";
 	public static final String zoneSevenLightingI = "ECS_LightingCD.zoneSevenLightingI";
 	
-	public static final int PORT_ECS_SMOKE_CONTROLLER = 10004;
+	public static final int PORT_ECS_SMOKE_CONTROLLER = 30004;
 	public static final String detectSmoke = "ECS_SmokeCD.detectSmoke";
 	
 	//Capper TABLE

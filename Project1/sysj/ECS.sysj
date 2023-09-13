@@ -83,7 +83,7 @@ ECS_HVACController (input int signal currentTime;
 	signal workhrs, afterhrs;
 	
 	{
-	int currentTemp = 30;
+	int currentTemp = 0;
 	int previousHour = -1; // Initialize with an invalid hour value
 		
 	{loop{
@@ -103,8 +103,8 @@ ECS_HVACController (input int signal currentTime;
 	
 	{
 		
-	int currentTemp = 30;
-	int currentHumidity = 50;
+	int currentTemp = 0;
+	int currentHumidity = 0;
 	System.out.println("Current Temp For Zone 1,7: " + currentTemp);
 	
 	loop{
@@ -215,8 +215,8 @@ ECS_HVACController (input int signal currentTime;
 	||
 	
 	{
-	int currentTemp = 30;
-	int currentHumidity = 50;
+	int currentTemp = 0;
+	int currentHumidity = 0;
 	System.out.println("Current Temp For Zone 2,3: "+ currentTemp);
 	
 	
@@ -272,8 +272,8 @@ ECS_HVACController (input int signal currentTime;
 	||
 	
 	{
-	int currentTemp = 30;
-	int currentHumidity = 50;
+	int currentTemp = 0;
+	int currentHumidity = 0;
 	System.out.println("Current Temp For Zone 4,5,6: "+ currentTemp);
 	
 	
