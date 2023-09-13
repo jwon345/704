@@ -235,17 +235,19 @@ RotaryController(
 	    input signal tableAlignedWithSensor, capOnBottleAtPos1;
 	    output signal rotaryTableTrigger, bottleAtPos5E, bottleAtPos1E;
 	    
-	    input Boolean channel  convReady, fillerReady, capperReady, lidLoaderReady;
+	    input Boolean channel  convReady, fillerReady, capperReady, lidLoaderReady, smokeReady;
 	    output Boolean channel rotated;
 	    
 	    input Boolean channel checkFive, checkOne;
 	    )->{
-	    	signal  cvR, fR, cR , lR;
+	    	signal  cvR, fR, cR , lR, sR;
 	    	signal bottleAtPos5 , bottleAtPos1;
 	    	receive convReady;
 	    	receive fillerReady;
 	    	receive capperReady;
 	    	receive lidLoaderReady;
+	    	receive smokeReady;
+	    	
 	    	{
 	    		loop{
 	    			
@@ -269,6 +271,12 @@ RotaryController(
 	    				{
 	    					await(lR);
 	    					System.out.println("*Rotary - LidLoader Ready*");
+	    				}
+	    				
+	    				||
+	    				{
+	    					await(sR);
+	    					System.out.println("*Rotary - No Smoke*");
 	    				}
 	    							
 	    				System.out.println("*Rotary - All controllers are ready*");
@@ -321,6 +329,8 @@ RotaryController(
     			checkReady(:capperReady, cR)
     			||
     			checkReady(:lidLoaderReady, lR)
+    			||
+    			checkReady(:smokeReady, sR)
     		}		
 	    	
 	    	||
@@ -367,7 +377,6 @@ RotaryController(
 						receive checkOne;
 						if((Boolean)#checkOne)
 							emit bottleAtPos1;
-    		            	System.out.println(#checkOne);
 
 						pause;
 					}	
@@ -433,16 +442,6 @@ FillerController(
 	    		       
 	    		        
 	    		        loop {
-	    		        	
-	    		        	emit filler1_amount(25);
-							emit filler2_amount(25);
-							emit filler3_amount(25);
-							emit filler4_amount(25);
-							
-							emit filler1_amount(helperClass.parseString(#fileReadSignal, 0));
-							emit filler2_amount(helperClass.parseString(#fileReadSignal, 1));
-							emit filler3_amount(helperClass.parseString(#fileReadSignal, 2));
-							emit filler4_amount(helperClass.parseString(#fileReadSignal, 3));
 	    		            
 	    		                
 	    		            System.out.println("*Filler - Waiting For BottleAtPos2*");
@@ -593,8 +592,17 @@ FillerController(
 	    		        }
 	    		    }
 	    		
+	    			||
 	    			
-	    			
+	    			{
+	    			loop{
+						emit filler1_amount(helperClass.parseString(#fileReadSignal, 0));
+						emit filler2_amount(helperClass.parseString(#fileReadSignal, 1));
+						emit filler3_amount(helperClass.parseString(#fileReadSignal, 2));
+						emit filler4_amount(helperClass.parseString(#fileReadSignal, 3));
+						pause;
+	    				}
+	    			}
 	    			
 	    			||
 	    			
