@@ -86,16 +86,23 @@ FillerPlant(
 			)->{
 				{
 					loop{
+						{
 						await(valveInjectorOnOff);	
-						waitl(500 ms);  // Delay before filling
+						waitl(100 ms);  // Delay before filling
 						emit dosUnitFilled;
-						pause;
+						//pause;
 						System.out.println("*Filler - Bottle Filled (Pressure Can At Top) *");
+						}
+						
+						||
+						
+						{
 						await(valveInletOnOff);
-						waitl(500 ms);  
+						waitl(100 ms);  
 						emit dosUnitEvac;
-						pause;
+						//pause;
 						System.out.println("*Filler - Inlet Open (Pressure Can At Bottem) *");
+						}
 					}
 				}
 				
@@ -139,29 +146,39 @@ FillerPlant(
 					
 						{
 							loop{
-
-								abort(gripperTurnRetract)
-								{
-									sustain gripperZAxisLifted;
-								}
-
-								await (gripperTurnRetract);
-								waitl (1 s);
-								emit gripperTurnHomePos;
-								pause;
 								
-								await (cylPos5ZaxisExtend);
-								waitl (1 s);
-								emit gripperZAxisLowered;
-								pause;
-								
-								await (gripperTurnExtend);
-								waitl (1s);
-								emit gripperTurnFinalPos;
-								pause;
 
-								//waitl (1s);
-								emit gripperZAxisLifted;
+								 	{
+								        abort(gripperTurnRetract) {
+								            sustain gripperZAxisLifted;
+								        }
+								 	}
+								     
+								 	||
+								 	{
+								        await (gripperTurnRetract);
+								        waitl(300 ms);
+								        emit gripperTurnHomePos;
+								        pause;
+								    }
+								    ||
+								    {
+								        await (cylPos5ZaxisExtend);
+								        waitl(300 ms);
+								        emit gripperZAxisLowered;
+								        pause;
+								    }
+								    ||
+								    {
+								        await (gripperTurnExtend);
+								        waitl(300 ms);
+								        emit gripperTurnFinalPos;
+								        pause;
+								        waitl(300 ms);
+								        emit gripperZAxisLifted;
+								        pause;
+								    }
+								
 								}
 							}
 						||

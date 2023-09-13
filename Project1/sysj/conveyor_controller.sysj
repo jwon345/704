@@ -289,8 +289,18 @@ RotaryController(
 	    		        await(tableAlignedWithSensor);
 	    		        System.out.println("*Rotary - Aligned*");
 	    		    	send rotated(Boolean.TRUE);
-	    		    	waitl(5 ms);
-	    		
+	    		    	
+	    		    	pause;
+	    		    	waitl(5ms);
+	    		    	int i = 0;
+	    				trap(T){
+	    					loop{
+	    						i++;
+	    						if(i > 15)
+	    							exit(T);
+	    						pause;
+	    					}
+	    				}
 	    				
 	    			}
 	    		
@@ -441,6 +451,8 @@ FillerController(
 	    		                        sustain dosUnitValveRetract;
 	    		                    }
 	    		                }
+	    		                
+	    		                
 	    		                abort(dosUnitEvac) {
 	    		                    {
 	    		                        System.out.println("*Filler #2 - Valve Inlet On*");
@@ -515,11 +527,13 @@ FillerController(
 	    		                System.out.println("*Filler #4 - Filled Amount: " + #filler4_amount);
 	    		                current += #filler4_amount;
 	    		                System.out.println("*Current Filled Amount: " + current);
-	    		                emit current_fill(current);
+	    		              
+	    		                
 	    		                pause;
 	    		            }
 	    		            
-	    		            emit order_finished;
+	    		            current = 0;
+	    		            emit current_fill(current);
 	    		            
 	    		            send fillerReady(Boolean.TRUE);
 	    		            System.out.println("*Filler operation done");
@@ -572,12 +586,6 @@ FillerController(
 }
 	    		
 
-	    		
-	    		
-	    		
-	    		
-	    		
-	    		
 	    		
 	    		
 	    		

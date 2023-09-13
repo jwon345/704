@@ -16,15 +16,15 @@ public class ECS_SmokePlant extends ClockDomain{
   public Signal detectSmoke = new Signal("detectSmoke", Signal.OUTPUT);
   public Signal stopAll = new Signal("stopAll", Signal.OUTPUT);
   public Signal sirenONOFF_E = new Signal("sirenONOFF_E", Signal.OUTPUT);
-  private int S217472 = 1;
-  private int S217462 = 1;
-  private int S217470 = 1;
+  private int S198570 = 1;
+  private int S198560 = 1;
+  private int S198568 = 1;
   
   private int[] ends = new int[54];
   private int[] tdone = new int[54];
   
-  public void thread217603(int [] tdone, int [] ends){
-        switch(S217470){
+  public void thread198701(int [] tdone, int [] ends){
+        switch(S198568){
       case 0 : 
         active[53]=0;
         ends[53]=0;
@@ -49,8 +49,8 @@ public class ECS_SmokePlant extends ClockDomain{
     }
   }
 
-  public void thread217602(int [] tdone, int [] ends){
-        switch(S217462){
+  public void thread198700(int [] tdone, int [] ends){
+        switch(S198560){
       case 0 : 
         active[52]=0;
         ends[52]=0;
@@ -76,8 +76,8 @@ public class ECS_SmokePlant extends ClockDomain{
     }
   }
 
-  public void thread217600(int [] tdone, int [] ends){
-        S217470=1;
+  public void thread198698(int [] tdone, int [] ends){
+        S198568=1;
     if(sirenONOFF.getprestatus()){//sysj\ECS_plant.sysj line: 324, column: 28
       sirenONOFF_E.setPresent();//sysj\ECS_plant.sysj line: 324, column: 40
       currsigs.addElement(sirenONOFF_E);
@@ -92,8 +92,8 @@ public class ECS_SmokePlant extends ClockDomain{
     }
   }
 
-  public void thread217599(int [] tdone, int [] ends){
-        S217462=1;
+  public void thread198697(int [] tdone, int [] ends){
+        S198560=1;
     if(sirenONOFF.getprestatus()){//sysj\ECS_plant.sysj line: 314, column: 13
       stopAll.setPresent();//sysj\ECS_plant.sysj line: 316, column: 6
       currsigs.addElement(stopAll);
@@ -116,50 +116,50 @@ public class ECS_SmokePlant extends ClockDomain{
     }
     
     RUN: while(true){
-      switch(S217472){
+      switch(S198570){
         case 0 : 
-          S217472=0;
+          S198570=0;
           break RUN;
         
         case 1 : 
-          S217472=2;
-          S217472=2;
-          thread217599(tdone,ends);
-          thread217600(tdone,ends);
-          int biggest217601 = 0;
-          if(ends[52]>=biggest217601){
-            biggest217601=ends[52];
+          S198570=2;
+          S198570=2;
+          thread198697(tdone,ends);
+          thread198698(tdone,ends);
+          int biggest198699 = 0;
+          if(ends[52]>=biggest198699){
+            biggest198699=ends[52];
           }
-          if(ends[53]>=biggest217601){
-            biggest217601=ends[53];
+          if(ends[53]>=biggest198699){
+            biggest198699=ends[53];
           }
-          if(biggest217601 == 1){
+          if(biggest198699 == 1){
             active[51]=1;
             ends[51]=1;
             break RUN;
           }
         
         case 2 : 
-          thread217602(tdone,ends);
-          thread217603(tdone,ends);
-          int biggest217604 = 0;
-          if(ends[52]>=biggest217604){
-            biggest217604=ends[52];
+          thread198700(tdone,ends);
+          thread198701(tdone,ends);
+          int biggest198702 = 0;
+          if(ends[52]>=biggest198702){
+            biggest198702=ends[52];
           }
-          if(ends[53]>=biggest217604){
-            biggest217604=ends[53];
+          if(ends[53]>=biggest198702){
+            biggest198702=ends[53];
           }
-          if(biggest217604 == 1){
+          if(biggest198702 == 1){
             active[51]=1;
             ends[51]=1;
             break RUN;
           }
           //FINXME code
-          if(biggest217604 == 0){
-            S217472=0;
+          if(biggest198702 == 0){
+            S198570=0;
             active[51]=0;
             ends[51]=0;
-            S217472=0;
+            S198570=0;
             break RUN;
           }
         

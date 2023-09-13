@@ -14,7 +14,7 @@ public class ECS_SmokeController extends ClockDomain{
   public Signal detectSmoke = new Signal("detectSmoke", Signal.INPUT);
   public Signal stopAll = new Signal("stopAll", Signal.INPUT);
   public Signal sirenONOFF = new Signal("sirenONOFF", Signal.OUTPUT);
-  private int S214998 = 1;
+  private int S196096 = 1;
   
   private int[] ends = new int[66];
   private int[] tdone = new int[66];
@@ -26,14 +26,14 @@ public class ECS_SmokeController extends ClockDomain{
     }
     
     RUN: while(true){
-      switch(S214998){
+      switch(S196096){
         case 0 : 
-          S214998=0;
+          S196096=0;
           break RUN;
         
         case 1 : 
-          S214998=2;
-          S214998=2;
+          S196096=2;
+          S196096=2;
           if(detectSmoke.getprestatus()){//sysj\ECS.sysj line: 421, column: 11
             sirenONOFF.setPresent();//sysj\ECS.sysj line: 423, column: 4
             currsigs.addElement(sirenONOFF);
