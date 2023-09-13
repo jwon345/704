@@ -366,7 +366,7 @@ RotaryController(
 					loop{
 						receive checkOne;
 						if((Boolean)#checkOne)
-    		            	System.out.println(#checkOne);
+							emit bottleAtPos1;
 
 						pause;
 					}	
