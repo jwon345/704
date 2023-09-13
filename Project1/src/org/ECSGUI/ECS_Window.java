@@ -165,13 +165,7 @@ public class ECS_Window extends JFrame {
 	    zone1OccupancyPanel.add(new JLabel("Occupancy (People): "));
 	    zone1OccupancyPanel.add(occupancy1Spinner);
 
-	    // Light Intensity Spinner
-	    SpinnerNumberModel lightIntensity1Model = new SpinnerNumberModel(49, 0, 100, 1);
-	    JSpinner lightIntensity1Spinner = new JSpinner(lightIntensity1Model);
-	    SignalSpinner_BClient lightIntensity1Client = new SignalSpinner_BClient(Ports.PORT_ECS_LIGHTING_CONTROLLER, Ports.zoneOneLightingI);
-	    lightIntensity1Spinner.addChangeListener(lightIntensity1Client);
-	    zone1OccupancyPanel.add(new JLabel("Light Intensity (%) : "));
-	    zone1OccupancyPanel.add(lightIntensity1Spinner);
+
 
 	    c.gridx = 1;
 	    c.gridy = 1;
@@ -190,12 +184,7 @@ public class ECS_Window extends JFrame {
 	    zone2OccupancyPanel.add(occupancy2Spinner);
 	    
 	    
-	    SpinnerNumberModel lightIntensity2Model = new SpinnerNumberModel(49, 0, 100, 1);
-	    JSpinner lightIntensity2Spinner = new JSpinner(lightIntensity2Model);
-	    SignalSpinner_BClient lightIntensity2Client = new SignalSpinner_BClient(Ports.PORT_ECS_LIGHTING_CONTROLLER, Ports.zoneTwoLightingI);
-	    lightIntensity2Spinner.addChangeListener(lightIntensity2Client);
-	    zone2OccupancyPanel.add(new JLabel("Light Intensity (%) : "));
-	    zone2OccupancyPanel.add(lightIntensity2Spinner);
+
 	    c.gridx = 1;
 	    c.gridy = 2;
 	    add(zone2OccupancyPanel, c);
@@ -213,12 +202,7 @@ public class ECS_Window extends JFrame {
 	    zone3OccupancyPanel.add(occupancy3Spinner);
 	    
 	    
-	    SpinnerNumberModel lightIntensity3Model = new SpinnerNumberModel(49, 0, 100, 1);
-	    JSpinner lightIntensity3Spinner = new JSpinner(lightIntensity3Model);
-	    SignalSpinner_BClient lightIntensity3Client = new SignalSpinner_BClient(Ports.PORT_ECS_LIGHTING_CONTROLLER, Ports.zoneThreeLightingI);
-	    lightIntensity3Spinner.addChangeListener(lightIntensity3Client);
-	    zone3OccupancyPanel.add(new JLabel("Light Intensity (%) : "));
-	    zone3OccupancyPanel.add(lightIntensity3Spinner);
+
 	    c.gridx = 1;
 	    c.gridy = 3;
 	    add(zone3OccupancyPanel, c);
@@ -235,12 +219,7 @@ public class ECS_Window extends JFrame {
 	    zone4OccupancyPanel.add(new JLabel("Occupancy (People): "));
 	    zone4OccupancyPanel.add(occupancy4Spinner);
 	    
-	    SpinnerNumberModel lightIntensity4Model = new SpinnerNumberModel(49, 0, 100, 1);
-	    JSpinner lightIntensity4Spinner = new JSpinner(lightIntensity4Model);
-	    SignalSpinner_BClient lightIntensity4Client = new SignalSpinner_BClient(Ports.PORT_ECS_LIGHTING_CONTROLLER, Ports.zoneFourLightingI);
-	    lightIntensity4Spinner.addChangeListener(lightIntensity4Client);
-	    zone4OccupancyPanel.add(new JLabel("Light Intensity (%) : "));
-	    zone4OccupancyPanel.add(lightIntensity4Spinner);
+
 	    c.gridx = 2;
 	    c.gridy = 0;
 	    add(zone4OccupancyPanel, c);
@@ -257,12 +236,7 @@ public class ECS_Window extends JFrame {
 	    SignalSpinner_BClient occupancy5Client = new SignalSpinner_BClient(Ports.PORT_ECS_LIGHTING_CONTROLLER, Ports.zoneFiveOccupancy);
 	    occupancy5Spinner.addChangeListener(occupancy5Client);
 	    
-	    SpinnerNumberModel lightIntensity5Model = new SpinnerNumberModel(49, 0, 100, 1);
-	    JSpinner lightIntensity5Spinner = new JSpinner(lightIntensity5Model);
-	    SignalSpinner_BClient lightIntensity5Client = new SignalSpinner_BClient(Ports.PORT_ECS_LIGHTING_CONTROLLER, Ports.zoneFiveLightingI);
-	    lightIntensity5Spinner.addChangeListener(lightIntensity5Client);
-	    zone5OccupancyPanel.add(new JLabel("Light Intensity (%) : "));
-	    zone5OccupancyPanel.add(lightIntensity5Spinner);
+
 	    c.gridx = 2;
 	    c.gridy = 1;
 	    add(zone5OccupancyPanel, c);
@@ -279,12 +253,7 @@ public class ECS_Window extends JFrame {
 	    zone6OccupancyPanel.add(new JLabel("Occupancy (People): "));
 	    zone6OccupancyPanel.add(occupancy6Spinner);
 	    
-	    SpinnerNumberModel lightIntensity6Model = new SpinnerNumberModel(49, 0, 100, 1);
-	    JSpinner lightIntensity6Spinner = new JSpinner(lightIntensity6Model);
-	    SignalSpinner_BClient lightIntensity6Client = new SignalSpinner_BClient(Ports.PORT_ECS_LIGHTING_CONTROLLER, Ports.zoneSixLightingI);
-	    lightIntensity6Spinner.addChangeListener(lightIntensity6Client);
-	    zone6OccupancyPanel.add(new JLabel("Light Intensity (%) : "));
-	    zone6OccupancyPanel.add(lightIntensity6Spinner);
+
 	    c.gridx = 2;
 	    c.gridy = 2;
 	    add(zone6OccupancyPanel, c);
@@ -306,12 +275,7 @@ public class ECS_Window extends JFrame {
 	    zone7OccupancyPanel.add(new JLabel("Occupancy (People): "));
 	    zone7OccupancyPanel.add(occupancy7Spinner);
 	    
-	    SpinnerNumberModel lightIntensity7Model = new SpinnerNumberModel(49, 0, 100, 1);
-	    JSpinner lightIntensity7Spinner = new JSpinner(lightIntensity7Model);
-	    SignalSpinner_BClient lightIntensity7Client = new SignalSpinner_BClient(Ports.PORT_ECS_LIGHTING_CONTROLLER, Ports.zoneSevenLightingI);
-	    lightIntensity7Spinner.addChangeListener(lightIntensity7Client);
-	    zone7OccupancyPanel.add(new JLabel("Light Intensity (%) : "));
-	    zone7OccupancyPanel.add(lightIntensity7Spinner);
+	
 	    c.gridx = 2;
 	    c.gridy = 3;
 	    add(zone7OccupancyPanel, c);
