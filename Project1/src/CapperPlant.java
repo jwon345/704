@@ -4,6 +4,7 @@ import com.systemj.Signal;
 import com.systemj.input_Channel;
 import com.systemj.output_Channel;
 import run.GUI;//sysj\conveyor_plant.sysj line: 1, column: 1
+import run.socketListener;//sysj\conveyor_plant.sysj line: 2, column: 1
 
 public class CapperPlant extends ClockDomain{
   public CapperPlant(String name){super(name);}
@@ -30,7 +31,7 @@ public class CapperPlant extends ClockDomain{
   public Signal gripperZAxisLiftedE = new Signal("gripperZAxisLiftedE", Signal.OUTPUT);
   public Signal gripperTurnHomePosE = new Signal("gripperTurnHomePosE", Signal.OUTPUT);
   public Signal gripperTurnFinalPosE = new Signal("gripperTurnFinalPosE", Signal.OUTPUT);
-  private long __start_thread_24;//sysj\conveyor_plant.sysj line: 139, column: 7
+  private long __start_thread_24;//sysj\conveyor_plant.sysj line: 140, column: 7
   private int S214054 = 1;
   private int S213977 = 1;
   private int S213697 = 1;
@@ -57,8 +58,8 @@ public class CapperPlant extends ClockDomain{
         break;
       
       case 1 : 
-        if(gripperTurnFinalPos.getprestatus()){//sysj\conveyor_plant.sysj line: 189, column: 35
-          gripperTurnFinalPosE.setPresent();//sysj\conveyor_plant.sysj line: 189, column: 56
+        if(gripperTurnFinalPos.getprestatus()){//sysj\conveyor_plant.sysj line: 190, column: 35
+          gripperTurnFinalPosE.setPresent();//sysj\conveyor_plant.sysj line: 190, column: 56
           currsigs.addElement(gripperTurnFinalPosE);
           active[35]=1;
           ends[35]=1;
@@ -83,8 +84,8 @@ public class CapperPlant extends ClockDomain{
         break;
       
       case 1 : 
-        if(gripperTurnHomePos.getprestatus()){//sysj\conveyor_plant.sysj line: 187, column: 35
-          gripperTurnHomePosE.setPresent();//sysj\conveyor_plant.sysj line: 187, column: 55
+        if(gripperTurnHomePos.getprestatus()){//sysj\conveyor_plant.sysj line: 188, column: 35
+          gripperTurnHomePosE.setPresent();//sysj\conveyor_plant.sysj line: 188, column: 55
           currsigs.addElement(gripperTurnHomePosE);
           active[34]=1;
           ends[34]=1;
@@ -109,8 +110,8 @@ public class CapperPlant extends ClockDomain{
         break;
       
       case 1 : 
-        if(gripperZAxisLifted.getprestatus()){//sysj\conveyor_plant.sysj line: 185, column: 35
-          gripperZAxisLiftedE.setPresent();//sysj\conveyor_plant.sysj line: 185, column: 55
+        if(gripperZAxisLifted.getprestatus()){//sysj\conveyor_plant.sysj line: 186, column: 35
+          gripperZAxisLiftedE.setPresent();//sysj\conveyor_plant.sysj line: 186, column: 55
           currsigs.addElement(gripperZAxisLiftedE);
           active[33]=1;
           ends[33]=1;
@@ -135,8 +136,8 @@ public class CapperPlant extends ClockDomain{
         break;
       
       case 1 : 
-        if(gripperZAxisLowered.getprestatus()){//sysj\conveyor_plant.sysj line: 183, column: 35
-          gripperZAxisLoweredE.setPresent();//sysj\conveyor_plant.sysj line: 183, column: 56
+        if(gripperZAxisLowered.getprestatus()){//sysj\conveyor_plant.sysj line: 184, column: 35
+          gripperZAxisLoweredE.setPresent();//sysj\conveyor_plant.sysj line: 184, column: 56
           currsigs.addElement(gripperZAxisLoweredE);
           active[32]=1;
           ends[32]=1;
@@ -161,8 +162,8 @@ public class CapperPlant extends ClockDomain{
         break;
       
       case 1 : 
-        if(cylClampBottleExtend.getprestatus()){//sysj\conveyor_plant.sysj line: 181, column: 35
-          cylClampBottleExtendE.setPresent();//sysj\conveyor_plant.sysj line: 181, column: 57
+        if(cylClampBottleExtend.getprestatus()){//sysj\conveyor_plant.sysj line: 182, column: 35
+          cylClampBottleExtendE.setPresent();//sysj\conveyor_plant.sysj line: 182, column: 57
           currsigs.addElement(cylClampBottleExtendE);
           active[31]=1;
           ends[31]=1;
@@ -187,8 +188,8 @@ public class CapperPlant extends ClockDomain{
         break;
       
       case 1 : 
-        if(capGripperPos5Extend.getprestatus()){//sysj\conveyor_plant.sysj line: 179, column: 35
-          capGripperPos5ExtendE.setPresent();//sysj\conveyor_plant.sysj line: 179, column: 57
+        if(capGripperPos5Extend.getprestatus()){//sysj\conveyor_plant.sysj line: 180, column: 35
+          capGripperPos5ExtendE.setPresent();//sysj\conveyor_plant.sysj line: 180, column: 57
           currsigs.addElement(capGripperPos5ExtendE);
           active[30]=1;
           ends[30]=1;
@@ -213,8 +214,8 @@ public class CapperPlant extends ClockDomain{
         break;
       
       case 1 : 
-        if(gripperTurnExtend.getprestatus()){//sysj\conveyor_plant.sysj line: 177, column: 35
-          gripperTurnExtendE.setPresent();//sysj\conveyor_plant.sysj line: 177, column: 54
+        if(gripperTurnExtend.getprestatus()){//sysj\conveyor_plant.sysj line: 178, column: 35
+          gripperTurnExtendE.setPresent();//sysj\conveyor_plant.sysj line: 178, column: 54
           currsigs.addElement(gripperTurnExtendE);
           active[29]=1;
           ends[29]=1;
@@ -239,8 +240,8 @@ public class CapperPlant extends ClockDomain{
         break;
       
       case 1 : 
-        if(gripperTurnRetract.getprestatus()){//sysj\conveyor_plant.sysj line: 175, column: 35
-          gripperTurnRetractE.setPresent();//sysj\conveyor_plant.sysj line: 175, column: 55
+        if(gripperTurnRetract.getprestatus()){//sysj\conveyor_plant.sysj line: 176, column: 35
+          gripperTurnRetractE.setPresent();//sysj\conveyor_plant.sysj line: 176, column: 55
           currsigs.addElement(gripperTurnRetractE);
           active[28]=1;
           ends[28]=1;
@@ -265,8 +266,8 @@ public class CapperPlant extends ClockDomain{
         break;
       
       case 1 : 
-        if(cylPos5ZaxisExtend.getprestatus()){//sysj\conveyor_plant.sysj line: 173, column: 35
-          cylPos5ZaxisExtendE.setPresent();//sysj\conveyor_plant.sysj line: 173, column: 55
+        if(cylPos5ZaxisExtend.getprestatus()){//sysj\conveyor_plant.sysj line: 174, column: 35
+          cylPos5ZaxisExtendE.setPresent();//sysj\conveyor_plant.sysj line: 174, column: 55
           currsigs.addElement(cylPos5ZaxisExtendE);
           active[27]=1;
           ends[27]=1;
@@ -362,14 +363,14 @@ public class CapperPlant extends ClockDomain{
       case 1 : 
         switch(S213697){
           case 0 : 
-            if(gripperTurnRetract.getprestatus()){//sysj\conveyor_plant.sysj line: 142, column: 15
+            if(gripperTurnRetract.getprestatus()){//sysj\conveyor_plant.sysj line: 143, column: 15
               S213697=1;
               active[24]=1;
               ends[24]=1;
               tdone[24]=1;
             }
             else {
-              gripperZAxisLifted.setPresent();//sysj\conveyor_plant.sysj line: 144, column: 10
+              gripperZAxisLifted.setPresent();//sysj\conveyor_plant.sysj line: 145, column: 10
               currsigs.addElement(gripperZAxisLifted);
               active[24]=1;
               ends[24]=1;
@@ -378,13 +379,13 @@ public class CapperPlant extends ClockDomain{
             break;
           
           case 1 : 
-            if(gripperTurnRetract.getprestatus()){//sysj\conveyor_plant.sysj line: 147, column: 16
+            if(gripperTurnRetract.getprestatus()){//sysj\conveyor_plant.sysj line: 148, column: 16
               S213697=2;
-              __start_thread_24 = com.systemj.Timer.getMs();//sysj\conveyor_plant.sysj line: 139, column: 7
-              if(com.systemj.Timer.getMs() - __start_thread_24 >= (1) * 1000){//sysj\conveyor_plant.sysj line: 139, column: 7
+              __start_thread_24 = com.systemj.Timer.getMs();//sysj\conveyor_plant.sysj line: 140, column: 7
+              if(com.systemj.Timer.getMs() - __start_thread_24 >= (1) * 1000){//sysj\conveyor_plant.sysj line: 140, column: 7
                 ends[24]=2;
-                ;//sysj\conveyor_plant.sysj line: 139, column: 7
-                gripperTurnHomePos.setPresent();//sysj\conveyor_plant.sysj line: 149, column: 9
+                ;//sysj\conveyor_plant.sysj line: 140, column: 7
+                gripperTurnHomePos.setPresent();//sysj\conveyor_plant.sysj line: 150, column: 9
                 currsigs.addElement(gripperTurnHomePos);
                 S213697=3;
                 active[24]=1;
@@ -405,10 +406,10 @@ public class CapperPlant extends ClockDomain{
             break;
           
           case 2 : 
-            if(com.systemj.Timer.getMs() - __start_thread_24 >= (1) * 1000){//sysj\conveyor_plant.sysj line: 139, column: 7
+            if(com.systemj.Timer.getMs() - __start_thread_24 >= (1) * 1000){//sysj\conveyor_plant.sysj line: 140, column: 7
               ends[24]=2;
-              ;//sysj\conveyor_plant.sysj line: 139, column: 7
-              gripperTurnHomePos.setPresent();//sysj\conveyor_plant.sysj line: 149, column: 9
+              ;//sysj\conveyor_plant.sysj line: 140, column: 7
+              gripperTurnHomePos.setPresent();//sysj\conveyor_plant.sysj line: 150, column: 9
               currsigs.addElement(gripperTurnHomePos);
               S213697=3;
               active[24]=1;
@@ -431,13 +432,13 @@ public class CapperPlant extends ClockDomain{
             break;
           
           case 4 : 
-            if(cylPos5ZaxisExtend.getprestatus()){//sysj\conveyor_plant.sysj line: 152, column: 16
+            if(cylPos5ZaxisExtend.getprestatus()){//sysj\conveyor_plant.sysj line: 153, column: 16
               S213697=5;
-              __start_thread_24 = com.systemj.Timer.getMs();//sysj\conveyor_plant.sysj line: 139, column: 7
-              if(com.systemj.Timer.getMs() - __start_thread_24 >= (1) * 1000){//sysj\conveyor_plant.sysj line: 139, column: 7
+              __start_thread_24 = com.systemj.Timer.getMs();//sysj\conveyor_plant.sysj line: 140, column: 7
+              if(com.systemj.Timer.getMs() - __start_thread_24 >= (1) * 1000){//sysj\conveyor_plant.sysj line: 140, column: 7
                 ends[24]=2;
-                ;//sysj\conveyor_plant.sysj line: 139, column: 7
-                gripperZAxisLowered.setPresent();//sysj\conveyor_plant.sysj line: 154, column: 9
+                ;//sysj\conveyor_plant.sysj line: 140, column: 7
+                gripperZAxisLowered.setPresent();//sysj\conveyor_plant.sysj line: 155, column: 9
                 currsigs.addElement(gripperZAxisLowered);
                 S213697=6;
                 active[24]=1;
@@ -458,10 +459,10 @@ public class CapperPlant extends ClockDomain{
             break;
           
           case 5 : 
-            if(com.systemj.Timer.getMs() - __start_thread_24 >= (1) * 1000){//sysj\conveyor_plant.sysj line: 139, column: 7
+            if(com.systemj.Timer.getMs() - __start_thread_24 >= (1) * 1000){//sysj\conveyor_plant.sysj line: 140, column: 7
               ends[24]=2;
-              ;//sysj\conveyor_plant.sysj line: 139, column: 7
-              gripperZAxisLowered.setPresent();//sysj\conveyor_plant.sysj line: 154, column: 9
+              ;//sysj\conveyor_plant.sysj line: 140, column: 7
+              gripperZAxisLowered.setPresent();//sysj\conveyor_plant.sysj line: 155, column: 9
               currsigs.addElement(gripperZAxisLowered);
               S213697=6;
               active[24]=1;
@@ -484,13 +485,13 @@ public class CapperPlant extends ClockDomain{
             break;
           
           case 7 : 
-            if(gripperTurnExtend.getprestatus()){//sysj\conveyor_plant.sysj line: 157, column: 16
+            if(gripperTurnExtend.getprestatus()){//sysj\conveyor_plant.sysj line: 158, column: 16
               S213697=8;
-              __start_thread_24 = com.systemj.Timer.getMs();//sysj\conveyor_plant.sysj line: 139, column: 7
-              if(com.systemj.Timer.getMs() - __start_thread_24 >= (1) * 1000){//sysj\conveyor_plant.sysj line: 139, column: 7
+              __start_thread_24 = com.systemj.Timer.getMs();//sysj\conveyor_plant.sysj line: 140, column: 7
+              if(com.systemj.Timer.getMs() - __start_thread_24 >= (1) * 1000){//sysj\conveyor_plant.sysj line: 140, column: 7
                 ends[24]=2;
-                ;//sysj\conveyor_plant.sysj line: 139, column: 7
-                gripperTurnFinalPos.setPresent();//sysj\conveyor_plant.sysj line: 159, column: 9
+                ;//sysj\conveyor_plant.sysj line: 140, column: 7
+                gripperTurnFinalPos.setPresent();//sysj\conveyor_plant.sysj line: 160, column: 9
                 currsigs.addElement(gripperTurnFinalPos);
                 S213697=9;
                 active[24]=1;
@@ -511,10 +512,10 @@ public class CapperPlant extends ClockDomain{
             break;
           
           case 8 : 
-            if(com.systemj.Timer.getMs() - __start_thread_24 >= (1) * 1000){//sysj\conveyor_plant.sysj line: 139, column: 7
+            if(com.systemj.Timer.getMs() - __start_thread_24 >= (1) * 1000){//sysj\conveyor_plant.sysj line: 140, column: 7
               ends[24]=2;
-              ;//sysj\conveyor_plant.sysj line: 139, column: 7
-              gripperTurnFinalPos.setPresent();//sysj\conveyor_plant.sysj line: 159, column: 9
+              ;//sysj\conveyor_plant.sysj line: 140, column: 7
+              gripperTurnFinalPos.setPresent();//sysj\conveyor_plant.sysj line: 160, column: 9
               currsigs.addElement(gripperTurnFinalPos);
               S213697=9;
               active[24]=1;
@@ -530,10 +531,10 @@ public class CapperPlant extends ClockDomain{
           
           case 9 : 
             S213697=9;
-            gripperZAxisLifted.setPresent();//sysj\conveyor_plant.sysj line: 163, column: 9
+            gripperZAxisLifted.setPresent();//sysj\conveyor_plant.sysj line: 164, column: 9
             currsigs.addElement(gripperZAxisLifted);
             S213697=0;
-            gripperZAxisLifted.setPresent();//sysj\conveyor_plant.sysj line: 144, column: 10
+            gripperZAxisLifted.setPresent();//sysj\conveyor_plant.sysj line: 145, column: 10
             currsigs.addElement(gripperZAxisLifted);
             active[24]=1;
             ends[24]=1;
@@ -548,8 +549,8 @@ public class CapperPlant extends ClockDomain{
 
   public void thread214786(int [] tdone, int [] ends){
         S214050=1;
-    if(gripperTurnFinalPos.getprestatus()){//sysj\conveyor_plant.sysj line: 189, column: 35
-      gripperTurnFinalPosE.setPresent();//sysj\conveyor_plant.sysj line: 189, column: 56
+    if(gripperTurnFinalPos.getprestatus()){//sysj\conveyor_plant.sysj line: 190, column: 35
+      gripperTurnFinalPosE.setPresent();//sysj\conveyor_plant.sysj line: 190, column: 56
       currsigs.addElement(gripperTurnFinalPosE);
       active[35]=1;
       ends[35]=1;
@@ -564,8 +565,8 @@ public class CapperPlant extends ClockDomain{
 
   public void thread214785(int [] tdone, int [] ends){
         S214042=1;
-    if(gripperTurnHomePos.getprestatus()){//sysj\conveyor_plant.sysj line: 187, column: 35
-      gripperTurnHomePosE.setPresent();//sysj\conveyor_plant.sysj line: 187, column: 55
+    if(gripperTurnHomePos.getprestatus()){//sysj\conveyor_plant.sysj line: 188, column: 35
+      gripperTurnHomePosE.setPresent();//sysj\conveyor_plant.sysj line: 188, column: 55
       currsigs.addElement(gripperTurnHomePosE);
       active[34]=1;
       ends[34]=1;
@@ -580,8 +581,8 @@ public class CapperPlant extends ClockDomain{
 
   public void thread214784(int [] tdone, int [] ends){
         S214034=1;
-    if(gripperZAxisLifted.getprestatus()){//sysj\conveyor_plant.sysj line: 185, column: 35
-      gripperZAxisLiftedE.setPresent();//sysj\conveyor_plant.sysj line: 185, column: 55
+    if(gripperZAxisLifted.getprestatus()){//sysj\conveyor_plant.sysj line: 186, column: 35
+      gripperZAxisLiftedE.setPresent();//sysj\conveyor_plant.sysj line: 186, column: 55
       currsigs.addElement(gripperZAxisLiftedE);
       active[33]=1;
       ends[33]=1;
@@ -596,8 +597,8 @@ public class CapperPlant extends ClockDomain{
 
   public void thread214783(int [] tdone, int [] ends){
         S214026=1;
-    if(gripperZAxisLowered.getprestatus()){//sysj\conveyor_plant.sysj line: 183, column: 35
-      gripperZAxisLoweredE.setPresent();//sysj\conveyor_plant.sysj line: 183, column: 56
+    if(gripperZAxisLowered.getprestatus()){//sysj\conveyor_plant.sysj line: 184, column: 35
+      gripperZAxisLoweredE.setPresent();//sysj\conveyor_plant.sysj line: 184, column: 56
       currsigs.addElement(gripperZAxisLoweredE);
       active[32]=1;
       ends[32]=1;
@@ -612,8 +613,8 @@ public class CapperPlant extends ClockDomain{
 
   public void thread214782(int [] tdone, int [] ends){
         S214018=1;
-    if(cylClampBottleExtend.getprestatus()){//sysj\conveyor_plant.sysj line: 181, column: 35
-      cylClampBottleExtendE.setPresent();//sysj\conveyor_plant.sysj line: 181, column: 57
+    if(cylClampBottleExtend.getprestatus()){//sysj\conveyor_plant.sysj line: 182, column: 35
+      cylClampBottleExtendE.setPresent();//sysj\conveyor_plant.sysj line: 182, column: 57
       currsigs.addElement(cylClampBottleExtendE);
       active[31]=1;
       ends[31]=1;
@@ -628,8 +629,8 @@ public class CapperPlant extends ClockDomain{
 
   public void thread214781(int [] tdone, int [] ends){
         S214010=1;
-    if(capGripperPos5Extend.getprestatus()){//sysj\conveyor_plant.sysj line: 179, column: 35
-      capGripperPos5ExtendE.setPresent();//sysj\conveyor_plant.sysj line: 179, column: 57
+    if(capGripperPos5Extend.getprestatus()){//sysj\conveyor_plant.sysj line: 180, column: 35
+      capGripperPos5ExtendE.setPresent();//sysj\conveyor_plant.sysj line: 180, column: 57
       currsigs.addElement(capGripperPos5ExtendE);
       active[30]=1;
       ends[30]=1;
@@ -644,8 +645,8 @@ public class CapperPlant extends ClockDomain{
 
   public void thread214780(int [] tdone, int [] ends){
         S214002=1;
-    if(gripperTurnExtend.getprestatus()){//sysj\conveyor_plant.sysj line: 177, column: 35
-      gripperTurnExtendE.setPresent();//sysj\conveyor_plant.sysj line: 177, column: 54
+    if(gripperTurnExtend.getprestatus()){//sysj\conveyor_plant.sysj line: 178, column: 35
+      gripperTurnExtendE.setPresent();//sysj\conveyor_plant.sysj line: 178, column: 54
       currsigs.addElement(gripperTurnExtendE);
       active[29]=1;
       ends[29]=1;
@@ -660,8 +661,8 @@ public class CapperPlant extends ClockDomain{
 
   public void thread214779(int [] tdone, int [] ends){
         S213994=1;
-    if(gripperTurnRetract.getprestatus()){//sysj\conveyor_plant.sysj line: 175, column: 35
-      gripperTurnRetractE.setPresent();//sysj\conveyor_plant.sysj line: 175, column: 55
+    if(gripperTurnRetract.getprestatus()){//sysj\conveyor_plant.sysj line: 176, column: 35
+      gripperTurnRetractE.setPresent();//sysj\conveyor_plant.sysj line: 176, column: 55
       currsigs.addElement(gripperTurnRetractE);
       active[28]=1;
       ends[28]=1;
@@ -676,8 +677,8 @@ public class CapperPlant extends ClockDomain{
 
   public void thread214778(int [] tdone, int [] ends){
         S213986=1;
-    if(cylPos5ZaxisExtend.getprestatus()){//sysj\conveyor_plant.sysj line: 173, column: 35
-      cylPos5ZaxisExtendE.setPresent();//sysj\conveyor_plant.sysj line: 173, column: 55
+    if(cylPos5ZaxisExtend.getprestatus()){//sysj\conveyor_plant.sysj line: 174, column: 35
+      cylPos5ZaxisExtendE.setPresent();//sysj\conveyor_plant.sysj line: 174, column: 55
       currsigs.addElement(cylPos5ZaxisExtendE);
       active[27]=1;
       ends[27]=1;
@@ -745,7 +746,7 @@ public class CapperPlant extends ClockDomain{
   public void thread214775(int [] tdone, int [] ends){
         S213977=1;
     S213697=0;
-    gripperZAxisLifted.setPresent();//sysj\conveyor_plant.sysj line: 144, column: 10
+    gripperZAxisLifted.setPresent();//sysj\conveyor_plant.sysj line: 145, column: 10
     currsigs.addElement(gripperZAxisLifted);
     active[24]=1;
     ends[24]=1;

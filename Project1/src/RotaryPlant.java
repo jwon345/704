@@ -4,6 +4,7 @@ import com.systemj.Signal;
 import com.systemj.input_Channel;
 import com.systemj.output_Channel;
 import run.GUI;//sysj\conveyor_plant.sysj line: 1, column: 1
+import run.socketListener;//sysj\conveyor_plant.sysj line: 2, column: 1
 
 public class RotaryPlant extends ClockDomain{
   public RotaryPlant(String name){super(name);}
@@ -37,8 +38,8 @@ public class RotaryPlant extends ClockDomain{
         break;
       
       case 1 : 
-        if(capOnBottleAtPos1.getprestatus()){//sysj\conveyor_plant.sysj line: 75, column: 31
-          capOnBottleAtPos1E.setPresent();//sysj\conveyor_plant.sysj line: 75, column: 50
+        if(capOnBottleAtPos1.getprestatus()){//sysj\conveyor_plant.sysj line: 76, column: 31
+          capOnBottleAtPos1E.setPresent();//sysj\conveyor_plant.sysj line: 76, column: 50
           currsigs.addElement(capOnBottleAtPos1E);
           active[13]=1;
           ends[13]=1;
@@ -63,8 +64,8 @@ public class RotaryPlant extends ClockDomain{
         break;
       
       case 1 : 
-        if(tableAlignedWithSensor.getprestatus()){//sysj\conveyor_plant.sysj line: 73, column: 31
-          tableAlignedWithSensorE.setPresent();//sysj\conveyor_plant.sysj line: 73, column: 55
+        if(tableAlignedWithSensor.getprestatus()){//sysj\conveyor_plant.sysj line: 74, column: 31
+          tableAlignedWithSensorE.setPresent();//sysj\conveyor_plant.sysj line: 74, column: 55
           currsigs.addElement(tableAlignedWithSensorE);
           active[12]=1;
           ends[12]=1;
@@ -126,10 +127,10 @@ public class RotaryPlant extends ClockDomain{
       case 1 : 
         switch(S213421){
           case 0 : 
-            if(rotaryTableTrigger.getprestatus()){//sysj\conveyor_plant.sysj line: 65, column: 11
-              tableAlignedWithSensor.setPresent();//sysj\conveyor_plant.sysj line: 66, column: 5
+            if(rotaryTableTrigger.getprestatus()){//sysj\conveyor_plant.sysj line: 66, column: 11
+              tableAlignedWithSensor.setPresent();//sysj\conveyor_plant.sysj line: 67, column: 5
               currsigs.addElement(tableAlignedWithSensor);
-              System.out.println("*Recieved*");//sysj\conveyor_plant.sysj line: 67, column: 14
+              System.out.println("*Recieved*");//sysj\conveyor_plant.sysj line: 68, column: 14
               S213421=1;
               active[10]=1;
               ends[10]=1;
@@ -158,8 +159,8 @@ public class RotaryPlant extends ClockDomain{
 
   public void thread214746(int [] tdone, int [] ends){
         S213443=1;
-    if(capOnBottleAtPos1.getprestatus()){//sysj\conveyor_plant.sysj line: 75, column: 31
-      capOnBottleAtPos1E.setPresent();//sysj\conveyor_plant.sysj line: 75, column: 50
+    if(capOnBottleAtPos1.getprestatus()){//sysj\conveyor_plant.sysj line: 76, column: 31
+      capOnBottleAtPos1E.setPresent();//sysj\conveyor_plant.sysj line: 76, column: 50
       currsigs.addElement(capOnBottleAtPos1E);
       active[13]=1;
       ends[13]=1;
@@ -174,8 +175,8 @@ public class RotaryPlant extends ClockDomain{
 
   public void thread214745(int [] tdone, int [] ends){
         S213435=1;
-    if(tableAlignedWithSensor.getprestatus()){//sysj\conveyor_plant.sysj line: 73, column: 31
-      tableAlignedWithSensorE.setPresent();//sysj\conveyor_plant.sysj line: 73, column: 55
+    if(tableAlignedWithSensor.getprestatus()){//sysj\conveyor_plant.sysj line: 74, column: 31
+      tableAlignedWithSensorE.setPresent();//sysj\conveyor_plant.sysj line: 74, column: 55
       currsigs.addElement(tableAlignedWithSensorE);
       active[12]=1;
       ends[12]=1;
