@@ -1,14 +1,6 @@
 
 public class helperClass {
 
-	public static void dothis()
-	{
-		for (int a =0; a < 10; a++)
-		{
-			System.out.println("hi" + a);
-		}
-	}
-	
 	  public static int[] parseString(String fileReadString)
 	    {
 	        int[] b = {0,0,0,0};
