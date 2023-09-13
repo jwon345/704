@@ -366,7 +366,6 @@ RotaryController(
 					loop{
 						receive checkOne;
 						if((Boolean)#checkOne)
-							emit bottleAtPos1;
     		            	System.out.println(#checkOne);
 
 						pause;
@@ -433,16 +432,8 @@ FillerController(
 	    		       
 	    		        
 	    		        loop {
-	    		        	
-	    		        	emit filler1_amount(25);
-							emit filler2_amount(25);
-							emit filler3_amount(25);
-							emit filler4_amount(25);
 							
-							emit filler1_amount(helperClass.parseString(#fileReadSignal, 0));
-							emit filler2_amount(helperClass.parseString(#fileReadSignal, 1));
-							emit filler3_amount(helperClass.parseString(#fileReadSignal, 2));
-							emit filler4_amount(helperClass.parseString(#fileReadSignal, 3));
+					
 	    		            
 	    		                
 	    		            System.out.println("*Filler - Waiting For BottleAtPos2*");
@@ -593,7 +584,17 @@ FillerController(
 	    		        }
 	    		    }
 	    		
+	    			||
 	    			
+	    			{
+	    				loop{
+	    					emit filler1_amount(helperClass.parseString(#fileReadSignal, 0));
+							emit filler2_amount(helperClass.parseString(#fileReadSignal, 1));
+							emit filler3_amount(helperClass.parseString(#fileReadSignal, 2));
+							emit filler4_amount(helperClass.parseString(#fileReadSignal, 3));
+							pause;
+	    				}
+	    			}
 	    			
 	    			
 	    			||
