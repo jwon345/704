@@ -3,7 +3,7 @@ import run.socketListener;
 ConveyorPlant(
     input signal motConveyorOnOff;
     output signal bottleAtPos1, bottleLeftPos5;
-    output signal motConveyorOnOffE, bottleAtPos1E, bottleLeftPos5E;
+    output signal motConveyorOnOffE, bottleLeftPos5E;
 )
 ->
 
@@ -27,24 +27,6 @@ ConveyorPlant(
 	    
 	    {// To viz
 	        {while(true){present(motConveyorOnOff){emit motConveyorOnOffE;} pause;}}
-	        ||
-	        {
-	            while(true){
-	                present(bottleAtPos1){
-	                    trap(T){
-	                        {
-	                            sustain bottleAtPos1E;
-	                        }
-	                        ||
-	                        {
-	                        	waitl (1 s);
-	                            exit(T);
-	                        }
-	                    }
-	                }
-	                pause;
-	            }
-	        }
 	        ||
 	        {while(true){present(bottleLeftPos5){emit bottleLeftPos5E;} pause;}}
 	    }
@@ -157,24 +139,23 @@ FillerPlant(
 								 	||
 								 	{
 								        await (gripperTurnRetract);
-								        waitl(300 ms);
+								        waitl(500 ms);
 								        emit gripperTurnHomePos;
 								        pause;
 								    }
 								    ||
 								    {
 								        await (cylPos5ZaxisExtend);
-								        waitl(300 ms);
+								        waitl(500 ms);
 								        emit gripperZAxisLowered;
 								        pause;
 								    }
 								    ||
 								    {
 								        await (gripperTurnExtend);
-								        waitl(300 ms);
+								        waitl(500 ms);
 								        emit gripperTurnFinalPos;
 								        pause;
-								        waitl(300 ms);
 								        emit gripperZAxisLifted;
 								        pause;
 								    }

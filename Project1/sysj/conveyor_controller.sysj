@@ -31,12 +31,13 @@ reaction RotaryQueue(
 				System.out.println("\n-------------------------");
 
 				present(rotate){
-					emit simOne(q[1] ? Boolean.TRUE : Boolean.FALSE);
+					emit simOne(q[0] ? Boolean.TRUE : Boolean.FALSE);
 					emit simF(q[1] ? Boolean.TRUE : Boolean.FALSE);
 					emit simThree(q[2] ? Boolean.TRUE : Boolean.FALSE);
 					emit simC(q[3] ? Boolean.TRUE : Boolean.FALSE);
 					emit simFive(q[4] ? Boolean.TRUE : Boolean.FALSE);
 				}
+				
 				if(o)
 					halt;
 				else 
@@ -53,9 +54,13 @@ reaction RotaryQueue(
 				}
 				present(insert)
 					q[0] = true;
+				
 				else
 					q[0] = false;
 			} case (insert) do{
+				
+				emit simOne(Boolean.TRUE);
+				
 				present(rotate){
 					for(int i=q.length-1; i>0; i--){
 						q[i] = q[i-1];
@@ -228,7 +233,7 @@ ConveyorController(
 
 RotaryController(
 	    input signal tableAlignedWithSensor, capOnBottleAtPos1;
-	    output signal rotaryTableTrigger, bottleAtPos5E;
+	    output signal rotaryTableTrigger, bottleAtPos5E, bottleAtPos1E;
 	    
 	    input Boolean channel  convReady, fillerReady, capperReady, lidLoaderReady;
 	    output Boolean channel rotated;
@@ -236,7 +241,7 @@ RotaryController(
 	    input Boolean channel checkFive, checkOne;
 	    )->{
 	    	signal  cvR, fR, cR , lR;
-	    	signal bottleAtPos5;
+	    	signal bottleAtPos5 , bottleAtPos1;
 	    	receive convReady;
 	    	receive fillerReady;
 	    	receive capperReady;
@@ -267,7 +272,7 @@ RotaryController(
 	    				}
 	    							
 	    				System.out.println("*Rotary - All controllers are ready*");
-
+	    				
 	    				
 	    				present(bottleAtPos5) {
 	    							trap(T){ 
@@ -301,6 +306,7 @@ RotaryController(
 	    						pause;
 	    					}
 	    				}
+	    				waitl(3s);
 	    				
 	    			}
 	    		
@@ -352,7 +358,45 @@ RotaryController(
 		        }
 		        
 		        
-	    	}	    	
+	    	}	
+	    	
+	    	
+	    	||
+			{
+					loop{
+						receive checkOne;
+						if((Boolean)#checkOne)
+							emit bottleAtPos1;
+    		            	System.out.println(#checkOne);
+
+						pause;
+					}	
+					
+			}
+	    	
+	    	|| 
+	    	
+	    	{
+	    	
+		        
+		        {while(true)
+		        	{present(bottleAtPos1)trap(T) {
+		                {
+		                    sustain bottleAtPos1E;
+		                }
+		                ||
+		                {
+		                    await(rotaryTableTrigger);
+		                    exit(T);
+		                };
+		        	}
+		        	pause;
+		        
+		        	}
+		        }
+		        
+		        
+	    	}	
 }
 	    
 	    
@@ -372,7 +416,7 @@ FillerController(
 	    		input int signal orderFill_1, orderFill_2, orderFill_3, orderFill_4;
 	    		)->{
 	    			
-	    			signal filler1,filler2,filler3,filler4;
+	    			signal filler1,filler2,filler3,filler4, done;
 	    			
 	    			int signal filler1_amount, filler2_amount, filler3_amount, filler4_amount;
 	    			int signal current_fill, total_fill;
@@ -559,6 +603,10 @@ FillerController(
 	    						receive simFiller;
 	    						if((Boolean)#simFiller)
 	    							emit bottleAtPos2;
+	    						
+	    						else {
+    								emit done;
+    							}
 	    						pause;
 	    					}
 	    			}
@@ -574,7 +622,7 @@ FillerController(
 		    		                }
 		    		                ||
 		    		                {
-		    		                    await(dosUnitEvac);
+		    		                    await(done);
 		    		                    exit(T);
 		    		                }
 		    		            }
@@ -602,7 +650,7 @@ CapperController(
 	    				)
 	    			-> 		
 	    				{
-	    					signal bottleAtPos4;
+	    					signal bottleAtPos4 , done;
 	    					send capperReady(Boolean.TRUE);
 	    					
 	    					{
@@ -667,6 +715,9 @@ CapperController(
 	    							}
 	    							
 	    							
+
+	    							
+	    							
 	    						}
 	    					}
 	    					
@@ -677,6 +728,9 @@ CapperController(
 	    							if((Boolean)#simCapper) 
 	    								emit bottleAtPos4;
 
+	    							else {
+	    								emit done;
+	    							}
 	    							pause;
 	    						}
 	    					}
@@ -709,7 +763,7 @@ CapperController(
 	    				                }
 	    				                ||
 	    				                {
-	    				                    await(gripperTurnFinalPos);
+	    				                    await(done);
 	    				                    exit(T);
 	    				                }
 	    				            }
@@ -788,9 +842,8 @@ Controller(
 							}
 							
 							
-							emit done;
 							send lidLoaderReady(Boolean.TRUE);
-							
+
 							System.out.println("Arm at source");
 							pause;
 							// Need a feedback from the Arm indicating a cap is picked up
@@ -805,7 +858,7 @@ Controller(
 						||
 						{loop{present(vacOnM){emit vacOn;} pause;} }
 						||
-						{loop{present(armSourceM){emit armSource;send lidLoaderReady(Boolean.TRUE); waitl (4000 ms); emit done;} pause;} }
+						{loop{present(armSourceM){emit armSource;send lidLoaderReady(Boolean.TRUE); } pause;} }
 						||
 						{loop{present(armDestM){emit armDest;} pause;} }
 					}
@@ -833,6 +886,9 @@ Controller(
 					receive checkThree;
 					if((Boolean)#checkThree)
 						emit bottleAtPos3;
+					else {
+						emit done;
+					}
 					pause;
 				}
 			}

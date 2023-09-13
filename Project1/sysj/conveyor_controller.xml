@@ -41,6 +41,7 @@
             <oSignal Name="rotaryTableTrigger" 		To="RotaryPlant.rotaryTableTrigger"	Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10003" />              
 			
 			<oSignal Name="bottleAtPos5E" 			To="UI.bottleAtPos5E" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+			<oSignal Name="bottleAtPos1E"  		To="UI.bottleAtPos1E"  Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
 
             <!-- Input Channels -->
             <iChannel Name="convReady"     			From="ConveyorCD.convReady" />
