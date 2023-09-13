@@ -290,15 +290,7 @@ RotaryController(
 	    		        System.out.println("*Rotary - Aligned*");
 	    		    	send rotated(Boolean.TRUE);
 	    		    	waitl(5 ms);
-	    				int i = 0;
-	    				trap(T){
-	    					loop{
-	    						i++;
-	    						if(i > 15)
-	    							exit(T);
-	    						pause;
-	    					}
-	    				}
+	    		
 	    				
 	    			}
 	    		
@@ -388,6 +380,11 @@ FillerController(
 	    		        
 	    		        loop {
 	    		        	
+	    		        	emit filler1_amount(25);
+							emit filler2_amount(25);
+							emit filler3_amount(25);
+							emit filler4_amount(25);
+							
 							emit filler1_amount(helperClass.parseString(#fileReadSignal, 0));
 							emit filler2_amount(helperClass.parseString(#fileReadSignal, 1));
 							emit filler3_amount(helperClass.parseString(#fileReadSignal, 2));
@@ -429,7 +426,7 @@ FillerController(
 	    		                current += #filler1_amount;
 	    		                System.out.println("*Current Filled Amount: " + current);
 	    		                emit current_fill(current);
-
+	    		                pause;
 	    		            }
 	    		            
 	    		            if ((#filler2_amount > 0) && (current + #filler2_amount <= total)) {
@@ -459,7 +456,7 @@ FillerController(
 	    		                current += #filler2_amount;
 	    		                System.out.println("*Current Filled Amount: " + current);
 	    		                emit current_fill(current);
-
+	    		                pause;
 	    		            }
 	    		            
 	    		            if ((#filler3_amount > 0) && (current + #filler3_amount <= total)) {
@@ -489,6 +486,7 @@ FillerController(
 	    		                current += #filler3_amount;
 	    		                System.out.println("*Current Filled Amount: " + current);
 	    		                emit current_fill(current);
+	    		                pause;
 	    		            }
 	    		            
 	    		            if ((#filler4_amount > 0) && (current + #filler4_amount <= total)) {
@@ -518,7 +516,7 @@ FillerController(
 	    		                current += #filler4_amount;
 	    		                System.out.println("*Current Filled Amount: " + current);
 	    		                emit current_fill(current);
-
+	    		                pause;
 	    		            }
 	    		            
 	    		            emit order_finished;

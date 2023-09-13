@@ -86,87 +86,87 @@ public class ECS_LightingController extends ClockDomain{
   private int zoneLightInt_thread_58;//sysj\ECS.sysj line: 42, column: 13
   private int zoneOcc_thread_62;//sysj\ECS.sysj line: 41, column: 13
   private int zoneLightInt_thread_62;//sysj\ECS.sysj line: 42, column: 13
-  private int S225792 = 1;
-  private int S224500 = 1;
-  private int S224450 = 1;
-  private int S224454 = 1;
-  private int S225790 = 1;
-  private int S224592 = 1;
-  private int S224512 = 1;
-  private int S224503 = 1;
-  private int S224515 = 1;
-  private int S224523 = 1;
-  private int S224684 = 1;
-  private int S224604 = 1;
-  private int S224595 = 1;
-  private int S224607 = 1;
-  private int S224615 = 1;
-  private int S224776 = 1;
-  private int S224696 = 1;
-  private int S224687 = 1;
-  private int S224699 = 1;
-  private int S224707 = 1;
-  private int S224868 = 1;
-  private int S224788 = 1;
-  private int S224779 = 1;
-  private int S224791 = 1;
-  private int S224799 = 1;
-  private int S224960 = 1;
-  private int S224880 = 1;
-  private int S224871 = 1;
-  private int S224883 = 1;
-  private int S224891 = 1;
-  private int S225052 = 1;
-  private int S224972 = 1;
-  private int S224963 = 1;
-  private int S224975 = 1;
-  private int S224983 = 1;
-  private int S225144 = 1;
-  private int S225064 = 1;
-  private int S225055 = 1;
-  private int S225067 = 1;
-  private int S225075 = 1;
-  private int S225236 = 1;
-  private int S225156 = 1;
-  private int S225147 = 1;
-  private int S225159 = 1;
-  private int S225167 = 1;
-  private int S225328 = 1;
-  private int S225248 = 1;
-  private int S225239 = 1;
-  private int S225251 = 1;
-  private int S225259 = 1;
-  private int S225420 = 1;
-  private int S225340 = 1;
-  private int S225331 = 1;
-  private int S225343 = 1;
-  private int S225351 = 1;
-  private int S225512 = 1;
-  private int S225432 = 1;
-  private int S225423 = 1;
-  private int S225435 = 1;
-  private int S225443 = 1;
-  private int S225604 = 1;
-  private int S225524 = 1;
-  private int S225515 = 1;
-  private int S225527 = 1;
-  private int S225535 = 1;
-  private int S225696 = 1;
-  private int S225616 = 1;
-  private int S225607 = 1;
-  private int S225619 = 1;
-  private int S225627 = 1;
-  private int S225788 = 1;
-  private int S225708 = 1;
-  private int S225699 = 1;
-  private int S225711 = 1;
-  private int S225719 = 1;
+  private int S214987 = 1;
+  private int S213695 = 1;
+  private int S213645 = 1;
+  private int S213649 = 1;
+  private int S214985 = 1;
+  private int S213787 = 1;
+  private int S213707 = 1;
+  private int S213698 = 1;
+  private int S213710 = 1;
+  private int S213718 = 1;
+  private int S213879 = 1;
+  private int S213799 = 1;
+  private int S213790 = 1;
+  private int S213802 = 1;
+  private int S213810 = 1;
+  private int S213971 = 1;
+  private int S213891 = 1;
+  private int S213882 = 1;
+  private int S213894 = 1;
+  private int S213902 = 1;
+  private int S214063 = 1;
+  private int S213983 = 1;
+  private int S213974 = 1;
+  private int S213986 = 1;
+  private int S213994 = 1;
+  private int S214155 = 1;
+  private int S214075 = 1;
+  private int S214066 = 1;
+  private int S214078 = 1;
+  private int S214086 = 1;
+  private int S214247 = 1;
+  private int S214167 = 1;
+  private int S214158 = 1;
+  private int S214170 = 1;
+  private int S214178 = 1;
+  private int S214339 = 1;
+  private int S214259 = 1;
+  private int S214250 = 1;
+  private int S214262 = 1;
+  private int S214270 = 1;
+  private int S214431 = 1;
+  private int S214351 = 1;
+  private int S214342 = 1;
+  private int S214354 = 1;
+  private int S214362 = 1;
+  private int S214523 = 1;
+  private int S214443 = 1;
+  private int S214434 = 1;
+  private int S214446 = 1;
+  private int S214454 = 1;
+  private int S214615 = 1;
+  private int S214535 = 1;
+  private int S214526 = 1;
+  private int S214538 = 1;
+  private int S214546 = 1;
+  private int S214707 = 1;
+  private int S214627 = 1;
+  private int S214618 = 1;
+  private int S214630 = 1;
+  private int S214638 = 1;
+  private int S214799 = 1;
+  private int S214719 = 1;
+  private int S214710 = 1;
+  private int S214722 = 1;
+  private int S214730 = 1;
+  private int S214891 = 1;
+  private int S214811 = 1;
+  private int S214802 = 1;
+  private int S214814 = 1;
+  private int S214822 = 1;
+  private int S214983 = 1;
+  private int S214903 = 1;
+  private int S214894 = 1;
+  private int S214906 = 1;
+  private int S214914 = 1;
   
   private int[] ends = new int[66];
   private int[] tdone = new int[66];
   
-  public void thread226071(int [] tdone, int [] ends){
-        S225719=1;
+  public void thread215266(int [] tdone, int [] ends){
+        S214914=1;
     if((Integer)(zoneSevenOccupancy.getpreval() == null ? 0 : ((Integer)zoneSevenOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneSevenLightingI.getpreval() == null ? 0 : ((Integer)zoneSevenLightingI.getpreval()).intValue()) >= 50 || !afterhrs_6.getprestatus()){//sysj\ECS.sysj line: 59, column: 21
       test_61.setPresent();//sysj\ECS.sysj line: 60, column: 21
       currsigs.addElement(test_61);
@@ -181,18 +181,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread226070(int [] tdone, int [] ends){
-        S225711=1;
+  public void thread215265(int [] tdone, int [] ends){
+        S214906=1;
     active[63]=1;
     ends[63]=1;
     tdone[63]=1;
   }
 
-  public void thread226069(int [] tdone, int [] ends){
-        S225708=1;
+  public void thread215264(int [] tdone, int [] ends){
+        S214903=1;
     zoneOcc_thread_62 = (Integer)(zoneSevenOccupancy.getpreval() == null ? 0 : ((Integer)zoneSevenOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 41, column: 13
     zoneLightInt_thread_62 = (Integer)(zoneSevenLightingI.getpreval() == null ? 0 : ((Integer)zoneSevenLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 42, column: 13
-    S225699=0;
+    S214894=0;
     if(afterhrs_6.getprestatus() && zoneOcc_thread_62 > 0 && zoneLightInt_thread_62 < 50){//sysj\ECS.sysj line: 44, column: 17
       zoneSevenLightONOFF.setPresent();//sysj\ECS.sysj line: 45, column: 17
       currsigs.addElement(zoneSevenLightONOFF);
@@ -201,15 +201,15 @@ public class ECS_LightingController extends ClockDomain{
       tdone[62]=1;
     }
     else {
-      S225699=1;
+      S214894=1;
       active[62]=1;
       ends[62]=1;
       tdone[62]=1;
     }
   }
 
-  public void thread226067(int [] tdone, int [] ends){
-        S225719=1;
+  public void thread215262(int [] tdone, int [] ends){
+        S214914=1;
     if((Integer)(zoneSevenOccupancy.getpreval() == null ? 0 : ((Integer)zoneSevenOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneSevenLightingI.getpreval() == null ? 0 : ((Integer)zoneSevenLightingI.getpreval()).intValue()) >= 50 || !afterhrs_6.getprestatus()){//sysj\ECS.sysj line: 59, column: 21
       test_61.setPresent();//sysj\ECS.sysj line: 60, column: 21
       currsigs.addElement(test_61);
@@ -224,18 +224,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread226066(int [] tdone, int [] ends){
-        S225711=1;
+  public void thread215261(int [] tdone, int [] ends){
+        S214906=1;
     active[63]=1;
     ends[63]=1;
     tdone[63]=1;
   }
 
-  public void thread226065(int [] tdone, int [] ends){
-        S225708=1;
+  public void thread215260(int [] tdone, int [] ends){
+        S214903=1;
     zoneOcc_thread_62 = (Integer)(zoneSevenOccupancy.getpreval() == null ? 0 : ((Integer)zoneSevenOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 41, column: 13
     zoneLightInt_thread_62 = (Integer)(zoneSevenLightingI.getpreval() == null ? 0 : ((Integer)zoneSevenLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 42, column: 13
-    S225699=0;
+    S214894=0;
     if(afterhrs_6.getprestatus() && zoneOcc_thread_62 > 0 && zoneLightInt_thread_62 < 50){//sysj\ECS.sysj line: 44, column: 17
       zoneSevenLightONOFF.setPresent();//sysj\ECS.sysj line: 45, column: 17
       currsigs.addElement(zoneSevenLightONOFF);
@@ -244,15 +244,15 @@ public class ECS_LightingController extends ClockDomain{
       tdone[62]=1;
     }
     else {
-      S225699=1;
+      S214894=1;
       active[62]=1;
       ends[62]=1;
       tdone[62]=1;
     }
   }
 
-  public void thread226063(int [] tdone, int [] ends){
-        switch(S225719){
+  public void thread215258(int [] tdone, int [] ends){
+        switch(S214914){
       case 0 : 
         active[64]=0;
         ends[64]=0;
@@ -277,8 +277,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread226062(int [] tdone, int [] ends){
-        switch(S225711){
+  public void thread215257(int [] tdone, int [] ends){
+        switch(S214906){
       case 0 : 
         active[63]=0;
         ends[63]=0;
@@ -300,8 +300,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread226061(int [] tdone, int [] ends){
-        switch(S225708){
+  public void thread215256(int [] tdone, int [] ends){
+        switch(S214903){
       case 0 : 
         active[62]=0;
         ends[62]=0;
@@ -309,7 +309,7 @@ public class ECS_LightingController extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S225699){
+        switch(S214894){
           case 0 : 
             zoneSevenLightONOFF.setPresent();//sysj\ECS.sysj line: 45, column: 17
             currsigs.addElement(zoneSevenLightONOFF);
@@ -319,8 +319,8 @@ public class ECS_LightingController extends ClockDomain{
             break;
           
           case 1 : 
-            S225699=1;
-            S225708=0;
+            S214894=1;
+            S214903=0;
             active[62]=0;
             ends[62]=0;
             tdone[62]=1;
@@ -332,8 +332,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread226060(int [] tdone, int [] ends){
-        switch(S225788){
+  public void thread215255(int [] tdone, int [] ends){
+        switch(S214983){
       case 0 : 
         active[61]=0;
         ends[61]=0;
@@ -342,62 +342,62 @@ public class ECS_LightingController extends ClockDomain{
       
       case 1 : 
         test_61.setClear();//sysj\ECS.sysj line: 37, column: 5
-        thread226061(tdone,ends);
-        thread226062(tdone,ends);
-        thread226063(tdone,ends);
-        int biggest226064 = 0;
-        if(ends[62]>=biggest226064){
-          biggest226064=ends[62];
+        thread215256(tdone,ends);
+        thread215257(tdone,ends);
+        thread215258(tdone,ends);
+        int biggest215259 = 0;
+        if(ends[62]>=biggest215259){
+          biggest215259=ends[62];
         }
-        if(ends[63]>=biggest226064){
-          biggest226064=ends[63];
+        if(ends[63]>=biggest215259){
+          biggest215259=ends[63];
         }
-        if(ends[64]>=biggest226064){
-          biggest226064=ends[64];
+        if(ends[64]>=biggest215259){
+          biggest215259=ends[64];
         }
-        if(biggest226064 == 1){
+        if(biggest215259 == 1){
           active[61]=1;
           ends[61]=1;
           tdone[61]=1;
         }
-        if(biggest226064 == 2){
+        if(biggest215259 == 2){
           ends[61]=2;
           ;//sysj\ECS.sysj line: 39, column: 5
-          thread226065(tdone,ends);
-          thread226066(tdone,ends);
-          thread226067(tdone,ends);
-          int biggest226068 = 0;
-          if(ends[62]>=biggest226068){
-            biggest226068=ends[62];
+          thread215260(tdone,ends);
+          thread215261(tdone,ends);
+          thread215262(tdone,ends);
+          int biggest215263 = 0;
+          if(ends[62]>=biggest215263){
+            biggest215263=ends[62];
           }
-          if(ends[63]>=biggest226068){
-            biggest226068=ends[63];
+          if(ends[63]>=biggest215263){
+            biggest215263=ends[63];
           }
-          if(ends[64]>=biggest226068){
-            biggest226068=ends[64];
+          if(ends[64]>=biggest215263){
+            biggest215263=ends[64];
           }
-          if(biggest226068 == 1){
+          if(biggest215263 == 1){
             active[61]=1;
             ends[61]=1;
             tdone[61]=1;
           }
         }
         //FINXME code
-        if(biggest226064 == 0){
-          thread226069(tdone,ends);
-          thread226070(tdone,ends);
-          thread226071(tdone,ends);
-          int biggest226072 = 0;
-          if(ends[62]>=biggest226072){
-            biggest226072=ends[62];
+        if(biggest215259 == 0){
+          thread215264(tdone,ends);
+          thread215265(tdone,ends);
+          thread215266(tdone,ends);
+          int biggest215267 = 0;
+          if(ends[62]>=biggest215267){
+            biggest215267=ends[62];
           }
-          if(ends[63]>=biggest226072){
-            biggest226072=ends[63];
+          if(ends[63]>=biggest215267){
+            biggest215267=ends[63];
           }
-          if(ends[64]>=biggest226072){
-            biggest226072=ends[64];
+          if(ends[64]>=biggest215267){
+            biggest215267=ends[64];
           }
-          if(biggest226072 == 1){
+          if(biggest215267 == 1){
             active[61]=1;
             ends[61]=1;
             tdone[61]=1;
@@ -408,8 +408,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread226058(int [] tdone, int [] ends){
-        S225627=1;
+  public void thread215253(int [] tdone, int [] ends){
+        S214822=1;
     if((Integer)(zoneSixOccupancy.getpreval() == null ? 0 : ((Integer)zoneSixOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneSixLightingI.getpreval() == null ? 0 : ((Integer)zoneSixLightingI.getpreval()).intValue()) >= 50 || !afterhrs_6.getprestatus()){//sysj\ECS.sysj line: 59, column: 21
       test_57.setPresent();//sysj\ECS.sysj line: 60, column: 21
       currsigs.addElement(test_57);
@@ -424,18 +424,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread226057(int [] tdone, int [] ends){
-        S225619=1;
+  public void thread215252(int [] tdone, int [] ends){
+        S214814=1;
     active[59]=1;
     ends[59]=1;
     tdone[59]=1;
   }
 
-  public void thread226056(int [] tdone, int [] ends){
-        S225616=1;
+  public void thread215251(int [] tdone, int [] ends){
+        S214811=1;
     zoneOcc_thread_58 = (Integer)(zoneSixOccupancy.getpreval() == null ? 0 : ((Integer)zoneSixOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 41, column: 13
     zoneLightInt_thread_58 = (Integer)(zoneSixLightingI.getpreval() == null ? 0 : ((Integer)zoneSixLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 42, column: 13
-    S225607=0;
+    S214802=0;
     if(afterhrs_6.getprestatus() && zoneOcc_thread_58 > 0 && zoneLightInt_thread_58 < 50){//sysj\ECS.sysj line: 44, column: 17
       zoneSixLightONOFF.setPresent();//sysj\ECS.sysj line: 45, column: 17
       currsigs.addElement(zoneSixLightONOFF);
@@ -444,15 +444,15 @@ public class ECS_LightingController extends ClockDomain{
       tdone[58]=1;
     }
     else {
-      S225607=1;
+      S214802=1;
       active[58]=1;
       ends[58]=1;
       tdone[58]=1;
     }
   }
 
-  public void thread226054(int [] tdone, int [] ends){
-        S225627=1;
+  public void thread215249(int [] tdone, int [] ends){
+        S214822=1;
     if((Integer)(zoneSixOccupancy.getpreval() == null ? 0 : ((Integer)zoneSixOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneSixLightingI.getpreval() == null ? 0 : ((Integer)zoneSixLightingI.getpreval()).intValue()) >= 50 || !afterhrs_6.getprestatus()){//sysj\ECS.sysj line: 59, column: 21
       test_57.setPresent();//sysj\ECS.sysj line: 60, column: 21
       currsigs.addElement(test_57);
@@ -467,18 +467,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread226053(int [] tdone, int [] ends){
-        S225619=1;
+  public void thread215248(int [] tdone, int [] ends){
+        S214814=1;
     active[59]=1;
     ends[59]=1;
     tdone[59]=1;
   }
 
-  public void thread226052(int [] tdone, int [] ends){
-        S225616=1;
+  public void thread215247(int [] tdone, int [] ends){
+        S214811=1;
     zoneOcc_thread_58 = (Integer)(zoneSixOccupancy.getpreval() == null ? 0 : ((Integer)zoneSixOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 41, column: 13
     zoneLightInt_thread_58 = (Integer)(zoneSixLightingI.getpreval() == null ? 0 : ((Integer)zoneSixLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 42, column: 13
-    S225607=0;
+    S214802=0;
     if(afterhrs_6.getprestatus() && zoneOcc_thread_58 > 0 && zoneLightInt_thread_58 < 50){//sysj\ECS.sysj line: 44, column: 17
       zoneSixLightONOFF.setPresent();//sysj\ECS.sysj line: 45, column: 17
       currsigs.addElement(zoneSixLightONOFF);
@@ -487,15 +487,15 @@ public class ECS_LightingController extends ClockDomain{
       tdone[58]=1;
     }
     else {
-      S225607=1;
+      S214802=1;
       active[58]=1;
       ends[58]=1;
       tdone[58]=1;
     }
   }
 
-  public void thread226050(int [] tdone, int [] ends){
-        switch(S225627){
+  public void thread215245(int [] tdone, int [] ends){
+        switch(S214822){
       case 0 : 
         active[60]=0;
         ends[60]=0;
@@ -520,8 +520,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread226049(int [] tdone, int [] ends){
-        switch(S225619){
+  public void thread215244(int [] tdone, int [] ends){
+        switch(S214814){
       case 0 : 
         active[59]=0;
         ends[59]=0;
@@ -543,8 +543,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread226048(int [] tdone, int [] ends){
-        switch(S225616){
+  public void thread215243(int [] tdone, int [] ends){
+        switch(S214811){
       case 0 : 
         active[58]=0;
         ends[58]=0;
@@ -552,7 +552,7 @@ public class ECS_LightingController extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S225607){
+        switch(S214802){
           case 0 : 
             zoneSixLightONOFF.setPresent();//sysj\ECS.sysj line: 45, column: 17
             currsigs.addElement(zoneSixLightONOFF);
@@ -562,8 +562,8 @@ public class ECS_LightingController extends ClockDomain{
             break;
           
           case 1 : 
-            S225607=1;
-            S225616=0;
+            S214802=1;
+            S214811=0;
             active[58]=0;
             ends[58]=0;
             tdone[58]=1;
@@ -575,8 +575,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread226047(int [] tdone, int [] ends){
-        switch(S225696){
+  public void thread215242(int [] tdone, int [] ends){
+        switch(S214891){
       case 0 : 
         active[57]=0;
         ends[57]=0;
@@ -585,62 +585,62 @@ public class ECS_LightingController extends ClockDomain{
       
       case 1 : 
         test_57.setClear();//sysj\ECS.sysj line: 37, column: 5
-        thread226048(tdone,ends);
-        thread226049(tdone,ends);
-        thread226050(tdone,ends);
-        int biggest226051 = 0;
-        if(ends[58]>=biggest226051){
-          biggest226051=ends[58];
+        thread215243(tdone,ends);
+        thread215244(tdone,ends);
+        thread215245(tdone,ends);
+        int biggest215246 = 0;
+        if(ends[58]>=biggest215246){
+          biggest215246=ends[58];
         }
-        if(ends[59]>=biggest226051){
-          biggest226051=ends[59];
+        if(ends[59]>=biggest215246){
+          biggest215246=ends[59];
         }
-        if(ends[60]>=biggest226051){
-          biggest226051=ends[60];
+        if(ends[60]>=biggest215246){
+          biggest215246=ends[60];
         }
-        if(biggest226051 == 1){
+        if(biggest215246 == 1){
           active[57]=1;
           ends[57]=1;
           tdone[57]=1;
         }
-        if(biggest226051 == 2){
+        if(biggest215246 == 2){
           ends[57]=2;
           ;//sysj\ECS.sysj line: 39, column: 5
-          thread226052(tdone,ends);
-          thread226053(tdone,ends);
-          thread226054(tdone,ends);
-          int biggest226055 = 0;
-          if(ends[58]>=biggest226055){
-            biggest226055=ends[58];
+          thread215247(tdone,ends);
+          thread215248(tdone,ends);
+          thread215249(tdone,ends);
+          int biggest215250 = 0;
+          if(ends[58]>=biggest215250){
+            biggest215250=ends[58];
           }
-          if(ends[59]>=biggest226055){
-            biggest226055=ends[59];
+          if(ends[59]>=biggest215250){
+            biggest215250=ends[59];
           }
-          if(ends[60]>=biggest226055){
-            biggest226055=ends[60];
+          if(ends[60]>=biggest215250){
+            biggest215250=ends[60];
           }
-          if(biggest226055 == 1){
+          if(biggest215250 == 1){
             active[57]=1;
             ends[57]=1;
             tdone[57]=1;
           }
         }
         //FINXME code
-        if(biggest226051 == 0){
-          thread226056(tdone,ends);
-          thread226057(tdone,ends);
-          thread226058(tdone,ends);
-          int biggest226059 = 0;
-          if(ends[58]>=biggest226059){
-            biggest226059=ends[58];
+        if(biggest215246 == 0){
+          thread215251(tdone,ends);
+          thread215252(tdone,ends);
+          thread215253(tdone,ends);
+          int biggest215254 = 0;
+          if(ends[58]>=biggest215254){
+            biggest215254=ends[58];
           }
-          if(ends[59]>=biggest226059){
-            biggest226059=ends[59];
+          if(ends[59]>=biggest215254){
+            biggest215254=ends[59];
           }
-          if(ends[60]>=biggest226059){
-            biggest226059=ends[60];
+          if(ends[60]>=biggest215254){
+            biggest215254=ends[60];
           }
-          if(biggest226059 == 1){
+          if(biggest215254 == 1){
             active[57]=1;
             ends[57]=1;
             tdone[57]=1;
@@ -651,8 +651,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread226045(int [] tdone, int [] ends){
-        S225535=1;
+  public void thread215240(int [] tdone, int [] ends){
+        S214730=1;
     if((Integer)(zoneFiveOccupancy.getpreval() == null ? 0 : ((Integer)zoneFiveOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneFiveLightingI.getpreval() == null ? 0 : ((Integer)zoneFiveLightingI.getpreval()).intValue()) >= 50 || !afterhrs_6.getprestatus()){//sysj\ECS.sysj line: 59, column: 21
       test_53.setPresent();//sysj\ECS.sysj line: 60, column: 21
       currsigs.addElement(test_53);
@@ -667,18 +667,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread226044(int [] tdone, int [] ends){
-        S225527=1;
+  public void thread215239(int [] tdone, int [] ends){
+        S214722=1;
     active[55]=1;
     ends[55]=1;
     tdone[55]=1;
   }
 
-  public void thread226043(int [] tdone, int [] ends){
-        S225524=1;
+  public void thread215238(int [] tdone, int [] ends){
+        S214719=1;
     zoneOcc_thread_54 = (Integer)(zoneFiveOccupancy.getpreval() == null ? 0 : ((Integer)zoneFiveOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 41, column: 13
     zoneLightInt_thread_54 = (Integer)(zoneFiveLightingI.getpreval() == null ? 0 : ((Integer)zoneFiveLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 42, column: 13
-    S225515=0;
+    S214710=0;
     if(afterhrs_6.getprestatus() && zoneOcc_thread_54 > 0 && zoneLightInt_thread_54 < 50){//sysj\ECS.sysj line: 44, column: 17
       zoneFiveLightONOFF.setPresent();//sysj\ECS.sysj line: 45, column: 17
       currsigs.addElement(zoneFiveLightONOFF);
@@ -687,15 +687,15 @@ public class ECS_LightingController extends ClockDomain{
       tdone[54]=1;
     }
     else {
-      S225515=1;
+      S214710=1;
       active[54]=1;
       ends[54]=1;
       tdone[54]=1;
     }
   }
 
-  public void thread226041(int [] tdone, int [] ends){
-        S225535=1;
+  public void thread215236(int [] tdone, int [] ends){
+        S214730=1;
     if((Integer)(zoneFiveOccupancy.getpreval() == null ? 0 : ((Integer)zoneFiveOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneFiveLightingI.getpreval() == null ? 0 : ((Integer)zoneFiveLightingI.getpreval()).intValue()) >= 50 || !afterhrs_6.getprestatus()){//sysj\ECS.sysj line: 59, column: 21
       test_53.setPresent();//sysj\ECS.sysj line: 60, column: 21
       currsigs.addElement(test_53);
@@ -710,18 +710,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread226040(int [] tdone, int [] ends){
-        S225527=1;
+  public void thread215235(int [] tdone, int [] ends){
+        S214722=1;
     active[55]=1;
     ends[55]=1;
     tdone[55]=1;
   }
 
-  public void thread226039(int [] tdone, int [] ends){
-        S225524=1;
+  public void thread215234(int [] tdone, int [] ends){
+        S214719=1;
     zoneOcc_thread_54 = (Integer)(zoneFiveOccupancy.getpreval() == null ? 0 : ((Integer)zoneFiveOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 41, column: 13
     zoneLightInt_thread_54 = (Integer)(zoneFiveLightingI.getpreval() == null ? 0 : ((Integer)zoneFiveLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 42, column: 13
-    S225515=0;
+    S214710=0;
     if(afterhrs_6.getprestatus() && zoneOcc_thread_54 > 0 && zoneLightInt_thread_54 < 50){//sysj\ECS.sysj line: 44, column: 17
       zoneFiveLightONOFF.setPresent();//sysj\ECS.sysj line: 45, column: 17
       currsigs.addElement(zoneFiveLightONOFF);
@@ -730,15 +730,15 @@ public class ECS_LightingController extends ClockDomain{
       tdone[54]=1;
     }
     else {
-      S225515=1;
+      S214710=1;
       active[54]=1;
       ends[54]=1;
       tdone[54]=1;
     }
   }
 
-  public void thread226037(int [] tdone, int [] ends){
-        switch(S225535){
+  public void thread215232(int [] tdone, int [] ends){
+        switch(S214730){
       case 0 : 
         active[56]=0;
         ends[56]=0;
@@ -763,8 +763,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread226036(int [] tdone, int [] ends){
-        switch(S225527){
+  public void thread215231(int [] tdone, int [] ends){
+        switch(S214722){
       case 0 : 
         active[55]=0;
         ends[55]=0;
@@ -786,8 +786,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread226035(int [] tdone, int [] ends){
-        switch(S225524){
+  public void thread215230(int [] tdone, int [] ends){
+        switch(S214719){
       case 0 : 
         active[54]=0;
         ends[54]=0;
@@ -795,7 +795,7 @@ public class ECS_LightingController extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S225515){
+        switch(S214710){
           case 0 : 
             zoneFiveLightONOFF.setPresent();//sysj\ECS.sysj line: 45, column: 17
             currsigs.addElement(zoneFiveLightONOFF);
@@ -805,8 +805,8 @@ public class ECS_LightingController extends ClockDomain{
             break;
           
           case 1 : 
-            S225515=1;
-            S225524=0;
+            S214710=1;
+            S214719=0;
             active[54]=0;
             ends[54]=0;
             tdone[54]=1;
@@ -818,8 +818,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread226034(int [] tdone, int [] ends){
-        switch(S225604){
+  public void thread215229(int [] tdone, int [] ends){
+        switch(S214799){
       case 0 : 
         active[53]=0;
         ends[53]=0;
@@ -828,62 +828,62 @@ public class ECS_LightingController extends ClockDomain{
       
       case 1 : 
         test_53.setClear();//sysj\ECS.sysj line: 37, column: 5
-        thread226035(tdone,ends);
-        thread226036(tdone,ends);
-        thread226037(tdone,ends);
-        int biggest226038 = 0;
-        if(ends[54]>=biggest226038){
-          biggest226038=ends[54];
+        thread215230(tdone,ends);
+        thread215231(tdone,ends);
+        thread215232(tdone,ends);
+        int biggest215233 = 0;
+        if(ends[54]>=biggest215233){
+          biggest215233=ends[54];
         }
-        if(ends[55]>=biggest226038){
-          biggest226038=ends[55];
+        if(ends[55]>=biggest215233){
+          biggest215233=ends[55];
         }
-        if(ends[56]>=biggest226038){
-          biggest226038=ends[56];
+        if(ends[56]>=biggest215233){
+          biggest215233=ends[56];
         }
-        if(biggest226038 == 1){
+        if(biggest215233 == 1){
           active[53]=1;
           ends[53]=1;
           tdone[53]=1;
         }
-        if(biggest226038 == 2){
+        if(biggest215233 == 2){
           ends[53]=2;
           ;//sysj\ECS.sysj line: 39, column: 5
-          thread226039(tdone,ends);
-          thread226040(tdone,ends);
-          thread226041(tdone,ends);
-          int biggest226042 = 0;
-          if(ends[54]>=biggest226042){
-            biggest226042=ends[54];
+          thread215234(tdone,ends);
+          thread215235(tdone,ends);
+          thread215236(tdone,ends);
+          int biggest215237 = 0;
+          if(ends[54]>=biggest215237){
+            biggest215237=ends[54];
           }
-          if(ends[55]>=biggest226042){
-            biggest226042=ends[55];
+          if(ends[55]>=biggest215237){
+            biggest215237=ends[55];
           }
-          if(ends[56]>=biggest226042){
-            biggest226042=ends[56];
+          if(ends[56]>=biggest215237){
+            biggest215237=ends[56];
           }
-          if(biggest226042 == 1){
+          if(biggest215237 == 1){
             active[53]=1;
             ends[53]=1;
             tdone[53]=1;
           }
         }
         //FINXME code
-        if(biggest226038 == 0){
-          thread226043(tdone,ends);
-          thread226044(tdone,ends);
-          thread226045(tdone,ends);
-          int biggest226046 = 0;
-          if(ends[54]>=biggest226046){
-            biggest226046=ends[54];
+        if(biggest215233 == 0){
+          thread215238(tdone,ends);
+          thread215239(tdone,ends);
+          thread215240(tdone,ends);
+          int biggest215241 = 0;
+          if(ends[54]>=biggest215241){
+            biggest215241=ends[54];
           }
-          if(ends[55]>=biggest226046){
-            biggest226046=ends[55];
+          if(ends[55]>=biggest215241){
+            biggest215241=ends[55];
           }
-          if(ends[56]>=biggest226046){
-            biggest226046=ends[56];
+          if(ends[56]>=biggest215241){
+            biggest215241=ends[56];
           }
-          if(biggest226046 == 1){
+          if(biggest215241 == 1){
             active[53]=1;
             ends[53]=1;
             tdone[53]=1;
@@ -894,8 +894,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread226032(int [] tdone, int [] ends){
-        S225443=1;
+  public void thread215227(int [] tdone, int [] ends){
+        S214638=1;
     if((Integer)(zoneFourOccupancy.getpreval() == null ? 0 : ((Integer)zoneFourOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneFourLightingI.getpreval() == null ? 0 : ((Integer)zoneFourLightingI.getpreval()).intValue()) >= 50 || !afterhrs_6.getprestatus()){//sysj\ECS.sysj line: 59, column: 21
       test_49.setPresent();//sysj\ECS.sysj line: 60, column: 21
       currsigs.addElement(test_49);
@@ -910,18 +910,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread226031(int [] tdone, int [] ends){
-        S225435=1;
+  public void thread215226(int [] tdone, int [] ends){
+        S214630=1;
     active[51]=1;
     ends[51]=1;
     tdone[51]=1;
   }
 
-  public void thread226030(int [] tdone, int [] ends){
-        S225432=1;
+  public void thread215225(int [] tdone, int [] ends){
+        S214627=1;
     zoneOcc_thread_50 = (Integer)(zoneFourOccupancy.getpreval() == null ? 0 : ((Integer)zoneFourOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 41, column: 13
     zoneLightInt_thread_50 = (Integer)(zoneFourLightingI.getpreval() == null ? 0 : ((Integer)zoneFourLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 42, column: 13
-    S225423=0;
+    S214618=0;
     if(afterhrs_6.getprestatus() && zoneOcc_thread_50 > 0 && zoneLightInt_thread_50 < 50){//sysj\ECS.sysj line: 44, column: 17
       zoneFourLightONOFF.setPresent();//sysj\ECS.sysj line: 45, column: 17
       currsigs.addElement(zoneFourLightONOFF);
@@ -930,15 +930,15 @@ public class ECS_LightingController extends ClockDomain{
       tdone[50]=1;
     }
     else {
-      S225423=1;
+      S214618=1;
       active[50]=1;
       ends[50]=1;
       tdone[50]=1;
     }
   }
 
-  public void thread226028(int [] tdone, int [] ends){
-        S225443=1;
+  public void thread215223(int [] tdone, int [] ends){
+        S214638=1;
     if((Integer)(zoneFourOccupancy.getpreval() == null ? 0 : ((Integer)zoneFourOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneFourLightingI.getpreval() == null ? 0 : ((Integer)zoneFourLightingI.getpreval()).intValue()) >= 50 || !afterhrs_6.getprestatus()){//sysj\ECS.sysj line: 59, column: 21
       test_49.setPresent();//sysj\ECS.sysj line: 60, column: 21
       currsigs.addElement(test_49);
@@ -953,18 +953,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread226027(int [] tdone, int [] ends){
-        S225435=1;
+  public void thread215222(int [] tdone, int [] ends){
+        S214630=1;
     active[51]=1;
     ends[51]=1;
     tdone[51]=1;
   }
 
-  public void thread226026(int [] tdone, int [] ends){
-        S225432=1;
+  public void thread215221(int [] tdone, int [] ends){
+        S214627=1;
     zoneOcc_thread_50 = (Integer)(zoneFourOccupancy.getpreval() == null ? 0 : ((Integer)zoneFourOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 41, column: 13
     zoneLightInt_thread_50 = (Integer)(zoneFourLightingI.getpreval() == null ? 0 : ((Integer)zoneFourLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 42, column: 13
-    S225423=0;
+    S214618=0;
     if(afterhrs_6.getprestatus() && zoneOcc_thread_50 > 0 && zoneLightInt_thread_50 < 50){//sysj\ECS.sysj line: 44, column: 17
       zoneFourLightONOFF.setPresent();//sysj\ECS.sysj line: 45, column: 17
       currsigs.addElement(zoneFourLightONOFF);
@@ -973,15 +973,15 @@ public class ECS_LightingController extends ClockDomain{
       tdone[50]=1;
     }
     else {
-      S225423=1;
+      S214618=1;
       active[50]=1;
       ends[50]=1;
       tdone[50]=1;
     }
   }
 
-  public void thread226024(int [] tdone, int [] ends){
-        switch(S225443){
+  public void thread215219(int [] tdone, int [] ends){
+        switch(S214638){
       case 0 : 
         active[52]=0;
         ends[52]=0;
@@ -1006,8 +1006,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread226023(int [] tdone, int [] ends){
-        switch(S225435){
+  public void thread215218(int [] tdone, int [] ends){
+        switch(S214630){
       case 0 : 
         active[51]=0;
         ends[51]=0;
@@ -1029,8 +1029,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread226022(int [] tdone, int [] ends){
-        switch(S225432){
+  public void thread215217(int [] tdone, int [] ends){
+        switch(S214627){
       case 0 : 
         active[50]=0;
         ends[50]=0;
@@ -1038,7 +1038,7 @@ public class ECS_LightingController extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S225423){
+        switch(S214618){
           case 0 : 
             zoneFourLightONOFF.setPresent();//sysj\ECS.sysj line: 45, column: 17
             currsigs.addElement(zoneFourLightONOFF);
@@ -1048,8 +1048,8 @@ public class ECS_LightingController extends ClockDomain{
             break;
           
           case 1 : 
-            S225423=1;
-            S225432=0;
+            S214618=1;
+            S214627=0;
             active[50]=0;
             ends[50]=0;
             tdone[50]=1;
@@ -1061,8 +1061,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread226021(int [] tdone, int [] ends){
-        switch(S225512){
+  public void thread215216(int [] tdone, int [] ends){
+        switch(S214707){
       case 0 : 
         active[49]=0;
         ends[49]=0;
@@ -1071,62 +1071,62 @@ public class ECS_LightingController extends ClockDomain{
       
       case 1 : 
         test_49.setClear();//sysj\ECS.sysj line: 37, column: 5
-        thread226022(tdone,ends);
-        thread226023(tdone,ends);
-        thread226024(tdone,ends);
-        int biggest226025 = 0;
-        if(ends[50]>=biggest226025){
-          biggest226025=ends[50];
+        thread215217(tdone,ends);
+        thread215218(tdone,ends);
+        thread215219(tdone,ends);
+        int biggest215220 = 0;
+        if(ends[50]>=biggest215220){
+          biggest215220=ends[50];
         }
-        if(ends[51]>=biggest226025){
-          biggest226025=ends[51];
+        if(ends[51]>=biggest215220){
+          biggest215220=ends[51];
         }
-        if(ends[52]>=biggest226025){
-          biggest226025=ends[52];
+        if(ends[52]>=biggest215220){
+          biggest215220=ends[52];
         }
-        if(biggest226025 == 1){
+        if(biggest215220 == 1){
           active[49]=1;
           ends[49]=1;
           tdone[49]=1;
         }
-        if(biggest226025 == 2){
+        if(biggest215220 == 2){
           ends[49]=2;
           ;//sysj\ECS.sysj line: 39, column: 5
-          thread226026(tdone,ends);
-          thread226027(tdone,ends);
-          thread226028(tdone,ends);
-          int biggest226029 = 0;
-          if(ends[50]>=biggest226029){
-            biggest226029=ends[50];
+          thread215221(tdone,ends);
+          thread215222(tdone,ends);
+          thread215223(tdone,ends);
+          int biggest215224 = 0;
+          if(ends[50]>=biggest215224){
+            biggest215224=ends[50];
           }
-          if(ends[51]>=biggest226029){
-            biggest226029=ends[51];
+          if(ends[51]>=biggest215224){
+            biggest215224=ends[51];
           }
-          if(ends[52]>=biggest226029){
-            biggest226029=ends[52];
+          if(ends[52]>=biggest215224){
+            biggest215224=ends[52];
           }
-          if(biggest226029 == 1){
+          if(biggest215224 == 1){
             active[49]=1;
             ends[49]=1;
             tdone[49]=1;
           }
         }
         //FINXME code
-        if(biggest226025 == 0){
-          thread226030(tdone,ends);
-          thread226031(tdone,ends);
-          thread226032(tdone,ends);
-          int biggest226033 = 0;
-          if(ends[50]>=biggest226033){
-            biggest226033=ends[50];
+        if(biggest215220 == 0){
+          thread215225(tdone,ends);
+          thread215226(tdone,ends);
+          thread215227(tdone,ends);
+          int biggest215228 = 0;
+          if(ends[50]>=biggest215228){
+            biggest215228=ends[50];
           }
-          if(ends[51]>=biggest226033){
-            biggest226033=ends[51];
+          if(ends[51]>=biggest215228){
+            biggest215228=ends[51];
           }
-          if(ends[52]>=biggest226033){
-            biggest226033=ends[52];
+          if(ends[52]>=biggest215228){
+            biggest215228=ends[52];
           }
-          if(biggest226033 == 1){
+          if(biggest215228 == 1){
             active[49]=1;
             ends[49]=1;
             tdone[49]=1;
@@ -1137,8 +1137,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread226019(int [] tdone, int [] ends){
-        S225351=1;
+  public void thread215214(int [] tdone, int [] ends){
+        S214546=1;
     if((Integer)(zoneThreeOccupancy.getpreval() == null ? 0 : ((Integer)zoneThreeOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneThreeLightingI.getpreval() == null ? 0 : ((Integer)zoneThreeLightingI.getpreval()).intValue()) >= 50 || !afterhrs_6.getprestatus()){//sysj\ECS.sysj line: 59, column: 21
       test_45.setPresent();//sysj\ECS.sysj line: 60, column: 21
       currsigs.addElement(test_45);
@@ -1153,18 +1153,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread226018(int [] tdone, int [] ends){
-        S225343=1;
+  public void thread215213(int [] tdone, int [] ends){
+        S214538=1;
     active[47]=1;
     ends[47]=1;
     tdone[47]=1;
   }
 
-  public void thread226017(int [] tdone, int [] ends){
-        S225340=1;
+  public void thread215212(int [] tdone, int [] ends){
+        S214535=1;
     zoneOcc_thread_46 = (Integer)(zoneThreeOccupancy.getpreval() == null ? 0 : ((Integer)zoneThreeOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 41, column: 13
     zoneLightInt_thread_46 = (Integer)(zoneThreeLightingI.getpreval() == null ? 0 : ((Integer)zoneThreeLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 42, column: 13
-    S225331=0;
+    S214526=0;
     if(afterhrs_6.getprestatus() && zoneOcc_thread_46 > 0 && zoneLightInt_thread_46 < 50){//sysj\ECS.sysj line: 44, column: 17
       zoneThreeLightONOFF.setPresent();//sysj\ECS.sysj line: 45, column: 17
       currsigs.addElement(zoneThreeLightONOFF);
@@ -1173,15 +1173,15 @@ public class ECS_LightingController extends ClockDomain{
       tdone[46]=1;
     }
     else {
-      S225331=1;
+      S214526=1;
       active[46]=1;
       ends[46]=1;
       tdone[46]=1;
     }
   }
 
-  public void thread226015(int [] tdone, int [] ends){
-        S225351=1;
+  public void thread215210(int [] tdone, int [] ends){
+        S214546=1;
     if((Integer)(zoneThreeOccupancy.getpreval() == null ? 0 : ((Integer)zoneThreeOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneThreeLightingI.getpreval() == null ? 0 : ((Integer)zoneThreeLightingI.getpreval()).intValue()) >= 50 || !afterhrs_6.getprestatus()){//sysj\ECS.sysj line: 59, column: 21
       test_45.setPresent();//sysj\ECS.sysj line: 60, column: 21
       currsigs.addElement(test_45);
@@ -1196,18 +1196,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread226014(int [] tdone, int [] ends){
-        S225343=1;
+  public void thread215209(int [] tdone, int [] ends){
+        S214538=1;
     active[47]=1;
     ends[47]=1;
     tdone[47]=1;
   }
 
-  public void thread226013(int [] tdone, int [] ends){
-        S225340=1;
+  public void thread215208(int [] tdone, int [] ends){
+        S214535=1;
     zoneOcc_thread_46 = (Integer)(zoneThreeOccupancy.getpreval() == null ? 0 : ((Integer)zoneThreeOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 41, column: 13
     zoneLightInt_thread_46 = (Integer)(zoneThreeLightingI.getpreval() == null ? 0 : ((Integer)zoneThreeLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 42, column: 13
-    S225331=0;
+    S214526=0;
     if(afterhrs_6.getprestatus() && zoneOcc_thread_46 > 0 && zoneLightInt_thread_46 < 50){//sysj\ECS.sysj line: 44, column: 17
       zoneThreeLightONOFF.setPresent();//sysj\ECS.sysj line: 45, column: 17
       currsigs.addElement(zoneThreeLightONOFF);
@@ -1216,15 +1216,15 @@ public class ECS_LightingController extends ClockDomain{
       tdone[46]=1;
     }
     else {
-      S225331=1;
+      S214526=1;
       active[46]=1;
       ends[46]=1;
       tdone[46]=1;
     }
   }
 
-  public void thread226011(int [] tdone, int [] ends){
-        switch(S225351){
+  public void thread215206(int [] tdone, int [] ends){
+        switch(S214546){
       case 0 : 
         active[48]=0;
         ends[48]=0;
@@ -1249,8 +1249,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread226010(int [] tdone, int [] ends){
-        switch(S225343){
+  public void thread215205(int [] tdone, int [] ends){
+        switch(S214538){
       case 0 : 
         active[47]=0;
         ends[47]=0;
@@ -1272,8 +1272,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread226009(int [] tdone, int [] ends){
-        switch(S225340){
+  public void thread215204(int [] tdone, int [] ends){
+        switch(S214535){
       case 0 : 
         active[46]=0;
         ends[46]=0;
@@ -1281,7 +1281,7 @@ public class ECS_LightingController extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S225331){
+        switch(S214526){
           case 0 : 
             zoneThreeLightONOFF.setPresent();//sysj\ECS.sysj line: 45, column: 17
             currsigs.addElement(zoneThreeLightONOFF);
@@ -1291,8 +1291,8 @@ public class ECS_LightingController extends ClockDomain{
             break;
           
           case 1 : 
-            S225331=1;
-            S225340=0;
+            S214526=1;
+            S214535=0;
             active[46]=0;
             ends[46]=0;
             tdone[46]=1;
@@ -1304,8 +1304,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread226008(int [] tdone, int [] ends){
-        switch(S225420){
+  public void thread215203(int [] tdone, int [] ends){
+        switch(S214615){
       case 0 : 
         active[45]=0;
         ends[45]=0;
@@ -1314,62 +1314,62 @@ public class ECS_LightingController extends ClockDomain{
       
       case 1 : 
         test_45.setClear();//sysj\ECS.sysj line: 37, column: 5
-        thread226009(tdone,ends);
-        thread226010(tdone,ends);
-        thread226011(tdone,ends);
-        int biggest226012 = 0;
-        if(ends[46]>=biggest226012){
-          biggest226012=ends[46];
+        thread215204(tdone,ends);
+        thread215205(tdone,ends);
+        thread215206(tdone,ends);
+        int biggest215207 = 0;
+        if(ends[46]>=biggest215207){
+          biggest215207=ends[46];
         }
-        if(ends[47]>=biggest226012){
-          biggest226012=ends[47];
+        if(ends[47]>=biggest215207){
+          biggest215207=ends[47];
         }
-        if(ends[48]>=biggest226012){
-          biggest226012=ends[48];
+        if(ends[48]>=biggest215207){
+          biggest215207=ends[48];
         }
-        if(biggest226012 == 1){
+        if(biggest215207 == 1){
           active[45]=1;
           ends[45]=1;
           tdone[45]=1;
         }
-        if(biggest226012 == 2){
+        if(biggest215207 == 2){
           ends[45]=2;
           ;//sysj\ECS.sysj line: 39, column: 5
-          thread226013(tdone,ends);
-          thread226014(tdone,ends);
-          thread226015(tdone,ends);
-          int biggest226016 = 0;
-          if(ends[46]>=biggest226016){
-            biggest226016=ends[46];
+          thread215208(tdone,ends);
+          thread215209(tdone,ends);
+          thread215210(tdone,ends);
+          int biggest215211 = 0;
+          if(ends[46]>=biggest215211){
+            biggest215211=ends[46];
           }
-          if(ends[47]>=biggest226016){
-            biggest226016=ends[47];
+          if(ends[47]>=biggest215211){
+            biggest215211=ends[47];
           }
-          if(ends[48]>=biggest226016){
-            biggest226016=ends[48];
+          if(ends[48]>=biggest215211){
+            biggest215211=ends[48];
           }
-          if(biggest226016 == 1){
+          if(biggest215211 == 1){
             active[45]=1;
             ends[45]=1;
             tdone[45]=1;
           }
         }
         //FINXME code
-        if(biggest226012 == 0){
-          thread226017(tdone,ends);
-          thread226018(tdone,ends);
-          thread226019(tdone,ends);
-          int biggest226020 = 0;
-          if(ends[46]>=biggest226020){
-            biggest226020=ends[46];
+        if(biggest215207 == 0){
+          thread215212(tdone,ends);
+          thread215213(tdone,ends);
+          thread215214(tdone,ends);
+          int biggest215215 = 0;
+          if(ends[46]>=biggest215215){
+            biggest215215=ends[46];
           }
-          if(ends[47]>=biggest226020){
-            biggest226020=ends[47];
+          if(ends[47]>=biggest215215){
+            biggest215215=ends[47];
           }
-          if(ends[48]>=biggest226020){
-            biggest226020=ends[48];
+          if(ends[48]>=biggest215215){
+            biggest215215=ends[48];
           }
-          if(biggest226020 == 1){
+          if(biggest215215 == 1){
             active[45]=1;
             ends[45]=1;
             tdone[45]=1;
@@ -1380,8 +1380,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread226006(int [] tdone, int [] ends){
-        S225259=1;
+  public void thread215201(int [] tdone, int [] ends){
+        S214454=1;
     if((Integer)(zoneTwoOccupancy.getpreval() == null ? 0 : ((Integer)zoneTwoOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneTwoLightingI.getpreval() == null ? 0 : ((Integer)zoneTwoLightingI.getpreval()).intValue()) >= 50 || !afterhrs_6.getprestatus()){//sysj\ECS.sysj line: 59, column: 21
       test_41.setPresent();//sysj\ECS.sysj line: 60, column: 21
       currsigs.addElement(test_41);
@@ -1396,18 +1396,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread226005(int [] tdone, int [] ends){
-        S225251=1;
+  public void thread215200(int [] tdone, int [] ends){
+        S214446=1;
     active[43]=1;
     ends[43]=1;
     tdone[43]=1;
   }
 
-  public void thread226004(int [] tdone, int [] ends){
-        S225248=1;
+  public void thread215199(int [] tdone, int [] ends){
+        S214443=1;
     zoneOcc_thread_42 = (Integer)(zoneTwoOccupancy.getpreval() == null ? 0 : ((Integer)zoneTwoOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 41, column: 13
     zoneLightInt_thread_42 = (Integer)(zoneTwoLightingI.getpreval() == null ? 0 : ((Integer)zoneTwoLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 42, column: 13
-    S225239=0;
+    S214434=0;
     if(afterhrs_6.getprestatus() && zoneOcc_thread_42 > 0 && zoneLightInt_thread_42 < 50){//sysj\ECS.sysj line: 44, column: 17
       zoneTwoLightONOFF.setPresent();//sysj\ECS.sysj line: 45, column: 17
       currsigs.addElement(zoneTwoLightONOFF);
@@ -1416,15 +1416,15 @@ public class ECS_LightingController extends ClockDomain{
       tdone[42]=1;
     }
     else {
-      S225239=1;
+      S214434=1;
       active[42]=1;
       ends[42]=1;
       tdone[42]=1;
     }
   }
 
-  public void thread226002(int [] tdone, int [] ends){
-        S225259=1;
+  public void thread215197(int [] tdone, int [] ends){
+        S214454=1;
     if((Integer)(zoneTwoOccupancy.getpreval() == null ? 0 : ((Integer)zoneTwoOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneTwoLightingI.getpreval() == null ? 0 : ((Integer)zoneTwoLightingI.getpreval()).intValue()) >= 50 || !afterhrs_6.getprestatus()){//sysj\ECS.sysj line: 59, column: 21
       test_41.setPresent();//sysj\ECS.sysj line: 60, column: 21
       currsigs.addElement(test_41);
@@ -1439,18 +1439,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread226001(int [] tdone, int [] ends){
-        S225251=1;
+  public void thread215196(int [] tdone, int [] ends){
+        S214446=1;
     active[43]=1;
     ends[43]=1;
     tdone[43]=1;
   }
 
-  public void thread226000(int [] tdone, int [] ends){
-        S225248=1;
+  public void thread215195(int [] tdone, int [] ends){
+        S214443=1;
     zoneOcc_thread_42 = (Integer)(zoneTwoOccupancy.getpreval() == null ? 0 : ((Integer)zoneTwoOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 41, column: 13
     zoneLightInt_thread_42 = (Integer)(zoneTwoLightingI.getpreval() == null ? 0 : ((Integer)zoneTwoLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 42, column: 13
-    S225239=0;
+    S214434=0;
     if(afterhrs_6.getprestatus() && zoneOcc_thread_42 > 0 && zoneLightInt_thread_42 < 50){//sysj\ECS.sysj line: 44, column: 17
       zoneTwoLightONOFF.setPresent();//sysj\ECS.sysj line: 45, column: 17
       currsigs.addElement(zoneTwoLightONOFF);
@@ -1459,15 +1459,15 @@ public class ECS_LightingController extends ClockDomain{
       tdone[42]=1;
     }
     else {
-      S225239=1;
+      S214434=1;
       active[42]=1;
       ends[42]=1;
       tdone[42]=1;
     }
   }
 
-  public void thread225998(int [] tdone, int [] ends){
-        switch(S225259){
+  public void thread215193(int [] tdone, int [] ends){
+        switch(S214454){
       case 0 : 
         active[44]=0;
         ends[44]=0;
@@ -1492,8 +1492,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225997(int [] tdone, int [] ends){
-        switch(S225251){
+  public void thread215192(int [] tdone, int [] ends){
+        switch(S214446){
       case 0 : 
         active[43]=0;
         ends[43]=0;
@@ -1515,8 +1515,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225996(int [] tdone, int [] ends){
-        switch(S225248){
+  public void thread215191(int [] tdone, int [] ends){
+        switch(S214443){
       case 0 : 
         active[42]=0;
         ends[42]=0;
@@ -1524,7 +1524,7 @@ public class ECS_LightingController extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S225239){
+        switch(S214434){
           case 0 : 
             zoneTwoLightONOFF.setPresent();//sysj\ECS.sysj line: 45, column: 17
             currsigs.addElement(zoneTwoLightONOFF);
@@ -1534,8 +1534,8 @@ public class ECS_LightingController extends ClockDomain{
             break;
           
           case 1 : 
-            S225239=1;
-            S225248=0;
+            S214434=1;
+            S214443=0;
             active[42]=0;
             ends[42]=0;
             tdone[42]=1;
@@ -1547,8 +1547,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225995(int [] tdone, int [] ends){
-        switch(S225328){
+  public void thread215190(int [] tdone, int [] ends){
+        switch(S214523){
       case 0 : 
         active[41]=0;
         ends[41]=0;
@@ -1557,62 +1557,62 @@ public class ECS_LightingController extends ClockDomain{
       
       case 1 : 
         test_41.setClear();//sysj\ECS.sysj line: 37, column: 5
-        thread225996(tdone,ends);
-        thread225997(tdone,ends);
-        thread225998(tdone,ends);
-        int biggest225999 = 0;
-        if(ends[42]>=biggest225999){
-          biggest225999=ends[42];
+        thread215191(tdone,ends);
+        thread215192(tdone,ends);
+        thread215193(tdone,ends);
+        int biggest215194 = 0;
+        if(ends[42]>=biggest215194){
+          biggest215194=ends[42];
         }
-        if(ends[43]>=biggest225999){
-          biggest225999=ends[43];
+        if(ends[43]>=biggest215194){
+          biggest215194=ends[43];
         }
-        if(ends[44]>=biggest225999){
-          biggest225999=ends[44];
+        if(ends[44]>=biggest215194){
+          biggest215194=ends[44];
         }
-        if(biggest225999 == 1){
+        if(biggest215194 == 1){
           active[41]=1;
           ends[41]=1;
           tdone[41]=1;
         }
-        if(biggest225999 == 2){
+        if(biggest215194 == 2){
           ends[41]=2;
           ;//sysj\ECS.sysj line: 39, column: 5
-          thread226000(tdone,ends);
-          thread226001(tdone,ends);
-          thread226002(tdone,ends);
-          int biggest226003 = 0;
-          if(ends[42]>=biggest226003){
-            biggest226003=ends[42];
+          thread215195(tdone,ends);
+          thread215196(tdone,ends);
+          thread215197(tdone,ends);
+          int biggest215198 = 0;
+          if(ends[42]>=biggest215198){
+            biggest215198=ends[42];
           }
-          if(ends[43]>=biggest226003){
-            biggest226003=ends[43];
+          if(ends[43]>=biggest215198){
+            biggest215198=ends[43];
           }
-          if(ends[44]>=biggest226003){
-            biggest226003=ends[44];
+          if(ends[44]>=biggest215198){
+            biggest215198=ends[44];
           }
-          if(biggest226003 == 1){
+          if(biggest215198 == 1){
             active[41]=1;
             ends[41]=1;
             tdone[41]=1;
           }
         }
         //FINXME code
-        if(biggest225999 == 0){
-          thread226004(tdone,ends);
-          thread226005(tdone,ends);
-          thread226006(tdone,ends);
-          int biggest226007 = 0;
-          if(ends[42]>=biggest226007){
-            biggest226007=ends[42];
+        if(biggest215194 == 0){
+          thread215199(tdone,ends);
+          thread215200(tdone,ends);
+          thread215201(tdone,ends);
+          int biggest215202 = 0;
+          if(ends[42]>=biggest215202){
+            biggest215202=ends[42];
           }
-          if(ends[43]>=biggest226007){
-            biggest226007=ends[43];
+          if(ends[43]>=biggest215202){
+            biggest215202=ends[43];
           }
-          if(ends[44]>=biggest226007){
-            biggest226007=ends[44];
+          if(ends[44]>=biggest215202){
+            biggest215202=ends[44];
           }
-          if(biggest226007 == 1){
+          if(biggest215202 == 1){
             active[41]=1;
             ends[41]=1;
             tdone[41]=1;
@@ -1623,8 +1623,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225993(int [] tdone, int [] ends){
-        S225167=1;
+  public void thread215188(int [] tdone, int [] ends){
+        S214362=1;
     if((Integer)(zoneOneOccupancy.getpreval() == null ? 0 : ((Integer)zoneOneOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneOneLightingI.getpreval() == null ? 0 : ((Integer)zoneOneLightingI.getpreval()).intValue()) >= 50 || !afterhrs_6.getprestatus()){//sysj\ECS.sysj line: 59, column: 21
       test_37.setPresent();//sysj\ECS.sysj line: 60, column: 21
       currsigs.addElement(test_37);
@@ -1639,18 +1639,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225992(int [] tdone, int [] ends){
-        S225159=1;
+  public void thread215187(int [] tdone, int [] ends){
+        S214354=1;
     active[39]=1;
     ends[39]=1;
     tdone[39]=1;
   }
 
-  public void thread225991(int [] tdone, int [] ends){
-        S225156=1;
+  public void thread215186(int [] tdone, int [] ends){
+        S214351=1;
     zoneOcc_thread_38 = (Integer)(zoneOneOccupancy.getpreval() == null ? 0 : ((Integer)zoneOneOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 41, column: 13
     zoneLightInt_thread_38 = (Integer)(zoneOneLightingI.getpreval() == null ? 0 : ((Integer)zoneOneLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 42, column: 13
-    S225147=0;
+    S214342=0;
     if(afterhrs_6.getprestatus() && zoneOcc_thread_38 > 0 && zoneLightInt_thread_38 < 50){//sysj\ECS.sysj line: 44, column: 17
       zoneOneLightONOFF.setPresent();//sysj\ECS.sysj line: 45, column: 17
       currsigs.addElement(zoneOneLightONOFF);
@@ -1659,15 +1659,15 @@ public class ECS_LightingController extends ClockDomain{
       tdone[38]=1;
     }
     else {
-      S225147=1;
+      S214342=1;
       active[38]=1;
       ends[38]=1;
       tdone[38]=1;
     }
   }
 
-  public void thread225989(int [] tdone, int [] ends){
-        S225167=1;
+  public void thread215184(int [] tdone, int [] ends){
+        S214362=1;
     if((Integer)(zoneOneOccupancy.getpreval() == null ? 0 : ((Integer)zoneOneOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneOneLightingI.getpreval() == null ? 0 : ((Integer)zoneOneLightingI.getpreval()).intValue()) >= 50 || !afterhrs_6.getprestatus()){//sysj\ECS.sysj line: 59, column: 21
       test_37.setPresent();//sysj\ECS.sysj line: 60, column: 21
       currsigs.addElement(test_37);
@@ -1682,18 +1682,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225988(int [] tdone, int [] ends){
-        S225159=1;
+  public void thread215183(int [] tdone, int [] ends){
+        S214354=1;
     active[39]=1;
     ends[39]=1;
     tdone[39]=1;
   }
 
-  public void thread225987(int [] tdone, int [] ends){
-        S225156=1;
+  public void thread215182(int [] tdone, int [] ends){
+        S214351=1;
     zoneOcc_thread_38 = (Integer)(zoneOneOccupancy.getpreval() == null ? 0 : ((Integer)zoneOneOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 41, column: 13
     zoneLightInt_thread_38 = (Integer)(zoneOneLightingI.getpreval() == null ? 0 : ((Integer)zoneOneLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 42, column: 13
-    S225147=0;
+    S214342=0;
     if(afterhrs_6.getprestatus() && zoneOcc_thread_38 > 0 && zoneLightInt_thread_38 < 50){//sysj\ECS.sysj line: 44, column: 17
       zoneOneLightONOFF.setPresent();//sysj\ECS.sysj line: 45, column: 17
       currsigs.addElement(zoneOneLightONOFF);
@@ -1702,15 +1702,15 @@ public class ECS_LightingController extends ClockDomain{
       tdone[38]=1;
     }
     else {
-      S225147=1;
+      S214342=1;
       active[38]=1;
       ends[38]=1;
       tdone[38]=1;
     }
   }
 
-  public void thread225985(int [] tdone, int [] ends){
-        switch(S225167){
+  public void thread215180(int [] tdone, int [] ends){
+        switch(S214362){
       case 0 : 
         active[40]=0;
         ends[40]=0;
@@ -1735,8 +1735,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225984(int [] tdone, int [] ends){
-        switch(S225159){
+  public void thread215179(int [] tdone, int [] ends){
+        switch(S214354){
       case 0 : 
         active[39]=0;
         ends[39]=0;
@@ -1758,8 +1758,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225983(int [] tdone, int [] ends){
-        switch(S225156){
+  public void thread215178(int [] tdone, int [] ends){
+        switch(S214351){
       case 0 : 
         active[38]=0;
         ends[38]=0;
@@ -1767,7 +1767,7 @@ public class ECS_LightingController extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S225147){
+        switch(S214342){
           case 0 : 
             zoneOneLightONOFF.setPresent();//sysj\ECS.sysj line: 45, column: 17
             currsigs.addElement(zoneOneLightONOFF);
@@ -1777,8 +1777,8 @@ public class ECS_LightingController extends ClockDomain{
             break;
           
           case 1 : 
-            S225147=1;
-            S225156=0;
+            S214342=1;
+            S214351=0;
             active[38]=0;
             ends[38]=0;
             tdone[38]=1;
@@ -1790,8 +1790,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225982(int [] tdone, int [] ends){
-        switch(S225236){
+  public void thread215177(int [] tdone, int [] ends){
+        switch(S214431){
       case 0 : 
         active[37]=0;
         ends[37]=0;
@@ -1800,62 +1800,62 @@ public class ECS_LightingController extends ClockDomain{
       
       case 1 : 
         test_37.setClear();//sysj\ECS.sysj line: 37, column: 5
-        thread225983(tdone,ends);
-        thread225984(tdone,ends);
-        thread225985(tdone,ends);
-        int biggest225986 = 0;
-        if(ends[38]>=biggest225986){
-          biggest225986=ends[38];
+        thread215178(tdone,ends);
+        thread215179(tdone,ends);
+        thread215180(tdone,ends);
+        int biggest215181 = 0;
+        if(ends[38]>=biggest215181){
+          biggest215181=ends[38];
         }
-        if(ends[39]>=biggest225986){
-          biggest225986=ends[39];
+        if(ends[39]>=biggest215181){
+          biggest215181=ends[39];
         }
-        if(ends[40]>=biggest225986){
-          biggest225986=ends[40];
+        if(ends[40]>=biggest215181){
+          biggest215181=ends[40];
         }
-        if(biggest225986 == 1){
+        if(biggest215181 == 1){
           active[37]=1;
           ends[37]=1;
           tdone[37]=1;
         }
-        if(biggest225986 == 2){
+        if(biggest215181 == 2){
           ends[37]=2;
           ;//sysj\ECS.sysj line: 39, column: 5
-          thread225987(tdone,ends);
-          thread225988(tdone,ends);
-          thread225989(tdone,ends);
-          int biggest225990 = 0;
-          if(ends[38]>=biggest225990){
-            biggest225990=ends[38];
+          thread215182(tdone,ends);
+          thread215183(tdone,ends);
+          thread215184(tdone,ends);
+          int biggest215185 = 0;
+          if(ends[38]>=biggest215185){
+            biggest215185=ends[38];
           }
-          if(ends[39]>=biggest225990){
-            biggest225990=ends[39];
+          if(ends[39]>=biggest215185){
+            biggest215185=ends[39];
           }
-          if(ends[40]>=biggest225990){
-            biggest225990=ends[40];
+          if(ends[40]>=biggest215185){
+            biggest215185=ends[40];
           }
-          if(biggest225990 == 1){
+          if(biggest215185 == 1){
             active[37]=1;
             ends[37]=1;
             tdone[37]=1;
           }
         }
         //FINXME code
-        if(biggest225986 == 0){
-          thread225991(tdone,ends);
-          thread225992(tdone,ends);
-          thread225993(tdone,ends);
-          int biggest225994 = 0;
-          if(ends[38]>=biggest225994){
-            biggest225994=ends[38];
+        if(biggest215181 == 0){
+          thread215186(tdone,ends);
+          thread215187(tdone,ends);
+          thread215188(tdone,ends);
+          int biggest215189 = 0;
+          if(ends[38]>=biggest215189){
+            biggest215189=ends[38];
           }
-          if(ends[39]>=biggest225994){
-            biggest225994=ends[39];
+          if(ends[39]>=biggest215189){
+            biggest215189=ends[39];
           }
-          if(ends[40]>=biggest225994){
-            biggest225994=ends[40];
+          if(ends[40]>=biggest215189){
+            biggest215189=ends[40];
           }
-          if(biggest225994 == 1){
+          if(biggest215189 == 1){
             active[37]=1;
             ends[37]=1;
             tdone[37]=1;
@@ -1866,8 +1866,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225980(int [] tdone, int [] ends){
-        S225075=1;
+  public void thread215175(int [] tdone, int [] ends){
+        S214270=1;
     if((Integer)(zoneSevenOccupancy.getpreval() == null ? 0 : ((Integer)zoneSevenOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneSevenLightingI.getpreval() == null ? 0 : ((Integer)zoneSevenLightingI.getpreval()).intValue()) >= 50 || !workhrs_6.getprestatus()){//sysj\ECS.sysj line: 25, column: 21
       test_33.setPresent();//sysj\ECS.sysj line: 26, column: 21
       currsigs.addElement(test_33);
@@ -1882,18 +1882,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225979(int [] tdone, int [] ends){
-        S225067=1;
+  public void thread215174(int [] tdone, int [] ends){
+        S214262=1;
     active[35]=1;
     ends[35]=1;
     tdone[35]=1;
   }
 
-  public void thread225978(int [] tdone, int [] ends){
-        S225064=1;
+  public void thread215173(int [] tdone, int [] ends){
+        S214259=1;
     zoneOcc_thread_34 = (Integer)(zoneSevenOccupancy.getpreval() == null ? 0 : ((Integer)zoneSevenOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 7, column: 13
     zoneLightInt_thread_34 = (Integer)(zoneSevenLightingI.getpreval() == null ? 0 : ((Integer)zoneSevenLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 8, column: 13
-    S225055=0;
+    S214250=0;
     if(workhrs_6.getprestatus() && zoneOcc_thread_34 > 0 && zoneLightInt_thread_34 < 50){//sysj\ECS.sysj line: 10, column: 17
       zoneSevenWindowONOFF.setPresent();//sysj\ECS.sysj line: 11, column: 17
       currsigs.addElement(zoneSevenWindowONOFF);
@@ -1902,15 +1902,15 @@ public class ECS_LightingController extends ClockDomain{
       tdone[34]=1;
     }
     else {
-      S225055=1;
+      S214250=1;
       active[34]=1;
       ends[34]=1;
       tdone[34]=1;
     }
   }
 
-  public void thread225976(int [] tdone, int [] ends){
-        S225075=1;
+  public void thread215171(int [] tdone, int [] ends){
+        S214270=1;
     if((Integer)(zoneSevenOccupancy.getpreval() == null ? 0 : ((Integer)zoneSevenOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneSevenLightingI.getpreval() == null ? 0 : ((Integer)zoneSevenLightingI.getpreval()).intValue()) >= 50 || !workhrs_6.getprestatus()){//sysj\ECS.sysj line: 25, column: 21
       test_33.setPresent();//sysj\ECS.sysj line: 26, column: 21
       currsigs.addElement(test_33);
@@ -1925,18 +1925,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225975(int [] tdone, int [] ends){
-        S225067=1;
+  public void thread215170(int [] tdone, int [] ends){
+        S214262=1;
     active[35]=1;
     ends[35]=1;
     tdone[35]=1;
   }
 
-  public void thread225974(int [] tdone, int [] ends){
-        S225064=1;
+  public void thread215169(int [] tdone, int [] ends){
+        S214259=1;
     zoneOcc_thread_34 = (Integer)(zoneSevenOccupancy.getpreval() == null ? 0 : ((Integer)zoneSevenOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 7, column: 13
     zoneLightInt_thread_34 = (Integer)(zoneSevenLightingI.getpreval() == null ? 0 : ((Integer)zoneSevenLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 8, column: 13
-    S225055=0;
+    S214250=0;
     if(workhrs_6.getprestatus() && zoneOcc_thread_34 > 0 && zoneLightInt_thread_34 < 50){//sysj\ECS.sysj line: 10, column: 17
       zoneSevenWindowONOFF.setPresent();//sysj\ECS.sysj line: 11, column: 17
       currsigs.addElement(zoneSevenWindowONOFF);
@@ -1945,15 +1945,15 @@ public class ECS_LightingController extends ClockDomain{
       tdone[34]=1;
     }
     else {
-      S225055=1;
+      S214250=1;
       active[34]=1;
       ends[34]=1;
       tdone[34]=1;
     }
   }
 
-  public void thread225972(int [] tdone, int [] ends){
-        switch(S225075){
+  public void thread215167(int [] tdone, int [] ends){
+        switch(S214270){
       case 0 : 
         active[36]=0;
         ends[36]=0;
@@ -1978,8 +1978,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225971(int [] tdone, int [] ends){
-        switch(S225067){
+  public void thread215166(int [] tdone, int [] ends){
+        switch(S214262){
       case 0 : 
         active[35]=0;
         ends[35]=0;
@@ -2001,8 +2001,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225970(int [] tdone, int [] ends){
-        switch(S225064){
+  public void thread215165(int [] tdone, int [] ends){
+        switch(S214259){
       case 0 : 
         active[34]=0;
         ends[34]=0;
@@ -2010,7 +2010,7 @@ public class ECS_LightingController extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S225055){
+        switch(S214250){
           case 0 : 
             zoneSevenWindowONOFF.setPresent();//sysj\ECS.sysj line: 11, column: 17
             currsigs.addElement(zoneSevenWindowONOFF);
@@ -2020,8 +2020,8 @@ public class ECS_LightingController extends ClockDomain{
             break;
           
           case 1 : 
-            S225055=1;
-            S225064=0;
+            S214250=1;
+            S214259=0;
             active[34]=0;
             ends[34]=0;
             tdone[34]=1;
@@ -2033,8 +2033,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225969(int [] tdone, int [] ends){
-        switch(S225144){
+  public void thread215164(int [] tdone, int [] ends){
+        switch(S214339){
       case 0 : 
         active[33]=0;
         ends[33]=0;
@@ -2043,62 +2043,62 @@ public class ECS_LightingController extends ClockDomain{
       
       case 1 : 
         test_33.setClear();//sysj\ECS.sysj line: 3, column: 5
-        thread225970(tdone,ends);
-        thread225971(tdone,ends);
-        thread225972(tdone,ends);
-        int biggest225973 = 0;
-        if(ends[34]>=biggest225973){
-          biggest225973=ends[34];
+        thread215165(tdone,ends);
+        thread215166(tdone,ends);
+        thread215167(tdone,ends);
+        int biggest215168 = 0;
+        if(ends[34]>=biggest215168){
+          biggest215168=ends[34];
         }
-        if(ends[35]>=biggest225973){
-          biggest225973=ends[35];
+        if(ends[35]>=biggest215168){
+          biggest215168=ends[35];
         }
-        if(ends[36]>=biggest225973){
-          biggest225973=ends[36];
+        if(ends[36]>=biggest215168){
+          biggest215168=ends[36];
         }
-        if(biggest225973 == 1){
+        if(biggest215168 == 1){
           active[33]=1;
           ends[33]=1;
           tdone[33]=1;
         }
-        if(biggest225973 == 2){
+        if(biggest215168 == 2){
           ends[33]=2;
           ;//sysj\ECS.sysj line: 5, column: 5
-          thread225974(tdone,ends);
-          thread225975(tdone,ends);
-          thread225976(tdone,ends);
-          int biggest225977 = 0;
-          if(ends[34]>=biggest225977){
-            biggest225977=ends[34];
+          thread215169(tdone,ends);
+          thread215170(tdone,ends);
+          thread215171(tdone,ends);
+          int biggest215172 = 0;
+          if(ends[34]>=biggest215172){
+            biggest215172=ends[34];
           }
-          if(ends[35]>=biggest225977){
-            biggest225977=ends[35];
+          if(ends[35]>=biggest215172){
+            biggest215172=ends[35];
           }
-          if(ends[36]>=biggest225977){
-            biggest225977=ends[36];
+          if(ends[36]>=biggest215172){
+            biggest215172=ends[36];
           }
-          if(biggest225977 == 1){
+          if(biggest215172 == 1){
             active[33]=1;
             ends[33]=1;
             tdone[33]=1;
           }
         }
         //FINXME code
-        if(biggest225973 == 0){
-          thread225978(tdone,ends);
-          thread225979(tdone,ends);
-          thread225980(tdone,ends);
-          int biggest225981 = 0;
-          if(ends[34]>=biggest225981){
-            biggest225981=ends[34];
+        if(biggest215168 == 0){
+          thread215173(tdone,ends);
+          thread215174(tdone,ends);
+          thread215175(tdone,ends);
+          int biggest215176 = 0;
+          if(ends[34]>=biggest215176){
+            biggest215176=ends[34];
           }
-          if(ends[35]>=biggest225981){
-            biggest225981=ends[35];
+          if(ends[35]>=biggest215176){
+            biggest215176=ends[35];
           }
-          if(ends[36]>=biggest225981){
-            biggest225981=ends[36];
+          if(ends[36]>=biggest215176){
+            biggest215176=ends[36];
           }
-          if(biggest225981 == 1){
+          if(biggest215176 == 1){
             active[33]=1;
             ends[33]=1;
             tdone[33]=1;
@@ -2109,8 +2109,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225967(int [] tdone, int [] ends){
-        S224983=1;
+  public void thread215162(int [] tdone, int [] ends){
+        S214178=1;
     if((Integer)(zoneSixOccupancy.getpreval() == null ? 0 : ((Integer)zoneSixOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneSixLightingI.getpreval() == null ? 0 : ((Integer)zoneSixLightingI.getpreval()).intValue()) >= 50 || !workhrs_6.getprestatus()){//sysj\ECS.sysj line: 25, column: 21
       test_29.setPresent();//sysj\ECS.sysj line: 26, column: 21
       currsigs.addElement(test_29);
@@ -2125,18 +2125,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225966(int [] tdone, int [] ends){
-        S224975=1;
+  public void thread215161(int [] tdone, int [] ends){
+        S214170=1;
     active[31]=1;
     ends[31]=1;
     tdone[31]=1;
   }
 
-  public void thread225965(int [] tdone, int [] ends){
-        S224972=1;
+  public void thread215160(int [] tdone, int [] ends){
+        S214167=1;
     zoneOcc_thread_30 = (Integer)(zoneSixOccupancy.getpreval() == null ? 0 : ((Integer)zoneSixOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 7, column: 13
     zoneLightInt_thread_30 = (Integer)(zoneSixLightingI.getpreval() == null ? 0 : ((Integer)zoneSixLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 8, column: 13
-    S224963=0;
+    S214158=0;
     if(workhrs_6.getprestatus() && zoneOcc_thread_30 > 0 && zoneLightInt_thread_30 < 50){//sysj\ECS.sysj line: 10, column: 17
       zoneSixWindowONOFF.setPresent();//sysj\ECS.sysj line: 11, column: 17
       currsigs.addElement(zoneSixWindowONOFF);
@@ -2145,15 +2145,15 @@ public class ECS_LightingController extends ClockDomain{
       tdone[30]=1;
     }
     else {
-      S224963=1;
+      S214158=1;
       active[30]=1;
       ends[30]=1;
       tdone[30]=1;
     }
   }
 
-  public void thread225963(int [] tdone, int [] ends){
-        S224983=1;
+  public void thread215158(int [] tdone, int [] ends){
+        S214178=1;
     if((Integer)(zoneSixOccupancy.getpreval() == null ? 0 : ((Integer)zoneSixOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneSixLightingI.getpreval() == null ? 0 : ((Integer)zoneSixLightingI.getpreval()).intValue()) >= 50 || !workhrs_6.getprestatus()){//sysj\ECS.sysj line: 25, column: 21
       test_29.setPresent();//sysj\ECS.sysj line: 26, column: 21
       currsigs.addElement(test_29);
@@ -2168,18 +2168,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225962(int [] tdone, int [] ends){
-        S224975=1;
+  public void thread215157(int [] tdone, int [] ends){
+        S214170=1;
     active[31]=1;
     ends[31]=1;
     tdone[31]=1;
   }
 
-  public void thread225961(int [] tdone, int [] ends){
-        S224972=1;
+  public void thread215156(int [] tdone, int [] ends){
+        S214167=1;
     zoneOcc_thread_30 = (Integer)(zoneSixOccupancy.getpreval() == null ? 0 : ((Integer)zoneSixOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 7, column: 13
     zoneLightInt_thread_30 = (Integer)(zoneSixLightingI.getpreval() == null ? 0 : ((Integer)zoneSixLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 8, column: 13
-    S224963=0;
+    S214158=0;
     if(workhrs_6.getprestatus() && zoneOcc_thread_30 > 0 && zoneLightInt_thread_30 < 50){//sysj\ECS.sysj line: 10, column: 17
       zoneSixWindowONOFF.setPresent();//sysj\ECS.sysj line: 11, column: 17
       currsigs.addElement(zoneSixWindowONOFF);
@@ -2188,15 +2188,15 @@ public class ECS_LightingController extends ClockDomain{
       tdone[30]=1;
     }
     else {
-      S224963=1;
+      S214158=1;
       active[30]=1;
       ends[30]=1;
       tdone[30]=1;
     }
   }
 
-  public void thread225959(int [] tdone, int [] ends){
-        switch(S224983){
+  public void thread215154(int [] tdone, int [] ends){
+        switch(S214178){
       case 0 : 
         active[32]=0;
         ends[32]=0;
@@ -2221,8 +2221,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225958(int [] tdone, int [] ends){
-        switch(S224975){
+  public void thread215153(int [] tdone, int [] ends){
+        switch(S214170){
       case 0 : 
         active[31]=0;
         ends[31]=0;
@@ -2244,8 +2244,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225957(int [] tdone, int [] ends){
-        switch(S224972){
+  public void thread215152(int [] tdone, int [] ends){
+        switch(S214167){
       case 0 : 
         active[30]=0;
         ends[30]=0;
@@ -2253,7 +2253,7 @@ public class ECS_LightingController extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S224963){
+        switch(S214158){
           case 0 : 
             zoneSixWindowONOFF.setPresent();//sysj\ECS.sysj line: 11, column: 17
             currsigs.addElement(zoneSixWindowONOFF);
@@ -2263,8 +2263,8 @@ public class ECS_LightingController extends ClockDomain{
             break;
           
           case 1 : 
-            S224963=1;
-            S224972=0;
+            S214158=1;
+            S214167=0;
             active[30]=0;
             ends[30]=0;
             tdone[30]=1;
@@ -2276,8 +2276,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225956(int [] tdone, int [] ends){
-        switch(S225052){
+  public void thread215151(int [] tdone, int [] ends){
+        switch(S214247){
       case 0 : 
         active[29]=0;
         ends[29]=0;
@@ -2286,62 +2286,62 @@ public class ECS_LightingController extends ClockDomain{
       
       case 1 : 
         test_29.setClear();//sysj\ECS.sysj line: 3, column: 5
-        thread225957(tdone,ends);
-        thread225958(tdone,ends);
-        thread225959(tdone,ends);
-        int biggest225960 = 0;
-        if(ends[30]>=biggest225960){
-          biggest225960=ends[30];
+        thread215152(tdone,ends);
+        thread215153(tdone,ends);
+        thread215154(tdone,ends);
+        int biggest215155 = 0;
+        if(ends[30]>=biggest215155){
+          biggest215155=ends[30];
         }
-        if(ends[31]>=biggest225960){
-          biggest225960=ends[31];
+        if(ends[31]>=biggest215155){
+          biggest215155=ends[31];
         }
-        if(ends[32]>=biggest225960){
-          biggest225960=ends[32];
+        if(ends[32]>=biggest215155){
+          biggest215155=ends[32];
         }
-        if(biggest225960 == 1){
+        if(biggest215155 == 1){
           active[29]=1;
           ends[29]=1;
           tdone[29]=1;
         }
-        if(biggest225960 == 2){
+        if(biggest215155 == 2){
           ends[29]=2;
           ;//sysj\ECS.sysj line: 5, column: 5
-          thread225961(tdone,ends);
-          thread225962(tdone,ends);
-          thread225963(tdone,ends);
-          int biggest225964 = 0;
-          if(ends[30]>=biggest225964){
-            biggest225964=ends[30];
+          thread215156(tdone,ends);
+          thread215157(tdone,ends);
+          thread215158(tdone,ends);
+          int biggest215159 = 0;
+          if(ends[30]>=biggest215159){
+            biggest215159=ends[30];
           }
-          if(ends[31]>=biggest225964){
-            biggest225964=ends[31];
+          if(ends[31]>=biggest215159){
+            biggest215159=ends[31];
           }
-          if(ends[32]>=biggest225964){
-            biggest225964=ends[32];
+          if(ends[32]>=biggest215159){
+            biggest215159=ends[32];
           }
-          if(biggest225964 == 1){
+          if(biggest215159 == 1){
             active[29]=1;
             ends[29]=1;
             tdone[29]=1;
           }
         }
         //FINXME code
-        if(biggest225960 == 0){
-          thread225965(tdone,ends);
-          thread225966(tdone,ends);
-          thread225967(tdone,ends);
-          int biggest225968 = 0;
-          if(ends[30]>=biggest225968){
-            biggest225968=ends[30];
+        if(biggest215155 == 0){
+          thread215160(tdone,ends);
+          thread215161(tdone,ends);
+          thread215162(tdone,ends);
+          int biggest215163 = 0;
+          if(ends[30]>=biggest215163){
+            biggest215163=ends[30];
           }
-          if(ends[31]>=biggest225968){
-            biggest225968=ends[31];
+          if(ends[31]>=biggest215163){
+            biggest215163=ends[31];
           }
-          if(ends[32]>=biggest225968){
-            biggest225968=ends[32];
+          if(ends[32]>=biggest215163){
+            biggest215163=ends[32];
           }
-          if(biggest225968 == 1){
+          if(biggest215163 == 1){
             active[29]=1;
             ends[29]=1;
             tdone[29]=1;
@@ -2352,8 +2352,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225954(int [] tdone, int [] ends){
-        S224891=1;
+  public void thread215149(int [] tdone, int [] ends){
+        S214086=1;
     if((Integer)(zoneFiveOccupancy.getpreval() == null ? 0 : ((Integer)zoneFiveOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneFiveLightingI.getpreval() == null ? 0 : ((Integer)zoneFiveLightingI.getpreval()).intValue()) >= 50 || !workhrs_6.getprestatus()){//sysj\ECS.sysj line: 25, column: 21
       test_25.setPresent();//sysj\ECS.sysj line: 26, column: 21
       currsigs.addElement(test_25);
@@ -2368,18 +2368,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225953(int [] tdone, int [] ends){
-        S224883=1;
+  public void thread215148(int [] tdone, int [] ends){
+        S214078=1;
     active[27]=1;
     ends[27]=1;
     tdone[27]=1;
   }
 
-  public void thread225952(int [] tdone, int [] ends){
-        S224880=1;
+  public void thread215147(int [] tdone, int [] ends){
+        S214075=1;
     zoneOcc_thread_26 = (Integer)(zoneFiveOccupancy.getpreval() == null ? 0 : ((Integer)zoneFiveOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 7, column: 13
     zoneLightInt_thread_26 = (Integer)(zoneFiveLightingI.getpreval() == null ? 0 : ((Integer)zoneFiveLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 8, column: 13
-    S224871=0;
+    S214066=0;
     if(workhrs_6.getprestatus() && zoneOcc_thread_26 > 0 && zoneLightInt_thread_26 < 50){//sysj\ECS.sysj line: 10, column: 17
       zoneFiveWindowONOFF.setPresent();//sysj\ECS.sysj line: 11, column: 17
       currsigs.addElement(zoneFiveWindowONOFF);
@@ -2388,15 +2388,15 @@ public class ECS_LightingController extends ClockDomain{
       tdone[26]=1;
     }
     else {
-      S224871=1;
+      S214066=1;
       active[26]=1;
       ends[26]=1;
       tdone[26]=1;
     }
   }
 
-  public void thread225950(int [] tdone, int [] ends){
-        S224891=1;
+  public void thread215145(int [] tdone, int [] ends){
+        S214086=1;
     if((Integer)(zoneFiveOccupancy.getpreval() == null ? 0 : ((Integer)zoneFiveOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneFiveLightingI.getpreval() == null ? 0 : ((Integer)zoneFiveLightingI.getpreval()).intValue()) >= 50 || !workhrs_6.getprestatus()){//sysj\ECS.sysj line: 25, column: 21
       test_25.setPresent();//sysj\ECS.sysj line: 26, column: 21
       currsigs.addElement(test_25);
@@ -2411,18 +2411,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225949(int [] tdone, int [] ends){
-        S224883=1;
+  public void thread215144(int [] tdone, int [] ends){
+        S214078=1;
     active[27]=1;
     ends[27]=1;
     tdone[27]=1;
   }
 
-  public void thread225948(int [] tdone, int [] ends){
-        S224880=1;
+  public void thread215143(int [] tdone, int [] ends){
+        S214075=1;
     zoneOcc_thread_26 = (Integer)(zoneFiveOccupancy.getpreval() == null ? 0 : ((Integer)zoneFiveOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 7, column: 13
     zoneLightInt_thread_26 = (Integer)(zoneFiveLightingI.getpreval() == null ? 0 : ((Integer)zoneFiveLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 8, column: 13
-    S224871=0;
+    S214066=0;
     if(workhrs_6.getprestatus() && zoneOcc_thread_26 > 0 && zoneLightInt_thread_26 < 50){//sysj\ECS.sysj line: 10, column: 17
       zoneFiveWindowONOFF.setPresent();//sysj\ECS.sysj line: 11, column: 17
       currsigs.addElement(zoneFiveWindowONOFF);
@@ -2431,15 +2431,15 @@ public class ECS_LightingController extends ClockDomain{
       tdone[26]=1;
     }
     else {
-      S224871=1;
+      S214066=1;
       active[26]=1;
       ends[26]=1;
       tdone[26]=1;
     }
   }
 
-  public void thread225946(int [] tdone, int [] ends){
-        switch(S224891){
+  public void thread215141(int [] tdone, int [] ends){
+        switch(S214086){
       case 0 : 
         active[28]=0;
         ends[28]=0;
@@ -2464,8 +2464,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225945(int [] tdone, int [] ends){
-        switch(S224883){
+  public void thread215140(int [] tdone, int [] ends){
+        switch(S214078){
       case 0 : 
         active[27]=0;
         ends[27]=0;
@@ -2487,8 +2487,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225944(int [] tdone, int [] ends){
-        switch(S224880){
+  public void thread215139(int [] tdone, int [] ends){
+        switch(S214075){
       case 0 : 
         active[26]=0;
         ends[26]=0;
@@ -2496,7 +2496,7 @@ public class ECS_LightingController extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S224871){
+        switch(S214066){
           case 0 : 
             zoneFiveWindowONOFF.setPresent();//sysj\ECS.sysj line: 11, column: 17
             currsigs.addElement(zoneFiveWindowONOFF);
@@ -2506,8 +2506,8 @@ public class ECS_LightingController extends ClockDomain{
             break;
           
           case 1 : 
-            S224871=1;
-            S224880=0;
+            S214066=1;
+            S214075=0;
             active[26]=0;
             ends[26]=0;
             tdone[26]=1;
@@ -2519,8 +2519,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225943(int [] tdone, int [] ends){
-        switch(S224960){
+  public void thread215138(int [] tdone, int [] ends){
+        switch(S214155){
       case 0 : 
         active[25]=0;
         ends[25]=0;
@@ -2529,62 +2529,62 @@ public class ECS_LightingController extends ClockDomain{
       
       case 1 : 
         test_25.setClear();//sysj\ECS.sysj line: 3, column: 5
-        thread225944(tdone,ends);
-        thread225945(tdone,ends);
-        thread225946(tdone,ends);
-        int biggest225947 = 0;
-        if(ends[26]>=biggest225947){
-          biggest225947=ends[26];
+        thread215139(tdone,ends);
+        thread215140(tdone,ends);
+        thread215141(tdone,ends);
+        int biggest215142 = 0;
+        if(ends[26]>=biggest215142){
+          biggest215142=ends[26];
         }
-        if(ends[27]>=biggest225947){
-          biggest225947=ends[27];
+        if(ends[27]>=biggest215142){
+          biggest215142=ends[27];
         }
-        if(ends[28]>=biggest225947){
-          biggest225947=ends[28];
+        if(ends[28]>=biggest215142){
+          biggest215142=ends[28];
         }
-        if(biggest225947 == 1){
+        if(biggest215142 == 1){
           active[25]=1;
           ends[25]=1;
           tdone[25]=1;
         }
-        if(biggest225947 == 2){
+        if(biggest215142 == 2){
           ends[25]=2;
           ;//sysj\ECS.sysj line: 5, column: 5
-          thread225948(tdone,ends);
-          thread225949(tdone,ends);
-          thread225950(tdone,ends);
-          int biggest225951 = 0;
-          if(ends[26]>=biggest225951){
-            biggest225951=ends[26];
+          thread215143(tdone,ends);
+          thread215144(tdone,ends);
+          thread215145(tdone,ends);
+          int biggest215146 = 0;
+          if(ends[26]>=biggest215146){
+            biggest215146=ends[26];
           }
-          if(ends[27]>=biggest225951){
-            biggest225951=ends[27];
+          if(ends[27]>=biggest215146){
+            biggest215146=ends[27];
           }
-          if(ends[28]>=biggest225951){
-            biggest225951=ends[28];
+          if(ends[28]>=biggest215146){
+            biggest215146=ends[28];
           }
-          if(biggest225951 == 1){
+          if(biggest215146 == 1){
             active[25]=1;
             ends[25]=1;
             tdone[25]=1;
           }
         }
         //FINXME code
-        if(biggest225947 == 0){
-          thread225952(tdone,ends);
-          thread225953(tdone,ends);
-          thread225954(tdone,ends);
-          int biggest225955 = 0;
-          if(ends[26]>=biggest225955){
-            biggest225955=ends[26];
+        if(biggest215142 == 0){
+          thread215147(tdone,ends);
+          thread215148(tdone,ends);
+          thread215149(tdone,ends);
+          int biggest215150 = 0;
+          if(ends[26]>=biggest215150){
+            biggest215150=ends[26];
           }
-          if(ends[27]>=biggest225955){
-            biggest225955=ends[27];
+          if(ends[27]>=biggest215150){
+            biggest215150=ends[27];
           }
-          if(ends[28]>=biggest225955){
-            biggest225955=ends[28];
+          if(ends[28]>=biggest215150){
+            biggest215150=ends[28];
           }
-          if(biggest225955 == 1){
+          if(biggest215150 == 1){
             active[25]=1;
             ends[25]=1;
             tdone[25]=1;
@@ -2595,8 +2595,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225941(int [] tdone, int [] ends){
-        S224799=1;
+  public void thread215136(int [] tdone, int [] ends){
+        S213994=1;
     if((Integer)(zoneFourOccupancy.getpreval() == null ? 0 : ((Integer)zoneFourOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneFourLightingI.getpreval() == null ? 0 : ((Integer)zoneFourLightingI.getpreval()).intValue()) >= 50 || !workhrs_6.getprestatus()){//sysj\ECS.sysj line: 25, column: 21
       test_21.setPresent();//sysj\ECS.sysj line: 26, column: 21
       currsigs.addElement(test_21);
@@ -2611,18 +2611,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225940(int [] tdone, int [] ends){
-        S224791=1;
+  public void thread215135(int [] tdone, int [] ends){
+        S213986=1;
     active[23]=1;
     ends[23]=1;
     tdone[23]=1;
   }
 
-  public void thread225939(int [] tdone, int [] ends){
-        S224788=1;
+  public void thread215134(int [] tdone, int [] ends){
+        S213983=1;
     zoneOcc_thread_22 = (Integer)(zoneFourOccupancy.getpreval() == null ? 0 : ((Integer)zoneFourOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 7, column: 13
     zoneLightInt_thread_22 = (Integer)(zoneFourLightingI.getpreval() == null ? 0 : ((Integer)zoneFourLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 8, column: 13
-    S224779=0;
+    S213974=0;
     if(workhrs_6.getprestatus() && zoneOcc_thread_22 > 0 && zoneLightInt_thread_22 < 50){//sysj\ECS.sysj line: 10, column: 17
       zoneFourWindowONOFF.setPresent();//sysj\ECS.sysj line: 11, column: 17
       currsigs.addElement(zoneFourWindowONOFF);
@@ -2631,15 +2631,15 @@ public class ECS_LightingController extends ClockDomain{
       tdone[22]=1;
     }
     else {
-      S224779=1;
+      S213974=1;
       active[22]=1;
       ends[22]=1;
       tdone[22]=1;
     }
   }
 
-  public void thread225937(int [] tdone, int [] ends){
-        S224799=1;
+  public void thread215132(int [] tdone, int [] ends){
+        S213994=1;
     if((Integer)(zoneFourOccupancy.getpreval() == null ? 0 : ((Integer)zoneFourOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneFourLightingI.getpreval() == null ? 0 : ((Integer)zoneFourLightingI.getpreval()).intValue()) >= 50 || !workhrs_6.getprestatus()){//sysj\ECS.sysj line: 25, column: 21
       test_21.setPresent();//sysj\ECS.sysj line: 26, column: 21
       currsigs.addElement(test_21);
@@ -2654,18 +2654,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225936(int [] tdone, int [] ends){
-        S224791=1;
+  public void thread215131(int [] tdone, int [] ends){
+        S213986=1;
     active[23]=1;
     ends[23]=1;
     tdone[23]=1;
   }
 
-  public void thread225935(int [] tdone, int [] ends){
-        S224788=1;
+  public void thread215130(int [] tdone, int [] ends){
+        S213983=1;
     zoneOcc_thread_22 = (Integer)(zoneFourOccupancy.getpreval() == null ? 0 : ((Integer)zoneFourOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 7, column: 13
     zoneLightInt_thread_22 = (Integer)(zoneFourLightingI.getpreval() == null ? 0 : ((Integer)zoneFourLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 8, column: 13
-    S224779=0;
+    S213974=0;
     if(workhrs_6.getprestatus() && zoneOcc_thread_22 > 0 && zoneLightInt_thread_22 < 50){//sysj\ECS.sysj line: 10, column: 17
       zoneFourWindowONOFF.setPresent();//sysj\ECS.sysj line: 11, column: 17
       currsigs.addElement(zoneFourWindowONOFF);
@@ -2674,15 +2674,15 @@ public class ECS_LightingController extends ClockDomain{
       tdone[22]=1;
     }
     else {
-      S224779=1;
+      S213974=1;
       active[22]=1;
       ends[22]=1;
       tdone[22]=1;
     }
   }
 
-  public void thread225933(int [] tdone, int [] ends){
-        switch(S224799){
+  public void thread215128(int [] tdone, int [] ends){
+        switch(S213994){
       case 0 : 
         active[24]=0;
         ends[24]=0;
@@ -2707,8 +2707,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225932(int [] tdone, int [] ends){
-        switch(S224791){
+  public void thread215127(int [] tdone, int [] ends){
+        switch(S213986){
       case 0 : 
         active[23]=0;
         ends[23]=0;
@@ -2730,8 +2730,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225931(int [] tdone, int [] ends){
-        switch(S224788){
+  public void thread215126(int [] tdone, int [] ends){
+        switch(S213983){
       case 0 : 
         active[22]=0;
         ends[22]=0;
@@ -2739,7 +2739,7 @@ public class ECS_LightingController extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S224779){
+        switch(S213974){
           case 0 : 
             zoneFourWindowONOFF.setPresent();//sysj\ECS.sysj line: 11, column: 17
             currsigs.addElement(zoneFourWindowONOFF);
@@ -2749,8 +2749,8 @@ public class ECS_LightingController extends ClockDomain{
             break;
           
           case 1 : 
-            S224779=1;
-            S224788=0;
+            S213974=1;
+            S213983=0;
             active[22]=0;
             ends[22]=0;
             tdone[22]=1;
@@ -2762,8 +2762,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225930(int [] tdone, int [] ends){
-        switch(S224868){
+  public void thread215125(int [] tdone, int [] ends){
+        switch(S214063){
       case 0 : 
         active[21]=0;
         ends[21]=0;
@@ -2772,62 +2772,62 @@ public class ECS_LightingController extends ClockDomain{
       
       case 1 : 
         test_21.setClear();//sysj\ECS.sysj line: 3, column: 5
-        thread225931(tdone,ends);
-        thread225932(tdone,ends);
-        thread225933(tdone,ends);
-        int biggest225934 = 0;
-        if(ends[22]>=biggest225934){
-          biggest225934=ends[22];
+        thread215126(tdone,ends);
+        thread215127(tdone,ends);
+        thread215128(tdone,ends);
+        int biggest215129 = 0;
+        if(ends[22]>=biggest215129){
+          biggest215129=ends[22];
         }
-        if(ends[23]>=biggest225934){
-          biggest225934=ends[23];
+        if(ends[23]>=biggest215129){
+          biggest215129=ends[23];
         }
-        if(ends[24]>=biggest225934){
-          biggest225934=ends[24];
+        if(ends[24]>=biggest215129){
+          biggest215129=ends[24];
         }
-        if(biggest225934 == 1){
+        if(biggest215129 == 1){
           active[21]=1;
           ends[21]=1;
           tdone[21]=1;
         }
-        if(biggest225934 == 2){
+        if(biggest215129 == 2){
           ends[21]=2;
           ;//sysj\ECS.sysj line: 5, column: 5
-          thread225935(tdone,ends);
-          thread225936(tdone,ends);
-          thread225937(tdone,ends);
-          int biggest225938 = 0;
-          if(ends[22]>=biggest225938){
-            biggest225938=ends[22];
+          thread215130(tdone,ends);
+          thread215131(tdone,ends);
+          thread215132(tdone,ends);
+          int biggest215133 = 0;
+          if(ends[22]>=biggest215133){
+            biggest215133=ends[22];
           }
-          if(ends[23]>=biggest225938){
-            biggest225938=ends[23];
+          if(ends[23]>=biggest215133){
+            biggest215133=ends[23];
           }
-          if(ends[24]>=biggest225938){
-            biggest225938=ends[24];
+          if(ends[24]>=biggest215133){
+            biggest215133=ends[24];
           }
-          if(biggest225938 == 1){
+          if(biggest215133 == 1){
             active[21]=1;
             ends[21]=1;
             tdone[21]=1;
           }
         }
         //FINXME code
-        if(biggest225934 == 0){
-          thread225939(tdone,ends);
-          thread225940(tdone,ends);
-          thread225941(tdone,ends);
-          int biggest225942 = 0;
-          if(ends[22]>=biggest225942){
-            biggest225942=ends[22];
+        if(biggest215129 == 0){
+          thread215134(tdone,ends);
+          thread215135(tdone,ends);
+          thread215136(tdone,ends);
+          int biggest215137 = 0;
+          if(ends[22]>=biggest215137){
+            biggest215137=ends[22];
           }
-          if(ends[23]>=biggest225942){
-            biggest225942=ends[23];
+          if(ends[23]>=biggest215137){
+            biggest215137=ends[23];
           }
-          if(ends[24]>=biggest225942){
-            biggest225942=ends[24];
+          if(ends[24]>=biggest215137){
+            biggest215137=ends[24];
           }
-          if(biggest225942 == 1){
+          if(biggest215137 == 1){
             active[21]=1;
             ends[21]=1;
             tdone[21]=1;
@@ -2838,8 +2838,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225928(int [] tdone, int [] ends){
-        S224707=1;
+  public void thread215123(int [] tdone, int [] ends){
+        S213902=1;
     if((Integer)(zoneThreeOccupancy.getpreval() == null ? 0 : ((Integer)zoneThreeOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneThreeLightingI.getpreval() == null ? 0 : ((Integer)zoneThreeLightingI.getpreval()).intValue()) >= 50 || !workhrs_6.getprestatus()){//sysj\ECS.sysj line: 25, column: 21
       test_17.setPresent();//sysj\ECS.sysj line: 26, column: 21
       currsigs.addElement(test_17);
@@ -2854,18 +2854,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225927(int [] tdone, int [] ends){
-        S224699=1;
+  public void thread215122(int [] tdone, int [] ends){
+        S213894=1;
     active[19]=1;
     ends[19]=1;
     tdone[19]=1;
   }
 
-  public void thread225926(int [] tdone, int [] ends){
-        S224696=1;
+  public void thread215121(int [] tdone, int [] ends){
+        S213891=1;
     zoneOcc_thread_18 = (Integer)(zoneThreeOccupancy.getpreval() == null ? 0 : ((Integer)zoneThreeOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 7, column: 13
     zoneLightInt_thread_18 = (Integer)(zoneThreeLightingI.getpreval() == null ? 0 : ((Integer)zoneThreeLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 8, column: 13
-    S224687=0;
+    S213882=0;
     if(workhrs_6.getprestatus() && zoneOcc_thread_18 > 0 && zoneLightInt_thread_18 < 50){//sysj\ECS.sysj line: 10, column: 17
       zoneThreeWindowONOFF.setPresent();//sysj\ECS.sysj line: 11, column: 17
       currsigs.addElement(zoneThreeWindowONOFF);
@@ -2874,15 +2874,15 @@ public class ECS_LightingController extends ClockDomain{
       tdone[18]=1;
     }
     else {
-      S224687=1;
+      S213882=1;
       active[18]=1;
       ends[18]=1;
       tdone[18]=1;
     }
   }
 
-  public void thread225924(int [] tdone, int [] ends){
-        S224707=1;
+  public void thread215119(int [] tdone, int [] ends){
+        S213902=1;
     if((Integer)(zoneThreeOccupancy.getpreval() == null ? 0 : ((Integer)zoneThreeOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneThreeLightingI.getpreval() == null ? 0 : ((Integer)zoneThreeLightingI.getpreval()).intValue()) >= 50 || !workhrs_6.getprestatus()){//sysj\ECS.sysj line: 25, column: 21
       test_17.setPresent();//sysj\ECS.sysj line: 26, column: 21
       currsigs.addElement(test_17);
@@ -2897,18 +2897,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225923(int [] tdone, int [] ends){
-        S224699=1;
+  public void thread215118(int [] tdone, int [] ends){
+        S213894=1;
     active[19]=1;
     ends[19]=1;
     tdone[19]=1;
   }
 
-  public void thread225922(int [] tdone, int [] ends){
-        S224696=1;
+  public void thread215117(int [] tdone, int [] ends){
+        S213891=1;
     zoneOcc_thread_18 = (Integer)(zoneThreeOccupancy.getpreval() == null ? 0 : ((Integer)zoneThreeOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 7, column: 13
     zoneLightInt_thread_18 = (Integer)(zoneThreeLightingI.getpreval() == null ? 0 : ((Integer)zoneThreeLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 8, column: 13
-    S224687=0;
+    S213882=0;
     if(workhrs_6.getprestatus() && zoneOcc_thread_18 > 0 && zoneLightInt_thread_18 < 50){//sysj\ECS.sysj line: 10, column: 17
       zoneThreeWindowONOFF.setPresent();//sysj\ECS.sysj line: 11, column: 17
       currsigs.addElement(zoneThreeWindowONOFF);
@@ -2917,15 +2917,15 @@ public class ECS_LightingController extends ClockDomain{
       tdone[18]=1;
     }
     else {
-      S224687=1;
+      S213882=1;
       active[18]=1;
       ends[18]=1;
       tdone[18]=1;
     }
   }
 
-  public void thread225920(int [] tdone, int [] ends){
-        switch(S224707){
+  public void thread215115(int [] tdone, int [] ends){
+        switch(S213902){
       case 0 : 
         active[20]=0;
         ends[20]=0;
@@ -2950,8 +2950,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225919(int [] tdone, int [] ends){
-        switch(S224699){
+  public void thread215114(int [] tdone, int [] ends){
+        switch(S213894){
       case 0 : 
         active[19]=0;
         ends[19]=0;
@@ -2973,8 +2973,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225918(int [] tdone, int [] ends){
-        switch(S224696){
+  public void thread215113(int [] tdone, int [] ends){
+        switch(S213891){
       case 0 : 
         active[18]=0;
         ends[18]=0;
@@ -2982,7 +2982,7 @@ public class ECS_LightingController extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S224687){
+        switch(S213882){
           case 0 : 
             zoneThreeWindowONOFF.setPresent();//sysj\ECS.sysj line: 11, column: 17
             currsigs.addElement(zoneThreeWindowONOFF);
@@ -2992,8 +2992,8 @@ public class ECS_LightingController extends ClockDomain{
             break;
           
           case 1 : 
-            S224687=1;
-            S224696=0;
+            S213882=1;
+            S213891=0;
             active[18]=0;
             ends[18]=0;
             tdone[18]=1;
@@ -3005,8 +3005,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225917(int [] tdone, int [] ends){
-        switch(S224776){
+  public void thread215112(int [] tdone, int [] ends){
+        switch(S213971){
       case 0 : 
         active[17]=0;
         ends[17]=0;
@@ -3015,62 +3015,62 @@ public class ECS_LightingController extends ClockDomain{
       
       case 1 : 
         test_17.setClear();//sysj\ECS.sysj line: 3, column: 5
-        thread225918(tdone,ends);
-        thread225919(tdone,ends);
-        thread225920(tdone,ends);
-        int biggest225921 = 0;
-        if(ends[18]>=biggest225921){
-          biggest225921=ends[18];
+        thread215113(tdone,ends);
+        thread215114(tdone,ends);
+        thread215115(tdone,ends);
+        int biggest215116 = 0;
+        if(ends[18]>=biggest215116){
+          biggest215116=ends[18];
         }
-        if(ends[19]>=biggest225921){
-          biggest225921=ends[19];
+        if(ends[19]>=biggest215116){
+          biggest215116=ends[19];
         }
-        if(ends[20]>=biggest225921){
-          biggest225921=ends[20];
+        if(ends[20]>=biggest215116){
+          biggest215116=ends[20];
         }
-        if(biggest225921 == 1){
+        if(biggest215116 == 1){
           active[17]=1;
           ends[17]=1;
           tdone[17]=1;
         }
-        if(biggest225921 == 2){
+        if(biggest215116 == 2){
           ends[17]=2;
           ;//sysj\ECS.sysj line: 5, column: 5
-          thread225922(tdone,ends);
-          thread225923(tdone,ends);
-          thread225924(tdone,ends);
-          int biggest225925 = 0;
-          if(ends[18]>=biggest225925){
-            biggest225925=ends[18];
+          thread215117(tdone,ends);
+          thread215118(tdone,ends);
+          thread215119(tdone,ends);
+          int biggest215120 = 0;
+          if(ends[18]>=biggest215120){
+            biggest215120=ends[18];
           }
-          if(ends[19]>=biggest225925){
-            biggest225925=ends[19];
+          if(ends[19]>=biggest215120){
+            biggest215120=ends[19];
           }
-          if(ends[20]>=biggest225925){
-            biggest225925=ends[20];
+          if(ends[20]>=biggest215120){
+            biggest215120=ends[20];
           }
-          if(biggest225925 == 1){
+          if(biggest215120 == 1){
             active[17]=1;
             ends[17]=1;
             tdone[17]=1;
           }
         }
         //FINXME code
-        if(biggest225921 == 0){
-          thread225926(tdone,ends);
-          thread225927(tdone,ends);
-          thread225928(tdone,ends);
-          int biggest225929 = 0;
-          if(ends[18]>=biggest225929){
-            biggest225929=ends[18];
+        if(biggest215116 == 0){
+          thread215121(tdone,ends);
+          thread215122(tdone,ends);
+          thread215123(tdone,ends);
+          int biggest215124 = 0;
+          if(ends[18]>=biggest215124){
+            biggest215124=ends[18];
           }
-          if(ends[19]>=biggest225929){
-            biggest225929=ends[19];
+          if(ends[19]>=biggest215124){
+            biggest215124=ends[19];
           }
-          if(ends[20]>=biggest225929){
-            biggest225929=ends[20];
+          if(ends[20]>=biggest215124){
+            biggest215124=ends[20];
           }
-          if(biggest225929 == 1){
+          if(biggest215124 == 1){
             active[17]=1;
             ends[17]=1;
             tdone[17]=1;
@@ -3081,8 +3081,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225915(int [] tdone, int [] ends){
-        S224615=1;
+  public void thread215110(int [] tdone, int [] ends){
+        S213810=1;
     if((Integer)(zoneTwoOccupancy.getpreval() == null ? 0 : ((Integer)zoneTwoOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneTwoLightingI.getpreval() == null ? 0 : ((Integer)zoneTwoLightingI.getpreval()).intValue()) >= 50 || !workhrs_6.getprestatus()){//sysj\ECS.sysj line: 25, column: 21
       test_13.setPresent();//sysj\ECS.sysj line: 26, column: 21
       currsigs.addElement(test_13);
@@ -3097,18 +3097,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225914(int [] tdone, int [] ends){
-        S224607=1;
+  public void thread215109(int [] tdone, int [] ends){
+        S213802=1;
     active[15]=1;
     ends[15]=1;
     tdone[15]=1;
   }
 
-  public void thread225913(int [] tdone, int [] ends){
-        S224604=1;
+  public void thread215108(int [] tdone, int [] ends){
+        S213799=1;
     zoneOcc_thread_14 = (Integer)(zoneTwoOccupancy.getpreval() == null ? 0 : ((Integer)zoneTwoOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 7, column: 13
     zoneLightInt_thread_14 = (Integer)(zoneTwoLightingI.getpreval() == null ? 0 : ((Integer)zoneTwoLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 8, column: 13
-    S224595=0;
+    S213790=0;
     if(workhrs_6.getprestatus() && zoneOcc_thread_14 > 0 && zoneLightInt_thread_14 < 50){//sysj\ECS.sysj line: 10, column: 17
       zoneTwoWindowONOFF.setPresent();//sysj\ECS.sysj line: 11, column: 17
       currsigs.addElement(zoneTwoWindowONOFF);
@@ -3117,15 +3117,15 @@ public class ECS_LightingController extends ClockDomain{
       tdone[14]=1;
     }
     else {
-      S224595=1;
+      S213790=1;
       active[14]=1;
       ends[14]=1;
       tdone[14]=1;
     }
   }
 
-  public void thread225911(int [] tdone, int [] ends){
-        S224615=1;
+  public void thread215106(int [] tdone, int [] ends){
+        S213810=1;
     if((Integer)(zoneTwoOccupancy.getpreval() == null ? 0 : ((Integer)zoneTwoOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneTwoLightingI.getpreval() == null ? 0 : ((Integer)zoneTwoLightingI.getpreval()).intValue()) >= 50 || !workhrs_6.getprestatus()){//sysj\ECS.sysj line: 25, column: 21
       test_13.setPresent();//sysj\ECS.sysj line: 26, column: 21
       currsigs.addElement(test_13);
@@ -3140,18 +3140,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225910(int [] tdone, int [] ends){
-        S224607=1;
+  public void thread215105(int [] tdone, int [] ends){
+        S213802=1;
     active[15]=1;
     ends[15]=1;
     tdone[15]=1;
   }
 
-  public void thread225909(int [] tdone, int [] ends){
-        S224604=1;
+  public void thread215104(int [] tdone, int [] ends){
+        S213799=1;
     zoneOcc_thread_14 = (Integer)(zoneTwoOccupancy.getpreval() == null ? 0 : ((Integer)zoneTwoOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 7, column: 13
     zoneLightInt_thread_14 = (Integer)(zoneTwoLightingI.getpreval() == null ? 0 : ((Integer)zoneTwoLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 8, column: 13
-    S224595=0;
+    S213790=0;
     if(workhrs_6.getprestatus() && zoneOcc_thread_14 > 0 && zoneLightInt_thread_14 < 50){//sysj\ECS.sysj line: 10, column: 17
       zoneTwoWindowONOFF.setPresent();//sysj\ECS.sysj line: 11, column: 17
       currsigs.addElement(zoneTwoWindowONOFF);
@@ -3160,15 +3160,15 @@ public class ECS_LightingController extends ClockDomain{
       tdone[14]=1;
     }
     else {
-      S224595=1;
+      S213790=1;
       active[14]=1;
       ends[14]=1;
       tdone[14]=1;
     }
   }
 
-  public void thread225907(int [] tdone, int [] ends){
-        switch(S224615){
+  public void thread215102(int [] tdone, int [] ends){
+        switch(S213810){
       case 0 : 
         active[16]=0;
         ends[16]=0;
@@ -3193,8 +3193,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225906(int [] tdone, int [] ends){
-        switch(S224607){
+  public void thread215101(int [] tdone, int [] ends){
+        switch(S213802){
       case 0 : 
         active[15]=0;
         ends[15]=0;
@@ -3216,8 +3216,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225905(int [] tdone, int [] ends){
-        switch(S224604){
+  public void thread215100(int [] tdone, int [] ends){
+        switch(S213799){
       case 0 : 
         active[14]=0;
         ends[14]=0;
@@ -3225,7 +3225,7 @@ public class ECS_LightingController extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S224595){
+        switch(S213790){
           case 0 : 
             zoneTwoWindowONOFF.setPresent();//sysj\ECS.sysj line: 11, column: 17
             currsigs.addElement(zoneTwoWindowONOFF);
@@ -3235,8 +3235,8 @@ public class ECS_LightingController extends ClockDomain{
             break;
           
           case 1 : 
-            S224595=1;
-            S224604=0;
+            S213790=1;
+            S213799=0;
             active[14]=0;
             ends[14]=0;
             tdone[14]=1;
@@ -3248,8 +3248,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225904(int [] tdone, int [] ends){
-        switch(S224684){
+  public void thread215099(int [] tdone, int [] ends){
+        switch(S213879){
       case 0 : 
         active[13]=0;
         ends[13]=0;
@@ -3258,62 +3258,62 @@ public class ECS_LightingController extends ClockDomain{
       
       case 1 : 
         test_13.setClear();//sysj\ECS.sysj line: 3, column: 5
-        thread225905(tdone,ends);
-        thread225906(tdone,ends);
-        thread225907(tdone,ends);
-        int biggest225908 = 0;
-        if(ends[14]>=biggest225908){
-          biggest225908=ends[14];
+        thread215100(tdone,ends);
+        thread215101(tdone,ends);
+        thread215102(tdone,ends);
+        int biggest215103 = 0;
+        if(ends[14]>=biggest215103){
+          biggest215103=ends[14];
         }
-        if(ends[15]>=biggest225908){
-          biggest225908=ends[15];
+        if(ends[15]>=biggest215103){
+          biggest215103=ends[15];
         }
-        if(ends[16]>=biggest225908){
-          biggest225908=ends[16];
+        if(ends[16]>=biggest215103){
+          biggest215103=ends[16];
         }
-        if(biggest225908 == 1){
+        if(biggest215103 == 1){
           active[13]=1;
           ends[13]=1;
           tdone[13]=1;
         }
-        if(biggest225908 == 2){
+        if(biggest215103 == 2){
           ends[13]=2;
           ;//sysj\ECS.sysj line: 5, column: 5
-          thread225909(tdone,ends);
-          thread225910(tdone,ends);
-          thread225911(tdone,ends);
-          int biggest225912 = 0;
-          if(ends[14]>=biggest225912){
-            biggest225912=ends[14];
+          thread215104(tdone,ends);
+          thread215105(tdone,ends);
+          thread215106(tdone,ends);
+          int biggest215107 = 0;
+          if(ends[14]>=biggest215107){
+            biggest215107=ends[14];
           }
-          if(ends[15]>=biggest225912){
-            biggest225912=ends[15];
+          if(ends[15]>=biggest215107){
+            biggest215107=ends[15];
           }
-          if(ends[16]>=biggest225912){
-            biggest225912=ends[16];
+          if(ends[16]>=biggest215107){
+            biggest215107=ends[16];
           }
-          if(biggest225912 == 1){
+          if(biggest215107 == 1){
             active[13]=1;
             ends[13]=1;
             tdone[13]=1;
           }
         }
         //FINXME code
-        if(biggest225908 == 0){
-          thread225913(tdone,ends);
-          thread225914(tdone,ends);
-          thread225915(tdone,ends);
-          int biggest225916 = 0;
-          if(ends[14]>=biggest225916){
-            biggest225916=ends[14];
+        if(biggest215103 == 0){
+          thread215108(tdone,ends);
+          thread215109(tdone,ends);
+          thread215110(tdone,ends);
+          int biggest215111 = 0;
+          if(ends[14]>=biggest215111){
+            biggest215111=ends[14];
           }
-          if(ends[15]>=biggest225916){
-            biggest225916=ends[15];
+          if(ends[15]>=biggest215111){
+            biggest215111=ends[15];
           }
-          if(ends[16]>=biggest225916){
-            biggest225916=ends[16];
+          if(ends[16]>=biggest215111){
+            biggest215111=ends[16];
           }
-          if(biggest225916 == 1){
+          if(biggest215111 == 1){
             active[13]=1;
             ends[13]=1;
             tdone[13]=1;
@@ -3324,8 +3324,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225902(int [] tdone, int [] ends){
-        S224523=1;
+  public void thread215097(int [] tdone, int [] ends){
+        S213718=1;
     if((Integer)(zoneOneOccupancy.getpreval() == null ? 0 : ((Integer)zoneOneOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneOneLightingI.getpreval() == null ? 0 : ((Integer)zoneOneLightingI.getpreval()).intValue()) >= 50 || !workhrs_6.getprestatus()){//sysj\ECS.sysj line: 25, column: 21
       test_9.setPresent();//sysj\ECS.sysj line: 26, column: 21
       currsigs.addElement(test_9);
@@ -3340,18 +3340,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225901(int [] tdone, int [] ends){
-        S224515=1;
+  public void thread215096(int [] tdone, int [] ends){
+        S213710=1;
     active[11]=1;
     ends[11]=1;
     tdone[11]=1;
   }
 
-  public void thread225900(int [] tdone, int [] ends){
-        S224512=1;
+  public void thread215095(int [] tdone, int [] ends){
+        S213707=1;
     zoneOcc_thread_10 = (Integer)(zoneOneOccupancy.getpreval() == null ? 0 : ((Integer)zoneOneOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 7, column: 13
     zoneLightInt_thread_10 = (Integer)(zoneOneLightingI.getpreval() == null ? 0 : ((Integer)zoneOneLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 8, column: 13
-    S224503=0;
+    S213698=0;
     if(workhrs_6.getprestatus() && zoneOcc_thread_10 > 0 && zoneLightInt_thread_10 < 50){//sysj\ECS.sysj line: 10, column: 17
       zoneOneWindowONOFF.setPresent();//sysj\ECS.sysj line: 11, column: 17
       currsigs.addElement(zoneOneWindowONOFF);
@@ -3360,15 +3360,15 @@ public class ECS_LightingController extends ClockDomain{
       tdone[10]=1;
     }
     else {
-      S224503=1;
+      S213698=1;
       active[10]=1;
       ends[10]=1;
       tdone[10]=1;
     }
   }
 
-  public void thread225898(int [] tdone, int [] ends){
-        S224523=1;
+  public void thread215093(int [] tdone, int [] ends){
+        S213718=1;
     if((Integer)(zoneOneOccupancy.getpreval() == null ? 0 : ((Integer)zoneOneOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneOneLightingI.getpreval() == null ? 0 : ((Integer)zoneOneLightingI.getpreval()).intValue()) >= 50 || !workhrs_6.getprestatus()){//sysj\ECS.sysj line: 25, column: 21
       test_9.setPresent();//sysj\ECS.sysj line: 26, column: 21
       currsigs.addElement(test_9);
@@ -3383,18 +3383,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225897(int [] tdone, int [] ends){
-        S224515=1;
+  public void thread215092(int [] tdone, int [] ends){
+        S213710=1;
     active[11]=1;
     ends[11]=1;
     tdone[11]=1;
   }
 
-  public void thread225896(int [] tdone, int [] ends){
-        S224512=1;
+  public void thread215091(int [] tdone, int [] ends){
+        S213707=1;
     zoneOcc_thread_10 = (Integer)(zoneOneOccupancy.getpreval() == null ? 0 : ((Integer)zoneOneOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 7, column: 13
     zoneLightInt_thread_10 = (Integer)(zoneOneLightingI.getpreval() == null ? 0 : ((Integer)zoneOneLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 8, column: 13
-    S224503=0;
+    S213698=0;
     if(workhrs_6.getprestatus() && zoneOcc_thread_10 > 0 && zoneLightInt_thread_10 < 50){//sysj\ECS.sysj line: 10, column: 17
       zoneOneWindowONOFF.setPresent();//sysj\ECS.sysj line: 11, column: 17
       currsigs.addElement(zoneOneWindowONOFF);
@@ -3403,15 +3403,15 @@ public class ECS_LightingController extends ClockDomain{
       tdone[10]=1;
     }
     else {
-      S224503=1;
+      S213698=1;
       active[10]=1;
       ends[10]=1;
       tdone[10]=1;
     }
   }
 
-  public void thread225894(int [] tdone, int [] ends){
-        switch(S224523){
+  public void thread215089(int [] tdone, int [] ends){
+        switch(S213718){
       case 0 : 
         active[12]=0;
         ends[12]=0;
@@ -3436,8 +3436,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225893(int [] tdone, int [] ends){
-        switch(S224515){
+  public void thread215088(int [] tdone, int [] ends){
+        switch(S213710){
       case 0 : 
         active[11]=0;
         ends[11]=0;
@@ -3459,8 +3459,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225892(int [] tdone, int [] ends){
-        switch(S224512){
+  public void thread215087(int [] tdone, int [] ends){
+        switch(S213707){
       case 0 : 
         active[10]=0;
         ends[10]=0;
@@ -3468,7 +3468,7 @@ public class ECS_LightingController extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S224503){
+        switch(S213698){
           case 0 : 
             zoneOneWindowONOFF.setPresent();//sysj\ECS.sysj line: 11, column: 17
             currsigs.addElement(zoneOneWindowONOFF);
@@ -3478,8 +3478,8 @@ public class ECS_LightingController extends ClockDomain{
             break;
           
           case 1 : 
-            S224503=1;
-            S224512=0;
+            S213698=1;
+            S213707=0;
             active[10]=0;
             ends[10]=0;
             tdone[10]=1;
@@ -3491,8 +3491,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225891(int [] tdone, int [] ends){
-        switch(S224592){
+  public void thread215086(int [] tdone, int [] ends){
+        switch(S213787){
       case 0 : 
         active[9]=0;
         ends[9]=0;
@@ -3501,62 +3501,62 @@ public class ECS_LightingController extends ClockDomain{
       
       case 1 : 
         test_9.setClear();//sysj\ECS.sysj line: 3, column: 5
-        thread225892(tdone,ends);
-        thread225893(tdone,ends);
-        thread225894(tdone,ends);
-        int biggest225895 = 0;
-        if(ends[10]>=biggest225895){
-          biggest225895=ends[10];
+        thread215087(tdone,ends);
+        thread215088(tdone,ends);
+        thread215089(tdone,ends);
+        int biggest215090 = 0;
+        if(ends[10]>=biggest215090){
+          biggest215090=ends[10];
         }
-        if(ends[11]>=biggest225895){
-          biggest225895=ends[11];
+        if(ends[11]>=biggest215090){
+          biggest215090=ends[11];
         }
-        if(ends[12]>=biggest225895){
-          biggest225895=ends[12];
+        if(ends[12]>=biggest215090){
+          biggest215090=ends[12];
         }
-        if(biggest225895 == 1){
+        if(biggest215090 == 1){
           active[9]=1;
           ends[9]=1;
           tdone[9]=1;
         }
-        if(biggest225895 == 2){
+        if(biggest215090 == 2){
           ends[9]=2;
           ;//sysj\ECS.sysj line: 5, column: 5
-          thread225896(tdone,ends);
-          thread225897(tdone,ends);
-          thread225898(tdone,ends);
-          int biggest225899 = 0;
-          if(ends[10]>=biggest225899){
-            biggest225899=ends[10];
+          thread215091(tdone,ends);
+          thread215092(tdone,ends);
+          thread215093(tdone,ends);
+          int biggest215094 = 0;
+          if(ends[10]>=biggest215094){
+            biggest215094=ends[10];
           }
-          if(ends[11]>=biggest225899){
-            biggest225899=ends[11];
+          if(ends[11]>=biggest215094){
+            biggest215094=ends[11];
           }
-          if(ends[12]>=biggest225899){
-            biggest225899=ends[12];
+          if(ends[12]>=biggest215094){
+            biggest215094=ends[12];
           }
-          if(biggest225899 == 1){
+          if(biggest215094 == 1){
             active[9]=1;
             ends[9]=1;
             tdone[9]=1;
           }
         }
         //FINXME code
-        if(biggest225895 == 0){
-          thread225900(tdone,ends);
-          thread225901(tdone,ends);
-          thread225902(tdone,ends);
-          int biggest225903 = 0;
-          if(ends[10]>=biggest225903){
-            biggest225903=ends[10];
+        if(biggest215090 == 0){
+          thread215095(tdone,ends);
+          thread215096(tdone,ends);
+          thread215097(tdone,ends);
+          int biggest215098 = 0;
+          if(ends[10]>=biggest215098){
+            biggest215098=ends[10];
           }
-          if(ends[11]>=biggest225903){
-            biggest225903=ends[11];
+          if(ends[11]>=biggest215098){
+            biggest215098=ends[11];
           }
-          if(ends[12]>=biggest225903){
-            biggest225903=ends[12];
+          if(ends[12]>=biggest215098){
+            biggest215098=ends[12];
           }
-          if(biggest225903 == 1){
+          if(biggest215098 == 1){
             active[9]=1;
             ends[9]=1;
             tdone[9]=1;
@@ -3567,8 +3567,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225890(int [] tdone, int [] ends){
-        switch(S225790){
+  public void thread215085(int [] tdone, int [] ends){
+        switch(S214985){
       case 0 : 
         active[8]=0;
         ends[8]=0;
@@ -3576,71 +3576,71 @@ public class ECS_LightingController extends ClockDomain{
         break;
       
       case 1 : 
-        thread225891(tdone,ends);
-        thread225904(tdone,ends);
-        thread225917(tdone,ends);
-        thread225930(tdone,ends);
-        thread225943(tdone,ends);
-        thread225956(tdone,ends);
-        thread225969(tdone,ends);
-        thread225982(tdone,ends);
-        thread225995(tdone,ends);
-        thread226008(tdone,ends);
-        thread226021(tdone,ends);
-        thread226034(tdone,ends);
-        thread226047(tdone,ends);
-        thread226060(tdone,ends);
-        int biggest226073 = 0;
-        if(ends[9]>=biggest226073){
-          biggest226073=ends[9];
+        thread215086(tdone,ends);
+        thread215099(tdone,ends);
+        thread215112(tdone,ends);
+        thread215125(tdone,ends);
+        thread215138(tdone,ends);
+        thread215151(tdone,ends);
+        thread215164(tdone,ends);
+        thread215177(tdone,ends);
+        thread215190(tdone,ends);
+        thread215203(tdone,ends);
+        thread215216(tdone,ends);
+        thread215229(tdone,ends);
+        thread215242(tdone,ends);
+        thread215255(tdone,ends);
+        int biggest215268 = 0;
+        if(ends[9]>=biggest215268){
+          biggest215268=ends[9];
         }
-        if(ends[13]>=biggest226073){
-          biggest226073=ends[13];
+        if(ends[13]>=biggest215268){
+          biggest215268=ends[13];
         }
-        if(ends[17]>=biggest226073){
-          biggest226073=ends[17];
+        if(ends[17]>=biggest215268){
+          biggest215268=ends[17];
         }
-        if(ends[21]>=biggest226073){
-          biggest226073=ends[21];
+        if(ends[21]>=biggest215268){
+          biggest215268=ends[21];
         }
-        if(ends[25]>=biggest226073){
-          biggest226073=ends[25];
+        if(ends[25]>=biggest215268){
+          biggest215268=ends[25];
         }
-        if(ends[29]>=biggest226073){
-          biggest226073=ends[29];
+        if(ends[29]>=biggest215268){
+          biggest215268=ends[29];
         }
-        if(ends[33]>=biggest226073){
-          biggest226073=ends[33];
+        if(ends[33]>=biggest215268){
+          biggest215268=ends[33];
         }
-        if(ends[37]>=biggest226073){
-          biggest226073=ends[37];
+        if(ends[37]>=biggest215268){
+          biggest215268=ends[37];
         }
-        if(ends[41]>=biggest226073){
-          biggest226073=ends[41];
+        if(ends[41]>=biggest215268){
+          biggest215268=ends[41];
         }
-        if(ends[45]>=biggest226073){
-          biggest226073=ends[45];
+        if(ends[45]>=biggest215268){
+          biggest215268=ends[45];
         }
-        if(ends[49]>=biggest226073){
-          biggest226073=ends[49];
+        if(ends[49]>=biggest215268){
+          biggest215268=ends[49];
         }
-        if(ends[53]>=biggest226073){
-          biggest226073=ends[53];
+        if(ends[53]>=biggest215268){
+          biggest215268=ends[53];
         }
-        if(ends[57]>=biggest226073){
-          biggest226073=ends[57];
+        if(ends[57]>=biggest215268){
+          biggest215268=ends[57];
         }
-        if(ends[61]>=biggest226073){
-          biggest226073=ends[61];
+        if(ends[61]>=biggest215268){
+          biggest215268=ends[61];
         }
-        if(biggest226073 == 1){
+        if(biggest215268 == 1){
           active[8]=1;
           ends[8]=1;
           tdone[8]=1;
         }
         //FINXME code
-        if(biggest226073 == 0){
-          S225790=0;
+        if(biggest215268 == 0){
+          S214985=0;
           active[8]=0;
           ends[8]=0;
           tdone[8]=1;
@@ -3650,8 +3650,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225889(int [] tdone, int [] ends){
-        switch(S224500){
+  public void thread215084(int [] tdone, int [] ends){
+        switch(S213695){
       case 0 : 
         active[7]=0;
         ends[7]=0;
@@ -3659,13 +3659,13 @@ public class ECS_LightingController extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S224450){
+        switch(S213645){
           case 0 : 
             if(currentTime_2.getprestatus()){//sysj\ECS.sysj line: 351, column: 14
               currentHour_thread_7 = (Integer)(currentTime_2.getpreval() == null ? 0 : ((Integer)currentTime_2.getpreval()).intValue());//sysj\ECS.sysj line: 352, column: 8
-              S224450=1;
+              S213645=1;
               if(currentHour_thread_7 >= 9 && currentHour_thread_7 <= 17){//sysj\ECS.sysj line: 354, column: 16
-                S224454=0;
+                S213649=0;
                 workhrs_6.setPresent();//sysj\ECS.sysj line: 355, column: 16
                 currsigs.addElement(workhrs_6);
                 active[7]=1;
@@ -3673,7 +3673,7 @@ public class ECS_LightingController extends ClockDomain{
                 tdone[7]=1;
               }
               else {
-                S224454=1;
+                S213649=1;
                 if((currentHour_thread_7 >= 18 && currentHour_thread_7 <= 24) || (currentHour_thread_7 >= 0 && currentHour_thread_7 < 9)){//sysj\ECS.sysj line: 359, column: 23
                   afterhrs_6.setPresent();//sysj\ECS.sysj line: 360, column: 16
                   currsigs.addElement(afterhrs_6);
@@ -3682,7 +3682,7 @@ public class ECS_LightingController extends ClockDomain{
                   tdone[7]=1;
                 }
                 else {
-                  S224450=0;
+                  S213645=0;
                   active[7]=1;
                   ends[7]=1;
                   tdone[7]=1;
@@ -3697,16 +3697,16 @@ public class ECS_LightingController extends ClockDomain{
             break;
           
           case 1 : 
-            switch(S224454){
+            switch(S213649){
               case 0 : 
-                S224450=0;
+                S213645=0;
                 active[7]=1;
                 ends[7]=1;
                 tdone[7]=1;
                 break;
               
               case 1 : 
-                S224450=0;
+                S213645=0;
                 active[7]=1;
                 ends[7]=1;
                 tdone[7]=1;
@@ -3721,8 +3721,8 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225885(int [] tdone, int [] ends){
-        S225719=1;
+  public void thread215080(int [] tdone, int [] ends){
+        S214914=1;
     if((Integer)(zoneSevenOccupancy.getpreval() == null ? 0 : ((Integer)zoneSevenOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneSevenLightingI.getpreval() == null ? 0 : ((Integer)zoneSevenLightingI.getpreval()).intValue()) >= 50 || !afterhrs_6.getprestatus()){//sysj\ECS.sysj line: 59, column: 21
       test_61.setPresent();//sysj\ECS.sysj line: 60, column: 21
       currsigs.addElement(test_61);
@@ -3737,18 +3737,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225884(int [] tdone, int [] ends){
-        S225711=1;
+  public void thread215079(int [] tdone, int [] ends){
+        S214906=1;
     active[63]=1;
     ends[63]=1;
     tdone[63]=1;
   }
 
-  public void thread225883(int [] tdone, int [] ends){
-        S225708=1;
+  public void thread215078(int [] tdone, int [] ends){
+        S214903=1;
     zoneOcc_thread_62 = (Integer)(zoneSevenOccupancy.getpreval() == null ? 0 : ((Integer)zoneSevenOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 41, column: 13
     zoneLightInt_thread_62 = (Integer)(zoneSevenLightingI.getpreval() == null ? 0 : ((Integer)zoneSevenLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 42, column: 13
-    S225699=0;
+    S214894=0;
     if(afterhrs_6.getprestatus() && zoneOcc_thread_62 > 0 && zoneLightInt_thread_62 < 50){//sysj\ECS.sysj line: 44, column: 17
       zoneSevenLightONOFF.setPresent();//sysj\ECS.sysj line: 45, column: 17
       currsigs.addElement(zoneSevenLightONOFF);
@@ -3757,38 +3757,38 @@ public class ECS_LightingController extends ClockDomain{
       tdone[62]=1;
     }
     else {
-      S225699=1;
+      S214894=1;
       active[62]=1;
       ends[62]=1;
       tdone[62]=1;
     }
   }
 
-  public void thread225882(int [] tdone, int [] ends){
-        S225788=1;
+  public void thread215077(int [] tdone, int [] ends){
+        S214983=1;
     test_61.setClear();//sysj\ECS.sysj line: 37, column: 5
-    thread225883(tdone,ends);
-    thread225884(tdone,ends);
-    thread225885(tdone,ends);
-    int biggest225886 = 0;
-    if(ends[62]>=biggest225886){
-      biggest225886=ends[62];
+    thread215078(tdone,ends);
+    thread215079(tdone,ends);
+    thread215080(tdone,ends);
+    int biggest215081 = 0;
+    if(ends[62]>=biggest215081){
+      biggest215081=ends[62];
     }
-    if(ends[63]>=biggest225886){
-      biggest225886=ends[63];
+    if(ends[63]>=biggest215081){
+      biggest215081=ends[63];
     }
-    if(ends[64]>=biggest225886){
-      biggest225886=ends[64];
+    if(ends[64]>=biggest215081){
+      biggest215081=ends[64];
     }
-    if(biggest225886 == 1){
+    if(biggest215081 == 1){
       active[61]=1;
       ends[61]=1;
       tdone[61]=1;
     }
   }
 
-  public void thread225880(int [] tdone, int [] ends){
-        S225627=1;
+  public void thread215075(int [] tdone, int [] ends){
+        S214822=1;
     if((Integer)(zoneSixOccupancy.getpreval() == null ? 0 : ((Integer)zoneSixOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneSixLightingI.getpreval() == null ? 0 : ((Integer)zoneSixLightingI.getpreval()).intValue()) >= 50 || !afterhrs_6.getprestatus()){//sysj\ECS.sysj line: 59, column: 21
       test_57.setPresent();//sysj\ECS.sysj line: 60, column: 21
       currsigs.addElement(test_57);
@@ -3803,18 +3803,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225879(int [] tdone, int [] ends){
-        S225619=1;
+  public void thread215074(int [] tdone, int [] ends){
+        S214814=1;
     active[59]=1;
     ends[59]=1;
     tdone[59]=1;
   }
 
-  public void thread225878(int [] tdone, int [] ends){
-        S225616=1;
+  public void thread215073(int [] tdone, int [] ends){
+        S214811=1;
     zoneOcc_thread_58 = (Integer)(zoneSixOccupancy.getpreval() == null ? 0 : ((Integer)zoneSixOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 41, column: 13
     zoneLightInt_thread_58 = (Integer)(zoneSixLightingI.getpreval() == null ? 0 : ((Integer)zoneSixLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 42, column: 13
-    S225607=0;
+    S214802=0;
     if(afterhrs_6.getprestatus() && zoneOcc_thread_58 > 0 && zoneLightInt_thread_58 < 50){//sysj\ECS.sysj line: 44, column: 17
       zoneSixLightONOFF.setPresent();//sysj\ECS.sysj line: 45, column: 17
       currsigs.addElement(zoneSixLightONOFF);
@@ -3823,38 +3823,38 @@ public class ECS_LightingController extends ClockDomain{
       tdone[58]=1;
     }
     else {
-      S225607=1;
+      S214802=1;
       active[58]=1;
       ends[58]=1;
       tdone[58]=1;
     }
   }
 
-  public void thread225877(int [] tdone, int [] ends){
-        S225696=1;
+  public void thread215072(int [] tdone, int [] ends){
+        S214891=1;
     test_57.setClear();//sysj\ECS.sysj line: 37, column: 5
-    thread225878(tdone,ends);
-    thread225879(tdone,ends);
-    thread225880(tdone,ends);
-    int biggest225881 = 0;
-    if(ends[58]>=biggest225881){
-      biggest225881=ends[58];
+    thread215073(tdone,ends);
+    thread215074(tdone,ends);
+    thread215075(tdone,ends);
+    int biggest215076 = 0;
+    if(ends[58]>=biggest215076){
+      biggest215076=ends[58];
     }
-    if(ends[59]>=biggest225881){
-      biggest225881=ends[59];
+    if(ends[59]>=biggest215076){
+      biggest215076=ends[59];
     }
-    if(ends[60]>=biggest225881){
-      biggest225881=ends[60];
+    if(ends[60]>=biggest215076){
+      biggest215076=ends[60];
     }
-    if(biggest225881 == 1){
+    if(biggest215076 == 1){
       active[57]=1;
       ends[57]=1;
       tdone[57]=1;
     }
   }
 
-  public void thread225875(int [] tdone, int [] ends){
-        S225535=1;
+  public void thread215070(int [] tdone, int [] ends){
+        S214730=1;
     if((Integer)(zoneFiveOccupancy.getpreval() == null ? 0 : ((Integer)zoneFiveOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneFiveLightingI.getpreval() == null ? 0 : ((Integer)zoneFiveLightingI.getpreval()).intValue()) >= 50 || !afterhrs_6.getprestatus()){//sysj\ECS.sysj line: 59, column: 21
       test_53.setPresent();//sysj\ECS.sysj line: 60, column: 21
       currsigs.addElement(test_53);
@@ -3869,18 +3869,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225874(int [] tdone, int [] ends){
-        S225527=1;
+  public void thread215069(int [] tdone, int [] ends){
+        S214722=1;
     active[55]=1;
     ends[55]=1;
     tdone[55]=1;
   }
 
-  public void thread225873(int [] tdone, int [] ends){
-        S225524=1;
+  public void thread215068(int [] tdone, int [] ends){
+        S214719=1;
     zoneOcc_thread_54 = (Integer)(zoneFiveOccupancy.getpreval() == null ? 0 : ((Integer)zoneFiveOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 41, column: 13
     zoneLightInt_thread_54 = (Integer)(zoneFiveLightingI.getpreval() == null ? 0 : ((Integer)zoneFiveLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 42, column: 13
-    S225515=0;
+    S214710=0;
     if(afterhrs_6.getprestatus() && zoneOcc_thread_54 > 0 && zoneLightInt_thread_54 < 50){//sysj\ECS.sysj line: 44, column: 17
       zoneFiveLightONOFF.setPresent();//sysj\ECS.sysj line: 45, column: 17
       currsigs.addElement(zoneFiveLightONOFF);
@@ -3889,38 +3889,38 @@ public class ECS_LightingController extends ClockDomain{
       tdone[54]=1;
     }
     else {
-      S225515=1;
+      S214710=1;
       active[54]=1;
       ends[54]=1;
       tdone[54]=1;
     }
   }
 
-  public void thread225872(int [] tdone, int [] ends){
-        S225604=1;
+  public void thread215067(int [] tdone, int [] ends){
+        S214799=1;
     test_53.setClear();//sysj\ECS.sysj line: 37, column: 5
-    thread225873(tdone,ends);
-    thread225874(tdone,ends);
-    thread225875(tdone,ends);
-    int biggest225876 = 0;
-    if(ends[54]>=biggest225876){
-      biggest225876=ends[54];
+    thread215068(tdone,ends);
+    thread215069(tdone,ends);
+    thread215070(tdone,ends);
+    int biggest215071 = 0;
+    if(ends[54]>=biggest215071){
+      biggest215071=ends[54];
     }
-    if(ends[55]>=biggest225876){
-      biggest225876=ends[55];
+    if(ends[55]>=biggest215071){
+      biggest215071=ends[55];
     }
-    if(ends[56]>=biggest225876){
-      biggest225876=ends[56];
+    if(ends[56]>=biggest215071){
+      biggest215071=ends[56];
     }
-    if(biggest225876 == 1){
+    if(biggest215071 == 1){
       active[53]=1;
       ends[53]=1;
       tdone[53]=1;
     }
   }
 
-  public void thread225870(int [] tdone, int [] ends){
-        S225443=1;
+  public void thread215065(int [] tdone, int [] ends){
+        S214638=1;
     if((Integer)(zoneFourOccupancy.getpreval() == null ? 0 : ((Integer)zoneFourOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneFourLightingI.getpreval() == null ? 0 : ((Integer)zoneFourLightingI.getpreval()).intValue()) >= 50 || !afterhrs_6.getprestatus()){//sysj\ECS.sysj line: 59, column: 21
       test_49.setPresent();//sysj\ECS.sysj line: 60, column: 21
       currsigs.addElement(test_49);
@@ -3935,18 +3935,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225869(int [] tdone, int [] ends){
-        S225435=1;
+  public void thread215064(int [] tdone, int [] ends){
+        S214630=1;
     active[51]=1;
     ends[51]=1;
     tdone[51]=1;
   }
 
-  public void thread225868(int [] tdone, int [] ends){
-        S225432=1;
+  public void thread215063(int [] tdone, int [] ends){
+        S214627=1;
     zoneOcc_thread_50 = (Integer)(zoneFourOccupancy.getpreval() == null ? 0 : ((Integer)zoneFourOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 41, column: 13
     zoneLightInt_thread_50 = (Integer)(zoneFourLightingI.getpreval() == null ? 0 : ((Integer)zoneFourLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 42, column: 13
-    S225423=0;
+    S214618=0;
     if(afterhrs_6.getprestatus() && zoneOcc_thread_50 > 0 && zoneLightInt_thread_50 < 50){//sysj\ECS.sysj line: 44, column: 17
       zoneFourLightONOFF.setPresent();//sysj\ECS.sysj line: 45, column: 17
       currsigs.addElement(zoneFourLightONOFF);
@@ -3955,38 +3955,38 @@ public class ECS_LightingController extends ClockDomain{
       tdone[50]=1;
     }
     else {
-      S225423=1;
+      S214618=1;
       active[50]=1;
       ends[50]=1;
       tdone[50]=1;
     }
   }
 
-  public void thread225867(int [] tdone, int [] ends){
-        S225512=1;
+  public void thread215062(int [] tdone, int [] ends){
+        S214707=1;
     test_49.setClear();//sysj\ECS.sysj line: 37, column: 5
-    thread225868(tdone,ends);
-    thread225869(tdone,ends);
-    thread225870(tdone,ends);
-    int biggest225871 = 0;
-    if(ends[50]>=biggest225871){
-      biggest225871=ends[50];
+    thread215063(tdone,ends);
+    thread215064(tdone,ends);
+    thread215065(tdone,ends);
+    int biggest215066 = 0;
+    if(ends[50]>=biggest215066){
+      biggest215066=ends[50];
     }
-    if(ends[51]>=biggest225871){
-      biggest225871=ends[51];
+    if(ends[51]>=biggest215066){
+      biggest215066=ends[51];
     }
-    if(ends[52]>=biggest225871){
-      biggest225871=ends[52];
+    if(ends[52]>=biggest215066){
+      biggest215066=ends[52];
     }
-    if(biggest225871 == 1){
+    if(biggest215066 == 1){
       active[49]=1;
       ends[49]=1;
       tdone[49]=1;
     }
   }
 
-  public void thread225865(int [] tdone, int [] ends){
-        S225351=1;
+  public void thread215060(int [] tdone, int [] ends){
+        S214546=1;
     if((Integer)(zoneThreeOccupancy.getpreval() == null ? 0 : ((Integer)zoneThreeOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneThreeLightingI.getpreval() == null ? 0 : ((Integer)zoneThreeLightingI.getpreval()).intValue()) >= 50 || !afterhrs_6.getprestatus()){//sysj\ECS.sysj line: 59, column: 21
       test_45.setPresent();//sysj\ECS.sysj line: 60, column: 21
       currsigs.addElement(test_45);
@@ -4001,18 +4001,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225864(int [] tdone, int [] ends){
-        S225343=1;
+  public void thread215059(int [] tdone, int [] ends){
+        S214538=1;
     active[47]=1;
     ends[47]=1;
     tdone[47]=1;
   }
 
-  public void thread225863(int [] tdone, int [] ends){
-        S225340=1;
+  public void thread215058(int [] tdone, int [] ends){
+        S214535=1;
     zoneOcc_thread_46 = (Integer)(zoneThreeOccupancy.getpreval() == null ? 0 : ((Integer)zoneThreeOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 41, column: 13
     zoneLightInt_thread_46 = (Integer)(zoneThreeLightingI.getpreval() == null ? 0 : ((Integer)zoneThreeLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 42, column: 13
-    S225331=0;
+    S214526=0;
     if(afterhrs_6.getprestatus() && zoneOcc_thread_46 > 0 && zoneLightInt_thread_46 < 50){//sysj\ECS.sysj line: 44, column: 17
       zoneThreeLightONOFF.setPresent();//sysj\ECS.sysj line: 45, column: 17
       currsigs.addElement(zoneThreeLightONOFF);
@@ -4021,38 +4021,38 @@ public class ECS_LightingController extends ClockDomain{
       tdone[46]=1;
     }
     else {
-      S225331=1;
+      S214526=1;
       active[46]=1;
       ends[46]=1;
       tdone[46]=1;
     }
   }
 
-  public void thread225862(int [] tdone, int [] ends){
-        S225420=1;
+  public void thread215057(int [] tdone, int [] ends){
+        S214615=1;
     test_45.setClear();//sysj\ECS.sysj line: 37, column: 5
-    thread225863(tdone,ends);
-    thread225864(tdone,ends);
-    thread225865(tdone,ends);
-    int biggest225866 = 0;
-    if(ends[46]>=biggest225866){
-      biggest225866=ends[46];
+    thread215058(tdone,ends);
+    thread215059(tdone,ends);
+    thread215060(tdone,ends);
+    int biggest215061 = 0;
+    if(ends[46]>=biggest215061){
+      biggest215061=ends[46];
     }
-    if(ends[47]>=biggest225866){
-      biggest225866=ends[47];
+    if(ends[47]>=biggest215061){
+      biggest215061=ends[47];
     }
-    if(ends[48]>=biggest225866){
-      biggest225866=ends[48];
+    if(ends[48]>=biggest215061){
+      biggest215061=ends[48];
     }
-    if(biggest225866 == 1){
+    if(biggest215061 == 1){
       active[45]=1;
       ends[45]=1;
       tdone[45]=1;
     }
   }
 
-  public void thread225860(int [] tdone, int [] ends){
-        S225259=1;
+  public void thread215055(int [] tdone, int [] ends){
+        S214454=1;
     if((Integer)(zoneTwoOccupancy.getpreval() == null ? 0 : ((Integer)zoneTwoOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneTwoLightingI.getpreval() == null ? 0 : ((Integer)zoneTwoLightingI.getpreval()).intValue()) >= 50 || !afterhrs_6.getprestatus()){//sysj\ECS.sysj line: 59, column: 21
       test_41.setPresent();//sysj\ECS.sysj line: 60, column: 21
       currsigs.addElement(test_41);
@@ -4067,18 +4067,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225859(int [] tdone, int [] ends){
-        S225251=1;
+  public void thread215054(int [] tdone, int [] ends){
+        S214446=1;
     active[43]=1;
     ends[43]=1;
     tdone[43]=1;
   }
 
-  public void thread225858(int [] tdone, int [] ends){
-        S225248=1;
+  public void thread215053(int [] tdone, int [] ends){
+        S214443=1;
     zoneOcc_thread_42 = (Integer)(zoneTwoOccupancy.getpreval() == null ? 0 : ((Integer)zoneTwoOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 41, column: 13
     zoneLightInt_thread_42 = (Integer)(zoneTwoLightingI.getpreval() == null ? 0 : ((Integer)zoneTwoLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 42, column: 13
-    S225239=0;
+    S214434=0;
     if(afterhrs_6.getprestatus() && zoneOcc_thread_42 > 0 && zoneLightInt_thread_42 < 50){//sysj\ECS.sysj line: 44, column: 17
       zoneTwoLightONOFF.setPresent();//sysj\ECS.sysj line: 45, column: 17
       currsigs.addElement(zoneTwoLightONOFF);
@@ -4087,38 +4087,38 @@ public class ECS_LightingController extends ClockDomain{
       tdone[42]=1;
     }
     else {
-      S225239=1;
+      S214434=1;
       active[42]=1;
       ends[42]=1;
       tdone[42]=1;
     }
   }
 
-  public void thread225857(int [] tdone, int [] ends){
-        S225328=1;
+  public void thread215052(int [] tdone, int [] ends){
+        S214523=1;
     test_41.setClear();//sysj\ECS.sysj line: 37, column: 5
-    thread225858(tdone,ends);
-    thread225859(tdone,ends);
-    thread225860(tdone,ends);
-    int biggest225861 = 0;
-    if(ends[42]>=biggest225861){
-      biggest225861=ends[42];
+    thread215053(tdone,ends);
+    thread215054(tdone,ends);
+    thread215055(tdone,ends);
+    int biggest215056 = 0;
+    if(ends[42]>=biggest215056){
+      biggest215056=ends[42];
     }
-    if(ends[43]>=biggest225861){
-      biggest225861=ends[43];
+    if(ends[43]>=biggest215056){
+      biggest215056=ends[43];
     }
-    if(ends[44]>=biggest225861){
-      biggest225861=ends[44];
+    if(ends[44]>=biggest215056){
+      biggest215056=ends[44];
     }
-    if(biggest225861 == 1){
+    if(biggest215056 == 1){
       active[41]=1;
       ends[41]=1;
       tdone[41]=1;
     }
   }
 
-  public void thread225855(int [] tdone, int [] ends){
-        S225167=1;
+  public void thread215050(int [] tdone, int [] ends){
+        S214362=1;
     if((Integer)(zoneOneOccupancy.getpreval() == null ? 0 : ((Integer)zoneOneOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneOneLightingI.getpreval() == null ? 0 : ((Integer)zoneOneLightingI.getpreval()).intValue()) >= 50 || !afterhrs_6.getprestatus()){//sysj\ECS.sysj line: 59, column: 21
       test_37.setPresent();//sysj\ECS.sysj line: 60, column: 21
       currsigs.addElement(test_37);
@@ -4133,18 +4133,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225854(int [] tdone, int [] ends){
-        S225159=1;
+  public void thread215049(int [] tdone, int [] ends){
+        S214354=1;
     active[39]=1;
     ends[39]=1;
     tdone[39]=1;
   }
 
-  public void thread225853(int [] tdone, int [] ends){
-        S225156=1;
+  public void thread215048(int [] tdone, int [] ends){
+        S214351=1;
     zoneOcc_thread_38 = (Integer)(zoneOneOccupancy.getpreval() == null ? 0 : ((Integer)zoneOneOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 41, column: 13
     zoneLightInt_thread_38 = (Integer)(zoneOneLightingI.getpreval() == null ? 0 : ((Integer)zoneOneLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 42, column: 13
-    S225147=0;
+    S214342=0;
     if(afterhrs_6.getprestatus() && zoneOcc_thread_38 > 0 && zoneLightInt_thread_38 < 50){//sysj\ECS.sysj line: 44, column: 17
       zoneOneLightONOFF.setPresent();//sysj\ECS.sysj line: 45, column: 17
       currsigs.addElement(zoneOneLightONOFF);
@@ -4153,38 +4153,38 @@ public class ECS_LightingController extends ClockDomain{
       tdone[38]=1;
     }
     else {
-      S225147=1;
+      S214342=1;
       active[38]=1;
       ends[38]=1;
       tdone[38]=1;
     }
   }
 
-  public void thread225852(int [] tdone, int [] ends){
-        S225236=1;
+  public void thread215047(int [] tdone, int [] ends){
+        S214431=1;
     test_37.setClear();//sysj\ECS.sysj line: 37, column: 5
-    thread225853(tdone,ends);
-    thread225854(tdone,ends);
-    thread225855(tdone,ends);
-    int biggest225856 = 0;
-    if(ends[38]>=biggest225856){
-      biggest225856=ends[38];
+    thread215048(tdone,ends);
+    thread215049(tdone,ends);
+    thread215050(tdone,ends);
+    int biggest215051 = 0;
+    if(ends[38]>=biggest215051){
+      biggest215051=ends[38];
     }
-    if(ends[39]>=biggest225856){
-      biggest225856=ends[39];
+    if(ends[39]>=biggest215051){
+      biggest215051=ends[39];
     }
-    if(ends[40]>=biggest225856){
-      biggest225856=ends[40];
+    if(ends[40]>=biggest215051){
+      biggest215051=ends[40];
     }
-    if(biggest225856 == 1){
+    if(biggest215051 == 1){
       active[37]=1;
       ends[37]=1;
       tdone[37]=1;
     }
   }
 
-  public void thread225850(int [] tdone, int [] ends){
-        S225075=1;
+  public void thread215045(int [] tdone, int [] ends){
+        S214270=1;
     if((Integer)(zoneSevenOccupancy.getpreval() == null ? 0 : ((Integer)zoneSevenOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneSevenLightingI.getpreval() == null ? 0 : ((Integer)zoneSevenLightingI.getpreval()).intValue()) >= 50 || !workhrs_6.getprestatus()){//sysj\ECS.sysj line: 25, column: 21
       test_33.setPresent();//sysj\ECS.sysj line: 26, column: 21
       currsigs.addElement(test_33);
@@ -4199,18 +4199,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225849(int [] tdone, int [] ends){
-        S225067=1;
+  public void thread215044(int [] tdone, int [] ends){
+        S214262=1;
     active[35]=1;
     ends[35]=1;
     tdone[35]=1;
   }
 
-  public void thread225848(int [] tdone, int [] ends){
-        S225064=1;
+  public void thread215043(int [] tdone, int [] ends){
+        S214259=1;
     zoneOcc_thread_34 = (Integer)(zoneSevenOccupancy.getpreval() == null ? 0 : ((Integer)zoneSevenOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 7, column: 13
     zoneLightInt_thread_34 = (Integer)(zoneSevenLightingI.getpreval() == null ? 0 : ((Integer)zoneSevenLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 8, column: 13
-    S225055=0;
+    S214250=0;
     if(workhrs_6.getprestatus() && zoneOcc_thread_34 > 0 && zoneLightInt_thread_34 < 50){//sysj\ECS.sysj line: 10, column: 17
       zoneSevenWindowONOFF.setPresent();//sysj\ECS.sysj line: 11, column: 17
       currsigs.addElement(zoneSevenWindowONOFF);
@@ -4219,38 +4219,38 @@ public class ECS_LightingController extends ClockDomain{
       tdone[34]=1;
     }
     else {
-      S225055=1;
+      S214250=1;
       active[34]=1;
       ends[34]=1;
       tdone[34]=1;
     }
   }
 
-  public void thread225847(int [] tdone, int [] ends){
-        S225144=1;
+  public void thread215042(int [] tdone, int [] ends){
+        S214339=1;
     test_33.setClear();//sysj\ECS.sysj line: 3, column: 5
-    thread225848(tdone,ends);
-    thread225849(tdone,ends);
-    thread225850(tdone,ends);
-    int biggest225851 = 0;
-    if(ends[34]>=biggest225851){
-      biggest225851=ends[34];
+    thread215043(tdone,ends);
+    thread215044(tdone,ends);
+    thread215045(tdone,ends);
+    int biggest215046 = 0;
+    if(ends[34]>=biggest215046){
+      biggest215046=ends[34];
     }
-    if(ends[35]>=biggest225851){
-      biggest225851=ends[35];
+    if(ends[35]>=biggest215046){
+      biggest215046=ends[35];
     }
-    if(ends[36]>=biggest225851){
-      biggest225851=ends[36];
+    if(ends[36]>=biggest215046){
+      biggest215046=ends[36];
     }
-    if(biggest225851 == 1){
+    if(biggest215046 == 1){
       active[33]=1;
       ends[33]=1;
       tdone[33]=1;
     }
   }
 
-  public void thread225845(int [] tdone, int [] ends){
-        S224983=1;
+  public void thread215040(int [] tdone, int [] ends){
+        S214178=1;
     if((Integer)(zoneSixOccupancy.getpreval() == null ? 0 : ((Integer)zoneSixOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneSixLightingI.getpreval() == null ? 0 : ((Integer)zoneSixLightingI.getpreval()).intValue()) >= 50 || !workhrs_6.getprestatus()){//sysj\ECS.sysj line: 25, column: 21
       test_29.setPresent();//sysj\ECS.sysj line: 26, column: 21
       currsigs.addElement(test_29);
@@ -4265,18 +4265,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225844(int [] tdone, int [] ends){
-        S224975=1;
+  public void thread215039(int [] tdone, int [] ends){
+        S214170=1;
     active[31]=1;
     ends[31]=1;
     tdone[31]=1;
   }
 
-  public void thread225843(int [] tdone, int [] ends){
-        S224972=1;
+  public void thread215038(int [] tdone, int [] ends){
+        S214167=1;
     zoneOcc_thread_30 = (Integer)(zoneSixOccupancy.getpreval() == null ? 0 : ((Integer)zoneSixOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 7, column: 13
     zoneLightInt_thread_30 = (Integer)(zoneSixLightingI.getpreval() == null ? 0 : ((Integer)zoneSixLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 8, column: 13
-    S224963=0;
+    S214158=0;
     if(workhrs_6.getprestatus() && zoneOcc_thread_30 > 0 && zoneLightInt_thread_30 < 50){//sysj\ECS.sysj line: 10, column: 17
       zoneSixWindowONOFF.setPresent();//sysj\ECS.sysj line: 11, column: 17
       currsigs.addElement(zoneSixWindowONOFF);
@@ -4285,38 +4285,38 @@ public class ECS_LightingController extends ClockDomain{
       tdone[30]=1;
     }
     else {
-      S224963=1;
+      S214158=1;
       active[30]=1;
       ends[30]=1;
       tdone[30]=1;
     }
   }
 
-  public void thread225842(int [] tdone, int [] ends){
-        S225052=1;
+  public void thread215037(int [] tdone, int [] ends){
+        S214247=1;
     test_29.setClear();//sysj\ECS.sysj line: 3, column: 5
-    thread225843(tdone,ends);
-    thread225844(tdone,ends);
-    thread225845(tdone,ends);
-    int biggest225846 = 0;
-    if(ends[30]>=biggest225846){
-      biggest225846=ends[30];
+    thread215038(tdone,ends);
+    thread215039(tdone,ends);
+    thread215040(tdone,ends);
+    int biggest215041 = 0;
+    if(ends[30]>=biggest215041){
+      biggest215041=ends[30];
     }
-    if(ends[31]>=biggest225846){
-      biggest225846=ends[31];
+    if(ends[31]>=biggest215041){
+      biggest215041=ends[31];
     }
-    if(ends[32]>=biggest225846){
-      biggest225846=ends[32];
+    if(ends[32]>=biggest215041){
+      biggest215041=ends[32];
     }
-    if(biggest225846 == 1){
+    if(biggest215041 == 1){
       active[29]=1;
       ends[29]=1;
       tdone[29]=1;
     }
   }
 
-  public void thread225840(int [] tdone, int [] ends){
-        S224891=1;
+  public void thread215035(int [] tdone, int [] ends){
+        S214086=1;
     if((Integer)(zoneFiveOccupancy.getpreval() == null ? 0 : ((Integer)zoneFiveOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneFiveLightingI.getpreval() == null ? 0 : ((Integer)zoneFiveLightingI.getpreval()).intValue()) >= 50 || !workhrs_6.getprestatus()){//sysj\ECS.sysj line: 25, column: 21
       test_25.setPresent();//sysj\ECS.sysj line: 26, column: 21
       currsigs.addElement(test_25);
@@ -4331,18 +4331,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225839(int [] tdone, int [] ends){
-        S224883=1;
+  public void thread215034(int [] tdone, int [] ends){
+        S214078=1;
     active[27]=1;
     ends[27]=1;
     tdone[27]=1;
   }
 
-  public void thread225838(int [] tdone, int [] ends){
-        S224880=1;
+  public void thread215033(int [] tdone, int [] ends){
+        S214075=1;
     zoneOcc_thread_26 = (Integer)(zoneFiveOccupancy.getpreval() == null ? 0 : ((Integer)zoneFiveOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 7, column: 13
     zoneLightInt_thread_26 = (Integer)(zoneFiveLightingI.getpreval() == null ? 0 : ((Integer)zoneFiveLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 8, column: 13
-    S224871=0;
+    S214066=0;
     if(workhrs_6.getprestatus() && zoneOcc_thread_26 > 0 && zoneLightInt_thread_26 < 50){//sysj\ECS.sysj line: 10, column: 17
       zoneFiveWindowONOFF.setPresent();//sysj\ECS.sysj line: 11, column: 17
       currsigs.addElement(zoneFiveWindowONOFF);
@@ -4351,38 +4351,38 @@ public class ECS_LightingController extends ClockDomain{
       tdone[26]=1;
     }
     else {
-      S224871=1;
+      S214066=1;
       active[26]=1;
       ends[26]=1;
       tdone[26]=1;
     }
   }
 
-  public void thread225837(int [] tdone, int [] ends){
-        S224960=1;
+  public void thread215032(int [] tdone, int [] ends){
+        S214155=1;
     test_25.setClear();//sysj\ECS.sysj line: 3, column: 5
-    thread225838(tdone,ends);
-    thread225839(tdone,ends);
-    thread225840(tdone,ends);
-    int biggest225841 = 0;
-    if(ends[26]>=biggest225841){
-      biggest225841=ends[26];
+    thread215033(tdone,ends);
+    thread215034(tdone,ends);
+    thread215035(tdone,ends);
+    int biggest215036 = 0;
+    if(ends[26]>=biggest215036){
+      biggest215036=ends[26];
     }
-    if(ends[27]>=biggest225841){
-      biggest225841=ends[27];
+    if(ends[27]>=biggest215036){
+      biggest215036=ends[27];
     }
-    if(ends[28]>=biggest225841){
-      biggest225841=ends[28];
+    if(ends[28]>=biggest215036){
+      biggest215036=ends[28];
     }
-    if(biggest225841 == 1){
+    if(biggest215036 == 1){
       active[25]=1;
       ends[25]=1;
       tdone[25]=1;
     }
   }
 
-  public void thread225835(int [] tdone, int [] ends){
-        S224799=1;
+  public void thread215030(int [] tdone, int [] ends){
+        S213994=1;
     if((Integer)(zoneFourOccupancy.getpreval() == null ? 0 : ((Integer)zoneFourOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneFourLightingI.getpreval() == null ? 0 : ((Integer)zoneFourLightingI.getpreval()).intValue()) >= 50 || !workhrs_6.getprestatus()){//sysj\ECS.sysj line: 25, column: 21
       test_21.setPresent();//sysj\ECS.sysj line: 26, column: 21
       currsigs.addElement(test_21);
@@ -4397,18 +4397,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225834(int [] tdone, int [] ends){
-        S224791=1;
+  public void thread215029(int [] tdone, int [] ends){
+        S213986=1;
     active[23]=1;
     ends[23]=1;
     tdone[23]=1;
   }
 
-  public void thread225833(int [] tdone, int [] ends){
-        S224788=1;
+  public void thread215028(int [] tdone, int [] ends){
+        S213983=1;
     zoneOcc_thread_22 = (Integer)(zoneFourOccupancy.getpreval() == null ? 0 : ((Integer)zoneFourOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 7, column: 13
     zoneLightInt_thread_22 = (Integer)(zoneFourLightingI.getpreval() == null ? 0 : ((Integer)zoneFourLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 8, column: 13
-    S224779=0;
+    S213974=0;
     if(workhrs_6.getprestatus() && zoneOcc_thread_22 > 0 && zoneLightInt_thread_22 < 50){//sysj\ECS.sysj line: 10, column: 17
       zoneFourWindowONOFF.setPresent();//sysj\ECS.sysj line: 11, column: 17
       currsigs.addElement(zoneFourWindowONOFF);
@@ -4417,38 +4417,38 @@ public class ECS_LightingController extends ClockDomain{
       tdone[22]=1;
     }
     else {
-      S224779=1;
+      S213974=1;
       active[22]=1;
       ends[22]=1;
       tdone[22]=1;
     }
   }
 
-  public void thread225832(int [] tdone, int [] ends){
-        S224868=1;
+  public void thread215027(int [] tdone, int [] ends){
+        S214063=1;
     test_21.setClear();//sysj\ECS.sysj line: 3, column: 5
-    thread225833(tdone,ends);
-    thread225834(tdone,ends);
-    thread225835(tdone,ends);
-    int biggest225836 = 0;
-    if(ends[22]>=biggest225836){
-      biggest225836=ends[22];
+    thread215028(tdone,ends);
+    thread215029(tdone,ends);
+    thread215030(tdone,ends);
+    int biggest215031 = 0;
+    if(ends[22]>=biggest215031){
+      biggest215031=ends[22];
     }
-    if(ends[23]>=biggest225836){
-      biggest225836=ends[23];
+    if(ends[23]>=biggest215031){
+      biggest215031=ends[23];
     }
-    if(ends[24]>=biggest225836){
-      biggest225836=ends[24];
+    if(ends[24]>=biggest215031){
+      biggest215031=ends[24];
     }
-    if(biggest225836 == 1){
+    if(biggest215031 == 1){
       active[21]=1;
       ends[21]=1;
       tdone[21]=1;
     }
   }
 
-  public void thread225830(int [] tdone, int [] ends){
-        S224707=1;
+  public void thread215025(int [] tdone, int [] ends){
+        S213902=1;
     if((Integer)(zoneThreeOccupancy.getpreval() == null ? 0 : ((Integer)zoneThreeOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneThreeLightingI.getpreval() == null ? 0 : ((Integer)zoneThreeLightingI.getpreval()).intValue()) >= 50 || !workhrs_6.getprestatus()){//sysj\ECS.sysj line: 25, column: 21
       test_17.setPresent();//sysj\ECS.sysj line: 26, column: 21
       currsigs.addElement(test_17);
@@ -4463,18 +4463,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225829(int [] tdone, int [] ends){
-        S224699=1;
+  public void thread215024(int [] tdone, int [] ends){
+        S213894=1;
     active[19]=1;
     ends[19]=1;
     tdone[19]=1;
   }
 
-  public void thread225828(int [] tdone, int [] ends){
-        S224696=1;
+  public void thread215023(int [] tdone, int [] ends){
+        S213891=1;
     zoneOcc_thread_18 = (Integer)(zoneThreeOccupancy.getpreval() == null ? 0 : ((Integer)zoneThreeOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 7, column: 13
     zoneLightInt_thread_18 = (Integer)(zoneThreeLightingI.getpreval() == null ? 0 : ((Integer)zoneThreeLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 8, column: 13
-    S224687=0;
+    S213882=0;
     if(workhrs_6.getprestatus() && zoneOcc_thread_18 > 0 && zoneLightInt_thread_18 < 50){//sysj\ECS.sysj line: 10, column: 17
       zoneThreeWindowONOFF.setPresent();//sysj\ECS.sysj line: 11, column: 17
       currsigs.addElement(zoneThreeWindowONOFF);
@@ -4483,38 +4483,38 @@ public class ECS_LightingController extends ClockDomain{
       tdone[18]=1;
     }
     else {
-      S224687=1;
+      S213882=1;
       active[18]=1;
       ends[18]=1;
       tdone[18]=1;
     }
   }
 
-  public void thread225827(int [] tdone, int [] ends){
-        S224776=1;
+  public void thread215022(int [] tdone, int [] ends){
+        S213971=1;
     test_17.setClear();//sysj\ECS.sysj line: 3, column: 5
-    thread225828(tdone,ends);
-    thread225829(tdone,ends);
-    thread225830(tdone,ends);
-    int biggest225831 = 0;
-    if(ends[18]>=biggest225831){
-      biggest225831=ends[18];
+    thread215023(tdone,ends);
+    thread215024(tdone,ends);
+    thread215025(tdone,ends);
+    int biggest215026 = 0;
+    if(ends[18]>=biggest215026){
+      biggest215026=ends[18];
     }
-    if(ends[19]>=biggest225831){
-      biggest225831=ends[19];
+    if(ends[19]>=biggest215026){
+      biggest215026=ends[19];
     }
-    if(ends[20]>=biggest225831){
-      biggest225831=ends[20];
+    if(ends[20]>=biggest215026){
+      biggest215026=ends[20];
     }
-    if(biggest225831 == 1){
+    if(biggest215026 == 1){
       active[17]=1;
       ends[17]=1;
       tdone[17]=1;
     }
   }
 
-  public void thread225825(int [] tdone, int [] ends){
-        S224615=1;
+  public void thread215020(int [] tdone, int [] ends){
+        S213810=1;
     if((Integer)(zoneTwoOccupancy.getpreval() == null ? 0 : ((Integer)zoneTwoOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneTwoLightingI.getpreval() == null ? 0 : ((Integer)zoneTwoLightingI.getpreval()).intValue()) >= 50 || !workhrs_6.getprestatus()){//sysj\ECS.sysj line: 25, column: 21
       test_13.setPresent();//sysj\ECS.sysj line: 26, column: 21
       currsigs.addElement(test_13);
@@ -4529,18 +4529,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225824(int [] tdone, int [] ends){
-        S224607=1;
+  public void thread215019(int [] tdone, int [] ends){
+        S213802=1;
     active[15]=1;
     ends[15]=1;
     tdone[15]=1;
   }
 
-  public void thread225823(int [] tdone, int [] ends){
-        S224604=1;
+  public void thread215018(int [] tdone, int [] ends){
+        S213799=1;
     zoneOcc_thread_14 = (Integer)(zoneTwoOccupancy.getpreval() == null ? 0 : ((Integer)zoneTwoOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 7, column: 13
     zoneLightInt_thread_14 = (Integer)(zoneTwoLightingI.getpreval() == null ? 0 : ((Integer)zoneTwoLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 8, column: 13
-    S224595=0;
+    S213790=0;
     if(workhrs_6.getprestatus() && zoneOcc_thread_14 > 0 && zoneLightInt_thread_14 < 50){//sysj\ECS.sysj line: 10, column: 17
       zoneTwoWindowONOFF.setPresent();//sysj\ECS.sysj line: 11, column: 17
       currsigs.addElement(zoneTwoWindowONOFF);
@@ -4549,38 +4549,38 @@ public class ECS_LightingController extends ClockDomain{
       tdone[14]=1;
     }
     else {
-      S224595=1;
+      S213790=1;
       active[14]=1;
       ends[14]=1;
       tdone[14]=1;
     }
   }
 
-  public void thread225822(int [] tdone, int [] ends){
-        S224684=1;
+  public void thread215017(int [] tdone, int [] ends){
+        S213879=1;
     test_13.setClear();//sysj\ECS.sysj line: 3, column: 5
-    thread225823(tdone,ends);
-    thread225824(tdone,ends);
-    thread225825(tdone,ends);
-    int biggest225826 = 0;
-    if(ends[14]>=biggest225826){
-      biggest225826=ends[14];
+    thread215018(tdone,ends);
+    thread215019(tdone,ends);
+    thread215020(tdone,ends);
+    int biggest215021 = 0;
+    if(ends[14]>=biggest215021){
+      biggest215021=ends[14];
     }
-    if(ends[15]>=biggest225826){
-      biggest225826=ends[15];
+    if(ends[15]>=biggest215021){
+      biggest215021=ends[15];
     }
-    if(ends[16]>=biggest225826){
-      biggest225826=ends[16];
+    if(ends[16]>=biggest215021){
+      biggest215021=ends[16];
     }
-    if(biggest225826 == 1){
+    if(biggest215021 == 1){
       active[13]=1;
       ends[13]=1;
       tdone[13]=1;
     }
   }
 
-  public void thread225820(int [] tdone, int [] ends){
-        S224523=1;
+  public void thread215015(int [] tdone, int [] ends){
+        S213718=1;
     if((Integer)(zoneOneOccupancy.getpreval() == null ? 0 : ((Integer)zoneOneOccupancy.getpreval()).intValue()) == 0 || (Integer)(zoneOneLightingI.getpreval() == null ? 0 : ((Integer)zoneOneLightingI.getpreval()).intValue()) >= 50 || !workhrs_6.getprestatus()){//sysj\ECS.sysj line: 25, column: 21
       test_9.setPresent();//sysj\ECS.sysj line: 26, column: 21
       currsigs.addElement(test_9);
@@ -4595,18 +4595,18 @@ public class ECS_LightingController extends ClockDomain{
     }
   }
 
-  public void thread225819(int [] tdone, int [] ends){
-        S224515=1;
+  public void thread215014(int [] tdone, int [] ends){
+        S213710=1;
     active[11]=1;
     ends[11]=1;
     tdone[11]=1;
   }
 
-  public void thread225818(int [] tdone, int [] ends){
-        S224512=1;
+  public void thread215013(int [] tdone, int [] ends){
+        S213707=1;
     zoneOcc_thread_10 = (Integer)(zoneOneOccupancy.getpreval() == null ? 0 : ((Integer)zoneOneOccupancy.getpreval()).intValue());//sysj\ECS.sysj line: 7, column: 13
     zoneLightInt_thread_10 = (Integer)(zoneOneLightingI.getpreval() == null ? 0 : ((Integer)zoneOneLightingI.getpreval()).intValue());//sysj\ECS.sysj line: 8, column: 13
-    S224503=0;
+    S213698=0;
     if(workhrs_6.getprestatus() && zoneOcc_thread_10 > 0 && zoneLightInt_thread_10 < 50){//sysj\ECS.sysj line: 10, column: 17
       zoneOneWindowONOFF.setPresent();//sysj\ECS.sysj line: 11, column: 17
       currsigs.addElement(zoneOneWindowONOFF);
@@ -4615,170 +4615,170 @@ public class ECS_LightingController extends ClockDomain{
       tdone[10]=1;
     }
     else {
-      S224503=1;
+      S213698=1;
       active[10]=1;
       ends[10]=1;
       tdone[10]=1;
     }
   }
 
-  public void thread225817(int [] tdone, int [] ends){
-        S224592=1;
+  public void thread215012(int [] tdone, int [] ends){
+        S213787=1;
     test_9.setClear();//sysj\ECS.sysj line: 3, column: 5
-    thread225818(tdone,ends);
-    thread225819(tdone,ends);
-    thread225820(tdone,ends);
-    int biggest225821 = 0;
-    if(ends[10]>=biggest225821){
-      biggest225821=ends[10];
+    thread215013(tdone,ends);
+    thread215014(tdone,ends);
+    thread215015(tdone,ends);
+    int biggest215016 = 0;
+    if(ends[10]>=biggest215016){
+      biggest215016=ends[10];
     }
-    if(ends[11]>=biggest225821){
-      biggest225821=ends[11];
+    if(ends[11]>=biggest215016){
+      biggest215016=ends[11];
     }
-    if(ends[12]>=biggest225821){
-      biggest225821=ends[12];
+    if(ends[12]>=biggest215016){
+      biggest215016=ends[12];
     }
-    if(biggest225821 == 1){
+    if(biggest215016 == 1){
       active[9]=1;
       ends[9]=1;
       tdone[9]=1;
     }
   }
 
-  public void thread225816(int [] tdone, int [] ends){
-        S225790=1;
-    thread225817(tdone,ends);
-    thread225822(tdone,ends);
-    thread225827(tdone,ends);
-    thread225832(tdone,ends);
-    thread225837(tdone,ends);
-    thread225842(tdone,ends);
-    thread225847(tdone,ends);
-    thread225852(tdone,ends);
-    thread225857(tdone,ends);
-    thread225862(tdone,ends);
-    thread225867(tdone,ends);
-    thread225872(tdone,ends);
-    thread225877(tdone,ends);
-    thread225882(tdone,ends);
-    int biggest225887 = 0;
-    if(ends[9]>=biggest225887){
-      biggest225887=ends[9];
+  public void thread215011(int [] tdone, int [] ends){
+        S214985=1;
+    thread215012(tdone,ends);
+    thread215017(tdone,ends);
+    thread215022(tdone,ends);
+    thread215027(tdone,ends);
+    thread215032(tdone,ends);
+    thread215037(tdone,ends);
+    thread215042(tdone,ends);
+    thread215047(tdone,ends);
+    thread215052(tdone,ends);
+    thread215057(tdone,ends);
+    thread215062(tdone,ends);
+    thread215067(tdone,ends);
+    thread215072(tdone,ends);
+    thread215077(tdone,ends);
+    int biggest215082 = 0;
+    if(ends[9]>=biggest215082){
+      biggest215082=ends[9];
     }
-    if(ends[13]>=biggest225887){
-      biggest225887=ends[13];
+    if(ends[13]>=biggest215082){
+      biggest215082=ends[13];
     }
-    if(ends[17]>=biggest225887){
-      biggest225887=ends[17];
+    if(ends[17]>=biggest215082){
+      biggest215082=ends[17];
     }
-    if(ends[21]>=biggest225887){
-      biggest225887=ends[21];
+    if(ends[21]>=biggest215082){
+      biggest215082=ends[21];
     }
-    if(ends[25]>=biggest225887){
-      biggest225887=ends[25];
+    if(ends[25]>=biggest215082){
+      biggest215082=ends[25];
     }
-    if(ends[29]>=biggest225887){
-      biggest225887=ends[29];
+    if(ends[29]>=biggest215082){
+      biggest215082=ends[29];
     }
-    if(ends[33]>=biggest225887){
-      biggest225887=ends[33];
+    if(ends[33]>=biggest215082){
+      biggest215082=ends[33];
     }
-    if(ends[37]>=biggest225887){
-      biggest225887=ends[37];
+    if(ends[37]>=biggest215082){
+      biggest215082=ends[37];
     }
-    if(ends[41]>=biggest225887){
-      biggest225887=ends[41];
+    if(ends[41]>=biggest215082){
+      biggest215082=ends[41];
     }
-    if(ends[45]>=biggest225887){
-      biggest225887=ends[45];
+    if(ends[45]>=biggest215082){
+      biggest215082=ends[45];
     }
-    if(ends[49]>=biggest225887){
-      biggest225887=ends[49];
+    if(ends[49]>=biggest215082){
+      biggest215082=ends[49];
     }
-    if(ends[53]>=biggest225887){
-      biggest225887=ends[53];
+    if(ends[53]>=biggest215082){
+      biggest215082=ends[53];
     }
-    if(ends[57]>=biggest225887){
-      biggest225887=ends[57];
+    if(ends[57]>=biggest215082){
+      biggest215082=ends[57];
     }
-    if(ends[61]>=biggest225887){
-      biggest225887=ends[61];
+    if(ends[61]>=biggest215082){
+      biggest215082=ends[61];
     }
-    if(biggest225887 == 1){
+    if(biggest215082 == 1){
       active[8]=1;
       ends[8]=1;
       tdone[8]=1;
     }
-    if(biggest225887 == 1){
+    if(biggest215082 == 1){
       active[8]=1;
       ends[8]=1;
       tdone[8]=1;
     }
-    if(biggest225887 == 1){
+    if(biggest215082 == 1){
       active[8]=1;
       ends[8]=1;
       tdone[8]=1;
     }
-    if(biggest225887 == 1){
+    if(biggest215082 == 1){
       active[8]=1;
       ends[8]=1;
       tdone[8]=1;
     }
-    if(biggest225887 == 1){
+    if(biggest215082 == 1){
       active[8]=1;
       ends[8]=1;
       tdone[8]=1;
     }
-    if(biggest225887 == 1){
+    if(biggest215082 == 1){
       active[8]=1;
       ends[8]=1;
       tdone[8]=1;
     }
-    if(biggest225887 == 1){
+    if(biggest215082 == 1){
       active[8]=1;
       ends[8]=1;
       tdone[8]=1;
     }
-    if(biggest225887 == 1){
+    if(biggest215082 == 1){
       active[8]=1;
       ends[8]=1;
       tdone[8]=1;
     }
-    if(biggest225887 == 1){
+    if(biggest215082 == 1){
       active[8]=1;
       ends[8]=1;
       tdone[8]=1;
     }
-    if(biggest225887 == 1){
+    if(biggest215082 == 1){
       active[8]=1;
       ends[8]=1;
       tdone[8]=1;
     }
-    if(biggest225887 == 1){
+    if(biggest215082 == 1){
       active[8]=1;
       ends[8]=1;
       tdone[8]=1;
     }
-    if(biggest225887 == 1){
+    if(biggest215082 == 1){
       active[8]=1;
       ends[8]=1;
       tdone[8]=1;
     }
-    if(biggest225887 == 1){
+    if(biggest215082 == 1){
       active[8]=1;
       ends[8]=1;
       tdone[8]=1;
     }
-    if(biggest225887 == 1){
+    if(biggest215082 == 1){
       active[8]=1;
       ends[8]=1;
       tdone[8]=1;
     }
   }
 
-  public void thread225815(int [] tdone, int [] ends){
-        S224500=1;
-    S224450=0;
+  public void thread215010(int [] tdone, int [] ends){
+        S213695=1;
+    S213645=0;
     active[7]=1;
     ends[7]=1;
     tdone[7]=1;
@@ -4791,26 +4791,26 @@ public class ECS_LightingController extends ClockDomain{
     }
     
     RUN: while(true){
-      switch(S225792){
+      switch(S214987){
         case 0 : 
-          S225792=0;
+          S214987=0;
           break RUN;
         
         case 1 : 
-          S225792=2;
-          S225792=2;
+          S214987=2;
+          S214987=2;
           workhrs_6.setClear();//sysj\ECS.sysj line: 347, column: 4
           afterhrs_6.setClear();//sysj\ECS.sysj line: 347, column: 4
-          thread225815(tdone,ends);
-          thread225816(tdone,ends);
-          int biggest225888 = 0;
-          if(ends[7]>=biggest225888){
-            biggest225888=ends[7];
+          thread215010(tdone,ends);
+          thread215011(tdone,ends);
+          int biggest215083 = 0;
+          if(ends[7]>=biggest215083){
+            biggest215083=ends[7];
           }
-          if(ends[8]>=biggest225888){
-            biggest225888=ends[8];
+          if(ends[8]>=biggest215083){
+            biggest215083=ends[8];
           }
-          if(biggest225888 == 1){
+          if(biggest215083 == 1){
             active[6]=1;
             ends[6]=1;
             break RUN;
@@ -4819,26 +4819,26 @@ public class ECS_LightingController extends ClockDomain{
         case 2 : 
           workhrs_6.setClear();//sysj\ECS.sysj line: 347, column: 4
           afterhrs_6.setClear();//sysj\ECS.sysj line: 347, column: 4
-          thread225889(tdone,ends);
-          thread225890(tdone,ends);
-          int biggest226074 = 0;
-          if(ends[7]>=biggest226074){
-            biggest226074=ends[7];
+          thread215084(tdone,ends);
+          thread215085(tdone,ends);
+          int biggest215269 = 0;
+          if(ends[7]>=biggest215269){
+            biggest215269=ends[7];
           }
-          if(ends[8]>=biggest226074){
-            biggest226074=ends[8];
+          if(ends[8]>=biggest215269){
+            biggest215269=ends[8];
           }
-          if(biggest226074 == 1){
+          if(biggest215269 == 1){
             active[6]=1;
             ends[6]=1;
             break RUN;
           }
           //FINXME code
-          if(biggest226074 == 0){
-            S225792=0;
+          if(biggest215269 == 0){
+            S214987=0;
             active[6]=0;
             ends[6]=0;
-            S225792=0;
+            S214987=0;
             break RUN;
           }
         
