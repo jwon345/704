@@ -1,6 +1,5 @@
 package org.ECSGUI;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
@@ -18,9 +17,7 @@ import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JScrollPane;
 import javax.swing.JSpinner;
-import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.SpinnerDateModel;
 import javax.swing.SpinnerNumberModel;
@@ -85,14 +82,14 @@ public class ECS_Window extends JFrame {
 	    JPanel zone1Panel = new JPanel();
 	    zone1Panel.setBorder(BorderFactory.createTitledBorder("Zone - 1,7 (Office Zone)"));
 	    zone1Panel.add(new JLabel("Temperature (°C): "));
-	    SpinnerNumberModel temp1Model = new SpinnerNumberModel(0, 0, 100, 1);
+	    SpinnerNumberModel temp1Model = new SpinnerNumberModel(30, 0, 100, 1);
 	    JSpinner temp1Spinner = new JSpinner(temp1Model);
 	    SignalSpinner_BClient temp1Client = new SignalSpinner_BClient(Ports.PORT_ECS_HVAC_CONTROLLER, Ports.zoneOneSevenTemp);
 	    temp1Spinner.addChangeListener(temp1Client);
 	    zone1Panel.add(temp1Spinner);
 
 	    zone1Panel.add(new JLabel("Humidity (%): "));
-	    SpinnerNumberModel humidity1Model = new SpinnerNumberModel(0, 0, 100, 1);
+	    SpinnerNumberModel humidity1Model = new SpinnerNumberModel(50, 0, 100, 1);
 	    JSpinner humidity1Spinner = new JSpinner(humidity1Model);
 	    SignalSpinner_BClient humidity1Client = new SignalSpinner_BClient(Ports.PORT_ECS_HVAC_CONTROLLER, Ports.zoneOneSevenHumid);
 	    humidity1Spinner.addChangeListener(humidity1Client);
@@ -106,14 +103,14 @@ public class ECS_Window extends JFrame {
 	    JPanel zone2Panel = new JPanel();
 	    zone2Panel.setBorder(BorderFactory.createTitledBorder("Zone - 2,3 (Storage Zone)"));
 	    zone2Panel.add(new JLabel("Temperature (°C): "));
-	    SpinnerNumberModel temp2Model = new SpinnerNumberModel(0, 0, 100, 1);
+	    SpinnerNumberModel temp2Model = new SpinnerNumberModel(30, 0, 100, 1);
 	    JSpinner temp2Spinner = new JSpinner(temp2Model);
 	    SignalSpinner_BClient temp2Client = new SignalSpinner_BClient(Ports.PORT_ECS_HVAC_CONTROLLER, Ports.zoneTwoThreeTemp);
 	    temp2Spinner.addChangeListener(temp2Client);	    
 	    zone2Panel.add(temp2Spinner);
 
 	    zone2Panel.add(new JLabel("Humidity (%): "));
-	    SpinnerNumberModel humidity2Model = new SpinnerNumberModel(0, 0, 100, 1);
+	    SpinnerNumberModel humidity2Model = new SpinnerNumberModel(50, 0, 100, 1);
 	    JSpinner humidity2Spinner = new JSpinner(humidity2Model);
 	    SignalSpinner_BClient humidity2Client = new SignalSpinner_BClient(Ports.PORT_ECS_HVAC_CONTROLLER, Ports.zoneTwoThreeHumid);
 	    humidity2Spinner.addChangeListener(humidity2Client);	    
@@ -127,14 +124,14 @@ public class ECS_Window extends JFrame {
 	    JPanel zone3Panel = new JPanel();
 	    zone3Panel.setBorder(BorderFactory.createTitledBorder("Zone - 4,5,6 (Manufacturing Zone)"));
 	    zone3Panel.add(new JLabel("Temperature (°C): "));
-	    SpinnerNumberModel temp3Model = new SpinnerNumberModel(0, 0, 100, 1);
+	    SpinnerNumberModel temp3Model = new SpinnerNumberModel(30, 0, 100, 1);
 	    JSpinner temp3Spinner = new JSpinner(temp3Model);
 	    SignalSpinner_BClient temp3Client = new SignalSpinner_BClient(Ports.PORT_ECS_HVAC_CONTROLLER, Ports.zoneFourFiveSixTemp);
 	    temp3Spinner.addChangeListener(temp3Client);	
 	    zone3Panel.add(temp3Spinner);
 
 	    zone3Panel.add(new JLabel("Humidity (%): "));
-	    SpinnerNumberModel humidity3Model = new SpinnerNumberModel(0, 0, 100, 1);
+	    SpinnerNumberModel humidity3Model = new SpinnerNumberModel(50, 0, 100, 1);
 	    JSpinner humidity3Spinner = new JSpinner(humidity3Model);
 	    SignalSpinner_BClient humidity3Client = new SignalSpinner_BClient(Ports.PORT_ECS_HVAC_CONTROLLER, Ports.zoneFourFiveSixHumid);
 	    humidity3Spinner.addChangeListener(humidity3Client);
@@ -318,102 +315,62 @@ public class ECS_Window extends JFrame {
 
 	    zone1 = new Zone1_Canvas();
 	    zone1.setPreferredSize(new Dimension(300, 150));	
-	    zone1.setBackground(Color.gray); 
+	    zone1.setBackground(Color.gray); // Set to any color you want
 	    	 
-	    c.gridx = 0; 
-	    c.gridy = 4; 
+	    c.gridx = 0; // New panel's x position (next to the existing one)
+	    c.gridy = 4; // New panel's y position (same row as the existing one)
 	    this.add(zone1, c);
 	    
 	    zone2 = new Zone2_Canvas();
 	    zone2.setPreferredSize(new Dimension(300, 150));	
-	    zone2.setBackground(Color.gray);
+	    zone2.setBackground(Color.gray); // Set to any color you want
 	    	 
-	    c.gridx = 1; 
-	    c.gridy = 4; 
+	    c.gridx = 1; // New panel's x position (next to the existing one)
+	    c.gridy = 4; // New panel's y position (same row as the existing one)
 	    this.add(zone2, c);
 	    
 	    zone3 = new Zone3_Canvas();
 	    zone3.setPreferredSize(new Dimension(300, 150));	
-	    zone3.setBackground(Color.gray); 
+	    zone3.setBackground(Color.gray); // Set to any color you want
 	    	 
-	    c.gridx = 2; 
-	    c.gridy = 4; 
+	    c.gridx = 2; // New panel's x position (next to the existing one)
+	    c.gridy = 4; // New panel's y position (same row as the existing one)
 	    this.add(zone3, c);
 	    
 	    zone4 = new Zone4_Canvas();
 	    zone4.setPreferredSize(new Dimension(300, 150));	
-	    zone4.setBackground(Color.gray); 
+	    zone4.setBackground(Color.gray); // Set to any color you want
 	    	 
-	    c.gridx = 0;
-	    c.gridy = 5; 
+	    c.gridx = 0; // New panel's x position (next to the existing one)
+	    c.gridy = 5; // New panel's y position (same row as the existing one)
 	    this.add(zone4, c);
 	    
 	    zone5 = new Zone5_Canvas();
 	    zone5.setPreferredSize(new Dimension(300, 150));	
-	    zone5.setBackground(Color.gray); 
+	    zone5.setBackground(Color.gray); // Set to any color you want
 	    	 
-	    c.gridx = 1; 
-	    c.gridy = 5; 
+	    c.gridx = 1; // New panel's x position (next to the existing one)
+	    c.gridy = 5; // New panel's y position (same row as the existing one)
 	    this.add(zone5, c);
 	    
 	    zone6 = new Zone6_Canvas();
 	    zone6.setPreferredSize(new Dimension(300, 150));	
-	    zone6.setBackground(Color.gray); 
+	    zone6.setBackground(Color.gray); // Set to any color you want
 	    	 
-	    c.gridx = 2; 
-	    c.gridy = 5; 
+	    c.gridx = 2; // New panel's x position (next to the existing one)
+	    c.gridy = 5; // New panel's y position (same row as the existing one)
 	    this.add(zone6, c);
 	    
 	    zone7 = new Zone7_Canvas();
 	    zone7.setPreferredSize(new Dimension(300, 150));	
-	    zone7.setBackground(Color.gray); 
+	    zone7.setBackground(Color.gray); // Set to any color you want
 	    	 
-	    c.gridx = 0; 
-	    c.gridy = 6; 
+	    c.gridx = 0; // New panel's x position (next to the existing one)
+	    c.gridy = 6; // New panel's y position (same row as the existing one)
 	    this.add(zone7, c);
 	    
-	    JPanel guidePanel = new JPanel();
-	    guidePanel.setPreferredSize(new Dimension(300, 150));
-	    guidePanel.setBackground(Color.white); 
-	    guidePanel.setBorder(BorderFactory.createTitledBorder("HVAC Guide")); 
-	    guidePanel.setLayout(new BorderLayout());  
-
-	    JTextArea guideInfo = new JTextArea();
-	    guideInfo.setText("Work hours: 9-17\nAfterhours: 17-8\n Any HVAC can be activated during work hours.\nAfter hours only Zone 1-7 can be activated if there is someone in those zones.");
-	    guideInfo.setEditable(false); 
-	    guideInfo.setWrapStyleWord(true); 
-	    guideInfo.setLineWrap(true); 
-	    guideInfo.setCaretPosition(0);
-	    guideInfo.setMargin(new Insets(10,10,10,10));
-
 	    
-	    guidePanel.add(new JScrollPane(guideInfo), BorderLayout.CENTER);  
-
-	    c.gridx = 1; 
-	    c.gridy = 6; 
-	    this.add(guidePanel, c);
-
 	    
-
-	    JPanel lightingGuidePanel = new JPanel();
-	    lightingGuidePanel.setPreferredSize(new Dimension(300, 150));
-	    lightingGuidePanel.setBackground(Color.white); 
-	    lightingGuidePanel.setBorder(BorderFactory.createTitledBorder("Lighting Guide")); 
-	    lightingGuidePanel.setLayout(new BorderLayout());
-
-	    JTextArea lightingGuideInfo = new JTextArea();
-	    lightingGuideInfo.setText("If there is more than one person in the zone and lighting intensity is under 50%, the following will occur:\n- Daytime: Blinds will open.\n- Nighttime: Lights will turn on.");
-	    lightingGuideInfo.setEditable(false); 
-	    lightingGuideInfo.setWrapStyleWord(true); 
-	    lightingGuideInfo.setLineWrap(true); 
-	    lightingGuideInfo.setCaretPosition(0);
-	    lightingGuideInfo.setMargin(new Insets(10,10,10,10));
-
-	    lightingGuidePanel.add(new JScrollPane(lightingGuideInfo), BorderLayout.CENTER);
-
-	    c.gridx = 2;  
-	    c.gridy = 6; 
-	    this.add(lightingGuidePanel, c);
 	    
 	    
 	    

@@ -103,9 +103,9 @@ ECS_HVACController (input int signal currentTime;
 	
 	{
 		
-	int currentTemp = 0;
-	int currentHumidity = 0;
-	System.out.println("Current Temp For Zone 1,7: " + currentTemp + "(°C)");
+	int currentTemp = 30;
+	int currentHumidity = 50;
+	System.out.println("Current Temp For Zone 1,7: " + currentTemp);
 	
 	loop{
 			int tempZoneOneSeven = (Integer)#zoneOneSevenTemp;
@@ -215,9 +215,9 @@ ECS_HVACController (input int signal currentTime;
 	||
 	
 	{
-	int currentTemp = 0;
-	int currentHumidity = 0;
-	System.out.println("Current Temp For Zone 2,3: "+ currentTemp + "(°C)");
+	int currentTemp = 30;
+	int currentHumidity = 50;
+	System.out.println("Current Temp For Zone 2,3: "+ currentTemp);
 	
 	
 		loop{
@@ -272,9 +272,9 @@ ECS_HVACController (input int signal currentTime;
 	||
 	
 	{
-	int currentTemp = 0;
-	int currentHumidity = 0;
-	System.out.println("Current Temp For Zone 4,5,6: "+ currentTemp + "(°C)");
+	int currentTemp = 30;
+	int currentHumidity = 50;
+	System.out.println("Current Temp For Zone 4,5,6: "+ currentTemp);
 	
 	
 		loop{
@@ -415,31 +415,16 @@ ECS_LightingController (
 
 ECS_SmokeController (input signal detectSmoke, stopAll;
 					output signal sirenONOFF;
-					output Boolean channel smokeReady;
-
 ) 
 -> {
 	{while(true){
-		send smokeReady(Boolean.TRUE);
-		
 		present(detectSmoke)
-		{
-		    trap(T) {
-		        {
-		            sustain sirenONOFF;  
-		        }
-		        ||
-		        {
-		            send smokeReady(Boolean.FALSE);
-		            System.out.println("Fire Alert - Please Exit The Building");
-		            await(!detectSmoke);  // Wait until the smoke is no longer detected
-		            exit(T);  // Exit the trap once the smoke is cleared
-		        }
-		    }
+			{
+			emit sirenONOFF;
+			System.out.println("Fire Alert - Please Exit The Building");
+			} 
+			pause;
 		}
-		pause;
-	}
-
 	}
 }
 

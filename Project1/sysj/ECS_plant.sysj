@@ -315,7 +315,6 @@ ECS_SmokePlant(input signal sirenONOFF;
 					{
 					emit stopAll;
 					System.out.println("SIREN - ON");
-					await (!sirenONOFF);
 					} 
 					pause;
 				}

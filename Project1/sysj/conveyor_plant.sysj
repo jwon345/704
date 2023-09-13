@@ -47,6 +47,7 @@ RotaryPlant(
 	    	loop{
 				await(rotaryTableTrigger);
 				emit tableAlignedWithSensor;
+	            System.out.println("*Recieved*");
 	            pause;
 			}
 	    }
