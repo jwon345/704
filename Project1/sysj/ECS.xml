@@ -41,13 +41,13 @@
 		<iSignal Name="zoneSixOccupancy" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.2" Port="30002" />
 		<iSignal Name="zoneSevenOccupancy" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.2" Port="30002" />
 		
-		<iSignal Name="zoneOneLightingI" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.2" Port="30002" />
-		<iSignal Name="zoneTwoLightingI" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.2" Port="30002" />
-		<iSignal Name="zoneThreeLightingI" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.2" Port="30002" />
-		<iSignal Name="zoneFourLightingI" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.2" Port="30002" />
-		<iSignal Name="zoneFiveLightingI" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.2" Port="30002" />
-		<iSignal Name="zoneSixLightingI" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.2" Port="30002" />
-		<iSignal Name="zoneSevenLightingI" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.2" Port="30002" />
+		<oSignal Name="zoneOneLightingI" 	To="ECS_LightingPlant.zoneOneLightingI" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.2" Port="30003" />
+		<oSignal Name="zoneTwoLightingI" 	To="ECS_LightingPlant.zoneTwoLightingI" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.2" Port="30003" />
+		<oSignal Name="zoneThreeLightingI" 	To="ECS_LightingPlant.zoneThreeLightingI" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.2" Port="30003" />
+		<oSignal Name="zoneFourLightingI" 	To="ECS_LightingPlant.zoneFourLightingI" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.2" Port="30003" />
+		<oSignal Name="zoneFiveLightingI" 	To="ECS_LightingPlant.zoneFiveLightingI" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.2" Port="30003" />
+		<oSignal Name="zoneSixLightingI" 	To="ECS_LightingPlant.zoneSixLightingI" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.2" Port="30003" />
+		<oSignal Name="zoneSevenLightingI" 	To="ECS_LightingPlant.zoneSevenLightingI" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.2" Port="30003" />
 		
 		<oSignal Name="zoneOneLightONOFF"  	To="ECS_LightingPlant.zoneOneLightONOFF" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.2" Port="30003" />
 		<oSignal Name="zoneTwoLightONOFF"   To="ECS_LightingPlant.zoneTwoLightONOFF" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.2" Port="30003" />

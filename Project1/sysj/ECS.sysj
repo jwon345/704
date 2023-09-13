@@ -1,70 +1,180 @@
-reaction checkZoneWorkHours(: input int signal occupancy, input int signal lightingI, signal workhours, signal windowONOFF){
+reaction checkZoneWorkHours_1(: input int signal occupancy, output int signal lightingI, signal workhours, signal windowONOFF){
 
     signal test;
-    loop{
-    trap(T) {
-        {
-            int zoneOcc = (Integer)#occupancy;
-            int zoneLightInt = (Integer)#lightingI;
+    // Initial value to ensure a check on the first loop
+    
+    loop {
+        trap(T) {
+            {
+                int zoneOcc = (Integer)#occupancy;
 
-            if (workhours && zoneOcc > 0 && zoneLightInt < 50) {
-                sustain windowONOFF;
-            }
-            pause;
-        }
-        ||
-        {
-            await(test);
-            exit(T);
-        }
-        
-        || 
-        
-        {
-            while(true) {
-                if ((Integer)#occupancy == 0 || (Integer)#lightingI >= 50 || !workhours){
-                    emit test;
+                if (workhours && (zoneOcc == 0)) {
+                	emit lightingI(0);
+                } else if (workhours && zoneOcc == 1) {
+                	emit lightingI(50);
+                    sustain windowONOFF;
+                } else if (workhours && zoneOcc > 1) {
+                    emit lightingI(100);
+                    sustain windowONOFF;
+            
                 }
                 pause;
             }
+            ||
+            {
+                await(test);
+                exit(T);
+            }
+            ||
+            {
+            	int prevOccupancy = -1; 
+                // This will ensure the trap exits if occupancy is 0, it's not workhours, or occupancy changes
+                while(true) {
+                    int currentOccupancy = (Integer)#occupancy;
+                    if (currentOccupancy != prevOccupancy || currentOccupancy == 0 || !workhours){
+                        emit test;
+                    }
+                    prevOccupancy = currentOccupancy;
+                    pause;
+                }
+            }
         }
-    }
     }
 }
 
-reaction checkZoneAfterHours(: input int signal occupancy, input int signal lightingI, signal afterhours, signal LightONOFF){
+reaction checkZoneAfterHours_1(: input int signal occupancy, output int signal lightingI, signal afterhours, signal LightONOFF){
 
     signal test;
-    loop{
-    trap(T) {
-        {
-            int zoneOcc = (Integer)#occupancy;
-            int zoneLightInt = (Integer)#lightingI;
+    // Initial value to ensure a check on the first loop
+    
+    loop {
+        trap(T) {
+            {
+                int zoneOcc = (Integer)#occupancy;
 
-            if (afterhours && zoneOcc > 0 && zoneLightInt < 50) {
-                sustain LightONOFF;
-            }
-            pause;
-        }
-        ||
-        {
-            await(test);
-            exit(T);
-        }
-        
-        || 
-        
-        {
-            while(true) {
-                if ((Integer)#occupancy == 0 || (Integer)#lightingI >= 50 || !afterhours){
-                    emit test;
+                if (afterhours && (zoneOcc == 0)) {
+                	emit lightingI(0);
+                } else if (afterhours && zoneOcc == 1) {
+                	emit lightingI(50);
+                    sustain LightONOFF;
+                } else if (afterhours && zoneOcc > 1) {
+                    emit lightingI(100);
+                    sustain LightONOFF;
+            
                 }
                 pause;
             }
+            ||
+            {
+                await(test);
+                exit(T);
+            }
+            ||
+            {
+            	int prevOccupancy = -1; 
+                // This will ensure the trap exits if occupancy is 0, it's not workhours, or occupancy changes
+                while(true) {
+                    int currentOccupancy = (Integer)#occupancy;
+                    if (currentOccupancy != prevOccupancy || currentOccupancy == 0 || !afterhours){
+                        emit test;
+                    }
+                    prevOccupancy = currentOccupancy;
+                    pause;
+                }
+            }
         }
     }
-    }
 }
+
+
+
+
+
+
+
+ECS_LightingController (
+		input signal Zone1_Finished;
+		
+		
+		input int signal currentTime_2;
+		input int signal zoneOneOccupancy, zoneTwoOccupancy, zoneThreeOccupancy, zoneFourOccupancy, zoneFiveOccupancy, zoneSixOccupancy, zoneSevenOccupancy;
+		output int signal zoneOneLightingI, zoneTwoLightingI, zoneThreeLightingI, zoneFourLightingI, zoneFiveLightingI, zoneSixLightingI, zoneSevenLightingI;
+
+		output signal zoneOneLightONOFF, zoneTwoLightONOFF, zoneThreeLightONOFF, zoneFourLightONOFF,
+		zoneFiveLightONOFF, zoneSixLightONOFF, zoneSevenLightONOFF;
+	
+	    output signal zoneOneWindowONOFF, zoneTwoWindowONOFF, zoneThreeWindowONOFF, zoneFourWindowONOFF, 
+	    zoneFiveWindowONOFF, zoneSixWindowONOFF, zoneSevenWindowONOFF;
+
+		) -> {
+			
+			signal workhrs, afterhrs;
+			
+			{loop{
+
+			    await(currentTime_2);
+			    int currentHour = (Integer)#currentTime_2;
+			    
+			        if (currentHour >= 9 && currentHour <= 17) {
+			            emit workhrs; 
+			            pause;
+
+
+			        } else if ((currentHour >= 18 && currentHour <= 24) || (currentHour >= 0 && currentHour < 9)) {
+			            emit afterhrs;
+			            pause;
+			            
+			        }
+			     
+			        
+			    }
+			
+			
+			}
+			
+			||
+			
+			{
+
+					checkZoneWorkHours_1(:zoneOneOccupancy, zoneOneLightingI, workhrs, zoneOneWindowONOFF)
+		            ||
+		            checkZoneWorkHours_1(:zoneTwoOccupancy, zoneTwoLightingI, workhrs, zoneTwoWindowONOFF)
+		            ||
+		            checkZoneWorkHours_1(:zoneThreeOccupancy, zoneThreeLightingI, workhrs, zoneThreeWindowONOFF)
+		            ||
+		            checkZoneWorkHours_1(:zoneFourOccupancy, zoneFourLightingI, workhrs, zoneFourWindowONOFF)
+		            ||
+		            checkZoneWorkHours_1(:zoneFiveOccupancy, zoneFiveLightingI, workhrs, zoneFiveWindowONOFF)
+		            ||
+		            checkZoneWorkHours_1(:zoneSixOccupancy, zoneSixLightingI, workhrs, zoneSixWindowONOFF)
+		            ||
+		            checkZoneWorkHours_1(:zoneSevenOccupancy, zoneSevenLightingI, workhrs, zoneSevenWindowONOFF)
+
+		            ||
+				    
+		 		   
+		            checkZoneAfterHours_1(:zoneOneOccupancy, zoneOneLightingI, afterhrs, zoneOneLightONOFF)
+		            ||
+		            checkZoneAfterHours_1(:zoneTwoOccupancy, zoneTwoLightingI, afterhrs, zoneTwoLightONOFF)
+		            ||
+		            checkZoneAfterHours_1(:zoneThreeOccupancy, zoneThreeLightingI, afterhrs,zoneThreeLightONOFF)
+		            ||
+		            checkZoneAfterHours_1(:zoneFourOccupancy, zoneFourLightingI, afterhrs,zoneFourLightONOFF)
+		            ||
+		            checkZoneAfterHours_1(:zoneFiveOccupancy, zoneFiveLightingI, afterhrs,zoneFiveLightONOFF)
+		            ||
+		            checkZoneAfterHours_1(:zoneSixOccupancy, zoneSixLightingI, afterhrs,zoneSixLightONOFF)
+		            ||
+		            checkZoneAfterHours_1(:zoneSevenOccupancy, zoneSevenLightingI, afterhrs, zoneSevenLightONOFF)
+	
+	
+			}
+
+		
+		
+		}
+
+
 
 ECS_HVACController (input int signal currentTime;
 						input int signal zoneOneSevenTemp, zoneTwoThreeTemp, zoneFourFiveSixTemp;
@@ -327,90 +437,6 @@ ECS_HVACController (input int signal currentTime;
 			
 	}
 }	
-
-ECS_LightingController (
-		input signal Zone1_Finished;
-		
-		
-		input int signal currentTime_2;
-		input int signal zoneOneOccupancy, zoneTwoOccupancy, zoneThreeOccupancy, zoneFourOccupancy, zoneFiveOccupancy, zoneSixOccupancy, zoneSevenOccupancy;
-		input int signal zoneOneLightingI, zoneTwoLightingI, zoneThreeLightingI, zoneFourLightingI, zoneFiveLightingI, zoneSixLightingI, zoneSevenLightingI;
-
-		output signal zoneOneLightONOFF, zoneTwoLightONOFF, zoneThreeLightONOFF, zoneFourLightONOFF,
-		zoneFiveLightONOFF, zoneSixLightONOFF, zoneSevenLightONOFF;
-	
-	    output signal zoneOneWindowONOFF, zoneTwoWindowONOFF, zoneThreeWindowONOFF, zoneFourWindowONOFF, 
-	    zoneFiveWindowONOFF, zoneSixWindowONOFF, zoneSevenWindowONOFF;
-
-		) -> {
-			
-			signal workhrs, afterhrs;
-			
-			{loop{
-
-			    await(currentTime_2);
-			    int currentHour = (Integer)#currentTime_2;
-			    
-			        if (currentHour >= 9 && currentHour <= 17) {
-			            emit workhrs; 
-			            pause;
-
-
-			        } else if ((currentHour >= 18 && currentHour <= 24) || (currentHour >= 0 && currentHour < 9)) {
-			            emit afterhrs;
-			            pause;
-			            
-			        }
-			     
-			        
-			    }
-			
-			
-			}
-			
-			||
-			
-			{
-
-				 checkZoneWorkHours(:zoneOneOccupancy, zoneOneLightingI, workhrs, zoneOneWindowONOFF)
-		            ||
-		            checkZoneWorkHours(:zoneTwoOccupancy, zoneTwoLightingI, workhrs, zoneTwoWindowONOFF)
-		            ||
-		            checkZoneWorkHours(:zoneThreeOccupancy, zoneThreeLightingI, workhrs, zoneThreeWindowONOFF)
-		            ||
-		            checkZoneWorkHours(:zoneFourOccupancy, zoneFourLightingI, workhrs, zoneFourWindowONOFF)
-		            ||
-		            checkZoneWorkHours(:zoneFiveOccupancy, zoneFiveLightingI, workhrs, zoneFiveWindowONOFF)
-		            ||
-		            checkZoneWorkHours(:zoneSixOccupancy, zoneSixLightingI, workhrs, zoneSixWindowONOFF)
-		            ||
-		            checkZoneWorkHours(:zoneSevenOccupancy, zoneSevenLightingI, workhrs, zoneSevenWindowONOFF)
-
-		    
-		            ||
-		    
-		   
-		            checkZoneAfterHours(:zoneOneOccupancy, zoneOneLightingI, afterhrs, zoneOneLightONOFF)
-		            ||
-		            checkZoneAfterHours(:zoneTwoOccupancy, zoneTwoLightingI, afterhrs, zoneTwoLightONOFF)
-		            ||
-		            checkZoneAfterHours(:zoneThreeOccupancy, zoneThreeLightingI, afterhrs,zoneThreeLightONOFF)
-		            ||
-		            checkZoneAfterHours(:zoneFourOccupancy, zoneFourLightingI, afterhrs,zoneFourLightONOFF)
-		            ||
-		            checkZoneAfterHours(:zoneFiveOccupancy, zoneFiveLightingI, afterhrs,zoneFiveLightONOFF)
-		            ||
-		            checkZoneAfterHours(:zoneSixOccupancy, zoneSixLightingI, afterhrs,zoneSixLightONOFF)
-		            ||
-		            checkZoneAfterHours(:zoneSevenOccupancy, zoneSevenLightingI, afterhrs, zoneSevenLightONOFF)
-	
-			
-	
-			}
-
-		
-		
-		}
 
 
 ECS_SmokeController (input signal detectSmoke, stopAll;

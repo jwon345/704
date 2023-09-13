@@ -24,6 +24,15 @@
         
         
         <ClockDomain Name="ECS_LightingPlant" Class="ECS_LightingPlant">
+			
+		<iSignal Name="zoneOneLightingI" 	Class="com.systemj.ipc.SimpleServer" IP="127.0.0.2" Port="30003" />
+		<iSignal Name="zoneTwoLightingI" 	Class="com.systemj.ipc.SimpleServer" IP="127.0.0.2" Port="30003" />
+		<iSignal Name="zoneThreeLightingI" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.2" Port="30003" />
+		<iSignal Name="zoneFourLightingI" 	Class="com.systemj.ipc.SimpleServer" IP="127.0.0.2" Port="30003" />
+		<iSignal Name="zoneFiveLightingI" 	Class="com.systemj.ipc.SimpleServer" IP="127.0.0.2" Port="30003" />
+		<iSignal Name="zoneSixLightingI" 	Class="com.systemj.ipc.SimpleServer" IP="127.0.0.2" Port="30003" />
+		<iSignal Name="zoneSevenLightingI" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.2" Port="30003" />	
+			
 		<iSignal Name="zoneOneLightONOFF" 	Class="com.systemj.ipc.SimpleServer" IP="127.0.0.2" Port="30003" />
 		<iSignal Name="zoneTwoLightONOFF" 	Class="com.systemj.ipc.SimpleServer" IP="127.0.0.2" Port="30003" />
 		<iSignal Name="zoneThreeLightONOFF" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.2" Port="30003" />
@@ -40,7 +49,6 @@
 		<iSignal Name="zoneSixWindowONOFF" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.2" Port="30003" />
 		<iSignal Name="zoneSevenWindowONOFF" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.2" Port="30003" />
 		
-		<oSignal Name="Zone1_Finished" To="ECS_LightingCD.Zone1_Finished" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.2" Port="30002" />
 
 		
 		<oSignal Name="zoneOneLightONOFF_E" To="UI.zoneOneLightONOFF_E" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.2" Port="20000" />

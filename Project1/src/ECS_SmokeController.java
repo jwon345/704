@@ -15,43 +15,43 @@ public class ECS_SmokeController extends ClockDomain{
   public Signal stopAll = new Signal("stopAll", Signal.INPUT);
   public Signal sirenONOFF = new Signal("sirenONOFF", Signal.OUTPUT);
   public Signal ReadySmoke = new Signal("ReadySmoke", Signal.OUTPUT);
-  private int S205203 = 1;
-  private int S205167 = 1;
-  private int S205155 = 1;
-  private int S205160 = 1;
-  private int S205164 = 1;
+  private int S207331 = 1;
+  private int S207295 = 1;
+  private int S207283 = 1;
+  private int S207288 = 1;
+  private int S207292 = 1;
   
   private int[] ends = new int[69];
   private int[] tdone = new int[69];
   
-  public void thread205485(int [] tdone, int [] ends){
-        S205164=1;
-    System.out.println("Fire Alert - Please Exit The Building");//sysj\ECS.sysj line: 434, column: 15
+  public void thread207613(int [] tdone, int [] ends){
+        S207292=1;
+    System.out.println("Fire Alert - Please Exit The Building");//sysj\ECS.sysj line: 460, column: 15
     active[68]=1;
     ends[68]=1;
     tdone[68]=1;
   }
 
-  public void thread205484(int [] tdone, int [] ends){
-        S205160=1;
-    ReadySmoke.setPresent();//sysj\ECS.sysj line: 430, column: 15
+  public void thread207612(int [] tdone, int [] ends){
+        S207288=1;
+    ReadySmoke.setPresent();//sysj\ECS.sysj line: 456, column: 15
     currsigs.addElement(ReadySmoke);
     active[67]=1;
     ends[67]=1;
     tdone[67]=1;
   }
 
-  public void thread205483(int [] tdone, int [] ends){
-        S205155=1;
-    sirenONOFF.setPresent();//sysj\ECS.sysj line: 426, column: 15
+  public void thread207611(int [] tdone, int [] ends){
+        S207283=1;
+    sirenONOFF.setPresent();//sysj\ECS.sysj line: 452, column: 15
     currsigs.addElement(sirenONOFF);
     active[66]=1;
     ends[66]=1;
     tdone[66]=1;
   }
 
-  public void thread205481(int [] tdone, int [] ends){
-        switch(S205164){
+  public void thread207609(int [] tdone, int [] ends){
+        switch(S207292){
       case 0 : 
         active[68]=0;
         ends[68]=0;
@@ -59,7 +59,7 @@ public class ECS_SmokeController extends ClockDomain{
         break;
       
       case 1 : 
-        if(!detectSmoke.getprestatus()){//sysj\ECS.sysj line: 435, column: 21
+        if(!detectSmoke.getprestatus()){//sysj\ECS.sysj line: 461, column: 21
           ends[68]=2;
           tdone[68]=1;
         }
@@ -73,8 +73,8 @@ public class ECS_SmokeController extends ClockDomain{
     }
   }
 
-  public void thread205480(int [] tdone, int [] ends){
-        switch(S205160){
+  public void thread207608(int [] tdone, int [] ends){
+        switch(S207288){
       case 0 : 
         active[67]=0;
         ends[67]=0;
@@ -82,7 +82,7 @@ public class ECS_SmokeController extends ClockDomain{
         break;
       
       case 1 : 
-        ReadySmoke.setPresent();//sysj\ECS.sysj line: 430, column: 15
+        ReadySmoke.setPresent();//sysj\ECS.sysj line: 456, column: 15
         currsigs.addElement(ReadySmoke);
         active[67]=1;
         ends[67]=1;
@@ -92,8 +92,8 @@ public class ECS_SmokeController extends ClockDomain{
     }
   }
 
-  public void thread205479(int [] tdone, int [] ends){
-        switch(S205155){
+  public void thread207607(int [] tdone, int [] ends){
+        switch(S207283){
       case 0 : 
         active[66]=0;
         ends[66]=0;
@@ -101,7 +101,7 @@ public class ECS_SmokeController extends ClockDomain{
         break;
       
       case 1 : 
-        sirenONOFF.setPresent();//sysj\ECS.sysj line: 426, column: 15
+        sirenONOFF.setPresent();//sysj\ECS.sysj line: 452, column: 15
         currsigs.addElement(sirenONOFF);
         active[66]=1;
         ends[66]=1;
@@ -111,26 +111,26 @@ public class ECS_SmokeController extends ClockDomain{
     }
   }
 
-  public void thread205477(int [] tdone, int [] ends){
-        S205164=1;
-    System.out.println("Fire Alert - Please Exit The Building");//sysj\ECS.sysj line: 434, column: 15
+  public void thread207605(int [] tdone, int [] ends){
+        S207292=1;
+    System.out.println("Fire Alert - Please Exit The Building");//sysj\ECS.sysj line: 460, column: 15
     active[68]=1;
     ends[68]=1;
     tdone[68]=1;
   }
 
-  public void thread205476(int [] tdone, int [] ends){
-        S205160=1;
-    ReadySmoke.setPresent();//sysj\ECS.sysj line: 430, column: 15
+  public void thread207604(int [] tdone, int [] ends){
+        S207288=1;
+    ReadySmoke.setPresent();//sysj\ECS.sysj line: 456, column: 15
     currsigs.addElement(ReadySmoke);
     active[67]=1;
     ends[67]=1;
     tdone[67]=1;
   }
 
-  public void thread205475(int [] tdone, int [] ends){
-        S205155=1;
-    sirenONOFF.setPresent();//sysj\ECS.sysj line: 426, column: 15
+  public void thread207603(int [] tdone, int [] ends){
+        S207283=1;
+    sirenONOFF.setPresent();//sysj\ECS.sysj line: 452, column: 15
     currsigs.addElement(sirenONOFF);
     active[66]=1;
     ends[66]=1;
@@ -144,104 +144,104 @@ public class ECS_SmokeController extends ClockDomain{
     }
     
     RUN: while(true){
-      switch(S205203){
+      switch(S207331){
         case 0 : 
-          S205203=0;
+          S207331=0;
           break RUN;
         
         case 1 : 
-          S205203=2;
-          S205203=2;
-          S205167=0;
-          if(detectSmoke.getprestatus()){//sysj\ECS.sysj line: 422, column: 11
-            thread205475(tdone,ends);
-            thread205476(tdone,ends);
-            thread205477(tdone,ends);
-            int biggest205478 = 0;
-            if(ends[66]>=biggest205478){
-              biggest205478=ends[66];
+          S207331=2;
+          S207331=2;
+          S207295=0;
+          if(detectSmoke.getprestatus()){//sysj\ECS.sysj line: 448, column: 11
+            thread207603(tdone,ends);
+            thread207604(tdone,ends);
+            thread207605(tdone,ends);
+            int biggest207606 = 0;
+            if(ends[66]>=biggest207606){
+              biggest207606=ends[66];
             }
-            if(ends[67]>=biggest205478){
-              biggest205478=ends[67];
+            if(ends[67]>=biggest207606){
+              biggest207606=ends[67];
             }
-            if(ends[68]>=biggest205478){
-              biggest205478=ends[68];
+            if(ends[68]>=biggest207606){
+              biggest207606=ends[68];
             }
-            if(biggest205478 == 1){
+            if(biggest207606 == 1){
               active[65]=1;
               ends[65]=1;
               break RUN;
             }
           }
           else {
-            S205167=1;
+            S207295=1;
             active[65]=1;
             ends[65]=1;
             break RUN;
           }
         
         case 2 : 
-          switch(S205167){
+          switch(S207295){
             case 0 : 
-              thread205479(tdone,ends);
-              thread205480(tdone,ends);
-              thread205481(tdone,ends);
-              int biggest205482 = 0;
-              if(ends[66]>=biggest205482){
-                biggest205482=ends[66];
+              thread207607(tdone,ends);
+              thread207608(tdone,ends);
+              thread207609(tdone,ends);
+              int biggest207610 = 0;
+              if(ends[66]>=biggest207610){
+                biggest207610=ends[66];
               }
-              if(ends[67]>=biggest205482){
-                biggest205482=ends[67];
+              if(ends[67]>=biggest207610){
+                biggest207610=ends[67];
               }
-              if(ends[68]>=biggest205482){
-                biggest205482=ends[68];
+              if(ends[68]>=biggest207610){
+                biggest207610=ends[68];
               }
-              if(biggest205482 == 1){
+              if(biggest207610 == 1){
                 active[65]=1;
                 ends[65]=1;
                 break RUN;
               }
-              if(biggest205482 == 2){
+              if(biggest207610 == 2){
                 ends[65]=2;
-                ;//sysj\ECS.sysj line: 424, column: 7
-                S205167=1;
+                ;//sysj\ECS.sysj line: 450, column: 7
+                S207295=1;
                 active[65]=1;
                 ends[65]=1;
                 break RUN;
               }
               //FINXME code
-              if(biggest205482 == 0){
-                S205167=1;
+              if(biggest207610 == 0){
+                S207295=1;
                 active[65]=1;
                 ends[65]=1;
                 break RUN;
               }
             
             case 1 : 
-              S205167=1;
-              S205167=0;
-              if(detectSmoke.getprestatus()){//sysj\ECS.sysj line: 422, column: 11
-                thread205483(tdone,ends);
-                thread205484(tdone,ends);
-                thread205485(tdone,ends);
-                int biggest205486 = 0;
-                if(ends[66]>=biggest205486){
-                  biggest205486=ends[66];
+              S207295=1;
+              S207295=0;
+              if(detectSmoke.getprestatus()){//sysj\ECS.sysj line: 448, column: 11
+                thread207611(tdone,ends);
+                thread207612(tdone,ends);
+                thread207613(tdone,ends);
+                int biggest207614 = 0;
+                if(ends[66]>=biggest207614){
+                  biggest207614=ends[66];
                 }
-                if(ends[67]>=biggest205486){
-                  biggest205486=ends[67];
+                if(ends[67]>=biggest207614){
+                  biggest207614=ends[67];
                 }
-                if(ends[68]>=biggest205486){
-                  biggest205486=ends[68];
+                if(ends[68]>=biggest207614){
+                  biggest207614=ends[68];
                 }
-                if(biggest205486 == 1){
+                if(biggest207614 == 1){
                   active[65]=1;
                   ends[65]=1;
                   break RUN;
                 }
               }
               else {
-                S205167=1;
+                S207295=1;
                 active[65]=1;
                 ends[65]=1;
                 break RUN;

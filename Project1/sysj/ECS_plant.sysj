@@ -118,7 +118,8 @@ ECS_HVAC_Plant(input signal zoneOneSevenFanONOFF,zoneOneSevenHeaterONOFF,zoneTwo
 
 
 ECS_LightingPlant(
-		output signal Zone1_Finished;
+		input int signal zoneOneLightingI, zoneTwoLightingI, zoneThreeLightingI, zoneFourLightingI, zoneFiveLightingI, zoneSixLightingI, zoneSevenLightingI;
+
 		input signal zoneOneLightONOFF, zoneTwoLightONOFF, zoneThreeLightONOFF, zoneFourLightONOFF,
 		zoneFiveLightONOFF, zoneSixLightONOFF, zoneSevenLightONOFF;
 
@@ -135,138 +136,110 @@ ECS_LightingPlant(
 		zoneFiveWindowONOFF_E, zoneSixWindowONOFF_E, zoneSevenWindowONOFF_E;) -> {
 
 			{
-		        loop{
-		            await(zoneOneWindowONOFF);
-		            System.out.println("Work Hours - Zone 1 Detected Person and Intensity is Low");
-		            await(!zoneOneWindowONOFF);
-		        }
-		    }
+			    int previousIntensity = -1;
+			    loop {
+			        await(zoneOneLightingI);
+			        int currentIntensity = (Integer)#zoneOneLightingI;
+
+			        if(currentIntensity != previousIntensity) {
+			            System.out.println("Zone 1 Detected Change in Occupancy and Intensity is set to: " + currentIntensity);
+			            previousIntensity = currentIntensity;
+			        }
+			    }
+			}
+			
+			
 		    ||
-		    {
-		        loop{
-		            await(zoneTwoWindowONOFF);
-		            System.out.println("Work Hours - Zone 2 Detected Person and Intensity is Low");
-		            await(!zoneTwoWindowONOFF);
-		        }
-		    }
 		    
+		    {
+			    int previousIntensity = -1;
+			    loop {
+			        await(zoneTwoLightingI);
+			        int currentIntensity = (Integer)#zoneTwoLightingI;
+
+			        if(currentIntensity != previousIntensity) {
+			            System.out.println("Zone 2 Detected Change in Occupancy and Intensity is set to: " + currentIntensity);
+			            previousIntensity = currentIntensity;
+			        }
+			    }
+			}
+			
 		    ||
-		    {
-		        loop{
-		            await(zoneThreeWindowONOFF);
-		            System.out.println("Work Hours - Zone 3 Detected Person and Intensity is Low");
-		            await(!zoneThreeWindowONOFF);
-		        }
-		    }
 		    
+		    {
+			    int previousIntensity = -1;
+			    loop {
+			        await(zoneThreeLightingI);
+			        int currentIntensity = (Integer)#zoneThreeLightingI;
+
+			        if(currentIntensity != previousIntensity) {
+			            System.out.println("Zone 3 Detected Change in Occupancy and Intensity is set to: " + currentIntensity);
+			            previousIntensity = currentIntensity;
+			        }
+			    }
+			}
+			
 		    ||
+		    
 		    {
-		        loop{
-		            await(zoneFourWindowONOFF);
-		            System.out.println("Work Hours - Zone 4 Detected Person and Intensity is Low");
-		            await(!zoneFourWindowONOFF);
-		        }
-		    }
-		    
-		    ||
-		    {
-		        loop{
-		            await(zoneFiveWindowONOFF);
-		            System.out.println("Work Hours - Zone 5 Detected Person and Intensity is Low");
-		            await(!zoneFiveWindowONOFF);
-		        }
-		    }
-		    
-		    ||
-		    {
-		        loop{
-		            await(zoneSixWindowONOFF);
-		            System.out.println("Work Hours - Zone 6 Detected Person and Intensity is Low");
-		            await(!zoneSixWindowONOFF);
-		        }
-		    }
-		    
-		    ||
-		    {
-		        loop{
-		            await(zoneSevenWindowONOFF);
-		            System.out.println("Work Hours - Zone 7 Detected Person and Intensity is Low");
-		            await(!zoneSevenWindowONOFF);
-		        }
-		    }
-		    
-		    
-		    // LIGTHS
-		    
-		    
+			    int previousIntensity = -1;
+			    loop {
+			        await(zoneFourLightingI);
+			        int currentIntensity = (Integer)#zoneFourLightingI;
+
+			        if(currentIntensity != previousIntensity) {
+			            System.out.println("Zone 4 Detected Change in Occupancy and Intensity is set to: " + currentIntensity);
+			            previousIntensity = currentIntensity;
+			        }
+			    }
+			}
 		    
 		    ||
+		    
 		    {
-		        loop{
-		            await(zoneOneLightONOFF);
-		            System.out.println("After Hours - Zone 1 Detected Person and Intensity is Low");
-		            await(!zoneOneLightONOFF);
-		        }
-		    }
+			    int previousIntensity = -1;
+			    loop {
+			        await(zoneFiveLightingI);
+			        int currentIntensity = (Integer)#zoneFiveLightingI;
+
+			        if(currentIntensity != previousIntensity) {
+			            System.out.println("Zone 5 Detected Change in Occupancy and Intensity is set to: " + currentIntensity);
+			            previousIntensity = currentIntensity;
+			        }
+			    }
+			}
 		    
 		    ||
-		    {
-		        loop{
-		            await(zoneTwoLightONOFF);
-		            System.out.println("After Hours - Zone 2 Detected Person and Intensity is Low");
-		            await(!zoneTwoLightONOFF);
-		        }
-		    }
 		    
+		    {
+			    int previousIntensity = -1;
+			    loop {
+			        await(zoneSixLightingI);
+			        int currentIntensity = (Integer)#zoneSixLightingI;
+
+			        if(currentIntensity != previousIntensity) {
+			            System.out.println("Zone 6 Detected Change in Occupancy and Intensity is set to: " + currentIntensity);
+			            previousIntensity = currentIntensity;
+			        }
+			    }
+			}
 		    
 		    ||
+		    
 		    {
-		        loop{
-		            await(zoneThreeLightONOFF);
-		            System.out.println("After Hours - Zone 3 Detected Person and Intensity is Low");
-		            await(!zoneThreeLightONOFF);
-		        }
-		    }
-		    
-		    
-		    ||
-		    {
-		        loop{
-		            await(zoneFourLightONOFF);
-		            System.out.println("After Hours - Zone 4 Detected Person and Intensity is Low");
-		            await(!zoneFourLightONOFF);
-		        }
-		    }
-		    
-		    
-		    ||
-		    {
-		        loop{
-		            await(zoneFiveLightONOFF);
-		            System.out.println("After Hours - Zone 5 Detected Person and Intensity is Low");
-		            await(!zoneFiveLightONOFF);
-		        }
-		    }
-		    
-		    
-		    ||
-		    {
-		        loop{
-		            await(zoneSixLightONOFF);
-		            System.out.println("After Hours - Zone 6 Detected Person and Intensity is Low");
-		            await(!zoneSixLightONOFF);
-		        }
-		    }
-		    
-		    
-		    ||
-		    {
-		        loop{
-		            await(zoneSevenLightONOFF);
-		            System.out.println("After Hours - Zone 7 Detected Person and Intensity is Low");
-		            await(!zoneSevenLightONOFF);
-		        }
-		    }
+			    int previousIntensity = -1;
+			    loop {
+			        await(zoneSevenLightingI);
+			        int currentIntensity = (Integer)#zoneSevenLightingI;
+
+			        if(currentIntensity != previousIntensity) {
+			            System.out.println("Zone 7 Detected Change in Occupancy and Intensity is set to: " + currentIntensity);
+			            previousIntensity = currentIntensity;
+			        }
+			    }
+			}
+			
+		   
 		    
 		    ||
 	        {while(true){present(zoneOneLightONOFF){emit zoneOneLightONOFF_E;} pause;}}
