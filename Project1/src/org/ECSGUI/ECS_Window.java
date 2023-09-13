@@ -24,6 +24,7 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.SpinnerDateModel;
 import javax.swing.SpinnerNumberModel;
+import javax.swing.border.TitledBorder;
 import javax.swing.text.NumberFormatter;
 
 import org.OverallGUI.FillerCanvas;
@@ -318,8 +319,14 @@ public class ECS_Window extends JFrame {
 
 	    zone1 = new Zone1_Canvas();
 	    zone1.setPreferredSize(new Dimension(300, 150));	
-	    zone1.setBackground(Color.gray); // Set to any color you want
+	    zone1.setBackground(Color.gray);
 	    	 
+	    TitledBorder titled = BorderFactory.createTitledBorder("Zone 1");
+	    titled.setTitleColor(Color.white);
+	    titled.setTitlePosition(TitledBorder.BOTTOM);
+	    titled.setTitleJustification(TitledBorder.CENTER); 
+	    zone1.setBorder(titled);
+	    
 	    c.gridx = 0; // New panel's x position (next to the existing one)
 	    c.gridy = 4; // New panel's y position (same row as the existing one)
 	    this.add(zone1, c);
@@ -328,6 +335,13 @@ public class ECS_Window extends JFrame {
 	    zone2.setPreferredSize(new Dimension(300, 150));	
 	    zone2.setBackground(Color.gray); // Set to any color you want
 	    	 
+
+	    TitledBorder titled2 = BorderFactory.createTitledBorder("Zone 2");
+	    titled2.setTitleColor(Color.white);
+	    titled2.setTitlePosition(TitledBorder.BOTTOM);
+	    titled2.setTitleJustification(TitledBorder.CENTER); 
+	    zone2.setBorder(titled2);
+	    
 	    c.gridx = 1; // New panel's x position (next to the existing one)
 	    c.gridy = 4; // New panel's y position (same row as the existing one)
 	    this.add(zone2, c);
@@ -336,6 +350,12 @@ public class ECS_Window extends JFrame {
 	    zone3.setPreferredSize(new Dimension(300, 150));	
 	    zone3.setBackground(Color.gray); // Set to any color you want
 	    	 
+	    TitledBorder titled3 = BorderFactory.createTitledBorder("Zone 3");
+	    titled3.setTitleColor(Color.white);
+	    titled3.setTitlePosition(TitledBorder.BOTTOM);
+	    titled3.setTitleJustification(TitledBorder.CENTER); 
+	    zone3.setBorder(titled3);
+	    
 	    c.gridx = 2; // New panel's x position (next to the existing one)
 	    c.gridy = 4; // New panel's y position (same row as the existing one)
 	    this.add(zone3, c);
@@ -344,6 +364,12 @@ public class ECS_Window extends JFrame {
 	    zone4.setPreferredSize(new Dimension(300, 150));	
 	    zone4.setBackground(Color.gray); // Set to any color you want
 	    	 
+	    TitledBorder titled4 = BorderFactory.createTitledBorder("Zone 4");
+	    titled4.setTitleColor(Color.white);
+	    titled4.setTitlePosition(TitledBorder.BOTTOM);
+	    titled4.setTitleJustification(TitledBorder.CENTER); 
+	    zone4.setBorder(titled4);
+	    
 	    c.gridx = 0; // New panel's x position (next to the existing one)
 	    c.gridy = 5; // New panel's y position (same row as the existing one)
 	    this.add(zone4, c);
@@ -352,6 +378,12 @@ public class ECS_Window extends JFrame {
 	    zone5.setPreferredSize(new Dimension(300, 150));	
 	    zone5.setBackground(Color.gray); // Set to any color you want
 	    	 
+	    TitledBorder titled5= BorderFactory.createTitledBorder("Zone 5");
+	    titled5.setTitleColor(Color.white);
+	    titled5.setTitlePosition(TitledBorder.BOTTOM);
+	    titled5.setTitleJustification(TitledBorder.CENTER); 
+	    zone5.setBorder(titled5);
+	    
 	    c.gridx = 1; // New panel's x position (next to the existing one)
 	    c.gridy = 5; // New panel's y position (same row as the existing one)
 	    this.add(zone5, c);
@@ -360,6 +392,13 @@ public class ECS_Window extends JFrame {
 	    zone6.setPreferredSize(new Dimension(300, 150));	
 	    zone6.setBackground(Color.gray); // Set to any color you want
 	    	 
+	    TitledBorder titled6= BorderFactory.createTitledBorder("Zone 6");
+	    titled6.setTitleColor(Color.white);
+	    titled6.setTitlePosition(TitledBorder.BOTTOM);
+	    titled6.setTitleJustification(TitledBorder.CENTER); 
+	    zone6.setBorder(titled6);
+	    
+	    
 	    c.gridx = 2; // New panel's x position (next to the existing one)
 	    c.gridy = 5; // New panel's y position (same row as the existing one)
 	    this.add(zone6, c);
@@ -368,6 +407,13 @@ public class ECS_Window extends JFrame {
 	    zone7.setPreferredSize(new Dimension(300, 150));	
 	    zone7.setBackground(Color.gray); // Set to any color you want
 	    	 
+	    TitledBorder titled7= BorderFactory.createTitledBorder("Zone 7");
+	    titled7.setTitleColor(Color.white);
+	    titled7.setTitlePosition(TitledBorder.BOTTOM);
+	    titled7.setTitleJustification(TitledBorder.CENTER); 
+	    zone7.setBorder(titled7);
+	    
+	    
 	    c.gridx = 0; // New panel's x position (next to the existing one)
 	    c.gridy = 6; // New panel's y position (same row as the existing one)
 	    this.add(zone7, c);
