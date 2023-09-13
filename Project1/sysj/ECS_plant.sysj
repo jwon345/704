@@ -126,8 +126,9 @@ ECS_LightingPlant(
 		input signal zoneOneWindowONOFF, zoneTwoWindowONOFF, zoneThreeWindowONOFF, zoneFourWindowONOFF, 
 		zoneFiveWindowONOFF, zoneSixWindowONOFF, zoneSevenWindowONOFF;
 		
-		output signal zoneOneFinished, zoneTwoFinished, zoneThreeFinished, zoneFourFinished,
-		zoneFiveFinished, zoneSixFinished, zoneSevenFinished;
+		output int signal zoneOneLightingI_E, zoneTwoLightingI_E, zoneThreeLightingI_E, 
+        zoneFourLightingI_E, zoneFiveLightingI_E, zoneSixLightingI_E, 
+        zoneSevenLightingI_E;
 
 		output signal zoneOneLightONOFF_E, zoneTwoLightONOFF_E, zoneThreeLightONOFF_E, zoneFourLightONOFF_E,
 		zoneFiveLightONOFF_E, zoneSixLightONOFF_E, zoneSevenLightONOFF_E;
@@ -239,9 +240,23 @@ ECS_LightingPlant(
 			    }
 			}
 			
-		   
-		    
 		    ||
+		    {while(true){present(zoneOneLightingI){emit zoneOneLightingI_E(zoneOneLightingI);} pause;}}
+		    ||
+		    {while(true){present(zoneTwoLightingI){emit zoneTwoLightingI_E(zoneTwoLightingI);} pause;}}
+		    ||
+		    {while(true){present(zoneThreeLightingI){emit zoneThreeLightingI_E(zoneThreeLightingI);} pause;}}
+		    ||
+		    {while(true){present(zoneFourLightingI){emit zoneFourLightingI_E(zoneFourLightingI);} pause;}}
+		    ||
+		    {while(true){present(zoneFiveLightingI){emit zoneFiveLightingI_E(zoneFiveLightingI);} pause;}}
+		    ||
+		    {while(true){present(zoneSixLightingI){emit zoneSixLightingI_E(zoneSixLightingI);} pause;}}
+		    ||
+		    {while(true){present(zoneSevenLightingI){emit zoneSevenLightingI_E(zoneSevenLightingI);} pause;}}
+
+		    ||
+		   
 	        {while(true){present(zoneOneLightONOFF){emit zoneOneLightONOFF_E;} pause;}}
 		    ||
 	        {while(true){present(zoneTwoLightONOFF){emit zoneTwoLightONOFF_E;} pause;}}

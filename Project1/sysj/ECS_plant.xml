@@ -50,7 +50,15 @@
 		<iSignal Name="zoneSevenWindowONOFF" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.2" Port="30003" />
 		
 
-		
+		<oSignal Name="zoneOneLightingI_E" To="UI.zoneOneLightingI_E" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.2" Port="20000" />
+		<oSignal Name="zoneTwoLightingI_E" To="UI.zoneTwoLightingI_E" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.2" Port="20000" />
+		<oSignal Name="zoneThreeLightingI_E" To="UI.zoneThreeLightingI_E" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.2" Port="20000" />
+		<oSignal Name="zoneFourLightingI_E" To="UI.zoneFourLightingI_E" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.2" Port="20000" />
+		<oSignal Name="zoneFiveLightingI_E" To="UI.zoneFiveLightingI_E" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.2" Port="20000" />
+		<oSignal Name="zoneSixLightingI_E" To="UI.zoneSixLightingI_E" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.2" Port="20000" />
+		<oSignal Name="zoneSevenLightingI_E" To="UI.zoneSevenLightingI_E" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.2" Port="20000" />
+
+
 		<oSignal Name="zoneOneLightONOFF_E" To="UI.zoneOneLightONOFF_E" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.2" Port="20000" />
 		<oSignal Name="zoneTwoLightONOFF_E" To="UI.zoneTwoLightONOFF_E" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.2" Port="20000" />
 		<oSignal Name="zoneThreeLightONOFF_E" To="UI.zoneThreeLightONOFF_E" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.2" Port="20000" />
