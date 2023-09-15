@@ -1,0 +1,195 @@
+import run.GUI;
+import run.socketListener;
+
+reaction checkReady(: input Boolean channel ReadyIn, output signal ReadyOut){
+	loop{
+		trap(T){
+			{receive ReadyIn; pause; pause; exit(T);}
+			||
+			{ if(#ReadyIn){ sustain ReadyOut; } }
+		}
+		pause;
+	}
+}	
+
+
+
+ConveyorController(
+    input signal bottleAtPos1, bottleDeployed;
+    output signal motConveyorOnOff;
+    output signal bottleDeployedE, rotaryTableTriggerE, bottleLeftPos5E;
+    
+    input Boolean channel rotated;
+    output Boolean channel convReady;
+    
+    output Boolean channel simFiller;
+    output Boolean channel simCapper;
+    output Boolean channel checkFive;
+    output Boolean channel checkThree;
+    output Boolean channel checkOne;
+
+)
+->
+{
+	signal rotaryRotated,empty,insert, bottleLeftPos5;
+    {
+        loop{
+        	System.out.println("*Conveyer - Waiting for bottle to be delopyed and conveyor to be cleared...*");
+
+            trap(T){
+                {
+                    await(bottleAtPos1); // Wait for a bottle to arrive at position 1
+                    pause;
+                    exit(T);
+                }
+                ||
+                {
+                	await(immediate empty);
+                    pause;
+                	send convReady(Boolean.FALSE);
+                	System.out.println("*Empty...*");
+                }
+            }
+            pause;
+            emit insert;
+            send convReady(Boolean.FALSE);
+            pause;
+            
+            waitl(2 s);
+
+            {send convReady(Boolean.TRUE);}
+            ||
+            {await(rotaryRotated);}
+    		pause;
+
+        }
+    
+    }
+    ||
+    {
+        loop{
+            
+          	await(!bottleLeftPos5E);
+          	pause;
+            await(bottleDeployed); // Wait for the bottleDeployed signal
+            
+            waitl (1s);
+            
+            
+            trap(M){
+                {
+                	System.out.println("*Conveyor - Conveyer On*");
+                    sustain motConveyorOnOff; // Keep the conveyor motor running
+                }
+                ||
+                {
+                	waitl(500 ms);
+                    System.out.println("*Conveyor - Waiting For Bottle at Pos1*");
+                    await(bottleAtPos1); // Stop the motor if a bottle is at position 1 or has left position 5
+                    System.out.println("*Conveyor - Bottle Reached Pos1*");
+                    exit(M);
+                }
+            }
+        }
+    }
+   
+    ||
+	RotaryQueue(:insert, rotaryRotated, empty, bottleLeftPos5, simFiller, simCapper, checkFive, checkThree, checkOne)
+	||
+	
+	{
+		loop{ 
+			receive rotated; 
+			emit rotaryRotated;
+		  	emit rotaryTableTriggerE;
+			System.out.println("*Rotary rotated");
+			pause;
+		}
+	}
+    
+    ||
+    
+    {
+    	loop{
+	    	await(immediate bottleLeftPos5);
+	    	waitl (1s);
+	    	pause;
+	    	System.out.println("*Bottle Left From Position 5 Of The Index Table, Still On The Conveyor");
+    	}
+    }
+    ||
+    {// To viz
+        {while(true)
+        	{
+        		await (!bottleLeftPos5E);
+	        	present(bottleDeployed)
+	        	trap(T) {
+	                {
+	                    sustain bottleDeployedE;
+	                }
+	                ||
+	                {
+	                    await(bottleAtPos1);
+	                    exit(T);
+	                }
+	            }
+	            pause;
+        	}
+        }
+        
+        ||
+
+        {while(true){
+	        	present(bottleLeftPos5)
+	        	trap(T) {
+	                {sustain bottleLeftPos5E;}
+	                ||
+	                {
+	                    waitl(1s);
+	                    System.out.println("*Bottle Sent to Collection Point");
+	                    exit(T);
+	                }
+	            }
+	            pause;}
+        }
+    }
+
+}
+
+
+ConveyorPlant(
+	    input signal motConveyorOnOff;
+	    output signal bottleAtPos1, bottleLeftPos5;
+	    output signal motConveyorOnOffE, bottleLeftPos5E;
+	)
+	->
+
+	{
+		new Thread(new GUI()).start();
+		new Thread(new socketListener()).start();
+			{
+		    	while(true) {
+		
+		        await(motConveyorOnOff);
+
+		        emit bottleAtPos1;
+		        pause;
+		    	}
+		    }
+		    
+		    
+		    ||
+		    
+		    
+		    
+		    {// To viz
+		        {while(true){present(motConveyorOnOff){emit motConveyorOnOffE;} pause;}}
+		        ||
+		        {while(true){present(bottleLeftPos5){emit bottleLeftPos5E;} pause;}}
+		    }
+	}
+
+
+
+
+

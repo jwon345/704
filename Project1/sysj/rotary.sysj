@@ -1,0 +1,273 @@
+reaction RotaryQueue(
+		:input signal insert, input signal rotate, 
+		output signal empty, output signal bottleLeftPos5,
+		output Boolean channel simFiller, output Boolean channel simCapper, output Boolean channel checkFive, 
+		output Boolean channel checkThree, 	output Boolean channel checkOne
+		) {
+	Boolean signal simF,simC, simFive, simThree, simOne;
+	{loop{abort(simF){halt;} send simFiller(#simF); }}
+	||
+	{loop{abort(simC){halt;} send simCapper(#simC); }}
+	||
+	{loop{abort(simFive){halt;} send checkFive(#simFive); }}
+	||
+	{loop{abort(simThree){halt;} send checkThree(#simThree); }}
+	||
+	{loop{abort(simOne){halt;} send checkOne(#simOne); }}
+	||
+	
+	{
+		boolean[] q = new boolean[5];
+		loop {
+			abort{
+				System.out.println("\n-------------------------");
+				boolean o = false, c = false;
+				System.out.print("* Current bottle's locations :");
+				for(int i=0; i<q.length; i++){
+					if(q[i])
+						o = true;
+					System.out.print(" "+(q[i] ? 1 : 0));
+				}
+				System.out.println("\n-------------------------");
+
+				present(rotate){
+					emit simOne(q[0] ? Boolean.TRUE : Boolean.FALSE);
+					emit simF(q[1] ? Boolean.TRUE : Boolean.FALSE);
+					emit simThree(q[2] ? Boolean.TRUE : Boolean.FALSE);
+					emit simC(q[3] ? Boolean.TRUE : Boolean.FALSE);
+					emit simFive(q[4] ? Boolean.TRUE : Boolean.FALSE);
+				}
+				
+				if(o)
+					halt;
+				else 
+					sustain empty;
+			} case(rotate) do {
+				
+				if(q[4]) {
+			        emit bottleLeftPos5; // Emitting the signal when a bottle leaves position 5
+			    }
+				
+				
+				for(int i=q.length-1; i>0; i--){
+					q[i] = q[i-1];
+				}
+				present(insert)
+					q[0] = true;
+				
+				else
+					q[0] = false;
+			} case (insert) do{
+				
+				emit simOne(Boolean.TRUE);
+				
+				present(rotate){
+					for(int i=q.length-1; i>0; i--){
+						q[i] = q[i-1];
+					}
+				}
+				q[0] = true;
+			} 
+		}
+	}
+}
+
+
+
+RotaryController(
+	    input signal tableAlignedWithSensor, capOnBottleAtPos1, ReadySmoke;
+	    output signal rotaryTableTrigger, bottleAtPos5E, bottleAtPos1E;
+	    
+	    input Boolean channel  convReady, fillerReady, capperReady, lidLoaderReady;
+	    output Boolean channel rotated;
+	    
+	    input Boolean channel checkFive, checkOne;
+	    )->{
+	    	signal  cvR, fR, cR , lR;
+	    	signal bottleAtPos5 , bottleAtPos1;
+	    	receive convReady;
+	    	receive fillerReady;
+	    	receive capperReady;
+	    	receive lidLoaderReady;
+	    	{
+	    		loop{
+	    				{
+    					await(!ReadySmoke);
+    					System.out.println("*Rotary - No Smoke/Fire*");
+    					}
+	    				||
+    				
+	    				{
+	    					await(fR);
+	    					System.out.println("*Rotary - Filler Ready*");
+	    					}
+	    				||
+	    				{
+	    					await(cvR);
+	    					System.out.println("*Rotary - Conveyor Ready*");
+	    				}
+	    				
+	    				||
+	    				{
+	    					await(cR);
+	    					System.out.println("*Rotary - Capper Ready*");
+	    				}
+	    				
+	    				||
+	    				{
+	    					await(lR);
+	    					System.out.println("*Rotary - LidLoader Ready*");
+	    				}
+	    							
+	    				System.out.println("*Rotary - All controllers are ready*");
+	    				
+	    				
+	    				present(bottleAtPos5) {
+	    							trap(T){ 
+	    								await(!bottleAtPos5);
+	    								loop{
+	    									present(bottleAtPos5){	
+	    									} 
+	    									else{exit(T);}
+	    									pause;
+	    								}
+	    							}
+	    						}
+
+	    						trap(T){
+	    							{sustain rotaryTableTrigger;}||{waitl(100 ms); exit(T);}
+	    						}
+	    		        
+	    		        System.out.println("*Rotary - Waiting for Alignment*");
+	    		        await(tableAlignedWithSensor);
+	    		        System.out.println("*Rotary - Aligned*");
+	    		    	send rotated(Boolean.TRUE);
+	    		    	
+	    		    	pause;
+	    		    	waitl(5ms);
+	    		    	int i = 0;
+	    				trap(T){
+	    					loop{
+	    						i++;
+	    						if(i > 15)
+	    							exit(T);
+	    						pause;
+	    					}
+	    				}
+	    				waitl(3s);
+	    				
+	    			}
+	    		
+	    		}
+	    	
+	    	||
+
+    		{
+    			checkReady(:convReady, cvR)
+    			||
+    			checkReady(:fillerReady, fR)
+    			||
+    			checkReady(:capperReady, cR)
+    			||
+    			checkReady(:lidLoaderReady, lR)
+    		}		
+	    	
+	    	||
+			{
+					loop{
+						receive checkFive;
+						if((Boolean)#checkFive)
+							emit bottleAtPos5;
+						pause;
+					}
+					
+					
+					
+			}
+	    	
+	    	|| 
+	    	
+	    	{
+	    	
+		        
+		        {while(true)
+		        	{present(bottleAtPos5)trap(T) {
+		                {
+		                    sustain bottleAtPos5E;
+		                }
+		                ||
+		                {
+		                    await(rotaryTableTrigger);
+		                    exit(T);
+		                };
+		        	}
+		        	pause;
+		        
+		        	}
+		        }
+		        
+		        
+	    	}	
+	    	
+	    	
+	    	||
+			{
+					loop{
+						receive checkOne;
+						if((Boolean)#checkOne)
+							emit bottleAtPos1;
+
+						pause;
+					}	
+					
+			}
+	    	
+	    	|| 
+	    	
+	    	{
+	    	
+		        
+		        {while(true)
+		        	{present(bottleAtPos1)trap(T) {
+		                {
+		                    sustain bottleAtPos1E;
+		                }
+		                ||
+		                {
+		                    await(rotaryTableTrigger);
+		                    exit(T);
+		                };
+		        	}
+		        	pause;
+		        
+		        	}
+		        }
+		        
+		        
+	    	}	
+}
+	    
+	  
+	   RotaryPlant(
+	    	    input signal rotaryTableTrigger;
+	    	    output signal tableAlignedWithSensor, bottleAtPos5, capOnBottleAtPos1;
+	    	    output signal tableAlignedWithSensorE, capOnBottleAtPos1E;
+	    	)
+	    	->
+	    	{
+
+	    	    {// Rotary Table Movement
+	    	    	loop{
+	    				await(rotaryTableTrigger);
+	    				emit tableAlignedWithSensor;
+	    	            pause;
+	    			}
+	    	    }
+	    	    ||
+	    	    {// To viz
+	    	        {while(true){present(tableAlignedWithSensor){emit tableAlignedWithSensorE;} pause;}}
+	    	        ||
+	    	        {while(true){present(capOnBottleAtPos1){emit capOnBottleAtPos1E;} pause;}}
+	    	    }
+	    }
+	   

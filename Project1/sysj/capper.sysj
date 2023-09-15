@@ -1,0 +1,217 @@
+CapperController(
+	    				input signal gripperZAxisLowered,gripperZAxisLifted,
+	    				gripperTurnHomePos,gripperTurnFinalPos;
+	    				
+	    				output signal cylPos5ZaxisExtend,gripperTurnRetract,gripperTurnExtend,
+	    				capGripperPos5Extend,cylClampBottleExtend;
+	    				output signal bottleAtPos4E;
+	    				
+	    				input Boolean channel simCapper;
+	    				output Boolean channel capperReady;
+	    				)
+	    			-> 		
+	    				{
+	    					signal bottleAtPos4 , done;
+	    					send capperReady(Boolean.TRUE);
+	    					
+	    					{
+	    						loop{
+	    							
+	    							System.out.println("*Capper: Waiting for bottle at position 4...*");
+	    							await(bottleAtPos4);
+	    							send capperReady(Boolean.FALSE);
+	    							System.out.println("*Capper: Bottle Arivied at Position 4.*");
+	    							System.out.println("Capper: Checking if gripper is fully lifted...");
+	    							abort(gripperZAxisLifted){
+	    				             
+	    				                halt;
+	    				            }
+	    							System.out.println("Capper: Gripper is lifted.");
+	    							
+	    							pause;
+	    							
+	    							abort(gripperTurnHomePos)
+	    							{
+	    								System.out.println("Capper: Untwisting the gripper...");
+	    								sustain gripperTurnRetract;
+	    							}
+	    							System.out.println("Capper: Gripper at home position...");
+	    						
+	    							
+	    							trap(T){
+	    								{sustain cylPos5ZaxisExtend;
+	    								}
+	    								||
+	    								{
+	    									await(gripperZAxisLowered);
+	    									System.out.println("Capper: Gripper fully lowered. Gripping the cap...");
+	    									{
+	    										sustain capGripperPos5Extend;}
+	    									||
+	    									
+	    										{
+	    										System.out.println("Capper: Twisting the gripper...");
+	    										sustain gripperTurnExtend;
+	    										}
+	    									||
+	    									{
+	    										await(gripperTurnFinalPos);
+	    										System.out.println("Capper: Gripper fully turned.");
+	    										exit(T);
+	    									}
+	    								}
+	    							}
+	    							
+	    							await(gripperZAxisLifted);
+	    							
+	    							send capperReady(Boolean.TRUE);
+	    							System.out.println("CapperController: Gripper raised...");
+	    							System.out.println("CapperController: Bottle capped. Waiting for bottle to move to next position...");
+	    							trap(T){  await(!bottleAtPos4);
+	    								loop{
+	    									present(bottleAtPos4){}
+	    									else{exit(T);}
+	    									pause;
+	    								}
+	    							}
+	    							
+	    							
+
+	    							
+	    							
+	    						}
+	    					}
+	    					
+	    					||
+	    					{
+	    						loop{
+	    							receive simCapper;
+	    							if((Boolean)#simCapper) 
+	    								emit bottleAtPos4;
+
+	    							else {
+	    								emit done;
+	    							}
+	    							pause;
+	    						}
+	    					}
+	    					
+	    					||
+	    					{// To viz
+	    				        {while(true){present(bottleAtPos4)
+	    					        	trap(T) {
+	    					                {
+	    					                    sustain cylClampBottleExtend;
+	    					                }
+	    					                ||
+	    					                {
+	    					                    await(gripperTurnFinalPos);
+	    					                    exit(T);
+	    					                }
+	    					            }
+	    					            pause;
+	    				        	}
+	    				        }
+	    				    }
+	    					
+	    					||
+	    					
+	    					{while(true)
+	    			        	{present(bottleAtPos4)
+	    				        	trap(T) {
+	    				                {
+	    				                    sustain bottleAtPos4E;
+	    				                }
+	    				                ||
+	    				                {
+	    				                    await(done);
+	    				                    exit(T);
+	    				                }
+	    				            }
+	    				            pause;
+	    			        	}
+	    					}
+	    				}
+	    		
+	  
+	    				
+	    				
+	CapperPlant(
+					input signal cylPos5ZaxisExtend,gripperTurnRetract,gripperTurnExtend,
+					capGripperPos5Extend,cylClampBottleExtend;
+					
+					output signal gripperZAxisLowered,gripperZAxisLifted,
+					gripperTurnHomePos,gripperTurnFinalPos;
+					
+					output signal cylPos5ZaxisExtendE, gripperTurnRetractE, gripperTurnExtendE,
+				    capGripperPos5ExtendE, cylClampBottleExtendE, gripperZAxisLoweredE,
+				    gripperZAxisLiftedE, gripperTurnHomePosE, gripperTurnFinalPosE;
+					)
+			->
+					{
+					
+						{
+							loop{
+								
+
+								 	{
+								        abort(gripperTurnRetract) {
+								            sustain gripperZAxisLifted;
+								        }
+								 	}
+								     
+								 	||
+								 	{
+								        await (gripperTurnRetract);
+								        waitl(500 ms);
+								        emit gripperTurnHomePos;
+								        pause;
+								    }
+								    ||
+								    {
+								        await (cylPos5ZaxisExtend);
+								        waitl(500 ms);
+								        emit gripperZAxisLowered;
+								        pause;
+								    }
+								    ||
+								    {
+								        await (gripperTurnExtend);
+								        waitl(500 ms);
+								        emit gripperTurnFinalPos;
+								        pause;
+								        emit gripperZAxisLifted;
+								        pause;
+								    }
+								
+								}
+							}
+						||
+						{
+							//emit bottleatPos4
+						}
+						
+						||
+					    {// To viz
+					        {while(true){present(cylPos5ZaxisExtend){emit cylPos5ZaxisExtendE;} pause;}}
+					        ||
+					        {while(true){present(gripperTurnRetract){emit gripperTurnRetractE;} pause;}}
+					        ||
+					        {while(true){present(gripperTurnExtend){emit gripperTurnExtendE;} pause;}}
+					        ||
+					        {while(true){present(capGripperPos5Extend){emit capGripperPos5ExtendE;} pause;}}
+					        ||
+					        {while(true){present(cylClampBottleExtend){emit cylClampBottleExtendE;} pause;}}
+					        ||
+					        {while(true){present(gripperZAxisLowered){emit gripperZAxisLoweredE;} pause;}}
+					        ||
+					        {while(true){present(gripperZAxisLifted){emit gripperZAxisLiftedE;} pause;}}
+					        ||
+					        {while(true){present(gripperTurnHomePos){emit gripperTurnHomePosE;} pause;}}
+					        ||
+					        {while(true){present(gripperTurnFinalPos){emit gripperTurnFinalPosE;} pause;}}
+					    }
+					}
+			
+
+						    				
