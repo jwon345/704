@@ -64,9 +64,6 @@
 		<oSignal Name="zoneFiveWindowONOFF"  	To="ECS_LightingPlant.zoneFiveWindowONOFF" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.2" Port="30003" />
 		<oSignal Name="zoneSixWindowONOFF"  	To="ECS_LightingPlant.zoneSixWindowONOFF" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.2" Port="30003" />
 		<oSignal Name="zoneSevenWindowONOFF" 	To="ECS_LightingPlant.zoneSevenWindowONOFF" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.2" Port="30003" />
-		
-
-
 		</ClockDomain>
 		
 		
